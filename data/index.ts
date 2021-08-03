@@ -1,3 +1,9 @@
 import javascript from './javascript.json'
+import { Resources } from './types'
 
-export { javascript }
+const resources: { [resourceType: string]: Resources } = {
+    javascript
+}
+
+export default resources
+export * from './types'
