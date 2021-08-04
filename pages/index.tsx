@@ -1,6 +1,6 @@
-import Head from 'next/head'
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
-import Image from 'next/image'
+import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import resources from '../data'
 
@@ -30,7 +30,11 @@ export default function Home({ resources }: Props) {
 
         <div className={styles.grid}>
           <ul>
-            {Object.entries(resources).map(([resourceType]) => <li key={resourceType}>{resourceType}</li>)}
+            {Object.entries(resources).map(([resourceType]) => <li key={resourceType}>
+              <Link href={resourceType}>
+                <a>{resourceType}</a>
+              </Link>
+            </li>)}
           </ul>
         </div>
       </main>
