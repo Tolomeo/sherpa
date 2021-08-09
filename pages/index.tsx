@@ -2,19 +2,19 @@ import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
-import resources from '../data'
+import paths from '../data/paths'
 
 export const getStaticProps = async (_: GetStaticPropsContext) => {
   return {
     props: {
-      resources
+      paths
     }
   }
 }
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export default function Home({ resources }: Props) {
+export default function Home({ paths }: Props) {
   return (
     <div className={styles.container}>
       <Head>
@@ -30,9 +30,9 @@ export default function Home({ resources }: Props) {
 
         <div className={styles.grid}>
           <ul>
-            {Object.entries(resources).map(([resourceType]) => <li key={resourceType}>
-              <Link href={resourceType}>
-                <a>{resourceType}</a>
+            {Object.entries(paths).map(([pathName]) => <li key={pathName}>
+              <Link href={`paths/${pathName}`}>
+                <a>{pathName}</a>
               </Link>
             </li>)}
           </ul>

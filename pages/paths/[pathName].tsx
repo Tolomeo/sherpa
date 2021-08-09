@@ -1,38 +1,39 @@
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import data, { Resources } from '../data'
+import styles from '../../styles/Home.module.css'
+import { paths, populatePath, PopulatedPath } from '../../data'
 
 interface Params extends ParsedUrlQuery {
-    resourceType: string
+    pathName: string
 }
 
 interface StaticProps {
-    resources: Resources
+    path: PopulatedPath
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const paths = Object.keys(data).map((resourceType) => ({
-        params: { resourceType }
+    const staticPaths = Object.keys(paths).map((pathName) => ({
+        params: { pathName }
     }))
 
-    return { paths, fallback: false }
+    return { paths: staticPaths, fallback: false }
 }
 
 export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({ params }) => {
-    const resources = data[params!.resourceType]
+  const path = paths[params!.pathName]
+  const populatedPath = populatePath(path)
 
   return {
     props: {
-      resources
+      path: populatedPath,
     }
   }
 }
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export default function Home({ resources }: Props) {
+export default function Home({ path }: Props) {
   return (
     <div className={styles.container}>
       <Head>
@@ -43,12 +44,12 @@ export default function Home({ resources }: Props) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Javascript
+          {path.title}
         </h1>
 
         <div className={styles.grid}>
           <ul>
-            {Object.values(resources).map((resource) => <li key={resource.url}>
+            {Object.values(path.resources).map((resource) => <li key={resource.url}>
                 <a href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>
             </li>)}
           </ul>
