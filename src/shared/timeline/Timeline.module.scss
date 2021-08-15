@@ -25,7 +25,7 @@
         top: 0;
         bottom: 0;
         left: var(--timeline-offset);
-        margin-inline-start: -1px;
+        margin-inline-start: calc(var(--timeline-width) / 2 * -1);
         background-color: var(--timeline-color);
     }
     
