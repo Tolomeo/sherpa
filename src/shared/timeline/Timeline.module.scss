@@ -1,71 +1,77 @@
 .timeline {
     position: relative;
     margin: 0 auto;
+    padding:  0;
 
-    &::before {
+    &__item {
+        position: relative;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-block: 1.5rem;
+    }
+
+    &__item::before {
         content: "";
         position: absolute;
         width: 2px;
         top: 0;
         bottom: 0;
-        left: 50%;
-        margin-left: -1px;
+        left: 160px;
+        margin-inline-start: -1px;
         background-color: #bdbdbd;
     }
+    
+    &__label {
+        width: 150px;
+        padding: 0 20px;
+        font-weight: normal;
+        text-align: end;
 
-    ul {
-        margin: 0;
-        padding: 0;
-
-        li {
-            margin-bottom: 50px;
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-
-        li:nth-child(even) {
-            flex-direction: row-reverse;
+        &, a {
+            color: #4F4F4F;
         }
     }
-    
 
     &__point {
-        min-width: 20px;
+        width: 20px;
         height: 20px;
-        background-color: #be9fe1;
+        background-color: white;
         border-radius: 100%;
         z-index: 2;
-        border: 3px #333333 solid;
-        position: relative;
-        // left: 1px;
+        border: 2px #bdbdbd solid;
+    }
+
+    &__point--active {
+        background-color: #9B51E0;
+        border-color: #9B51E0;
+    }
+
+    &__point--active::before, &__point--active::after {
+        content: '';
+        display: block;
+        width: 2px;
+        background-color: #9B51E0;
+        position: absolute;
+        left: 160px;
+        margin-inline-start: -1px;
+    }
+
+    &__point--active::before{
+        top: 0;
+        bottom: 50%;
+    }
+    &__point--active::after{
+        top: 50%;
+        bottom: 0;
     }
 
     &__content {
-        width: 50%;
-        padding: 0 20px;
-    }
-
-    ul li:nth-child(odd) &__content {
-        padding-left: 0;
-    }
-
-    ul li:nth-child(odd) &__label {
-        padding-right: 0;
-    }
-    
-    ul li:nth-child(even) &__content {
-        padding-right: 0;
-    }
-    
-    ul li:nth-child(even) &__label {
-        padding-left: 0;
-    }
-    
-    ul li &__label {
-        width: 50%;
-        padding: 0 20px;
-        font-weight: normal;
-    }
+        padding: 0 1rem;
+        
+        &, a {
+            color: #4F4F4F;
+        }
+    }    
 }

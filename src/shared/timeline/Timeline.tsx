@@ -1,30 +1,32 @@
 import React from 'react'
+import cs from 'classnames'
 import styles from './Timeline.module.scss';
 
+console.log(styles);
+
+
 type ItemProps = {
-    label?: React.ReactNode
+    label?: React.ReactNode,
+    active?: boolean
 }
 
-const Item: React.FC<ItemProps> = ({ children, label }) =>
-    <>
+const Item: React.FC<ItemProps> = ({ children, label, active = false }) =>
+    <li className={styles.timeline__item}>
+        <div className={styles.timeline__label}>{label}</div>
+        <div className={cs(styles.timeline__point, { [styles['timeline__point--active']]: active })}></div>
         <div className={styles.timeline__content}>
             {children}
         </div>
-        <div className={styles.timeline__point}></div>
-        <div className={styles.timeline__label}>{label}</div>
-        {/* {label && <div className={styles.timeline__date}>{label}</div>} */}
-    </>
+    </li>
 
 type Props = {
     children: React.ReactNode
 }
 
 const Timeline = ({ children }: Props) =>
-    <div className={styles.timeline}>
-        <ul>
-            {React.Children.map(children, child => <li>{child}</li>)}
+        <ul className={styles.timeline}>
+            {children}
         </ul>
-    </div>
 
 Timeline.Item = Item;
 

@@ -49,13 +49,8 @@ export default function Home({ path }: Props) {
         </h1>
 
         <div>
-          {/* <ul>
-            {Object.values(path.resources).map((resource) => <li key={resource.url}>
-                <a href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>
-            </li>)}
-          </ul> */}
           <Timeline>
-            {Object.values(path.resources).map((resource) => <Timeline.Item key={resource.url}>
+            {Object.values(path.resources).map((resource, index) => <Timeline.Item key={resource.url} label={resource.type} active={index < 3}>
                 <a href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>
             </Timeline.Item>)}
           </Timeline>
