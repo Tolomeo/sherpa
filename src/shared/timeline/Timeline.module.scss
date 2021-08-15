@@ -1,4 +1,10 @@
 .timeline {
+    --timeline-color: #bdbdbd;
+    --timeline-color-active: #9B51E0;
+    --timeline-width: 2px;
+    --timeline-offset: 160px;
+    --timeline-item-spacing: 3rem;
+
     position: relative;
     margin: 0 auto;
     padding:  0;
@@ -9,22 +15,22 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding-block: 1.5rem;
+        padding-block: calc(var(--timeline-item-spacing) / 2);
     }
 
     &__item::before {
         content: "";
         position: absolute;
-        width: 2px;
+        width: var(--timeline-width);
         top: 0;
         bottom: 0;
-        left: 160px;
+        left: var(--timeline-offset);
         margin-inline-start: -1px;
-        background-color: #bdbdbd;
+        background-color: var(--timeline-color);
     }
     
     &__label {
-        width: 150px;
+        width: calc(var(--timeline-offset) - 10px);
         padding: 0 20px;
         font-weight: normal;
         text-align: end;
@@ -40,22 +46,22 @@
         background-color: white;
         border-radius: 100%;
         z-index: 2;
-        border: 2px #bdbdbd solid;
+        border: var(--timeline-width) var(--timeline-color) solid;
     }
 
     &__point--active {
-        background-color: #9B51E0;
-        border-color: #9B51E0;
+        background-color: var(--timeline-color-active);
+        border-color: var(--timeline-color-active);
     }
 
     &__point--active::before, &__point--active::after {
         content: '';
         display: block;
-        width: 2px;
-        background-color: #9B51E0;
+        width: var(--timeline-width);
+        background-color: var(--timeline-color-active);
         position: absolute;
-        left: 160px;
-        margin-inline-start: -1px;
+        left: var(--timeline-offset);
+        margin-left: calc(var(--timeline-width) / 2 * -1);
     }
 
     &__point--active::before{
