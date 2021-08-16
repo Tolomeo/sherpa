@@ -2,17 +2,14 @@ import React from 'react'
 import cs from 'classnames'
 import styles from './Timeline.module.scss';
 
-console.log(styles);
-
-
 type ItemProps = {
-    label?: React.ReactNode,
+    // label?: React.ReactNode,
     active?: boolean
 }
 
-const Item: React.FC<ItemProps> = ({ children, label, active = false }) =>
+const Item: React.FC<ItemProps> = ({ children, active = false }) =>
     <li className={styles.timeline__item}>
-        <div className={styles.timeline__label}>{label}</div>
+        {/* <div className={styles.timeline__label}>{label}</div> */}
         <div className={cs(styles.timeline__point, { [styles['timeline__point--active']]: active })}></div>
         <div className={styles.timeline__content}>
             {children}

@@ -48,11 +48,16 @@ export default function Home({ path }: Props) {
           {path.title}
         </h1>
 
-        <div>
+        <div style={{ padding: '0 1rem' }}>
           <Timeline>
-            {Object.values(path.resources).map((resource, index) => <Timeline.Item key={resource.url} label={resource.type} active={index < 3}>
-                <a href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>
-            </Timeline.Item>)}
+            {Object.values(path.resources).map((resource, index) => 
+              <Timeline.Item key={resource.url} active={index < 3}>
+                  <span style={{ color: '#BDBDBD', fontSize: '0.8rem' }}>{resource.source}</span>
+                  <br />
+                  <a style={{ display: 'inline-block', padding: '0 0 0.25rem 0' }} href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>
+                  <br />
+                  <span style={{ color: '#9B51E0' }}>&Theta; &AElig;</span>
+              </Timeline.Item>)}
           </Timeline>
         </div>
       </main>

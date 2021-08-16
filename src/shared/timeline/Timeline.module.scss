@@ -1,13 +1,13 @@
 .timeline {
-    --timeline-color: #bdbdbd;
-    --timeline-color-active: #9B51E0;
-    --timeline-width: 2px;
-    --timeline-offset: 160px;
-    --timeline-item-spacing: 3rem;
+    --timeline-spacing: 3rem;
+    --timeline-stroke-color: #bdbdbd;
+    --timeline-stroke-width: 2px;
+    --timeline-stroke-color-active: #9B51E0;
+    --timeline-dot-size: 14px;
 
     position: relative;
     margin: 0 auto;
-    padding:  0;
+    padding:  var(--timeline-spacing) 0;
 
     &__item {
         position: relative;
@@ -15,53 +15,50 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding-block: calc(var(--timeline-item-spacing) / 2);
-    }
+        padding-block: calc(var(--timeline-spacing) / 2);
 
-    &__item::before {
-        content: "";
-        position: absolute;
-        width: var(--timeline-width);
-        top: 0;
-        bottom: 0;
-        left: var(--timeline-offset);
-        margin-inline-start: calc(var(--timeline-width) / 2 * -1);
-        background-color: var(--timeline-color);
-    }
-    
-    &__label {
-        width: calc(var(--timeline-offset) - 10px);
-        padding: 0 20px;
-        font-weight: normal;
-        text-align: end;
+        &:first-child {
+            padding-block-start: 0;
+        }
 
-        &, a {
-            color: #4F4F4F;
+        &:last-child {
+            padding-block-end: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: var(--timeline-stroke-width);
+            top: 0;
+            bottom: 0;
+            left: calc(var(--timeline-dot-size) / 2);
+            margin-left: calc(var(--timeline-stroke-width) / 2 * -1);
+            background-color: var(--timeline-stroke-color);
         }
     }
 
     &__point {
-        width: 20px;
-        height: 20px;
+        width: var(--timeline-dot-size);
+        height: var(--timeline-dot-size);
         background-color: white;
         border-radius: 100%;
         z-index: 2;
-        border: var(--timeline-width) var(--timeline-color) solid;
+        border: var(--timeline-stroke-width) var(--timeline-stroke-color) solid;
     }
 
     &__point--active {
-        background-color: var(--timeline-color-active);
-        border-color: var(--timeline-color-active);
+        background-color: var(--timeline-stroke-color-active);
+        border-color: var(--timeline-stroke-color-active);
     }
 
     &__point--active::before, &__point--active::after {
         content: '';
         display: block;
-        width: var(--timeline-width);
-        background-color: var(--timeline-color-active);
+        width: var(--timeline-stroke-width);
+        background-color: var(--timeline-stroke-color-active);
         position: absolute;
-        left: var(--timeline-offset);
-        margin-left: calc(var(--timeline-width) / 2 * -1);
+        left: calc(var(--timeline-dot-size) / 2);
+        margin-left: calc(var(--timeline-stroke-width) / 2 * -1);
     }
 
     &__point--active::before{
