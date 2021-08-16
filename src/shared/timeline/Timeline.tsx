@@ -8,10 +8,10 @@ type ItemProps = {
 }
 
 const Item: React.FC<ItemProps> = ({ children, active = false }) =>
-    <li className={styles.timeline__item}>
+    <li className={styles.timelineItem}>
         {/* <div className={styles.timeline__label}>{label}</div> */}
-        <div className={cs(styles.timeline__point, { [styles['timeline__point--active']]: active })}></div>
-        <div className={styles.timeline__content}>
+        <div className={cs(styles.timelineItem__point, { [styles['timelineItem__point--active']]: active })}></div>
+        <div className={styles.timelineItem__content}>
             {children}
         </div>
     </li>
@@ -21,9 +21,9 @@ type Props = {
 }
 
 const Timeline = ({ children }: Props) =>
-        <ul className={styles.timeline}>
-            {children}
-        </ul>
+    <ul className={styles.timeline}>
+        {children}
+    </ul>
 
 Timeline.Item = Item;
 
