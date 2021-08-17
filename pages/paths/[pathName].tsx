@@ -1,9 +1,9 @@
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import Head from 'next/head'
-import styles from '../../styles/Home.module.css'
 import { paths, populatePath, PopulatedPath } from '../../data'
-import { Header, Timeline } from '../../src/shared'
+import { Path } from '../../src/path'
+import { Header } from '../../src/shared'
 
 interface Params extends ParsedUrlQuery {
     pathName: string
@@ -46,24 +46,10 @@ export default function Home({ path }: Props) {
       <Header />
 
       <main>
-        <h1>
-          The {path.title} learning path
-        </h1>
-
-        <div style={{ padding: '1rem' }}>
-          <Timeline>
-            {Object.values(path.resources).map((resource, index) => 
-              <Timeline.Item key={resource.url} active={index < 3}>
-                  <span style={{ color: '#BDBDBD', fontSize: '0.8rem' }}>{resource.source}</span>
-                  <br />
-                  <a style={{ display: 'inline-block', padding: '0 0 0.25rem 0' }} href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>
-                  <br />
-                  <span style={{ color: '#9B51E0' }}>&Theta; &AElig;</span>
-              </Timeline.Item>)}
-          </Timeline>
-        </div>
+        <Path path={path} />
       </main>
 
     </div>
   )
 }
+

@@ -1,6 +1,5 @@
 .header {
     --header-z-index: 1030;
-    --header-spacing-x: 1rem;
     --header-spacing-y: 1.5rem;
     --header-background-color: rgba(255, 255, 255, 0.5);
     --header-logo-color: black;
@@ -15,17 +14,6 @@
     padding-bottom: var(--header-spacing-y);
     background-color: var(--header-background-color);
     backdrop-filter: blur(4px);
-
-    &__container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        padding-right: var(--header-spacing-x);
-        padding-left: var(--header-spacing-x);
-        margin-right: auto;
-        margin-left: auto;
-    }
 
     &__logo {
         padding: 0;
