@@ -3,7 +3,7 @@ import { ParsedUrlQuery } from 'querystring'
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
 import { paths, populatePath, PopulatedPath } from '../../data'
-import { Timeline } from '../../src/shared'
+import { Header, Timeline } from '../../src/shared'
 
 interface Params extends ParsedUrlQuery {
     pathName: string
@@ -43,12 +43,14 @@ export default function Home({ path }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          {path.title}
+      <Header />
+
+      <main>
+        <h1>
+          The {path.title} learning path
         </h1>
 
-        <div style={{ padding: '0 1rem' }}>
+        <div style={{ padding: '1rem' }}>
           <Timeline>
             {Object.values(path.resources).map((resource, index) => 
               <Timeline.Item key={resource.url} active={index < 3}>
