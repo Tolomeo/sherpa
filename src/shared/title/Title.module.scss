@@ -1,6 +1,9 @@
 .title {
-    font-size: 3rem;
+    --title-spacing-x: 1.5rem;
+
+    // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+    font-size: clamp(1.5rem, 0.3750rem + 5.0000vw, 3rem);
     text-align: center; 
-    padding: 12rem 1.5rem 6rem 1.5rem;
+    padding: 0 var(--title-spacing-x);
     margin: 0;
 }

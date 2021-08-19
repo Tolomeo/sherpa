@@ -1,7 +1,7 @@
 .header {
     --header-z-index: 1030;
     --header-spacing-y: 1.5rem;
-    --header-background-color: rgba(255, 255, 255, 0.5);
+    --header-background-color: white;
     --header-logo-color: black;
 
     position: sticky;
@@ -13,7 +13,6 @@
     padding-top: var(--header-spacing-y);
     padding-bottom: var(--header-spacing-y);
     background-color: var(--header-background-color);
-    backdrop-filter: blur(4px);
 
     &__logo {
         padding: 0;

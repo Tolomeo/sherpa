@@ -3,7 +3,7 @@ import { ParsedUrlQuery } from 'querystring'
 import Head from 'next/head'
 import { paths, populatePath, PopulatedPath } from '../../data'
 import { Path } from '../../src/path'
-import { Header } from '../../src/shared'
+import { Header, Main } from '../../src/shared'
 
 interface Params extends ParsedUrlQuery {
     pathName: string
@@ -45,9 +45,9 @@ export default function Home({ path }: Props) {
 
       <Header />
 
-      <main>
+      <Main>
         <Path path={path} />
-      </main>
+      </Main>
 
     </div>
   )

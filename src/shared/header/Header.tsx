@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <Container>
-                <a className={styles.header__logo} href="#">Learning path</a>
+                <a className={styles.header__logo} href="#">The learning path</a>
             </Container>
         </header>
     )

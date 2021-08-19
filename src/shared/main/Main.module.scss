@@ -1,0 +1,12 @@
+.main {
+    position: relative;
+    padding-top: clamp(1rem, 30%, 18rem);
+
+    &__background {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        max-width: 100%;
+    }
+
+}
