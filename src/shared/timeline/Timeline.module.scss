@@ -49,6 +49,7 @@
 
 
     &__point {
+        flex-shrink: 0;
         width: var(--timeline-dot-size);
         height: var(--timeline-dot-size);
         background-color: white;

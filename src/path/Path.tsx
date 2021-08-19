@@ -1,6 +1,7 @@
 import React from 'react'
 import { PopulatedPath } from '../../data'
-import { Timeline, Container, Title } from '../shared'
+import { Timeline, Container } from '../shared'
+import styles from './Path.module.scss'
 
 type Props = {
     path: PopulatedPath
@@ -9,20 +10,17 @@ type Props = {
 const Path = ({ path }: Props) => {
     return (
         <div>
-
-            <Title>
-                The <u>{path.title}</u> learning path
-            </Title>
+            <h1 className={styles.path__title}>The <u>{path.title}</u> learning path</h1>
 
             <Container>
                 <Timeline>
                     {Object.values(path.resources).map((resource, index) => 
                     <Timeline.Item key={resource.url} active={index < 3}>
-                        <span style={{ color: '#BDBDBD', fontSize: '0.8rem' }}>{resource.source}</span>
-                        <br />
-                        <a style={{ display: 'inline-block', padding: '0 0 0.25rem 0' }} href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>
-                        <br />
-                        <span style={{ color: '#9B51E0' }}>&Theta; &AElig;</span>
+                        <a href={resource.url} target="_blank" rel="noreferrer">
+                            <p className={styles.resource__source}>{resource.source}</p>
+                            <h2 className={styles.resource__title}>{resource.title}</h2>
+                            <p className={styles.resource__type}>{resource.type}</p>
+                        </a>
                     </Timeline.Item>)}
                 </Timeline>
             </Container>
