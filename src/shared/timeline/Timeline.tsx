@@ -21,9 +21,9 @@ type Props = {
 }
 
 const Timeline = ({ children }: Props) =>
-    <ul className={styles.timeline}>
+    <ol className={styles.timeline}>
         {children}
-    </ul>
+    </ol>
 
 Timeline.Item = Item;
 

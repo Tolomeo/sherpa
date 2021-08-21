@@ -1,6 +1,6 @@
 import React from 'react'
 import { PopulatedPath } from '../../data'
-import { Timeline, Container } from '../shared'
+import { Timeline, Column, H1 } from '../shared'
 import styles from './Path.module.scss'
 
 type Props = {
@@ -10,12 +10,14 @@ type Props = {
 const Path = ({ path }: Props) => {
     return (
         <div>
-            <h1 className={styles.path__title}>The <u>{path.title}</u> learning path</h1>
+            <Column>
+                <H1>The <u>{path.title}</u> learning path</H1>
+            </Column>
 
-            <Container>
+            <Column>
                 <Timeline>
                     {Object.values(path.resources).map((resource, index) => 
-                    <Timeline.Item key={resource.url} active={index < 3}>
+                    <Timeline.Item key={resource.url}>
                         <a href={resource.url} target="_blank" rel="noreferrer">
                             <p className={styles.resource__source}>{resource.source}</p>
                             <h2 className={styles.resource__title}>{resource.title}</h2>
@@ -23,7 +25,7 @@ const Path = ({ path }: Props) => {
                         </a>
                     </Timeline.Item>)}
                 </Timeline>
-            </Container>
+            </Column>
 
         </div>
     )

@@ -1,12 +1,7 @@
 .container {
     --container-spacing-x: 1.5rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
     padding-right: var(--container-spacing-x);
     padding-left: var(--container-spacing-x);
-    margin-right: auto;
-    margin-left: auto;
 }
