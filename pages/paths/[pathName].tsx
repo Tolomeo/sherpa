@@ -1,5 +1,5 @@
 import { paths, populatePath, PopulatedPath } from '../../data'
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, ParsedUrlQuery, Head, Header, Main } from '../../src/shared'
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, ParsedUrlQuery, Head, Header, Main, Column, H1 } from '../../src/shared'
 import { Path } from '../../src/path'
 
 interface Params extends ParsedUrlQuery {
@@ -43,7 +43,13 @@ export default function Home({ path }: Props) {
       <Header />
 
       <Main>
-        <Path path={path} />
+          <Column>
+              <H1>The <u>{path.title}</u> learning path</H1>
+          </Column>
+
+          <Column>
+            <Path path={path} />
+        </Column>
       </Main>
 
     </div>

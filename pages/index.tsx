@@ -1,5 +1,6 @@
 import paths from '../data/paths'
 import { GetStaticPropsContext, InferGetStaticPropsType, Head, Header, Main, Column, H1, H2, P, List, Link } from '../src/shared'
+import { Paths } from '../src/path'
 
 export const getStaticProps = async (_: GetStaticPropsContext) => {
   return {
@@ -35,13 +36,7 @@ export default function Home({ paths }: Props) {
         </Column>
         
         <Column>
-          <List>
-            {Object.entries(paths).map(([pathName]) => 
-              <Link key={pathName} href={`/paths/${pathName}`}>
-                <a><H2>The {pathName} learning path</H2></a>
-              </Link>
-            )}
-          </List>
+          <Paths paths={paths} />
         </Column>
       </Main>
 
