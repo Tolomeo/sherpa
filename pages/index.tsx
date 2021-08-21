@@ -1,9 +1,5 @@
-import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
 import paths from '../data/paths'
-import { Header, Main, Container, Column, H1, H2, P, List } from '../src/shared'
+import { GetStaticPropsContext, InferGetStaticPropsType, Head, Header, Main, Column, H1, H2, P, List, Link } from '../src/shared'
 
 export const getStaticProps = async (_: GetStaticPropsContext) => {
   return {
@@ -41,7 +37,7 @@ export default function Home({ paths }: Props) {
         <Column>
           <List>
             {Object.entries(paths).map(([pathName]) => 
-              <Link key={pathName} href={`paths/${pathName}`}>
+              <Link key={pathName} href={`/paths/${pathName}`}>
                 <a><H2>The {pathName} learning path</H2></a>
               </Link>
             )}
