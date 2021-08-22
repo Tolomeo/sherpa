@@ -1,5 +1,5 @@
 import '../src/shared/globals.scss'
-import { AppProps } from '../src/shared'
+import { AppProps } from 'next/app'
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />

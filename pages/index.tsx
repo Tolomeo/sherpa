@@ -1,5 +1,7 @@
+import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import Head from 'next/head'
 import paths from '../data/paths'
-import { GetStaticPropsContext, InferGetStaticPropsType, Head, Header, Main, Column, H1, H2, P, List, Link } from '../src/shared'
+import { Header, Main, Column, H1, P } from '../src/shared'
 import { Paths } from '../src/path'
 
 export const getStaticProps = async (_: GetStaticPropsContext) => {

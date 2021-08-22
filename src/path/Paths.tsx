@@ -1,6 +1,7 @@
 import React from 'react'
+import Link from 'next/link'
 import { Paths } from '../../data'
-import { List, H2, Link } from '../shared'
+import { List, H2 } from '../shared'
 
 type Props = {
     paths: Paths

@@ -1,5 +1,8 @@
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
+import Head from 'next/head'
+import { ParsedUrlQuery } from 'querystring'
 import { paths, populatePath, PopulatedPath } from '../../data'
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, ParsedUrlQuery, Head, Header, Main, Column, H1 } from '../../src/shared'
+import { Header, Main, Column, H1 } from '../../src/shared'
 import { Path } from '../../src/path'
 
 interface Params extends ParsedUrlQuery {
