@@ -1,28 +1,23 @@
-// see https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
-
 .path {}
 
 .resource {
 
     &__source {
-        color: #BDBDBD;
-        font-size: 0.875rem;
-        font-size: clamp(0.875rem, 0.8333rem + 0.1852vw, 1rem);
+        color: var(--colors-gray-lighter, #BDBDBD);
+        font-size: var(--font-sizes-small, 0.875rem);
         margin: 0;
         padding: 0;
     }
 
     &__title {
-        font-size: 1rem;
-        font-size: clamp(1rem, 0.8750rem + 0.5556vw, 1.375rem);
+        font-size: var(--font-sizes-medium, 1rem);
         margin: 0;
-        padding: 0.25rem 0 0.35rem 0;
+        padding: 0 0 0.5rem 0;
     }
     
     &__type {
-        color: #9B51E0;
-        font-size:0.75rem;
-        font-size: clamp(0.75rem, 0.7083rem + 0.1852vw, 0.875rem);
+        color: var(--colors-primary);
+        font-size: var(--font-sizes-tiny, 0.75rem);
         margin: 0;
         padding: 0;
     }

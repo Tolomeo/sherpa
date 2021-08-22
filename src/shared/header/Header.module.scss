@@ -1,8 +1,8 @@
 .header {
     --header-z-index: 1030;
-    --header-spacing-y: 1.5rem;
-    --header-background-color: white;
-    --header-logo-color: black;
+    --header-spacing-y: var(--space-medium, 1.5rem);
+    --header-background-color: var(--colors-body-background, white);
+    --header-logo-color: var(--colors-gray-darkest, black);
 
     position: sticky;
     top: 0;

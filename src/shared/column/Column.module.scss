@@ -1,6 +1,6 @@
 .column {
-    --column-spacing-x: 1.5rem;
-    --column-spacing-y: 3rem;
+    --column-spacing-x: var(--space-medium, 1.5rem);
+    --column-spacing-y: var(--space-large, 3rem);
 
     position: relative;
     max-width: 80ch;

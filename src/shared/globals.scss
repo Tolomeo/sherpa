@@ -1,11 +1,61 @@
 @import '~normalize.css';
 
-body {
-  font-family: 'Poppins', sans-serif;
+:root {
+  // font-family
+  --fonts-body: 'Poppins', sans-serif;
+  --fonts-heading: 'Poppins', sans-serif;
+  // font-size
+  // see https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+  --font-sizes-tiny: clamp(0.75rem, 0.7083rem + 0.1852vw, 0.875rem);
+  --font-sizes-small: clamp(0.875rem, 0.8333rem + 0.1852vw, 1rem);
+  --font-sizes-medium: clamp(1rem, 0.8750rem + 0.5556vw, 1.375rem);
+  --font-sizes-large: clamp(1.375rem, 0.8333rem + 2.4074vw, 3rem);
+  // font-weight    
+  --font-weights-normal: 300;
+  --font-weights-bold: 400;
+  // line-height
+  --line-heights-small: 1.2;
+  --line-heights-medium: 1.5;
+  // color, background
+  --colors-gray-lighter: #BDBDBD;
+  --colors-gray: #999999;
+  --colors-gray-darker: #4F4F4F;
+  --colors-gray-darkest: black;
+  --colors-primary: #9B51E0;
+  --colors-secondary: #DA72FF;
+  --colors-body-background: white;
+  // margin, padding, grid
+  --space-medium: 1.5rem;
+  --space-large: 3rem;
 }
 
-p {
-  margin: 0 0 1.5rem 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: var(--fonts-body);
+  font-size: var(--font-sizes-medium);
+  font-weight: var(--font-weights-normal);
+  line-height: var(--line-heights-medium);
+  color: var(--colors-gray-darker);
+  background-color: var(--colors-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fonts-heading);
+  font-weight: var(--font-weights-bold);
+  line-height: var(--line-heights-small);
+  color: var(--colors-gray-darkest);
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -13,7 +63,9 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 

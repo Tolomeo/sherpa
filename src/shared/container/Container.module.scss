@@ -1,5 +1,5 @@
 .container {
-    --container-spacing-x: 1.5rem;
+    --container-spacing-x: var(--space-medium, 1.5rem);
 
     width: 100%;
     padding-right: var(--container-spacing-x);

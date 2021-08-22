@@ -25,7 +25,7 @@ export default function Home({ paths }: Props) {
 
       <Main>
         <Column>
-          <H1>Welcome to The Learning Path</H1>
+          <H1>Welcome to The&nbsp;Learning&nbsp;Path</H1>
         </Column>
 
         <Column>

@@ -1,8 +1,8 @@
 .timeline {
-    --timeline-spacing: 3rem;
-    --timeline-stroke-color: #bdbdbd;
+    --timeline-spacing: var(--space-large, 3rem);
+    --timeline-stroke-color: var(--colors-gray-lighter, #bdbdbd);
+    --timeline-stroke-color-active: var(--colors-primary, #9B51E0);
     --timeline-stroke-width: 2px;
-    --timeline-stroke-color-active: #9B51E0;
     --timeline-dot-size: 14px;
 
     position: relative;
