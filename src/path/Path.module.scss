@@ -3,21 +3,15 @@
 .resource {
 
     &__source {
-        color: var(--colors-gray-lighter, #BDBDBD);
-        font-size: var(--font-sizes-small, 0.875rem);
+        color: var(--colors-gray);
+        font-size: var(--font-sizes-small);
         margin: 0;
         padding: 0;
     }
-
-    &__title {
-        font-size: var(--font-sizes-medium, 1rem);
-        margin: 0;
-        padding: 0 0 0.5rem 0;
-    }
     
     &__type {
-        color: var(--colors-primary);
-        font-size: var(--font-sizes-tiny, 0.75rem);
+        color: var(--colors-secondary);
+        font-size: var(--font-sizes-tiny);
         margin: 0;
         padding: 0;
     }
