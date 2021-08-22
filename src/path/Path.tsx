@@ -1,6 +1,6 @@
 import React from 'react'
 import { PopulatedPath } from '../../data'
-import { Timeline, H2, P } from '../shared'
+import { Timeline, H2, P } from '../ui'
 import styles from './Path.module.scss'
 
 type Props = {

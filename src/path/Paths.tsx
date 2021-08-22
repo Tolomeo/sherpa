@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Paths } from '../../data'
-import { List, H2 } from '../shared'
+import { List, H2 } from '../ui'
 
 type Props = {
     paths: Paths

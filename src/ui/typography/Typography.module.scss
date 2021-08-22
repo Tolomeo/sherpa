@@ -1,8 +1,8 @@
 @mixin heading {
     font-family: var(--fonts-heading);
-    font-weight: var(--font-weights-bold, 400);
-    line-height: var(--line-heights-small, 1.2);
-    color: var(--colors-gray-darkest, black);
+    font-weight: var(--font-weights-bold);
+    line-height: var(--line-heights-small);
+    color: var(--colors-gray-darkest);
     margin: 0;
     padding: 0;
 }

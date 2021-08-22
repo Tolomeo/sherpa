@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { ParsedUrlQuery } from 'querystring'
 import { paths, populatePath, PopulatedPath } from '../../data'
-import { Header, Main, Column, H1 } from '../../src/shared'
+import { Header, Main, Column, H1 } from '../../src/ui'
 import { Path } from '../../src/path'
 
 interface Params extends ParsedUrlQuery {

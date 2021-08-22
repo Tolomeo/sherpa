@@ -1,8 +1,8 @@
 .list {
-    --list-spacing: var(--space-medium, 1.5rem);
+    --list-spacing: var(--space-medium);
     --list-bullet-size: 14px;
     --list-bullet-stroke-width: 2px;
-    --list-bullet-stroke-color: var(--colors-gray-lighter, #bdbdbd);
+    --list-bullet-stroke-color: var(--colors-gray-lighter);
 
     position: relative;
     width: 100%;

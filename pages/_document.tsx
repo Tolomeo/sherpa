@@ -1,6 +1,6 @@
 
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { Body } from '../src/shared'
+import { Body } from '../src/ui'
 
 class CustomDocument extends Document {
   render() {
