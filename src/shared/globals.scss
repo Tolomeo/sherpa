@@ -40,32 +40,8 @@ html, body {
   height: 100%;
 }
 
-body {
-  font-family: var(--fonts-body);
-  font-size: var(--font-sizes-medium);
-  font-weight: var(--font-weights-normal);
-  line-height: var(--line-heights-medium);
-  color: var(--colors-gray-darker);
-  background-color: var(--colors-white);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--fonts-heading);
-  font-weight: var(--font-weights-bold);
-  line-height: var(--line-heights-small);
-  color: var(--colors-gray-darkest);
-  margin: 0;
-  padding: 0;
-}
-
 a {
   color: inherit;
   text-decoration: none;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 

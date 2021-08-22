@@ -1,5 +1,6 @@
 
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { Body } from '../src/shared'
 
 class CustomDocument extends Document {
   render() {
@@ -8,10 +9,10 @@ class CustomDocument extends Document {
         <Head>
          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet" />
         </Head>
-        <body>
+        <Body>
           <Main />
           <NextScript />
-        </body>
+        </Body>
       </Html>
     )
   }
