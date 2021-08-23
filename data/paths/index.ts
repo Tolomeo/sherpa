@@ -2,26 +2,28 @@ import resources, { Resource } from '../resources'
 import javascript from './javascript.json'
 
 export interface Path {
-    title: string,
-    resources: string[]
+  title: string
+  resources: string[]
 }
 
 export interface PopulatedPath {
-    title: string,
-    resources: Resource[]
+  title: string
+  resources: Resource[]
 }
 
 export type Paths = {
-    [pathName: string]: Path
+  [pathName: string]: Path
 }
 
 export const populatePath = (path: Path): PopulatedPath => ({
-    ...path,
-    resources: path.resources.map(resourceId => resources[resourceId]).filter(Boolean)
+  ...path,
+  resources: path.resources
+    .map((resourceId) => resources[resourceId])
+    .filter(Boolean),
 })
 
 const paths = <Paths>{
-    javascript
+  javascript,
 }
 
 export default paths

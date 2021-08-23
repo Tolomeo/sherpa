@@ -1,15 +1,15 @@
 {
-    "title": "Javascript",
-    "resources": [
-        "https://www.udacity.com/course/intro-to-javascript--ud803",
-        "https://www.udemy.com/course/javascript-essentials",
-        "https://www.udemy.com/course/web-dev-dom",
-        "https://www.udemy.com/course/ecmascript2015",
-        "https://www.udemy.com/course/advanced-and-object-oriented-javascript",
-        "https://www.udemy.com/course/asynchronous-javascript-bootcamp",
-        "https://javascript30.com",
-        "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
-        "https://mbeaudru.github.io/modern-js-cheatsheet",
-        "https://github.com/sorrycc/awesome-javascript"
-    ]
+  "title": "Javascript",
+  "resources": [
+    "https://www.udacity.com/course/intro-to-javascript--ud803",
+    "https://www.udemy.com/course/javascript-essentials",
+    "https://www.udemy.com/course/web-dev-dom",
+    "https://www.udemy.com/course/ecmascript2015",
+    "https://www.udemy.com/course/advanced-and-object-oriented-javascript",
+    "https://www.udemy.com/course/asynchronous-javascript-bootcamp",
+    "https://javascript30.com",
+    "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
+    "https://mbeaudru.github.io/modern-js-cheatsheet",
+    "https://github.com/sorrycc/awesome-javascript"
+  ]
 }

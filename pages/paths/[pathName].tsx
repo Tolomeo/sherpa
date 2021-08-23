@@ -6,29 +6,31 @@ import { Header, Main, Column, H1 } from '../../src/ui'
 import { Path } from '../../src/path'
 
 interface Params extends ParsedUrlQuery {
-    pathName: string
+  pathName: string
 }
 
 interface StaticProps {
-    path: PopulatedPath
+  path: PopulatedPath
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const staticPaths = Object.keys(paths).map((pathName) => ({
-        params: { pathName }
-    }))
+  const staticPaths = Object.keys(paths).map((pathName) => ({
+    params: { pathName },
+  }))
 
-    return { paths: staticPaths, fallback: false }
+  return { paths: staticPaths, fallback: false }
 }
 
-export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
+  params,
+}) => {
   const path = paths[params!.pathName]
   const populatedPath = populatePath(path)
 
   return {
     props: {
       path: populatedPath,
-    }
+    },
   }
 }
 
@@ -46,16 +48,16 @@ export default function Home({ path }: Props) {
       <Header />
 
       <Main>
-          <Column>
-              <H1>The <u>{path.title}</u> learning path</H1>
-          </Column>
+        <Column>
+          <H1>
+            The <u>{path.title}</u> learning path
+          </H1>
+        </Column>
 
-          <Column>
-            <Path path={path} />
+        <Column>
+          <Path path={path} />
         </Column>
       </Main>
-
     </div>
   )
 }
-

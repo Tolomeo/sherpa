@@ -1,21 +1,20 @@
 import javascript from './javascript.json'
 
-
-type ResourceType = "video" | "challenge" | "reading"
+type ResourceType = 'video' | 'challenge' | 'reading'
 export interface Resource {
-    title: string,
-    description: string,
-    url: string,
-    type: ResourceType | ResourceType[],
-    source: string,
+  title: string
+  description: string
+  url: string
+  type: ResourceType | ResourceType[]
+  source: string
 }
 
 export type Resources = {
-    [resourceId: string]: Resource
+  [resourceId: string]: Resource
 }
 
 const resources = <Resources>{
-    ...javascript
+  ...javascript,
 }
 
 export default resources

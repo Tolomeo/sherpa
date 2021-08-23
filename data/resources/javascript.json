@@ -1,72 +1,72 @@
 {
-    "https://www.udacity.com/course/intro-to-javascript--ud803": {
-        "title": "Intro to JavaScript",
-        "description": "Fundamentals of the JavaScript Syntax",
-        "url": "https://www.udacity.com/course/intro-to-javascript--ud803",
-        "type": "video",
-        "source": "udacity"
-    },
-    "https://www.udemy.com/course/javascript-essentials": {
-        "title": "Javascript Essentials",
-        "description": "Learn how Javascript works, some basic API's and finally create a mini project.",
-        "url": "https://www.udemy.com/course/javascript-essentials",
-        "type": "video",
-        "source": "udemy"
-    },
-    "https://www.udemy.com/course/web-dev-dom": {
-        "title": "The Complete JavaScript DOM in two hours",
-        "description": "Master the internals of JavaScript and use it better",
-        "url": "https://www.udemy.com/course/web-dev-dom",
-        "type": "video",
-        "source": "udemy"
-    },
-    "https://www.udemy.com/course/ecmascript2015": {
-        "title": "Learning ECMAScript The Next Generation of Javascript",
-        "description": "Start using EcmaScript in production and own projects today.",
-        "url": "https://www.udemy.com/course/ecmascript2015",
-        "type": "video",
-        "source": "udemy"
-    },
-    "https://www.udemy.com/course/advanced-and-object-oriented-javascript": {
-        "title": "Advanced and Object Oriented JavaScript and ES6",
-        "description": "Master the internals of JavaScript and use it better",
-        "url": "https://www.udemy.com/course/advanced-and-object-oriented-javascript",
-        "type": "video",
-        "source": "udemy"
-    },
-    "https://www.udemy.com/course/asynchronous-javascript-bootcamp": {
-        "title": "Asynchronous JavaScript Bootcamp",
-        "description": "Learn how to use Promises, async functions, and callbacks to handle asynchronous JS code",
-        "url": "https://www.udemy.com/course/asynchronous-javascript-bootcamp",
-        "type": "video",
-        "source": "udemy"
-    },
-    "https://javascript30.com": {
-        "title": "javascript30",
-        "description": "30 Day Vanilla JS Coding Challenge",
-        "url": "https://javascript30.com",
-        "type": "challenge",
-        "source": "wesbos"
-    },
-    "https://addyosmani.com/resources/essentialjsdesignpatterns/book": {
-        "title": "Learning JavaScript Design Patterns",
-        "description": "A book by Addy Osmani",
-        "url": "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
-        "type": "reading",
-        "source": "addyosmani"
-    },
-    "https://mbeaudru.github.io/modern-js-cheatsheet": {
-        "title": "Modern JavaScript Cheatsheet",
-        "description": "Cheatsheet for the JavaScript knowledge you will frequently encounter in modern projects.",
-        "url": "https://mbeaudru.github.io/modern-js-cheatsheet",
-        "type": "reading",
-        "source": "github"
-    },
-    "https://github.com/sorrycc/awesome-javascript": {
-        "title": "Awesome JavaScript",
-        "description": "A collection of awesome browser-side JavaScript libraries, resources and shiny things.",
-        "url": "https://github.com/sorrycc/awesome-javascript",
-        "type": "reading",
-        "source": "addyosmani"
-    }
+  "https://www.udacity.com/course/intro-to-javascript--ud803": {
+    "title": "Intro to JavaScript",
+    "description": "Fundamentals of the JavaScript Syntax",
+    "url": "https://www.udacity.com/course/intro-to-javascript--ud803",
+    "type": "video",
+    "source": "udacity"
+  },
+  "https://www.udemy.com/course/javascript-essentials": {
+    "title": "Javascript Essentials",
+    "description": "Learn how Javascript works, some basic API's and finally create a mini project.",
+    "url": "https://www.udemy.com/course/javascript-essentials",
+    "type": "video",
+    "source": "udemy"
+  },
+  "https://www.udemy.com/course/web-dev-dom": {
+    "title": "The Complete JavaScript DOM in two hours",
+    "description": "Master the internals of JavaScript and use it better",
+    "url": "https://www.udemy.com/course/web-dev-dom",
+    "type": "video",
+    "source": "udemy"
+  },
+  "https://www.udemy.com/course/ecmascript2015": {
+    "title": "Learning ECMAScript The Next Generation of Javascript",
+    "description": "Start using EcmaScript in production and own projects today.",
+    "url": "https://www.udemy.com/course/ecmascript2015",
+    "type": "video",
+    "source": "udemy"
+  },
+  "https://www.udemy.com/course/advanced-and-object-oriented-javascript": {
+    "title": "Advanced and Object Oriented JavaScript and ES6",
+    "description": "Master the internals of JavaScript and use it better",
+    "url": "https://www.udemy.com/course/advanced-and-object-oriented-javascript",
+    "type": "video",
+    "source": "udemy"
+  },
+  "https://www.udemy.com/course/asynchronous-javascript-bootcamp": {
+    "title": "Asynchronous JavaScript Bootcamp",
+    "description": "Learn how to use Promises, async functions, and callbacks to handle asynchronous JS code",
+    "url": "https://www.udemy.com/course/asynchronous-javascript-bootcamp",
+    "type": "video",
+    "source": "udemy"
+  },
+  "https://javascript30.com": {
+    "title": "javascript30",
+    "description": "30 Day Vanilla JS Coding Challenge",
+    "url": "https://javascript30.com",
+    "type": "challenge",
+    "source": "wesbos"
+  },
+  "https://addyosmani.com/resources/essentialjsdesignpatterns/book": {
+    "title": "Learning JavaScript Design Patterns",
+    "description": "A book by Addy Osmani",
+    "url": "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
+    "type": "reading",
+    "source": "addyosmani"
+  },
+  "https://mbeaudru.github.io/modern-js-cheatsheet": {
+    "title": "Modern JavaScript Cheatsheet",
+    "description": "Cheatsheet for the JavaScript knowledge you will frequently encounter in modern projects.",
+    "url": "https://mbeaudru.github.io/modern-js-cheatsheet",
+    "type": "reading",
+    "source": "github"
+  },
+  "https://github.com/sorrycc/awesome-javascript": {
+    "title": "Awesome JavaScript",
+    "description": "A collection of awesome browser-side JavaScript libraries, resources and shiny things.",
+    "url": "https://github.com/sorrycc/awesome-javascript",
+    "type": "reading",
+    "source": "addyosmani"
+  }
 }

@@ -7,8 +7,8 @@ import { Paths } from '../src/path'
 export const getStaticProps = async (_: GetStaticPropsContext) => {
   return {
     props: {
-      paths
-    }
+      paths,
+    },
   }
 }
 
@@ -31,17 +31,39 @@ export default function Home({ paths }: Props) {
         </Column>
 
         <Column>
-          <P>Whether you are a professional with years of expertise or a would-be engineer, you are possibly here because you realise how valuable it is to aquire new skills and to make the most out of those you already master.</P>
-          <P>There are some amazing platforms providing high quality paid educational content and I recommend you check them out.<br /> The web is a wild place though and it is possible to find some equally stunning learning material provided entirely for free. That is incredible!</P>
-          <P>A challenge you may face is to find it. Sometimes you are pushed as far as checking the second results page of your Google search. That&apos;s bananas, right? <br /> It is not always explicit what to start from or what to progress with. <br /> More often that not it is unclear how newly acquired shiny pieces of knowledge fit together.</P>
-          <P>This project tries to solve those issues, providing you with an opinionated list of resources useful to learn on different topics. <br /> All resources are free and hand-picked to create learning paths which aim to be as consistent as possible.</P>
+          <P>
+            Whether you are a professional with years of expertise or a would-be
+            engineer, you are possibly here because you realise how valuable it
+            is to aquire new skills and to make the most out of those you
+            already master.
+          </P>
+          <P>
+            There are some amazing platforms providing high quality paid
+            educational content and I recommend you check them out.
+            <br /> The web is a wild place though and it is possible to find
+            some equally stunning learning material provided entirely for free.
+            That is incredible!
+          </P>
+          <P>
+            A challenge you may face is to find it. Sometimes you are pushed as
+            far as checking the second results page of your Google search.
+            That&apos;s bananas, right? <br /> It is not always explicit what to
+            start from or what to progress with. <br /> More often that not it
+            is unclear how newly acquired shiny pieces of knowledge fit
+            together.
+          </P>
+          <P>
+            This project tries to solve those issues, providing you with an
+            opinionated list of resources useful to learn on different topics.{' '}
+            <br /> All resources are free and hand-picked to create learning
+            paths which aim to be as consistent as possible.
+          </P>
         </Column>
-        
+
         <Column>
           <Paths paths={paths} />
         </Column>
       </Main>
-
     </div>
   )
 }
