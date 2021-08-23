@@ -1,12 +1,11 @@
 .main {
-    position: relative;
-    padding-block-start: 20vw;
+  position: relative;
+  padding-block-start: 20vw;
 
-    &__background {
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        max-width: 100%;
-    }
-
+  &__background {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    max-width: 100%;
+  }
 }

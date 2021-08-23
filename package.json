@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"./{src,pages,data}/**/*.{js,jsx,ts,tsx,json}\""
+    "format": "prettier --write \"./{src,pages,data}/**/*.{js,jsx,ts,tsx,json,scss}\""
   },
   "dependencies": {
     "classnames": "^2.3.1",

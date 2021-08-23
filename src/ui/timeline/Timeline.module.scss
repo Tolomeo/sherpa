@@ -1,94 +1,92 @@
 .timeline {
-    --timeline-spacing: var(--space-large);
-    --timeline-stroke-color: var(--colors-gray-lighter);
-    --timeline-stroke-color-active: var(--colors-primary);
-    --timeline-stroke-width: 2px;
-    --timeline-dot-size: 14px;
+  --timeline-spacing: var(--space-large);
+  --timeline-stroke-color: var(--colors-gray-lighter);
+  --timeline-stroke-color-active: var(--colors-primary);
+  --timeline-stroke-width: 2px;
+  --timeline-dot-size: 14px;
 
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .timelineItem {
-    position: relative;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-block: calc(var(--timeline-spacing) / 2);
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-block: calc(var(--timeline-spacing) / 2);
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: var(--timeline-stroke-width);
+    top: 0;
+    bottom: 0;
+    left: calc(var(--timeline-dot-size) / 2);
+    margin-left: calc(var(--timeline-stroke-width) / 2 * -1);
+    background-color: var(--timeline-stroke-color);
+  }
+
+  &:first-child {
+    // padding-block-start: 0;
 
     &::before {
-        content: "";
-        position: absolute;
-        width: var(--timeline-stroke-width);
-        top: 0;
-        bottom: 0;
-        left: calc(var(--timeline-dot-size) / 2);
-        margin-left: calc(var(--timeline-stroke-width) / 2 * -1);
-        background-color: var(--timeline-stroke-color);
+      top: 50%;
     }
+  }
 
-    &:first-child {
-        // padding-block-start: 0;
+  &:last-child {
+    // padding-block-end: 0;
 
-        &::before{
-            top: 50%;
-        }
+    &::before {
+      bottom: 50%;
     }
+  }
 
-    &:last-child {
-        // padding-block-end: 0;
+  &__point {
+    flex-shrink: 0;
+    width: var(--timeline-dot-size);
+    height: var(--timeline-dot-size);
+    background-color: white;
+    border-radius: 100%;
+    z-index: 2;
+    border: var(--timeline-stroke-width) var(--timeline-stroke-color) solid;
+  }
 
-        &::before{
-            bottom: 50%;
-        }
+  &__point--active {
+    background-color: var(--timeline-stroke-color-active);
+    border-color: var(--timeline-stroke-color-active);
+  }
 
+  &__point--active::before {
+    content: '';
+    display: block;
+    width: var(--timeline-stroke-width);
+    background-color: var(--timeline-stroke-color-active);
+    position: absolute;
+    left: calc(var(--timeline-dot-size) / 2);
+    margin-left: calc(var(--timeline-stroke-width) / 2 * -1);
+    top: 0;
+    bottom: 0;
+  }
+
+  &:first-child &__point--active::before {
+    top: 50%;
+  }
+
+  &:last-child &__point--active::before {
+    bottom: 50%;
+  }
+
+  &__content {
+    padding: 0 1rem;
+
+    &,
+    a {
+      color: #4f4f4f;
     }
-
-
-    &__point {
-        flex-shrink: 0;
-        width: var(--timeline-dot-size);
-        height: var(--timeline-dot-size);
-        background-color: white;
-        border-radius: 100%;
-        z-index: 2;
-        border: var(--timeline-stroke-width) var(--timeline-stroke-color) solid;
-    }
-
-    &__point--active {
-        background-color: var(--timeline-stroke-color-active);
-        border-color: var(--timeline-stroke-color-active);
-    }
-
-    &__point--active::before {
-        content: '';
-        display: block;
-        width: var(--timeline-stroke-width);
-        background-color: var(--timeline-stroke-color-active);
-        position: absolute;
-        left: calc(var(--timeline-dot-size) / 2);
-        margin-left: calc(var(--timeline-stroke-width) / 2 * -1);
-        top: 0;
-        bottom: 0;
-    }
-
-    &:first-child &__point--active::before{
-        top: 50%;
-    }
-
-    &:last-child &__point--active::before{
-        bottom: 50%;
-    }
-
-    &__content {
-        padding: 0 1rem;
-        
-        &, a {
-            color: #4F4F4F;
-        }
-    }    
-
+  }
 }

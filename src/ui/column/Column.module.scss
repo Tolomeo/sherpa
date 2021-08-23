@@ -1,13 +1,13 @@
 .column {
-    --column-spacing-x: var(--space-medium);
-    --column-spacing-y: var(--space-large);
+  --column-spacing-x: var(--space-medium);
+  --column-spacing-y: var(--space-large);
 
-    position: relative;
-    max-width: 80ch;
-    padding: var(--column-spacing-y) var(--column-spacing-x);
-    margin: 0 auto;
+  position: relative;
+  max-width: 80ch;
+  padding: var(--column-spacing-y) var(--column-spacing-x);
+  margin: 0 auto;
 
-    & + & {
-        padding-block-start: 0;
-    }
+  & + & {
+    padding-block-start: 0;
+  }
 }

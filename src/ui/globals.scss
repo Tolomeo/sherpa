@@ -8,21 +8,21 @@
   // see https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
   --font-sizes-tiny: clamp(0.75rem, 0.7083rem + 0.1852vw, 0.875rem);
   --font-sizes-small: clamp(0.875rem, 0.8333rem + 0.1852vw, 1rem);
-  --font-sizes-medium: clamp(1rem, 0.8750rem + 0.5556vw, 1.375rem);
+  --font-sizes-medium: clamp(1rem, 0.875rem + 0.5556vw, 1.375rem);
   --font-sizes-large: clamp(1.375rem, 0.8333rem + 2.4074vw, 3rem);
-  // font-weight    
+  // font-weight
   --font-weights-normal: 300;
   --font-weights-bold: 400;
   // line-height
   --line-heights-small: 1.2;
   --line-heights-medium: 1.5;
   // color, background
-  --colors-gray-lighter: #BDBDBD;
+  --colors-gray-lighter: #bdbdbd;
   --colors-gray: #999999;
-  --colors-gray-darker: #4F4F4F;
+  --colors-gray-darker: #4f4f4f;
   --colors-gray-darkest: black;
-  --colors-primary: #9B51E0;
-  --colors-secondary: #DA72FF;
+  --colors-primary: #9b51e0;
+  --colors-secondary: #da72ff;
   --colors-body-background: white;
   // margin, padding, grid
   --space-medium: 1.5rem;
@@ -35,7 +35,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -44,4 +45,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
