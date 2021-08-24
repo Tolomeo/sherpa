@@ -1,15 +1,21 @@
 {
   "title": "Javascript",
   "resources": [
-    "https://www.udacity.com/course/intro-to-javascript--ud803",
     "https://www.udemy.com/course/javascript-essentials",
-    "https://www.udemy.com/course/web-dev-dom",
-    "https://www.udemy.com/course/ecmascript2015",
     "https://www.udemy.com/course/advanced-and-object-oriented-javascript",
-    "https://www.udemy.com/course/asynchronous-javascript-bootcamp",
-    "https://javascript30.com",
-    "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
+    "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu",
     "https://mbeaudru.github.io/modern-js-cheatsheet",
-    "https://github.com/sorrycc/awesome-javascript"
+    "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures",
+    "https://javascript.info",
+    "https://jskatas.org",
+    "https://javascript30.com",
+    "http://tcorral.github.io/javascript-challenges-book",
+    "https://github.com/gothinkster/web-components-realworld-example-app",
+    "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
+    "https://github.com/ryanmcdermott/clean-code-javascript",
+    "https://eloquentjavascript.net",
+    "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
+    "https://github.com/getify/Functional-Light-JS",
+    "https://bonsaiden.github.io/JavaScript-Garden"
   ]
 }

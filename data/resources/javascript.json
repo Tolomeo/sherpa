@@ -1,72 +1,104 @@
 {
-  "https://www.udacity.com/course/intro-to-javascript--ud803": {
-    "title": "Intro to JavaScript",
-    "description": "Fundamentals of the JavaScript Syntax",
-    "url": "https://www.udacity.com/course/intro-to-javascript--ud803",
-    "type": "video",
-    "source": "udacity"
-  },
   "https://www.udemy.com/course/javascript-essentials": {
     "title": "Javascript Essentials",
-    "description": "Learn how Javascript works, some basic API's and finally create a mini project.",
     "url": "https://www.udemy.com/course/javascript-essentials",
     "type": "video",
-    "source": "udemy"
-  },
-  "https://www.udemy.com/course/web-dev-dom": {
-    "title": "The Complete JavaScript DOM in two hours",
-    "description": "Master the internals of JavaScript and use it better",
-    "url": "https://www.udemy.com/course/web-dev-dom",
-    "type": "video",
-    "source": "udemy"
-  },
-  "https://www.udemy.com/course/ecmascript2015": {
-    "title": "Learning ECMAScript The Next Generation of Javascript",
-    "description": "Start using EcmaScript in production and own projects today.",
-    "url": "https://www.udemy.com/course/ecmascript2015",
-    "type": "video",
-    "source": "udemy"
+    "source": "udemy.com"
   },
   "https://www.udemy.com/course/advanced-and-object-oriented-javascript": {
     "title": "Advanced and Object Oriented JavaScript and ES6",
-    "description": "Master the internals of JavaScript and use it better",
     "url": "https://www.udemy.com/course/advanced-and-object-oriented-javascript",
     "type": "video",
-    "source": "udemy"
+    "source": "udemy.com"
   },
-  "https://www.udemy.com/course/asynchronous-javascript-bootcamp": {
-    "title": "Asynchronous JavaScript Bootcamp",
-    "description": "Learn how to use Promises, async functions, and callbacks to handle asynchronous JS code",
-    "url": "https://www.udemy.com/course/asynchronous-javascript-bootcamp",
+  "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu": {
+    "title": "Asyncronous javascript",
+    "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu",
     "type": "video",
-    "source": "udemy"
+    "source": "youtube.com"
   },
   "https://javascript30.com": {
-    "title": "javascript30",
-    "description": "30 Day Vanilla JS Coding Challenge",
+    "title": "Javascript30",
     "url": "https://javascript30.com",
     "type": "challenge",
-    "source": "wesbos"
+    "source": "javascript30.com"
   },
   "https://addyosmani.com/resources/essentialjsdesignpatterns/book": {
     "title": "Learning JavaScript Design Patterns",
-    "description": "A book by Addy Osmani",
     "url": "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
-    "type": "reading",
-    "source": "addyosmani"
+    "type": "book",
+    "source": "addyosmani.com"
   },
   "https://mbeaudru.github.io/modern-js-cheatsheet": {
     "title": "Modern JavaScript Cheatsheet",
-    "description": "Cheatsheet for the JavaScript knowledge you will frequently encounter in modern projects.",
     "url": "https://mbeaudru.github.io/modern-js-cheatsheet",
     "type": "reading",
-    "source": "github"
+    "source": "github.com"
   },
   "https://github.com/sorrycc/awesome-javascript": {
     "title": "Awesome JavaScript",
-    "description": "A collection of awesome browser-side JavaScript libraries, resources and shiny things.",
     "url": "https://github.com/sorrycc/awesome-javascript",
     "type": "reading",
-    "source": "addyosmani"
+    "source": "github.com"
+  },
+  "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures": {
+    "title": "JavaScript Algorithms and Data Structures",
+    "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures",
+    "type": ["reading", "interactive"],
+    "source": "freecodecamp.org"
+  },
+  "https://javascript.info": {
+    "title": "The Modern JavaScript Tutorial",
+    "url": "https://javascript.info",
+    "type": ["book", "challenge"],
+    "source": "javascript.info"
+  },
+  "https://jskatas.org": {
+    "title": "Javascript katas",
+    "url": "https://jskatas.org",
+    "type": "challenge",
+    "source": "jskatas.org"
+  },
+  "http://tcorral.github.io/javascript-challenges-book": {
+    "title": "Javascript Challenges",
+    "url": "http://tcorral.github.io/javascript-challenges-book",
+    "type": "challenge",
+    "source": "tcorral.github.io"
+  },
+  "https://github.com/ryanmcdermott/clean-code-javascript": {
+    "title": "Clean-code-javascript",
+    "url": "https://github.com/ryanmcdermott/clean-code-javascript",
+    "type": "reading",
+    "source": "github.com"
+  },
+  "https://eloquentjavascript.net": {
+    "title": "Eloquent JavaScript",
+    "url": "https://eloquentjavascript.net",
+    "type": "book",
+    "source": "eloquentjavascript.net"
+  },
+  "https://github.com/getify/Functional-Light-JS": {
+    "title": "Functional-Light JavaScript",
+    "url": "https://github.com/getify/Functional-Light-JS",
+    "type": "book",
+    "source": "github.com"
+  },
+  "https://github.com/gothinkster/web-components-realworld-example-app": {
+    "title": "Vanilla JS + Web Components example app",
+    "url": "https://github.com/gothinkster/web-components-realworld-example-app",
+    "type": "example",
+    "source": "github.com"
+  },
+  "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app": {
+    "title": "Event driven vanilla JS + Web Components example app",
+    "url": "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
+    "type": "example",
+    "source": "github.com"
+  },
+  "https://bonsaiden.github.io/JavaScript-Garden": {
+    "title": "JavaScript Garden",
+    "url": "https://bonsaiden.github.io/JavaScript-Garden",
+    "type": "reading",
+    "source": "bonsaiden.github.io"
   }
 }

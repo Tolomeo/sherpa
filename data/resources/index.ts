@@ -1,9 +1,14 @@
 import javascript from './javascript.json'
 
-type ResourceType = 'video' | 'challenge' | 'reading'
+type ResourceType =
+  | 'video'
+  | 'challenge'
+  | 'reading'
+  | 'interactive'
+  | 'book'
+  | 'example'
 export interface Resource {
   title: string
-  description: string
   url: string
   type: ResourceType | ResourceType[]
   source: string

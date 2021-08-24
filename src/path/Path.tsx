@@ -15,7 +15,11 @@ const Path = ({ path }: Props) => {
           <a href={resource.url} target="_blank" rel="noreferrer">
             <p className={styles.resource__source}>{resource.source}</p>
             <H2>{resource.title}</H2>
-            <p className={styles.resource__type}>{resource.type}</p>
+            <p className={styles.resource__type}>
+              {Array.isArray(resource.type)
+                ? resource.type.join(', ')
+                : resource.type}
+            </p>
           </a>
         </Timeline.Item>
       ))}
