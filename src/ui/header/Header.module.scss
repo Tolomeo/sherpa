@@ -1,6 +1,7 @@
 .header {
   --header-z-index: 1030;
   --header-spacing-y: var(--space-medium);
+  --header-shadow: var(--shadows-small);
   --header-background-color: var(--colors-body-background);
   --header-logo-color: var(--colors-gray-darkest);
 
@@ -13,6 +14,7 @@
   padding-top: var(--header-spacing-y);
   padding-bottom: var(--header-spacing-y);
   background-color: var(--header-background-color);
+  box-shadow: var(--header-shadow);
 
   &__logo {
     padding: 0;

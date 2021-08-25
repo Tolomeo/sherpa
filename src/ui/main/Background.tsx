@@ -7,7 +7,7 @@ const Wave = () => {
       width={1440}
       height={483}
       viewBox="0 0 1440 483"
-      preserveAspectRatio="xMinYMin meet"
+      preserveAspectRatio="xMaxYMin meet"
       fill="none"
       className={styles.main__background}
       role="presentation"
