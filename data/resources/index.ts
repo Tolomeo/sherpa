@@ -1,16 +1,18 @@
 import javascript from './javascript.json'
+import typescript from './typescript.json'
 
-type ResourceType =
+export type ResourceType =
   | 'video'
   | 'challenge'
   | 'reading'
   | 'interactive'
   | 'book'
   | 'example'
+
 export interface Resource {
   title: string
   url: string
-  type: ResourceType | ResourceType[]
+  type: ResourceType[]
   source: string
 }
 
@@ -20,6 +22,7 @@ export type Resources = {
 
 const resources = <Resources>{
   ...javascript,
+  ...typescript,
 }
 
 export default resources

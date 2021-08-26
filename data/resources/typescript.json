@@ -1,0 +1,62 @@
+{
+  "https://www.youtube.com/watch?v=BwuLxPH8IDs": {
+    "title": "TypeScript Course for Beginners 2021",
+    "url": "https://www.youtube.com/watch?v=BwuLxPH8IDs",
+    "type": ["video"],
+    "source": "youtube.com"
+  },
+  "https://basarat.gitbook.io/typescript": {
+    "title": "TypeScript Deep Dive",
+    "url": "https://basarat.gitbook.io/typescript",
+    "type": ["book"],
+    "source": "basarat.gitbook.io"
+  },
+  "https://rmolinamir.github.io/typescript-cheatsheet": {
+    "title": "typescript-cheatsheet",
+    "url": "https://rmolinamir.github.io/typescript-cheatsheet",
+    "type": ["reading"],
+    "source": "rmolinamir.github.io"
+  },
+  "https://www.typescriptlang.org/docs": {
+    "title": "TypeScript Documentation",
+    "url": "https://www.typescriptlang.org/docs",
+    "type": ["reading"],
+    "source": "typescriptlang.org"
+  },
+  "https://github.com/type-challenges/type-challenges": {
+    "title": "Type<Challenge[]>",
+    "url": "https://github.com/type-challenges/type-challenges",
+    "type": ["challenge"],
+    "source": "github.com"
+  },
+  "https://labs42io.github.io/clean-code-typescript": {
+    "title": "clean-code-typescript",
+    "url": "https://labs42io.github.io/clean-code-typescript",
+    "type": ["reading"],
+    "source": "labs42io.github.io"
+  },
+  "http://torokmark.github.io/design_patterns_in_typescript": {
+    "title": "Design patterns in typescript",
+    "url": "http://torokmark.github.io/design_patterns_in_typescript",
+    "type": ["reading", "example"],
+    "source": "torokmark.github.io"
+  },
+  "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab": {
+    "title": "Learn Advanced TypeScript Types",
+    "url": "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab",
+    "type": ["reading"],
+    "source": "medium.com"
+  },
+  "https://learntypescript.dev": {
+    "title": "Learn TypeScript",
+    "url": "https://learntypescript.dev",
+    "type": ["reading", "interactive"],
+    "source": "learntypescript.dev"
+  },
+  "https://github.com/zws-im/zws": {
+    "title": "Zero Width Shortener (ZWS)",
+    "url": "https://github.com/zws-im/zws",
+    "type": ["example"],
+    "source": "github.com"
+  }
+}

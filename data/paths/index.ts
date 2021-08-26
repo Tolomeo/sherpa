@@ -1,5 +1,6 @@
 import resources, { Resource } from '../resources'
 import javascript from './javascript.json'
+import typescript from './typescript.json'
 
 export interface Path {
   title: string
@@ -24,6 +25,7 @@ export const populatePath = (path: Path): PopulatedPath => ({
 
 const paths = <Paths>{
   javascript,
+  typescript,
 }
 
 export default paths
