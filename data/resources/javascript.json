@@ -35,12 +35,6 @@
     "type": ["reading"],
     "source": "github.com"
   },
-  "https://github.com/sorrycc/awesome-javascript": {
-    "title": "Awesome JavaScript",
-    "url": "https://github.com/sorrycc/awesome-javascript",
-    "type": ["reading"],
-    "source": "github.com"
-  },
   "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures": {
     "title": "JavaScript Algorithms and Data Structures",
     "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures",
@@ -100,5 +94,11 @@
     "url": "https://bonsaiden.github.io/JavaScript-Garden",
     "type": ["reading"],
     "source": "bonsaiden.github.io"
+  },
+  "https://github.com/sorrycc/awesome-javascript": {
+    "title": "Awesome JavaScript",
+    "url": "https://github.com/sorrycc/awesome-javascript",
+    "type": ["collection"],
+    "source": "github.com"
   }
 }

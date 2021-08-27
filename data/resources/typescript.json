@@ -58,5 +58,17 @@
     "url": "https://github.com/zws-im/zws",
     "type": ["example"],
     "source": "github.com"
+  },
+  "https://mariusschulz.com/blog/series/typescript-evolution": {
+    "title": "TypeScript Evolution",
+    "url": "https://mariusschulz.com/blog/series/typescript-evolution",
+    "type": ["reading", "collection"],
+    "source": "mariusschulz.com"
+  },
+  "https://github.com/dzharii/awesome-typescript": {
+    "title": "Awesome TypeScript",
+    "url": "https://github.com/dzharii/awesome-typescript",
+    "type": ["collection"],
+    "source": "github.com"
   }
 }
