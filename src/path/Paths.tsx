@@ -10,10 +10,10 @@ type Props = {
 const PathsList = ({ paths }: Props) => {
   return (
     <List>
-      {Object.entries(paths).map(([pathName]) => (
+      {Object.entries(paths).map(([pathName, path]) => (
         <Link key={pathName} href={`/paths/${pathName}`}>
           <a>
-            <H2>The {pathName} learning path</H2>
+            <H2>The {path.title} learning path</H2>
           </a>
         </Link>
       ))}
