@@ -1,0 +1,104 @@
+{
+  "https://internetingishard.netlify.app": {
+    "title": "Interneting is hard (But it doesn’t have to be)",
+    "url": "https://internetingishard.netlify.app",
+    "type": ["reading"],
+    "source": "internetingishard.netlify.app"
+  },
+  "https://www.freecodecamp.org/learn/responsive-web-design": {
+    "title": "Responsive Web Design",
+    "url": "https://www.freecodecamp.org/learn/responsive-web-design",
+    "type": ["reading", "interactive", "challenge"],
+    "source": "freecodecamp.org"
+  },
+  "https://learn-the-web.algonquindesign.ca/topics/search-engine-optimization": {
+    "title": "Search engine optimization",
+    "url": "https://learn-the-web.algonquindesign.ca/topics/search-engine-optimization",
+    "type": ["reading", "video"],
+    "source": "learn-the-web.algonquindesign.ca"
+  },
+  "https://learn-the-web.algonquindesign.ca/topics/information-architecture": {
+    "title": "Information architecture",
+    "url": "https://learn-the-web.algonquindesign.ca/topics/information-architecture",
+    "type": ["reading", "video"],
+    "source": "learn-the-web.algonquindesign.ca"
+  },
+  "https://flukeout.github.io": {
+    "title": "CSS Diner",
+    "url": "https://flukeout.github.io",
+    "type": ["interactive"],
+    "source": "flukeout.github.io"
+  },
+  "https://htmlreference.io": {
+    "title": "htmlreference.io",
+    "url": "https://htmlreference.io",
+    "type": ["reading", "example"],
+    "source": "htmlreference.io"
+  },
+  "https://cssreference.io": {
+    "title": "cssreference.io",
+    "url": "https://cssreference.io",
+    "type": ["reading", "example"],
+    "source": "cssreference.io"
+  },
+  "https://flexbox.io": {
+    "title": "What the flexbox?!",
+    "url": "https://flexbox.io",
+    "type": ["video"],
+    "source": "flexbox.io"
+  },
+  "https://flexboxfroggy.com": {
+    "title": "Flexbox froggy",
+    "url": "https://flexboxfroggy.com",
+    "type": ["interactive"],
+    "source": "flexboxfroggy.com"
+  },
+  "https://cssgrid.io": {
+    "title": "CSS grid.",
+    "url": "https://cssgrid.io",
+    "type": ["video"],
+    "source": "cssgrid.io"
+  },
+  "https://cssgridgarden.com": {
+    "title": "Grid garden",
+    "url": "https://cssgridgarden.com",
+    "type": ["interactive"],
+    "source": "cssgridgarden.com"
+  },
+  "https://scrimba.com/learn/cssvariables": {
+    "title": "Learn CSS Variables for free",
+    "url": "https://scrimba.com/learn/cssvariables",
+    "type": ["video"],
+    "source": "scrimba.com"
+  },
+  "https://moderncss.dev": {
+    "title": "Modern CSS Solutions for Old CSS Problems",
+    "url": "https://moderncss.dev",
+    "type": ["reading", "example"],
+    "source": "moderncss.dev"
+  },
+  "https://csslayout.io": {
+    "title": "CSS Layout",
+    "url": "https://csslayout.io",
+    "type": ["example"],
+    "source": "csslayout.io"
+  },
+  "http://1linelayouts.glitch.me": {
+    "title": "1-Line Layouts",
+    "url": "http://1linelayouts.glitch.me",
+    "type": ["example", "video"],
+    "source": "1linelayouts.glitch.me"
+  },
+  "https://github.com/diegocard/awesome-html5": {
+    "title": "Awesome HTML5",
+    "url": "https://github.com/diegocard/awesome-html5",
+    "type": ["collection"],
+    "source": "github.com"
+  },
+  "https://github.com/awesome-css-group/awesome-css": {
+    "title": "Awesome CSS",
+    "url": "https://github.com/awesome-css-group/awesome-css",
+    "type": ["collection"],
+    "source": "github.com"
+  }
+}

@@ -1,3 +1,4 @@
+import htmlcss from './html&css.json'
 import javascript from './javascript.json'
 import typescript from './typescript.json'
 
@@ -8,6 +9,7 @@ export type ResourceType =
   | 'interactive'
   | 'book'
   | 'example'
+  | 'collection'
 
 export interface Resource {
   title: string
@@ -23,6 +25,7 @@ export type Resources = {
 const resources = <Resources>{
   ...javascript,
   ...typescript,
+  ...htmlcss,
 }
 
 export default resources
