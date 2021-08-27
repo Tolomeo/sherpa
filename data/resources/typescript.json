@@ -3,7 +3,7 @@
     "title": "TypeScript Course for Beginners 2021",
     "url": "https://www.youtube.com/watch?v=BwuLxPH8IDs",
     "type": ["video"],
-    "source": "youtube.com"
+    "source": "youtube.com/c/Academind"
   },
   "https://basarat.gitbook.io/typescript": {
     "title": "TypeScript Deep Dive",
@@ -27,7 +27,7 @@
     "title": "Type<Challenge[]>",
     "url": "https://github.com/type-challenges/type-challenges",
     "type": ["challenge"],
-    "source": "github.com"
+    "source": "github.com/type-challenges"
   },
   "https://labs42io.github.io/clean-code-typescript": {
     "title": "clean-code-typescript",
@@ -45,7 +45,7 @@
     "title": "Learn Advanced TypeScript Types",
     "url": "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab",
     "type": ["reading"],
-    "source": "medium.com"
+    "source": "medium.com/free-code-camp"
   },
   "https://learntypescript.dev": {
     "title": "Learn TypeScript",
@@ -57,7 +57,7 @@
     "title": "Zero Width Shortener (ZWS)",
     "url": "https://github.com/zws-im/zws",
     "type": ["example"],
-    "source": "github.com"
+    "source": "github.com/zws-im"
   },
   "https://mariusschulz.com/blog/series/typescript-evolution": {
     "title": "TypeScript Evolution",
@@ -69,6 +69,6 @@
     "title": "Awesome TypeScript",
     "url": "https://github.com/dzharii/awesome-typescript",
     "type": ["collection"],
-    "source": "github.com"
+    "source": "github.com/dzharii"
   }
 }

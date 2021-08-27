@@ -93,12 +93,12 @@
     "title": "Awesome HTML5",
     "url": "https://github.com/diegocard/awesome-html5",
     "type": ["collection"],
-    "source": "github.com"
+    "source": "github.com/diegocard"
   },
   "https://github.com/awesome-css-group/awesome-css": {
     "title": "Awesome CSS",
     "url": "https://github.com/awesome-css-group/awesome-css",
     "type": ["collection"],
-    "source": "github.com"
+    "source": "github.com/awesome-css-group"
   }
 }

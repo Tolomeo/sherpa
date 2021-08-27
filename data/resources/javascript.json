@@ -15,7 +15,7 @@
     "title": "Asyncronous javascript",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu",
     "type": ["video"],
-    "source": "youtube.com"
+    "source": "youtube.com/c/TheNetNinja"
   },
   "https://javascript30.com": {
     "title": "Javascript30",
@@ -33,7 +33,7 @@
     "title": "Modern JavaScript Cheatsheet",
     "url": "https://mbeaudru.github.io/modern-js-cheatsheet",
     "type": ["reading"],
-    "source": "github.com"
+    "source": "mbeaudru.github.io"
   },
   "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures": {
     "title": "JavaScript Algorithms and Data Structures",
@@ -63,7 +63,7 @@
     "title": "Clean-code-javascript",
     "url": "https://github.com/ryanmcdermott/clean-code-javascript",
     "type": ["reading"],
-    "source": "github.com"
+    "source": "github.com/ryanmcdermott"
   },
   "https://eloquentjavascript.net": {
     "title": "Eloquent JavaScript",
@@ -75,19 +75,19 @@
     "title": "Functional-Light JavaScript",
     "url": "https://github.com/getify/Functional-Light-JS",
     "type": ["book"],
-    "source": "github.com"
+    "source": "github.com/getify"
   },
   "https://github.com/gothinkster/web-components-realworld-example-app": {
     "title": "Vanilla JS + Web Components example app",
     "url": "https://github.com/gothinkster/web-components-realworld-example-app",
     "type": ["example"],
-    "source": "github.com"
+    "source": "github.com/gothinkster"
   },
   "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app": {
     "title": "Event driven vanilla JS + Web Components example app",
     "url": "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
     "type": ["example"],
-    "source": "github.com"
+    "source": "github.com/mits-gossau"
   },
   "https://bonsaiden.github.io/JavaScript-Garden": {
     "title": "JavaScript Garden",
@@ -99,6 +99,6 @@
     "title": "Awesome JavaScript",
     "url": "https://github.com/sorrycc/awesome-javascript",
     "type": ["collection"],
-    "source": "github.com"
+    "source": "github.com/sorrycc"
   }
 }
