@@ -1,6 +1,7 @@
 import htmlcss from './html&css.json'
 import javascript from './javascript.json'
 import typescript from './typescript.json'
+import reactredux from './react&redux.json'
 
 export type ResourceType =
   | 'video'
@@ -23,9 +24,10 @@ export type Resources = {
 }
 
 const resources = <Resources>{
+  ...htmlcss,
   ...javascript,
   ...typescript,
-  ...htmlcss,
+  ...reactredux,
 }
 
 export default resources

@@ -100,5 +100,17 @@
     "url": "https://github.com/sorrycc/awesome-javascript",
     "type": ["collection"],
     "source": "github.com/sorrycc"
+  },
+  "https://github.com/bradtraversy/vanillawebprojects": {
+    "title": "20+ Web Projects With Vanilla JavaScript",
+    "url": "https://github.com/bradtraversy/vanillawebprojects",
+    "type": ["example", "collection"],
+    "source": "github.com/bradtraversy"
+  },
+  "https://github.com/leonardomso/33-js-concepts": {
+    "title": "33 Concepts Every JavaScript Developer Should Know",
+    "url": "https://github.com/leonardomso/33-js-concepts",
+    "type": ["collection"],
+    "source": "github.com/leonardomso"
   }
 }

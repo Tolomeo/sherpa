@@ -1,7 +1,8 @@
 import resources, { Resource } from '../resources'
+import htmlcss from './html&css.json'
 import javascript from './javascript.json'
 import typescript from './typescript.json'
-import htmlcss from './html&css.json'
+import reactredux from './react&redux.json'
 
 export interface Path {
   title: string
@@ -28,6 +29,7 @@ const paths = <Paths>{
   htmlcss,
   javascript,
   typescript,
+  reactredux,
 }
 
 export default paths
