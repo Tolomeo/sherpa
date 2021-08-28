@@ -1,0 +1,86 @@
+{
+  "https://www.udacity.com/course/version-control-with-git--ud123": {
+    "title": "Version Control with Git",
+    "url": "https://www.udacity.com/course/version-control-with-git--ud123",
+    "type": ["video", "reading", "interactive"],
+    "source": "udacity.com"
+  },
+  "https://www.coursera.org/learn/introduction-git-github": {
+    "title": "Introduction to Git and GitHub",
+    "url": "https://www.coursera.org/learn/introduction-git-github",
+    "type": ["video", "reading", "interactive"],
+    "source": "coursera.org"
+  },
+  "https://egghead.io/courses/practical-git-for-everyday-professional-use": {
+    "title": "Practical Git for Everyday Professional Use",
+    "url": "https://egghead.io/courses/practical-git-for-everyday-professional-use",
+    "type": ["video"],
+    "source": "egghead.io"
+  },
+  "https://learngitbranching.js.org": {
+    "title": "Learn Git Branching",
+    "url": "https://learngitbranching.js.org",
+    "type": ["interactive"],
+    "source": "learngitbranching.js.org"
+  },
+  "https://githowto.com": {
+    "title": "Git How To",
+    "url": "https://githowto.com",
+    "type": ["reading", "challenge"],
+    "source": "githowto.com"
+  },
+  "https://ohshitgit.com": {
+    "title": "Oh Shit, Git!?!",
+    "url": "https://ohshitgit.com",
+    "type": ["reading", "example"],
+    "source": "ohshitgit.com"
+  },
+  "http://ndpsoftware.com/git-cheatsheet.html": {
+    "title": "Git Cheatsheet",
+    "url": "http://ndpsoftware.com/git-cheatsheet.html",
+    "type": ["reading", "interactive"],
+    "source": "ndpsoftware.com"
+  },
+  "https://wanago.io/courses/getting-geeky-with-git": {
+    "title": "Getting geeky with Git",
+    "url": "https://wanago.io/courses/getting-geeky-with-git",
+    "type": ["reading", "collection"],
+    "source": "wanago.io"
+  },
+  "https://maryrosecook.com/blog/post/git-from-the-inside-out": {
+    "title": "Git from the inside out",
+    "url": "https://maryrosecook.com/blog/post/git-from-the-inside-out",
+    "type": ["reading"],
+    "source": "maryrosecook.com"
+  },
+  "http://gitlet.maryrosecook.com": {
+    "title": "GITLET.JS",
+    "url": "http://gitlet.maryrosecook.com",
+    "type": ["reading", "example"],
+    "source": "gitlet.maryrosecook.com"
+  },
+  "https://git-scm.com/book/en/v2": {
+    "title": "Pro Git",
+    "url": "https://git-scm.com/book/en/v2",
+    "type": ["book"],
+    "source": "git-scm.com"
+  },
+  "https://firstaidgit.io": {
+    "title": "first aid git",
+    "url": "https://firstaidgit.io",
+    "type": ["reading", "example"],
+    "source": "firstaidgit.io"
+  },
+  "https://martinfowler.com/articles/branching-patterns.html": {
+    "title": "Patterns for Managing Source Code Branches",
+    "url": "https://martinfowler.com/articles/branching-patterns.html",
+    "type": ["reading"],
+    "source": "martinfowler.com"
+  },
+  "https://marklodato.github.io/visual-git-guide": {
+    "title": "A Visual Git Reference",
+    "url": "https://marklodato.github.io/visual-git-guide",
+    "type": ["reading"],
+    "source": "marklodato.github.io"
+  }
+}

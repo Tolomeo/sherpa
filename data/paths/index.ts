@@ -3,6 +3,7 @@ import htmlcss from './html&css.json'
 import javascript from './javascript.json'
 import typescript from './typescript.json'
 import reactredux from './react&redux.json'
+import git from './git.json'
 
 export interface Path {
   title: string
@@ -30,6 +31,7 @@ const paths = <Paths>{
   javascript,
   typescript,
   reactredux,
+  git,
 }
 
 export default paths

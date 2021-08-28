@@ -2,6 +2,7 @@ import htmlcss from './html&css.json'
 import javascript from './javascript.json'
 import typescript from './typescript.json'
 import reactredux from './react&redux.json'
+import git from './git.json'
 
 export type ResourceType =
   | 'video'
@@ -28,6 +29,7 @@ const resources = <Resources>{
   ...javascript,
   ...typescript,
   ...reactredux,
+  ...git,
 }
 
 export default resources
