@@ -100,5 +100,36 @@
     "url": "https://reactjs.org/community/examples.html",
     "type": ["example", "collection"],
     "source": "reactjs.org/community"
+  },
+
+  "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml": {
+    "title": "React Typescript Course",
+    "url": "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml",
+    "type": ["video"],
+    "source": "youtube.com/c/TechbaseDev"
+  },
+  "https://react-typescript-cheatsheet.netlify.app": {
+    "title": "React TypeScript Cheatsheets",
+    "url": "https://react-typescript-cheatsheet.netlify.app",
+    "type": ["reading"],
+    "source": "react-typescript-cheatsheet.netlify.app"
+  },
+  "https://github.com/piotrwitek/react-redux-typescript-guide": {
+    "title": "React & Redux in TypeScript - Complete Guide",
+    "url": "https://github.com/piotrwitek/react-redux-typescript-guide",
+    "type": ["reading"],
+    "source": "github.com/piotrwitek"
+  },
+  "https://github.com/mat-sz/2048": {
+    "title": "2048",
+    "url": "https://github.com/mat-sz/2048",
+    "type": ["example"],
+    "source": "github.com/mat-sz"
+  },
+  "https://github.com/hairarrow/btship": {
+    "title": "Battleship Game",
+    "url": "https://github.com/hairarrow/btship",
+    "type": ["example"],
+    "source": "github.com/hairarrow"
   }
 }
