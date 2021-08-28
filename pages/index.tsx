@@ -53,10 +53,10 @@ export default function Home({ paths }: Props) {
             together.
           </P>
           <P>
-            This project tries to solve those issues, providing you with an
-            opinionated list of resources useful to learn on different topics.{' '}
+            This project tries to solve those issues, providing you with
+            opinionated lists of resources useful to learn on different topics.
             <br /> All resources are free and hand-picked to create learning
-            paths which aim to be as consistent as possible.
+            paths which aim to be as comprehensive and consistent as possible.
           </P>
         </Column>
 

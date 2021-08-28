@@ -19,5 +19,5 @@
     "https://github.com/leonardomso/33-js-concepts",
     "https://github.com/sorrycc/awesome-javascript"
   ],
-  "next": ["typescript", "reactredux"]
+  "next": ["typescript", "react"]
 }

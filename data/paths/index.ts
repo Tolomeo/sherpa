@@ -2,7 +2,7 @@ import resources, { Resource } from '../resources'
 import htmlcss from './html&css.json'
 import javascript from './javascript.json'
 import typescript from './typescript.json'
-import reactredux from './react&redux.json'
+import react from './react.json'
 import reacttypescript from './react&typescript.json'
 import git from './git.json'
 
@@ -28,7 +28,7 @@ const paths = <Paths>{
   htmlcss,
   javascript,
   typescript,
-  reactredux,
+  react,
   reacttypescript,
   git,
 }
