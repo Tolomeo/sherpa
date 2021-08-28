@@ -17,5 +17,6 @@
     "https://github.com/getify/Functional-Light-JS",
     "https://github.com/leonardomso/33-js-concepts",
     "https://github.com/sorrycc/awesome-javascript"
-  ]
+  ],
+  "next": ["reactredux", "typescript"]
 }

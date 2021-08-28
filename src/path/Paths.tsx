@@ -12,9 +12,7 @@ const PathsList = ({ paths }: Props) => {
     <List>
       {Object.entries(paths).map(([pathName, path]) => (
         <Link key={pathName} href={`/paths/${pathName}`}>
-          <a>
-            <H2>The {path.title} learning path</H2>
-          </a>
+          <a>The {path.title} learning path</a>
         </Link>
       ))}
     </List>

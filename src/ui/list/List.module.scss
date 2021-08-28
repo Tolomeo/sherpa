@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0;
+    padding: var(--list-spacing) 0;
     margin: 0;
 
     &:before {
@@ -33,6 +33,6 @@
   }
 
   &__item + &__item {
-    padding-block-start: var(--list-spacing);
+    padding-block-start: 0;
   }
 }

@@ -1,25 +1,21 @@
 import React from 'react'
-import { PopulatedPath } from '../../data'
+import { PopulatedPath, Resource } from '../../data'
 import { Timeline, H2, P } from '../ui'
 import styles from './Path.module.scss'
 
 type Props = {
-  path: PopulatedPath
+  resources: Resource[]
 }
 
-const Path = ({ path }: Props) => {
+const Resources = ({ resources }: Props) => {
   return (
     <Timeline>
-      {Object.values(path.resources).map((resource, index) => (
+      {Object.values(resources).map((resource) => (
         <Timeline.Item key={resource.url}>
           <a href={resource.url} target="_blank" rel="noreferrer">
             <p className={styles.resource__source}>{resource.source}</p>
             <H2>{resource.title}</H2>
-            <p className={styles.resource__type}>
-              {Array.isArray(resource.type)
-                ? resource.type.join(', ')
-                : resource.type}
-            </p>
+            <p className={styles.resource__type}>{resource.type.join(', ')}</p>
           </a>
         </Timeline.Item>
       ))}
@@ -27,4 +23,4 @@ const Path = ({ path }: Props) => {
   )
 }
 
-export default Path
+export default Resources

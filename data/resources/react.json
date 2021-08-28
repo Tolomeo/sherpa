@@ -131,5 +131,11 @@
     "url": "https://github.com/hairarrow/btship",
     "type": ["example"],
     "source": "github.com/hairarrow"
+  },
+  "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app": {
+    "title": "React (using hooks) + Redux RealWorld example app",
+    "url": "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app",
+    "type": ["example"],
+    "source": "github.com/angelguzmaning"
   }
 }

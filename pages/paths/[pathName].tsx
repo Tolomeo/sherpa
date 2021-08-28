@@ -1,9 +1,9 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { ParsedUrlQuery } from 'querystring'
-import { paths, populatePath, PopulatedPath } from '../../data'
-import { Header, Main, Column, H1 } from '../../src/ui'
-import { Path } from '../../src/path'
+import { paths, populatePath, PopulatedPath, hasNextPaths } from '../../data'
+import { Header, Main, Column, H1, H2 } from '../../src/ui'
+import { Resources, Paths } from '../../src/path'
 
 interface Params extends ParsedUrlQuery {
   pathName: string
@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export default function Home({ path }: Props) {
+export default function PathPage({ path }: Props) {
   return (
     <div>
       <Head>
@@ -55,8 +55,17 @@ export default function Home({ path }: Props) {
         </Column>
 
         <Column>
-          <Path path={path} />
+          <Resources resources={path.resources} />
         </Column>
+
+        {hasNextPaths(path) && (
+          <Column>
+            <aside>
+              <H2>You could continue with</H2>
+              <Paths paths={path.next} />
+            </aside>
+          </Column>
+        )}
       </Main>
     </div>
   )

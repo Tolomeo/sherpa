@@ -8,24 +8,19 @@ import git from './git.json'
 
 export interface Path {
   title: string
-  resources: string[]
+  resources: Array<keyof typeof resources>
+  next: Array<keyof typeof paths>
 }
 
 export interface PopulatedPath {
   title: string
   resources: Resource[]
+  next: Paths
 }
 
 export type Paths = {
   [pathName: string]: Path
 }
-
-export const populatePath = (path: Path): PopulatedPath => ({
-  ...path,
-  resources: path.resources
-    .map((resourceId) => resources[resourceId])
-    .filter(Boolean),
-})
 
 const paths = <Paths>{
   htmlcss,
@@ -34,6 +29,22 @@ const paths = <Paths>{
   reactredux,
   reacttypescript,
   git,
+}
+
+export const populatePath = (path: Path): PopulatedPath => ({
+  ...path,
+  resources: path.resources
+    .map((resourceId) => resources[resourceId])
+    .filter(Boolean),
+  next: path.next.reduce((nextPaths, nextPathId) => {
+    if (paths[nextPathId]) nextPaths[nextPathId] = paths[nextPathId]
+
+    return nextPaths
+  }, {} as Paths),
+})
+
+export const hasNextPaths = (path: PopulatedPath) => {
+  return Boolean(Object.keys(path.next).length)
 }
 
 export default paths

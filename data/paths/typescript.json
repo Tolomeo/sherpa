@@ -12,5 +12,6 @@
     "https://github.com/type-challenges/type-challenges",
     "https://github.com/zws-im/zws",
     "https://github.com/dzharii/awesome-typescript"
-  ]
+  ],
+  "next": ["reacttypescript"]
 }

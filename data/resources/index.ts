@@ -1,7 +1,7 @@
 import htmlcss from './html&css.json'
 import javascript from './javascript.json'
 import typescript from './typescript.json'
-import reactredux from './react&redux.json'
+import react from './react.json'
 import git from './git.json'
 
 export type ResourceType =
@@ -28,7 +28,7 @@ const resources = <Resources>{
   ...htmlcss,
   ...javascript,
   ...typescript,
-  ...reactredux,
+  ...react,
   ...git,
 }
 
