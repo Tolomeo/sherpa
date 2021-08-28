@@ -1,5 +1,6 @@
 {
   "title": "Javascript",
+  "prev": ["htmlcss"],
   "resources": [
     "https://www.udemy.com/course/javascript-essentials",
     "https://www.udemy.com/course/advanced-and-object-oriented-javascript",
@@ -18,5 +19,5 @@
     "https://github.com/leonardomso/33-js-concepts",
     "https://github.com/sorrycc/awesome-javascript"
   ],
-  "next": ["reactredux", "typescript"]
+  "next": ["typescript", "reactredux"]
 }

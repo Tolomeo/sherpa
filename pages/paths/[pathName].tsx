@@ -1,7 +1,13 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { ParsedUrlQuery } from 'querystring'
-import { paths, populatePath, PopulatedPath, hasNextPaths } from '../../data'
+import {
+  paths,
+  populatePath,
+  PopulatedPath,
+  hasPrevPaths,
+  hasNextPaths,
+} from '../../data'
 import { Header, Main, Column, H1, H2 } from '../../src/ui'
 import { Resources, Paths } from '../../src/path'
 
@@ -53,6 +59,15 @@ export default function PathPage({ path }: Props) {
             The <u>{path.title}</u> learning path
           </H1>
         </Column>
+
+        {hasPrevPaths(path) && (
+          <Column>
+            <aside>
+              <H2>You want to come from</H2>
+              <Paths paths={path.prev} />
+            </aside>
+          </Column>
+        )}
 
         <Column>
           <Resources resources={path.resources} />

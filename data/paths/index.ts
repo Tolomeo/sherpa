@@ -10,12 +10,14 @@ export interface Path {
   title: string
   resources: Array<keyof typeof resources>
   next: Array<keyof typeof paths>
+  prev: Array<keyof typeof paths>
 }
 
 export interface PopulatedPath {
   title: string
   resources: Resource[]
   next: Paths
+  prev: Paths
 }
 
 export type Paths = {
@@ -41,10 +43,19 @@ export const populatePath = (path: Path): PopulatedPath => ({
 
     return nextPaths
   }, {} as Paths),
+  prev: path.prev.reduce((prevPaths, prevPathId) => {
+    if (paths[prevPathId]) prevPaths[prevPathId] = paths[prevPathId]
+
+    return prevPaths
+  }, {} as Paths),
 })
 
 export const hasNextPaths = (path: PopulatedPath) => {
   return Boolean(Object.keys(path.next).length)
+}
+
+export const hasPrevPaths = (path: PopulatedPath) => {
+  return Boolean(Object.keys(path.prev).length)
 }
 
 export default paths

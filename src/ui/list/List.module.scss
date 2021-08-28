@@ -35,4 +35,8 @@
   &__item + &__item {
     padding-block-start: 0;
   }
+
+  &:last-child &__item:last-child {
+    padding-block-end: 0;
+  }
 }

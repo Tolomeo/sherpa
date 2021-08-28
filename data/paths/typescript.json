@@ -1,5 +1,6 @@
 {
   "title": "Typescript",
+  "prev": ["javascript"],
   "resources": [
     "https://www.youtube.com/watch?v=BwuLxPH8IDs",
     "https://basarat.gitbook.io/typescript",

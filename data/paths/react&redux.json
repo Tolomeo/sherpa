@@ -1,5 +1,6 @@
 {
   "title": "React&Redux",
+  "prev": ["javascript"],
   "resources": [
     "https://egghead.io/courses/the-beginner-s-guide-to-react",
     "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-react-js",
@@ -16,5 +17,5 @@
     "https://github.com/enaqx/awesome-react",
     "https://github.com/xgrommx/awesome-redux"
   ],
-  "next": []
+  "next": ["reacttypescript"]
 }
