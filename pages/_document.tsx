@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { Body } from '../src/ui'
 
 class CustomDocument extends Document {
   render() {
@@ -11,10 +10,10 @@ class CustomDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <Body>
+        <body>
           <Main />
           <NextScript />
-        </Body>
+        </body>
       </Html>
     )
   }

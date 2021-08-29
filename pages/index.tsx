@@ -61,7 +61,7 @@ export default function Home({ paths }: Props) {
         </Column>
 
         <Column>
-          <H2>All the paths</H2>
+          <H2>The learning paths</H2>
           <Paths paths={paths} />
         </Column>
       </Main>
