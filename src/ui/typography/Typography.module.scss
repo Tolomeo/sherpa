@@ -1,0 +1,29 @@
+@mixin heading {
+  font-family: var(--fonts-heading);
+  font-weight: var(--font-weights-bold);
+  line-height: var(--line-heights-small);
+  color: var(--colors-gray-darkest);
+  margin: 0;
+  padding: 0;
+}
+
+.h1 {
+  @include heading;
+  font-size: var(--font-sizes-large, 1.375rem);
+}
+
+.h2 {
+  @include heading;
+  font-size: var(--font-sizes-medium, 1rem);
+}
+
+.p {
+  font-size: var(--font-sizes-medium, 1rem);
+  font-weight: var(--font-weights-normal, 300);
+  line-height: var(--line-heights-medium, 1.5);
+  margin: 0 0 var(--space-medium) 0;
+
+  &:last-of-type {
+    margin-block-end: 0;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Typescript",
+  "prev": ["javascript"],
+  "resources": [
+    "https://www.youtube.com/watch?v=BwuLxPH8IDs",
+    "https://basarat.gitbook.io/typescript",
+    "https://learntypescript.dev",
+    "https://mariusschulz.com/blog/series/typescript-evolution",
+    "https://rmolinamir.github.io/typescript-cheatsheet",
+    "https://labs42io.github.io/clean-code-typescript",
+    "http://torokmark.github.io/design_patterns_in_typescript",
+    "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab",
+    "https://github.com/type-challenges/type-challenges",
+    "https://github.com/zws-im/zws",
+    "https://github.com/dzharii/awesome-typescript"
+  ],
+  "next": ["reacttypescript"]
+}

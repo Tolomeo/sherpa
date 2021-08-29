@@ -1,0 +1,18 @@
+{
+  "title": "Git",
+  "prev": [],
+  "resources": [
+    "https://www.udacity.com/course/version-control-with-git--ud123",
+    "https://www.coursera.org/learn/introduction-git-github",
+    "https://egghead.io/courses/practical-git-for-everyday-professional-use",
+    "https://learngitbranching.js.org",
+    "https://githowto.com",
+    "http://ndpsoftware.com/git-cheatsheet.html",
+    "https://wanago.io/courses/getting-geeky-with-git",
+    "https://marklodato.github.io/visual-git-guide",
+    "https://maryrosecook.com/blog/post/git-from-the-inside-out",
+    "https://martinfowler.com/articles/branching-patterns.html",
+    "https://git-scm.com/book/en/v2"
+  ],
+  "next": []
+}

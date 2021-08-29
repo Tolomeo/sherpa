@@ -1,0 +1,23 @@
+{
+  "title": "HTML&CSS",
+  "prev": [],
+  "resources": [
+    "https://internetingishard.netlify.app",
+    "https://learn-the-web.algonquindesign.ca/topics/information-architecture",
+    "https://www.freecodecamp.org/learn/responsive-web-design",
+    "https://learn-the-web.algonquindesign.ca/topics/search-engine-optimization",
+    "https://htmlreference.io",
+    "https://cssreference.io",
+    "https://flukeout.github.io",
+    "https://flexbox.io",
+    "https://flexboxfroggy.com",
+    "https://cssgrid.io",
+    "https://cssgridgarden.com",
+    "https://scrimba.com/learn/cssvariables",
+    "https://moderncss.dev",
+    "https://csslayout.io",
+    "https://github.com/diegocard/awesome-html5",
+    "https://github.com/awesome-css-group/awesome-css"
+  ],
+  "next": ["javascript"]
+}

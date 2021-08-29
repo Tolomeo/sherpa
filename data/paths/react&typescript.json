@@ -1,0 +1,13 @@
+{
+  "title": "React&Typescript",
+  "prev": ["typescript", "react"],
+  "resources": [
+    "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml",
+    "https://reactbyexample.github.io",
+    "https://react-typescript-cheatsheet.netlify.app",
+    "https://github.com/piotrwitek/react-redux-typescript-guide",
+    "https://github.com/mat-sz/2048",
+    "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app"
+  ],
+  "next": []
+}
