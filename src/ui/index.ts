@@ -1,4 +1,3 @@
-export { default as Body } from './body'
 export { default as Timeline } from './timeline'
 export { default as Header } from './header'
 export { default as Container } from './container'
