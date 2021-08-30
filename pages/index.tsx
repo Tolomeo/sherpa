@@ -37,10 +37,9 @@ export default function Home({ paths }: Props) {
             master.
           </P>
           <P>
-            There are some amazing platforms providing high quality paid
-            educational content and it is recommended to check them out.
-            <br /> The web is a wild place though and there is some equally
-            stunning learning material provided entirely for free.
+            Although there are some amazing platforms providing high quality
+            paid educational content, the web is a wild place and there is some
+            equally stunning learning material provided entirely for free.
           </P>
           <P>
             A challenge you may face is to find the right content among hundreds
@@ -49,10 +48,11 @@ export default function Home({ paths }: Props) {
             acquired shiny pieces of knowledge fit together.
           </P>
           <P>
-            This project tries to solve those issues, providing you with
-            opinionated lists of resources useful to learn on different topics.
-            <br /> All resources are free and hand-picked to create learning
-            paths which aim to be as comprehensive and consistent as possible.
+            This project tries to solve those issues, providing you with ordered
+            lists of resources useful to learn on different topics.
+            <br /> All of the resources are free and hand-picked to create
+            learning paths which aim to be as comprehensive and consistent as
+            possible.
           </P>
         </Column>
 
