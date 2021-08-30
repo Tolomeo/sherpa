@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The learning path
 
-## Getting Started
+Static website containing lists of URLs which contents are helpful to learn about several technologies.
 
-First, run the development server:
+## About The Project
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+At its core, this project is a collection of online free resources gathered and organised in the form of educational paths.
+<br/>
+Each path guides you through the journey of learning a new technology, from basic concepts to advanced topics.
+<br/>
+The final aim is to provide a valid alternative to similar paid offers, relying on free online resources only.
+<br/>
+If this project manages to help someone in studying something, it will be a success.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Built With
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+* [Next.js](https://nextjs.org/)
+* [Vercel](https://vercel.com/)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+## Roadmap
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [ ] Add Github repo link to website
+- [ ] Write something somewhere to let people know this even exists
+- [ ] Add Next.js learning path
+- [ ] Add Node.js learning path
+- [ ] Add "alternative resources" feature
+- [ ] Add "other resources" feature
+- [ ] Add "useful online tools" feature
+- [ ] Add client side "save progress" feature
+- [ ] Add path descriptions
+- [ ] Add resources schema validation tests
+- [ ] Add resources monitoring tests
+- [ ] Split website code from json data source into separate monorepo packages
+- [ ] Add contributing automations and templates
+- [ ] Add contributing documentation
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
+Distributed under the MIT License. See `LICENSE` for more information.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* [Diego Frattini](https://github.com/Tolomeo) - dgfrattini@gmail.com
 
-## Deploy on Vercel
+## Acknowledgements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* [Salvatore Tedde](https://microcipcip.digital)
