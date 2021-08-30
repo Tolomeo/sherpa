@@ -27,6 +27,7 @@ If this project manages to help someone in studying something, it will be a succ
 - [ ] Add "other resources" feature
 - [ ] Add "useful online tools" feature
 - [ ] Add client side "save progress" feature
+- [ ] Add path descriptions
 - [ ] Add resources schema validation tests
 - [ ] Add resources monitoring tests
 - [ ] Split website code from json data source into separate monorepo packages
