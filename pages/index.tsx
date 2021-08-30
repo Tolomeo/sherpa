@@ -32,25 +32,21 @@ export default function Home({ paths }: Props) {
 
         <Column>
           <P>
-            Whether you are a professional with years of expertise or a would-be
-            engineer, you are possibly here because you realise how valuable it
-            is to aquire new skills and to make the most out of those you
-            already master.
+            You are possibly here because of realising how valuable it is to
+            acquire new skills and to make the most out of those you already
+            master.
           </P>
           <P>
             There are some amazing platforms providing high quality paid
-            educational content and I recommend you check them out.
-            <br /> The web is a wild place though and it is possible to find
-            some equally stunning learning material provided entirely for free.
-            That is incredible!
+            educational content and it is recommended to check them out.
+            <br /> The web is a wild place though and there is some equally
+            stunning learning material provided entirely for free.
           </P>
           <P>
-            A challenge you may face is to find it. Sometimes you are pushed as
-            far as checking the second results page of your Google search.
-            That&apos;s bananas, right? <br /> It is not always explicit what to
-            start from or what to progress with. <br /> More often that not it
-            is unclear how newly acquired shiny pieces of knowledge fit
-            together.
+            A challenge you may face is to find the right content among hundreds
+            of resources. <br /> You may not always know what to start from or
+            what to progress with. <br /> You may be unsure about how newly
+            acquired shiny pieces of knowledge fit together.
           </P>
           <P>
             This project tries to solve those issues, providing you with
