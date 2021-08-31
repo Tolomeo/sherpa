@@ -3,7 +3,6 @@
   --header-spacing-y: var(--space-medium);
   --header-shadow: var(--shadows-small);
   --header-background-color: var(--colors-body-background);
-  --header-logo-color: var(--colors-gray-darkest);
 
   position: sticky;
   top: 0;
@@ -11,20 +10,36 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: var(--header-spacing-y);
-  padding-bottom: var(--header-spacing-y);
   background-color: var(--header-background-color);
   box-shadow: var(--header-shadow);
 
-  &__logo {
-    padding: 0;
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 400;
-    text-decoration: none;
-    white-space: nowrap;
-    text-transform: uppercase;
-    color: var(--header-logo-color);
-    border-bottom: 2px dashed var(--header-logo-color);
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--header-spacing-y);
+    padding-bottom: var(--header-spacing-y);
   }
+}
+
+.github {
+  --github-color: var(--colors-gray);
+
+  color: var(--github-color);
+  font-size: 1.5rem;
+  line-height: 0;
+}
+
+.logo {
+  --logo-color: var(--colors-gray-darkest);
+
+  padding: 0;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: var(--logo-color);
+  border-bottom: 2px dashed var(--logo-color);
 }
