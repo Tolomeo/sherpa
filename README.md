@@ -23,11 +23,12 @@ If this project manages to help someone in studying something, it will be a succ
 - [ ] Write something somewhere to let people know this even exists
 - [ ] Add Next.js learning path
 - [ ] Add Node.js learning path
+- [ ] Add Accessibility learning path
 - [ ] Add "alternative resources" feature
 - [ ] Add "other resources" feature
 - [ ] Add "useful online tools" feature
 - [ ] Add client side "save progress" feature
-- [ ] Add path descriptions
+- [ ] Add path descriptions?
 - [ ] Add resources schema validation tests
 - [ ] Add resources monitoring tests
 - [ ] Split website code from json data source into separate monorepo packages
