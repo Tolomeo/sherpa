@@ -19,7 +19,7 @@ If this project manages to help someone in studying something, it will be a succ
 
 ## Roadmap
 
-- [ ] Add Github repo link to website
+- [x] Add Github repo link to website
 - [ ] Write something somewhere to let people know this even exists
 - [ ] Add Next.js learning path
 - [ ] Add Node.js learning path

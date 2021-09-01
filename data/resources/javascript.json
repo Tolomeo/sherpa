@@ -112,5 +112,23 @@
     "url": "https://github.com/leonardomso/33-js-concepts",
     "type": ["collection"],
     "source": "github.com/leonardomso"
+  },
+  "https://www.youtube.com/watch?v=r9HdJ8P6GQI": {
+    "title": "JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests",
+    "url": "https://www.youtube.com/watch?v=r9HdJ8P6GQI",
+    "type": ["video"],
+    "source": "youtube.com/c/Academind"
+  },
+  "https://flaviocopes.com/jest": {
+    "title": "Testing JavaScript with Jest",
+    "url": "https://flaviocopes.com/jest",
+    "type": ["reading"],
+    "source": "flaviocopes.com"
+  },
+  "https://github.com/goldbergyoni/javascript-testing-best-practices": {
+    "title": "Javascript & Node.js Testing Best Practices",
+    "url": "https://github.com/goldbergyoni/javascript-testing-best-practices",
+    "type": ["reading"],
+    "source": "github.com/goldbergyoni"
   }
 }
