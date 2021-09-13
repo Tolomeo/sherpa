@@ -11,7 +11,7 @@ const HomeLink = () => (
 
 const GithubLink = (props: React.SVGProps<SVGSVGElement>) => {
   return (
-    <a href={process.env.GITHUB_URL} className={styles.github}>
+    <a href={process.env.NEXT_PUBLIC_GITHUB_URL} className={styles.github}>
       <svg
         width="1em"
         height="1em"
