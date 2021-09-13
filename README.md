@@ -10,7 +10,7 @@ Each path guides you through the journey of learning a new technology, from basi
 <br/>
 The final aim is to provide a valid alternative to similar paid offers, relying on free online resources only.
 <br/>
-If this project manages to help someone in studying something, it will be a success.
+If this project manages to help anyone learning something, I will see it as a success.
 
 ## Built With
 
@@ -19,14 +19,19 @@ If this project manages to help someone in studying something, it will be a succ
 
 ## Roadmap
 
+- [x] MVP
 - [x] Add Github repo link to website
-- [ ] Write something somewhere to let people know this even exists
+- [x] Write something somewhere to let people know this even exists
 - [ ] Add Next.js learning path
 - [ ] Add Node.js learning path
 - [ ] Add Accessibility learning path
-- [ ] Add "alternative resources" feature
-- [ ] Add "other resources" feature
-- [ ] Add "useful online tools" feature
+- [ ] Add "go back" feature?
+- [ ] Swap the handmade approach for a component library
+- [ ] Add "path sub-paths" support
+- [ ] Add "path multiple alternative resources" support
+- [ ] Add "resource multiple urls" support
+- [ ] Add "path additional resources" feature
+- [ ] Add "path useful tools" feature
 - [ ] Add client side "save progress" feature
 - [ ] Add path descriptions?
 - [ ] Add resources schema validation tests
