@@ -1,0 +1,16 @@
+{
+  "title": "Next.js",
+  "prev": ["react"],
+  "resources": [
+    "https://medium.com/swlh/the-hitchhikers-guide-to-next-js-fd7aa14ae8d0",
+    "https://nextjs.org/learn/basics/create-nextjs-app",
+    "https://react2025.com",
+    "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSQsrukurP09ksi49H9Yj40",
+    "https://getstarted.sh/bulletproof-next",
+    "https://www.youtube.com/playlist?list=PLFsfg2xP7cbI1U7BZJwmJwTVs4D0pqX1F",
+    "https://github.com/salihozdemir/stackoverflow-clone",
+    "https://www.smashingmagazine.com/2021/09/lessons-learned-ecommerce-nextjs-case-study",
+    "https://github.com/unicodeveloper/awesome-nextjs"
+  ],
+  "next": []
+}

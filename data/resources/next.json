@@ -1,0 +1,56 @@
+{
+  "https://medium.com/swlh/the-hitchhikers-guide-to-next-js-fd7aa14ae8d0": {
+    "title": "The Hitchhiker’s Guide to Next.js",
+    "url": "https://medium.com/swlh/the-hitchhikers-guide-to-next-js-fd7aa14ae8d0",
+    "type": ["reading"],
+    "source": "medium.com/swlh"
+  },
+  "https://nextjs.org/learn/basics/create-nextjs-app": {
+    "title": "Create a Next.js App",
+    "url": "https://nextjs.org/learn/basics/create-nextjs-app",
+    "type": ["reading", "challenge", "interactive"],
+    "source": "nextjs.org"
+  },
+  "https://react2025.com": {
+    "title": "Start developing websites like it's 2025.",
+    "url": "https://react2025.com",
+    "type": ["video"],
+    "source": "react2025.com"
+  },
+  "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSQsrukurP09ksi49H9Yj40": {
+    "title": "Next.js Tutorial",
+    "url": "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSQsrukurP09ksi49H9Yj40",
+    "type": ["video"],
+    "source": "youtube.com/c/BrunoAntunesPT"
+  },
+  "https://getstarted.sh/bulletproof-next": {
+    "title": "Bulletproof Next",
+    "url": "https://getstarted.sh/bulletproof-next",
+    "type": ["video", "reading", "interactive"],
+    "source": "getstarted.sh"
+  },
+  "https://www.youtube.com/playlist?list=PLFsfg2xP7cbI1U7BZJwmJwTVs4D0pqX1F": {
+    "title": "Next.js Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PLFsfg2xP7cbI1U7BZJwmJwTVs4D0pqX1F",
+    "type": ["video"],
+    "source": "youtube.com/colbz"
+  },
+  "https://github.com/salihozdemir/stackoverflow-clone": {
+    "title": "Stackoverflow Clone",
+    "url": "https://github.com/salihozdemir/stackoverflow-clone",
+    "type": ["example"],
+    "source": "github.com/salihozdemir"
+  },
+  "https://www.smashingmagazine.com/2021/09/lessons-learned-ecommerce-nextjs-case-study": {
+    "title": "Rebuilding A Large E-Commerce Website With Next.js (Case Study)",
+    "url": "https://www.smashingmagazine.com/2021/09/lessons-learned-ecommerce-nextjs-case-study",
+    "type": ["reading"],
+    "source": "smashingmagazine.com"
+  },
+  "https://github.com/unicodeveloper/awesome-nextjs": {
+    "title": "Awesome Next.js",
+    "url": "https://github.com/unicodeveloper/awesome-nextjs",
+    "type": ["collection"],
+    "source": "github.com/unicodeveloper"
+  }
+}

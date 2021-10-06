@@ -4,6 +4,7 @@ import javascript from './javascript.json'
 import typescript from './typescript.json'
 import react from './react.json'
 import reacttypescript from './react&typescript.json'
+import next from './next.json'
 import git from './git.json'
 
 export interface Path {
@@ -30,6 +31,7 @@ const paths = <Paths>{
   typescript,
   react,
   reacttypescript,
+  next,
   git,
 }
 

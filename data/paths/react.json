@@ -17,5 +17,5 @@
     "https://github.com/enaqx/awesome-react",
     "https://github.com/xgrommx/awesome-redux"
   ],
-  "next": ["reacttypescript"]
+  "next": ["reacttypescript", "next"]
 }
