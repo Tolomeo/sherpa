@@ -9,5 +9,5 @@
     "https://github.com/mat-sz/2048",
     "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app"
   ],
-  "next": []
+  "next": ["next"]
 }
