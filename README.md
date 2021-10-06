@@ -22,7 +22,7 @@ If this project manages to help anyone learning something, I will see it as a su
 - [x] MVP
 - [x] Add Github repo link to website
 - [x] Write something somewhere to let people know this even exists
-- [ ] Add Next.js learning path
+- [x] Add Next.js learning path
 - [ ] Add Node.js learning path
 - [ ] Add Accessibility learning path
 - [ ] Add "go back" feature?
