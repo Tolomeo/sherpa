@@ -1,0 +1,21 @@
+{
+  "title": "Node.js",
+  "prev": ["javascript"],
+  "resources": [
+    "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js",
+    "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp",
+    "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js",
+    "https://www.freecodecamp.org/learn/back-end-development-and-apis/#back-end-development-and-apis-projects",
+    "https://www.youtube.com/watch?v=Oe421EPjeBE",
+    "http://thenodeway.io/introduction",
+    "https://github.com/goldbergyoni/nodebestpractices",
+    "https://softwareontheroad.com/ideal-nodejs-project-structure",
+    "https://github.com/goldbergyoni/javascript-testing-best-practices",
+    "https://github.com/testjavascript/nodejs-integration-tests-best-practices",
+    "https://github.com/electerious/Ackee",
+    "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS",
+    "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html",
+    "https://github.com/sindresorhus/awesome-nodejs"
+  ],
+  "next": []
+}

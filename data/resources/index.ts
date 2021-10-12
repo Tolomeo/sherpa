@@ -3,6 +3,7 @@ import javascript from './javascript.json'
 import typescript from './typescript.json'
 import react from './react.json'
 import next from './next.json'
+import node from './node.json'
 import git from './git.json'
 
 export type ResourceType =
@@ -31,6 +32,7 @@ const resources = <Resources>{
   ...typescript,
   ...react,
   ...next,
+  ...node,
   ...git,
 }
 
