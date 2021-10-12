@@ -1,0 +1,92 @@
+{
+  "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js": {
+    "title": "Why The Hell Would I Use Node.js? A Case-by-Case Tutorial",
+    "url": "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js",
+    "type": ["reading"],
+    "source": "toptal.com"
+  },
+  "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp": {
+    "title": "Node JS Tutorial for Beginners",
+    "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp",
+    "type": ["video"],
+    "source": "youtube.com/c/TheNetNinja"
+  },
+  "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js": {
+    "title": "How To Code in Node.js",
+    "url": "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js",
+    "type": ["reading", "collection"],
+    "source": "digitalocean.com/community"
+  },
+  "https://flaviocopes.com/page/node-handbook": {
+    "title": "The Node Handbook",
+    "url": "https://flaviocopes.com/page/node-handbook",
+    "type": ["book"],
+    "source": "flaviocopes.com"
+  },
+  "https://www.freecodecamp.org/learn/back-end-development-and-apis/#back-end-development-and-apis-projects": {
+    "title": "Back End Development and APIs",
+    "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis/#back-end-development-and-apis-projects",
+    "type": ["reading", "collection", "interactive"],
+    "source": "freecodecamp.org"
+  },
+  "https://www.youtube.com/watch?v=Oe421EPjeBE": {
+    "title": "Node.js and Express.js - Full Course",
+    "url": "https://www.youtube.com/watch?v=Oe421EPjeBE",
+    "type": ["video"],
+    "source": "youtube.com/c/Freecodecamp"
+  },
+  "http://thenodeway.io/introduction": {
+    "title": "The Node Way",
+    "url": "http://thenodeway.io/introduction",
+    "type": ["reading", "collection"],
+    "source": "thenodeway.io"
+  },
+  "https://github.com/goldbergyoni/nodebestpractices": {
+    "title": "Node.js Best Practices",
+    "url": "https://github.com/goldbergyoni/nodebestpractices",
+    "type": ["reading"],
+    "source": "github.com/goldbergyoni"
+  },
+  "https://www.joyent.com/node-js/production": {
+    "title": "Node.js Best Practices",
+    "url": "https://www.joyent.com/node-js/production",
+    "type": ["reading", "collection"],
+    "source": "joyent.com"
+  },
+  "https://github.com/testjavascript/nodejs-integration-tests-best-practices": {
+    "title": "Integration Test Best Practices",
+    "url": "https://github.com/testjavascript/nodejs-integration-tests-best-practices",
+    "type": ["reading"],
+    "source": "github.com/goldbergyoni"
+  },
+  "https://softwareontheroad.com/ideal-nodejs-project-structure": {
+    "title": "Bulletproof node.js project architecture",
+    "url": "https://softwareontheroad.com/ideal-nodejs-project-structure",
+    "type": ["reading"],
+    "source": "softwareontheroad.com"
+  },
+  "https://github.com/electerious/Ackee": {
+    "title": "Ackee",
+    "url": "https://github.com/electerious/Ackee",
+    "type": ["example"],
+    "source": "github.com/electerious"
+  },
+  "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS": {
+    "title": "Real World Design Patterns using the Node.js APIs",
+    "url": "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS",
+    "type": ["reading"],
+    "source": "github.com/nimit95"
+  },
+  "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html": {
+    "title": "NodeJS Security Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html",
+    "type": ["reading"],
+    "source": "cheatsheetseries.owasp.org"
+  },
+  "https://github.com/sindresorhus/awesome-nodejs": {
+    "title": "Awesome Node.js",
+    "url": "https://github.com/sindresorhus/awesome-nodejs",
+    "type": ["collection"],
+    "source": "github.com/sindresorhus"
+  }
+}

@@ -19,5 +19,5 @@
     "https://github.com/goldbergyoni/javascript-testing-best-practices",
     "https://github.com/sorrycc/awesome-javascript"
   ],
-  "next": ["typescript", "react"]
+  "next": ["typescript", "react", "node"]
 }
