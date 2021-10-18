@@ -24,7 +24,7 @@ If this project manages to help anyone learning something, I will see it as a su
 - [x] Write something somewhere to let people know this even exists
 - [x] Add Next.js learning path
 - [x] Add Node.js learning path
-- [ ] Add Accessibility learning path
+- [x] Add Accessibility learning path
 - [ ] Add "go back" feature?
 - [ ] Swap the handmade approach for a component library
 - [ ] Add "path sub-paths" support

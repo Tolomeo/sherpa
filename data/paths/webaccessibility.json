@@ -1,0 +1,15 @@
+{
+  "title": "Web Accessibility",
+  "prev": ["htmlcss"],
+  "resources": [
+    "https://learn-the-web.algonquindesign.ca/topics/accessibility",
+    "https://learn-the-web.algonquindesign.ca/topics/content-accessibility",
+    "https://learn-the-web.algonquindesign.ca/topics/accessibility-for-design",
+    "https://www.edx.org/course/web-accessibility-introduction",
+    "https://www.accessguide.io",
+    "https://www.smashingmagazine.com/2021/06/complete-guide-accessibility-tooling",
+    "https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components",
+    "https://github.com/brunopulis/awesome-a11y"
+  ],
+  "next": []
+}
