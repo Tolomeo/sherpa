@@ -19,5 +19,5 @@
     "https://github.com/diegocard/awesome-html5",
     "https://github.com/awesome-css-group/awesome-css"
   ],
-  "next": ["javascript"]
+  "next": ["javascript", "webaccessibility"]
 }

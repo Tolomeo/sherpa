@@ -1,5 +1,6 @@
 import resources, { Resource } from '../resources'
 import htmlcss from './html&css.json'
+import webaccessibility from './webaccessibility.json'
 import javascript from './javascript.json'
 import typescript from './typescript.json'
 import react from './react.json'
@@ -28,6 +29,7 @@ export type Paths = {
 
 const paths = <Paths>{
   htmlcss,
+  webaccessibility,
   javascript,
   typescript,
   react,

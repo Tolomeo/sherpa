@@ -1,4 +1,5 @@
 import htmlcss from './html&css.json'
+import webaccessibility from './webaccessibility.json'
 import javascript from './javascript.json'
 import typescript from './typescript.json'
 import react from './react.json'
@@ -28,6 +29,7 @@ export type Resources = {
 
 const resources = <Resources>{
   ...htmlcss,
+  ...webaccessibility,
   ...javascript,
   ...typescript,
   ...react,

@@ -1,0 +1,50 @@
+{
+  "https://learn-the-web.algonquindesign.ca/topics/accessibility": {
+    "title": "Accessibility",
+    "url": "https://learn-the-web.algonquindesign.ca/topics/accessibility",
+    "type": ["reading", "video"],
+    "source": "learn-the-web.algonquindesign.ca"
+  },
+  "https://learn-the-web.algonquindesign.ca/topics/content-accessibility": {
+    "title": "Content accessibility",
+    "url": "https://learn-the-web.algonquindesign.ca/topics/content-accessibility",
+    "type": ["reading", "video"],
+    "source": "learn-the-web.algonquindesign.ca"
+  },
+  "https://learn-the-web.algonquindesign.ca/topics/accessibility-for-design": {
+    "title": "Accessibility for design",
+    "url": "https://learn-the-web.algonquindesign.ca/topics/accessibility-for-design",
+    "type": ["reading", "video"],
+    "source": "learn-the-web.algonquindesign.ca"
+  },
+  "https://www.edx.org/course/web-accessibility-introduction": {
+    "title": "Introduction to Web Accessibility",
+    "url": "https://www.edx.org/course/web-accessibility-introduction",
+    "type": ["reading", "video", "interactive"],
+    "source": "edx.org"
+  },
+  "https://www.accessguide.io": {
+    "title": "Access Guide",
+    "url": "https://www.accessguide.io",
+    "type": ["reading", "example", "collection"],
+    "source": "accessguide.io"
+  },
+  "https://www.smashingmagazine.com/2021/06/complete-guide-accessibility-tooling": {
+    "title": "A Complete Guide To Accessibility Tooling",
+    "url": "https://www.smashingmagazine.com/2021/06/complete-guide-accessibility-tooling",
+    "type": ["reading"],
+    "source": "smashingmagazine.com"
+  },
+  "https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components": {
+    "title": "A Complete Guide To Accessible Front-End Components",
+    "url": "https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components",
+    "type": ["reading", "collection"],
+    "source": "smashingmagazine.com"
+  },
+  "https://github.com/brunopulis/awesome-a11y": {
+    "title": "Awesome Accessibility",
+    "url": "https://github.com/brunopulis/awesome-a11y",
+    "type": ["collection"],
+    "source": "github.com/brunopulis"
+  }
+}
