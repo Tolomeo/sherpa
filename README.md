@@ -20,7 +20,7 @@ If this project manages to help anyone learning something, I will see it as a su
 ## Roadmap
 
 - [x] MVP
-- [x] Add Github repo link to website
+- [x] Add GitHub repo link to website
 - [x] Write something somewhere to let people know this even exists
 - [x] Add Next.js learning path
 - [x] Add Node.js learning path
@@ -29,7 +29,7 @@ If this project manages to help anyone learning something, I will see it as a su
 - [ ] Swap the handmade approach for a component library
 - [ ] Add "path sub-paths" support
 - [ ] Add "path multiple alternative resources" support
-- [ ] Add "resource multiple urls" support
+- [ ] Add "resource multiple URLs" support
 - [ ] Add "path additional resources" feature
 - [ ] Add "path useful tools" feature
 - [ ] Add client side "save progress" feature

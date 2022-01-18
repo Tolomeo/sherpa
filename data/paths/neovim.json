@@ -1,0 +1,22 @@
+{
+  "title": "(Neo)Vim",
+  "prev": [],
+  "resources": [
+    "https://danielmiessler.com/study/vim",
+    "https://www.openvim.com",
+    "http://www.vimgenius.com/lessons/vim-intro",
+    "https://thevaluable.dev/vim-beginner",
+    "https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua",
+    "https://www.youtube.com/playlist?list=PLSf43fnldIpYipi-FjzjV6fAYUGysfjY8",
+    "https://github.com/akrawchyk/awesome-vim",
+    "https://github.com/rockerBOO/awesome-neovim"
+  ],
+
+  "asides": [
+    {
+      "title": "Alternatives",
+      "resources": ["https://thoughtbot.com/upcase/vim"]
+    }
+  ],
+  "next": []
+}

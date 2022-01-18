@@ -10,6 +10,7 @@ import {
 } from '../../data'
 import { Header, Main, Column, H1, H2 } from '../../src/ui'
 import { Resources, Paths } from '../../src/path'
+import Aside from '../../src/path/Aside'
 
 interface Params extends ParsedUrlQuery {
   pathName: string
@@ -43,6 +44,8 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 export default function PathPage({ path }: Props) {
+  console.log(path)
+
   return (
     <div>
       <Head>
@@ -88,7 +91,14 @@ export default function PathPage({ path }: Props) {
           </Column>
         )}
 
-        <Column>
+        <Column
+          after={path.asides.map((aside, index) => (
+            <>
+              <H2>{aside.title}</H2>
+              <Aside key={index} aside={aside} />
+            </>
+          ))}
+        >
           <Resources resources={path.resources} />
         </Column>
 

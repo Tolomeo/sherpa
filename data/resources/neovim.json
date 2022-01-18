@@ -1,0 +1,56 @@
+{
+  "https://danielmiessler.com/study/vim": {
+    "title": "Learn Vim For the Last Time: A Tutorial and Primer",
+    "url": "https://danielmiessler.com/study/vim",
+    "type": ["reading"],
+    "source": "danielmiessler.com"
+  },
+  "https://www.openvim.com": {
+    "title": "OpenVim",
+    "url": "https://www.openvim.com",
+    "type": ["reading", "interactive"],
+    "source": "www.openvim.com"
+  },
+  "http://www.vimgenius.com/lessons/vim-intro": {
+    "title": "Vim Intro",
+    "url": "http://www.vimgenius.com/lessons/vim-intro",
+    "type": ["reading", "interactive"],
+    "source": "vimgenius.com"
+  },
+  "https://thevaluable.dev/vim-beginner": {
+    "title": "Vim from the ground up",
+    "url": "https://thevaluable.dev/vim-beginner",
+    "type": ["reading", "path"],
+    "source": "thevaluable.dev"
+  },
+  "https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua": {
+    "title": "Everything you need to know to configure neovim using lua",
+    "url": "https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua",
+    "type": ["reading"],
+    "source": "vonheikemen.github.io"
+  },
+  "https://www.youtube.com/playlist?list=PLSf43fnldIpYipi-FjzjV6fAYUGysfjY8": {
+    "title": "Vim and you",
+    "url": "https://www.youtube.com/playlist?list=PLSf43fnldIpYipi-FjzjV6fAYUGysfjY8",
+    "type": ["video", "collection"],
+    "source": "youtube.com/c/CodeSmell"
+  },
+  "https://github.com/akrawchyk/awesome-vim": {
+    "title": "Awesome Vim",
+    "url": "https://github.com/akrawchyk/awesome-vim",
+    "type": ["collection"],
+    "source": "github.com/akrawchyk"
+  },
+  "https://github.com/rockerBOO/awesome-neovim": {
+    "title": "Awesome Neovim",
+    "url": "https://github.com/rockerBOO/awesome-neovim",
+    "type": ["collection"],
+    "source": "github.com/rockerBOO"
+  },
+  "https://thoughtbot.com/upcase/vim": {
+    "title": "Learn Vim",
+    "url": "https://thoughtbot.com/upcase/vim",
+    "type": ["path"],
+    "source": "thoughtbot.com"
+  }
+}

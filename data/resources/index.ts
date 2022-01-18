@@ -6,6 +6,7 @@ import react from './react.json'
 import next from './next.json'
 import node from './node.json'
 import git from './git.json'
+import neovim from './neovim.json'
 
 export type ResourceType =
   | 'video'
@@ -36,6 +37,7 @@ const resources = <Resources>{
   ...next,
   ...node,
   ...git,
+  ...neovim,
 }
 
 export default resources

@@ -1,15 +1,49 @@
+@mixin resource-source {
+  color: var(--colors-gray);
+  font-size: var(--font-sizes-small);
+  margin: 0;
+  padding: 0;
+}
+
+@mixin resource-type {
+  color: var(--colors-secondary);
+  font-size: var(--font-sizes-tiny);
+  margin: 0;
+  padding: 0;
+}
+
+@mixin resource-title {
+  font-family: var(--fonts-heading);
+  font-weight: var(--font-weights-bold);
+  line-height: var(--line-heights-small);
+  color: var(--colors-gray-darkest);
+  font-size: var(--font-sizes-medium, 1rem);
+  margin: 0;
+  padding: 0;
+}
+
 .resource {
   &__source {
-    color: var(--colors-gray);
-    font-size: var(--font-sizes-small);
-    margin: 0;
-    padding: 0;
+    @include resource-source;
   }
 
   &__type {
-    color: var(--colors-secondary);
+    @include resource-type;
+  }
+
+  &__title {
+    @include resource-title;
+  }
+}
+
+.aside {
+  &__source {
+    @include resource-source;
     font-size: var(--font-sizes-tiny);
-    margin: 0;
-    padding: 0;
+  }
+
+  &__title {
+    @include resource-title;
+    font-size: var(--font-sizes-small);
   }
 }
