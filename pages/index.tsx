@@ -1,7 +1,8 @@
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import paths from '../data/paths'
-import { Header, Main, Column, H1, H2, P } from '../src/ui'
+import { Main, Column, H1, H2, P } from '../src/ui'
+import { Header } from '../src/theme'
 import { List as PathsList } from '../src/paths'
 
 export const getStaticProps = async (_: GetStaticPropsContext) => {
