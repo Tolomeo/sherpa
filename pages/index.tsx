@@ -2,7 +2,7 @@ import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import paths from '../data/paths'
 import { Header, Main, Column, H1, H2, P } from '../src/ui'
-import { Paths } from '../src/path'
+import { List as PathsList } from '../src/paths'
 
 export const getStaticProps = async (_: GetStaticPropsContext) => {
   return {
@@ -77,7 +77,7 @@ export default function Home({ paths }: Props) {
 
         <Column>
           <H2>The learning paths</H2>
-          <Paths paths={paths} />
+          <PathsList paths={paths} />
         </Column>
       </Main>
     </div>

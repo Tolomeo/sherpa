@@ -1,13 +1,13 @@
 import React from 'react'
 import { Resource } from '../../data'
 import { Timeline } from '../ui'
-import styles from './Path.module.scss'
+import styles from './Resources.module.scss'
 
 type Props = {
   resources: Resource[]
 }
 
-const Resources = ({ resources }: Props) => {
+const ResourcesTimeline = ({ resources }: Props) => {
   return (
     <Timeline>
       {Object.values(resources).map((resource) => (
@@ -23,4 +23,4 @@ const Resources = ({ resources }: Props) => {
   )
 }
 
-export default Resources
+export default ResourcesTimeline

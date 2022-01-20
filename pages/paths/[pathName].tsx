@@ -9,8 +9,11 @@ import {
   hasNextPaths,
 } from '../../data'
 import { Header, Main, Column, H1, H2 } from '../../src/ui'
-import { Resources, Paths } from '../../src/path'
-import Aside from '../../src/path/Aside'
+import { List as PathsList } from '../../src/paths'
+import {
+  Timeline as ResourcesTimeline,
+  List as ResourcesList,
+} from '../../src/resources'
 
 interface Params extends ParsedUrlQuery {
   pathName: string
@@ -86,7 +89,7 @@ export default function PathPage({ path }: Props) {
           <Column>
             <aside>
               <H2>You want to come from</H2>
-              <Paths paths={path.prev} />
+              <PathsList paths={path.prev} />
             </aside>
           </Column>
         )}
@@ -95,18 +98,18 @@ export default function PathPage({ path }: Props) {
           after={path.asides.map((aside, index) => (
             <>
               <H2>{aside.title}</H2>
-              <Aside key={index} aside={aside} />
+              <ResourcesList key={index} aside={aside} />
             </>
           ))}
         >
-          <Resources resources={path.resources} />
+          <ResourcesTimeline resources={path.resources} />
         </Column>
 
         {hasNextPaths(path) && (
           <Column>
             <aside>
               <H2>You could continue with</H2>
-              <Paths paths={path.next} />
+              <PathsList paths={path.next} />
             </aside>
           </Column>
         )}

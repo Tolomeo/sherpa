@@ -11,11 +11,65 @@
     "https://github.com/akrawchyk/awesome-vim",
     "https://github.com/rockerBOO/awesome-neovim"
   ],
-
   "asides": [
     {
-      "title": "Alternatives",
-      "resources": ["https://thoughtbot.com/upcase/vim"]
+      "title": "You may prefer",
+      "resources": [
+        "https://thoughtbot.com/upcase/vim",
+        "https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85",
+        "https://github.com/iggredible/Learn-Vim",
+        "https://github.com/mhinz/vim-galore",
+        "https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f",
+        "http://vimcasts.org/episodes",
+        "https://www.barbarianmeetscoding.com/series/exploring-vim",
+        "http://www.vimgenius.com/lessons",
+        "https://github.com/jmoon018/PacVim"
+      ]
+    },
+    {
+      "title": "Nice to know about",
+      "resources": [
+        "https://www.moolenaar.net/habits.html",
+        "https://blog.codinghorror.com/we-are-typists-first-programmers-second",
+        "https://stevelosh.com/blog/2010/09/coming-home-to-vim",
+        "https://thoughtbot.com/upcase/tmux",
+        "https://www.youtube.com/watch?v=Bt-vmPC_-Ho"
+      ]
+    },
+    {
+      "title": "To keep as reference",
+      "resources": [
+        "https://vimhelp.org",
+        "https://github.com/nanotee/nvim-lua-guide",
+        "https://gist.github.com/tuxfight3r/0dca25825d9f2608714b",
+        "https://learnxinyminutes.com/docs/vim",
+        "https://devhints.io/vim",
+        "https://devhints.io/vimscript",
+        "https://vim.rtorr.com",
+        "https://www.barbarianmeetscoding.com/wiki/vim",
+        "https://www.barbarianmeetscoding.com/wiki/vim-plugins",
+        "https://www.barbarianmeetscoding.com/wiki/neovim",
+        "http://michael.peopleofhonoronly.com/vim"
+      ]
+    },
+    {
+      "title": "Resources and tools",
+      "resources": [
+        "https://vimconfig.com",
+        "https://vim-bootstrap.com",
+        "https://github.com/amix/vimrc",
+				"https://vim.fandom.com/wiki/Vim_Tips_Wiki"
+      ]
+    },
+    {
+      "title": "Stay in the loop",
+      "resources": [
+        "https://thevaluable.dev",
+				"http://vonheikemen.github.io/devlog",
+        "https://dev.to/t/vim",
+        "https://dev.to/t/neovim",
+        "https://www.barbarianmeetscoding.com"
+      ]
     }
   ],
   "next": []

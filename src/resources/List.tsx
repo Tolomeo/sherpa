@@ -1,13 +1,13 @@
 import React from 'react'
 import { PopulatedAside } from '../../data'
 import { List } from '../ui'
-import styles from './Path.module.scss'
+import styles from './Resources.module.scss'
 
 type Props = {
   aside: PopulatedAside
 }
 
-const Aside = ({ aside }: Props) => {
+const ResourcesList = ({ aside }: Props) => {
   return (
     <List>
       {aside.resources.map((resource) => (
@@ -25,4 +25,4 @@ const Aside = ({ aside }: Props) => {
   )
 }
 
-export default Aside
+export default ResourcesList
