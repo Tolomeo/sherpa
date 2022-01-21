@@ -1,8 +1,7 @@
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import paths from '../data/paths'
-import { Main, Column, H1, H2, P } from '../src/ui'
-import { Header } from '../src/theme'
+import { Header, Main, Typography, Container, Box, Grid } from '../src/theme'
 import { List as PathsList } from '../src/paths'
 
 export const getStaticProps = async (_: GetStaticPropsContext) => {
@@ -17,7 +16,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 export default function Home({ paths }: Props) {
   return (
-    <div>
+    <Box>
       <Head>
         <title>The Learning Path</title>
         <link
@@ -46,41 +45,53 @@ export default function Home({ paths }: Props) {
       <Header />
 
       <Main>
-        <Column>
-          <H1>Welcome to The&nbsp;Learning&nbsp;Path</H1>
-        </Column>
+        <Container>
+          <Typography variant="h1">
+            Welcome to <br />
+            The&nbsp;Learning&nbsp;Path
+          </Typography>
+        </Container>
 
-        <Column>
-          <P>
-            You are possibly here because of realising how valuable it is to
-            acquire new skills and to make the most out of those you already
-            master.
-          </P>
-          <P>
-            Although there are some amazing platforms providing high quality
-            paid educational content, the web is a wild place and there is some
-            equally stunning learning material provided entirely for free.
-          </P>
-          <P>
-            A challenge you may face is to find the right content among hundreds
-            of resources. <br /> You may not always know what to start from or
-            what to progress with. <br /> You may be unsure about how newly
-            acquired shiny pieces of knowledge fit together.
-          </P>
-          <P>
-            This project tries to solve those issues, providing you with ordered
-            lists of resources useful to learn on different topics.
-            <br /> All of the resources are free and hand-picked to create
-            learning paths which aim to be as comprehensive and consistent as
-            possible.
-          </P>
-        </Column>
-
-        <Column>
-          <H2>The learning paths</H2>
-          <PathsList paths={paths} />
-        </Column>
+        <Box py={8}>
+          <Container>
+            <Grid container spacing={4}>
+              <Grid item md={5}>
+                <Box py={3}>
+                  <Typography variant="body1" component="p" gutterBottom>
+                    You are possibly here because of realising how valuable it
+                    is to acquire new skills and to make the most out of those
+                    you already master.
+                  </Typography>
+                  <Typography variant="body1" component="p" gutterBottom>
+                    Although there are some amazing platforms providing high
+                    quality paid educational content, the web is a wild place
+                    and there is some equally stunning learning material
+                    provided entirely for free.
+                  </Typography>
+                  <Typography variant="body1" component="p" gutterBottom>
+                    A challenge you may face is to find the right content among
+                    hundreds of resources. <br /> You may not always know what
+                    to start from or what to progress with. <br /> You may be
+                    unsure about how newly acquired shiny pieces of knowledge
+                    fit together.
+                  </Typography>
+                  <Typography variant="body1" component="p">
+                    This project tries to solve those issues, providing you with
+                    ordered lists of resources useful to learn on different
+                    topics.
+                    <br /> All of the resources are free and hand-picked to
+                    create learning paths which aim to be as comprehensive and
+                    consistent as possible.
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item md={5}>
+                <PathsList paths={paths} />
+              </Grid>
+            </Grid>
+          </Container>
+        </Box>
       </Main>
-    </div>
+    </Box>
   )
 }

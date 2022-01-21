@@ -6,7 +6,7 @@ const Main: React.FC = ({ children }) => {
   return (
     <main className={styles.main}>
       {children}
-      <Background />
+      <Background className={styles.main__background} />
     </main>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
+import NextLink from 'next/link'
 import { Paths } from '../../data'
-import { List } from '../ui'
+import { List, Link } from '../theme'
 
 type Props = {
   paths: Paths
@@ -10,9 +10,9 @@ type Props = {
 const PathsList = ({ paths }: Props) => (
   <List>
     {Object.entries(paths).map(([pathName, path]) => (
-      <Link key={pathName} href={`/paths/${pathName}`}>
-        <a>The {path.title} learning path</a>
-      </Link>
+      <NextLink key={pathName} href={`/paths/${pathName}`}>
+        <Link>The {path.title} learning path</Link>
+      </NextLink>
     ))}
   </List>
 )

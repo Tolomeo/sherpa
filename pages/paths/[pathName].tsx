@@ -8,11 +8,11 @@ import {
   hasPrevPaths,
   hasNextPaths,
 } from '../../data'
-import { Header, Main, Column, H1, H2 } from '../../src/ui'
+import { Header, Main, Container, Typography } from '../../src/theme'
 import { List as PathsList } from '../../src/paths'
 import {
   Timeline as ResourcesTimeline,
-  List as ResourcesList,
+  // List as ResourcesList,
 } from '../../src/resources'
 
 interface Params extends ParsedUrlQuery {
@@ -47,8 +47,6 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 export default function PathPage({ path }: Props) {
-  console.log(path)
-
   return (
     <div>
       <Head>
@@ -79,41 +77,46 @@ export default function PathPage({ path }: Props) {
       <Header />
 
       <Main>
-        <Column>
-          <H1>
-            The <u>{path.title}</u> learning path
-          </H1>
-        </Column>
+        <Container>
+          <Typography variant="h1">
+            The <br />
+            <u>{path.title}</u>
+            <br /> learning path
+          </Typography>
+        </Container>
 
         {hasPrevPaths(path) && (
-          <Column>
+          <Container>
             <aside>
-              <H2>You want to come from</H2>
+              <Typography variant="h3" component="h2">
+                You want to come from
+              </Typography>
               <PathsList paths={path.prev} />
             </aside>
-          </Column>
+          </Container>
         )}
 
-        <Column
-          after={path.asides.map((aside, index) => (
-            <>
-              <H2>{aside.title}</H2>
-              <ResourcesList key={index} aside={aside} />
-            </>
-          ))}
-        >
+        <Container>
           <ResourcesTimeline resources={path.resources} />
-        </Column>
+        </Container>
 
         {hasNextPaths(path) && (
-          <Column>
+          <Container>
             <aside>
-              <H2>You could continue with</H2>
+              <Typography variant="h3" component="h2">
+                You could continue with
+              </Typography>
               <PathsList paths={path.next} />
             </aside>
-          </Column>
+          </Container>
         )}
       </Main>
     </div>
   )
 }
+// after={path.asides.map((aside, index) => (
+//   <>
+//     <H2>{aside.title}</H2>
+//     <ResourcesList key={index} aside={aside} />
+//   </>
+// ))}
