@@ -12,6 +12,9 @@ let theme = createTheme({
   },
   typography: {
     fontFamily: 'Poppins',
+    overline: {
+      lineHeight: 'normal',
+    },
   },
 })
 
@@ -22,6 +25,22 @@ theme = createTheme(theme, {
         root: {
           backgroundColor: theme.palette.background.default,
           color: theme.palette.text.primary,
+        },
+      },
+    },
+    MuiTimeline: {
+      styleOverrides: {
+        root: {
+          margin: 0,
+        },
+      },
+    },
+    MuiTimelineItem: {
+      styleOverrides: {
+        root: {
+          ['&::before']: {
+            display: 'none',
+          },
         },
       },
     },

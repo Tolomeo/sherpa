@@ -8,12 +8,9 @@ import {
   hasPrevPaths,
   hasNextPaths,
 } from '../../data'
-import { Header, Main, Container, Typography } from '../../src/theme'
+import { Header, Main, Container, Box, Typography, Grid } from '../../src/theme'
 import { List as PathsList } from '../../src/paths'
-import {
-  Timeline as ResourcesTimeline,
-  // List as ResourcesList,
-} from '../../src/resources'
+import { Timeline as ResourcesTimeline } from '../../src/resources'
 
 interface Params extends ParsedUrlQuery {
   pathName: string
@@ -48,7 +45,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 export default function PathPage({ path }: Props) {
   return (
-    <div>
+    <Box>
       <Head>
         <title>The {path.title} learning path</title>
         <link
@@ -77,41 +74,55 @@ export default function PathPage({ path }: Props) {
       <Header />
 
       <Main>
-        <Container>
-          <Typography variant="h1">
-            The <br />
-            <u>{path.title}</u>
-            <br /> learning path
-          </Typography>
-        </Container>
+        <Box pb={4}>
+          <Container>
+            <Grid container>
+              <Grid item xs={12} md={8} xl={6}>
+                <Typography variant="h1">
+                  The <u>{path.title}</u> learning&nbsp;path
+                </Typography>
+              </Grid>
+            </Grid>
+          </Container>
+        </Box>
 
         {hasPrevPaths(path) && (
-          <Container>
-            <aside>
-              <Typography variant="h3" component="h2">
-                You want to come from
-              </Typography>
-              <PathsList paths={path.prev} />
-            </aside>
-          </Container>
+          <Box py={4}>
+            <Container>
+              <aside>
+                <Typography variant="h3" component="h2">
+                  You want to come from
+                </Typography>
+                <PathsList paths={path.prev} />
+              </aside>
+            </Container>
+          </Box>
         )}
 
-        <Container>
-          <ResourcesTimeline resources={path.resources} />
-        </Container>
+        <Box py={4}>
+          <Container>
+            <Grid container>
+              <Grid item xs={12} md={8} xl={6}>
+                <ResourcesTimeline resources={path.resources} />
+              </Grid>
+            </Grid>
+          </Container>
+        </Box>
 
         {hasNextPaths(path) && (
-          <Container>
-            <aside>
-              <Typography variant="h3" component="h2">
-                You could continue with
-              </Typography>
-              <PathsList paths={path.next} />
-            </aside>
-          </Container>
+          <Box py={4}>
+            <Container>
+              <aside>
+                <Typography variant="h3" component="h2">
+                  You could continue with
+                </Typography>
+                <PathsList paths={path.next} />
+              </aside>
+            </Container>
+          </Box>
         )}
       </Main>
-    </div>
+    </Box>
   )
 }
 // after={path.asides.map((aside, index) => (

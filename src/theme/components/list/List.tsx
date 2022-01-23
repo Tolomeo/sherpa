@@ -12,9 +12,9 @@ const List: React.FC = ({ children }) => {
         children,
         (child) =>
           child && (
-            <ListItem disableGutters>
+            <ListItem>
               <ListItemIcon>
-                <CircleOutlinedIcon />
+                <CircleOutlinedIcon sx={{ fontSize: 14 }} />
               </ListItemIcon>
               <ListItemText primary={child} />
             </ListItem>
