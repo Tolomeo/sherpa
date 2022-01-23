@@ -1,25 +1,24 @@
 import React from 'react'
 import { PopulatedAside } from '../../data'
-import { List } from '../ui'
+import { Link, Typography, List, Box } from '../theme'
 import styles from './Resources.module.scss'
 
 type Props = {
-  aside: PopulatedAside
+  resources: PopulatedAside['resources']
 }
 
-const ResourcesList = ({ aside }: Props) => {
+const ResourcesList = ({ resources }: Props) => {
   return (
     <List>
-      {aside.resources.map((resource) => (
-        <a
-          key={resource.url}
-          href={resource.url}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <p className={styles.aside__source}>{resource.source}</p>
-          <p className={styles.aside__title}>{resource.title}</p>
-        </a>
+      {resources.map((resource) => (
+        <Box key={resource.url}>
+          <Link href={resource.url} target="_blank" rel="noreferrer">
+            <Typography variant="overline" color="text.secondary">
+              {resource.source}
+            </Typography>
+            <Typography variant="h6">{resource.title}</Typography>
+          </Link>
+        </Box>
       ))}
     </List>
   )

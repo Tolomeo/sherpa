@@ -56,34 +56,32 @@ export default function Home({ paths }: Props) {
           <Container>
             <Grid container spacing={4}>
               <Grid item md={5}>
-                <Box py={3}>
-                  <Typography variant="body1" component="p" gutterBottom>
-                    You are possibly here because of realising how valuable it
-                    is to acquire new skills and to make the most out of those
-                    you already master.
-                  </Typography>
-                  <Typography variant="body1" component="p" gutterBottom>
-                    Although there are some amazing platforms providing high
-                    quality paid educational content, the web is a wild place
-                    and there is some equally stunning learning material
-                    provided entirely for free.
-                  </Typography>
-                  <Typography variant="body1" component="p" gutterBottom>
-                    A challenge you may face is to find the right content among
-                    hundreds of resources. <br /> You may not always know what
-                    to start from or what to progress with. <br /> You may be
-                    unsure about how newly acquired shiny pieces of knowledge
-                    fit together.
-                  </Typography>
-                  <Typography variant="body1" component="p">
-                    This project tries to solve those issues, providing you with
-                    ordered lists of resources useful to learn on different
-                    topics.
-                    <br /> All of the resources are free and hand-picked to
-                    create learning paths which aim to be as comprehensive and
-                    consistent as possible.
-                  </Typography>
-                </Box>
+                <Typography variant="body1" component="p" gutterBottom>
+                  You are possibly here because of realising how valuable it is
+                  to acquire new skills and to make the most out of those you
+                  already master.
+                </Typography>
+                <Typography variant="body1" component="p" gutterBottom>
+                  Although there are some amazing platforms providing high
+                  quality paid educational content, the web is a wild place and
+                  there is some equally stunning learning material provided
+                  entirely for free.
+                </Typography>
+                <Typography variant="body1" component="p" gutterBottom>
+                  A challenge you may face is to find the right content among
+                  hundreds of resources. <br /> You may not always know what to
+                  start from or what to progress with. <br /> You may be unsure
+                  about how newly acquired shiny pieces of knowledge fit
+                  together.
+                </Typography>
+                <Typography variant="body1" component="p">
+                  This project tries to solve those issues, providing you with
+                  ordered lists of resources useful to learn on different
+                  topics.
+                  <br /> All of the resources are free and hand-picked to create
+                  learning paths which aim to be as comprehensive and consistent
+                  as possible.
+                </Typography>
               </Grid>
               <Grid item md={5}>
                 <PathsList paths={paths} />

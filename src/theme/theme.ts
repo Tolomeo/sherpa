@@ -37,11 +37,43 @@ theme = createTheme(theme, {
     },
     MuiTimelineItem: {
       styleOverrides: {
-        root: {
+        positionRight: {
           ['&::before']: {
             display: 'none',
           },
         },
+      },
+    },
+    MuiList: {
+      styleOverrides: {
+        root: {
+          paddingTop: 0,
+          paddingBottom: 0,
+        },
+      },
+    },
+    MuiListItem: {
+      styleOverrides: {
+        root: {
+          '&:first-child': {
+            paddingTop: 0,
+          },
+          '&:last-child': {
+            paddingBottom: 0,
+          },
+        },
+      },
+    },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: {
+          minWidth: 28,
+        },
+      },
+    },
+    MuiLink: {
+      defaultProps: {
+        underline: 'none',
       },
     },
   },

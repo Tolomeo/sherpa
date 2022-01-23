@@ -7,10 +7,22 @@ import {
   PopulatedPath,
   hasPrevPaths,
   hasNextPaths,
+  hasAdditionalResources,
 } from '../../data'
-import { Header, Main, Container, Box, Typography, Grid } from '../../src/theme'
+import {
+  Header,
+  Main,
+  Container,
+  Box,
+  Typography,
+  Grid,
+  Masonry,
+} from '../../src/theme'
 import { List as PathsList } from '../../src/paths'
-import { Timeline as ResourcesTimeline } from '../../src/resources'
+import {
+  Timeline as ResourcesTimeline,
+  List as ResourcesList,
+} from '../../src/resources'
 
 interface Params extends ParsedUrlQuery {
   pathName: string
@@ -90,7 +102,7 @@ export default function PathPage({ path }: Props) {
           <Box py={4}>
             <Container>
               <aside>
-                <Typography variant="h3" component="h2">
+                <Typography variant="h3" component="h2" gutterBottom>
                   You want to come from
                 </Typography>
                 <PathsList paths={path.prev} />
@@ -109,11 +121,30 @@ export default function PathPage({ path }: Props) {
           </Container>
         </Box>
 
+        {hasAdditionalResources(path) && (
+          <Box py={4}>
+            <Container>
+              <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
+                {path.asides.map((aside, index) => (
+                  <Box key={index}>
+                    <aside>
+                      <Typography component="h2" variant="h5" gutterBottom>
+                        {aside.title}
+                      </Typography>
+                      <ResourcesList resources={aside.resources} />
+                    </aside>
+                  </Box>
+                ))}
+              </Masonry>
+            </Container>
+          </Box>
+        )}
+
         {hasNextPaths(path) && (
           <Box py={4}>
             <Container>
               <aside>
-                <Typography variant="h3" component="h2">
+                <Typography variant="h3" component="h2" gutterBottom>
                   You could continue with
                 </Typography>
                 <PathsList paths={path.next} />
@@ -125,9 +156,4 @@ export default function PathPage({ path }: Props) {
     </Box>
   )
 }
-// after={path.asides.map((aside, index) => (
-//   <>
-//     <H2>{aside.title}</H2>
-//     <ResourcesList key={index} aside={aside} />
-//   </>
-// ))}
+// after={}

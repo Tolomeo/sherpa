@@ -80,4 +80,8 @@ export const hasPrevPaths = (path: PopulatedPath) => {
   return Boolean(Object.keys(path.prev).length)
 }
 
+export const hasAdditionalResources = (path: PopulatedPath) => {
+  return Boolean(path.asides.length)
+}
+
 export default paths
