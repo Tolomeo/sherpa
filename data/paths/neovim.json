@@ -13,7 +13,7 @@
   ],
   "asides": [
     {
-      "title": "You may prefer",
+      "title": "See also",
       "resources": [
         "https://thoughtbot.com/upcase/vim",
         "https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85",
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "title": "Nice to know about",
+      "title": "Nice to know",
       "resources": [
         "https://www.moolenaar.net/habits.html",
         "https://blog.codinghorror.com/we-are-typists-first-programmers-second",
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "title": "To keep as reference",
+      "title": "References",
       "resources": [
         "https://vimhelp.org",
         "https://github.com/nanotee/nvim-lua-guide",

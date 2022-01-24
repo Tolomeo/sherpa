@@ -16,7 +16,9 @@ const ResourcesList = ({ resources }: Props) => {
             <Typography variant="overline" color="text.secondary">
               {resource.source}
             </Typography>
-            <Typography variant="h6">{resource.title}</Typography>
+            <Typography component="span" variant="h6" display="block">
+              {resource.title}
+            </Typography>
           </Link>
         </Box>
       ))}
