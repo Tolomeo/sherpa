@@ -12,7 +12,32 @@ let theme = createTheme({
   },
   typography: {
     fontFamily: 'Poppins',
+    h1: {
+      fontSize: 'clamp(3rem, 2.0310rem + 4.1344vw, 6rem)',
+    },
+    h2: {
+      fontSize: 'clamp(1.875rem, 1.2694rem + 2.5840vw, 3.75rem)',
+    },
+    h3: {
+      fontSize: 'clamp(1.5rem, 1.0155rem + 2.0672vw, 3rem)',
+    },
+    h4: {
+      fontSize: 'clamp(1.35rem, 1.0997rem + 1.0680vw, 2.125rem)',
+    },
+    h5: {
+      fontSize: 'clamp(1.125rem, 1.0039rem + 0.5168vw, 1.5rem)',
+    },
+    h6: {
+      fontSize: 'clamp(1rem, 0.9596rem + 0.1723vw, 1.125rem)',
+    },
+    body1: {
+      fontSize: 'clamp(0.875rem, 0.8346rem + 0.1723vw, 1rem)',
+    },
+    body2: {
+      fontSize: 'clamp(0.75rem, 0.7096rem + 0.1723vw, 0.875rem)',
+    },
     overline: {
+      fontSize: 'clamp(0.6rem, 0.5516rem + 0.2067vw, 0.75rem)',
       lineHeight: 'normal',
     },
   },
@@ -47,18 +72,18 @@ theme = createTheme(theme, {
     MuiList: {
       styleOverrides: {
         root: {
-          paddingTop: 0,
-          paddingBottom: 0,
+          /* paddingTop: 0,
+          paddingBottom: 0, */
         },
       },
     },
     MuiListItem: {
       styleOverrides: {
         root: {
-          '&:first-child': {
+          '&:first-of-type': {
             paddingTop: 0,
           },
-          '&:last-child': {
+          '&:last-of-type': {
             paddingBottom: 0,
           },
         },
@@ -74,6 +99,13 @@ theme = createTheme(theme, {
     MuiLink: {
       defaultProps: {
         underline: 'none',
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          fontSize: theme.typography.overline.fontSize,
+        },
       },
     },
   },

@@ -46,12 +46,15 @@ const ResourcesTimeline = ({ resources }: Props) => {
                 <Typography variant="overline" color="text.secondary">
                   {resource.source}
                 </Typography>
-                <Box pb={1.5}>
-                  <Typography component="span" variant="h6">
-                    {resource.title}
-                  </Typography>
-                </Box>
-                <Stack direction="row" spacing={1}>
+                <Typography
+                  component="span"
+                  variant="h6"
+                  paddingBottom={1}
+                  display="block"
+                >
+                  {resource.title}
+                </Typography>
+                <Stack direction="row" spacing={1} component="span">
                   {resource.type.map((type) => (
                     <Chip key={type} label={type} size="small" />
                   ))}

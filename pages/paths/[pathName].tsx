@@ -91,7 +91,7 @@ export default function PathPage({ path }: Props) {
             <Grid container>
               <Grid item xs={12} md={8} xl={6}>
                 <Typography variant="h1">
-                  The <u>{path.title}</u> learning&nbsp;path
+                  The <br /> <u>{path.title}</u> <br /> learning path
                 </Typography>
               </Grid>
             </Grid>
@@ -111,7 +111,7 @@ export default function PathPage({ path }: Props) {
           </Box>
         )}
 
-        <Box py={4}>
+        <Box pb={4}>
           <Container>
             <Grid container>
               <Grid item xs={12} md={8} xl={6}>

@@ -1,6 +1,6 @@
 .main {
   position: relative;
-  padding-block-start: 20vw;
+  padding-block-start: min(30vw, 300px);
 
   &__background {
     position: absolute;
