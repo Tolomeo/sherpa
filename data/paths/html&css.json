@@ -19,7 +19,7 @@
   ],
   "asides": [
     {
-      "title": "See also",
+      "title": "Alternatives",
       "resources": [
         "https://learn.shayhowe.com/html-css",
         "https://learn.shayhowe.com/advanced-html-css",
@@ -43,7 +43,7 @@
       ]
     },
     {
-      "title": "References",
+      "title": "Great bookmarks",
       "resources": [
         "https://htmlreference.io",
         "https://cssreference.io",
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "title": "Above and beyond",
+      "title": "Beyond basics",
       "resources": [
         "https://egghead.io/courses/css-tips-and-tricks-930b",
         "https://rtlstyling.com",
@@ -73,11 +73,22 @@
         "https://cloudfour.com/thinks/responsive-images-the-simple-way",
         "https://polypane.app/blog/the-complete-guide-to-css-media-queries",
         "https://meiert.com/en/blog/optional-html",
-        "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries"
+        "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries",
+        "https://codepen.io/anthonydugois/full/RpYBmy",
+        "https://mailtolink.me",
+        "https://responsivebreakpoints.com",
+        "https://polypane.app/css-specificity-calculator",
+        "https://metatags.io",
+        "https://caniuse.com",
+        "https://caninclude.glitch.me",
+        "https://www.caniemail.com",
+        "animatedbackgrounds.me",
+        "https://modern-fluid-typography.vercel.app",
+        "https://cssgradient.io"
       ]
     },
     {
-      "title": "Around",
+      "title": "Nice to know",
       "resources": [
         "https://cssbattle.dev",
         "https://masteringmarkdown.com",
@@ -90,22 +101,6 @@
         "https://undead.institute/60-days-of-animation",
         "https://stylestage.dev",
         "https://almanac.httparchive.org"
-      ]
-    },
-    {
-      "title": "Tools",
-      "resources": [
-        "https://codepen.io/anthonydugois/full/RpYBmy",
-        "https://mailtolink.me",
-        "https://responsivebreakpoints.com",
-        "https://polypane.app/css-specificity-calculator",
-        "https://metatags.io",
-        "https://caniuse.com",
-        "https://caninclude.glitch.me",
-        "https://www.caniemail.com",
-        "animatedbackgrounds.me",
-        "https://modern-fluid-typography.vercel.app",
-        "https://cssgradient.io"
       ]
     },
     {

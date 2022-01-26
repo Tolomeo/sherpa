@@ -13,7 +13,7 @@
   ],
   "asides": [
     {
-      "title": "See also",
+      "title": "Alternatives",
       "resources": [
         "https://thoughtbot.com/upcase/vim",
         "https://github.com/iggredible/Learn-Vim",
@@ -37,16 +37,17 @@
       ]
     },
     {
-      "title": "Above and beyond",
+      "title": "Beyond basics",
       "resources": [
         "https://learnvimscriptthehardway.stevelosh.com",
         "http://vimregex.com",
+				"https://www.hillelwayne.com/post/intermediate-vim",
         "http://zzapper.co.uk/vimtips.html",
         "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs"
       ]
     },
     {
-      "title": "References",
+      "title": "Great bookmarks",
       "resources": [
         "https://vimhelp.org",
         "https://github.com/nanotee/nvim-lua-guide",
@@ -56,12 +57,9 @@
         "https://devhints.io/lua",
 				"https://github.com/ibhagwan/vim-cheatsheet",
         "https://github.com/amix/vimrc",
-        "http://michael.peopleofhonoronly.com/vim"
+        "http://michael.peopleofhonoronly.com/vim",
+				"https://vim-bootstrap.com"
       ]
-    },
-    {
-      "title": "Resources and tools",
-      "resources": ["https://vim-bootstrap.com"]
     },
     {
       "title": "Stay in the loop",

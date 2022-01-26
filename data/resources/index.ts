@@ -9,13 +9,17 @@ import git from './git.json'
 import neovim from './neovim.json'
 
 export type ResourceType =
-  | 'video'
-  | 'challenge'
+  | 'course'
+  | 'tutorial'
   | 'reading'
-  | 'interactive'
+  | 'game'
   | 'book'
   | 'example'
   | 'collection'
+  | 'reference'
+  | 'community'
+  | 'exercise'
+  | 'blog'
 
 export interface Resource {
   title: string
