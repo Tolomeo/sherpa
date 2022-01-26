@@ -100,5 +100,413 @@
     "url": "https://github.com/awesome-css-group/awesome-css",
     "type": ["collection"],
     "source": "github.com/awesome-css-group"
+  },
+  "https://learn.shayhowe.com/html-css": {
+    "title": "Learn to Code HTML & CSS",
+    "url": "https://learn.shayhowe.com/html-css",
+    "type": ["reading", "path"],
+    "source": "learn.shayhowe.com"
+  },
+  "https://learn.shayhowe.com/advanced-html-css": {
+    "title": "Learn to Code Advanced HTML & CSS",
+    "url": "https://learn.shayhowe.com/advanced-html-css",
+    "type": ["reading", "path"],
+    "source": "learn.shayhowe.com"
+  },
+  "https://scrimba.com/learn/htmlcss": {
+    "title": "HTML & CSS crash course",
+    "url": "https://scrimba.com/learn/htmlcss",
+    "type": ["video", "path"],
+    "source": "scrimba.com"
+  },
+  "https://web.dev/learn/css": {
+    "title": "Learn CSS",
+    "url": "https://web.dev/learn/css",
+    "type": ["reading", "path"],
+    "source": "web.dev"
+  },
+  "https://www.cronj.com/frontend-development/html.html": {
+    "title": "HTML - A Complete Guide to Master the Top Programming Language",
+    "url": "https://www.cronj.com/frontend-development/html.html",
+    "type": ["reading", "path"],
+    "source": "cronj.com"
+  },
+  "https://www.udemy.com/course/css-zero-to-hero": {
+    "title": "CSS: Zero to Hero in CSS by Styling a Website from Scratch",
+    "url": "https://www.udemy.com/course/css-zero-to-hero",
+    "type": ["video"],
+    "source": "udemy.com"
+  },
+  "https://www.khanacademy.org/computing/computer-programming/html-css": {
+    "title": "Intro to HTML/CSS: Making webpages",
+    "url": "https://www.khanacademy.org/computing/computer-programming/html-css",
+    "type": ["path"],
+    "source": "khanacademy.org"
+  },
+  "https://github.com/micromata/awesome-css-learning": {
+    "title": "Awesome CSS Learning",
+    "url": "https://github.com/micromata/awesome-css-learning",
+    "type": ["collection"],
+    "source": "github.com/micromata"
+  },
+  "https://frontendmasters.com/bootcamp": {
+    "title": "Web Development Bootcamp",
+    "url": "https://frontendmasters.com/bootcamp",
+    "type": ["path"],
+    "source": "frontendmasters.com"
+  },
+  "http://www.flexboxdefense.com": {
+    "title": "Flexbox Defense",
+    "url": "http://www.flexboxdefense.com",
+    "type": ["game"],
+    "source": "flexboxdefense.com"
+  },
+  "https://courses.kevinpowell.co/courses/conquering-responsive-layouts": {
+    "title": "Conquering Responsive Layouts",
+    "url": "https://courses.kevinpowell.co/courses/conquering-responsive-layouts",
+    "type": ["path"],
+    "source": "courses.kevinpowell.co"
+  },
+  "https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855": {
+    "title": "Everything you need to know about CSS Variables",
+    "url": "https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855",
+    "type": ["reading"],
+    "source": "freecodecamp.org"
+  },
+  "https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11": {
+    "title": "The CSS Handbook: A Handy Guide to CSS for Developers",
+    "url": "https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11",
+    "type": ["reading"],
+    "source": "freecodecamp.org"
+  },
+  "https://learncssgrid.com": {
+    "title": "Learn CSS Grid",
+    "url": "https://learncssgrid.com",
+    "type": ["reading", "path"],
+    "source": "learncssgrid.com"
+  },
+  "https://developer.mozilla.org/en-US/docs/Learn/HTML": {
+    "title": "Structuring the web with HTML",
+    "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML",
+    "type": ["reading"],
+    "source": "developer.mozilla.org"
+  },
+  "https://developer.mozilla.org/en-US/docs/Learn/CSS": {
+    "title": "Learn to style HTML using CSS",
+    "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS",
+    "type": ["reading"],
+    "source": "developer.mozilla.org"
+  },
+  "https://www.youtube.com/playlist?list=PLgBH1CvjOA63Xvt0BaeQ7zL4KXX96Wbgp": {
+    "title": "Frontend Mentor Challenges",
+    "url": "https://www.youtube.com/playlist?list=PLgBH1CvjOA63Xvt0BaeQ7zL4KXX96Wbgp",
+    "type": ["video", "collection"],
+    "source": "youtube.com/c/FlorinPop"
+  },
+  "https://css-challenges.com": {
+    "title": "CSS Challenges",
+    "url": "https://css-challenges.com",
+    "type": ["challenge", "collection"],
+    "source": "css-challenges.com"
+  },
+  "https://www.guess-css.app": {
+    "title": "Guess CSS! HTML & CSS puzzler game",
+    "url": "https://www.guess-css.app",
+    "type": ["game"],
+    "source": "guess-css.app"
+  },
+  "https://9elements.com/seo-cheat-sheet/": {
+    "title": "SEO Cheat Sheet by 9elements",
+    "url": "https://9elements.com/seo-cheat-sheet/",
+    "type": ["reading", "cheatsheet"],
+    "source": "9elements.com/seo-cheat-sheet"
+  },
+  "https://learn-the-web.algonquindesign.ca/topics/cheat-sheets-checklists": {
+    "title": "Cheat sheets & checklists",
+    "url": "https://learn-the-web.algonquindesign.ca/topics/cheat-sheets-checklists",
+    "type": ["cheatsheet", "collection"],
+    "source": "learn-the-web.algonquindesign.ca"
+  },
+  "https://gridbyexample.com": {
+    "title": "Grid by Example",
+    "url": "https://gridbyexample.com",
+    "type": ["reading", "example", "collection"],
+    "source": "gridbyexample.com"
+  },
+  "https://sparkbox.com/foundry/bem_by_example": {
+    "title": "BEM by Example",
+    "url": "https://sparkbox.com/foundry/bem_by_example",
+    "type": ["example", "collection"],
+    "source": "sparkbox.com"
+  },
+  "https://html.spec.whatwg.org": {
+    "title": "HTML standard",
+    "url": "https://html.spec.whatwg.org",
+    "type": ["reading"],
+    "source": "whatwg.org"
+  },
+  "https://css-tricks.com/how-to-section-your-html": {
+    "title": "How to Section Your HTML",
+    "url": "https://css-tricks.com/how-to-section-your-html",
+    "type": ["reading"],
+    "source": "css-tricks.com"
+  },
+  "http://html.systems": {
+    "title": "HTML - Simplified code",
+    "url": "http://html.systems",
+    "type": ["example", "collection"],
+    "source": "html.systems"
+  },
+  "cssvalues.com": {
+    "title": "CSS Values",
+    "url": "cssvalues.com",
+    "type": ["cheatsheet"],
+    "source": "cssvalues.com"
+  },
+  "https://devhints.io/resolutions": {
+    "title": "Screen resolutions cheatsheet",
+    "url": "https://devhints.io/resolutions",
+    "type": ["cheatsheet"],
+    "source": "devhints.io"
+  },
+  "https://madebymike.github.io/html5-periodic-table": {
+    "title": "Periodic table of HTML elements",
+    "url": "https://madebymike.github.io/html5-periodic-table",
+    "type": ["cheatsheet"],
+    "source": "madebymike.github.io"
+  },
+  "https://css-speedrun.netlify.app": {
+    "title": "CSS Speedrun",
+    "url": "https://css-speedrun.netlify.app",
+    "type": ["game"],
+    "source": "css-speedrun.netlify.app"
+  },
+  "https://egghead.io/courses/css-tips-and-tricks-930b": {
+    "title": "CSS Tips and Tricks",
+    "url": "https://egghead.io/courses/css-tips-and-tricks-930b",
+    "type": ["video", "collection"],
+    "source": "egghead.io"
+  },
+  "https://rtlstyling.com": {
+    "title": "RTL Styling 101",
+    "url": "https://rtlstyling.com",
+    "type": ["reading", "path"],
+    "source": "rtlstyling.com"
+  },
+  "https://cssanimation.rocks": {
+    "title": "CSS Animation",
+    "url": "https://cssanimation.rocks",
+    "type": ["collection"],
+    "source": "cssanimation.rocks"
+  },
+  "https://www.madebymike.com.au/writing/css-architecture-for-modern-web-applications": {
+    "title": "CSS Architecture for Modern JavaScript Applications",
+    "url": "https://www.madebymike.com.au/writing/css-architecture-for-modern-web-applications",
+    "type": ["reading"],
+    "source": "madebymike.com.au"
+  },
+  "https://web.dev/learn/forms": {
+    "title": "Learn Forms",
+    "url": "https://web.dev/learn/forms",
+    "type": ["path"],
+    "source": "web.dev"
+  },
+  "https://www.smashingmagazine.com/2021/04/complete-guide-html-email-templates-tools": {
+    "title": "A Complete Guide To HTML Email",
+    "url": "https://www.smashingmagazine.com/2021/04/complete-guide-html-email-templates-tools",
+    "type": ["reading"],
+    "source": "smashingmagazine.com"
+  },
+  "https://cloudfour.com/thinks/responsive-images-the-simple-way": {
+    "title": "Responsive Images the Simple Way",
+    "url": "https://cloudfour.com/thinks/responsive-images-the-simple-way",
+    "type": ["reading"],
+    "source": "cloudfour.com"
+  },
+  "https://polypane.app/blog/the-complete-guide-to-css-media-queries": {
+    "title": "The complete guide to CSS media queries",
+    "url": "https://polypane.app/blog/the-complete-guide-to-css-media-queries",
+    "type": ["reading"],
+    "source": "polypane.app"
+  },
+  "https://meiert.com/en/blog/optional-html": {
+    "title": "Optional HTML: Everything You Need to Know",
+    "url": "https://meiert.com/en/blog/optional-html",
+    "type": ["reading"],
+    "source": "meiert.com"
+  },
+  "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries": {
+    "title": "A Primer On CSS Container Queries",
+    "url": "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries",
+    "type": ["reading"],
+    "source": "smashingmagazine.com"
+  },
+  "https://cssbattle.dev": {
+    "title": "CSSBattle",
+    "url": "https://cssbattle.dev",
+    "type": ["game", "challenge"],
+    "source": "cssbattle.dev"
+  },
+  "https://masteringmarkdown.com": {
+    "title": "Mastering Markdown",
+    "url": "https://masteringmarkdown.com",
+    "type": ["path"],
+    "source": "masteringmarkdown.com"
+  },
+  "https://github.com/you-dont-need/You-Dont-Need-JavaScript": {
+    "title": "You Don't Need JavaScript",
+    "url": "https://github.com/you-dont-need/You-Dont-Need-JavaScript",
+    "type": ["example", "collection"],
+    "source": "github.com/you-dont-need"
+  },
+  "http://getbem.com": {
+    "title": "BEM — Block Element Modifier",
+    "url": "http://getbem.com",
+    "type": ["reading"],
+    "source": "getbem.com"
+  },
+  "https://www.youtube.com/playlist?list=PLKoqnv2vTMUN6lFDz6qMBsz7-Jm8YRV9H": {
+    "title": "SEO Mythbusting",
+    "url": "https://www.youtube.com/playlist?list=PLKoqnv2vTMUN6lFDz6qMBsz7-Jm8YRV9H",
+    "type": ["video", "collection"],
+    "source": "youtube.com/c/GoogleSearchCentral"
+  },
+  "https://www.htmhell.dev": {
+    "title": "Markup from hell",
+    "url": "https://www.htmhell.dev",
+    "type": ["example", "collection"],
+    "source": "htmhell.dev"
+  },
+  "https://eev.ee/blog/2020/02/01/old-css-new-css": {
+    "title": "Old CSS, new CSS",
+    "url": "https://eev.ee/blog/2020/02/01/old-css-new-css",
+    "type": ["reading"],
+    "source": "eev.ee"
+  },
+  "https://rtl.wtf": {
+    "title": "RTL:WTF",
+    "url": "https://rtl.wtf",
+    "type": ["reading"],
+    "source": "rtl.wtf"
+  },
+  "https://undead.institute/60-days-of-animation": {
+    "title": "60 Days of Animation",
+    "url": "https://undead.institute/60-days-of-animation",
+    "type": ["example", "collection"],
+    "source": "undead.institute"
+  },
+  "https://stylestage.dev": {
+    "title": "Style Stage",
+    "url": "https://stylestage.dev",
+    "type": ["example", "collection", "challenge"],
+    "source": "stylestage.dev"
+  },
+  "https://almanac.httparchive.org": {
+    "title": "Web Almanac",
+    "url": "https://almanac.httparchive.org",
+    "type": ["reference"],
+    "source": "almanac.httparchive.org"
+  },
+  "https://codepen.io/anthonydugois/full/RpYBmy": {
+    "title": "CSS Grid Template Builder",
+    "url": "https://codepen.io/anthonydugois/full/RpYBmy",
+    "type": ["generator"],
+    "source": "codepen.io/anthonydugois"
+  },
+  "https://mailtolink.me": {
+    "title": "Mailtolink.me",
+    "url": "https://mailtolink.me",
+    "type": ["generator"],
+    "source": "mailtolink.me"
+  },
+  "https://responsivebreakpoints.com": {
+    "title": "Responsive Image Breakpoints Generator",
+    "url": "https://responsivebreakpoints.com",
+    "type": ["generator"],
+    "source": "responsivebreakpoints.com"
+  },
+  "https://polypane.app/css-specificity-calculator": {
+    "title": "CSS Specificity Calculator",
+    "url": "https://polypane.app/css-specificity-calculator",
+    "type": ["cheatsheet"],
+    "source": "polypane.app"
+  },
+  "https://metatags.io": {
+    "title": "Meta Tags",
+    "url": "https://metatags.io",
+    "type": ["generator"],
+    "source": "metatags.io"
+  },
+  "https://caniuse.com": {
+    "title": "Can I use",
+    "url": "https://caniuse.com",
+    "type": ["cheatsheet"],
+    "source": "caniuse.com"
+  },
+  "https://caninclude.glitch.me": {
+    "title": "Can I include",
+    "url": "https://caninclude.glitch.me",
+    "type": ["cheatsheet"],
+    "source": "caninclude.glitch.me"
+  },
+  "https://www.caniemail.com": {
+    "title": "Can I email",
+    "url": "https://www.caniemail.com",
+    "type": ["cheatsheet"],
+    "source": "caniemail.com"
+  },
+  "animatedbackgrounds.me": {
+    "title": "Animated Backgrounds",
+    "url": "animatedbackgrounds.me",
+    "type": ["generator"],
+    "source": "animatedbackgrounds.me"
+  },
+  "https://modern-fluid-typography.vercel.app": {
+    "title": "Modern fluid typography editor",
+    "url": "https://modern-fluid-typography.vercel.app",
+    "type": ["generator"],
+    "source": "modern-fluid-typography.vercel.app"
+  },
+  "https://cssgradient.io": {
+    "title": "CSS Gradient",
+    "url": "https://cssgradient.io",
+    "type": ["generator", "reference"],
+    "source": "cssgradient.io"
+  },
+  "https://css-tricks.com": {
+    "title": "CSS-Tricks",
+    "url": "https://css-tricks.com",
+    "type": ["blog"],
+    "source": "css-tricks.com"
+  },
+  "tympanus.net": {
+    "title": "Codrops",
+    "url": "tympanus.net",
+    "type": ["blog"],
+    "source": "tympanus.net"
+  },
+  "https://www.smashingmagazine.com": {
+    "title": "Smashing Magazine",
+    "url": "https://www.smashingmagazine.com",
+    "type": ["blog"],
+    "source": "smashingmagazine.com"
+  },
+  "https://ishadeed.com": {
+    "title": "Ahmad Shadeed",
+    "url": "https://ishadeed.com",
+    "type": ["blog"],
+    "source": "ishadeed.com"
+  },
+  "https://www.joshwcomeau.com": {
+    "title": "Josh W Comeau",
+    "url": "https://www.joshwcomeau.com",
+    "type": ["blog"],
+    "source": "joshwcomeau.com"
+  },
+  "https://codepen.io": {
+    "title": "CodePen",
+    "url": "https://codepen.io",
+    "type": ["community"],
+    "source": "codepen.io"
   }
 }

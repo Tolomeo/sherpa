@@ -141,7 +141,7 @@
     "title": "Getting started using Lua in Neovim",
     "url": "https://github.com/nanotee/nvim-lua-guide",
     "type": ["reading"],
-    "source": "github.com"
+    "source": "github.com/nanotee"
   },
   "https://learnxinyminutes.com/docs/vim": {
     "title": "Learn X in Y minutes Where X=vim",
@@ -237,7 +237,7 @@
     "title": "Barbarian Meets Coding",
     "url": "https://www.barbarianmeetscoding.com",
     "type": ["blog"],
-    "source": "https://www.barbarianmeetscoding.com"
+    "source": "barbarianmeetscoding.com"
   },
   "http://vonheikemen.github.io/devlog": {
     "title": "Devlog",
@@ -250,5 +250,41 @@
     "url": "https://vim.fandom.com/wiki/Vim_Tips_Wiki",
     "type": ["collection"],
     "source": "vim.fandom.com"
+  },
+  "https://learnvimscriptthehardway.stevelosh.com": {
+    "title": "Learn Vimscript the Hard Way",
+    "url": "https://learnvimscriptthehardway.stevelosh.com",
+    "type": ["reading", "path"],
+    "source": "stevelosh.com"
+  },
+  "http://vimregex.com": {
+    "title": "Vim Regular Expressions 101",
+    "url": "http://vimregex.com",
+    "type": ["reading"],
+    "source": "vimregex.com"
+  },
+  "http://zzapper.co.uk/vimtips.html": {
+    "title": "Best of VIM Tips",
+    "url": "http://zzapper.co.uk/vimtips.html",
+    "type": ["reading", "cheatsheet"],
+    "source": "zzapper.co.uk"
+  },
+  "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs": {
+    "title": "How to Do 90% of What Plugins Do (With Just Vim)",
+    "url": "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs",
+    "type": ["video"],
+    "source": "youtube.com/c/ThoughtbotVideo"
+  },
+  "https://devhints.io/lua": {
+    "title": "Lua cheatsheet",
+    "url": "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs",
+    "type": ["cheatsheet"],
+    "source": "devhints.io"
+  },
+	  "https://github.com/ibhagwan/vim-cheatsheet": {
+    "title": "iBhagwan's (n)vim cheatsheet",
+    "url": "https://github.com/ibhagwan/vim-cheatsheet",
+    "type": ["cheatsheet"],
+    "source": "github.com/ibhagwan"
   }
 }

@@ -6,8 +6,6 @@
     "https://learn-the-web.algonquindesign.ca/topics/information-architecture",
     "https://www.freecodecamp.org/learn/responsive-web-design",
     "https://learn-the-web.algonquindesign.ca/topics/search-engine-optimization",
-    "https://htmlreference.io",
-    "https://cssreference.io",
     "https://flukeout.github.io",
     "https://flexbox.io",
     "https://flexboxfroggy.com",
@@ -18,6 +16,109 @@
     "https://csslayout.io",
     "https://github.com/diegocard/awesome-html5",
     "https://github.com/awesome-css-group/awesome-css"
+  ],
+  "asides": [
+    {
+      "title": "See also",
+      "resources": [
+        "https://learn.shayhowe.com/html-css",
+        "https://learn.shayhowe.com/advanced-html-css",
+        "https://scrimba.com/learn/htmlcss",
+        "https://web.dev/learn/css",
+        "https://www.cronj.com/frontend-development/html.html",
+        "https://www.udemy.com/course/css-zero-to-hero",
+        "https://www.khanacademy.org/computing/computer-programming/html-css",
+        "https://github.com/micromata/awesome-css-learning",
+        "https://frontendmasters.com/bootcamp",
+        "http://www.flexboxdefense.com",
+        "https://courses.kevinpowell.co/courses/conquering-responsive-layouts",
+        "https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855",
+        "https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11",
+        "https://learncssgrid.com",
+        "https://developer.mozilla.org/en-US/docs/Learn/HTML",
+        "https://developer.mozilla.org/en-US/docs/Learn/CSS",
+        "https://www.youtube.com/playlist?list=PLgBH1CvjOA63Xvt0BaeQ7zL4KXX96Wbgp",
+        "https://css-challenges.com",
+        "https://www.guess-css.app"
+      ]
+    },
+    {
+      "title": "References",
+      "resources": [
+        "https://htmlreference.io",
+        "https://cssreference.io",
+        "https://csslayout.io",
+        "https://9elements.com/seo-cheat-sheet",
+        "https://learn-the-web.algonquindesign.ca/topics/cheat-sheets-checklists",
+        "https://gridbyexample.com",
+        "https://sparkbox.com/foundry/bem_by_example",
+        "https://html.spec.whatwg.org",
+        "https://css-tricks.com/how-to-section-your-html",
+        "http://html.systems",
+        "cssvalues.com",
+        "https://devhints.io/resolutions",
+        "https://madebymike.github.io/html5-periodic-table",
+        "https://css-speedrun.netlify.app"
+      ]
+    },
+    {
+      "title": "Above and beyond",
+      "resources": [
+        "https://egghead.io/courses/css-tips-and-tricks-930b",
+        "https://rtlstyling.com",
+        "https://cssanimation.rocks",
+        "https://www.madebymike.com.au/writing/css-architecture-for-modern-web-applications",
+        "https://web.dev/learn/forms",
+        "https://www.smashingmagazine.com/2021/04/complete-guide-html-email-templates-tools",
+        "https://cloudfour.com/thinks/responsive-images-the-simple-way",
+        "https://polypane.app/blog/the-complete-guide-to-css-media-queries",
+        "https://meiert.com/en/blog/optional-html",
+        "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries"
+      ]
+    },
+    {
+      "title": "Around",
+      "resources": [
+        "https://cssbattle.dev",
+        "https://masteringmarkdown.com",
+        "https://github.com/you-dont-need/You-Dont-Need-JavaScript",
+        "http://getbem.com",
+        "https://www.youtube.com/playlist?list=PLKoqnv2vTMUN6lFDz6qMBsz7-Jm8YRV9H",
+        "https://www.htmhell.dev",
+        "https://eev.ee/blog/2020/02/01/old-css-new-css",
+        "https://rtl.wtf",
+        "https://undead.institute/60-days-of-animation",
+        "https://stylestage.dev",
+        "https://almanac.httparchive.org"
+      ]
+    },
+    {
+      "title": "Tools",
+      "resources": [
+        "https://codepen.io/anthonydugois/full/RpYBmy",
+        "https://mailtolink.me",
+        "https://responsivebreakpoints.com",
+        "https://polypane.app/css-specificity-calculator",
+        "https://metatags.io",
+        "https://caniuse.com",
+        "https://caninclude.glitch.me",
+        "https://www.caniemail.com",
+        "animatedbackgrounds.me",
+        "https://modern-fluid-typography.vercel.app",
+        "https://cssgradient.io"
+      ]
+    },
+    {
+      "title": "Stay in the loop",
+      "resources": [
+        "https://css-tricks.com",
+        "tympanus.net",
+        "https://www.smashingmagazine.com",
+        "https://ishadeed.com",
+        "https://www.joshwcomeau.com",
+        "https://codepen.io"
+      ]
+    }
   ],
   "next": ["javascript", "webaccessibility"]
 }
