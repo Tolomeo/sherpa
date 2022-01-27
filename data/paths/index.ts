@@ -15,20 +15,20 @@ export interface Path {
   resources: Array<keyof typeof resources>
   next?: Array<keyof typeof paths>
   prev?: Array<keyof typeof paths>
-  asides?: Array<Aside>
+  extras?: Array<PathExtra>
 }
 
-export type Aside = Omit<Path, 'next' | 'prev' | 'asides'>
+export type PathExtra = Omit<Path, 'next' | 'prev' | 'extras'>
 
 export interface PopulatedPath {
   title: string
   resources: Resource[]
-  asides: Array<PopulatedAside>
+  extras: Array<PopulatedPathExtra>
   next: Paths
   prev: Paths
 }
 
-export type PopulatedAside = Omit<PopulatedPath, 'next' | 'prev' | 'asides'>
+export type PopulatedPathExtra = Omit<PopulatedPath, 'next' | 'prev' | 'extras'>
 
 export type Paths = {
   [pathName: string]: Path
@@ -49,22 +49,36 @@ const paths = <Paths>{
 
 export const populatePath = (path: Path): PopulatedPath => ({
   ...path,
+  // populating resources data
   resources: path.resources
     .map((resourceId) => resources[resourceId])
     .filter(Boolean),
-  asides: (path.asides || [])
-    .map((aside) => ({
-      ...aside,
-      resources: aside.resources
-        .map((asideResourceId) => resources[asideResourceId])
+  // populating extra resources, those are optional
+  extras: (path.extras || [])
+    .map((extra) => ({
+      ...extra,
+      resources: extra.resources
+        .map((extraResourceId) => resources[extraResourceId])
+        // sorting alphabetically by resource title
+        .sort((extraA, extraB) => {
+          const titleA = extraA.title.toUpperCase()
+          const titleB = extraB.title.toUpperCase()
+
+          if (titleA > titleB) return 1
+          else if (titleB > titleA) return -1
+
+          return 0
+        })
         .filter(Boolean),
     }))
     .filter(Boolean),
+  // populating next paths, those are optional
   next: (path.next || []).reduce((nextPaths, nextPathId) => {
     if (paths[nextPathId]) nextPaths[nextPathId] = paths[nextPathId]
 
     return nextPaths
   }, {} as Paths),
+  // populating prev paths, those are optional
   prev: (path.prev || []).reduce((prevPaths, prevPathId) => {
     if (paths[prevPathId]) prevPaths[prevPathId] = paths[prevPathId]
 
@@ -80,8 +94,8 @@ export const hasPrevPaths = (path: PopulatedPath) => {
   return Boolean(Object.keys(path.prev).length)
 }
 
-export const hasAdditionalResources = (path: PopulatedPath) => {
-  return Boolean(path.asides.length)
+export const hasExtras = (path: PopulatedPath) => {
+  return Boolean(path.extras.length)
 }
 
 export default paths

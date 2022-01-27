@@ -11,7 +11,7 @@
     "https://github.com/akrawchyk/awesome-vim",
     "https://github.com/rockerBOO/awesome-neovim"
   ],
-  "asides": [
+  "extras": [
     {
       "title": "Alternatives",
       "resources": [

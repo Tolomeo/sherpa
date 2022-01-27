@@ -7,7 +7,7 @@ import {
   PopulatedPath,
   hasPrevPaths,
   hasNextPaths,
-  hasAdditionalResources,
+  hasExtras,
 } from '../../data'
 import {
   Header,
@@ -121,17 +121,17 @@ export default function PathPage({ path }: Props) {
           </Container>
         </Box>
 
-        {hasAdditionalResources(path) && (
+        {hasExtras(path) && (
           <Box py={4}>
             <Container>
               <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
-                {path.asides.map((aside, index) => (
+                {path.extras.map((extra, index) => (
                   <Box key={index}>
                     <aside>
                       <Typography component="h2" variant="h5" gutterBottom>
-                        {aside.title}
+                        {extra.title}
                       </Typography>
-                      <ResourcesList resources={aside.resources} />
+                      <ResourcesList resources={extra.resources} />
                     </aside>
                   </Box>
                 ))}
