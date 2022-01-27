@@ -10,31 +10,34 @@ import node from './node.json'
 import git from './git.json'
 import neovim from './neovim.json'
 
-export interface Path {
+export interface SerializedPath {
   title: string
   resources: Array<keyof typeof resources>
   next?: Array<keyof typeof paths>
   prev?: Array<keyof typeof paths>
-  extras?: Array<PathExtra>
+  extras?: Array<SerializedPathExtra>
+}
+
+export type SerializedPathExtra = Omit<
+  SerializedPath,
+  'next' | 'prev' | 'extras'
+>
+
+export interface Path {
+  title: string
+  resources: Resource[]
+  extras: Array<PathExtra>
+  next: SerializedPaths
+  prev: SerializedPaths
 }
 
 export type PathExtra = Omit<Path, 'next' | 'prev' | 'extras'>
 
-export interface PopulatedPath {
-  title: string
-  resources: Resource[]
-  extras: Array<PopulatedPathExtra>
-  next: Paths
-  prev: Paths
+export type SerializedPaths = {
+  [pathName: string]: SerializedPath
 }
 
-export type PopulatedPathExtra = Omit<PopulatedPath, 'next' | 'prev' | 'extras'>
-
-export type Paths = {
-  [pathName: string]: Path
-}
-
-const paths = <Paths>{
+const paths = <SerializedPaths>{
   htmlcss,
   webaccessibility,
   javascript,
@@ -47,7 +50,7 @@ const paths = <Paths>{
   neovim,
 }
 
-export const populatePath = (path: Path): PopulatedPath => ({
+export const deserializePath = (path: SerializedPath): Path => ({
   ...path,
   // populating resources data
   resources: path.resources
@@ -60,9 +63,9 @@ export const populatePath = (path: Path): PopulatedPath => ({
       resources: extra.resources
         .map((extraResourceId) => resources[extraResourceId])
         // sorting alphabetically by resource title
-        .sort((extraA, extraB) => {
-          const titleA = extraA.title.toUpperCase()
-          const titleB = extraB.title.toUpperCase()
+        .sort((resourceA, resourceB) => {
+          const titleA = resourceA.title.toUpperCase()
+          const titleB = resourceB.title.toUpperCase()
 
           if (titleA > titleB) return 1
           else if (titleB > titleA) return -1
@@ -77,24 +80,24 @@ export const populatePath = (path: Path): PopulatedPath => ({
     if (paths[nextPathId]) nextPaths[nextPathId] = paths[nextPathId]
 
     return nextPaths
-  }, {} as Paths),
+  }, {} as SerializedPaths),
   // populating prev paths, those are optional
   prev: (path.prev || []).reduce((prevPaths, prevPathId) => {
     if (paths[prevPathId]) prevPaths[prevPathId] = paths[prevPathId]
 
     return prevPaths
-  }, {} as Paths),
+  }, {} as SerializedPaths),
 })
 
-export const hasNextPaths = (path: PopulatedPath) => {
+export const hasNextPaths = (path: Path) => {
   return Boolean(Object.keys(path.next).length)
 }
 
-export const hasPrevPaths = (path: PopulatedPath) => {
+export const hasPrevPaths = (path: Path) => {
   return Boolean(Object.keys(path.prev).length)
 }
 
-export const hasExtras = (path: PopulatedPath) => {
+export const hasExtras = (path: Path) => {
   return Boolean(path.extras.length)
 }
 

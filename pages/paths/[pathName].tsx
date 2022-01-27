@@ -3,8 +3,8 @@ import Head from 'next/head'
 import { ParsedUrlQuery } from 'querystring'
 import {
   paths,
-  populatePath,
-  PopulatedPath,
+  deserializePath,
+  SerializedPaths,
   hasPrevPaths,
   hasNextPaths,
   hasExtras,
@@ -29,7 +29,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 interface StaticProps {
-  path: PopulatedPath
+  path: SerializedPaths
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -43,12 +43,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
-  const path = paths[params!.pathName]
-  const populatedPath = populatePath(path)
+  const serializedPath = paths[params!.pathName]
+  const path = deserializePath(serializedPath)
 
   return {
     props: {
-      path: populatedPath,
+      path,
     },
   }
 }
