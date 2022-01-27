@@ -39,7 +39,8 @@
         "https://developer.mozilla.org/en-US/docs/Learn/CSS",
         "https://www.youtube.com/playlist?list=PLgBH1CvjOA63Xvt0BaeQ7zL4KXX96Wbgp",
         "https://css-challenges.com",
-        "https://www.guess-css.app"
+        "https://www.guess-css.app",
+        "https://css-speedrun.netlify.app"
       ]
     },
     {
@@ -53,18 +54,28 @@
         "https://gridbyexample.com",
         "https://sparkbox.com/foundry/bem_by_example",
         "https://html.spec.whatwg.org",
-        "https://css-tricks.com/how-to-section-your-html",
         "http://html.systems",
         "cssvalues.com",
         "https://devhints.io/resolutions",
         "https://madebymike.github.io/html5-periodic-table",
-        "https://css-speedrun.netlify.app"
+        "https://caniuse.com",
+        "https://caninclude.glitch.me",
+        "https://www.caniemail.com",
+        "animatedbackgrounds.me",
+        "https://modern-fluid-typography.vercel.app",
+        "https://cssgradient.io",
+        "https://codepen.io/anthonydugois/full/RpYBmy",
+        "https://mailtolink.me",
+        "https://responsivebreakpoints.com",
+        "https://polypane.app/css-specificity-calculator",
+        "https://metatags.io"
       ]
     },
     {
       "title": "Beyond basics",
       "resources": [
         "https://egghead.io/courses/css-tips-and-tricks-930b",
+        "https://css-tricks.com/how-to-section-your-html",
         "https://rtlstyling.com",
         "https://cssanimation.rocks",
         "https://www.madebymike.com.au/writing/css-architecture-for-modern-web-applications",
@@ -73,18 +84,7 @@
         "https://cloudfour.com/thinks/responsive-images-the-simple-way",
         "https://polypane.app/blog/the-complete-guide-to-css-media-queries",
         "https://meiert.com/en/blog/optional-html",
-        "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries",
-        "https://codepen.io/anthonydugois/full/RpYBmy",
-        "https://mailtolink.me",
-        "https://responsivebreakpoints.com",
-        "https://polypane.app/css-specificity-calculator",
-        "https://metatags.io",
-        "https://caniuse.com",
-        "https://caninclude.glitch.me",
-        "https://www.caniemail.com",
-        "animatedbackgrounds.me",
-        "https://modern-fluid-typography.vercel.app",
-        "https://cssgradient.io"
+        "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries"
       ]
     },
     {

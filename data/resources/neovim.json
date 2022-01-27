@@ -86,7 +86,7 @@
   "https://www.barbarianmeetscoding.com/series/exploring-vim": {
     "title": "Exploring Vim",
     "url": "https://www.barbarianmeetscoding.com/series/exploring-vim",
-    "type": ["tutorial", "collection"],
+    "type": ["course"],
     "source": "barbarianmeetscoding.com"
   },
   "http://www.vimgenius.com/lessons": {
@@ -120,7 +120,7 @@
     "source": "stevelosh.com"
   },
   "https://thoughtbot.com/upcase/tmux": {
-    "title": "tmux",
+    "title": "Learn tmux _ Terminal Multiplexer",
     "url": "https://thoughtbot.com/upcase/tmux",
     "type": ["course"],
     "source": "thoughtbot.com"
@@ -292,5 +292,11 @@
     "url": "https://www.hillelwayne.com/post/intermediate-vim",
     "type": ["reading"],
     "source": "hillelwayne.com"
+  },
+  "https://www.vimgolf.com": {
+    "title": "VimGolf - real Vim ninjas count every keystroke!",
+    "url": "https://www.vimgolf.com",
+    "type": ["game", "community"],
+    "source": "vimgolf.com"
   }
 }

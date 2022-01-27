@@ -22,26 +22,27 @@
         "http://vimcasts.org/episodes",
         "https://www.barbarianmeetscoding.com/series/exploring-vim",
         "http://www.vimgenius.com/lessons",
-        "https://github.com/jmoon018/PacVim"
+        "https://github.com/jmoon018/PacVim",
+        "https://github.com/nanotee/nvim-lua-guide"
       ]
     },
     {
       "title": "Nice to know",
       "resources": [
-        "https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85",
         "https://www.moolenaar.net/habits.html",
         "https://blog.codinghorror.com/we-are-typists-first-programmers-second",
         "https://stevelosh.com/blog/2010/09/coming-home-to-vim",
-        "https://thoughtbot.com/upcase/tmux",
-        "https://www.youtube.com/watch?v=Bt-vmPC_-Ho"
-      ]
+        "https://www.youtube.com/watch?v=Bt-vmPC_-Ho",
+				"https://www.vimgolf.com"
+				]
     },
     {
       "title": "Beyond basics",
       "resources": [
+        "https://thoughtbot.com/upcase/tmux",
         "https://learnvimscriptthehardway.stevelosh.com",
         "http://vimregex.com",
-				"https://www.hillelwayne.com/post/intermediate-vim",
+        "https://www.hillelwayne.com/post/intermediate-vim",
         "http://zzapper.co.uk/vimtips.html",
         "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs"
       ]
@@ -50,15 +51,14 @@
       "title": "Great bookmarks",
       "resources": [
         "https://vimhelp.org",
-        "https://github.com/nanotee/nvim-lua-guide",
         "https://learnxinyminutes.com/docs/vim",
         "https://devhints.io/vim",
         "https://devhints.io/vimscript",
         "https://devhints.io/lua",
-				"https://github.com/ibhagwan/vim-cheatsheet",
+        "https://github.com/ibhagwan/vim-cheatsheet",
         "https://github.com/amix/vimrc",
         "http://michael.peopleofhonoronly.com/vim",
-				"https://vim-bootstrap.com"
+        "https://vim-bootstrap.com"
       ]
     },
     {
