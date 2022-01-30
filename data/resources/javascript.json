@@ -2,25 +2,25 @@
   "https://www.udemy.com/course/javascript-essentials": {
     "title": "Javascript Essentials",
     "url": "https://www.udemy.com/course/javascript-essentials",
-    "type": ["video"],
+    "type": ["course"],
     "source": "udemy.com"
   },
   "https://www.udemy.com/course/advanced-and-object-oriented-javascript": {
     "title": "Advanced and Object Oriented JavaScript and ES6",
     "url": "https://www.udemy.com/course/advanced-and-object-oriented-javascript",
-    "type": ["video"],
+    "type": ["course"],
     "source": "udemy.com"
   },
   "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu": {
     "title": "Asyncronous javascript",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu",
-    "type": ["video"],
+    "type": ["course"],
     "source": "youtube.com/c/TheNetNinja"
   },
   "https://javascript30.com": {
     "title": "Javascript30",
     "url": "https://javascript30.com",
-    "type": ["challenge"],
+    "type": ["exercise", "tutorial", "collection"],
     "source": "javascript30.com"
   },
   "https://addyosmani.com/resources/essentialjsdesignpatterns/book": {
@@ -29,34 +29,28 @@
     "type": ["book"],
     "source": "addyosmani.com"
   },
-  "https://mbeaudru.github.io/modern-js-cheatsheet": {
-    "title": "Modern JavaScript Cheatsheet",
-    "url": "https://mbeaudru.github.io/modern-js-cheatsheet",
-    "type": ["reading"],
-    "source": "mbeaudru.github.io"
-  },
   "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures": {
     "title": "JavaScript Algorithms and Data Structures",
     "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures",
-    "type": ["reading", "interactive"],
+    "type": ["course", "collection"],
     "source": "freecodecamp.org"
   },
   "https://javascript.info": {
     "title": "The Modern JavaScript Tutorial",
     "url": "https://javascript.info",
-    "type": ["book", "challenge"],
+    "type": ["reference", "book"],
     "source": "javascript.info"
   },
   "https://jskatas.org": {
     "title": "Javascript katas",
     "url": "https://jskatas.org",
-    "type": ["challenge"],
+    "type": ["exercise", "collection"],
     "source": "jskatas.org"
   },
   "http://tcorral.github.io/javascript-challenges-book": {
     "title": "Javascript Challenges",
     "url": "http://tcorral.github.io/javascript-challenges-book",
-    "type": ["challenge"],
+    "type": ["exercise", "collection"],
     "source": "tcorral.github.io"
   },
   "https://github.com/ryanmcdermott/clean-code-javascript": {
@@ -98,7 +92,7 @@
   "https://github.com/sorrycc/awesome-javascript": {
     "title": "Awesome JavaScript",
     "url": "https://github.com/sorrycc/awesome-javascript",
-    "type": ["collection"],
+    "type": ["reference", "collection"],
     "source": "github.com/sorrycc"
   },
   "https://github.com/bradtraversy/vanillawebprojects": {
@@ -110,13 +104,13 @@
   "https://github.com/leonardomso/33-js-concepts": {
     "title": "33 Concepts Every JavaScript Developer Should Know",
     "url": "https://github.com/leonardomso/33-js-concepts",
-    "type": ["collection"],
+    "type": ["reference", "collection"],
     "source": "github.com/leonardomso"
   },
   "https://www.youtube.com/watch?v=r9HdJ8P6GQI": {
     "title": "JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests",
     "url": "https://www.youtube.com/watch?v=r9HdJ8P6GQI",
-    "type": ["video"],
+    "type": ["tutorial"],
     "source": "youtube.com/c/Academind"
   },
   "https://flaviocopes.com/jest": {
@@ -128,7 +122,427 @@
   "https://github.com/goldbergyoni/javascript-testing-best-practices": {
     "title": "Javascript & Node.js Testing Best Practices",
     "url": "https://github.com/goldbergyoni/javascript-testing-best-practices",
-    "type": ["reading"],
+    "type": ["reading", "reference"],
     "source": "github.com/goldbergyoni"
+  },
+  "https://github.com/mbeaudru/modern-js-cheatsheet": {
+    "title": "Modern JavaScript Cheatsheet",
+    "url": "https://github.com/mbeaudru/modern-js-cheatsheet",
+    "type": ["reference", "collection"],
+    "source": "github.com/mbeaudru"
+  },
+  "https://dev.to/lydiahallie/series/3341": {
+    "title": "JavaScript Visualized",
+    "url": "https://dev.to/lydiahallie/series/3341",
+    "type": ["reading", "collection"],
+    "source": "dev.to/lydiahallie"
+  },
+  "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript": {
+    "title": "How To Code in JavaScript",
+    "url": "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript",
+    "type": ["course", "community"],
+    "source": "digitalocean.com/community"
+  },
+  "https://github.com/getify/You-Dont-Know-JS": {
+    "title": "You Don't Know JS Yet (book series) - 2nd Edition",
+    "url": "https://github.com/getify/You-Dont-Know-JS",
+    "type": ["book"],
+    "source": "github.com/getify"
+  },
+  "https://github.com/lydiahallie/javascript-questions": {
+    "title": "JavaScript Questions",
+    "url": "https://github.com/lydiahallie/javascript-questions",
+    "type": ["reference", "exercise", "collection"],
+    "source": "github.com/lydiahallie"
+  },
+  "https://frontendmasters.com/guides/javascript-enlightenment": {
+    "title": "JavaScript (ES2015+) Enlightenment",
+    "url": "https://frontendmasters.com/guides/javascript-enlightenment",
+    "type": ["book", "reference"],
+    "source": "frontendmasters.com"
+  },
+  "https://www.learn-js.org": {
+    "title": "Learn JavaScript - Free Interactive JavaScript Tutorial",
+    "url": "https://www.learn-js.org",
+    "type": ["course"],
+    "source": "learn-js.org"
+  },
+  "https://github.com/micromata/awesome-javascript-learning": {
+    "title": "Awesome JavaScript Learning",
+    "url": "https://github.com/micromata/awesome-javascript-learning",
+    "type": ["reference", "collection"],
+    "source": "github.com/micromata"
+  },
+  "https://github.com/workshopper/javascripting": {
+    "title": "Javascripting",
+    "url": "https://github.com/workshopper/javascripting",
+    "type": ["course"],
+    "source": "github.com/workshopper"
+  },
+  "https://www.udemy.com/course/asynchronous-javascript-bootcamp": {
+    "title": "Asynchronous JavaScript Bootcamp",
+    "url": "https://www.udemy.com/course/asynchronous-javascript-bootcamp",
+    "type": ["course"],
+    "source": "udemy.com"
+  },
+  "https://exploringjs.com/es2016-es2017/index.html": {
+    "title": "Exploring ES2016 and ES2017",
+    "url": "https://exploringjs.com/es2016-es2017/index.html",
+    "type": ["book"],
+    "source": "exploringjs.com"
+  },
+  "https://github.com/artf/grapesjs": {
+    "title": "GrapesJS",
+    "url": "https://github.com/artf/grapesjs",
+    "type": ["example"],
+    "source": "github.com/artf"
+  },
+  "https://www.udacity.com/course/javascript-testing--ud549": {
+    "title": "JavaScript Testing",
+    "url": "https://www.udacity.com/course/javascript-testing--ud549",
+    "type": ["course"],
+    "source": "udacity.com"
+  },
+  "https://testautomationu.applitools.com/jest-testing-tutorial": {
+    "title": "Jest JavaScript Testing Framework",
+    "url": "https://testautomationu.applitools.com/jest-testing-tutorial",
+    "type": ["course"],
+    "source": "testautomationu.applitools.com"
+  },
+  "https://code.tutsplus.com/courses/javascript-fundamentals": {
+    "title": "Modern JavaScript Fundamentals",
+    "url": "https://code.tutsplus.com/courses/javascript-fundamentals",
+    "type": ["course"],
+    "source": "code.tutsplus.com"
+  },
+  "https://www.youtube.com/watch?v=DdqiXcYDv-8": {
+    "title": "Testing JavaScript Applications Workshop (at PayPal)",
+    "url": "https://www.youtube.com/watch?v=DdqiXcYDv-8",
+    "type": ["tutorial"],
+    "source": "youtube.com/c/KentCDodds-vids"
+  },
+  "https://lab.reaal.me/jsrobot": {
+    "title": "JSRobot",
+    "url": "https://lab.reaal.me/jsrobot",
+    "type": ["exercise", "game"],
+    "source": "lab.reaal.me"
+  },
+  "https://warriorjs.com": {
+    "title": "WarriorJS",
+    "url": "https://warriorjs.com",
+    "type": ["exercise", "game", "community"],
+    "source": "warriorjs.com"
+  },
+  "https://michael-karen.medium.com/learning-modern-javascript-with-tetris-92d532bcd057": {
+    "title": "Learning Modern JavaScript with Tetris",
+    "url": "https://medium.com/@michael.karen/learning-modern-javascript-with-tetris-92d532bcd057",
+    "type": ["tutorial"],
+    "source": "medium.com/@michael.karen"
+  },
+  "https://dmitripavlutin.com/javascript-classes-complete-guide": {
+    "title": "The Complete Guide to JavaScript Classes",
+    "url": "https://dmitripavlutin.com/javascript-classes-complete-guide",
+    "type": ["reading"],
+    "source": "dmitripavlutin.com"
+  },
+  "https://wesbos.com/javascript": {
+    "title": "JavaScript Notes & Reference",
+    "url": "https://wesbos.com/javascript",
+    "type": ["course"],
+    "source": "wesbos.com"
+  },
+  "https://www.youtube.com/watch?v=u5cLK1UrFyQ": {
+    "title": "Intro To JavaScript Unit Testing & BDD",
+    "url": "https://www.youtube.com/watch?v=u5cLK1UrFyQ",
+    "type": ["tutorial"],
+    "source": "youtube.com/c/TraversyMedia"
+  },
+  "https://www.w3schools.com/js": {
+    "title": "JavaScript Tutorial",
+    "url": "https://www.w3schools.com/js",
+    "type": ["tutorial", "collection", "reference"],
+    "source": "w3schools.com/js"
+  },
+  "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWWe8zXrViYbIM2Hhylx8DZx": {
+    "title": "Super Mario Bros in JavaScript",
+    "url": "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWWe8zXrViYbIM2Hhylx8DZx",
+    "type": ["tutorial"],
+    "source": "youtube.com/c/MethMethMethod"
+  },
+  "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX": {
+    "title": "Creating a Tetris Online Multiplayer in Javascript",
+    "url": "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX",
+    "type": ["tutorial"],
+    "source": "youtube.com/c/MethMethMethod"
+  },
+  "https://flaviocopes.co/jest": {
+    "title": "Testing JavaScript with Jest",
+    "url": "https://flaviocopes.com/jest",
+    "type": ["reading"],
+    "source": "flaviocopes.com"
+  },
+  "https://mostly-adequate.gitbook.io/mostly-adequate-guide": {
+    "title": "Professor Frisby's Mostly Adequate Guide to Functional Programming",
+    "url": "https://mostly-adequate.gitbook.io/mostly-adequate-guide",
+    "type": ["book"],
+    "source": "mostly-adequate.gitbook.io"
+  },
+  "https://www.javascripttutorials.net/javascript-code-analysis": {
+    "title": "JavaScript Code Analysis",
+    "url": "https://www.javascripttutorials.net/javascript-code-analysis",
+    "type": ["tutorial"],
+    "source": "javascripttutorials.net"
+  },
+  "https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model": {
+    "title": "Understanding the DOM — Document Object Model",
+    "url": "https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-modl",
+    "type": ["tutorial", "collection"],
+    "source": "digitalocean.com/community"
+  },
+  "https://github.com/jiayihu/pretty-algorithms": {
+    "title": "Pretty algorithms",
+    "url": "https://github.com/jiayihu/pretty-algorithms",
+    "type": ["reference", "collection"],
+    "source": "github.com/jiayihu"
+  },
+  "https://molily.de/robust-javascript/": {
+    "title": "Robust Client-Side JavaScript – A Developer’s Guide",
+    "url": "https://molily.de/robust-javascript/",
+    "type": ["book"],
+    "source": "molily.de"
+  },
+  "https://github.com/trekhleb/javascript-algorithms": {
+    "title": "JavaScript Algorithms and Data Structures",
+    "url": "https://github.com/trekhleb/javascript-algorithms",
+    "type": ["reference", "collection"],
+    "source": "github.com/trekhleb"
+  },
+  "https://www.youtube.com/playlist?list=PLKoqnv2vTMUPOalM1zuWDP9OQl851WMM9": {
+    "title": "JavaScript SEO",
+    "url": "https://www.youtube.com/playlist?list=PLKoqnv2vTMUPOalM1zuWDP9OQl851WMM9",
+    "type": ["tutorial", "collection"],
+    "source": "youtube.com/c/GoogleSearchCentral"
+  },
+  "https://css-tricks.com/an-introduction-to-web-components": {
+    "title": "An Introduction to Web Components",
+    "url": "https://css-tricks.com/an-introduction-to-web-components",
+    "type": ["reading"],
+    "source": "css-tricks.com"
+  },
+  "https://staltz.com/javascript-getter-setter-pyramid.html": {
+    "title": "JavaScript Getter-Setter Pyramid",
+    "url": "https://staltz.com/javascript-getter-setter-pyramid.html",
+    "type": ["reading"],
+    "source": "staltz.com"
+  },
+  "https://exploringjs.com/deep-js": {
+    "title": "Deep JavaScript: Theory and techniques",
+    "url": "https://exploringjs.com/deep-js",
+    "type": ["book"],
+    "source": "exploringjs.com"
+  },
+  "https://tympanus.net/codrops/2021/06/01/trigonometry-in-css-and-javascript-introduction-to-trigonometry": {
+    "title": "Trigonometry in CSS and JavaScript",
+    "url": "https://tympanus.net/codrops/2021/06/01/trigonometry-in-css-and-javascript-introduction-to-trigonometry",
+    "type": ["reading", "collection"],
+    "source": "tympanus.net"
+  },
+  "https://vonheikemen.github.io/devlog/web-development/learn-fp/roadmap": {
+    "title": "Learning functional programming: A roadmap",
+    "url": "https://vonheikemen.github.io/devlog/web-development/learn-fp/roadmap",
+    "type": ["reading", "reference"],
+    "source": "vonheikemen.github.io"
+  },
+  "https://www.patterns.dev": {
+    "title": "Modern Web App Design Patterns",
+    "url": "https://www.patterns.dev",
+    "type": ["reference", "collection"],
+    "source": "patterns.dev"
+  },
+  "https://www.khanacademy.org/computing/computer-programming/programming": {
+    "title": "Intro to JS: Drawing & Animation",
+    "url": "https://www.khanacademy.org/computing/computer-programming/programming",
+    "type": ["course"],
+    "source": "khanacademy.org"
+  },
+  "https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations": {
+    "title": "Advanced JS: Games & Visualizations",
+    "url": "https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations",
+    "type": ["course"],
+    "source": "khanacademy.org"
+  },
+  "https://www.khanacademy.org/computing/computer-programming/programming-natural-simulations": {
+    "title": "Advanced JS: Natural Simulations",
+    "url": "https://www.khanacademy.org/computing/computer-programming/programming-natural-simulations",
+    "type": ["course"],
+    "source": "khanacademy.org"
+  },
+  "https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript": {
+    "title": "Professor Frisby Introduces Composable Functional JavaScript",
+    "url": "https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript",
+    "type": ["course"],
+    "source": "egghead.io"
+  },
+  "https://github.com/denysdovhan/wtfjs": {
+    "title": "What the f*ck JavaScript?",
+    "url": "https://github.com/denysdovhan/wtfjs",
+    "type": ["reading"],
+    "source": "github.com/denysdovhan"
+  },
+  "https://js13kgames.com": {
+    "title": "js13kGames - HTML5 and JavaScript Game Development Competition in just 13 kilobytes",
+    "url": "https://js13kgames.com",
+    "type": ["community"],
+    "source": "js13kgames.com"
+  },
+  "https://github.com/you-dont-need/You-Dont-Need": {
+    "title": "You Don't Need",
+    "url": "https://github.com/you-dont-need/You-Dont-Need",
+    "type": ["reference", "collection"],
+    "source": "github.com/you-dont-need"
+  },
+  "https://turriate.com/articles/modern-javascript-everything-you-missed-over-10-years": {
+    "title": "Modern Javascript: Everything you missed over the last 10 years",
+    "url": "https://turriate.com/articles/modern-javascript-everything-you-missed-over-10-years",
+    "type": ["reading"],
+    "source": "turriate.com"
+  },
+  "https://christianheilmann.com/2021/11/01/developer-tools-secrets-that-shouldnt-be-secrets/": {
+    "title": "Developer Tools secrets that shouldn’t be secrets",
+    "url": "https://christianheilmann.com/2021/11/01/developer-tools-secrets-that-shouldnt-be-secrets/",
+    "type": ["tutorial"],
+    "source": "christianheilmann.com"
+  },
+  "http://callbackhell.com": {
+    "title": "Callback Hell",
+    "url": "http://callbackhell.com",
+    "type": ["reading"],
+    "source": "callbackhell.com"
+  },
+  "https://almanac.httparchive.org": {
+    "title": "Web Almanac",
+    "url": "https://almanac.httparchive.org",
+    "type": ["reference"],
+    "source": "almanac.httparchive.org"
+  },
+  "https://www.khanacademy.org/computing/computer-programming/html-js-jquery": {
+    "title": "HTML/JS: Making webpages interactive with jQuery",
+    "url": "https://www.khanacademy.org/computing/computer-programming/html-js-jquery",
+    "type": ["course"],
+    "source": "khanacademy.org"
+  },
+  "https://www.30secondsofcode.org/js/p/1": {
+    "title": "JavaScript Snippets",
+    "url": "https://www.30secondsofcode.org/js/p/1",
+    "type": ["reference"],
+    "source": "30secondsofcode.org"
+  },
+  "http://jargon.js.org": {
+    "title": "Simplified JavaScript Jargon",
+    "url": "http://jargon.js.org",
+    "type": ["reference"],
+    "source": "jargon.js.org"
+  },
+  "https://github.com/jest-community/awesome-jest": {
+    "title": "Awesome Jest",
+    "url": "https://github.com/jest-community/awesome-jest",
+    "type": ["reference", "collection"],
+    "source": "github.com/jest-community"
+  },
+  "https://github.com/sapegin/jest-cheat-sheet": {
+    "title": "Jest cheat sheet",
+    "url": "https://github.com/sapegin/jest-cheat-sheet",
+    "type": ["reference"],
+    "source": "github.com/sapegin"
+  },
+  "https://www.smashingmagazine.com/2021/04/vanilla-javascript-code-snippets/": {
+    "title": "Vanilla JavaScript Code Snippets",
+    "url": "https://www.smashingmagazine.com/2021/04/vanilla-javascript-code-snippets/",
+    "type": ["reference", "collection"],
+    "source": "smashingmagazine.com"
+  },
+  "https://joshwcomeau.com/operator-lookup": {
+    "title": "Operator Lookup",
+    "url": "https://joshwcomeau.com/operator-lookup",
+    "type": ["reference"],
+    "source": "joshwcomeau.com"
+  },
+  "https://testing-playground.com": {
+    "title": "️Testing Playground",
+    "url": "https://testing-playground.com",
+    "type": ["reference", "generator"],
+    "source": "testing-playground.com"
+  },
+  "https://vanillalist.top": {
+    "title": "The Vanilla JavaScript Repository",
+    "url": "https://vanillalist.top",
+    "type": ["collection"],
+    "source": "vanillalist.top"
+  },
+  "https://htmldom.dev": {
+    "title": "Manage HTML DOM with vanilla JavaScript",
+    "url": "https://htmldom.dev",
+    "type": ["reference"],
+    "source": "htmldom.dev"
+  },
+  "https://devhints.io/es6": {
+    "title": "ES2015+ cheatsheet",
+    "url": "https://devhints.io/es6",
+    "type": ["reference"],
+    "source": "devhints.io"
+  },
+  "https://javascriptweekly.com": {
+    "title": "JavaScript Weekly",
+    "url": "https://javascriptweekly.com",
+    "type": ["community"],
+    "source": "javascriptweekly.com"
+  },
+  "https://javascriptjabber.com": {
+    "title": "JavaScript Jabber",
+    "url": "https://javascriptjabber.com",
+    "type": ["blog", "community"],
+    "source": "javascriptjabber.com"
+  },
+  "https://www.sitepoint.com": {
+    "title": "SitePoint",
+    "url": "https://www.sitepoint.com",
+    "type": ["blog", "reference"],
+    "source": "sitepoint.com"
+  },
+  "https://www.taniarascia.com": {
+    "title": "Tania Rascia",
+    "url": "https://www.taniarascia.com",
+    "type": ["blog"],
+    "source": "taniarascia.com"
+  },
+  "https://trekhleb.dev/blog": {
+    "title": "Trekhleb _ Blog",
+    "url": "https://trekhleb.dev/blog",
+    "type": ["blog"],
+    "source": "trekhleb.dev"
+  },
+  "https://humanwhocodes.com": {
+    "title": "Human Who Codes",
+    "url": "https://humanwhocodes.com",
+    "type": ["blog"],
+    "source": "humanwhocodes.com"
+  },
+  "https://davidwalsh.name": {
+    "title": "David Walsh Blog",
+    "url": "https://davidwalsh.name",
+    "type": ["blog"],
+    "source": "davidwalsh.name"
+  },
+  "https://christianheilmann.com": {
+    "title": "Christian Heilmann",
+    "url": "https://christianheilmann.com",
+    "type": ["blog"],
+    "source": "christianheilmann.com"
+  },
+  "https://flaviocopes.com": {
+    "title": "Flavio Copes",
+    "url": "https://flaviocopes.com",
+    "type": ["blog"],
+    "source": "flaviocopes.com"
   }
 }

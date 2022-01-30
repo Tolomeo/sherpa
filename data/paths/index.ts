@@ -53,28 +53,37 @@ const paths = <SerializedPaths>{
 export const deserializePath = (path: SerializedPath): Path => ({
   ...path,
   // populating resources data
-  resources: path.resources
-    .map((resourceId) => resources[resourceId])
-    .filter(Boolean),
+  resources: path.resources.map((resourceId) => {
+    if (!resources[resourceId])
+      throw new Error(
+        `deserializePathError: resource "${resourceId}" not found`,
+      )
+
+    return resources[resourceId]
+  }),
   // populating extra resources, those are optional
-  extras: (path.extras || [])
-    .map((extra) => ({
-      ...extra,
-      resources: extra.resources
-        .map((extraResourceId) => resources[extraResourceId])
-        // sorting alphabetically by resource title
-        .sort((resourceA, resourceB) => {
-          const titleA = resourceA.title.toUpperCase()
-          const titleB = resourceB.title.toUpperCase()
+  extras: (path.extras || []).map((extra) => ({
+    ...extra,
+    resources: extra.resources
+      .map((extraResourceId) => {
+        if (!resources[extraResourceId])
+          throw new Error(
+            `deserializePathError: extra resource "${extraResourceId}" not found`,
+          )
 
-          if (titleA > titleB) return 1
-          else if (titleB > titleA) return -1
+        return resources[extraResourceId]
+      })
+      // sorting alphabetically by resource title
+      .sort((resourceA, resourceB) => {
+        const titleA = resourceA.title.toUpperCase()
+        const titleB = resourceB.title.toUpperCase()
 
-          return 0
-        })
-        .filter(Boolean),
-    }))
-    .filter(Boolean),
+        if (titleA > titleB) return 1
+        else if (titleA < titleB) return -1
+
+        return 0
+      }),
+  })),
   // populating next paths, those are optional
   next: (path.next || []).reduce((nextPaths, nextPathId) => {
     if (paths[nextPathId]) nextPaths[nextPathId] = paths[nextPathId]
