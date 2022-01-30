@@ -2,12 +2,12 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { ParsedUrlQuery } from 'querystring'
 import {
+  Path,
   paths,
-  deserializePath,
-  SerializedPaths,
   hasPrevPaths,
   hasNextPaths,
   hasExtras,
+  deserializePath,
 } from '../../data'
 import {
   Header,
@@ -29,7 +29,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 interface StaticProps {
-  path: SerializedPaths
+  path: Path
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

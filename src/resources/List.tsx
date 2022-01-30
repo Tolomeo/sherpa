@@ -1,10 +1,9 @@
 import React from 'react'
-import { PopulatedAside } from '../../data'
+import { Resource } from '../../data'
 import { Link, Typography, List, Box } from '../theme'
-import styles from './Resources.module.scss'
 
 type Props = {
-  resources: PopulatedAside['resources']
+  resources: Array<Resource>
 }
 
 const ResourcesList = ({ resources }: Props) => {
