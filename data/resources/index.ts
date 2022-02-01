@@ -11,7 +11,7 @@ import neovim from './neovim.json'
 export type ResourceType =
   | 'course'
   | 'tutorial'
-  | 'reading'
+  | 'guide'
   | 'game'
   | 'book'
   | 'example'
@@ -21,6 +21,13 @@ export type ResourceType =
   | 'exercise'
   | 'blog'
 
+export interface SerializedResource {
+  title: string
+  url: string
+  type: ResourceType[]
+  source?: string
+}
+
 export interface Resource {
   title: string
   url: string
@@ -29,7 +36,7 @@ export interface Resource {
 }
 
 export type Resources = {
-  [resourceId: string]: Resource
+  [resourceId: string]: SerializedResource
 }
 
 const resources = <Resources>{
@@ -43,5 +50,15 @@ const resources = <Resources>{
   ...git,
   ...neovim,
 }
+
+export const deserializeResource = (
+  resource: SerializedResource,
+): Resource => ({
+  ...resource,
+  source:
+    resource.source ||
+    console.log(resource.url) ||
+    new URL(resource.url).hostname.replace(/^www./, ''),
+})
 
 export default resources

@@ -1,4 +1,8 @@
-import resources, { Resource } from '../resources'
+import resources, {
+  Resource,
+  SerializedResource,
+  deserializeResource,
+} from '../resources'
 import htmlcss from './html&css.json'
 import webaccessibility from './webaccessibility.json'
 import javascript from './javascript.json'
@@ -54,24 +58,28 @@ export const deserializePath = (path: SerializedPath): Path => ({
   ...path,
   // populating resources data
   resources: path.resources.map((resourceId) => {
-    if (!resources[resourceId])
+    const resource = resources[resourceId]
+
+    if (!resource)
       throw new Error(
         `deserializePathError: resource "${resourceId}" not found`,
       )
 
-    return resources[resourceId]
+    return deserializeResource(resource)
   }),
   // populating extra resources, those are optional
   extras: (path.extras || []).map((extra) => ({
     ...extra,
     resources: extra.resources
       .map((extraResourceId) => {
-        if (!resources[extraResourceId])
+        const extraResource = resources[extraResourceId]
+
+        if (!extraResource)
           throw new Error(
             `deserializePathError: extra resource "${extraResourceId}" not found`,
           )
 
-        return resources[extraResourceId]
+        return deserializeResource(extraResource)
       })
       // sorting alphabetically by resource title
       .sort((resourceA, resourceB) => {
