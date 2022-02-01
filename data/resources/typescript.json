@@ -2,56 +2,50 @@
   "https://www.youtube.com/watch?v=BwuLxPH8IDs": {
     "title": "TypeScript Course for Beginners 2021",
     "url": "https://www.youtube.com/watch?v=BwuLxPH8IDs",
-    "type": ["video"],
+    "type": ["course"],
     "source": "youtube.com/c/Academind"
   },
   "https://basarat.gitbook.io/typescript": {
     "title": "TypeScript Deep Dive",
     "url": "https://basarat.gitbook.io/typescript",
-    "type": ["book"],
-    "source": "basarat.gitbook.io"
+    "type": ["book"]
   },
   "https://rmolinamir.github.io/typescript-cheatsheet": {
     "title": "typescript-cheatsheet",
     "url": "https://rmolinamir.github.io/typescript-cheatsheet",
-    "type": ["reading"],
-    "source": "rmolinamir.github.io"
+    "type": ["guide", "reference"]
   },
   "https://www.typescriptlang.org/docs": {
     "title": "TypeScript Documentation",
     "url": "https://www.typescriptlang.org/docs",
-    "type": ["reading"],
-    "source": "typescriptlang.org"
+    "type": ["reference"]
   },
   "https://github.com/type-challenges/type-challenges": {
     "title": "Type<Challenge[]>",
     "url": "https://github.com/type-challenges/type-challenges",
-    "type": ["challenge"],
+    "type": ["exercise", "collection"],
     "source": "github.com/type-challenges"
   },
   "https://labs42io.github.io/clean-code-typescript": {
     "title": "clean-code-typescript",
     "url": "https://labs42io.github.io/clean-code-typescript",
-    "type": ["reading"],
-    "source": "labs42io.github.io"
+    "type": ["guide", "reference"]
   },
   "http://torokmark.github.io/design_patterns_in_typescript": {
     "title": "Design patterns in typescript",
     "url": "http://torokmark.github.io/design_patterns_in_typescript",
-    "type": ["reading", "example"],
-    "source": "torokmark.github.io"
+    "type": ["example", "collection"]
   },
   "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab": {
     "title": "Learn Advanced TypeScript Types",
     "url": "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab",
-    "type": ["reading"],
+    "type": ["guide"],
     "source": "medium.com/free-code-camp"
   },
   "https://learntypescript.dev": {
     "title": "Learn TypeScript",
     "url": "https://learntypescript.dev",
-    "type": ["reading", "interactive"],
-    "source": "learntypescript.dev"
+    "type": ["course"]
   },
   "https://github.com/zws-im/zws": {
     "title": "Zero Width Shortener (ZWS)",
@@ -62,13 +56,12 @@
   "https://mariusschulz.com/blog/series/typescript-evolution": {
     "title": "TypeScript Evolution",
     "url": "https://mariusschulz.com/blog/series/typescript-evolution",
-    "type": ["reading", "collection"],
-    "source": "mariusschulz.com"
+    "type": ["reading", "series"]
   },
   "https://github.com/dzharii/awesome-typescript": {
     "title": "Awesome TypeScript",
     "url": "https://github.com/dzharii/awesome-typescript",
-    "type": ["collection"],
+    "type": ["reference", "collection"],
     "source": "github.com/dzharii"
   }
 }
