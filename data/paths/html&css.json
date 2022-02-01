@@ -44,34 +44,6 @@
       ]
     },
     {
-      "title": "Great bookmarks",
-      "resources": [
-        "https://htmlreference.io",
-        "https://cssreference.io",
-        "https://csslayout.io",
-        "https://9elements.com/seo-cheat-sheet/",
-        "https://learn-the-web.algonquindesign.ca/topics/cheat-sheets-checklists",
-        "https://gridbyexample.com",
-        "https://sparkbox.com/foundry/bem_by_example",
-        "https://html.spec.whatwg.org",
-        "http://html.systems",
-        "cssvalues.com",
-        "https://devhints.io/resolutions",
-        "https://madebymike.github.io/html5-periodic-table",
-        "https://caniuse.com",
-        "https://caninclude.glitch.me",
-        "https://www.caniemail.com",
-        "animatedbackgrounds.me",
-        "https://modern-fluid-typography.vercel.app",
-        "https://cssgradient.io",
-        "https://codepen.io/anthonydugois/full/RpYBmy",
-        "https://mailtolink.me",
-        "https://responsivebreakpoints.com",
-        "https://polypane.app/css-specificity-calculator",
-        "https://metatags.io"
-      ]
-    },
-    {
       "title": "Beyond basics",
       "resources": [
         "https://egghead.io/courses/css-tips-and-tricks-930b",
@@ -104,10 +76,39 @@
       ]
     },
     {
+      "title": "Great bookmarks",
+      "resources": [
+				"http://1linelayouts.glitch.me",
+        "https://htmlreference.io",
+        "https://cssreference.io",
+        "https://csslayout.io",
+        "https://9elements.com/seo-cheat-sheet/",
+        "https://learn-the-web.algonquindesign.ca/topics/cheat-sheets-checklists",
+        "https://gridbyexample.com",
+        "https://sparkbox.com/foundry/bem_by_example",
+        "https://html.spec.whatwg.org",
+        "http://html.systems",
+        "https://cssvalues.com",
+        "https://devhints.io/resolutions",
+        "https://madebymike.github.io/html5-periodic-table",
+        "https://caniuse.com",
+        "https://caninclude.glitch.me",
+        "https://www.caniemail.com",
+        "https://animatedbackgrounds.me",
+        "https://modern-fluid-typography.vercel.app",
+        "https://cssgradient.io",
+        "https://codepen.io/anthonydugois/full/RpYBmy",
+        "https://mailtolink.me",
+        "https://responsivebreakpoints.com",
+        "https://polypane.app/css-specificity-calculator",
+        "https://metatags.io"
+      ]
+    },
+    {
       "title": "Stay in the loop",
       "resources": [
         "https://css-tricks.com",
-        "tympanus.net",
+        "https://tympanus.net/codrops",
         "https://www.smashingmagazine.com",
         "https://ishadeed.com",
         "https://www.joshwcomeau.com",
