@@ -2,56 +2,44 @@
   "https://egghead.io/courses/the-beginner-s-guide-to-react": {
     "title": "The Beginner's Guide to React",
     "url": "https://egghead.io/courses/the-beginner-s-guide-to-react",
-    "type": ["video"],
-    "source": "egghead.io"
+    "type": ["course"]
   },
   "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-react-js": {
     "title": "How To Code in React.js",
     "url": "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-react-js",
-    "type": ["reading", "collection"],
+    "type": ["guide", "collection"],
     "source": "digitalocean.com/community"
-  },
-  "https://reactbyexample.github.io": {
-    "title": "React by Example",
-    "url": "https://reactbyexample.github.io",
-    "type": ["example", "interactive"],
-    "source": "reactbyexample.github.io"
   },
   "https://reactpatterns.com": {
     "title": "React Patterns",
     "url": "https://reactpatterns.com",
-    "type": ["reading"],
+    "type": ["guide", "reference", "collection"],
     "source": "reactpatterns.com"
   },
   "https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867": {
     "title": "Fundamentals of Redux Course from Dan Abramov",
     "url": "https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867",
-    "type": ["video"],
-    "source": "egghead.io"
+    "type": ["course"]
   },
   "https://egghead.io/courses/building-react-applications-with-idiomatic-redux": {
     "title": "Building React Applications with Idiomatic Redux",
     "url": "https://egghead.io/courses/building-react-applications-with-idiomatic-redux",
-    "type": ["video"],
-    "source": "egghead.io"
+    "type": ["course"]
   },
   "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37": {
     "title": "Apply Redux to a Modern React Hooks Application",
     "url": "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37",
-    "type": ["video"],
-    "source": "egghead.io"
+    "type": ["course"]
   },
   "https://egghead.io/courses/component-driven-development-in-react-e0bf": {
     "title": "Component-driven development in React",
     "url": "https://egghead.io/courses/component-driven-development-in-react-e0bf",
-    "type": ["video"],
-    "source": "egghead.io"
+    "type": ["course"]
   },
   "https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc": {
     "title": "Build Advanced Components with React Hooks",
     "url": "https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc",
-    "type": ["video"],
-    "source": "egghead.io"
+    "type": ["course"]
   },
   "https://github.com/arturmolenda/project-manager": {
     "title": "Project-Manager",
@@ -62,20 +50,18 @@
   "https://learntdd.in/react": {
     "title": "Learn TDD in React",
     "url": "https://learntdd.in/react",
-    "type": ["reading"],
-    "source": "learntdd.in/react"
+    "type": ["guide"]
   },
   "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ": {
     "title": "React Testing Library Tutorial",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ",
-    "type": ["video"],
+    "type": ["course"],
     "source": "youtube.com/c/TheNetNinja"
   },
   "https://egghead.io/courses/develop-accessible-web-apps-with-react": {
     "title": "Develop Accessible Web Apps with React",
     "url": "https://egghead.io/courses/develop-accessible-web-apps-with-react",
-    "type": ["video"],
-    "source": "egghead.io"
+    "type": ["tutorial", "collection"]
   },
   "https://github.com/enaqx/awesome-react": {
     "title": "Awesome React",
@@ -102,40 +88,10 @@
     "source": "reactjs.org/community"
   },
 
-  "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml": {
-    "title": "React Typescript Course",
-    "url": "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml",
-    "type": ["video"],
-    "source": "youtube.com/c/TechbaseDev"
-  },
-  "https://react-typescript-cheatsheet.netlify.app": {
-    "title": "React TypeScript Cheatsheets",
-    "url": "https://react-typescript-cheatsheet.netlify.app",
-    "type": ["reading"],
-    "source": "react-typescript-cheatsheet.netlify.app"
-  },
-  "https://github.com/piotrwitek/react-redux-typescript-guide": {
-    "title": "React & Redux in TypeScript - Complete Guide",
-    "url": "https://github.com/piotrwitek/react-redux-typescript-guide",
-    "type": ["reading"],
-    "source": "github.com/piotrwitek"
-  },
-  "https://github.com/mat-sz/2048": {
-    "title": "2048",
-    "url": "https://github.com/mat-sz/2048",
-    "type": ["example"],
-    "source": "github.com/mat-sz"
-  },
   "https://github.com/hairarrow/btship": {
     "title": "Battleship Game",
     "url": "https://github.com/hairarrow/btship",
     "type": ["example"],
     "source": "github.com/hairarrow"
-  },
-  "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app": {
-    "title": "React (using hooks) + Redux RealWorld example app",
-    "url": "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app",
-    "type": ["example"],
-    "source": "github.com/angelguzmaning"
   }
 }

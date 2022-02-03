@@ -3,12 +3,12 @@ import resources, {
   SerializedResource,
   deserializeResource,
 } from '../resources'
-import htmlcss from './html&css.json'
+import htmlcss from './htmlcss.json'
 import webaccessibility from './webaccessibility.json'
 import javascript from './javascript.json'
 import typescript from './typescript.json'
 import react from './react.json'
-import reacttypescript from './react&typescript.json'
+import reacttypescript from './reacttypescript.json'
 import next from './next.json'
 import node from './node.json'
 import git from './git.json'

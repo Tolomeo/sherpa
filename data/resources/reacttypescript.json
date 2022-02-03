@@ -1,0 +1,37 @@
+{
+  "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app": {
+    "title": "React (using hooks) + Redux RealWorld example app",
+    "url": "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app",
+    "type": ["example"],
+    "source": "github.com/angelguzmaning"
+  },
+
+  "https://github.com/piotrwitek/react-redux-typescript-guide": {
+    "title": "React & Redux in TypeScript - Complete Guide",
+    "url": "https://github.com/piotrwitek/react-redux-typescript-guide",
+    "type": ["guide"],
+    "source": "github.com/piotrwitek"
+  },
+  "https://github.com/mat-sz/2048": {
+    "title": "2048",
+    "url": "https://github.com/mat-sz/2048",
+    "type": ["example"],
+    "source": "github.com/mat-sz"
+  },
+  "https://react-typescript-cheatsheet.netlify.app": {
+    "title": "React TypeScript Cheatsheets",
+    "url": "https://react-typescript-cheatsheet.netlify.app",
+    "type": ["guide"]
+  },
+  "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml": {
+    "title": "React Typescript Course",
+    "url": "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml",
+    "type": ["course"],
+    "source": "youtube.com/c/TechbaseDev"
+  },
+  "https://reactbyexample.github.io": {
+    "title": "React by Example",
+    "url": "https://reactbyexample.github.io",
+    "type": ["example", "interactive"]
+  }
+}
