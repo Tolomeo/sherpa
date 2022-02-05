@@ -1,8 +1,4 @@
-import resources, {
-  Resource,
-  SerializedResource,
-  deserializeResource,
-} from '../resources'
+import resources, { Resource, deserializeResource } from '../resources'
 import htmlcss from './htmlcss.json'
 import webaccessibility from './webaccessibility.json'
 import javascript from './javascript.json'

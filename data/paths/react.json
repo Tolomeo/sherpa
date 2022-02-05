@@ -4,18 +4,109 @@
   "resources": [
     "https://egghead.io/courses/the-beginner-s-guide-to-react",
     "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-react-js",
-    "https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc",
-    "https://egghead.io/courses/component-driven-development-in-react-e0bf",
     "https://reactjs.org/community/examples.html",
-    "https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867",
-    "https://egghead.io/courses/building-react-applications-with-idiomatic-redux",
-    "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37",
-    "https://github.com/khaledosman/react-redux-realworld-example-app",
-    "https://learntdd.in/react",
+    "https://epic-react-exercises.vercel.app",
+    "https://www.youtube.com/playlist?list=PLYSZyzpwBEWTBdbfStjqJSGaulqcHoNkT",
     "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ",
     "https://egghead.io/courses/develop-accessible-web-apps-with-react",
     "https://github.com/enaqx/awesome-react",
     "https://github.com/xgrommx/awesome-redux"
+  ],
+  "extras": [
+    {
+      "title": "Alternatives",
+      "resources": [
+        "https://scrimba.com/learn/learnreact",
+        "https://learntdd.in/react",
+        "https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795",
+        "https://www.coursera.org/learn/front-end-react",
+        "https://www.udemy.com/course/react-tutorial",
+        "https://www.udemy.com/course/modern-react",
+        "https://www.udemy.com/course/react-hooks-with-react-redux-migration",
+        "https://egghead.io/courses/build-advanced-component-with-react-hooks-cd6a",
+        "https://egghead.io/courses/design-systems-with-react-and-typescript-in-storybook",
+        "https://github.com/djohal/imdb-replica-react",
+        "https://github.com/oguz3/spotify-web-player",
+        "https://wanago.io/courses/javascript-testing-tutorial",
+        "https://softchris.github.io/books/react",
+        "https://reactbyexample.github.io",
+        "https://reactpatterns.com",
+        "http://www.react.express",
+        "https://github.com/tyroprogrammer/learn-react-app",
+        "https://www.taniarascia.com/redux-react-guide",
+        "https://daveceddia.com/react-practice-projects",
+        "https://epic-react-exercises.vercel.app",
+        "https://wattenberger.com/blog/react-hooks",
+        "https://github.com/Asabeneh/30-Days-Of-React",
+        "https://www.youtube.com/playlist?list=PLYSZyzpwBEWTBdbfStjqJSGaulqcHoNkT",
+        "https://ui.dev/react-router-tutorial",
+        "https://www.youtube.com/watch?v=GLSSRtnNY0g",
+        "http://www.hackingwithreact.com",
+        "https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc",
+        "https://egghead.io/courses/component-driven-development-in-react-e0bf",
+        "https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867",
+        "https://egghead.io/courses/building-react-applications-with-idiomatic-redux",
+        "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37",
+        "https://github.com/khaledosman/react-redux-realworld-example-app",
+        "https://www.freecodecamp.org/news/8-reactjs-project-ideas-to-start-learning-by-doing"
+      ]
+    },
+    {
+      "title": "Beyond basics",
+      "resources": [
+        "https://www.youtube.com/watch?v=CGpMlWVcHok",
+        "https://obedparla.com/code/a-visual-guide-to-react-mental-models",
+        "https://overreacted.io/react-as-a-ui-runtime",
+        "https://itnext.io/creating-our-own-react-from-scratch-82dd6356676d",
+        "https://github.com/alan2207/bulletproof-react",
+        "https://github.com/arturmolenda/project-manager",
+        "https://pomb.us/build-your-own-react",
+        "https://overreacted.io/a-complete-guide-to-useeffect",
+        "https://egghead.io/courses/modernizing-a-legacy-redux-application-with-react-hooks-c528",
+        "https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior",
+        "https://storybook.js.org/tutorials",
+        "https://snipcart.com/blog/spa-seo",
+        "https://ui.dev/build-your-own-react-router",
+				"https://dev.to/ycmjason/building-a-simple-virtual-dom-from-scratch-3d05"
+      ]
+    },
+    {
+      "title": "Nice to know about",
+      "resources": [
+        "https://github.com/sudheerj/reactjs-interview-questions",
+        "https://ui.dev/why-react-hooks",
+        "https://johnpolacek.github.io/css-in-js-or-css-and-js",
+        "https://www.smashingmagazine.com/2022/01/web-frameworks-guide-part1",
+        "https://sebastiandedeyne.com/react-for-vue-developers",
+        "https://www.youtube.com/watch?v=Wm_xI7KntDs"
+      ]
+    },
+    {
+      "title": "Great bookmarks",
+      "resources": [
+        "https://devhints.io/react",
+        "https://react-svgr.com/playground",
+        "https://reactjs.org/docs/getting-started.html",
+        "https://nikgraf.github.io/react-hooks",
+        "https://react-hooks-cheatsheet.com",
+        "https://react-layouts.com",
+        "https://antonioru.github.io/beautiful-react-hooks",
+        "https://alexsidorenko.com/blog/react-render-cheat-sheet",
+        "https://www.patterns.dev",
+        "https://reactjs.org/community/support.html",
+				"https://github.com/brillout/awesome-react-components"
+      ]
+    },
+    {
+      "title": "Stay in the loop",
+      "resources": [
+        "https://reactjs.org/blog",
+        "https://ui.dev/blog/",
+        "https://overreacted.io",
+				"https://flaviocopes.com",
+        "https://reactdigest.net"
+      ]
+    }
   ],
   "next": ["reacttypescript", "next"]
 }
