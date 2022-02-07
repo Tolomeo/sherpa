@@ -89,7 +89,7 @@ export default function PathPage({ path }: Props) {
         <Box pb={4}>
           <Container>
             <Grid container>
-              <Grid item xs={12} md={8} xl={6}>
+              <Grid item xs={12} md={8}>
                 <Typography variant="h1">
                   The <br /> <u>{path.title}</u> <br /> learning path
                 </Typography>
