@@ -366,5 +366,10 @@
     "title": "Toptal Engineering Blog",
     "url": "https://www.toptal.com/developers/blog",
     "type": ["blog"]
+  },
+  "https://wanago.io": {
+    "title": "Marcin Wanago Blog",
+    "url": "https://wanago.io",
+    "type": ["blog"]
   }
 }
