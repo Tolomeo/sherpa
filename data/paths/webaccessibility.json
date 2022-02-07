@@ -6,10 +6,96 @@
     "https://learn-the-web.algonquindesign.ca/topics/content-accessibility",
     "https://learn-the-web.algonquindesign.ca/topics/accessibility-for-design",
     "https://www.edx.org/course/web-accessibility-introduction",
-    "https://www.accessguide.io",
+    "https://www.a11yproject.com/posts",
     "https://www.smashingmagazine.com/2021/06/complete-guide-accessibility-tooling",
     "https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components",
     "https://github.com/brunopulis/awesome-a11y"
+  ],
+  "extras": [
+    {
+      "title": "There's more",
+      "resources": [
+        "https://www.udacity.com/course/web-accessibility--ud891",
+        "https://www.accessguide.io",
+        "https://webaim.org/articles",
+        "https://vimeo.com/362155651",
+        "https://web.dev/accessible",
+        "https://blog.sapegin.me/all/accessibility-testing",
+        "https://www.adrianbolonio.com/en/testing-web-accessibility-part-1",
+        "https://www.smashingmagazine.com/2019/02/accessibility-webinar",
+        "https://inclusive-components.design",
+        "https://webdesign.tutsplus.com/series/web-accessibility-the-complete-learning-guide--cms-1301",
+        "https://www.telerik.com/blogs/web-accessibility-guidebook-for-developers",
+        "https://www.pauljadam.com/guides.html",
+        "https://www.w3.org/WAI/roles/developers",
+        "https://www.w3.org/WAI/roles/designers",
+        "https://www.w3.org/WAI/roles/writers",
+        "https://www.w3.org/WAI/roles/testers",
+        "https://www.w3.org/WAI/roles/managers"
+      ]
+    },
+    {
+      "title": "Beyond basics",
+      "resources": [
+        "https://alistapart.com/article/semantics-to-screen-readers",
+        "https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing",
+        "https://www.smashingmagazine.com/2020/08/accessibility-chrome-devtools",
+        "https://www.smashingmagazine.com/2021/06/css-javascript-requirements-accessible-components",
+        "https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939",
+        "https://medium.com/@matuzo/writing-javascript-with-accessibility-in-mind-a1f6a5f467b9",
+        "https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412"
+      ]
+    },
+    {
+      "title": "Nice to know",
+      "resources": [
+        "https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score",
+        "https://alt-text-as-poetry.net",
+        "http://gameaccessibilityguidelines.com",
+        "https://www.smashingmagazine.com/2021/03/good-better-best-untangling-complex-world-accessible-patterns",
+        "https://overlayfactsheet.com",
+        "https://www.w3.org/WAI/business-case",
+        "https://accessibility-for-teams.com",
+        "https://a11ymyths.com",
+        "https://dequeuniversity.com/resources/disability-statistics",
+        "https://www.tooltester.com/en/blog/accessible-websites"
+      ]
+    },
+    {
+      "title": "Great bookmarks",
+      "resources": [
+        "https://www.w3.org/WAI/ER/tools",
+        "https://russmaxdesign.github.io/accessible-forms",
+        "https://www.w3.org/TR/wai-aria-practices-1.1",
+        "https://www.a11yproject.com/checklist",
+        "https://web.dev/lighthouse-accessibility",
+				"https://whocanuse.com",
+        "https://uxdesign.cc/accessibility-tools-for-designers-and-developers-ea400a415c0a",
+        "https://github.com/collections/web-accessibility",
+        "https://github.com/fejes713/accessibility-guide",
+        "https://www.pauljadam.com/resources.html",
+        "https://russmaxdesign.github.io/accessible-forms",
+        "https://dequeuniversity.com/screenreaders",
+        "https://a11y-style-guide.com/style-guide",
+        "https://learn-the-web.algonquindesign.ca/topics/cheat-sheets-checklists",
+        "https://moritzgiessmann.de/accessibility-cheatsheet",
+        "https://www.w3.org/TR/wai-aria-practices",
+        "https://www.w3.org/TR/WCAG21",
+        "https://github.com/collections/web-accessibility"
+      ]
+    },
+    {
+      "title": "Stay in the loop",
+      "resources": [
+        "https://www.smashingmagazine.com",
+        "https://hiddedevries.nl/en/blog",
+        "https://webaim.org",
+        "https://www.adrianbolonio.com/en/blog",
+        "https://adrianroselli.com/posts",
+        "https://www.sarasoueidan.com/blog",
+        "https://www.w3.org/WAI"
+      ]
+    }
   ],
   "next": []
 }

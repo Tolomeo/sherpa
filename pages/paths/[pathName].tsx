@@ -2,21 +2,34 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { ParsedUrlQuery } from 'querystring'
 import {
+  Path,
   paths,
-  populatePath,
-  PopulatedPath,
   hasPrevPaths,
   hasNextPaths,
+  hasExtras,
+  deserializePath,
 } from '../../data'
-import { Header, Main, Column, H1, H2 } from '../../src/ui'
-import { Resources, Paths } from '../../src/path'
+import {
+  Header,
+  Main,
+  Container,
+  Box,
+  Typography,
+  Grid,
+  Masonry,
+} from '../../src/theme'
+import { List as PathsList } from '../../src/paths'
+import {
+  Timeline as ResourcesTimeline,
+  List as ResourcesList,
+} from '../../src/resources'
 
 interface Params extends ParsedUrlQuery {
   pathName: string
 }
 
 interface StaticProps {
-  path: PopulatedPath
+  path: Path
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -30,12 +43,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
-  const path = paths[params!.pathName]
-  const populatedPath = populatePath(path)
+  const serializedPath = paths[params!.pathName]
+  const path = deserializePath(serializedPath)
 
   return {
     props: {
-      path: populatedPath,
+      path,
     },
   }
 }
@@ -44,7 +57,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 export default function PathPage({ path }: Props) {
   return (
-    <div>
+    <Box>
       <Head>
         <title>The {path.title} learning path</title>
         <link
@@ -73,34 +86,74 @@ export default function PathPage({ path }: Props) {
       <Header />
 
       <Main>
-        <Column>
-          <H1>
-            The <u>{path.title}</u> learning path
-          </H1>
-        </Column>
+        <Box pb={4}>
+          <Container>
+            <Grid container>
+              <Grid item xs={12} md={8}>
+                <Typography variant="h1">
+                  The <br /> <u>{path.title}</u> <br /> learning path
+                </Typography>
+              </Grid>
+            </Grid>
+          </Container>
+        </Box>
 
         {hasPrevPaths(path) && (
-          <Column>
-            <aside>
-              <H2>You want to come from</H2>
-              <Paths paths={path.prev} />
-            </aside>
-          </Column>
+          <Box py={4}>
+            <Container>
+              <aside>
+                <Typography variant="h3" component="h2" gutterBottom>
+                  You want to come from
+                </Typography>
+                <PathsList paths={path.prev} />
+              </aside>
+            </Container>
+          </Box>
         )}
 
-        <Column>
-          <Resources resources={path.resources} />
-        </Column>
+        <Box pb={4}>
+          <Container>
+            <Grid container>
+              <Grid item xs={12} md={8} xl={6}>
+                <ResourcesTimeline resources={path.resources} />
+              </Grid>
+            </Grid>
+          </Container>
+        </Box>
+
+        {hasExtras(path) && (
+          <Box py={4}>
+            <Container>
+              <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
+                {path.extras.map((extra, index) => (
+                  <Box key={index}>
+                    <aside>
+                      <Typography component="h2" variant="h5" gutterBottom>
+                        {extra.title}
+                      </Typography>
+                      <ResourcesList resources={extra.resources} />
+                    </aside>
+                  </Box>
+                ))}
+              </Masonry>
+            </Container>
+          </Box>
+        )}
 
         {hasNextPaths(path) && (
-          <Column>
-            <aside>
-              <H2>You could continue with</H2>
-              <Paths paths={path.next} />
-            </aside>
-          </Column>
+          <Box py={4}>
+            <Container>
+              <aside>
+                <Typography variant="h3" component="h2" gutterBottom>
+                  You could continue with
+                </Typography>
+                <PathsList paths={path.next} />
+              </aside>
+            </Container>
+          </Box>
         )}
       </Main>
-    </div>
+    </Box>
   )
 }
+// after={}

@@ -20,25 +20,26 @@ If this project manages to help anyone learning something, I will see it as a su
 ## Roadmap
 
 - [x] MVP
-- [x] Add Github repo link to website
+- [x] Add GitHub repo link to website
 - [x] Write something somewhere to let people know this even exists
 - [x] Add Next.js learning path
 - [x] Add Node.js learning path
 - [x] Add Accessibility learning path
-- [ ] Add "go back" feature?
-- [ ] Swap the handmade approach for a component library
-- [ ] Add "path sub-paths" support
-- [ ] Add "path multiple alternative resources" support
-- [ ] Add "resource multiple urls" support
-- [ ] Add "path additional resources" feature
-- [ ] Add "path useful tools" feature
-- [ ] Add client side "save progress" feature
-- [ ] Add path descriptions?
+- [x] Swap the handmade approach for a component library
+- [x] Add "path useful tools" feature
+- [x] Add "path additional resources" feature
 - [ ] Add resources schema validation tests
 - [ ] Add resources monitoring tests
+- [ ] Add "help" panel
+- [ ] Add client side "save progress" feature
+- [ ] Add path customisation?
+- [ ] Add "path sub-paths" support
+- [ ] Add "resource multiple URLs" support
+- [ ] Add path descriptions?
 - [ ] Split website code from json data source into separate monorepo packages
 - [ ] Add contributing automations and templates
 - [ ] Add contributing documentation
+- [ ] ~~Add "path multiple alternative resources" support~~
 
 ## License
 

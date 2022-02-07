@@ -2,59 +2,53 @@
   "https://www.youtube.com/watch?v=BwuLxPH8IDs": {
     "title": "TypeScript Course for Beginners 2021",
     "url": "https://www.youtube.com/watch?v=BwuLxPH8IDs",
-    "type": ["video"],
+    "type": ["course"],
     "source": "youtube.com/c/Academind"
   },
   "https://basarat.gitbook.io/typescript": {
     "title": "TypeScript Deep Dive",
     "url": "https://basarat.gitbook.io/typescript",
-    "type": ["book"],
-    "source": "basarat.gitbook.io"
+    "type": ["book"]
   },
   "https://rmolinamir.github.io/typescript-cheatsheet": {
     "title": "typescript-cheatsheet",
     "url": "https://rmolinamir.github.io/typescript-cheatsheet",
-    "type": ["reading"],
-    "source": "rmolinamir.github.io"
+    "type": ["guide", "reference"]
   },
   "https://www.typescriptlang.org/docs": {
     "title": "TypeScript Documentation",
     "url": "https://www.typescriptlang.org/docs",
-    "type": ["reading"],
-    "source": "typescriptlang.org"
+    "type": ["reference"]
   },
   "https://github.com/type-challenges/type-challenges": {
     "title": "Type<Challenge[]>",
     "url": "https://github.com/type-challenges/type-challenges",
-    "type": ["challenge"],
+    "type": ["exercise", "collection"],
     "source": "github.com/type-challenges"
   },
   "https://labs42io.github.io/clean-code-typescript": {
     "title": "clean-code-typescript",
     "url": "https://labs42io.github.io/clean-code-typescript",
-    "type": ["reading"],
-    "source": "labs42io.github.io"
+    "type": ["guide", "reference"]
   },
   "http://torokmark.github.io/design_patterns_in_typescript": {
     "title": "Design patterns in typescript",
     "url": "http://torokmark.github.io/design_patterns_in_typescript",
-    "type": ["reading", "example"],
-    "source": "torokmark.github.io"
+    "type": ["example", "collection"]
   },
   "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab": {
     "title": "Learn Advanced TypeScript Types",
     "url": "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab",
-    "type": ["reading"],
+    "type": ["guide"],
     "source": "medium.com/free-code-camp"
   },
   "https://learntypescript.dev": {
     "title": "Learn TypeScript",
     "url": "https://learntypescript.dev",
-    "type": ["reading", "interactive"],
-    "source": "learntypescript.dev"
+    "type": ["course"]
   },
   "https://github.com/zws-im/zws": {
-    "title": "Zero Width Shortener (ZWS)",
+    "title": "Zero Width Shortener (ZWS): Shorten URLs using invisible spaces",
     "url": "https://github.com/zws-im/zws",
     "type": ["example"],
     "source": "github.com/zws-im"
@@ -62,13 +56,208 @@
   "https://mariusschulz.com/blog/series/typescript-evolution": {
     "title": "TypeScript Evolution",
     "url": "https://mariusschulz.com/blog/series/typescript-evolution",
-    "type": ["reading", "collection"],
-    "source": "mariusschulz.com"
+    "type": ["guide", "series"]
   },
   "https://github.com/dzharii/awesome-typescript": {
     "title": "Awesome TypeScript",
     "url": "https://github.com/dzharii/awesome-typescript",
-    "type": ["collection"],
+    "type": ["reference", "collection"],
     "source": "github.com/dzharii"
+  },
+  "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-typescript": {
+    "title": "How To Code in TypeScript",
+    "url": "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-typescript",
+    "type": ["guide", "collection"],
+    "source": "digitalocean.com/community"
+  },
+  "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI": {
+    "title": "TypeScript Tutorial",
+    "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI",
+    "type": ["course"],
+    "source": "youtube.com/c/TheNetNinja"
+  },
+  "https://scrimba.com/learn/intrototypescript": {
+    "title": "Introduction to TypeScript",
+    "url": "https://scrimba.com/learn/intrototypescript",
+    "type": ["course"]
+  },
+  "https://www.youtube.com/playlist?list=PLqq-6Pq4lTTanfgsbnFzfWUhhAz3tIezU": {
+    "title": "TypeScript Basics",
+    "url": "https://www.youtube.com/playlist?list=PLqq-6Pq4lTTanfgsbnFzfWUhhAz3tIezU",
+    "type": ["course"],
+    "source": "youtube.com/c/JavaBrainsChannel"
+  },
+  "https://www.udemy.com/course/typescript-design-patterns": {
+    "title": "TypeScript Design Patterns",
+    "url": "https://www.udemy.com/course/typescript-design-patterns",
+    "type": ["course"]
+  },
+  "https://www.typescripttutorial.net": {
+    "title": "TypeScript Tutorial",
+    "url": "https://www.typescripttutorial.net",
+    "type": ["course"]
+  },
+  "https://www.youtube.com/watch?v=gp5H0Vw39yw": {
+    "title": "Learn TypeScript - Full Course for Beginners",
+    "url": "https://www.youtube.com/watch?v=gp5H0Vw39yw",
+    "type": ["course"],
+    "source": "youtube.com/c/Freecodecamp"
+  },
+  "https://ts.chibicode.com/todo": {
+    "title": "TypeScript Tutorial for JS Programmers Who Know How to Build a Todo App",
+    "url": "https://ts.chibicode.com/todo",
+    "type": ["guide"]
+  },
+  "https://ts.chibicode.com/generics": {
+    "title": "TypeScript Generics for People Who Gave Up on Understanding Generics",
+    "url": "https://ts.chibicode.com/generics",
+    "type": ["guide"]
+  },
+  "https://github.com/shanoysinc/Tetris": {
+    "title": "Tetris",
+    "url": "https://github.com/shanoysinc/Tetris",
+    "type": ["example"],
+    "source": "github.com/shanoysinc"
+  },
+  "https://github.com/itsMapleLeaf/super-mario-typescript": {
+    "title": "Meth Meth Method's \"Writing Super Mario in JavaScript\" series, using TypeScript.",
+    "url": "https://github.com/itsMapleLeaf/super-mario-typescript",
+    "type": ["example"],
+    "source": "github.com/itsMapleLeaf"
+  },
+  "https://dev.to/orta/series/15226": {
+    "title": "type | treat 2021",
+    "url": "https://dev.to/orta/series/15226",
+    "type": ["exercise", "collection", "community"],
+    "source": "dev.to/orta"
+  },
+  "https://typescriptcourses.com/typescript-fundamentals": {
+    "title": "The essential introduction to statically typed JavaScript.",
+    "url": "https://typescriptcourses.com/typescript-fundamentals",
+    "type": ["course"]
+  },
+  "https://typescript-exercises.github.io": {
+    "title": "TypeScript Exercises",
+    "url": "https://typescript-exercises.github.io",
+    "type": ["exercise", "collection"]
+  },
+  "https://egghead.io/courses/maintainable-css-using-typestyle": {
+    "title": "Maintainable CSS using TypeStyle",
+    "url": "https://egghead.io/courses/maintainable-css-using-typestyle",
+    "type": ["course"]
+  },
+  "https://github.com/laurent22/joplin": {
+    "title": "Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS",
+    "url": "https://github.com/laurent22/joplin",
+    "type": ["example"],
+    "source": "github.com/laurent22"
+  },
+  "https://docs.joshuatz.com/cheatsheets/typescript": {
+    "title": "Joshua's Docs - TypeScript Cheatsheet, Common Errors, and More",
+    "url": "https://docs.joshuatz.com/cheatsheets/typescript",
+    "type": ["reference"]
+  },
+  "https://www.davrous.com/2013/06/13/tutorial-series-learning-how-to-write-a-3d-soft-engine-from-scratch-in-c-typescript-or-javascript": {
+    "title": "Tutorial series: learning how to write a 3D soft engine from scratch in C#, TypeScript or JavaScript",
+    "url": "https://www.davrous.com/2013/06/13/tutorial-series-learning-how-to-write-a-3d-soft-engine-from-scratch-in-c-typescript-or-javascript",
+    "type": ["tutorial"]
+  },
+  "https://lhartikk.github.io": {
+    "title": "Naivecoin: a tutorial for building a cryptocurrency",
+    "url": "https://lhartikk.github.io",
+    "type": ["tutorial"]
+  },
+  "https://naivecoinstake.learn.uno": {
+    "title": "NaivecoinStake | A tutorial for building a Proof of Stake cryptocurrency",
+    "url": "https://naivecoinstake.learn.uno",
+    "type": ["tutorial"]
+  },
+  "https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html": {
+    "title": "Build your own WebAssembly Compiler",
+    "url": "https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html",
+    "type": ["tutorial"]
+  },
+  "https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html": {
+    "title": "TypeScript: Documentation - Migrating from JavaScript",
+    "url": "https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html",
+    "type": ["tutorial", "reference"]
+  },
+  "https://flaviocopes.com/deno": {
+    "title": "The Deno Handbook: a concise introduction to Deno",
+    "url": "https://flaviocopes.com/deno",
+    "type": ["guide"]
+  },
+  "https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b": {
+    "title": "The TypeScript Tax",
+    "url": "https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b",
+    "type": ["guide"],
+    "source": "medium.com/javascript-scene"
+  },
+  "https://www.sitepen.com/blog/typescript-cheat-sheet": {
+    "title": "TypeScript 4.4 Cheat Sheet",
+    "url": "https://www.sitepen.com/blog/typescript-cheat-sheet",
+    "type": ["reference"]
+  },
+  "https://github.com/typescript-cheatsheets": {
+    "title": "TypeScript Cheatsheets",
+    "url": "https://github.com/typescript-cheatsheets",
+    "type": ["reference", "collection"],
+    "source": "github.com/typescript-cheatsheets"
+  },
+  "https://www.saltycrane.com/cheat-sheets/typescript/latest": {
+    "title": "TypeScript Cheat Sheet",
+    "url": "https://www.saltycrane.com/cheat-sheets/typescript/latest/",
+    "type": ["reference"]
+  },
+  "https://www.typescriptlang.org/play": {
+    "title": "TypeScript: TS Playground - An online editor for exploring TypeScript and JavaScript",
+    "url": "https://www.typescriptlang.org/play/",
+    "type": ["generator"]
+  },
+  "https://www.typescriptlang.org/community": {
+    "title": "Typescript community",
+    "url": "https://www.typescriptlang.org/community",
+    "type": ["community"]
+  },
+  "https://www.typescriptlang.org/tools": {
+    "title": "TypeScript: Reference Tools",
+    "url": "https://www.typescriptlang.org/tools",
+    "type": ["reference", "collection"]
+  },
+  "https://quicktype.io": {
+    "title": "Quicktype: convert JSON to Swift, C#, TypeScript, Objective-C, Go, Java, C++ and more",
+    "url": "https://quicktype.io",
+    "type": ["generator"]
+  },
+  "http://json2ts.com": {
+    "title": "json2ts - generate TypeScript interfaces from json",
+    "url": "http://json2ts.com",
+    "type": ["generator"]
+  },
+  "https://github.com/TypeStrong": {
+    "title": "TypeStrong TypeScript workflows",
+    "url": "https://github.com/TypeStrong",
+    "type": ["reference", "collection"],
+    "source": "github.com/TypeStrong"
+  },
+  "https://devblogs.microsoft.com/typescript": {
+    "title": "Typescript",
+    "url": "https://devblogs.microsoft.com/typescript",
+    "type": ["blog"]
+  },
+  "https://mariusschulz.com": {
+    "title": "Marius Schulz",
+    "url": "https://mariusschulz.com",
+    "type": ["blog"]
+  },
+  "https://www.typescript-weekly.com": {
+    "title": "TypeScript Weekly",
+    "url": "https://www.typescript-weekly.com",
+    "type": ["community"]
+  },
+  "https://www.carlrippon.com": {
+    "title": "Carl Rippon",
+    "url": "https://www.carlrippon.com",
+    "type": ["blog"]
   }
 }
