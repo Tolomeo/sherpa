@@ -17,6 +17,7 @@ export type ResourceType =
   | 'book'
   | 'example'
   | 'collection'
+  | 'series'
   | 'reference'
   | 'community'
   | 'exercise'
@@ -58,9 +59,7 @@ export const deserializeResource = (
 ): Resource => ({
   ...resource,
   source:
-    resource.source ||
-    console.log(resource.url) ||
-    new URL(resource.url).hostname.replace(/^www./, ''),
+    resource.source || new URL(resource.url).hostname.replace(/^www./, ''),
 })
 
 export default resources
