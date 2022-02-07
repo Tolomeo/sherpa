@@ -58,30 +58,31 @@ export default function Home({ paths }: Props) {
               <Grid item md={5}>
                 <Box py={2}>
                   <Typography variant="body1" component="p" gutterBottom>
-                    You are possibly here because of realising how valuable it
-                    is to acquire new skills and to make the most out of those
-                    you already master.
+                    Learning new things is amazing.
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
-                    Although there are some amazing platforms providing high
-                    quality paid educational content, the web is a wild place
-                    and there is some equally stunning learning material
-                    provided entirely for free.
+                    It is cool to know there are many platforms providing high
+                    quality paid educational content. It is even cooler to know
+                    there are equally stunning online resources provided for
+                    free!
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
-                    A challenge you may face is to find the right content among
-                    hundreds of resources. <br /> You may not always know what
-                    to start from or what to progress with. <br /> You may be
-                    unsure about how newly acquired shiny pieces of knowledge
-                    fit together.
+                    The web is a chaotic place though, and one could be
+                    sometimes confused by the quantity and variety of available
+                    materials.
+                  </Typography>
+                  <Typography variant="body1" component="p" gutterBottom>
+                    The Learning Path aims to solve that issue, providing you
+                    with paths to follow and plenty of references to help you on
+                    your journey on the discovery of different technologies.
+                  </Typography>
+                  <Typography variant="body1" component="p" gutterBottom>
+                    All resources are free and were hand-picked to create
+                    collections aiming to be as comprehensive and consistent as
+                    possible.
                   </Typography>
                   <Typography variant="body1" component="p">
-                    This project tries to solve those issues, providing you with
-                    ordered lists of resources useful to learn on different
-                    topics.
-                    <br /> All of the resources are free and hand-picked to
-                    create learning paths which aim to be as comprehensive and
-                    consistent as possible.
+                    Happy learning!
                   </Typography>
                 </Box>
               </Grid>
