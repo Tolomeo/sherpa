@@ -1,0 +1,23 @@
+name: 'Deploy and test Vercel preview'
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: amondnet/vercel-action@v20
+        id: vercel-deployment
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          vercel-token: ${{ secrets.VERCEL_ACCOUNT_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_USER_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+          vercel-project-name: 'the-learning-path'
+    outputs:
+      preview-url: ${{ steps.vercel-deployment.outputs.preview-url }}
