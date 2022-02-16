@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"./{src,pages,data}/**/*.{js,jsx,ts,tsx,json,scss}\""
+    "format": "prettier --write \"./{src,pages,data}/**/*.{js,jsx,ts,tsx,json,scss}\"",
+    "test": "cypress open",
+    "test:ci": "cypress run"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -24,6 +26,7 @@
   },
   "devDependencies": {
     "@types/react": "17.0.15",
+    "cypress": "^9.4.1",
     "eslint": "7.32.0",
     "eslint-config-next": "11.0.1",
     "eslint-config-prettier": "^8.3.0",
