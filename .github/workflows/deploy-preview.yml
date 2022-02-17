@@ -1,4 +1,4 @@
-name: 'Deploy and test Vercel preview'
+name: 'Deploy preview'
 on:
   workflow_dispatch:
   pull_request:
