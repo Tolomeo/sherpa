@@ -9,6 +9,7 @@ on:
 jobs:
   Deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 10 # to prevent a hanging process from using all CI minutes
     steps:
       - uses: actions/checkout@v2
       - uses: amondnet/vercel-action@v20
