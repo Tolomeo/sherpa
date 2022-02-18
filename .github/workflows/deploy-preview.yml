@@ -19,5 +19,6 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_USER_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
           vercel-project-name: 'the-learning-path'
+          github-comment: true
     outputs:
       preview-url: ${{ steps.vercel-deployment.outputs.preview-url }}
