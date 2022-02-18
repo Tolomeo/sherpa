@@ -16,7 +16,7 @@ jobs:
         with:
           github-comment: true
           github-deployment: true
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-token: ${{ secrets.VERCEL_ACCOUNT_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_USER_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
