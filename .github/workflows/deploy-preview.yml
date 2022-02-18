@@ -1,4 +1,4 @@
-name: 'Deploy preview'
+name: 'Preview'
 on:
   workflow_dispatch:
   pull_request:
@@ -7,7 +7,7 @@ on:
       - synchronize
 
 jobs:
-  deploy:
+  Deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
