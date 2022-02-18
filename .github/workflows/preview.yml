@@ -14,12 +14,12 @@ jobs:
       - uses: amondnet/vercel-action@v20
         id: vercel-deployment
         with:
-          github-comment: true
-          github-deployment: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-project-name: 'the-learning-path'
           vercel-token: ${{ secrets.VERCEL_ACCOUNT_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_USER_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
-          vercel-project-name: 'the-learning-path'
+          github-comment: true
+          github-deployment: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
     outputs:
       preview-url: ${{ steps.vercel-deployment.outputs.preview-url }}
