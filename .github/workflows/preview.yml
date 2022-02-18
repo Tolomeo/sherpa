@@ -23,3 +23,16 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
     outputs:
       preview-url: ${{ steps.vercel-deployment.outputs.preview-url }}
+
+  Test:
+    runs-on: ubuntu-latest
+    needs: Deploy
+    timeout-minutes: 10 # to prevent a hanging process from using all CI minutes
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cypress-io/github-action@v2
+        env:
+          CYPRESS_BASE_URL: ${{ needs.Deploy.outputs.preview-url }}
+        with:
+          spec: cypress/integration/paths/**/*.ts # Running only paths tests
+
