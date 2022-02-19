@@ -17,11 +17,12 @@ describe('Path pages', () => {
       })
 
       describe('Resources timeline', () => {
-        let $timelineItems: Cypress.Chainable<JQuery<HTMLLIElement>>
-        before(() => {
-          $timelineItems = cy
-            .get('[data-testid="resources.timeline"]')
-            .find('[data-testid="resources.timeline.item"]')
+        beforeEach(() => {
+          cy.get('[data-testid="resources.timeline"]')
+            .find(
+              '[data-testid="resources.timeline.item"] a[data-testid="resources.timeline.item.link"]',
+            )
+            .as('timelineItems')
         })
 
         path.resources.forEach((pathResource, pathResourceIndex) => {
@@ -32,29 +33,28 @@ describe('Path pages', () => {
 					and renders the title of the resource,
 					and renders the source of the resource,
 					and renders the types of the resource`, () => {
-            const $timelineItem = $timelineItems.eq(pathResourceIndex)
-            const $timelineItemLink = $timelineItem.find(
-              `a[data-testid="resources.timeline.item.link"][href="${pathResource.url}"]`,
-            )
-            const $timelineItemTitle = $timelineItemLink.find(
-              '[data-testid="resources.timeline.item.title"]',
-            )
-            const $timelineItemSource = $timelineItemLink.find(
-              '[data-testid="resources.timeline.item.source"]',
-            )
-            const $timelineItemTypes = $timelineItemLink.find(
-              '[data-testid="resources.timeline.item.type"]',
-            )
+            cy.get('@timelineItems')
+              .eq(pathResourceIndex)
+              .should('have.attr', 'href', pathResource.url)
 
-            $timelineItemTitle.should('have.text', pathResource.title)
-            $timelineItemSource.should('have.text', pathResource.source)
-            $timelineItemTypes.each(
-              ($timelineItemType, timelineItemTypeIndex) => {
+            cy.get('@timelineItems')
+              .eq(pathResourceIndex)
+              .find('[data-testid="resources.timeline.item.title"]')
+              .should('have.text', pathResource.title)
+
+            cy.get('@timelineItems')
+              .eq(pathResourceIndex)
+              .find('[data-testid="resources.timeline.item.source"]')
+              .should('have.text', pathResource.source)
+
+            cy.get('@timelineItems')
+              .eq(pathResourceIndex)
+              .find('[data-testid="resources.timeline.item.type"]')
+              .each(($timelineItemType, timelineItemTypeIndex) => {
                 expect($timelineItemType.text()).to.equal(
                   pathResource.type[timelineItemTypeIndex],
                 )
-              },
-            )
+              })
           })
         })
       })
