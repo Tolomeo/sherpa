@@ -14,34 +14,36 @@ const resourcesListItemSourceTestId = 'resources.list.item.source'
 
 const ResourcesList = ({ resources }: Props) => {
   return (
-    <List data-testid={resourcesListTestId}>
-      {resources.map((resource) => (
-        <Box data-testid={resourcesListItemTestId} key={resource.url}>
-          <Link
-            data-testid={resourcesListItemLinkTestId}
-            href={resource.url}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Typography
-              data-testid={resourcesListItemSourceTestId}
-              variant="overline"
-              color="text.secondary"
+    <Box data-testid={resourcesListTestId}>
+      <List>
+        {resources.map((resource) => (
+          <Box data-testid={resourcesListItemTestId} key={resource.url}>
+            <Link
+              data-testid={resourcesListItemLinkTestId}
+              href={resource.url}
+              target="_blank"
+              rel="noreferrer"
             >
-              {resource.source}
-            </Typography>
-            <Typography
-              data-testid={resourcesListItemTitleTestId}
-              component="span"
-              variant="h6"
-              display="block"
-            >
-              {resource.title}
-            </Typography>
-          </Link>
-        </Box>
-      ))}
-    </List>
+              <Typography
+                data-testid={resourcesListItemSourceTestId}
+                variant="overline"
+                color="text.secondary"
+              >
+                {resource.source}
+              </Typography>
+              <Typography
+                data-testid={resourcesListItemTitleTestId}
+                component="span"
+                variant="h6"
+                display="block"
+              >
+                {resource.title}
+              </Typography>
+            </Link>
+          </Box>
+        ))}
+      </List>
+    </Box>
   )
 }
 

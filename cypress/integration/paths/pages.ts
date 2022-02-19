@@ -12,7 +12,7 @@ describe('Path pages', () => {
         cy.visit(pathUrl)
       })
 
-      it(`Renders a heading1 title, with the text "The ${path.title} learning path"`, () => {
+      it('Renders a heading1 title, with the path title as text', () => {
         cy.get('h1').should('have.text', `The ${path.title} learning path`)
       })
 
@@ -22,82 +22,93 @@ describe('Path pages', () => {
             .find(
               '[data-testid="resources.timeline.item"] a[data-testid="resources.timeline.item.link"]',
             )
-            .as('timelineItems')
+            .as('pathResources')
         })
 
         path.resources.forEach((pathResource, pathResourceIndex) => {
           const resourceOrder = pathResourceIndex + 1
 
-          it(`Renders "${pathResource.title}" as resource #${resourceOrder},
-					and renders a link pointing at the resource url,
-					and renders the title of the resource,
-					and renders the source of the resource,
-					and renders the types of the resource`, () => {
-            cy.get('@timelineItems')
-              .eq(pathResourceIndex)
-              .should('have.attr', 'href', pathResource.url)
+          describe(`#${resourceOrder} "${pathResource.title}"`, () => {
+            beforeEach(() => {
+              cy.get('@pathResources').eq(pathResourceIndex).as('pathResource')
+            })
 
-            cy.get('@timelineItems')
-              .eq(pathResourceIndex)
-              .find('[data-testid="resources.timeline.item.title"]')
-              .should('have.text', pathResource.title)
+            it(`Renders a link pointing at the resource url,
+						and renders the title of the resource,
+						and renders the source of the resource,
+						and renders the types of the resource`, () => {
+              cy.get('@pathResource').should(
+                'have.attr',
+                'href',
+                pathResource.url,
+              )
 
-            cy.get('@timelineItems')
-              .eq(pathResourceIndex)
-              .find('[data-testid="resources.timeline.item.source"]')
-              .should('have.text', pathResource.source)
+              cy.get('@pathResource')
+                .find('[data-testid="resources.timeline.item.title"]')
+                .should('have.text', pathResource.title)
 
-            cy.get('@timelineItems')
-              .eq(pathResourceIndex)
-              .find('[data-testid="resources.timeline.item.type"]')
-              .each(($timelineItemType, timelineItemTypeIndex) => {
-                expect($timelineItemType.text()).to.equal(
-                  pathResource.type[timelineItemTypeIndex],
-                )
-              })
+              cy.get('@pathResource')
+                .find('[data-testid="resources.timeline.item.source"]')
+                .should('have.text', pathResource.source)
+
+              cy.get('@pathResource')
+                .find('[data-testid="resources.timeline.item.type"]')
+                .each(($timelineItemType, timelineItemTypeIndex) => {
+                  expect($timelineItemType.text()).to.equal(
+                    pathResource.type[timelineItemTypeIndex],
+                  )
+                })
+            })
           })
         })
       })
 
       describe('Additional resources', () => {
-        let $extras: Cypress.Chainable<JQuery<HTMLDivElement>>
-        before(() => {
-          $extras = cy.get('[data-testid="path.extras"]')
+        beforeEach(() => {
+          cy.get('[data-testid="path.extras"]').as('extras')
         })
 
         path.extras.forEach((pathExtra, pathExtraIndex) => {
-          const pathExtraOrder = pathExtraIndex + 1
+          describe(`"${pathExtra.title}" additional resources`, () => {
+            beforeEach(() => {
+              cy.get('@extras')
+                .eq(pathExtraIndex)
+                .find('h2')
+                .as('extraResourcesTitle')
+              cy.get('@extras')
+                .eq(pathExtraIndex)
+                .find(
+                  '[data-testid="resources.list"] a[data-testid="resources.list.item.link"]',
+                )
+                .as('extraResources')
+            })
 
-          it(`Renders "${pathExtra.title}" as additional resources group #${pathExtraOrder},
-						and renders a heading2 with "${pathExtra.title}" text,
-						and renders the related list of additional links`, () => {
-            const $pathExtra = $extras.eq(pathExtraIndex)
-            const $pathExtraTitle = $pathExtra.find('h2')
-            const $pathExtraResources = $pathExtra
-              .find('[data-testid="resources.list"]')
-              .find('[data-testid="resources.list.item"]')
-
-            $pathExtraTitle.should('have.text', pathExtra.title)
+            it(`Renders a heading2 with "${pathExtra.title}" text,`, () => {
+              cy.get('@extraResourcesTitle').should(
+                'have.text',
+                pathExtra.title,
+              )
+            })
 
             pathExtra.resources.forEach((pathExtraResource) => {
-              const $pathExtraResourceLink = $pathExtraResources.find(
-                `[data-testid="resources.list.item.link"][href="${pathExtraResource.url}"]`,
-              )
-              const $pathExtraResourceTitle = $pathExtraResourceLink.find(
-                '[data-testid="resources.list.item.title"]',
-              )
-              const $pathExtraResourceSource = $pathExtraResourceLink.find(
-                '[data-testid="resources.list.item.source"]',
-              )
+              describe(`"${pathExtraResource.title}"`, () => {
+                beforeEach(() => {
+                  cy.get('@extraResources')
+                    .filter(`[href="${pathExtraResource.url}"]`)
+                    .as('extraResource')
+                })
 
-              $pathExtraResourceSource.should(
-                'contain.text',
-                pathExtraResource.source,
-              )
-              $pathExtraResourceTitle.should(
-                'contain.text',
-                pathExtraResource.title,
-              )
+                it(`Renders the title of the resource,
+								and renders the source of the resource,`, () => {
+                  cy.get('@extraResource')
+                    .find('[data-testid="resources.list.item.title"]')
+                    .should('contain.text', pathExtraResource.title)
+
+                  cy.get('@extraResource')
+                    .find('[data-testid="resources.list.item.source"]')
+                    .should('contain.text', pathExtraResource.source)
+                })
+              })
             })
           })
         })
