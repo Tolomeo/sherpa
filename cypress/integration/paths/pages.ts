@@ -12,11 +12,11 @@ describe('Path pages', () => {
         cy.visit(pathUrl)
       })
 
-      it('Renders a heading1 title, with the path title as text', () => {
+      it(`Renders a heading1 title, with "The ${path.title} learning path" title as text`, () => {
         cy.get('h1').should('have.text', `The ${path.title} learning path`)
       })
 
-      describe('Resources timeline', () => {
+      describe('Path resources', () => {
         beforeEach(() => {
           cy.get('[data-testid="resources.timeline"]')
             .find(
@@ -33,10 +33,10 @@ describe('Path pages', () => {
               cy.get('@pathResources').eq(pathResourceIndex).as('pathResource')
             })
 
-            it(`Renders a link pointing at the resource url,
-						and renders the title of the resource,
-						and renders the source of the resource,
-						and renders the types of the resource`, () => {
+            it(`Renders a link pointing at "${pathResource.url}",
+						and renders "${pathResource.title}" as resource title,
+						and renders "${pathResource.source}" as resource source,
+						and renders "${pathResource.type.join('", "')}" as resource types`, () => {
               cy.get('@pathResource').should(
                 'have.attr',
                 'href',
@@ -98,15 +98,15 @@ describe('Path pages', () => {
                     .as('extraResource')
                 })
 
-                it(`Renders the title of the resource,
-								and renders the source of the resource,`, () => {
+                it(`Renders "${pathExtraResource.title}" as resource title,
+								and renders ${pathExtraResource.source} as resource source`, () => {
                   cy.get('@extraResource')
                     .find('[data-testid="resources.list.item.title"]')
-                    .should('contain.text', pathExtraResource.title)
+                    .should('have.text', pathExtraResource.title)
 
                   cy.get('@extraResource')
                     .find('[data-testid="resources.list.item.source"]')
-                    .should('contain.text', pathExtraResource.source)
+                    .should('have.text', pathExtraResource.source)
                 })
               })
             })
