@@ -83,7 +83,7 @@ describe('Path pages', () => {
                 .as('extraResources')
             })
 
-            it(`Renders a heading2 with "${pathExtra.title}" text,`, () => {
+            it(`Renders a heading2 with "${pathExtra.title}" text`, () => {
               cy.get('@extraResourcesTitle').should(
                 'have.text',
                 pathExtra.title,

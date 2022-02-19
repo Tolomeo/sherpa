@@ -69,19 +69,17 @@
         "https://www.w3.org/TR/wai-aria-practices-1.1",
         "https://www.a11yproject.com/checklist",
         "https://web.dev/lighthouse-accessibility",
-				"https://whocanuse.com",
+        "https://whocanuse.com",
         "https://uxdesign.cc/accessibility-tools-for-designers-and-developers-ea400a415c0a",
         "https://github.com/collections/web-accessibility",
         "https://github.com/fejes713/accessibility-guide",
         "https://www.pauljadam.com/resources.html",
-        "https://russmaxdesign.github.io/accessible-forms",
         "https://dequeuniversity.com/screenreaders",
         "https://a11y-style-guide.com/style-guide",
         "https://learn-the-web.algonquindesign.ca/topics/cheat-sheets-checklists",
         "https://moritzgiessmann.de/accessibility-cheatsheet",
         "https://www.w3.org/TR/wai-aria-practices",
-        "https://www.w3.org/TR/WCAG21",
-        "https://github.com/collections/web-accessibility"
+        "https://www.w3.org/TR/WCAG21"
       ]
     },
     {
