@@ -16,15 +16,14 @@
     "type": ["guide", "reference"]
   },
   "https://www.typescriptlang.org/docs": {
-    "title": "TypeScript Documentation",
+    "title": "TypeScript: The starting point for learning TypeScript",
     "url": "https://www.typescriptlang.org/docs",
     "type": ["reference"]
   },
   "https://github.com/type-challenges/type-challenges": {
-    "title": "Type<Challenge[]>",
+    "title": "type-challenges/type-challenges",
     "url": "https://github.com/type-challenges/type-challenges",
-    "type": ["exercise", "collection"],
-    "source": "github.com/type-challenges"
+    "type": ["exercise", "collection"]
   },
   "https://labs42io.github.io/clean-code-typescript": {
     "title": "clean-code-typescript",
@@ -43,15 +42,14 @@
     "source": "medium.com/free-code-camp"
   },
   "https://learntypescript.dev": {
-    "title": "Learn TypeScript",
+    "title": "TypeScript course for JavaScript developers",
     "url": "https://learntypescript.dev",
     "type": ["course"]
   },
   "https://github.com/zws-im/zws": {
-    "title": "Zero Width Shortener (ZWS): Shorten URLs using invisible spaces",
+    "title": "zws-im/zws",
     "url": "https://github.com/zws-im/zws",
-    "type": ["example"],
-    "source": "github.com/zws-im"
+    "type": ["example"]
   },
   "https://mariusschulz.com/blog/series/typescript-evolution": {
     "title": "TypeScript Evolution",
@@ -59,10 +57,9 @@
     "type": ["guide", "series"]
   },
   "https://github.com/dzharii/awesome-typescript": {
-    "title": "Awesome TypeScript",
+    "title": "dzharii/awesome-typescript",
     "url": "https://github.com/dzharii/awesome-typescript",
-    "type": ["reference", "collection"],
-    "source": "github.com/dzharii"
+    "type": ["reference", "collection"]
   },
   "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-typescript": {
     "title": "How To Code in TypeScript",
@@ -77,7 +74,7 @@
     "source": "youtube.com/c/TheNetNinja"
   },
   "https://scrimba.com/learn/intrototypescript": {
-    "title": "Introduction to TypeScript",
+    "title": "Learn Typescript tutorial",
     "url": "https://scrimba.com/learn/intrototypescript",
     "type": ["course"]
   },
@@ -120,10 +117,9 @@
     "source": "github.com/shanoysinc"
   },
   "https://github.com/itsMapleLeaf/super-mario-typescript": {
-    "title": "Meth Meth Method's \"Writing Super Mario in JavaScript\" series, using TypeScript.",
+    "title": "itsMapleLeaf/super-mario-typescript",
     "url": "https://github.com/itsMapleLeaf/super-mario-typescript",
-    "type": ["example"],
-    "source": "github.com/itsMapleLeaf"
+    "type": ["example"]
   },
   "https://dev.to/orta/series/15226": {
     "title": "type | treat 2021",
@@ -132,7 +128,7 @@
     "source": "dev.to/orta"
   },
   "https://typescriptcourses.com/typescript-fundamentals": {
-    "title": "The essential introduction to statically typed JavaScript.",
+    "title": "Learn TypeScript from the ground up with James Henry",
     "url": "https://typescriptcourses.com/typescript-fundamentals",
     "type": ["course"]
   },
@@ -153,7 +149,7 @@
     "source": "github.com/laurent22"
   },
   "https://docs.joshuatz.com/cheatsheets/typescript": {
-    "title": "Joshua's Docs - TypeScript Cheatsheet, Common Errors, and More",
+    "title": "TypeScript Cheatsheet, Common Errors, and More",
     "url": "https://docs.joshuatz.com/cheatsheets/typescript",
     "type": ["reference"]
   },
@@ -215,7 +211,7 @@
     "type": ["generator"]
   },
   "https://www.typescriptlang.org/community": {
-    "title": "Typescript community",
+    "title": "TypeScript: How to set up TypeScript",
     "url": "https://www.typescriptlang.org/community",
     "type": ["community"]
   },
@@ -225,7 +221,7 @@
     "type": ["reference", "collection"]
   },
   "https://quicktype.io": {
-    "title": "Quicktype: convert JSON to Swift, C#, TypeScript, Objective-C, Go, Java, C++ and more",
+    "title": "quicktype",
     "url": "https://quicktype.io",
     "type": ["generator"]
   },
@@ -235,13 +231,13 @@
     "type": ["generator"]
   },
   "https://github.com/TypeStrong": {
-    "title": "TypeStrong TypeScript workflows",
+    "title": "TypeStrong",
     "url": "https://github.com/TypeStrong",
     "type": ["reference", "collection"],
     "source": "github.com/TypeStrong"
   },
   "https://devblogs.microsoft.com/typescript": {
-    "title": "Typescript",
+    "title": "TypeScript",
     "url": "https://devblogs.microsoft.com/typescript",
     "type": ["blog"]
   },
@@ -256,7 +252,7 @@
     "type": ["community"]
   },
   "https://www.carlrippon.com": {
-    "title": "Carl Rippon",
+    "title": "All posts",
     "url": "https://www.carlrippon.com",
     "type": ["blog"]
   }

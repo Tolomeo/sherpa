@@ -90,10 +90,9 @@
     "source": "github.com/sindresorhus"
   },
   "https://github.com/goldbergyoni/javascript-testing-best-practices": {
-    "title": "Javascript & Node.js Testing Best Practices",
+    "title": "goldbergyoni/javascript-testing-best-practices",
     "url": "https://github.com/goldbergyoni/javascript-testing-best-practices",
-    "type": ["guide", "reference"],
-    "source": "github.com/goldbergyoni"
+    "type": ["guide", "reference"]
   },
   "https://www.freecodecamp.org/learn/back-end-development-and-apis": {
     "title": "Back End Development and APIs",
