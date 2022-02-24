@@ -21,7 +21,16 @@ const resourceHealthCheckStrategy = {
         'text/html',
       )
 
-      expect(document.title).to.contain(resource.title)
+      // if we received the document title in the response we validate against that
+      if (document.title) {
+        return expect(document.title).to.contain(resource.title)
+      }
+
+      // if we didn't receive the title in the response body
+      // maybe it's a SPA and the title gets filled after the first render
+      // so we visit the url and try
+      cy.visit(resource.url)
+      cy.get('title').should('contain.text', resource.title)
     })
   },
   youtube(resource: Resource) {

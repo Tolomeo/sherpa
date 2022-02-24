@@ -1,14 +1,14 @@
 import { paths, deserializePath } from '../../../data'
 
-describe('Path resources', () => {
+describe('Resources', () => {
   // Object.entries(paths).forEach(([_, serialisedPath]) => {
   Object.entries({
     // htmlcss: paths.htmlcss,
     // webaccessibility: paths.webaccessibility,
     // javascript: paths.javascript,
-    typescript: paths.typescript,
-    /* react: paths.react,
-    reacttypescript: paths.reacttypescript,
+    // typescript: paths.typescript,
+    react: paths.react,
+    /* reacttypescript: paths.reacttypescript,
     next: paths.next,
     node: paths.node,
     git: paths.git,
@@ -16,7 +16,7 @@ describe('Path resources', () => {
   }).forEach(([_, serialisedPath]) => {
     const path = deserializePath(serialisedPath)
 
-    describe('Path resources', () => {
+    describe(`"${path.title}" path resources`, () => {
       path.resources.forEach((pathResource) => {
         it(`"${pathResource.title}" [${pathResource.url}]`, () => {
           cy.checkResourceHealth(pathResource)
@@ -24,7 +24,7 @@ describe('Path resources', () => {
       })
     })
 
-    describe('Additional resources', () => {
+    describe(`"${path.title}" additional resources`, () => {
       path.extras.forEach((pathExtra) => {
         describe(`"${pathExtra.title}" additional resources`, () => {
           pathExtra.resources.forEach((pathExtraResource) => {

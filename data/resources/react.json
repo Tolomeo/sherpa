@@ -42,10 +42,9 @@
     "type": ["course"]
   },
   "https://github.com/arturmolenda/project-manager": {
-    "title": "Project-Manager",
+    "title": "arturmolenda/project-manager",
     "url": "https://github.com/arturmolenda/project-manager",
-    "type": ["example"],
-    "source": "github.com/arturmolenda"
+    "type": ["example"]
   },
   "https://learntdd.in/react": {
     "title": "Learn TDD in React",
@@ -64,22 +63,19 @@
     "type": ["tutorial", "collection"]
   },
   "https://github.com/enaqx/awesome-react": {
-    "title": "Awesome React",
+    "title": "enaqx/awesome-react",
     "url": "https://github.com/enaqx/awesome-react",
-    "type": ["collection"],
-    "source": "github.com/enaqx"
+    "type": ["collection"]
   },
   "https://github.com/xgrommx/awesome-redux": {
-    "title": "Awesome Redux",
+    "title": "xgrommx/awesome-redux",
     "url": "https://github.com/xgrommx/awesome-redux",
-    "type": ["collection"],
-    "source": "github.com/xgrommx"
+    "type": ["collection"]
   },
   "https://github.com/khaledosman/react-redux-realworld-example-app": {
-    "title": "React + Redux RealWorld example app",
+    "title": "khaledosman/react-redux-realworld-example-app",
     "url": "https://github.com/khaledosman/react-redux-realworld-example-app",
-    "type": ["example"],
-    "source": "github.com/khaledosman"
+    "type": ["example"]
   },
   "https://reactjs.org/community/examples.html": {
     "title": "Example Projects",
@@ -88,10 +84,9 @@
     "source": "reactjs.org/community"
   },
   "https://github.com/hairarrow/btship": {
-    "title": "Battleship Game",
+    "title": "hairarrow/btship",
     "url": "https://github.com/hairarrow/btship",
-    "type": ["example"],
-    "source": "github.com/hairarrow"
+    "type": ["example"]
   },
   "https://daveceddia.com/react-practice-projects": {
     "title": "6 Fun React Project Ideas",
@@ -99,7 +94,7 @@
     "type": ["guide"]
   },
   "https://scrimba.com/learn/learnreact": {
-    "title": "Learn React for free",
+    "title": "React Tutorial: Learn React JS",
     "url": "https://scrimba.com/learn/learnreact",
     "type": ["course"]
   },
@@ -139,19 +134,17 @@
     "type": ["course"]
   },
   "https://github.com/djohal/imdb-replica-react": {
-    "title": "IMDb Clone",
+    "title": "djohal/imdb-replica-react",
     "url": "https://github.com/djohal/imdb-replica-react",
-    "type": ["example"],
-    "source": "github.com/djohal"
+    "type": ["example"]
   },
   "https://github.com/oguz3/spotify-web-player": {
-    "title": "A front-end clone project of the Spotify Web Player.",
+    "title": "oguz3/spotify-web-player",
     "url": "https://github.com/oguz3/spotify-web-player",
-    "type": ["example"],
-    "source": "github.com/oguz3"
+    "type": ["example"]
   },
   "https://wanago.io/courses/javascript-testing-tutorial": {
-    "title": "Series: JavaScript testing tutorial",
+    "title": "JavaScript testing tutorial Archives",
     "url": "https://wanago.io/courses/javascript-testing-tutorial",
     "type": ["guide", "series"]
   },
@@ -171,10 +164,9 @@
     "type": ["reference"]
   },
   "https://github.com/tyroprogrammer/learn-react-app": {
-    "title": "Learn React App",
+    "title": "tyroprogrammer/learn-react-app",
     "url": "https://github.com/tyroprogrammer/learn-react-app",
-    "type": ["course"],
-    "source": "github.com/tyroprogrammer"
+    "type": ["course"]
   },
   "https://www.taniarascia.com/redux-react-guide": {
     "title": "Redux Tutorial: An Overview and Walkthrough",
@@ -187,15 +179,14 @@
     "type": ["exercise", "collection"]
   },
   "https://wattenberger.com/blog/react-hooks": {
-    "title": "Thinking in React Hooks",
+    "title": "Amelia Wattenberger",
     "url": "https://wattenberger.com/blog/react-hooks",
     "type": ["guide"]
   },
   "https://github.com/Asabeneh/30-Days-Of-React": {
-    "title": "30 Days Of React",
+    "title": "Asabeneh/30-Days-Of-React",
     "url": "https://github.com/Asabeneh/30-Days-Of-React",
-    "type": ["course"],
-    "source": "github.com/Asabeneh"
+    "type": ["course"]
   },
   "https://www.youtube.com/playlist?list=PLYSZyzpwBEWTBdbfStjqJSGaulqcHoNkT": {
     "title": "React.js Unit Testing and Integration Testing Tutorial",
@@ -220,7 +211,7 @@
     "type": ["book"]
   },
   "https://obedparla.com/code/a-visual-guide-to-react-mental-models": {
-    "title": "A Visual Guide To React Mental Models",
+    "title": "A visual guide to React Mental models",
     "url": "https://obedparla.com/code/a-visual-guide-to-react-mental-models",
     "type": ["guide", "series"]
   },
@@ -235,10 +226,9 @@
     "type": ["guide"]
   },
   "https://github.com/alan2207/bulletproof-react": {
-    "title": "Bulletproof React",
+    "title": "alan2207/bulletproof-react",
     "url": "https://github.com/alan2207/bulletproof-react",
-    "type": ["reference", "collection"],
-    "source": "github.com/alan2207/bulletproof-react"
+    "type": ["reference", "collection"]
   },
   "https://pomb.us/build-your-own-react": {
     "title": "Build your own React",
@@ -266,7 +256,7 @@
     "type": ["tutorial", "collection"]
   },
   "https://snipcart.com/blog/spa-seo": {
-    "title": "SPA SEO: A Single-Page App Guide to Google’s 1st Page",
+    "title": "SPA SEO: Optimize Your Single-Page App for Google",
     "url": "https://snipcart.com/blog/spa-seo",
     "type": ["guide"]
   },
@@ -281,10 +271,9 @@
     "type": ["exercise", "collection"]
   },
   "https://github.com/sudheerj/reactjs-interview-questions": {
-    "title": "React Interview Questions & Answers",
+    "title": "sudheerj/reactjs-interview-questions",
     "url": "https://github.com/sudheerj/reactjs-interview-questions",
-    "type": ["reference"],
-    "source": "github.com/sudheerj"
+    "type": ["reference"]
   },
   "https://ui.dev/why-react-hooks": {
     "title": "Why React Hooks?",
@@ -329,7 +318,7 @@
     "type": ["generator"]
   },
   "https://reactjs.org/docs/getting-started.html": {
-    "title": "React documentation",
+    "title": "Getting Started – React",
     "url": "https://reactjs.org/docs/getting-started.html",
     "type": ["reference"]
   },
@@ -344,15 +333,14 @@
     "type": ["reference"]
   },
   "https://react-layouts.com": {
-    "title": "Grab-and-go layouts for React",
+    "title": "React Layouts",
     "url": "https://react-layouts.com",
     "type": ["reference", "generator"]
   },
   "https://antonioru.github.io/beautiful-react-hooks": {
     "title": "Beautiful React Hooks",
     "url": "https://antonioru.github.io/beautiful-react-hooks",
-    "type": ["reference"],
-    "source": "github.com/antonioru"
+    "type": ["reference"]
   },
   "https://alexsidorenko.com/blog/react-render-cheat-sheet": {
     "title": "A Visual Guide to React Rendering - Cheat Sheet",
@@ -365,13 +353,13 @@
     "type": ["reference"]
   },
   "https://reactjs.org/community/support.html": {
-    "title": "React community",
+    "title": "Where To Get Support – React",
     "url": "https://reactjs.org/community/support.html",
     "type": ["community"]
   },
   "https://reactjs.org/blog": {
-    "title": "React blog",
-    "url": "https://reactjs.org/blog",
+    "title": "React - All Posts",
+    "url": "https://reactjs.org/blog/all.html",
     "type": ["blog"]
   },
   "https://ui.dev/blog/": {
@@ -396,7 +384,7 @@
     "type": ["blog"]
   },
   "https://reactdigest.net": {
-    "title": "react digest",
+    "title": "React Digest",
     "url": "https://reactdigest.net",
     "type": ["community"]
   },
@@ -406,9 +394,8 @@
     "type": ["tutorial"]
   },
   "https://github.com/brillout/awesome-react-components": {
-    "title": "Absolutely Awesome React Components & Libraries",
+    "title": "brillout/awesome-react-components",
     "url": "https://github.com/brillout/awesome-react-components",
-    "type": ["reference", "collection"],
-    "source": "github.com/brillout"
+    "type": ["reference", "collection"]
   }
 }
