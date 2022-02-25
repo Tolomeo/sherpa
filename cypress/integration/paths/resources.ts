@@ -8,9 +8,9 @@ describe('Resources', () => {
     // javascript: paths.javascript,
     // typescript: paths.typescript,
     // react: paths.react,
-    reacttypescript: paths.reacttypescript,
-    /* next: paths.next,
-    node: paths.node,
+    // reacttypescript: paths.reacttypescript,
+    next: paths.next,
+    /* node: paths.node,
     git: paths.git,
     neovim: paths.neovim, */
   }).forEach(([_, serialisedPath]) => {
