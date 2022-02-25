@@ -36,10 +36,9 @@
     "type": ["guide", "reference", "collection"]
   },
   "https://github.com/brunopulis/awesome-a11y": {
-    "title": "Awesome Accessibility",
+    "title": "brunopulis/awesome-a11y",
     "url": "https://github.com/brunopulis/awesome-a11y",
-    "type": ["reference", "collection"],
-    "source": "github.com/brunopulis"
+    "type": ["reference", "collection"]
   },
   "https://www.a11yproject.com/posts": {
     "title": "Posts - The A11Y Project",
@@ -47,7 +46,7 @@
     "type": ["guide", "collection"]
   },
   "https://www.udacity.com/course/web-accessibility--ud891": {
-    "title": "Web Accessibility by Google",
+    "title": "What is Web Accessibility?",
     "url": "https://www.udacity.com/course/web-accessibility--ud891",
     "type": ["course"]
   },
@@ -103,27 +102,27 @@
     "type": ["guide", "collection"]
   },
   "https://www.w3.org/WAI/roles/developers": {
-    "title": "Resources for Developers: Web Accessibility Initiative",
+    "title": "Resources for Developers | Web Accessibility Initiative (WAI)",
     "url": "https://www.w3.org/WAI/roles/developers",
     "type": ["guide", "collection"]
   },
   "https://www.w3.org/WAI/roles/designers": {
-    "title": "Resources for Designers: Web Accessibility Initiative",
+    "title": "Resources for Designers | Web Accessibility Initiative (WAI)",
     "url": "https://www.w3.org/WAI/roles/designers",
     "type": ["guide", "collection"]
   },
   "https://www.w3.org/WAI/roles/writers": {
-    "title": "Resources for Content Writers",
+    "title": "Resources for Content Writers | Web Accessibility Initiative (WAI)",
     "url": "https://www.w3.org/WAI/roles/writers",
     "type": ["guide", "collection"]
   },
   "https://www.w3.org/WAI/roles/testers": {
-    "title": "Resources for Evaluators and Testers",
+    "title": "Resources for Evaluators and Testers | Web Accessibility Initiative (WAI)",
     "url": "https://www.w3.org/WAI/roles/testers",
     "type": ["guide", "collection"]
   },
   "https://www.w3.org/WAI/roles/managers": {
-    "title": "Resources for Managers",
+    "title": "Resources for Managers | Web Accessibility Initiative (WAI)",
     "url": "https://www.w3.org/WAI/roles/managers/",
     "type": ["guide", "collection"]
   },
@@ -251,10 +250,9 @@
     "type": ["reference", "collection"]
   },
   "https://github.com/fejes713/accessibility-guide": {
-    "title": "Accessibility Guide",
+    "title": "fejes713/accessibility-guide",
     "url": "https://github.com/fejes713/accessibility-guide",
-    "type": ["reference"],
-    "source": "github.com/fejes713"
+    "type": ["reference"]
   },
   "https://www.pauljadam.com/resources.html": {
     "title": "Resources - Paul J. Adam",
@@ -313,7 +311,7 @@
     "type": ["blog"]
   },
   "https://www.sarasoueidan.com/blog": {
-    "title": "Sara Soueidan Blog",
+    "title": "Blog",
     "url": "https://www.sarasoueidan.com/blog",
     "type": ["blog"]
   },

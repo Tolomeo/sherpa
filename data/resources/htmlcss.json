@@ -1,11 +1,11 @@
 {
   "https://internetingishard.netlify.app": {
-    "title": "Interneting is hard (But it doesn’t have to be)",
+    "title": "Interneting Is Hard",
     "url": "https://internetingishard.netlify.app",
     "type": ["course"]
   },
   "https://www.freecodecamp.org/learn/responsive-web-design": {
-    "title": "Responsive Web Design",
+    "title": "Responsive Web Design Certification",
     "url": "https://www.freecodecamp.org/learn/responsive-web-design",
     "type": ["course", "collection"]
   },
@@ -28,49 +28,49 @@
     "source": "flukeout.github.io"
   },
   "https://htmlreference.io": {
-    "title": "htmlreference.io",
+    "title": "HTML Reference",
     "url": "https://htmlreference.io",
     "type": ["reference"],
     "source": "htmlreference.io"
   },
   "https://cssreference.io": {
-    "title": "cssreference.io",
+    "title": "CSS Reference",
     "url": "https://cssreference.io",
     "type": ["reference"],
     "source": "cssreference.io"
   },
   "https://flexbox.io": {
-    "title": "What the flexbox?!",
+    "title": "What The Flexbox?!",
     "url": "https://flexbox.io",
     "type": ["course"],
     "source": "flexbox.io"
   },
   "https://flexboxfroggy.com": {
-    "title": "Flexbox froggy",
+    "title": "Flexbox Froggy",
     "url": "https://flexboxfroggy.com",
     "type": ["game"],
     "source": "flexboxfroggy.com"
   },
   "https://cssgrid.io": {
-    "title": "CSS grid.",
+    "title": "CSS Grid",
     "url": "https://cssgrid.io",
     "type": ["course"],
     "source": "cssgrid.io"
   },
   "https://cssgridgarden.com": {
-    "title": "Grid garden",
+    "title": "Grid Garden",
     "url": "https://cssgridgarden.com",
     "type": ["game"],
     "source": "cssgridgarden.com"
   },
   "https://scrimba.com/learn/cssvariables": {
-    "title": "Learn CSS Variables for free",
+    "title": "CSS variables tutorial",
     "url": "https://scrimba.com/learn/cssvariables",
     "type": ["course"],
     "source": "scrimba.com"
   },
   "https://moderncss.dev": {
-    "title": "Modern CSS Solutions for Old CSS Problems",
+    "title": "Modern CSS Solutions",
     "url": "https://moderncss.dev",
     "type": ["tutorial", "collection"],
     "source": "moderncss.dev"
@@ -87,16 +87,14 @@
     "type": ["example", "collection"]
   },
   "https://github.com/diegocard/awesome-html5": {
-    "title": "Awesome HTML5",
+    "title": "diegocard/awesome-html5",
     "url": "https://github.com/diegocard/awesome-html5",
-    "type": ["reference", "collection"],
-    "source": "github.com/diegocard"
+    "type": ["reference", "collection"]
   },
   "https://github.com/awesome-css-group/awesome-css": {
-    "title": "Awesome CSS",
+    "title": "awesome-css-group/awesome-css",
     "url": "https://github.com/awesome-css-group/awesome-css",
-    "type": ["reference", "collection"],
-    "source": "github.com/awesome-css-group"
+    "type": ["reference", "collection"]
   },
   "https://learn.shayhowe.com/html-css": {
     "title": "Learn to Code HTML & CSS",
@@ -109,7 +107,7 @@
     "type": ["course"]
   },
   "https://scrimba.com/learn/htmlcss": {
-    "title": "HTML & CSS crash course",
+    "title": "HTML and CSS course",
     "url": "https://scrimba.com/learn/htmlcss",
     "type": ["course"]
   },
@@ -119,7 +117,7 @@
     "type": ["course"]
   },
   "https://www.cronj.com/frontend-development/html.html": {
-    "title": "HTML - A Complete Guide to Master the Top Programming Language",
+    "title": "Introduction to HTML",
     "url": "https://www.cronj.com/frontend-development/html.html",
     "type": ["course"]
   },
@@ -134,13 +132,12 @@
     "type": ["course"]
   },
   "https://github.com/micromata/awesome-css-learning": {
-    "title": "Awesome CSS Learning",
+    "title": "micromata/awesome-css-learning",
     "url": "https://github.com/micromata/awesome-css-learning",
-    "type": ["reference", "collection"],
-    "source": "github.com/micromata"
+    "type": ["reference", "collection"]
   },
   "https://frontendmasters.com/bootcamp": {
-    "title": "Web Development Bootcamp",
+    "title": "Frontend Masters Online Bootcamp",
     "url": "https://frontendmasters.com/bootcamp",
     "type": ["course"]
   },
@@ -216,8 +213,8 @@
     "type": ["example", "collection"]
   },
   "https://html.spec.whatwg.org": {
-    "title": "HTML standard",
-    "url": "https://html.spec.whatwg.org",
+    "title": "HTML Standard",
+    "url": "https://html.spec.whatwg.org/multipage",
     "type": ["reference"]
   },
   "https://css-tricks.com/how-to-section-your-html": {
@@ -241,7 +238,7 @@
     "type": ["reference"]
   },
   "https://madebymike.github.io/html5-periodic-table": {
-    "title": "Periodic table of HTML elements",
+    "title": "Periodic Table of HTML elements",
     "url": "https://madebymike.github.io/html5-periodic-table",
     "type": ["reference"]
   },
@@ -256,7 +253,7 @@
     "type": ["tutorial", "collection"]
   },
   "https://rtlstyling.com": {
-    "title": "RTL Styling 101",
+    "title": "Right-to-left Styling",
     "url": "https://rtlstyling.com",
     "type": ["course"]
   },
@@ -311,10 +308,9 @@
     "type": ["course"]
   },
   "https://github.com/you-dont-need/You-Dont-Need-JavaScript": {
-    "title": "You Don't Need JavaScript",
+    "title": "you-dont-need/You-Dont-Need-JavaScript",
     "url": "https://github.com/you-dont-need/You-Dont-Need-JavaScript",
-    "type": ["example", "collection"],
-    "source": "github.com/you-dont-need"
+    "type": ["example", "collection"]
   },
   "http://getbem.com": {
     "title": "BEM — Block Element Modifier",
@@ -389,7 +385,7 @@
     "type": ["reference"]
   },
   "https://caninclude.glitch.me": {
-    "title": "Can I include",
+    "title": "Caninclude",
     "url": "https://caninclude.glitch.me",
     "type": ["reference"]
   },

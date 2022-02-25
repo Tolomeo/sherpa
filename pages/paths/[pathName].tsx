@@ -55,6 +55,9 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
+const pathResourcesTestId = 'path.resources'
+const pathExtrasTestId = 'path.extras'
+
 export default function PathPage({ path }: Props) {
   return (
     <Box>
@@ -91,7 +94,9 @@ export default function PathPage({ path }: Props) {
             <Grid container>
               <Grid item xs={12} md={8}>
                 <Typography variant="h1">
-                  The <br /> <u>{path.title}</u> <br /> learning path
+                  The <br />
+                  <u>{path.title}</u> <br />
+                  learning path
                 </Typography>
               </Grid>
             </Grid>
@@ -112,7 +117,7 @@ export default function PathPage({ path }: Props) {
         )}
 
         <Box pb={4}>
-          <Container>
+          <Container data-testid={pathResourcesTestId}>
             <Grid container>
               <Grid item xs={12} md={8} xl={6}>
                 <ResourcesTimeline resources={path.resources} />
@@ -126,7 +131,7 @@ export default function PathPage({ path }: Props) {
             <Container>
               <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
                 {path.extras.map((extra, index) => (
-                  <Box key={index}>
+                  <Box data-testid={pathExtrasTestId} key={index}>
                     <aside>
                       <Typography component="h2" variant="h5" gutterBottom>
                         {extra.title}

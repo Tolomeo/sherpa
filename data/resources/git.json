@@ -45,17 +45,17 @@
     "type": ["guide"]
   },
   "http://gitlet.maryrosecook.com": {
-    "title": "GITLET.JS",
+    "title": "Gitlet",
     "url": "http://gitlet.maryrosecook.com",
     "type": ["guide", "example"]
   },
   "https://git-scm.com/book/en/v2": {
-    "title": "Pro Git",
+    "title": "Git - Book",
     "url": "https://git-scm.com/book/en/v2",
     "type": ["book"]
   },
   "https://firstaidgit.io": {
-    "title": "first aid git",
+    "title": "First Aid git",
     "url": "https://firstaidgit.io",
     "type": ["reference"]
   },
@@ -70,10 +70,9 @@
     "type": ["guide"]
   },
   "https://github.com/dictcp/awesome-git": {
-    "title": "Awesome Git",
+    "title": "dictcp/awesome-git",
     "url": "https://github.com/dictcp/awesome-git",
-    "type": ["reference", "collection"],
-    "source": "github.com/dictcp"
+    "type": ["reference", "collection"]
   },
   "https://www.coursera.org/learn/version-control-with-git": {
     "title": "Version Control with Git",
@@ -86,7 +85,7 @@
     "type": ["exercise", "collection"]
   },
   "https://www.atlassian.com/git/tutorials": {
-    "title": "Become a git guru.",
+    "title": "Git Tutorials and Training",
     "url": "https://www.atlassian.com/git/tutorials",
     "type": ["course", "collection"]
   },
@@ -160,7 +159,7 @@
     "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
   },
   "https://trunkbaseddevelopment.com": {
-    "title": "Trunk Based Development",
+    "title": "Introduction",
     "url": "https://trunkbaseddevelopment.com",
     "type": ["reference"]
   },
@@ -180,10 +179,9 @@
     "type": ["guide"]
   },
   "https://github.com/joho/awesome-code-review": {
-    "title": "Awesome Code Review",
+    "title": "joho/awesome-code-review",
     "url": "https://github.com/joho/awesome-code-review",
-    "type": ["reference", "collection"],
-    "source": "github.com/joho"
+    "type": ["reference", "collection"]
   },
   "https://dev.to/samuelfaure/how-to-learn-git-slowly-38fa": {
     "title": "How to learn Git slowly.",
@@ -192,10 +190,9 @@
     "source": "dev.to/samuelfaure"
   },
   "https://github.com/RomuloOliveira/commit-messages-guide": {
-    "title": "Commit messages guide",
+    "title": "RomuloOliveira/commit-messages-guide",
     "url": "https://github.com/RomuloOliveira/commit-messages-guide",
-    "type": ["reference"],
-    "source": "github.com/RomuloOliveira"
+    "type": ["reference"]
   },
   "https://dangitgit.com/en": {
     "title": "Dangit, Git!?!",
@@ -203,12 +200,12 @@
     "type": ["reference"]
   },
   "https://learnxinyminutes.com/docs/git": {
-    "title": "Learn X in Y minutes Where X=git",
+    "title": "Learn X in Y Minutes",
     "url": "https://learnxinyminutes.com/docs/git",
     "type": ["reference", "guide"]
   },
   "https://gitirc.eu/git.html": {
-    "title": "git Manual Page",
+    "title": "git(1)",
     "url": "https://gitirc.eu/git.html",
     "type": ["reference"]
   },
@@ -223,16 +220,14 @@
     "type": ["reference"]
   },
   "https://github.com/arslanbilal/git-cheat-sheet": {
-    "title": "Git and Git Flow Cheat Sheet",
+    "title": "arslanbilal/git-cheat-sheet",
     "url": "https://github.com/arslanbilal/git-cheat-sheet",
-    "type": ["reference"],
-    "source": "github.com/arslanbilal"
+    "type": ["reference"]
   },
   "https://github.com/k88hudson/git-flight-rules": {
-    "title": "Flight rules for Git",
+    "title": "k88hudson/git-flight-rules",
     "url": "https://github.com/k88hudson/git-flight-rules",
-    "type": ["reference"],
-    "source": "github.com/k88hudson"
+    "type": ["reference"]
   },
   "https://groups.google.com/g/git-users": {
     "title": "Git for human beings - Google Groups",

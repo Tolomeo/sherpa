@@ -12,7 +12,7 @@
     "source": "nextjs.org"
   },
   "https://react2025.com": {
-    "title": "Start developing websites like it's 2025.",
+    "title": "React 2025",
     "url": "https://react2025.com",
     "type": ["tutorial"],
     "source": "react2025.com"
@@ -36,10 +36,9 @@
     "source": "youtube.com/colbz"
   },
   "https://github.com/salihozdemir/stackoverflow-clone": {
-    "title": "Stackoverflow Clone",
+    "title": "salihozdemir/stackoverflow-clone",
     "url": "https://github.com/salihozdemir/stackoverflow-clone",
-    "type": ["example"],
-    "source": "github.com/salihozdemir"
+    "type": ["example"]
   },
   "https://www.smashingmagazine.com/2021/09/lessons-learned-ecommerce-nextjs-case-study": {
     "title": "Rebuilding A Large E-Commerce Website With Next.js (Case Study)",
@@ -48,10 +47,9 @@
     "source": "smashingmagazine.com"
   },
   "https://github.com/unicodeveloper/awesome-nextjs": {
-    "title": "Awesome Next.js",
+    "title": "unicodeveloper/awesome-nextjs",
     "url": "https://github.com/unicodeveloper/awesome-nextjs",
-    "type": ["collection"],
-    "source": "github.com/unicodeveloper"
+    "type": ["collection"]
   },
   "https://www.youtube.com/playlist?list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH": {
     "title": "Next.js Tutorial for Beginners",
@@ -186,10 +184,9 @@
     "type": ["reference"]
   },
   "https://github.com/jaredpalmer/minimum-viable-saas": {
-    "title": "Minimum Viable SaaS",
+    "title": "jaredpalmer/minimum-viable-saas",
     "url": "https://github.com/jaredpalmer/minimum-viable-saas",
-    "type": ["reference", "example"],
-    "source": "github.com/jaredpalmer"
+    "type": ["reference", "example"]
   },
   "https://web.dev/image-component": {
     "title": "Building an effective Image Component",
@@ -201,10 +198,10 @@
     "url": "https://nextjs.org/blog",
     "type": ["blog"]
   },
-  "https://www.youtube.com/c/ZEITHQ": {
+  "https://www.youtube.com/c/VercelHQ": {
     "title": "Vercel - YouTube",
-    "url": "https://www.youtube.com/c/ZEITHQ",
+    "url": "https://www.youtube.com/c/VercelHQ",
     "type": ["blog"],
-    "source": "youtube.com/c/ZEITHQ"
+    "source": "youtube.com/c/VercelHQ"
   }
 }

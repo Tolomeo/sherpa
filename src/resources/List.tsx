@@ -6,22 +6,44 @@ type Props = {
   resources: Array<Resource>
 }
 
+const resourcesListTestId = 'resources.list'
+const resourcesListItemTestId = 'resources.list.item'
+const resourcesListItemLinkTestId = 'resources.list.item.link'
+const resourcesListItemTitleTestId = 'resources.list.item.title'
+const resourcesListItemSourceTestId = 'resources.list.item.source'
+
 const ResourcesList = ({ resources }: Props) => {
   return (
-    <List>
-      {resources.map((resource) => (
-        <Box key={resource.url}>
-          <Link href={resource.url} target="_blank" rel="noreferrer">
-            <Typography variant="overline" color="text.secondary">
-              {resource.source}
-            </Typography>
-            <Typography component="span" variant="h6" display="block">
-              {resource.title}
-            </Typography>
-          </Link>
-        </Box>
-      ))}
-    </List>
+    <Box data-testid={resourcesListTestId}>
+      <List>
+        {resources.map((resource) => (
+          <Box data-testid={resourcesListItemTestId} key={resource.url}>
+            <Link
+              data-testid={resourcesListItemLinkTestId}
+              href={resource.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Typography
+                data-testid={resourcesListItemSourceTestId}
+                variant="overline"
+                color="text.secondary"
+              >
+                {resource.source}
+              </Typography>
+              <Typography
+                data-testid={resourcesListItemTitleTestId}
+                component="span"
+                variant="h6"
+                display="block"
+              >
+                {resource.title}
+              </Typography>
+            </Link>
+          </Box>
+        ))}
+      </List>
+    </Box>
   )
 }
 

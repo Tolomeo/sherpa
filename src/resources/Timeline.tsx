@@ -18,11 +18,18 @@ type Props = {
   resources: Resource[]
 }
 
+const timelineTestId = 'resources.timeline'
+const timelineItemTestId = 'resources.timeline.item'
+const timelineItemLinkTestId = 'resources.timeline.item.link'
+const timelineItemTitleTestId = 'resources.timeline.item.title'
+const timelineItemSourceTestId = 'resources.timeline.item.source'
+const timelineItemTypeTestId = 'resources.timeline.item.type'
+
 const ResourcesTimeline = ({ resources }: Props) => {
   return (
-    <Timeline position="right">
+    <Timeline position="right" data-testid={timelineTestId}>
       {Object.values(resources).map((resource, index) => (
-        <TimelineItem key={resource.url}>
+        <TimelineItem key={resource.url} data-testid={timelineItemTestId}>
           <TimelineSeparator>
             <TimelineConnector
               sx={{
@@ -42,11 +49,21 @@ const ResourcesTimeline = ({ resources }: Props) => {
           </TimelineSeparator>
           <TimelineContent>
             <Box pt={1.5}>
-              <Link href={resource.url} target="_blank" rel="noreferrer">
-                <Typography variant="overline" color="text.secondary">
+              <Link
+                data-testid={timelineItemLinkTestId}
+                href={resource.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Typography
+                  data-testid={timelineItemSourceTestId}
+                  variant="overline"
+                  color="text.secondary"
+                >
                   {resource.source}
                 </Typography>
                 <Typography
+                  data-testid={timelineItemTitleTestId}
                   component="span"
                   variant="h6"
                   paddingBottom={1}
@@ -56,7 +73,12 @@ const ResourcesTimeline = ({ resources }: Props) => {
                 </Typography>
                 <Stack direction="row" spacing={1} component="span">
                   {resource.type.map((type) => (
-                    <Chip key={type} label={type} size="small" />
+                    <Chip
+                      data-testid={timelineItemTypeTestId}
+                      key={type}
+                      label={type}
+                      size="small"
+                    />
                   ))}
                 </Stack>
               </Link>

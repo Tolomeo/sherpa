@@ -10,13 +10,13 @@
     "type": ["course"]
   },
   "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu": {
-    "title": "Asyncronous javascript",
+    "title": "Asynchronous JavaScript",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu",
     "type": ["course"],
     "source": "youtube.com/c/TheNetNinja"
   },
   "https://javascript30.com": {
-    "title": "Javascript30",
+    "title": "JavaScript 30",
     "url": "https://javascript30.com",
     "type": ["exercise", "tutorial", "collection"]
   },
@@ -36,7 +36,7 @@
     "type": ["reference", "book"]
   },
   "https://jskatas.org": {
-    "title": "Javascript katas",
+    "title": "JavaScript Katas",
     "url": "https://jskatas.org",
     "type": ["exercise", "collection"]
   },
@@ -46,10 +46,9 @@
     "type": ["exercise", "collection"]
   },
   "https://github.com/ryanmcdermott/clean-code-javascript": {
-    "title": "Clean-code-javascript",
+    "title": "ryanmcdermott/clean-code-javascript",
     "url": "https://github.com/ryanmcdermott/clean-code-javascript",
-    "type": ["guide"],
-    "source": "github.com/ryanmcdermott"
+    "type": ["guide"]
   },
   "https://eloquentjavascript.net": {
     "title": "Eloquent JavaScript",
@@ -57,10 +56,9 @@
     "type": ["book"]
   },
   "https://github.com/getify/Functional-Light-JS": {
-    "title": "Functional-Light JavaScript",
+    "title": "getify/Functional-Light-JS",
     "url": "https://github.com/getify/Functional-Light-JS",
-    "type": ["book"],
-    "source": "github.com/getify"
+    "type": ["book"]
   },
   "https://github.com/gothinkster/web-components-realworld-example-app": {
     "title": "Vanilla JS + Web Components example app",
@@ -80,22 +78,19 @@
     "type": ["guide"]
   },
   "https://github.com/sorrycc/awesome-javascript": {
-    "title": "Awesome JavaScript",
+    "title": "sorrycc/awesome-javascript",
     "url": "https://github.com/sorrycc/awesome-javascript",
-    "type": ["reference", "collection"],
-    "source": "github.com/sorrycc"
+    "type": ["reference", "collection"]
   },
   "https://github.com/bradtraversy/vanillawebprojects": {
-    "title": "20+ Web Projects With Vanilla JavaScript",
+    "title": "bradtraversy/vanillawebprojects",
     "url": "https://github.com/bradtraversy/vanillawebprojects",
-    "type": ["example", "collection"],
-    "source": "github.com/bradtraversy"
+    "type": ["example", "collection"]
   },
   "https://github.com/leonardomso/33-js-concepts": {
-    "title": "33 Concepts Every JavaScript Developer Should Know",
+    "title": "leonardomso/33-js-concepts",
     "url": "https://github.com/leonardomso/33-js-concepts",
-    "type": ["reference", "collection"],
-    "source": "github.com/leonardomso"
+    "type": ["reference", "collection"]
   },
   "https://www.youtube.com/watch?v=r9HdJ8P6GQI": {
     "title": "JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests",
@@ -109,16 +104,14 @@
     "type": ["guide"]
   },
   "https://github.com/goldbergyoni/javascript-testing-best-practices": {
-    "title": "Javascript & Node.js Testing Best Practices",
+    "title": "goldbergyoni/javascript-testing-best-practices",
     "url": "https://github.com/goldbergyoni/javascript-testing-best-practices",
-    "type": ["guide", "reference"],
-    "source": "github.com/goldbergyoni"
+    "type": ["guide", "reference"]
   },
   "https://github.com/mbeaudru/modern-js-cheatsheet": {
-    "title": "Modern JavaScript Cheatsheet",
+    "title": "mbeaudru/modern-js-cheatsheet",
     "url": "https://github.com/mbeaudru/modern-js-cheatsheet",
-    "type": ["reference", "collection"],
-    "source": "github.com/mbeaudru"
+    "type": ["reference", "collection"]
   },
   "https://dev.to/lydiahallie/series/3341": {
     "title": "JavaScript Visualized",
@@ -133,16 +126,14 @@
     "source": "digitalocean.com/community"
   },
   "https://github.com/getify/You-Dont-Know-JS": {
-    "title": "You Don't Know JS Yet (book series) - 2nd Edition",
+    "title": "getify/You-Dont-Know-JS",
     "url": "https://github.com/getify/You-Dont-Know-JS",
-    "type": ["book"],
-    "source": "github.com/getify"
+    "type": ["book"]
   },
   "https://github.com/lydiahallie/javascript-questions": {
-    "title": "JavaScript Questions",
+    "title": "lydiahallie/javascript-questions",
     "url": "https://github.com/lydiahallie/javascript-questions",
-    "type": ["reference", "exercise", "collection"],
-    "source": "github.com/lydiahallie"
+    "type": ["reference", "exercise", "collection"]
   },
   "https://frontendmasters.com/guides/javascript-enlightenment": {
     "title": "JavaScript (ES2015+) Enlightenment",
@@ -155,16 +146,14 @@
     "type": ["course"]
   },
   "https://github.com/micromata/awesome-javascript-learning": {
-    "title": "Awesome JavaScript Learning",
+    "title": "micromata/awesome-javascript-learning",
     "url": "https://github.com/micromata/awesome-javascript-learning",
-    "type": ["reference", "collection"],
-    "source": "github.com/micromata"
+    "type": ["reference", "collection"]
   },
   "https://github.com/workshopper/javascripting": {
-    "title": "Javascripting",
+    "title": "workshopper/javascripting",
     "url": "https://github.com/workshopper/javascripting",
-    "type": ["course"],
-    "source": "github.com/workshopper"
+    "type": ["course"]
   },
   "https://www.udemy.com/course/asynchronous-javascript-bootcamp": {
     "title": "Asynchronous JavaScript Bootcamp",
@@ -177,10 +166,9 @@
     "type": ["book"]
   },
   "https://github.com/artf/grapesjs": {
-    "title": "GrapesJS",
+    "title": "artf/grapesjs",
     "url": "https://github.com/artf/grapesjs",
-    "type": ["example"],
-    "source": "github.com/artf"
+    "type": ["example"]
   },
   "https://www.udacity.com/course/javascript-testing--ud549": {
     "title": "JavaScript Testing",
@@ -225,7 +213,7 @@
     "type": ["guide"]
   },
   "https://wesbos.com/javascript": {
-    "title": "JavaScript Notes & Reference",
+    "title": "Beginner JavaScript Notes",
     "url": "https://wesbos.com/javascript",
     "type": ["course"]
   },
@@ -258,7 +246,7 @@
     "type": ["guide"]
   },
   "https://mostly-adequate.gitbook.io/mostly-adequate-guide": {
-    "title": "Professor Frisby's Mostly Adequate Guide to Functional Programming",
+    "title": "mostly-adequate-guide",
     "url": "https://mostly-adequate.gitbook.io/mostly-adequate-guide",
     "type": ["book"]
   },
@@ -269,15 +257,14 @@
   },
   "https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model": {
     "title": "Understanding the DOM — Document Object Model",
-    "url": "https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-modl",
+    "url": "https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model",
     "type": ["tutorial", "series"],
     "source": "digitalocean.com/community"
   },
   "https://github.com/jiayihu/pretty-algorithms": {
-    "title": "Pretty algorithms",
+    "title": "jiayihu/pretty-algorithms",
     "url": "https://github.com/jiayihu/pretty-algorithms",
-    "type": ["reference", "collection"],
-    "source": "github.com/jiayihu"
+    "type": ["reference", "collection"]
   },
   "https://molily.de/robust-javascript/": {
     "title": "Robust Client-Side JavaScript – A Developer’s Guide",
@@ -285,10 +272,9 @@
     "type": ["book"]
   },
   "https://github.com/trekhleb/javascript-algorithms": {
-    "title": "JavaScript Algorithms and Data Structures",
+    "title": "trekhleb/javascript-algorithms",
     "url": "https://github.com/trekhleb/javascript-algorithms",
-    "type": ["reference", "collection"],
-    "source": "github.com/trekhleb"
+    "type": ["reference", "collection"]
   },
   "https://www.youtube.com/playlist?list=PLKoqnv2vTMUPOalM1zuWDP9OQl851WMM9": {
     "title": "JavaScript SEO",
@@ -347,10 +333,9 @@
     "type": ["course"]
   },
   "https://github.com/denysdovhan/wtfjs": {
-    "title": "What the f*ck JavaScript?",
+    "title": "denysdovhan/wtfjs",
     "url": "https://github.com/denysdovhan/wtfjs",
-    "type": ["guide"],
-    "source": "github.com/denysdovhan"
+    "type": ["guide"]
   },
   "https://js13kgames.com": {
     "title": "js13kGames - HTML5 and JavaScript Game Development Competition in just 13 kilobytes",
@@ -358,7 +343,7 @@
     "type": ["community"]
   },
   "https://github.com/you-dont-need/You-Dont-Need": {
-    "title": "You Don't Need",
+    "title": "you-dont-need/You-Dont-Need",
     "url": "https://github.com/you-dont-need/You-Dont-Need",
     "type": ["reference", "collection"],
     "source": "github.com/you-dont-need"
@@ -461,7 +446,7 @@
     "type": ["blog"]
   },
   "https://trekhleb.dev/blog": {
-    "title": "Trekhleb _ Blog",
+    "title": "Trekhleb | Blog",
     "url": "https://trekhleb.dev/blog",
     "type": ["blog"]
   },
