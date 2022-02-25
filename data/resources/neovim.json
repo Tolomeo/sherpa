@@ -5,17 +5,17 @@
     "type": ["guide"]
   },
   "https://www.openvim.com": {
-    "title": "OpenVim",
+    "title": "Interactive Vim tutorial",
     "url": "https://www.openvim.com",
     "type": ["tutorial"]
   },
   "http://www.vimgenius.com/lessons/vim-intro": {
-    "title": "Vim Intro",
+    "title": "VimGenius",
     "url": "http://www.vimgenius.com/lessons/vim-intro",
     "type": ["tutorial"]
   },
   "https://thevaluable.dev/vim-beginner": {
-    "title": "Vim from the ground up",
+    "title": "Are Your Ready for Vim?",
     "url": "https://thevaluable.dev/vim-beginner",
     "type": ["course"]
   },
@@ -25,22 +25,20 @@
     "type": ["guide"]
   },
   "https://www.youtube.com/playlist?list=PLSf43fnldIpYipi-FjzjV6fAYUGysfjY8": {
-    "title": "Vim and you",
+    "title": "Vim and You",
     "url": "https://www.youtube.com/playlist?list=PLSf43fnldIpYipi-FjzjV6fAYUGysfjY8",
     "type": ["tutorial", "collection"],
     "source": "youtube.com/c/CodeSmell"
   },
   "https://github.com/akrawchyk/awesome-vim": {
-    "title": "Awesome Vim",
+    "title": "akrawchyk/awesome-vim",
     "url": "https://github.com/akrawchyk/awesome-vim",
-    "type": ["reference", "collection"],
-    "source": "github.com/akrawchyk"
+    "type": ["reference", "collection"]
   },
   "https://github.com/rockerBOO/awesome-neovim": {
-    "title": "Awesome Neovim",
+    "title": "rockerBOO/awesome-neovim",
     "url": "https://github.com/rockerBOO/awesome-neovim",
-    "type": ["reference", "collection"],
-    "source": "github.com/rockerBOO"
+    "type": ["reference", "collection"]
   },
   "https://thoughtbot.com/upcase/vim": {
     "title": "Learn Vim",
@@ -53,16 +51,14 @@
     "type": ["guide"]
   },
   "https://github.com/iggredible/Learn-Vim": {
-    "title": "Learn Vim (the Smart Way)",
+    "title": "iggredible/Learn-Vim",
     "url": "https://github.com/iggredible/Learn-Vim",
-    "type": ["course"],
-    "source": "github.com/iggredible"
+    "type": ["course"]
   },
   "https://github.com/mhinz/vim-galore": {
-    "title": "Vim Galore",
+    "title": "mhinz/vim-galore",
     "url": "https://github.com/mhinz/vim-galore",
-    "type": ["course"],
-    "source": "github.com/mhinz"
+    "type": ["course"]
   },
   "https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f": {
     "title": "Learn Neovim The Practical Way",
@@ -70,7 +66,7 @@
     "type": ["tutorial", "collection"]
   },
   "http://vimcasts.org/episodes": {
-    "title": "Vim Casts",
+    "title": "Episodes",
     "url": "http://vimcasts.org/episodes",
     "type": ["tutorial", "series"]
   },
@@ -80,15 +76,14 @@
     "type": ["course"]
   },
   "http://www.vimgenius.com/lessons": {
-    "title": "Vimgenius lessons",
+    "title": "VimGenius",
     "url": "http://www.vimgenius.com/lessons",
     "type": ["tutorial", "collection"]
   },
   "https://github.com/jmoon018/PacVim": {
-    "title": "PacVim",
+    "title": "jmoon018/PacVim",
     "url": "https://github.com/jmoon018/PacVim",
-    "type": ["game"],
-    "source": "github.com/jmoon018"
+    "type": ["game"]
   },
   "https://www.moolenaar.net/habits.html": {
     "title": "Seven habits of effective text editing",
@@ -106,7 +101,7 @@
     "type": ["guide"]
   },
   "https://thoughtbot.com/upcase/tmux": {
-    "title": "Learn tmux _ Terminal Multiplexer",
+    "title": "Learn tmux",
     "url": "https://thoughtbot.com/upcase/tmux",
     "type": ["course"]
   },
@@ -117,18 +112,17 @@
     "source": "youtube.com/c/Vim-jpOrg"
   },
   "https://vimhelp.org": {
-    "title": "Vim help files",
+    "title": "Vim: help.txt",
     "url": "https://vimhelp.org",
     "type": ["reference"]
   },
   "https://github.com/nanotee/nvim-lua-guide": {
-    "title": "Getting started using Lua in Neovim",
+    "title": "nanotee/nvim-lua-guide",
     "url": "https://github.com/nanotee/nvim-lua-guide",
-    "type": ["reference"],
-    "source": "github.com/nanotee"
+    "type": ["reference"]
   },
   "https://learnxinyminutes.com/docs/vim": {
-    "title": "Learn X in Y minutes Where X=vim",
+    "title": "Learn X in Y Minutes",
     "url": "https://learnxinyminutes.com/docs/vim",
     "type": ["reference"]
   },
@@ -163,7 +157,7 @@
     "type": ["guide"]
   },
   "http://michael.peopleofhonoronly.com/vim": {
-    "title": "Vim Cheat Sheet for Programmers",
+    "title": "Vim Cheat Sheat for Programmers",
     "url": "http://michael.peopleofhonoronly.com/vim",
     "type": ["reference"]
   },
@@ -178,16 +172,14 @@
     "type": ["generator"]
   },
   "https://github.com/rafi/awesome-vim-colorschemes": {
-    "title": "Awesome Vim Color Schemes",
+    "title": "rafi/awesome-vim-colorschemes",
     "url": "https://github.com/rafi/awesome-vim-colorschemes",
-    "type": ["reference", "collection"],
-    "source": "github.com/rafi"
+    "type": ["reference", "collection"]
   },
   "https://github.com/amix/vimrc": {
-    "title": "The Ultimate vimrc",
+    "title": "amix/vimrc",
     "url": "https://github.com/amix/vimrc",
-    "type": ["example"],
-    "source": "github.com/amix"
+    "type": ["example"]
   },
   "https://thevaluable.dev": {
     "title": "The Valuable Dev",
@@ -242,14 +234,13 @@
   },
   "https://devhints.io/lua": {
     "title": "Lua cheatsheet",
-    "url": "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs",
+    "url": "https://devhints.io/lua",
     "type": ["reference"]
   },
   "https://github.com/ibhagwan/vim-cheatsheet": {
-    "title": "iBhagwan's (n)vim cheatsheet",
+    "title": "ibhagwan/vim-cheatsheet",
     "url": "https://github.com/ibhagwan/vim-cheatsheet",
-    "type": ["reference"],
-    "source": "github.com/ibhagwan"
+    "type": ["reference"]
   },
   "https://www.hillelwayne.com/post/intermediate-vim": {
     "title": "At least one Vim trick you might not know",

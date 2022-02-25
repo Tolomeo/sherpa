@@ -64,6 +64,7 @@ const checkResourceHealth = (resource: Resource) => {
         domain: '.youtube.com',
       })
       return resourceCheckStrategy.request(resource)
+    case 'thevaluable.dev': // this one rendets its own url instead of the title on first load
     case 'usehooks-ts.com': // this one weirdly gives 404 on first load
       return resourceCheckStrategy.visit(resource)
     case 'codepen.io':

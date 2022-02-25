@@ -11,8 +11,8 @@ describe('Resources', () => {
     // reacttypescript: paths.reacttypescript,
     // next: paths.next,
     // node: paths.node,
-    git: paths.git,
-    /* neovim: paths.neovim, */
+    // git: paths.git,
+    neovim: paths.neovim,
   }).forEach(([_, serialisedPath]) => {
     const path = deserializePath(serialisedPath)
 
