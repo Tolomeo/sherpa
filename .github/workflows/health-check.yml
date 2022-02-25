@@ -1,0 +1,16 @@
+name: Resources health-check
+
+on:
+  schedule:
+    # runs tests at 12:00 AM, every 10 days
+    - cron: '0 0 */10 * *'
+
+jobs:
+  Health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Path resources healthcheck
+        uses: cypress-io/github-action@v2
+        with:
+          spec: cypress/integration/paths/resources.ts # Running only resources tests
