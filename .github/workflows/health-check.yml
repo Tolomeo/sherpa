@@ -13,4 +13,4 @@ jobs:
       - name: Path resources healthcheck
         uses: cypress-io/github-action@v2
         with:
-          spec: cypress/integration/paths/resources.ts # Running only resources tests
+          spec: cypress/integration/paths/resources.spec.ts # Running only resources tests

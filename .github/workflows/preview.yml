@@ -34,6 +34,7 @@ jobs:
       - uses: cypress-io/github-action@v2
         env:
           CYPRESS_BASE_URL: ${{ needs.Deploy.outputs.preview-url }}
-        # with:
-        #   spec: cypress/integration/paths/pages.ts # Running only paths tests
+        with:
+          spec: cypress/integration/paths/pages.spec.ts # Running only paths tests
+
 
