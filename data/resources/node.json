@@ -1,6 +1,6 @@
 {
   "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js": {
-    "title": "Why The Hell Would I Use Node.js? A Case-by-Case Tutorial",
+    "title": "Why Use Node.js? A Comprehensive Tutorial with Examples",
     "url": "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js",
     "type": ["guide"],
     "source": "toptal.com"
@@ -42,22 +42,20 @@
     "source": "thenodeway.io"
   },
   "https://github.com/goldbergyoni/nodebestpractices": {
-    "title": "Node.js Best Practices",
+    "title": "goldbergyoni/nodebestpractices",
     "url": "https://github.com/goldbergyoni/nodebestpractices",
-    "type": ["guide", "reference"],
-    "source": "github.com/goldbergyoni"
+    "type": ["guide", "reference"]
   },
   "https://www.joyent.com/node-js/production": {
-    "title": "Node.js Best Practices",
+    "title": "Production Practices",
     "url": "https://www.joyent.com/node-js/production",
     "type": ["guide", "collection"],
     "source": "joyent.com"
   },
   "https://github.com/testjavascript/nodejs-integration-tests-best-practices": {
-    "title": "Integration Test Best Practices",
+    "title": "testjavascript/nodejs-integration-tests-best-practices",
     "url": "https://github.com/testjavascript/nodejs-integration-tests-best-practices",
-    "type": ["guide", "reference"],
-    "source": "github.com/goldbergyoni"
+    "type": ["guide", "reference"]
   },
   "https://softwareontheroad.com/ideal-nodejs-project-structure": {
     "title": "Bulletproof node.js project architecture",
@@ -66,28 +64,24 @@
     "source": "softwareontheroad.com"
   },
   "https://github.com/electerious/Ackee": {
-    "title": "Ackee",
+    "title": "electerious/Ackee",
     "url": "https://github.com/electerious/Ackee",
-    "type": ["example"],
-    "source": "github.com/electerious"
+    "type": ["example"]
   },
   "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS": {
-    "title": "Real World Design Patterns using the Node.js APIs",
+    "title": "nimit95/Real-world-Design-Patterns-Node-JS",
     "url": "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS",
-    "type": ["example", "collection"],
-    "source": "github.com/nimit95"
+    "type": ["example", "collection"]
   },
   "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html": {
-    "title": "NodeJS Security Cheat Sheet",
+    "title": "Nodejs Security",
     "url": "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html",
-    "type": ["guide", "reference"],
-    "source": "cheatsheetseries.owasp.org"
+    "type": ["guide", "reference"]
   },
   "https://github.com/sindresorhus/awesome-nodejs": {
-    "title": "Awesome Node.js",
+    "title": "sindresorhus/awesome-nodejs",
     "url": "https://github.com/sindresorhus/awesome-nodejs",
-    "type": ["reference", "collection"],
-    "source": "github.com/sindresorhus"
+    "type": ["reference", "collection"]
   },
   "https://github.com/goldbergyoni/javascript-testing-best-practices": {
     "title": "goldbergyoni/javascript-testing-best-practices",
@@ -115,10 +109,9 @@
     "type": ["course"]
   },
   "https://github.com/azat-co/practicalnode": {
-    "title": "Practical Node.js",
+    "title": "azat-co/practicalnode",
     "url": "https://github.com/azat-co/practicalnode",
-    "type": ["book"],
-    "source": "github.com/azat-co"
+    "type": ["book"]
   },
   "https://www.youtube.com/playlist?list=PLlxmoA0rQ-LyMoEYRyd1L9oDaTRXOXdZa": {
     "title": "Node Js Tutorial for Beginners: Getting Started with Node",
@@ -148,7 +141,7 @@
     "type": ["course"]
   },
   "https://goalkicker.com/NodeJSBook": {
-    "title": "Node.js Notes for Professionals",
+    "title": "Node.js Book",
     "url": "https://goalkicker.com/NodeJSBook",
     "type": ["book"]
   },
@@ -178,10 +171,9 @@
     "type": ["guide"]
   },
   "https://github.com/XOR-LIFE/node-production": {
-    "title": "Take Your NodeJS Project to The Production Environment (VPS/Dedicated Server)",
+    "title": "XOR-LIFE/node-production",
     "url": "https://github.com/XOR-LIFE/node-production",
-    "type": ["tutorial"],
-    "source": "github.com/XOR-LIFE"
+    "type": ["tutorial"]
   },
   "https://wanago.io/courses/node-js-typescript": {
     "title": "Node.js TypeScript",
@@ -209,18 +201,17 @@
     "type": ["tutorial"]
   },
   "https://github.com/ehmicky/cross-platform-node-guide": {
-    "title": "How to write cross-platform Node.js code.",
+    "title": "ehmicky/cross-platform-node-guide",
     "url": "https://github.com/ehmicky/cross-platform-node-guide",
-    "type": ["tutorial"],
-    "source": "github.com/ehmicky"
+    "type": ["tutorial"]
   },
   "https://web.dev/identity": {
-    "title": "Identity: Understand and build advanced authentication systems.",
+    "title": "Identity",
     "url": "https://web.dev/identity",
     "type": ["guide", "collection"]
   },
   "https://rapidapi.com/learn": {
-    "title": "RapidAPI Learn: API Development using fun challenges (with solutions!) and interactive examples.",
+    "title": "RapidAPI Learn",
     "url": "https://rapidapi.com/learn",
     "type": ["guide", "collection"]
   },
@@ -253,10 +244,9 @@
     "type": ["tutorial"]
   },
   "https://github.com/antsmartian/lets-build-express": {
-    "title": "lets-build-express",
+    "title": "antsmartian/lets-build-express",
     "url": "https://github.com/antsmartian/lets-build-express",
-    "type": ["tutorial"],
-    "source": "github.com/antsmartian"
+    "type": ["tutorial"]
   },
   "https://www.webdevdrops.com/en/build-static-site-generator-nodejs-8969ebe34b22": {
     "title": "Build a static site generator in 40 lines with Node.js",
@@ -296,22 +286,19 @@
     "source": "youtube.com/c/JSConfEU"
   },
   "https://github.com/public-apis/public-apis": {
-    "title": "Public APIs",
+    "title": "public-apis/public-apis",
     "url": "https://github.com/public-apis/public-apis",
-    "type": ["reference"],
-    "source": "github.com/public-apis"
+    "type": ["reference"]
   },
   "https://github.com/learning-zone/nodejs-interview-questions": {
-    "title": "Node.js Interview Questions",
+    "title": "learning-zone/nodejs-interview-questions",
     "url": "https://github.com/learning-zone/nodejs-interview-questions",
-    "type": ["reference"],
-    "source": "github.com/learning-zone"
+    "type": ["reference"]
   },
   "https://github.com/marmelab/awesome-rest": {
-    "title": "Awesome REST",
+    "title": "marmelab/awesome-rest",
     "url": "https://github.com/marmelab/awesome-rest",
-    "type": ["reference", "collection"],
-    "source": "github.com/marmelab"
+    "type": ["reference", "collection"]
   },
   "https://node.green": {
     "title": "Node.js ES2015/ES6, ES2016 and ES2017 support",
@@ -319,27 +306,25 @@
     "type": ["reference"]
   },
   "https://www.digitalocean.com/community/tools": {
-    "title": "Developer Tools",
+    "title": "Tools",
     "url": "https://www.digitalocean.com/community/tools",
     "type": ["generator", "collection"],
     "source": "digitalocean.com/community"
   },
-  "http://openmymind.net/redis.pdf": {
+  "https://www.openmymind.net/redis.pdf": {
     "title": "The Little Redis Book",
-    "url": "http://openmymind.net/redis.pdf",
+    "url": "https://www.openmymind.net/redis.pdf",
     "type": ["book"]
   },
   "https://github.com/APIDevTools": {
     "title": "API Dev Tools",
     "url": "https://github.com/APIDevTools",
-    "type": ["reference", "collection"],
-    "source": "github.com/APIDevTools"
+    "type": ["reference", "collection"]
   },
   "https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping": {
     "title": "Node Target Mapping · microsoft/TypeScript Wiki",
     "url": "https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping",
-    "type": ["reference"],
-    "source": "github.com/microsoft"
+    "type": ["reference"]
   },
   "https://nikhilm.github.io/uvbook/": {
     "title": "An Introduction to libuv",
@@ -362,7 +347,7 @@
     "type": ["blog"]
   },
   "https://www.toptal.com/developers/blog": {
-    "title": "Toptal Engineering Blog",
+    "title": "Software Engineering Blog & Programming Tutorials",
     "url": "https://www.toptal.com/developers/blog",
     "type": ["blog"]
   },

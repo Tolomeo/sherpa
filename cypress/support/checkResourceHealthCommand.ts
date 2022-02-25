@@ -36,12 +36,24 @@ const resourceCheckStrategy = {
       return this.visit(resource)
     })
   },
+  binary(resource: Resource) {
+    cy.request({
+      url: resource.url,
+      encoding: 'binary',
+    })
+  },
   notImplemented(resource: Resource) {
     cy.log(`Resource check not implemented for ${resource.source}`)
   },
 }
 
 const checkResourceHealth = (resource: Resource) => {
+  // checking if it is a downloadable resource
+  // so far only PDFs
+  if (resource.url.match(/\.pdf$/)) {
+    return resourceCheckStrategy.binary(resource)
+  }
+
   const host = new URL(resource.url).hostname.replace(/^www./, '')
 
   switch (host) {
