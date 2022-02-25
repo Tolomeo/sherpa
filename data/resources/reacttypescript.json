@@ -1,22 +1,18 @@
 {
   "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app": {
-    "title": "React (using hooks) + Redux RealWorld example app",
+    "title": "angelguzmaning/ts-redux-react-realworld-example-app",
     "url": "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app",
-    "type": ["example"],
-    "source": "github.com/angelguzmaning"
+    "type": ["example"]
   },
-
   "https://github.com/piotrwitek/react-redux-typescript-guide": {
-    "title": "React & Redux in TypeScript - Complete Guide",
+    "title": "piotrwitek/react-redux-typescript-guide",
     "url": "https://github.com/piotrwitek/react-redux-typescript-guide",
-    "type": ["guide"],
-    "source": "github.com/piotrwitek"
+    "type": ["guide"]
   },
   "https://github.com/mat-sz/2048": {
-    "title": "2048 clone (React/TypeScript/Redux)",
+    "title": "mat-sz/2048",
     "url": "https://github.com/mat-sz/2048",
-    "type": ["example"],
-    "source": "github.com/mat-sz"
+    "type": ["example"]
   },
   "https://react-typescript-cheatsheet.netlify.app": {
     "title": "React TypeScript Cheatsheets",
@@ -40,10 +36,9 @@
     "type": ["course"]
   },
   "https://github.com/hairarrow/btship": {
-    "title": "Btship: A take on the popular ship game built with TypeScript and React",
+    "title": "hairarrow/btship",
     "url": "https://github.com/hairarrow/btship",
-    "type": ["example"],
-    "source": "github.com/hairarrow"
+    "type": ["example"]
   },
   "https://egghead.io/courses/design-systems-with-react-and-typescript-in-storybook": {
     "title": "Design Systems with React and Typescript in Storybook",

@@ -13,8 +13,12 @@ declare global {
   }
 }
 
-const resourceHealthCheckStrategy = {
-  default(resource: Resource) {
+const resourceCheckStrategy = {
+  visit(resource: Resource) {
+    cy.visit(resource.url)
+    cy.get('title').should('contain.text', resource.title)
+  },
+  request(resource: Resource) {
     cy.request(resource.url).then((response) => {
       const document = new DOMParser().parseFromString(
         response.body,
@@ -29,40 +33,33 @@ const resourceHealthCheckStrategy = {
       // if we didn't receive the title in the response body
       // maybe it's a SPA and the title gets filled after the first render
       // so we visit the url and try
-      cy.visit(resource.url)
-      cy.get('title').should('contain.text', resource.title)
+      return this.visit(resource)
     })
   },
-  youtube(resource: Resource) {
-    // TODO: evaluate using youtube apis instead
-    cy.setCookie('CONSENT', 'YES+cb.20220215-09-p0.en-GB+F+903', {
-      domain: '.youtube.com',
-    })
-
-    return this.default(resource)
-  },
-  codepen(_resource: Resource) {
-    cy.log('CODEPEN HEALTHCHECK NOT YET IMPLEMENTED')
-  },
-  udemy(_resource: Resource) {
-    cy.log('UDEMY HEALTHCHECK NOT YET IMPLEMENTED')
+  notImplemented(resource: Resource) {
+    cy.log(`Resource check not implemented for ${resource.source}`)
   },
 }
 
 const checkResourceHealth = (resource: Resource) => {
-  if (resource.source.match(/youtube\.com/)) {
-    return resourceHealthCheckStrategy.youtube(resource)
-  }
+  const host = new URL(resource.url).hostname.replace(/^www./, '')
 
-  if (resource.source.match(/codepen\.io/)) {
-    return resourceHealthCheckStrategy.codepen(resource)
+  switch (host) {
+    case 'youtube.com':
+      // skipping consent check page
+      // TODO: evaluate using youtube apis instead?
+      cy.setCookie('CONSENT', 'YES+cb.20220215-09-p0.en-GB+F+903', {
+        domain: '.youtube.com',
+      })
+      return resourceCheckStrategy.request(resource)
+    case 'usehooks-ts.com': // this one weirdly gives 404 on first load
+      return resourceCheckStrategy.visit(resource)
+    case 'codepen.io':
+    case 'udemy.com':
+      return resourceCheckStrategy.notImplemented(resource)
+    default:
+      return resourceCheckStrategy.request(resource)
   }
-
-  if (resource.source.match(/udemy\.com/)) {
-    return resourceHealthCheckStrategy.udemy(resource)
-  }
-
-  return resourceHealthCheckStrategy.default(resource)
 }
 
 Cypress.Commands.add('checkResourceHealth', checkResourceHealth)
