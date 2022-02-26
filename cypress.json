@@ -1,6 +1,5 @@
 {
   "baseUrl": "http://localhost:3000",
   "video": false,
-  "chromeWebSecurity": false,
-  "retries": 1
+  "chromeWebSecurity": false
 }
