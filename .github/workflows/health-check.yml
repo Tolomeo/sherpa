@@ -8,7 +8,7 @@ on:
 jobs:
   Health-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 45 # to prevent a hanging process from using all CI minutes
+    timeout-minutes: 45 # higher timeout because network requests can be slow in CI
     steps:
       - uses: actions/checkout@v2
       - name: Path resources healthcheck
@@ -17,6 +17,6 @@ jobs:
           CYPRESS_baseUrl: https://the-learning-path.vercel.app
           CYPRESS_retries: 2
           CYPRESS_pageLoadTimeout: 60000
-          CYPRESS_requestTimeout: 60000
+          CYPRESS_requestTimeout: 30000
         with:
           spec: cypress/integration/paths/resources.spec.ts # Running only resources tests
