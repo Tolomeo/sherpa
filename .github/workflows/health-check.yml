@@ -19,4 +19,5 @@ jobs:
           CYPRESS_pageLoadTimeout: 60000
           CYPRESS_requestTimeout: 30000
         with:
+          browser: chrome
           spec: cypress/integration/paths/resources.spec.ts # Running only resources tests
