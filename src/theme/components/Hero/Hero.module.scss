@@ -1,0 +1,17 @@
+.hero {
+  position: relative;
+  padding-block-start: 2rem;
+  background: linear-gradient(360deg, #da72ff 0%, #ff6bdf 100%);
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

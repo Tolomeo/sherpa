@@ -1,7 +1,7 @@
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import paths from '../data/paths'
-import { Header, Main, Typography, Container, Box, Grid } from '../src/theme'
+import { Header, Hero, Typography, Container, Box, Grid } from '../src/theme'
 import { List as PathsList } from '../src/paths'
 
 export const getStaticProps = async (_: GetStaticPropsContext) => {
@@ -44,13 +44,13 @@ export default function Home({ paths }: Props) {
 
       <Header />
 
-      <Main>
-        <Container>
-          <Typography variant="h1">
-            Welcome to <br />
-            The Learning Path
+      <main>
+        <Hero>
+          <Typography variant="h1" color="primary.contrastText">
+            The climb is easier with a Sherpa
           </Typography>
-        </Container>
+        </Hero>
+        <Container></Container>
 
         <Box py={8}>
           <Container>
@@ -92,7 +92,7 @@ export default function Home({ paths }: Props) {
             </Grid>
           </Container>
         </Box>
-      </Main>
+      </main>
     </Box>
   )
 }
