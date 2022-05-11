@@ -9,9 +9,13 @@ type Props = {
 
 const Backdrop = styled('div')``
 
-const Content = styled('div')`
-  margin-block-end: -10vh;
-`
+const Content = styled('div')(
+  ({ theme }) => `
+	${theme.breakpoints.up('xl')} {
+		margin-block-end: -20vh;
+	}
+`,
+)
 
 const Graphics = styled('img')`
   position: relative;
