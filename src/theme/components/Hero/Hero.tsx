@@ -1,6 +1,7 @@
 import mountains from './mountains.svg'
-import { Container, Grid } from '@mui/material'
 import { styled } from '@mui/material/styles'
+import Grid from '@mui/material/Grid'
+import Container from '../Container'
 
 type Props = {
   children: React.ReactNode

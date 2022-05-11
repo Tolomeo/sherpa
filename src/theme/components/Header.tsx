@@ -4,8 +4,9 @@ import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
-import Container from '@mui/material/Container'
 import GitHubIcon from '@mui/icons-material/GitHub'
+import Container from './Container'
+import Logo from './Logo'
 
 const GithubLink = () => {
   return (
@@ -23,31 +24,15 @@ const GithubLink = () => {
   )
 }
 
-const Logo = () => (
-  <Link href="/" passHref>
-    <Typography
-      sx={{
-        textDecoration: 'none',
-        borderBottom: '2px dashed currentColor',
-      }}
-      color="inherit"
-      textTransform="uppercase"
-      component="a"
-      variant="h6"
-      noWrap
-    >
-      The learning path
-    </Typography>
-  </Link>
-)
-
 const ResponsiveAppBar = () => {
   return (
     <AppBar position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1 }}>
-            <Logo />
+            <Link href="/" passHref>
+              <Logo />
+            </Link>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

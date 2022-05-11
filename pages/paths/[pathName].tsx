@@ -11,7 +11,7 @@ import {
 } from '../../data'
 import {
   Header,
-  Main,
+  Hero,
   Container,
   Box,
   Typography,
@@ -62,7 +62,7 @@ export default function PathPage({ path }: Props) {
   return (
     <Box>
       <Head>
-        <title>The {path.title} learning path</title>
+        <title>The {path.title} sherpa</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -88,20 +88,14 @@ export default function PathPage({ path }: Props) {
 
       <Header />
 
-      <Main>
-        <Box pb={4}>
-          <Container>
-            <Grid container>
-              <Grid item xs={12} md={8}>
-                <Typography variant="h1">
-                  The <br />
-                  <u>{path.title}</u> <br />
-                  learning path
-                </Typography>
-              </Grid>
-            </Grid>
-          </Container>
-        </Box>
+      <main>
+        <Hero>
+          <Typography variant="h1" color="primary.contrastText">
+            The <br />
+            <u>{path.title}</u> <br />
+            sherpa
+          </Typography>
+        </Hero>
 
         {hasPrevPaths(path) && (
           <Box py={4}>
@@ -157,7 +151,7 @@ export default function PathPage({ path }: Props) {
             </Container>
           </Box>
         )}
-      </Main>
+      </main>
     </Box>
   )
 }

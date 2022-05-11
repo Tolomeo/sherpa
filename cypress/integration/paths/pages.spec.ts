@@ -12,8 +12,8 @@ describe('Path pages', () => {
         cy.visit(pathUrl)
       })
 
-      it(`Renders a heading1 title, with "The ${path.title} learning path" title as text`, () => {
-        cy.get('h1').should('have.text', `The ${path.title} learning path`)
+      it(`Renders a heading1 title, with "The ${path.title} sherpa" title as text`, () => {
+        cy.get('h1').should('have.text', `The ${path.title} sherpa`)
       })
 
       describe('Path resources', () => {

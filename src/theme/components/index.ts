@@ -1,6 +1,6 @@
 export { default as Header } from './Header'
 export { default as Box } from '@mui/material/Box'
-export { default as Container } from '@mui/material/Container'
+export { default as Container } from './Container'
 export { default as Grid } from '@mui/material/Grid'
 export { default as Link } from '@mui/material/Link'
 export { default as Typography } from '@mui/material/Typography'

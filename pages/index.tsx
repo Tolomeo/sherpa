@@ -18,7 +18,7 @@ export default function Home({ paths }: Props) {
   return (
     <Box>
       <Head>
-        <title>The Learning Path</title>
+        <title>Sherpa</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -50,7 +50,6 @@ export default function Home({ paths }: Props) {
             The climb is easier with a Sherpa
           </Typography>
         </Hero>
-        <Container></Container>
 
         <Box py={8}>
           <Container>
@@ -72,9 +71,9 @@ export default function Home({ paths }: Props) {
                     materials.
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
-                    The Learning Path aims to solve that issue, providing you
-                    with paths to follow and plenty of references to help you on
-                    your journey on the discovery of different technologies.
+                    Sherpa aims to solve that issue, providing you with paths to
+                    follow and plenty of references to help you on your journey
+                    on the discovery of different technologies.
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
                     All resources are free and were hand-picked to create
