@@ -1,7 +1,15 @@
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import paths from '../data/paths'
-import { Header, Hero, Typography, Container, Box, Grid } from '../src/theme'
+import {
+  Header,
+  Hero,
+  Villain,
+  Typography,
+  Container,
+  Box,
+  Grid,
+} from '../src/theme'
 import { List as PathsList } from '../src/paths'
 
 export const getStaticProps = async (_: GetStaticPropsContext) => {
@@ -53,9 +61,9 @@ export default function Home({ paths }: Props) {
 
         <Box py={8}>
           <Container>
-            <Grid container spacing={4}>
-              <Grid item md={5}>
-                <Box py={2}>
+            <Box py={2}>
+              <Grid container>
+                <Grid item sm={9}>
                   <Typography variant="body1" component="p" gutterBottom>
                     Learning new things is amazing.
                   </Typography>
@@ -83,13 +91,37 @@ export default function Home({ paths }: Props) {
                   <Typography variant="body1" component="p">
                     Happy learning!
                   </Typography>
-                </Box>
+                </Grid>
               </Grid>
-              <Grid item md={5}>
-                <PathsList paths={paths} />
-              </Grid>
-            </Grid>
+            </Box>
+            <Box py={2}>
+              <PathsList paths={paths} />
+            </Box>
           </Container>
+        </Box>
+
+        <Box pt={2}>
+          <Villain>
+            <Box pb={4}>
+              <Typography variant="h2">
+                There are many paths to the top of the mountain
+              </Typography>
+            </Box>
+            <Typography variant="body1" component="p" gutterBottom>
+              You don&apos;t like what you found here?
+            </Typography>
+            <Typography variant="body1" component="p">
+              You can try to have a look at other similar projects. <br /> Some
+              of them were direct inspiration in the creation of Sherpa!
+            </Typography>
+            <Box py={4}>
+              <PathsList paths={paths} />
+            </Box>
+            <Typography variant="body1" component="p">
+              And many others! <br /> All it takes is the effort to search
+              online for what sparks one&apos;s interest.
+            </Typography>
+          </Villain>
         </Box>
       </main>
     </Box>
