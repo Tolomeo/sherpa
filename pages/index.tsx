@@ -1,6 +1,7 @@
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import paths from '../data/paths'
+import { alternateSources } from '../data/resources'
 import {
   Header,
   Hero,
@@ -10,19 +11,21 @@ import {
   Box,
   Grid,
 } from '../src/theme'
+import { AlternateSourcesList } from '../src/resources'
 import { List as PathsList } from '../src/paths'
 
 export const getStaticProps = async (_: GetStaticPropsContext) => {
   return {
     props: {
       paths,
+      alternateSources,
     },
   }
 }
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export default function Home({ paths }: Props) {
+export default function Home({ paths, alternateSources }: Props) {
   return (
     <Box>
       <Head>
@@ -115,7 +118,7 @@ export default function Home({ paths }: Props) {
               of them were direct inspiration in the creation of Sherpa!
             </Typography>
             <Box py={4}>
-              <PathsList paths={paths} />
+              <AlternateSourcesList resources={alternateSources} />
             </Box>
             <Typography variant="body1" component="p">
               And many others! <br /> All it takes is the effort to search
