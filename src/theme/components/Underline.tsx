@@ -8,9 +8,9 @@ const Underline = styled('u')`
     currentColor 40%,
     transparent 40%
   );
-  background-position: 0 1.175em;
+  background-position: 0 1.2em;
   background-repeat: repeat-x;
-  background-size: 0.25em 0.05em;
+  background-size: max(0.25em, 9px) max(0.05em, 2px);
 `
 
 export default Underline

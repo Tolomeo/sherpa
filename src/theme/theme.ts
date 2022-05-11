@@ -17,7 +17,7 @@ let theme = createTheme({
     h1: {
       fontSize: 'clamp(3rem, 2.0310rem + 4.1344vw, 6rem)',
       textTransform: 'uppercase',
-      lineHeight: 1,
+      lineHeight: 1.1,
     },
     h2: {
       fontSize: 'clamp(1.875rem, 1.2694rem + 2.5840vw, 3.75rem)',

@@ -30,7 +30,7 @@ const Content = styled('div')(
 	}
 	
 	${theme.breakpoints.up('md')} {
-		top: 50%;
+		top: 33%;
 		transform: translateY(-50%);
 	}
 `,
