@@ -4,7 +4,8 @@ import { createTheme } from '@mui/material/styles'
 let theme = createTheme({
   palette: {
     primary: {
-      main: '#da72ff',
+      main: '#ff6bdf',
+      dark: '#da72ff',
       contrastText: '#ffffff',
     },
     secondary: {
@@ -15,6 +16,8 @@ let theme = createTheme({
     fontFamily: 'Poppins',
     h1: {
       fontSize: 'clamp(3rem, 2.0310rem + 4.1344vw, 6rem)',
+      textTransform: 'uppercase',
+      lineHeight: 0.875,
     },
     h2: {
       fontSize: 'clamp(1.875rem, 1.2694rem + 2.5840vw, 3.75rem)',
