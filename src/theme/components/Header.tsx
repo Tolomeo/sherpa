@@ -27,7 +27,7 @@ const GithubLink = () => {
 const ResponsiveAppBar = () => {
   return (
     <AppBar position="sticky">
-      <Container maxWidth="xl">
+      <Container>
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1 }}>
             <Link href="/" passHref>
