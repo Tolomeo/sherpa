@@ -47,7 +47,7 @@ export default function Home({ paths }: Props) {
       <main>
         <Hero>
           <Typography variant="h1" color="primary.contrastText">
-            The climb is easier with a Sherpa
+            Climbing is easier with a Sherpa
           </Typography>
         </Hero>
 
