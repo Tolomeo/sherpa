@@ -17,6 +17,7 @@ import {
   Typography,
   Grid,
   Masonry,
+  Underline,
 } from '../../src/theme'
 import { List as PathsList } from '../../src/paths'
 import {
@@ -62,7 +63,7 @@ export default function PathPage({ path }: Props) {
   return (
     <Box>
       <Head>
-        <title>The {path.title} sherpa</title>
+        <title>The {path.title} path</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -91,9 +92,7 @@ export default function PathPage({ path }: Props) {
       <main>
         <Hero>
           <Typography variant="h1" color="primary.contrastText">
-            The <br />
-            <u>{path.title}</u> <br />
-            sherpa
+            The <Underline>{path.title}</Underline> path
           </Typography>
         </Hero>
 

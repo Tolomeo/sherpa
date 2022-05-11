@@ -14,28 +14,39 @@ const Backdrop = styled('div')(
   background: linear-gradient(360deg, ${theme.palette.primary.dark} 0%, ${
     theme.palette.primary.main
   } 100%);
+  margin-block-end: -2px;
 `,
 )
 
-const Content = styled('div')`
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-`
+const Content = styled('div')(
+  ({ theme }) => `
+	margin-block-end: ${theme.spacing(2)};
+
+	${theme.breakpoints.up('sm')} {
+		margin-block-end: 0;
+		position: absolute;
+		top: ${theme.spacing(4)};
+		width: 100%;
+	}
+	
+	${theme.breakpoints.up('md')} {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+`,
+)
 
 const Graphics = styled('img')`
   display: block;
   width: 100%;
-  margin-block-end: -1px;
 `
 
 const Hero = ({ children }: Props) => (
   <Backdrop>
     <Content>
-      <Container maxWidth="xl">
+      <Container>
         <Grid container>
-          <Grid item xs={9}>
+          <Grid item sm={9}>
             {children}
           </Grid>
         </Grid>

@@ -12,7 +12,7 @@ const PathsList = ({ paths }: Props) => (
     {Object.entries(paths).map(([pathName, path]) => (
       <NextLink key={pathName} href={`/paths/${pathName}`} passHref>
         <Link>
-          <Typography variant="h6">The {path.title} sherpa</Typography>
+          <Typography variant="h6">The {path.title} path</Typography>
         </Link>
       </NextLink>
     ))}
