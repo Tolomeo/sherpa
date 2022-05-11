@@ -31,7 +31,9 @@ const ResponsiveAppBar = () => {
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1 }}>
             <Link href="/" passHref>
-              <Logo />
+              <a>
+                <Logo />
+              </a>
             </Link>
           </Box>
 
