@@ -58,7 +58,7 @@ export default function Home({ paths, alternateSources }: Props) {
       <main>
         <Hero>
           <Typography variant="h1" color="primary.contrastText">
-            Climbing is easier with a Sherpa
+            Climbing the learning curve
           </Typography>
         </Hero>
 
