@@ -7,10 +7,9 @@ type Props = {
 }
 
 const alternativesListTestId = 'alternatives.list'
-const alternativesListItemTestId = 'resources.list.item'
+const alternativesListItemTestId = 'alternatives.list.item'
 const alternativesListItemLinkTestId = 'alternatives.list.item.link'
 const alternativesListItemTitleTestId = 'alternatives.list.item.title'
-// const alternativesListItemSourceTestId = 'alternatives.list.item.source'
 
 const AlternateSourcesList = ({ resources }: Props) => {
   return (
