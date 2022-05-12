@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid'
 import Container from '../Container'
 
 type Props = {
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 const Backdrop = styled('div')``

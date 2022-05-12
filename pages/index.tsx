@@ -62,48 +62,44 @@ export default function Home({ paths, alternateSources }: Props) {
           </Typography>
         </Hero>
 
-        <Box py={8}>
-          <Container>
-            <Box py={2}>
-              <Grid container>
-                <Grid item sm={9}>
-                  <Typography variant="body1" component="p" gutterBottom>
-                    Learning new things is amazing.
-                  </Typography>
-                  <Typography variant="body1" component="p" gutterBottom>
-                    It is cool to know there are many platforms providing high
-                    quality paid educational content. It is even cooler to know
-                    there are equally stunning online resources provided for
-                    free!
-                  </Typography>
-                  <Typography variant="body1" component="p" gutterBottom>
-                    The web is a chaotic place though, and one could be
-                    sometimes confused by the quantity and variety of available
-                    materials.
-                  </Typography>
-                  <Typography variant="body1" component="p" gutterBottom>
-                    Sherpa aims to solve that issue, providing you with paths to
-                    follow and plenty of references to help you on your journey
-                    on the discovery of different technologies.
-                  </Typography>
-                  <Typography variant="body1" component="p" gutterBottom>
-                    All resources are free and were hand-picked to create
-                    collections aiming to be as comprehensive and consistent as
-                    possible.
-                  </Typography>
-                  <Typography variant="body1" component="p">
-                    Happy learning!
-                  </Typography>
-                </Grid>
+        <Container>
+          <Box py={2}>
+            <Grid container>
+              <Grid item sm={9}>
+                <Typography variant="body1" component="p" gutterBottom>
+                  Learning new things is amazing.
+                </Typography>
+                <Typography variant="body1" component="p" gutterBottom>
+                  It is cool to know there are many platforms providing high
+                  quality paid educational content. It is even cooler to know
+                  there are equally stunning online resources provided for free!
+                </Typography>
+                <Typography variant="body1" component="p" gutterBottom>
+                  The web is a chaotic place though, and one could be sometimes
+                  confused by the quantity and variety of available materials.
+                </Typography>
+                <Typography variant="body1" component="p" gutterBottom>
+                  Sherpa aims to solve that issue, providing you with paths to
+                  follow and plenty of references to help you on your journey on
+                  the discovery of different technologies.
+                </Typography>
+                <Typography variant="body1" component="p" gutterBottom>
+                  All resources are free and were hand-picked to create
+                  collections aiming to be as comprehensive and consistent as
+                  possible.
+                </Typography>
+                <Typography variant="body1" component="p">
+                  Happy learning!
+                </Typography>
               </Grid>
-            </Box>
-            <Box py={2}>
-              <PathsList paths={paths} />
-            </Box>
-          </Container>
-        </Box>
+            </Grid>
+          </Box>
+          <Box py={2}>
+            <PathsList paths={paths} />
+          </Box>
+        </Container>
 
-        <Box pt={2}>
+        <Box pt={12}>
           <Villain>
             <Box pb={4}>
               <Typography variant="h2">

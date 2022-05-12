@@ -2,16 +2,18 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { ParsedUrlQuery } from 'querystring'
 import {
-  Path,
   paths,
+  Path,
   hasPrevPaths,
   hasNextPaths,
   hasExtras,
   deserializePath,
+  SerializedPaths,
 } from '../../data'
 import {
   Header,
   Hero,
+  Villain,
   Container,
   Box,
   Typography,
@@ -30,6 +32,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 interface StaticProps {
+  paths: SerializedPaths
   path: Path
 }
 
@@ -49,6 +52,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
 
   return {
     props: {
+      paths,
       path,
     },
   }
@@ -59,7 +63,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
 
-export default function PathPage({ path }: Props) {
+export default function PathPage({ path, paths }: Props) {
   return (
     <Box>
       <Head>
@@ -97,7 +101,7 @@ export default function PathPage({ path }: Props) {
         </Hero>
 
         {hasPrevPaths(path) && (
-          <Box py={4}>
+          <Box pb={4}>
             <Container>
               <aside>
                 <Typography variant="h3" component="h2" gutterBottom>
@@ -138,18 +142,20 @@ export default function PathPage({ path }: Props) {
           </Box>
         )}
 
-        {hasNextPaths(path) && (
-          <Box py={4}>
-            <Container>
-              <aside>
-                <Typography variant="h3" component="h2" gutterBottom>
-                  You could continue with
-                </Typography>
-                <PathsList paths={path.next} />
-              </aside>
-            </Container>
-          </Box>
-        )}
+        <Villain>
+          {hasNextPaths(path) && (
+            <Box py={4}>
+              <Container>
+                <aside>
+                  <Typography variant="h3" component="h2" gutterBottom>
+                    You could continue with
+                  </Typography>
+                  <PathsList paths={path.next} />
+                </aside>
+              </Container>
+            </Box>
+          )}
+        </Villain>
       </main>
     </Box>
   )
