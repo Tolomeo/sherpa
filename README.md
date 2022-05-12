@@ -1,4 +1,4 @@
-# The learning path
+# Sherpa
 
 Static website containing lists of URLs which contents are helpful to learn about several technologies.
 

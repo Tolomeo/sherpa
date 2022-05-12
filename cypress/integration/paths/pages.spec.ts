@@ -6,14 +6,14 @@ describe('Path pages', () => {
   Object.entries(paths).forEach(([pathKey, serialisedPath]) => {
     const path = deserializePath(serialisedPath)
 
-    describe(`The ${path.title} learning path page`, () => {
+    describe(`The ${path.title} path page`, () => {
       before(() => {
         const pathUrl = `${baseUrl}/paths/${pathKey}`
         cy.visit(pathUrl)
       })
 
-      it(`Renders a heading1 title, with "The ${path.title} learning path" title as text`, () => {
-        cy.get('h1').should('have.text', `The ${path.title} learning path`)
+      it(`Renders a heading1 title, with "The ${path.title} path" title as text`, () => {
+        cy.get('h1').should('have.text', `The ${path.title} path`)
       })
 
       describe('Path resources', () => {

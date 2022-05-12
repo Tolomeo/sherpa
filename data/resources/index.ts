@@ -1,3 +1,4 @@
+import alternatives from './alternatives.json'
 import htmlcss from './htmlcss.json'
 import webaccessibility from './webaccessibility.json'
 import javascript from './javascript.json'
@@ -41,6 +42,8 @@ export type Resources = {
   [resourceId: string]: SerializedResource
 }
 
+const alternateSources = <Resources>alternatives
+
 const resources = <Resources>{
   ...htmlcss,
   ...webaccessibility,
@@ -54,12 +57,11 @@ const resources = <Resources>{
   ...neovim,
 }
 
-export const deserializeResource = (
-  resource: SerializedResource,
-): Resource => ({
+const deserializeResource = (resource: SerializedResource): Resource => ({
   ...resource,
   source:
     resource.source || new URL(resource.url).hostname.replace(/^www./, ''),
 })
 
+export { alternateSources, deserializeResource }
 export default resources
