@@ -150,14 +150,12 @@ export default function PathPage({ path, paths }: Props) {
         <Villain>
           {hasNextPaths(path) && (
             <Box py={4}>
-              <Container>
-                <aside>
-                  <Typography variant="h3" component="h2" gutterBottom>
-                    You could continue with
-                  </Typography>
-                  <PathsList paths={path.next} />
-                </aside>
-              </Container>
+              <aside>
+                <Typography variant="h3" component="h2" gutterBottom>
+                  You could continue with
+                </Typography>
+                <PathsList paths={path.next} />
+              </aside>
             </Box>
           )}
         </Villain>
