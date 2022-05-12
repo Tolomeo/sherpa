@@ -14,7 +14,6 @@ const Backdrop = styled('div')(
   background: linear-gradient(360deg, ${theme.palette.primary.dark} 0%, ${
     theme.palette.primary.main
   } 100%);
-  margin-block-end: -2px;
 `,
 )
 
@@ -39,6 +38,7 @@ const Content = styled('div')(
 const Graphics = styled('img')`
   display: block;
   width: 100%;
+  margin-block-end: -2px;
 `
 
 const Hero = ({ children }: Props) => (
