@@ -35,6 +35,6 @@ jobs:
         env:
           CYPRESS_BASE_URL: ${{ needs.Deploy.outputs.preview-url }}
         with:
-          spec: cypress/integration/paths/pages.spec.ts # Running only paths tests
-
-
+          spec: |
+            cypress/integration/paths/home.spec.ts
+            cypress/integration/paths/pages.spec.ts
