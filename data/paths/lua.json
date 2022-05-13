@@ -59,7 +59,8 @@
         "http://lua-users.org/wiki",
         "https://www.luafaq.org",
         "https://www.lua.org/manual",
-        "https://learnxinyminutes.com/docs/lua"
+        "https://learnxinyminutes.com/docs/lua",
+        "https://devhints.io/lua"
       ]
     },
     {

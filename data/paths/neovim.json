@@ -44,8 +44,8 @@
         "https://blog.codinghorror.com/we-are-typists-first-programmers-second",
         "https://stevelosh.com/blog/2010/09/coming-home-to-vim",
         "https://www.youtube.com/watch?v=Bt-vmPC_-Ho",
-				"https://www.vimgolf.com"
-				]
+        "https://www.vimgolf.com"
+      ]
     },
     {
       "title": "Great bookmarks",
@@ -72,5 +72,5 @@
       ]
     }
   ],
-  "next": []
+  "next": ["lua"]
 }
