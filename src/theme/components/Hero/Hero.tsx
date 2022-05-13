@@ -38,7 +38,8 @@ const Content = styled('div')(
 const Graphics = styled('img')`
   display: block;
   width: 100%;
-  margin-block-end: -2px;
+  position: relative;
+  top: 1px;
 `
 
 const Hero = ({ children }: Props) => (
