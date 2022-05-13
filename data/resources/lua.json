@@ -1,0 +1,161 @@
+{
+  "https://www.tutorialspoint.com/lua/index.htm": {
+    "title": "Lua Tutorial",
+    "url": "https://www.tutorialspoint.com/lua/index.htm",
+    "type": ["course"]
+  },
+  "https://www.youtube.com/playlist?list=PL1A1gsSe2tMzpqi8hE5bCUCyQdAWwthuz": {
+    "title": "Lua Tutorial Series",
+    "url": "https://www.youtube.com/playlist?list=PL1A1gsSe2tMzpqi8hE5bCUCyQdAWwthuz",
+    "type": ["guide", "collection"]
+  },
+  "https://github.com/kikito/lua_missions": {
+    "title": "kikito/lua_missions",
+    "url": "https://github.com/kikito/lua_missions",
+    "type": ["exercise", "collection"]
+  },
+  "https://github.com/LewisJEllis/awesome-lua": {
+    "title": "LewisJEllis/awesome-lua",
+    "url": "https://github.com/LewisJEllis/awesome-lua",
+    "type": ["reference", "collection"]
+  },
+  "https://www.lua.org/pil/contents.html": {
+    "title": "Programming in Lua (first edition)",
+    "url": "https://www.lua.org/pil/contents.html",
+    "type": ["book"]
+  },
+  "http://lua-users.org/wiki/LuaTutorial": {
+    "title": "lua-users wiki: Lua Tutorial",
+    "url": "http://lua-users.org/wiki/LuaTutorial",
+    "type": ["guide", "collection"]
+  },
+  "https://www.youtube.com/playlist?list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU": {
+    "title": "Lua Programming Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU",
+    "type": ["course"],
+    "source": "youtube.com/c/Stevesteacher"
+  },
+  "https://www.youtube.com/playlist?list=PL1P11yPQAo7q_BWMKFZvUlLBqLRUJLrJm": {
+    "title": "Lua and Love2d programming and game development",
+    "url": "https://www.youtube.com/playlist?list=PL1P11yPQAo7q_BWMKFZvUlLBqLRUJLrJm",
+    "type": ["course"],
+    "source": "youtube.com/channel/UC4L3JyeL7TXQM1f3yD6iVQQ"
+  },
+  "https://www.youtube.com/playlist?list=PLxgtJR7f0RBKGid7F2dfv7qc-xWwSee2O": {
+    "title": "Learning Lua",
+    "url": "https://www.youtube.com/playlist?list=PLxgtJR7f0RBKGid7F2dfv7qc-xWwSee2O",
+    "type": ["course"],
+    "source": "youtube.com/c/DrBBurton"
+  },
+  "https://en.m.wikibooks.org/wiki/Lua_Programming": {
+    "title": "Lua Programming",
+    "url": "https://en.m.wikibooks.org/wiki/Lua_Programming",
+    "type": ["book"]
+  },
+  "https://www.youtube.com/playlist?list=PLWKjhJtqVAbluXJKKbCIb4xd7fcRkpzoz": {
+    "title": "CS50's Introduction to Game Development",
+    "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbluXJKKbCIb4xd7fcRkpzoz",
+    "type": ["tutorial", "collection"],
+    "source": "youtube.com/c/Freecodecamp"
+  },
+  "https://www.youtube.com/playlist?list=PLLwK93hM93Z3nhfJyRRWGRXHaXgNX0Itk": {
+    "title": "Embedding Lua in C++",
+    "url": "https://www.youtube.com/playlist?list=PLLwK93hM93Z3nhfJyRRWGRXHaXgNX0Itk",
+    "type": ["tutorial"],
+    "source": "youtube.com/c/DavePoo"
+  },
+  "https://openresty.org/en/videos.html": {
+    "title": "OpenResty - Video Tutorials",
+    "url": "https://openresty.org/en/videos.html",
+    "type": ["tutorial", "collection"]
+  },
+  "https://github.com/bungle/awesome-resty": {
+    "title": "bungle/awesome-resty",
+    "url": "https://github.com/bungle/awesome-resty",
+    "type": ["reference", "collection"]
+  },
+  "https://www.youtube.com/playlist?list=PLqPLyUreLV8DrLcLvQQ64Uz_h_JGLgGg2": {
+    "title": "Love2D Basics",
+    "url": "https://www.youtube.com/playlist?list=PLqPLyUreLV8DrLcLvQQ64Uz_h_JGLgGg2",
+    "type": ["course"],
+    "source": "youtube.com/c/Challacade"
+  },
+  "https://sheepolution.com/learn": {
+    "title": "How to LÖVE",
+    "url": "https://sheepolution.com/learn",
+    "type": ["course"]
+  },
+  "https://www.youtube.com/playlist?list=PLqPLyUreLV8D3Ckd_9UFNvEpg4xCvbL1a": {
+    "title": "Recreating Zelda",
+    "url": "https://www.youtube.com/playlist?list=PLqPLyUreLV8D3Ckd_9UFNvEpg4xCvbL1a",
+    "type": ["tutorial"],
+    "source": "youtube.com/c/Challacade"
+  },
+  "https://www.youtube.com/playlist?list=PLYBJzqz8zpWYip5ZkTMQiOkqya9Iiefm9": {
+    "title": "Love2D Game Dev Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PLYBJzqz8zpWYip5ZkTMQiOkqya9Iiefm9",
+    "type": ["course"],
+    "source": "youtube.com/c/Stevesteacher"
+  },
+  "https://github.com/a327ex/blog/issues/30": {
+    "title": "BYTEPATH",
+    "url": "https://github.com/a327ex/blog/issues/30",
+    "type": ["tutorial"]
+  },
+  "https://github.com/love2d-community/awesome-love2d": {
+    "title": "love2d-community/awesome-love2d",
+    "url": "https://github.com/love2d-community/awesome-love2d",
+    "type": ["reference", "collection"]
+  },
+  "https://www.youtube.com/playlist?list=PLyQg3m0a5UivaAXEfVDngKYp9jyNSTIo_": {
+    "title": "Garry's Mod Lua",
+    "url": "https://www.youtube.com/playlist?list=PLyQg3m0a5UivaAXEfVDngKYp9jyNSTIo_",
+    "type": ["course"],
+    "source": "youtube.com/c/CodeBlue"
+  },
+  "https://education.roblox.com": {
+    "title": "Roblox Education - Code and make games with Roblox",
+    "url": "https://education.roblox.com",
+    "type": ["course", "collection"]
+  },
+  "http://notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts": {
+    "title": "Lua: Good, bad, and ugly parts",
+    "url": "http://notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts",
+    "type": ["tutorial"]
+  },
+  "https://careerkarma.com/blog/who-uses-lua": {
+    "title": "Who Uses Lua?",
+    "url": "https://careerkarma.com/blog/who-uses-lua",
+    "type": ["tutorial"]
+  },
+  "http://lua-users.org/wiki": {
+    "title": "lua-users wiki",
+    "url": "http://lua-users.org/wiki",
+    "type": ["reference"]
+  },
+  "https://www.luafaq.org": {
+    "title": "Lua Unofficial FAQ (uFAQ)",
+    "url": "https://www.luafaq.org",
+    "type": ["reference"]
+  },
+  "https://www.lua.org/manual": {
+    "title": "Lua: reference manuals",
+    "url": "https://www.lua.org/manual",
+    "type": ["reference"]
+  },
+  "https://learnxinyminutes.com/docs/lua": {
+    "title": "Learn Lua in Y Minutes",
+    "url": "https://learnxinyminutes.com/docs/lua",
+    "type": ["reference"]
+  },
+  "https://www.lua.org/lua-l.html": {
+    "title": "Lua: mailing list",
+    "url": "https://www.lua.org/lua-l.html",
+    "type": ["community"]
+  },
+  "https://www.reddit.com/r/lua": {
+    "title": "lua",
+    "url": "https://www.reddit.com/r/lua",
+    "type": ["community"]
+  }
+}

@@ -9,6 +9,7 @@ import next from './next.json'
 import node from './node.json'
 import git from './git.json'
 import neovim from './neovim.json'
+import lua from './lua.json'
 
 export type ResourceType =
   | 'course'
@@ -55,6 +56,7 @@ const resources = <Resources>{
   ...node,
   ...git,
   ...neovim,
+  ...lua,
 }
 
 const deserializeResource = (resource: SerializedResource): Resource => ({

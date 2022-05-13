@@ -1,0 +1,75 @@
+{
+  "title": "Lua",
+  "prev": [],
+  "resources": [
+    "https://www.tutorialspoint.com/lua/index.htm",
+    "https://www.youtube.com/playlist?list=PL1A1gsSe2tMzpqi8hE5bCUCyQdAWwthuz",
+    "https://github.com/kikito/lua_missions",
+    "https://github.com/LewisJEllis/awesome-lua"
+  ],
+  "extras": [
+    {
+      "title": "There's more",
+      "resources": [
+        "https://www.lua.org/pil/contents.html",
+        "http://lua-users.org/wiki/LuaTutorial",
+        "https://www.youtube.com/playlist?list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU",
+        "https://www.youtube.com/playlist?list=PL1P11yPQAo7q_BWMKFZvUlLBqLRUJLrJm",
+        "https://www.youtube.com/playlist?list=PLxgtJR7f0RBKGid7F2dfv7qc-xWwSee2O",
+        "https://en.m.wikibooks.org/wiki/Lua_Programming"
+      ]
+    },
+    {
+      "title": "Beyond basics",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLLwK93hM93Z3nhfJyRRWGRXHaXgNX0Itk",
+        "https://www.youtube.com/playlist?list=PLWKjhJtqVAbluXJKKbCIb4xd7fcRkpzoz"
+      ]
+    },
+    {
+      "title": "OpenResty",
+      "resources": [
+        "https://openresty.org/en/videos.html",
+        "https://github.com/bungle/awesome-resty"
+      ]
+    },
+    {
+      "title": "Löve",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLqPLyUreLV8DrLcLvQQ64Uz_h_JGLgGg2",
+        "https://sheepolution.com/learn",
+        "https://www.youtube.com/playlist?list=PLqPLyUreLV8D3Ckd_9UFNvEpg4xCvbL1a",
+        "https://www.youtube.com/playlist?list=PLYBJzqz8zpWYip5ZkTMQiOkqya9Iiefm9",
+        "https://github.com/a327ex/blog/issues/30",
+        "https://github.com/love2d-community/awesome-love2d"
+      ]
+    },
+    {
+      "title": "Nice to know",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLyQg3m0a5UivaAXEfVDngKYp9jyNSTIo_",
+        "https://education.roblox.com",
+        "http://notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts",
+        "https://careerkarma.com/blog/who-uses-lua"
+      ]
+    },
+    {
+      "title": "Great bookmarks",
+      "resources": [
+        "http://lua-users.org/wiki",
+        "https://www.luafaq.org",
+        "https://www.lua.org/manual",
+        "https://learnxinyminutes.com/docs/lua",
+        "https://devhints.io/lua"
+      ]
+    },
+    {
+      "title": "Stay in the loop",
+      "resources": [
+        "https://www.lua.org/lua-l.html",
+        "https://www.reddit.com/r/lua"
+      ]
+    }
+  ],
+  "next": []
+}

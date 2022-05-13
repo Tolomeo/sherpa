@@ -104,27 +104,31 @@ export default function Home({ paths, alternateSources }: Props) {
           </Box>
         </Container>
 
-        <Box pt={12}>
+        <Box pt={6}>
           <Villain>
-            <Box pb={4}>
+            <Box py={2}>
               <Typography variant="h2">
                 There are many paths to the top of the mountain
               </Typography>
             </Box>
-            <Typography variant="body1" component="p" gutterBottom>
-              You don&apos;t like what you found here?
-            </Typography>
-            <Typography variant="body1" component="p">
-              You can try to have a look at other similar projects. <br /> Some
-              of them were direct inspiration in the creation of Sherpa!
-            </Typography>
-            <Box py={4}>
+            <Box py={2}>
+              <Typography variant="body1" component="p" gutterBottom>
+                You don&apos;t like what you found here?
+              </Typography>
+              <Typography variant="body1" component="p">
+                You can try to have a look at other similar projects. <br />{' '}
+                Some of them were direct inspiration in the creation of Sherpa!
+              </Typography>
+            </Box>
+            <Box py={2}>
               <AlternateSourcesList resources={alternateSources} />
             </Box>
-            <Typography variant="body1" component="p">
-              And many others! <br /> All it takes is the effort to search
-              online for what sparks one&apos;s interest.
-            </Typography>
+            <Box py={2}>
+              <Typography variant="body1" component="p">
+                And many others! <br /> All it takes is the effort to search
+                online for what sparks one&apos;s interest.
+              </Typography>
+            </Box>
           </Villain>
         </Box>
       </main>

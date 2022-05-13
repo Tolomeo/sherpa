@@ -9,6 +9,7 @@ import next from './next.json'
 import node from './node.json'
 import git from './git.json'
 import neovim from './neovim.json'
+import lua from './lua.json'
 
 export interface SerializedPath {
   title: string
@@ -48,6 +49,7 @@ const paths = <SerializedPaths>{
   node,
   git,
   neovim,
+  lua,
 }
 
 export const deserializePath = (path: SerializedPath): Path => ({
