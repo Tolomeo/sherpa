@@ -66,6 +66,8 @@ const checkResourceHealth = (resource: Resource) => {
       return resourceCheckStrategy.request(resource)
     case 'thevaluable.dev': // this one renders its own url instead of the title on first load
     case 'usehooks-ts.com': // this one weirdly gives 404 on first load
+    case 'developer.ibm.com': // this one renders client side
+    case 'davrous.com': // this one returns unathorised
       return resourceCheckStrategy.visit(resource)
     case 'codepen.io':
     case 'udemy.com':
