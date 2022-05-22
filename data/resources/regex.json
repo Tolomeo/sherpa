@@ -10,7 +10,7 @@
     "type": ["game", "community"]
   },
   "https://github.com/aloisdg/awesome-regex": {
-    "title": "",
+    "title": "aloisdg/awesome-regex",
     "url": "https://github.com/aloisdg/awesome-regex",
     "type": ["reference", "collection"]
   },
@@ -122,8 +122,8 @@
     "type": ["reference"]
   },
   "https://devhints.io/regexp": {
-    "title": "",
+    "title": "regexp cheatsheet",
     "url": "https://devhints.io/regexp",
-    "type": []
+    "type": ["cheatsheet"]
   }
 }
