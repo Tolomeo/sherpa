@@ -8,6 +8,7 @@ import reacttypescript from './reacttypescript.json'
 import next from './next.json'
 import node from './node.json'
 import git from './git.json'
+import regex from './regex.json'
 import neovim from './neovim.json'
 import lua from './lua.json'
 
@@ -55,6 +56,7 @@ const resources = <Resources>{
   ...next,
   ...node,
   ...git,
+  ...regex,
   ...neovim,
   ...lua,
 }

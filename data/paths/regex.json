@@ -1,0 +1,53 @@
+{
+  "title": "Regular expressions",
+  "prev": [],
+  "resources": [
+    "https://github.com/ziishaned/learn-regex",
+    "https://regexcrossword.com",
+    "https://github.com/aloisdg/awesome-regex"
+  ],
+  "extras": [
+    {
+      "title": "There's more",
+      "resources": [
+        "https://wanago.io/courses/regex-course",
+        "https://regexone.com",
+        "https://flaviocopes.com/javascript-regular-expressions",
+        "https://regexlearn.com",
+        "https://refrf.dev",
+        "https://learnbyexample.github.io/learn_js_regexp",
+        "https://learnbyexample.github.io/Ruby_Regexp",
+        "https://learnbyexample.github.io/py_regular_expressions",
+        "http://www.rexegg.com",
+        "https://scrimba.com/learn/regularexpressions",
+        "https://www.youtube.com/playlist?list=PLe30vg_FG4OSyqlTXN9CHT9-J1Y_U3QuL"
+      ]
+    },
+    {
+      "title": "Beyond basics",
+      "resources": [
+        "http://wstoop.co.za/wregex.php",
+        "https://www.youtube.com/watch?v=LIVBktatfQI",
+        "https://www.youtube.com/watch?v=frVuSFFv4Tk"
+      ]
+    },
+    {
+      "title": "Nice to know",
+      "resources": ["https://dassur.ma/things/regexp-quote"]
+    },
+    {
+      "title": "Great bookmarks",
+      "resources": [
+        "https://regexcrossword.com",
+        "https://regex.guide",
+        "https://ihateregex.io",
+        "https://regex101.com",
+        "https://regexr.com",
+        "https://regexlib.com",
+        "https://www.asciitable.com",
+        "https://devhints.io/regexp"
+      ]
+    }
+  ],
+  "next": []
+}
