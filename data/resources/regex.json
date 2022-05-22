@@ -68,9 +68,9 @@
   "https://www.youtube.com/playlist?list=PLe30vg_FG4OSyqlTXN9CHT9-J1Y_U3QuL": {
     "title": "Regular Expressions from Scratch to Pro",
     "url": "https://www.youtube.com/playlist?list=PLe30vg_FG4OSyqlTXN9CHT9-J1Y_U3QuL",
-    "type": ["course"]
+    "type": ["course"],
+    "source": "youtube.com/c/Bitfumes"
   },
-
   "http://wstoop.co.za/wregex.php": {
     "title": "wregex - How Regular Expression Engines Work",
     "url": "http://wstoop.co.za/wregex.php",
@@ -79,12 +79,14 @@
   "https://www.youtube.com/watch?v=LIVBktatfQI": {
     "title": "Regular Expressions With GNU grep in the Terminal - Part 01",
     "url": "https://www.youtube.com/watch?v=LIVBktatfQI",
-    "type": ["guide"]
+    "type": ["guide"],
+    "source": "youtube.com/channel/UCoJtk2M8bme9KXTe6F3K-Yg"
   },
   "https://www.youtube.com/watch?v=frVuSFFv4Tk": {
     "title": "Regular Expressions With GNU grep in the Terminal - Part 02",
     "url": "https://www.youtube.com/watch?v=frVuSFFv4Tk",
-    "type": ["course"]
+    "type": ["course"],
+    "source": "youtube.com/channel/UCoJtk2M8bme9KXTe6F3K-Yg"
   },
   "https://dassur.ma/things/regexp-quote": {
     "title": "My most useful RegExp trick",
