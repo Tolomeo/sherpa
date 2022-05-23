@@ -240,7 +240,7 @@
     "type": ["guide", "collection"]
   },
   "https://whocanuse.com": {
-    "title": "Who Can Use",
+    "title": "WhoCanUse",
     "url": "https://whocanuse.com",
     "type": ["generator", "reference"]
   },
@@ -291,7 +291,7 @@
     "source": "github.com/collections"
   },
   "https://hiddedevries.nl/en/blog": {
-    "title": "Blog | hiddedevries.nl",
+    "title": "Blog | hidde.blog",
     "url": "https://hiddedevries.nl/en/blog",
     "type": ["blog"]
   },
