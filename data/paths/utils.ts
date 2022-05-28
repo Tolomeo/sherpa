@@ -1,5 +1,5 @@
 import resources from '../resources'
-import { SerializedPaths, Paths } from './types'
+import { SerializedPaths, Paths, Path } from './types'
 
 export const parsePaths = <T extends SerializedPaths<string>>(
   serializedPaths: T,
@@ -64,3 +64,15 @@ export const parsePaths = <T extends SerializedPaths<string>>(
     },
     {} as Paths<keyof T>,
   )
+
+export const hasNextPaths = <T extends Path<string>>(path: T) => {
+  return Boolean(Object.keys(path.next).length)
+}
+
+export const hasPrevPaths = <T extends Path<string>>(path: T) => {
+  return Boolean(Object.keys(path.prev).length)
+}
+
+export const hasExtras = <T extends Path<string>>(path: T) => {
+  return Boolean(path.extras.length)
+}

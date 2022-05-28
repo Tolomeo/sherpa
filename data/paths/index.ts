@@ -1,5 +1,5 @@
 import resources, { Resource } from '../resources'
-import { SerializedPath, SerializedPaths, Path, Paths } from './types'
+import { SerializedPaths } from './types'
 import { parsePaths } from './utils'
 import htmlcss from './htmlcss.json'
 import webaccessibility from './webaccessibility.json'
@@ -33,16 +33,6 @@ const paths = parsePaths(
   serializedPaths as SerializedPaths<keyof typeof serializedPaths>,
 )
 
-export const hasNextPaths = (path: Path<keyof typeof serializedPaths>) => {
-  return Boolean(Object.keys(path.next).length)
-}
-
-export const hasPrevPaths = (path: Path<keyof typeof serializedPaths>) => {
-  return Boolean(Object.keys(path.prev).length)
-}
-
-export const hasExtras = (path: Path<keyof typeof serializedPaths>) => {
-  return Boolean(path.extras.length)
-}
-
+export * from './utils'
 export default paths
+export * from './types'

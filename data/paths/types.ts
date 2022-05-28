@@ -5,7 +5,7 @@ export type SerializedPathExtra = {
   resources: Array<keyof Resources>
 }
 
-export interface SerializedPath<PathNames> {
+export interface SerializedPath<PathNames = string> {
   title: string
   resources: Array<keyof Resources>
   next?: Array<PathNames>
@@ -13,7 +13,7 @@ export interface SerializedPath<PathNames> {
   extras?: Array<SerializedPathExtra>
 }
 
-export type SerializedPaths<PathNames> = Record<
+export type SerializedPaths<PathNames = string> = Record<
   string,
   SerializedPath<PathNames>
 >
@@ -23,7 +23,7 @@ export type PathExtra = {
   resources: Resource[]
 }
 
-export interface Path<PathNames> {
+export interface Path<PathNames = string> {
   title: string
   resources: Resource[]
   extras: Array<PathExtra>
@@ -31,4 +31,4 @@ export interface Path<PathNames> {
   prev: SerializedPaths<PathNames>
 }
 
-export type Paths<PathNames> = Record<string, Path<PathNames>>
+export type Paths<PathNames = string> = Record<string, Path<PathNames>>
