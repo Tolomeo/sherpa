@@ -1,359 +1,359 @@
-{
-  "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js": {
+[
+  {
     "title": "Why Use Node.js? A Comprehensive Tutorial with Examples",
     "url": "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js",
     "type": ["guide"],
     "source": "toptal.com"
   },
-  "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp": {
+  {
     "title": "Node JS Tutorial for Beginners",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp",
     "type": ["course"],
     "source": "youtube.com/c/TheNetNinja"
   },
-  "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js": {
+  {
     "title": "How To Code in Node.js",
     "url": "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js",
     "type": ["guide", "series"],
     "source": "digitalocean.com/community"
   },
-  "https://flaviocopes.com/page/node-handbook": {
+  {
     "title": "The Node Handbook",
     "url": "https://flaviocopes.com/page/node-handbook",
     "type": ["course"],
     "source": "flaviocopes.com"
   },
-  "https://www.freecodecamp.org/learn/back-end-development-and-apis/#back-end-development-and-apis-projects": {
+  {
     "title": "Back End Development and APIs",
     "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis/#back-end-development-and-apis-projects",
     "type": ["guide", "collection"],
     "source": "freecodecamp.org"
   },
-  "https://www.youtube.com/watch?v=Oe421EPjeBE": {
+  {
     "title": "Node.js and Express.js - Full Course",
     "url": "https://www.youtube.com/watch?v=Oe421EPjeBE",
     "type": ["course"],
     "source": "youtube.com/c/Freecodecamp"
   },
-  "http://thenodeway.io/introduction": {
+  {
     "title": "The Node Way",
     "url": "http://thenodeway.io/introduction",
     "type": ["guide", "collection"],
     "source": "thenodeway.io"
   },
-  "https://github.com/goldbergyoni/nodebestpractices": {
+  {
     "title": "goldbergyoni/nodebestpractices",
     "url": "https://github.com/goldbergyoni/nodebestpractices",
     "type": ["guide", "reference"]
   },
-  "https://www.joyent.com/node-js/production": {
+  {
     "title": "Production Practices",
     "url": "https://www.joyent.com/node-js/production",
     "type": ["guide", "collection"],
     "source": "joyent.com"
   },
-  "https://github.com/testjavascript/nodejs-integration-tests-best-practices": {
+  {
     "title": "testjavascript/nodejs-integration-tests-best-practices",
     "url": "https://github.com/testjavascript/nodejs-integration-tests-best-practices",
     "type": ["guide", "reference"]
   },
-  "https://softwareontheroad.com/ideal-nodejs-project-structure": {
+  {
     "title": "Bulletproof node.js project architecture",
     "url": "https://softwareontheroad.com/ideal-nodejs-project-structure",
     "type": ["guide"],
     "source": "softwareontheroad.com"
   },
-  "https://github.com/electerious/Ackee": {
+  {
     "title": "electerious/Ackee",
     "url": "https://github.com/electerious/Ackee",
     "type": ["example"]
   },
-  "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS": {
+  {
     "title": "nimit95/Real-world-Design-Patterns-Node-JS",
     "url": "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS",
     "type": ["example", "collection"]
   },
-  "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html": {
+  {
     "title": "Nodejs Security",
     "url": "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html",
     "type": ["guide", "reference"]
   },
-  "https://github.com/sindresorhus/awesome-nodejs": {
+  {
     "title": "sindresorhus/awesome-nodejs",
     "url": "https://github.com/sindresorhus/awesome-nodejs",
     "type": ["reference", "collection"]
   },
-  "https://github.com/goldbergyoni/javascript-testing-best-practices": {
+  {
     "title": "goldbergyoni/javascript-testing-best-practices",
     "url": "https://github.com/goldbergyoni/javascript-testing-best-practices",
     "type": ["guide", "reference"]
   },
-  "https://www.freecodecamp.org/learn/back-end-development-and-apis": {
+  {
     "title": "Back End Development and APIs",
     "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis",
     "type": ["course", "collection"]
   },
-  "https://lab.github.com/everydeveloper/introduction-to-node-with-express": {
+  {
     "title": "Introduction to Node with Express",
     "url": "https://lab.github.com/everydeveloper/introduction-to-node-with-express",
     "type": ["course"]
   },
-  "https://lab.github.com/everydeveloper/intermediate-nodejs-course": {
+  {
     "title": "Intermediate NodeJS Course",
     "url": "https://lab.github.com/everydeveloper/intermediate-nodejs-course",
     "type": ["course"]
   },
-  "https://lab.github.com/M3kH/create-rest-server-with-nodejs-and-express": {
+  {
     "title": "Create REST server with NodeJS and Express",
     "url": "https://lab.github.com/M3kH/create-rest-server-with-nodejs-and-express",
     "type": ["course"]
   },
-  "https://github.com/azat-co/practicalnode": {
+  {
     "title": "azat-co/practicalnode",
     "url": "https://github.com/azat-co/practicalnode",
     "type": ["book"]
   },
-  "https://www.youtube.com/playlist?list=PLlxmoA0rQ-LyMoEYRyd1L9oDaTRXOXdZa": {
+  {
     "title": "Node Js Tutorial for Beginners: Getting Started with Node",
     "url": "https://www.youtube.com/playlist?list=PLlxmoA0rQ-LyMoEYRyd1L9oDaTRXOXdZa",
     "type": ["course"],
     "source": "youtube.com/c/smartherd"
   },
-  "https://developer.ibm.com/learningpaths/get-started-nodejs": {
+  {
     "title": "Get started with Node.js",
     "url": "https://developer.ibm.com/learningpaths/get-started-nodejs",
     "type": ["course"]
   },
-  "https://developer.ibm.com/languages/node-js/tutorials": {
+  {
     "title": "Node.js Tutorials",
     "url": "https://developer.ibm.com/languages/node-js/tutorials",
     "type": ["guide", "collection"]
   },
-  "https://www.youtube.com/playlist?list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q": {
+  {
     "title": "Building a RESTful API with Node.js",
     "url": "https://www.youtube.com/playlist?list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q",
     "type": ["tutorial"],
     "source": "youtube.com/c/Academind"
   },
-  "https://nodejs.dev/learn": {
+  {
     "title": "Introduction to Node.js",
     "url": "https://nodejs.dev/learn",
     "type": ["course"]
   },
-  "https://goalkicker.com/NodeJSBook": {
+  {
     "title": "Node.js Book",
     "url": "https://goalkicker.com/NodeJSBook",
     "type": ["book"]
   },
-  "https://www.freecodecamp.org/news/the-definitive-node-js-handbook-6912378afc6e": {
+  {
     "title": "The definitive Node.js handbook",
     "url": "https://www.freecodecamp.org/news/the-definitive-node-js-handbook-6912378afc6e",
     "type": ["guide"]
   },
-  "https://www.taniarascia.com/rest-api-sorting-filtering-pagination": {
+  {
     "title": "REST API: Sorting, Filtering, and Pagination",
     "url": "https://www.taniarascia.com/rest-api-sorting-filtering-pagination",
     "type": ["guide"]
   },
-  "https://www.smashingmagazine.com/2018/06/nodejs-tools-techniques-performance-servers": {
+  {
     "title": "Keeping Node.js Fast: Tools, Techniques, And Tips For Making High-Performance Node.js Servers",
     "url": "https://www.smashingmagazine.com/2018/06/nodejs-tools-techniques-performance-servers",
     "type": ["guide"]
   },
-  "https://www.smashingmagazine.com/2018/12/multiplayer-text-adventure-engine-node-js": {
+  {
     "title": "Writing A Multiplayer Text Adventure Engine In Node.js",
     "url": "https://www.smashingmagazine.com/2018/12/multiplayer-text-adventure-engine-node-js",
     "type": ["tutorial"]
   },
-  "https://www.smashingmagazine.com/2020/04/nodejs-internals": {
+  {
     "title": "Exploring Node.js Internals",
     "url": "https://www.smashingmagazine.com/2020/04/nodejs-internals",
     "type": ["guide"]
   },
-  "https://github.com/XOR-LIFE/node-production": {
+  {
     "title": "XOR-LIFE/node-production",
     "url": "https://github.com/XOR-LIFE/node-production",
     "type": ["tutorial"]
   },
-  "https://wanago.io/courses/node-js-typescript": {
+  {
     "title": "Node.js TypeScript",
     "url": "https://wanago.io/courses/node-js-typescript",
     "type": ["guide", "series"]
   },
-  "https://wanago.io/courses/typescript-express-tutorial": {
+  {
     "title": "TypeScript Express tutorial",
     "url": "https://wanago.io/courses/typescript-express-tutorial",
     "type": ["guide", "series"]
   },
-  "https://www.smashingmagazine.com/2017/03/interactive-command-line-application-node-js": {
+  {
     "title": "How To Develop An Interactive Command Line Application Using Node.js",
     "url": "https://www.smashingmagazine.com/2017/03/interactive-command-line-application-node-js",
     "type": ["tutorial"]
   },
-  "https://www.freecodecamp.org/news/video-clean-architecture-in-node-js": {
+  {
     "title": "Clean Architecture in Node JS",
     "url": "https://www.freecodecamp.org/news/video-clean-architecture-in-node-js",
     "type": ["guide"]
   },
-  "https://medium.com/hackernoon/implementing-a-websocket-server-with-node-js-d9b78ec5ffa8": {
+  {
     "title": "Implementing a WebSocket server with Node.js",
     "url": "https://medium.com/hackernoon/implementing-a-websocket-server-with-node-js-d9b78ec5ffa8",
     "type": ["tutorial"]
   },
-  "https://github.com/ehmicky/cross-platform-node-guide": {
+  {
     "title": "ehmicky/cross-platform-node-guide",
     "url": "https://github.com/ehmicky/cross-platform-node-guide",
     "type": ["tutorial"]
   },
-  "https://web.dev/identity": {
+  {
     "title": "Identity",
     "url": "https://web.dev/identity",
     "type": ["guide", "collection"]
   },
-  "https://rapidapi.com/learn": {
+  {
     "title": "RapidAPI Learn",
     "url": "https://rapidapi.com/learn",
     "type": ["guide", "collection"]
   },
-  "https://www.youtube.com/watch?v=AzQ6_DTcG6c": {
+  {
     "title": "Redis with Node Crash Course - Cache Data for Improved Performance",
     "url": "https://www.youtube.com/watch?v=AzQ6_DTcG6c",
     "type": ["tutorial"],
     "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
   },
-  "https://www.youtube.com/watch?v=JaTbzPcyiOE": {
+  {
     "title": "TypeORM Crash Course - TypeScript & Node ORM",
     "url": "https://www.youtube.com/watch?v=JaTbzPcyiOE",
     "type": ["tutorial"],
     "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
   },
-  "https://www.youtube.com/watch?v=asVDzgdyYLk": {
+  {
     "title": "Socket.io Crash Course - Build a Real Time Chat Application",
     "url": "https://www.youtube.com/watch?v=asVDzgdyYLk",
     "type": ["tutorial"],
     "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
   },
-  "https://allenkim67.github.io/programming/2016/05/04/how-to-make-your-own-bittorrent-client.html": {
+  {
     "title": "How to make your own bittorrent client",
     "url": "https://allenkim67.github.io/programming/2016/05/04/how-to-make-your-own-bittorrent-client.html",
     "type": ["tutorial"]
   },
-  "https://www.codementor.io/@ziad-saab/let-s-code-a-web-server-from-scratch-with-nodejs-streams-h4uc9utji": {
+  {
     "title": "Let's code a web server from scratch with NodeJS Streams!",
     "url": "https://www.codementor.io/@ziad-saab/let-s-code-a-web-server-from-scratch-with-nodejs-streams-h4uc9utji",
     "type": ["tutorial"]
   },
-  "https://github.com/antsmartian/lets-build-express": {
+  {
     "title": "antsmartian/lets-build-express",
     "url": "https://github.com/antsmartian/lets-build-express",
     "type": ["tutorial"]
   },
-  "https://www.webdevdrops.com/en/build-static-site-generator-nodejs-8969ebe34b22": {
+  {
     "title": "Build a static site generator in 40 lines with Node.js",
     "url": "https://www.webdevdrops.com/en/build-static-site-generator-nodejs-8969ebe34b22",
     "type": ["tutorial"]
   },
-  "https://codeburst.io/building-a-simple-single-sign-on-sso-server-and-solution-from-scratch-in-node-js-ea6ee5fdf340": {
+  {
     "title": "Building A Simple Single Sign On(SSO) Server And Solution From Scratch In Node.js.",
     "url": "https://codeburst.io/building-a-simple-single-sign-on-sso-server-and-solution-from-scratch-in-node-js-ea6ee5fdf340",
     "type": ["tutorial"]
   },
-  "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3": {
+  {
     "title": "How to create a real-world Node CLI app with Node",
     "url": "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
     "type": ["tutorial"]
   },
-  "https://www.digitalocean.com/community/tutorials/building-a-real-time-markdown-viewer": {
+  {
     "title": "Build a Real-Time Markdown Editor with Node.js",
     "url": "https://www.digitalocean.com/community/tutorials/building-a-real-time-markdown-viewer",
     "type": ["tutorial"],
     "source": "digitalocean.com/community"
   },
-  "https://mherman.org/blog/test-driven-development-with-node": {
+  {
     "title": "Test Driven Development with Node, Postgres, and Knex (Red/Green/Refactor)",
     "url": "https://mherman.org/blog/test-driven-development-with-node",
     "type": ["guide"]
   },
-  "https://yonigoldberg.medium.com/20-ways-to-become-a-better-node-js-developer-in-2020-d6bd73fcf424": {
+  {
     "title": "20 ways to become a better Node.js developer in 2020",
     "url": "https://yonigoldberg.medium.com/20-ways-to-become-a-better-node-js-developer-in-2020-d6bd73fcf424",
     "type": ["guide"]
   },
-  "https://www.youtube.com/watch?v=M3BM9TB-8yA": {
+  {
     "title": "10 Things I Regret About Node.js - Ryan Dahl - JSConf EU",
     "url": "https://www.youtube.com/watch?v=M3BM9TB-8yA",
     "type": ["community"],
     "source": "youtube.com/c/JSConfEU"
   },
-  "https://github.com/public-apis/public-apis": {
+  {
     "title": "public-apis/public-apis",
     "url": "https://github.com/public-apis/public-apis",
     "type": ["reference"]
   },
-  "https://github.com/learning-zone/nodejs-interview-questions": {
+  {
     "title": "learning-zone/nodejs-interview-questions",
     "url": "https://github.com/learning-zone/nodejs-interview-questions",
     "type": ["reference"]
   },
-  "https://github.com/marmelab/awesome-rest": {
+  {
     "title": "marmelab/awesome-rest",
     "url": "https://github.com/marmelab/awesome-rest",
     "type": ["reference", "collection"]
   },
-  "https://node.green": {
+  {
     "title": "Node.js ES2015/ES6, ES2016 and ES2017 support",
     "url": "https://node.green",
     "type": ["reference"]
   },
-  "https://www.digitalocean.com/community/tools": {
+  {
     "title": "Tools",
     "url": "https://www.digitalocean.com/community/tools",
     "type": ["generator", "collection"],
     "source": "digitalocean.com/community"
   },
-  "https://www.openmymind.net/redis.pdf": {
+  {
     "title": "The Little Redis Book",
     "url": "https://www.openmymind.net/redis.pdf",
     "type": ["book"]
   },
-  "https://github.com/APIDevTools": {
+  {
     "title": "API Dev Tools",
     "url": "https://github.com/APIDevTools",
     "type": ["reference", "collection"]
   },
-  "https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping": {
+  {
     "title": "Node Target Mapping · microsoft/TypeScript Wiki",
     "url": "https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping",
     "type": ["reference"]
   },
-  "https://nikhilm.github.io/uvbook/": {
+  {
     "title": "An Introduction to libuv",
     "url": "https://nikhilm.github.io/uvbook/",
     "type": ["book"]
   },
-  "https://gils-blog.tayar.org/posts/using-jsm-esm-in-nodejs-a-practical-guide-part-1": {
+  {
     "title": "Using ES Modules (ESM) in Node.js: A Practical Guide",
     "url": "https://gils-blog.tayar.org/posts/using-jsm-esm-in-nodejs-a-practical-guide-part-1",
     "type": ["guide"]
   },
-  "https://nodeweekly.com": {
+  {
     "title": "Node Weekly",
     "url": "https://nodeweekly.com",
     "type": ["community"]
   },
-  "https://hackernoon.com": {
+  {
     "title": "HackerNoon",
     "url": "https://hackernoon.com",
     "type": ["blog"]
   },
-  "https://www.toptal.com/developers/blog": {
+  {
     "title": "Software Engineering Blog & Programming Tutorials",
     "url": "https://www.toptal.com/developers/blog",
     "type": ["blog"]
   },
-  "https://wanago.io": {
+  {
     "title": "Marcin Wanago Blog",
     "url": "https://wanago.io",
     "type": ["blog"]
   }
-}
+]

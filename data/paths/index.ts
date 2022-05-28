@@ -1,4 +1,4 @@
-import resources, { Resource, deserializeResource } from '../resources'
+import resources, { Resource } from '../resources'
 import htmlcss from './htmlcss.json'
 import webaccessibility from './webaccessibility.json'
 import javascript from './javascript.json'
@@ -35,11 +35,73 @@ export interface Path {
 
 export type PathExtra = Omit<Path, 'next' | 'prev' | 'extras'>
 
-export type SerializedPaths = {
-  [pathName: string]: SerializedPath
-}
+export type SerializedPaths = Record<string, SerializedPath>
 
-const paths = <SerializedPaths>{
+export type Paths = Record<string, Path>
+
+export const parsePaths = (serializedPaths: SerializedPaths): Paths =>
+  Object.entries(serializedPaths).reduce(
+    (paths, [pathName, serializedPath]) => {
+      paths[pathName] = {
+        ...serializedPath,
+        // populating resources data
+        resources: serializedPath.resources.map((resourceId) => {
+          const resource = resources[resourceId]
+
+          if (!resource)
+            throw new Error(
+              `deserializePathError: resource "${resourceId}" not found`,
+            )
+
+          return resource
+        }),
+        // populating extra resources, those are optional
+        extras: (serializedPath.extras || []).map((extra) => ({
+          ...extra,
+          resources: extra.resources
+            .map((extraResourceId) => {
+              const extraResource = resources[extraResourceId]
+
+              if (!extraResource)
+                throw new Error(
+                  `deserializePathError: extra resource "${extraResourceId}" not found`,
+                )
+
+              return extraResource
+            })
+            // sorting alphabetically by resource title
+            .sort((resourceA, resourceB) => {
+              const titleA = resourceA.title.toUpperCase()
+              const titleB = resourceB.title.toUpperCase()
+
+              if (titleA > titleB) return 1
+              else if (titleA < titleB) return -1
+
+              return 0
+            }),
+        })),
+        // populating next paths, those are optional
+        next: (serializedPath.next || []).reduce((nextPaths, nextPathId) => {
+          if (serializedPaths[nextPathId])
+            nextPaths[nextPathId] = serializedPaths[nextPathId]
+
+          return nextPaths
+        }, {} as SerializedPaths),
+        // populating prev paths, those are optional
+        prev: (serializedPath.prev || []).reduce((prevPaths, prevPathId) => {
+          if (serializedPaths[prevPathId])
+            prevPaths[prevPathId] = serializedPaths[prevPathId]
+
+          return prevPaths
+        }, {} as SerializedPaths),
+      }
+
+      return paths
+    },
+    {} as Paths,
+  )
+
+const paths = parsePaths({
   htmlcss,
   webaccessibility,
   javascript,
@@ -52,58 +114,6 @@ const paths = <SerializedPaths>{
   regex,
   neovim,
   lua,
-}
-
-export const deserializePath = (path: SerializedPath): Path => ({
-  ...path,
-  // populating resources data
-  resources: path.resources.map((resourceId) => {
-    const resource = resources[resourceId]
-
-    if (!resource)
-      throw new Error(
-        `deserializePathError: resource "${resourceId}" not found`,
-      )
-
-    return deserializeResource(resource)
-  }),
-  // populating extra resources, those are optional
-  extras: (path.extras || []).map((extra) => ({
-    ...extra,
-    resources: extra.resources
-      .map((extraResourceId) => {
-        const extraResource = resources[extraResourceId]
-
-        if (!extraResource)
-          throw new Error(
-            `deserializePathError: extra resource "${extraResourceId}" not found`,
-          )
-
-        return deserializeResource(extraResource)
-      })
-      // sorting alphabetically by resource title
-      .sort((resourceA, resourceB) => {
-        const titleA = resourceA.title.toUpperCase()
-        const titleB = resourceB.title.toUpperCase()
-
-        if (titleA > titleB) return 1
-        else if (titleA < titleB) return -1
-
-        return 0
-      }),
-  })),
-  // populating next paths, those are optional
-  next: (path.next || []).reduce((nextPaths, nextPathId) => {
-    if (paths[nextPathId]) nextPaths[nextPathId] = paths[nextPathId]
-
-    return nextPaths
-  }, {} as SerializedPaths),
-  // populating prev paths, those are optional
-  prev: (path.prev || []).reduce((prevPaths, prevPathId) => {
-    if (paths[prevPathId]) prevPaths[prevPathId] = paths[prevPathId]
-
-    return prevPaths
-  }, {} as SerializedPaths),
 })
 
 export const hasNextPaths = (path: Path) => {

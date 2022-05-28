@@ -4,11 +4,10 @@ import { ParsedUrlQuery } from 'querystring'
 import {
   paths,
   Path,
+  Paths,
   hasPrevPaths,
   hasNextPaths,
   hasExtras,
-  deserializePath,
-  SerializedPaths,
 } from '../../data'
 import {
   Header,
@@ -32,7 +31,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 interface StaticProps {
-  paths: SerializedPaths
+  paths: Paths
   path: Path
 }
 
@@ -47,8 +46,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
-  const serializedPath = paths[params!.pathName]
-  const path = deserializePath(serializedPath)
+  const path = paths[params!.pathName]
 
   return {
     props: {
@@ -63,7 +61,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
 
-export default function PathPage({ path, paths }: Props) {
+export default function PathPage({ path }: Props) {
   return (
     <Box>
       <Head>
@@ -163,4 +161,3 @@ export default function PathPage({ path, paths }: Props) {
     </Box>
   )
 }
-// after={}

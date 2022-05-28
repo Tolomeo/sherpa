@@ -41,12 +41,23 @@ export interface Resource {
 }
 
 export type Resources = {
-  [resourceId: string]: SerializedResource
+  [resourceId: string]: Resource
 }
 
-const alternateSources = <Resources>alternatives
+const parseResources = (serializedResources: SerializedResource[]) =>
+  serializedResources.reduce((resourcesMap, resource) => {
+    resourcesMap[resource.url] = {
+      ...resource,
+      source:
+        resource.source || new URL(resource.url).hostname.replace(/^www./, ''),
+    }
 
-const resources = <Resources>{
+    return resourcesMap
+  }, {} as Resources)
+
+const alternateSources = parseResources(alternatives as SerializedResource[])
+
+const resources = parseResources([
   ...htmlcss,
   ...webaccessibility,
   ...javascript,
@@ -59,13 +70,7 @@ const resources = <Resources>{
   ...regex,
   ...neovim,
   ...lua,
-}
+] as SerializedResource[])
 
-const deserializeResource = (resource: SerializedResource): Resource => ({
-  ...resource,
-  source:
-    resource.source || new URL(resource.url).hostname.replace(/^www./, ''),
-})
-
-export { alternateSources, deserializeResource }
+export { alternateSources }
 export default resources
