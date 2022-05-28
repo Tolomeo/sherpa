@@ -84,11 +84,6 @@
     "source": "reactjs.org/community"
   },
   {
-    "title": "hairarrow/btship",
-    "url": "https://github.com/hairarrow/btship",
-    "type": ["example"]
-  },
-  {
     "title": "6 Fun React Project Ideas",
     "url": "https://daveceddia.com/react-practice-projects",
     "type": ["guide"]
@@ -348,11 +343,6 @@
     "type": ["reference", "guide"]
   },
   {
-    "title": "Patterns.dev - Modern Web App Design Patterns",
-    "url": "https://www.patterns.dev",
-    "type": ["reference"]
-  },
-  {
     "title": "Where To Get Support – React",
     "url": "https://reactjs.org/community/support.html",
     "type": ["community"]
@@ -376,11 +366,6 @@
   {
     "title": "The Kent C. Dodds Blog",
     "url": "https://kentcdodds.com/blog",
-    "type": ["blog"]
-  },
-  {
-    "title": "Flavio Copes",
-    "url": "https://flaviocopes.com",
     "type": ["blog"]
   },
   {

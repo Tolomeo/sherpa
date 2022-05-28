@@ -241,11 +241,6 @@
     "source": "youtube.com/c/MethMethMethod"
   },
   {
-    "title": "Testing JavaScript with Jest",
-    "url": "https://flaviocopes.com/jest",
-    "type": ["guide"]
-  },
-  {
     "title": "mostly-adequate-guide",
     "url": "https://mostly-adequate.gitbook.io/mostly-adequate-guide",
     "type": ["book"]
@@ -362,11 +357,6 @@
     "title": "Callback Hell",
     "url": "http://callbackhell.com",
     "type": ["guide"]
-  },
-  {
-    "title": "Web Almanac",
-    "url": "https://almanac.httparchive.org",
-    "type": ["reference"]
   },
   {
     "title": "HTML/JS: Making webpages interactive with jQuery",

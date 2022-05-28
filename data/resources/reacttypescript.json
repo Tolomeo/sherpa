@@ -26,11 +26,6 @@
     "source": "youtube.com/c/TechbaseDev"
   },
   {
-    "title": "React by Example",
-    "url": "https://reactbyexample.github.io",
-    "type": ["reference"]
-  },
-  {
     "title": "Modern Redux with Redux Toolkit (RTK) and TypeScript",
     "url": "https://egghead.io/courses/modern-redux-with-redux-toolkit-rtk-and-typescript-64f243c8",
     "type": ["course"]
@@ -39,11 +34,6 @@
     "title": "hairarrow/btship",
     "url": "https://github.com/hairarrow/btship",
     "type": ["example"]
-  },
-  {
-    "title": "Design Systems with React and Typescript in Storybook",
-    "url": "https://egghead.io/courses/design-systems-with-react-and-typescript-in-storybook",
-    "type": ["course"]
   },
   {
     "title": "React TypeScript: Basics and Best Practices",

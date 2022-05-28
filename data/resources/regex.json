@@ -116,7 +116,7 @@
   {
     "title": "Regular Expression Library",
     "url": "https://regexlib.com",
-    "type": ["cheatsheet", "reference"]
+    "type": ["reference"]
   },
   {
     "title": "ASCII Table - ASCII Character Codes, HTML, Octal, Hex, Decimal",
@@ -126,6 +126,6 @@
   {
     "title": "regexp cheatsheet",
     "url": "https://devhints.io/regexp",
-    "type": ["cheatsheet"]
+    "type": ["reference"]
   }
 ]

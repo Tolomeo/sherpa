@@ -174,11 +174,6 @@
     "type": ["example"]
   },
   {
-    "title": "Patterns.dev - Modern Web App Design Patterns",
-    "url": "https://www.patterns.dev",
-    "type": ["reference"]
-  },
-  {
     "title": "jaredpalmer/minimum-viable-saas",
     "url": "https://github.com/jaredpalmer/minimum-viable-saas",
     "type": ["reference", "example"]

@@ -84,11 +84,6 @@
     "type": ["reference", "collection"]
   },
   {
-    "title": "goldbergyoni/javascript-testing-best-practices",
-    "url": "https://github.com/goldbergyoni/javascript-testing-best-practices",
-    "type": ["guide", "reference"]
-  },
-  {
     "title": "Back End Development and APIs",
     "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis",
     "type": ["course", "collection"]
