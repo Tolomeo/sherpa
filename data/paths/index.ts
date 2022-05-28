@@ -1,4 +1,5 @@
 import resources, { Resource } from '../resources'
+import { SerializedPath, SerializedPaths, Path, Paths } from './types'
 import htmlcss from './htmlcss.json'
 import webaccessibility from './webaccessibility.json'
 import javascript from './javascript.json'
@@ -12,34 +13,24 @@ import regex from './regex.json'
 import neovim from './neovim.json'
 import lua from './lua.json'
 
-export interface SerializedPath {
-  title: string
-  resources: Array<keyof typeof resources>
-  next?: Array<keyof typeof paths>
-  prev?: Array<keyof typeof paths>
-  extras?: Array<SerializedPathExtra>
+const serializedPaths = {
+  htmlcss,
+  webaccessibility,
+  javascript,
+  typescript,
+  react,
+  reacttypescript,
+  next,
+  node,
+  git,
+  regex,
+  neovim,
+  lua,
 }
 
-export type SerializedPathExtra = Omit<
-  SerializedPath,
-  'next' | 'prev' | 'extras'
->
-
-export interface Path {
-  title: string
-  resources: Resource[]
-  extras: Array<PathExtra>
-  next: SerializedPaths
-  prev: SerializedPaths
-}
-
-export type PathExtra = Omit<Path, 'next' | 'prev' | 'extras'>
-
-export type SerializedPaths = Record<string, SerializedPath>
-
-export type Paths = Record<string, Path>
-
-export const parsePaths = (serializedPaths: SerializedPaths): Paths =>
+export const parsePaths = <T extends SerializedPaths<any>>(
+  serializedPaths: T,
+) =>
   Object.entries(serializedPaths).reduce(
     (paths, [pathName, serializedPath]) => {
       paths[pathName] = {
@@ -86,45 +77,34 @@ export const parsePaths = (serializedPaths: SerializedPaths): Paths =>
             nextPaths[nextPathId] = serializedPaths[nextPathId]
 
           return nextPaths
-        }, {} as SerializedPaths),
+        }, {} as SerializedPaths<typeof serializedPaths>),
         // populating prev paths, those are optional
         prev: (serializedPath.prev || []).reduce((prevPaths, prevPathId) => {
           if (serializedPaths[prevPathId])
             prevPaths[prevPathId] = serializedPaths[prevPathId]
 
           return prevPaths
-        }, {} as SerializedPaths),
+        }, {} as SerializedPaths<typeof serializedPaths>),
       }
 
       return paths
     },
-    {} as Paths,
+    {} as Paths<typeof serializedPaths>,
   )
 
-const paths = parsePaths({
-  htmlcss,
-  webaccessibility,
-  javascript,
-  typescript,
-  react,
-  reacttypescript,
-  next,
-  node,
-  git,
-  regex,
-  neovim,
-  lua,
-})
+const paths = parsePaths(
+  serializedPaths as SerializedPaths<keyof typeof serializedPaths>,
+)
 
-export const hasNextPaths = (path: Path) => {
+export const hasNextPaths = (path: Path<typeof serializedPaths>) => {
   return Boolean(Object.keys(path.next).length)
 }
 
-export const hasPrevPaths = (path: Path) => {
+export const hasPrevPaths = (path: Path<typeof serializedPaths>) => {
   return Boolean(Object.keys(path.prev).length)
 }
 
-export const hasExtras = (path: Path) => {
+export const hasExtras = (path: Path<typeof serializedPaths>) => {
   return Boolean(path.extras.length)
 }
 

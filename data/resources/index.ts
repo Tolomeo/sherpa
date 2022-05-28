@@ -33,3 +33,4 @@ const resources = parseResources([
 
 export { alternateSources }
 export default resources
+export * from './types'

@@ -32,7 +32,7 @@ export const parseResources = (serializedResources: SerializedResources) =>
   serializedResources.reduce((resourcesMap, serializedResource) => {
     if (!validateSerializedResource(serializedResource)) {
       throw new Error(
-        `SerializedResource validation error[${JSON.stringify(
+        `SerializedResource schema error[${JSON.stringify(
           serializedResource,
           null,
           4,
@@ -43,9 +43,7 @@ export const parseResources = (serializedResources: SerializedResources) =>
 
     if (resourcesMap[serializedResource.url]) {
       throw new Error(
-        `SerializedResource duplicated resource error[${
-          serializedResource.url
-        }]:
+        `SerializedResource duplication error[${serializedResource.url}]:
 				1: ${JSON.stringify(resourcesMap[serializedResource.url], null, 4)}
 				2: ${JSON.stringify(serializedResource, null, 4)}`,
       )
