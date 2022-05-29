@@ -28,13 +28,13 @@ If this project manages to help anyone learning something, I will see it as a su
 - [x] Swap the handmade approach for a component library
 - [x] Add "path useful tools" feature
 - [x] Add "path additional resources" feature
-- [ ] Add resources schema validation tests
-- [ ] Add resources monitoring tests
+- [x] Add resources monitoring tests
+- [x] Add resources schema validation
 - [ ] Add "help" panel
 - [ ] Add client side "save progress" feature
-- [ ] Add path customisation?
+- [ ] Add client side path customisation?
+- [ ] Add "resources with multiple URLs" support
 - [ ] Add "path sub-paths" support
-- [ ] Add "resource multiple URLs" support
 - [ ] Add path descriptions?
 - [ ] Split website code from json data source into separate monorepo packages
 - [ ] Add contributing automations and templates
