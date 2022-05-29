@@ -1,237 +1,237 @@
-{
-  "https://www.udacity.com/course/version-control-with-git--ud123": {
+[
+  {
     "title": "Version Control with Git",
     "url": "https://www.udacity.com/course/version-control-with-git--ud123",
     "type": ["course"]
   },
-  "https://www.coursera.org/learn/introduction-git-github": {
+  {
     "title": "Introduction to Git and GitHub",
     "url": "https://www.coursera.org/learn/introduction-git-github",
     "type": ["course"]
   },
-  "https://egghead.io/courses/practical-git-for-everyday-professional-use": {
+  {
     "title": "Practical Git for Everyday Professional Use",
     "url": "https://egghead.io/courses/practical-git-for-everyday-professional-use",
     "type": ["course"]
   },
-  "https://learngitbranching.js.org": {
+  {
     "title": "Learn Git Branching",
     "url": "https://learngitbranching.js.org",
     "type": ["tutorial"]
   },
-  "https://githowto.com": {
+  {
     "title": "Git How To",
     "url": "https://githowto.com",
     "type": ["course"]
   },
-  "https://ohshitgit.com": {
+  {
     "title": "Oh Shit, Git!?!",
     "url": "https://ohshitgit.com",
     "type": ["reference"]
   },
-  "http://ndpsoftware.com/git-cheatsheet.html": {
+  {
     "title": "Git Cheatsheet",
     "url": "http://ndpsoftware.com/git-cheatsheet.html",
     "type": ["reference"]
   },
-  "https://wanago.io/courses/getting-geeky-with-git": {
+  {
     "title": "Getting geeky with Git",
     "url": "https://wanago.io/courses/getting-geeky-with-git",
     "type": ["guide", "collection"]
   },
-  "https://maryrosecook.com/blog/post/git-from-the-inside-out": {
+  {
     "title": "Git from the inside out",
     "url": "https://maryrosecook.com/blog/post/git-from-the-inside-out",
     "type": ["guide"]
   },
-  "http://gitlet.maryrosecook.com": {
+  {
     "title": "Gitlet",
     "url": "http://gitlet.maryrosecook.com",
     "type": ["guide", "example"]
   },
-  "https://git-scm.com/book/en/v2": {
+  {
     "title": "Git - Book",
     "url": "https://git-scm.com/book/en/v2",
     "type": ["book"]
   },
-  "https://firstaidgit.io": {
+  {
     "title": "First Aid git",
     "url": "https://firstaidgit.io",
     "type": ["reference"]
   },
-  "https://martinfowler.com/articles/branching-patterns.html": {
+  {
     "title": "Patterns for Managing Source Code Branches",
     "url": "https://martinfowler.com/articles/branching-patterns.html",
     "type": ["guide"]
   },
-  "https://marklodato.github.io/visual-git-guide": {
+  {
     "title": "A Visual Git Reference",
     "url": "https://marklodato.github.io/visual-git-guide",
     "type": ["guide"]
   },
-  "https://github.com/dictcp/awesome-git": {
+  {
     "title": "dictcp/awesome-git",
     "url": "https://github.com/dictcp/awesome-git",
     "type": ["reference", "collection"]
   },
-  "https://www.coursera.org/learn/version-control-with-git": {
+  {
     "title": "Version Control with Git",
     "url": "https://www.coursera.org/learn/version-control-with-git",
     "type": ["course"]
   },
-  "https://gitexercises.fracz.com": {
+  {
     "title": "Git Exercises",
     "url": "https://gitexercises.fracz.com",
     "type": ["exercise", "collection"]
   },
-  "https://www.atlassian.com/git/tutorials": {
+  {
     "title": "Git Tutorials and Training",
     "url": "https://www.atlassian.com/git/tutorials",
     "type": ["course", "collection"]
   },
-  "http://rogerdudler.github.io/git-guide": {
+  {
     "title": "git - the simple guide",
     "url": "http://rogerdudler.github.io/git-guide",
     "type": ["guide"]
   },
-  "http://think-like-a-git.net": {
+  {
     "title": "Think Like (a) Git",
     "url": "http://think-like-a-git.net",
     "type": ["reference"]
   },
-  "https://gitimmersion.com": {
+  {
     "title": "Git Immersion",
     "url": "https://gitimmersion.com",
     "type": ["tutorial"]
   },
-  "http://www-cs-students.stanford.edu/~blynn/gitmagic": {
+  {
     "title": "Git Magic",
     "url": "http://www-cs-students.stanford.edu/~blynn/gitmagic",
     "type": ["book"]
   },
-  "https://www.youtube.com/playlist?list=PLyuRouwmQCjmYaG21ijCw0KrFiFEG0Oh9": {
+  {
     "title": "Learning Git",
     "url": "https://www.youtube.com/playlist?list=PLyuRouwmQCjmYaG21ijCw0KrFiFEG0Oh9",
     "type": ["course"],
     "source": "youtube.com/c/SteveGriffith-Prof3ssorSt3v3"
   },
-  "https://www.youtube.com/playlist?list=PLyuRouwmQCjlxyO-45o53YCWjBCM-fA7L": {
+  {
     "title": "Learning GitHub",
     "url": "https://www.youtube.com/playlist?list=PLyuRouwmQCjlxyO-45o53YCWjBCM-fA7L",
     "type": ["course"],
     "source": "youtube.com/c/SteveGriffith-Prof3ssorSt3v3"
   },
-  "https://www.w3docs.com/learn-git.html": {
+  {
     "title": "Learn Git",
     "url": "https://www.w3docs.com/learn-git.html",
     "type": ["course"]
   },
-  "https://dev.to/unseenwizzard/learn-git-concepts-not-commands-4gjc": {
+  {
     "title": "Learn git concepts, not commands",
     "url": "https://dev.to/unseenwizzard/learn-git-concepts-not-commands-4gjc",
     "type": ["guide"],
     "source": "dev.to/unseenwizzard"
   },
-  "https://docs.github.com/en/get-started/using-git": {
+  {
     "title": "Using Git",
     "url": "https://docs.github.com/en/get-started/using-git",
     "type": ["guide", "series"]
   },
-  "https://www.educba.com/software-development/software-development-tutorials/git-tutorial": {
+  {
     "title": "Git Tutorial",
     "url": "https://www.educba.com/software-development/software-development-tutorials/git-tutorial",
     "type": ["course"]
   },
-  "https://techtldr.com/19-git-tips-for-everyday-use": {
+  {
     "title": "19 Git Tips For Everyday Use",
     "url": "https://techtldr.com/19-git-tips-for-everyday-use",
     "type": ["reference", "guide"]
   },
-  "https://danielmiessler.com/study/git": {
+  {
     "title": "A git Primer",
     "url": "https://danielmiessler.com/study/git",
     "type": ["guide"]
   },
-  "https://www.youtube.com/watch?v=i76ts_0UryI": {
+  {
     "title": "The Ultimate Git & GitHub Crash Course - Learn to Version Control for Beginners",
     "url": "https://www.youtube.com/watch?v=i76ts_0UryI",
     "type": ["course"],
     "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
   },
-  "https://trunkbaseddevelopment.com": {
+  {
     "title": "Introduction",
     "url": "https://trunkbaseddevelopment.com",
     "type": ["reference"]
   },
-  "https://blog.scottnonnenberg.com/better-git-configuration": {
+  {
     "title": "Better Git configuration",
     "url": "https://blog.scottnonnenberg.com/better-git-configuration",
     "type": ["guide"]
   },
-  "http://git.or.cz/course/svn.html": {
+  {
     "title": "Git - SVN Crash Course",
     "url": "http://git.or.cz/course/svn.html",
     "type": ["guide"]
   },
-  "https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git": {
+  {
     "title": "Little Things I Like to Do with Git",
     "url": "https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git",
     "type": ["guide"]
   },
-  "https://github.com/joho/awesome-code-review": {
+  {
     "title": "joho/awesome-code-review",
     "url": "https://github.com/joho/awesome-code-review",
     "type": ["reference", "collection"]
   },
-  "https://dev.to/samuelfaure/how-to-learn-git-slowly-38fa": {
+  {
     "title": "How to learn Git slowly.",
     "url": "https://dev.to/samuelfaure/how-to-learn-git-slowly-38fa",
     "type": ["guide"],
     "source": "dev.to/samuelfaure"
   },
-  "https://github.com/RomuloOliveira/commit-messages-guide": {
+  {
     "title": "RomuloOliveira/commit-messages-guide",
     "url": "https://github.com/RomuloOliveira/commit-messages-guide",
     "type": ["reference"]
   },
-  "https://dangitgit.com/en": {
+  {
     "title": "Dangit, Git!?!",
     "url": "https://dangitgit.com/en",
     "type": ["reference"]
   },
-  "https://learnxinyminutes.com/docs/git": {
+  {
     "title": "Learn X in Y Minutes",
     "url": "https://learnxinyminutes.com/docs/git",
     "type": ["reference", "guide"]
   },
-  "https://gitirc.eu/git.html": {
+  {
     "title": "git(1)",
     "url": "https://gitirc.eu/git.html",
     "type": ["reference"]
   },
-  "https://git.wiki.kernel.org/index.php/Main_Page": {
+  {
     "title": "Git SCM Wiki",
     "url": "https://git.wiki.kernel.org/index.php/Main_Page",
     "type": ["reference"]
   },
-  "https://gitsheet.wtf": {
+  {
     "title": "GitSheet",
     "url": "https://gitsheet.wtf",
     "type": ["reference"]
   },
-  "https://github.com/arslanbilal/git-cheat-sheet": {
+  {
     "title": "arslanbilal/git-cheat-sheet",
     "url": "https://github.com/arslanbilal/git-cheat-sheet",
     "type": ["reference"]
   },
-  "https://github.com/k88hudson/git-flight-rules": {
+  {
     "title": "k88hudson/git-flight-rules",
     "url": "https://github.com/k88hudson/git-flight-rules",
     "type": ["reference"]
   },
-  "https://groups.google.com/g/git-users": {
+  {
     "title": "Git for human beings - Google Groups",
     "url": "https://groups.google.com/g/git-users",
     "type": ["community"]
   }
-}
+]

@@ -1,401 +1,386 @@
-{
-  "https://egghead.io/courses/the-beginner-s-guide-to-react": {
+[
+  {
     "title": "The Beginner's Guide to React",
     "url": "https://egghead.io/courses/the-beginner-s-guide-to-react",
     "type": ["course"]
   },
-  "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-react-js": {
+  {
     "title": "How To Code in React.js",
     "url": "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-react-js",
     "type": ["guide", "collection"],
     "source": "digitalocean.com/community"
   },
-  "https://reactpatterns.com": {
+  {
     "title": "React Patterns",
     "url": "https://reactpatterns.com",
     "type": ["guide", "reference", "collection"],
     "source": "reactpatterns.com"
   },
-  "https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867": {
+  {
     "title": "Fundamentals of Redux Course from Dan Abramov",
     "url": "https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867",
     "type": ["course"]
   },
-  "https://egghead.io/courses/building-react-applications-with-idiomatic-redux": {
+  {
     "title": "Building React Applications with Idiomatic Redux",
     "url": "https://egghead.io/courses/building-react-applications-with-idiomatic-redux",
     "type": ["course"]
   },
-  "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37": {
+  {
     "title": "Apply Redux to a Modern React Hooks Application",
     "url": "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37",
     "type": ["course"]
   },
-  "https://egghead.io/courses/component-driven-development-in-react-e0bf": {
+  {
     "title": "Component-driven development in React",
     "url": "https://egghead.io/courses/component-driven-development-in-react-e0bf",
     "type": ["course"]
   },
-  "https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc": {
+  {
     "title": "Build Advanced Components with React Hooks",
     "url": "https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc",
     "type": ["course"]
   },
-  "https://github.com/arturmolenda/project-manager": {
+  {
     "title": "arturmolenda/project-manager",
     "url": "https://github.com/arturmolenda/project-manager",
     "type": ["example"]
   },
-  "https://learntdd.in/react": {
+  {
     "title": "Learn TDD in React",
     "url": "https://learntdd.in/react",
     "type": ["guide"]
   },
-  "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ": {
+  {
     "title": "React Testing Library Tutorial",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ",
     "type": ["course"],
     "source": "youtube.com/c/TheNetNinja"
   },
-  "https://egghead.io/courses/develop-accessible-web-apps-with-react": {
+  {
     "title": "Develop Accessible Web Apps with React",
     "url": "https://egghead.io/courses/develop-accessible-web-apps-with-react",
     "type": ["tutorial", "collection"]
   },
-  "https://github.com/enaqx/awesome-react": {
+  {
     "title": "enaqx/awesome-react",
     "url": "https://github.com/enaqx/awesome-react",
     "type": ["collection"]
   },
-  "https://github.com/xgrommx/awesome-redux": {
+  {
     "title": "xgrommx/awesome-redux",
     "url": "https://github.com/xgrommx/awesome-redux",
     "type": ["collection"]
   },
-  "https://github.com/khaledosman/react-redux-realworld-example-app": {
+  {
     "title": "khaledosman/react-redux-realworld-example-app",
     "url": "https://github.com/khaledosman/react-redux-realworld-example-app",
     "type": ["example"]
   },
-  "https://reactjs.org/community/examples.html": {
+  {
     "title": "Example Projects",
     "url": "https://reactjs.org/community/examples.html",
     "type": ["example", "collection"],
     "source": "reactjs.org/community"
   },
-  "https://github.com/hairarrow/btship": {
-    "title": "hairarrow/btship",
-    "url": "https://github.com/hairarrow/btship",
-    "type": ["example"]
-  },
-  "https://daveceddia.com/react-practice-projects": {
+  {
     "title": "6 Fun React Project Ideas",
     "url": "https://daveceddia.com/react-practice-projects",
     "type": ["guide"]
   },
-  "https://scrimba.com/learn/learnreact": {
+  {
     "title": "React Tutorial: Learn React JS",
     "url": "https://scrimba.com/learn/learnreact",
     "type": ["course"]
   },
-  "https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795": {
+  {
     "title": "The React Handbook",
     "url": "https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795",
     "type": ["reference", "guide"]
   },
-  "https://www.coursera.org/learn/front-end-react": {
+  {
     "title": "Front-End Web Development with React",
     "url": "https://www.coursera.org/learn/front-end-react",
     "type": ["course"]
   },
-  "https://www.udemy.com/course/react-tutorial": {
+  {
     "title": "React JS Frontend Web Development for Beginners",
     "url": "https://www.udemy.com/course/react-tutorial",
     "type": ["course"]
   },
-  "https://www.udemy.com/course/modern-react": {
+  {
     "title": "React with Redux, React-Router, Hooks and Auth0",
     "url": "https://www.udemy.com/course/modern-react",
     "type": ["course"]
   },
-  "https://www.udemy.com/course/react-hooks-with-react-redux-migration": {
+  {
     "title": "React Hooks and Context (with React-Redux migration guide)",
     "url": "https://www.udemy.com/course/react-hooks-with-react-redux-migration",
     "type": ["course"]
   },
-  "https://egghead.io/courses/build-advanced-component-with-react-hooks-cd6a": {
+  {
     "title": "Build Advanced Components with React Hooks",
     "url": "https://egghead.io/courses/build-advanced-component-with-react-hooks-cd6a",
     "type": ["course"]
   },
-  "https://egghead.io/courses/design-systems-with-react-and-typescript-in-storybook": {
+  {
     "title": "Design Systems with React and Typescript in Storybook",
     "url": "https://egghead.io/courses/design-systems-with-react-and-typescript-in-storybook",
     "type": ["course"]
   },
-  "https://github.com/djohal/imdb-replica-react": {
+  {
     "title": "djohal/imdb-replica-react",
     "url": "https://github.com/djohal/imdb-replica-react",
     "type": ["example"]
   },
-  "https://github.com/oguz3/spotify-web-player": {
+  {
     "title": "oguz3/spotify-web-player",
     "url": "https://github.com/oguz3/spotify-web-player",
     "type": ["example"]
   },
-  "https://wanago.io/courses/javascript-testing-tutorial": {
+  {
     "title": "JavaScript testing tutorial Archives",
     "url": "https://wanago.io/courses/javascript-testing-tutorial",
     "type": ["guide", "series"]
   },
-  "https://softchris.github.io/books/react": {
+  {
     "title": "React book",
     "url": "https://softchris.github.io/books/react",
     "type": ["book"]
   },
-  "https://reactbyexample.github.io": {
+  {
     "title": "React by Example",
     "url": "https://reactbyexample.github.io",
     "type": ["reference"]
   },
-  "http://www.react.express": {
+  {
     "title": "React Express",
     "url": "http://www.react.express",
     "type": ["reference"]
   },
-  "https://github.com/tyroprogrammer/learn-react-app": {
+  {
     "title": "tyroprogrammer/learn-react-app",
     "url": "https://github.com/tyroprogrammer/learn-react-app",
     "type": ["course"]
   },
-  "https://www.taniarascia.com/redux-react-guide": {
+  {
     "title": "Redux Tutorial: An Overview and Walkthrough",
     "url": "https://www.taniarascia.com/redux-react-guide",
     "type": ["guide"]
   },
-  "https://epic-react-exercises.vercel.app": {
+  {
     "title": "Mithi's Epic React Exercises",
     "url": "https://epic-react-exercises.vercel.app",
     "type": ["exercise", "collection"]
   },
-  "https://wattenberger.com/blog/react-hooks": {
+  {
     "title": "Amelia Wattenberger",
     "url": "https://wattenberger.com/blog/react-hooks",
     "type": ["guide"]
   },
-  "https://github.com/Asabeneh/30-Days-Of-React": {
+  {
     "title": "Asabeneh/30-Days-Of-React",
     "url": "https://github.com/Asabeneh/30-Days-Of-React",
     "type": ["course"]
   },
-  "https://www.youtube.com/playlist?list=PLYSZyzpwBEWTBdbfStjqJSGaulqcHoNkT": {
+  {
     "title": "React.js Unit Testing and Integration Testing Tutorial",
     "url": "https://www.youtube.com/playlist?list=PLYSZyzpwBEWTBdbfStjqJSGaulqcHoNkT",
     "type": ["course"],
     "source": "youtube.com/c/BrunoAntunesPT"
   },
-  "https://ui.dev/react-router-tutorial": {
+  {
     "title": "A Complete Guide to React Router: Everything You Need to Know",
     "url": "https://ui.dev/react-router-tutorial",
     "type": ["guide"]
   },
-  "https://www.youtube.com/watch?v=GLSSRtnNY0g": {
+  {
     "title": "React Testing Library Crash Course",
     "url": "https://www.youtube.com/watch?v=GLSSRtnNY0g",
     "type": ["course"],
     "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
   },
-  "http://www.hackingwithreact.com": {
+  {
     "title": "Hacking with React ",
     "url": "http://www.hackingwithreact.com",
     "type": ["book"]
   },
-  "https://obedparla.com/code/a-visual-guide-to-react-mental-models": {
+  {
     "title": "A visual guide to React Mental models",
     "url": "https://obedparla.com/code/a-visual-guide-to-react-mental-models",
     "type": ["guide", "series"]
   },
-  "https://overreacted.io/react-as-a-ui-runtime": {
+  {
     "title": "React as a UI Runtime",
     "url": "https://overreacted.io/react-as-a-ui-runtime",
     "type": ["guide"]
   },
-  "https://itnext.io/creating-our-own-react-from-scratch-82dd6356676d": {
+  {
     "title": "Creating Our Own React From Scratch",
     "url": "https://itnext.io/creating-our-own-react-from-scratch-82dd6356676d",
     "type": ["guide"]
   },
-  "https://github.com/alan2207/bulletproof-react": {
+  {
     "title": "alan2207/bulletproof-react",
     "url": "https://github.com/alan2207/bulletproof-react",
     "type": ["reference", "collection"]
   },
-  "https://pomb.us/build-your-own-react": {
+  {
     "title": "Build your own React",
     "url": "https://pomb.us/build-your-own-react",
     "type": ["guide"]
   },
-  "https://overreacted.io/a-complete-guide-to-useeffect": {
+  {
     "title": "A Complete Guide to useEffect",
     "url": "https://overreacted.io/a-complete-guide-to-useeffect",
     "type": ["guide"]
   },
-  "https://egghead.io/courses/modernizing-a-legacy-redux-application-with-react-hooks-c528": {
+  {
     "title": "Modernizing a Legacy Redux Application with React Hooks",
     "url": "https://egghead.io/courses/modernizing-a-legacy-redux-application-with-react-hooks-c528",
     "type": ["course"]
   },
-  "https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior": {
+  {
     "title": "A (Mostly) Complete Guide to React Rendering Behavior",
     "url": "https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior",
     "type": ["guide"]
   },
-  "https://storybook.js.org/tutorials": {
+  {
     "title": "Storybook Tutorials",
     "url": "https://storybook.js.org/tutorials",
     "type": ["tutorial", "collection"]
   },
-  "https://snipcart.com/blog/spa-seo": {
+  {
     "title": "SPA SEO: Optimize Your Single-Page App for Google",
     "url": "https://snipcart.com/blog/spa-seo",
     "type": ["guide"]
   },
-  "https://ui.dev/build-your-own-react-router": {
+  {
     "title": "Build your own React Router",
     "url": "https://ui.dev/build-your-own-react-router",
     "type": ["guide"]
   },
-  "https://www.freecodecamp.org/news/8-reactjs-project-ideas-to-start-learning-by-doing": {
+  {
     "title": "8 React.js Project Ideas to Help You Start Learning by Doing",
     "url": "https://www.freecodecamp.org/news/8-reactjs-project-ideas-to-start-learning-by-doing",
     "type": ["exercise", "collection"]
   },
-  "https://github.com/sudheerj/reactjs-interview-questions": {
+  {
     "title": "sudheerj/reactjs-interview-questions",
     "url": "https://github.com/sudheerj/reactjs-interview-questions",
     "type": ["reference"]
   },
-  "https://ui.dev/why-react-hooks": {
+  {
     "title": "Why React Hooks?",
     "url": "https://ui.dev/why-react-hooks",
     "type": ["guide"]
   },
-  "https://johnpolacek.github.io/css-in-js-or-css-and-js": {
+  {
     "title": "CSS-in-JS or CSS-and-JS",
     "url": "https://johnpolacek.github.io/css-in-js-or-css-and-js",
     "type": ["reference"]
   },
-  "https://www.smashingmagazine.com/2022/01/web-frameworks-guide-part1": {
+  {
     "title": "What Web Frameworks Solve And How To Do Without Them",
     "url": "https://www.smashingmagazine.com/2022/01/web-frameworks-guide-part1",
     "type": ["guide", "series"]
   },
-  "https://www.youtube.com/watch?v=CGpMlWVcHok": {
+  {
     "title": "Building a Custom React Renderer | Sophie Alpert",
     "url": "https://www.youtube.com/watch?v=CGpMlWVcHok",
     "type": ["guide", "community"],
     "source": "youtube.com/channel/UCz5vTaEhvh7dOHEyd1efcaQ"
   },
-  "https://sebastiandedeyne.com/react-for-vue-developers": {
+  {
     "title": "React for Vue developers",
     "url": "https://sebastiandedeyne.com/react-for-vue-developers",
     "type": ["guide"]
   },
-  "https://www.youtube.com/watch?v=Wm_xI7KntDs": {
+  {
     "title": "The Story of React",
     "url": "https://www.youtube.com/watch?v=Wm_xI7KntDs",
     "type": ["guide"],
     "source": "youtube.com/watch?v=Wm_xI7KntDs"
   },
-  "https://devhints.io/react": {
+  {
     "title": "React.js cheatsheet",
     "url": "https://devhints.io/react",
     "type": ["reference"]
   },
-  "https://react-svgr.com/playground": {
+  {
     "title": "SVGR Playground",
     "url": "https://react-svgr.com/playground",
     "type": ["generator"]
   },
-  "https://reactjs.org/docs/getting-started.html": {
+  {
     "title": "Getting Started – React",
     "url": "https://reactjs.org/docs/getting-started.html",
     "type": ["reference"]
   },
-  "https://nikgraf.github.io/react-hooks": {
+  {
     "title": "Collection of React Hooks",
     "url": "https://nikgraf.github.io/react-hooks",
     "type": ["reference"]
   },
-  "https://react-hooks-cheatsheet.com": {
+  {
     "title": "Hooks Cheatsheet",
     "url": "https://react-hooks-cheatsheet.com",
     "type": ["reference"]
   },
-  "https://react-layouts.com": {
+  {
     "title": "React Layouts",
     "url": "https://react-layouts.com",
     "type": ["reference", "generator"]
   },
-  "https://antonioru.github.io/beautiful-react-hooks": {
+  {
     "title": "Beautiful React Hooks",
     "url": "https://antonioru.github.io/beautiful-react-hooks",
     "type": ["reference"]
   },
-  "https://alexsidorenko.com/blog/react-render-cheat-sheet": {
+  {
     "title": "A Visual Guide to React Rendering - Cheat Sheet",
     "url": "https://alexsidorenko.com/blog/react-render-cheat-sheet",
     "type": ["reference", "guide"]
   },
-  "https://www.patterns.dev": {
-    "title": "Patterns.dev - Modern Web App Design Patterns",
-    "url": "https://www.patterns.dev",
-    "type": ["reference"]
-  },
-  "https://reactjs.org/community/support.html": {
+  {
     "title": "Where To Get Support – React",
     "url": "https://reactjs.org/community/support.html",
     "type": ["community"]
   },
-  "https://reactjs.org/blog": {
+  {
     "title": "React - All Posts",
     "url": "https://reactjs.org/blog/all.html",
     "type": ["blog"]
   },
-  "https://ui.dev/blog/": {
+  {
     "title": "JavaScript, React, TypeScript, and other Web Tech Articles and Tutorials - ui.dev",
     "url": "https://ui.dev/blog/",
     "type": ["blog"]
   },
-  "https://overreacted.io": {
+  {
     "title": "Overreacted — A blog by Dan Abramov",
     "url": "https://overreacted.io",
     "type": ["blog"]
   },
 
-  "https://kentcdodds.com/blog": {
+  {
     "title": "The Kent C. Dodds Blog",
     "url": "https://kentcdodds.com/blog",
     "type": ["blog"]
   },
-  "https://flaviocopes.com": {
-    "title": "Flavio Copes",
-    "url": "https://flaviocopes.com",
-    "type": ["blog"]
-  },
-  "https://reactdigest.net": {
+  {
     "title": "React Digest",
     "url": "https://reactdigest.net",
     "type": ["community"]
   },
-  "https://dev.to/ycmjason/building-a-simple-virtual-dom-from-scratch-3d05": {
+  {
     "title": "Building a Simple Virtual DOM from Scratch",
     "url": "https://dev.to/ycmjason/building-a-simple-virtual-dom-from-scratch-3d05",
     "type": ["tutorial"]
   },
-  "https://github.com/brillout/awesome-react-components": {
+  {
     "title": "brillout/awesome-react-components",
     "url": "https://github.com/brillout/awesome-react-components",
     "type": ["reference", "collection"]
   }
-}
+]

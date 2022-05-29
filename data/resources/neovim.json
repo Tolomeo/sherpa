@@ -1,255 +1,255 @@
-{
-  "https://danielmiessler.com/study/vim": {
+[
+  {
     "title": "Learn Vim For the Last Time: A Tutorial and Primer",
     "url": "https://danielmiessler.com/study/vim",
     "type": ["guide"]
   },
-  "https://www.openvim.com": {
+  {
     "title": "Interactive Vim tutorial",
     "url": "https://www.openvim.com",
     "type": ["tutorial"]
   },
-  "http://www.vimgenius.com/lessons/vim-intro": {
+  {
     "title": "VimGenius",
     "url": "http://www.vimgenius.com/lessons/vim-intro",
     "type": ["tutorial"]
   },
-  "https://thevaluable.dev/vim-beginner": {
+  {
     "title": "Vim Commands",
     "url": "https://thevaluable.dev/vim-beginner",
     "type": ["course"]
   },
-  "https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua": {
+  {
     "title": "Everything you need to know to configure neovim using lua",
     "url": "https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua",
     "type": ["guide"]
   },
-  "https://www.youtube.com/playlist?list=PLSf43fnldIpYipi-FjzjV6fAYUGysfjY8": {
+  {
     "title": "Vim and You",
     "url": "https://www.youtube.com/playlist?list=PLSf43fnldIpYipi-FjzjV6fAYUGysfjY8",
     "type": ["tutorial", "collection"],
     "source": "youtube.com/c/CodeSmell"
   },
-  "https://github.com/akrawchyk/awesome-vim": {
+  {
     "title": "akrawchyk/awesome-vim",
     "url": "https://github.com/akrawchyk/awesome-vim",
     "type": ["reference", "collection"]
   },
-  "https://github.com/rockerBOO/awesome-neovim": {
+  {
     "title": "rockerBOO/awesome-neovim",
     "url": "https://github.com/rockerBOO/awesome-neovim",
     "type": ["reference", "collection"]
   },
-  "https://thoughtbot.com/upcase/vim": {
+  {
     "title": "Learn Vim",
     "url": "https://thoughtbot.com/upcase/vim",
     "type": ["course"]
   },
-  "https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85": {
+  {
     "title": "Why I love Vim: It’s the lesser-known features that make it so amazing",
     "url": "https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85",
     "type": ["guide"]
   },
-  "https://github.com/iggredible/Learn-Vim": {
+  {
     "title": "iggredible/Learn-Vim",
     "url": "https://github.com/iggredible/Learn-Vim",
     "type": ["course"]
   },
-  "https://github.com/mhinz/vim-galore": {
+  {
     "title": "mhinz/vim-galore",
     "url": "https://github.com/mhinz/vim-galore",
     "type": ["course"]
   },
-  "https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f": {
+  {
     "title": "Learn Neovim The Practical Way",
     "url": "https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f",
     "type": ["tutorial", "collection"]
   },
-  "http://vimcasts.org/episodes": {
+  {
     "title": "Episodes",
     "url": "http://vimcasts.org/episodes",
     "type": ["tutorial", "series"]
   },
-  "https://www.barbarianmeetscoding.com/series/exploring-vim": {
+  {
     "title": "Exploring Vim",
     "url": "https://www.barbarianmeetscoding.com/series/exploring-vim",
     "type": ["course"]
   },
-  "http://www.vimgenius.com/lessons": {
+  {
     "title": "VimGenius",
     "url": "http://www.vimgenius.com/lessons",
     "type": ["tutorial", "collection"]
   },
-  "https://github.com/jmoon018/PacVim": {
+  {
     "title": "jmoon018/PacVim",
     "url": "https://github.com/jmoon018/PacVim",
     "type": ["game"]
   },
-  "https://www.moolenaar.net/habits.html": {
+  {
     "title": "Seven habits of effective text editing",
     "url": "https://www.moolenaar.net/habits.html",
     "type": ["guide"]
   },
-  "https://blog.codinghorror.com/we-are-typists-first-programmers-second": {
+  {
     "title": "We Are Typists First, Programmers Second",
     "url": "https://blog.codinghorror.com/we-are-typists-first-programmers-second",
     "type": ["guide"]
   },
-  "https://stevelosh.com/blog/2010/09/coming-home-to-vim": {
+  {
     "title": "Coming Home to Vim",
     "url": "https://stevelosh.com/blog/2010/09/coming-home-to-vim",
     "type": ["guide"]
   },
-  "https://thoughtbot.com/upcase/tmux": {
+  {
     "title": "Learn tmux",
     "url": "https://thoughtbot.com/upcase/tmux",
     "type": ["course"]
   },
-  "https://www.youtube.com/watch?v=Bt-vmPC_-Ho": {
+  {
     "title": "We can have nice things",
     "url": "https://www.youtube.com/watch?v=Bt-vmPC_-Ho",
     "type": ["community"],
     "source": "youtube.com/c/Vim-jpOrg"
   },
-  "https://vimhelp.org": {
+  {
     "title": "Vim: help.txt",
     "url": "https://vimhelp.org",
     "type": ["reference"]
   },
-  "https://github.com/nanotee/nvim-lua-guide": {
+  {
     "title": "nanotee/nvim-lua-guide",
     "url": "https://github.com/nanotee/nvim-lua-guide",
     "type": ["reference"]
   },
-  "https://learnxinyminutes.com/docs/vim": {
+  {
     "title": "Learn X in Y Minutes",
     "url": "https://learnxinyminutes.com/docs/vim",
     "type": ["reference"]
   },
-  "https://devhints.io/vim": {
+  {
     "title": "Vim cheatsheet",
     "url": "https://devhints.io/vim",
     "type": ["reference"]
   },
-  "https://devhints.io/vimscript": {
+  {
     "title": "Vim scripting cheatsheet",
     "url": "https://devhints.io/vimscript",
     "type": ["reference"]
   },
-  "https://vim.rtorr.com": {
+  {
     "title": "Vim Cheat Sheet",
     "url": "https://vim.rtorr.com",
     "type": ["reference"]
   },
-  "https://www.barbarianmeetscoding.com/wiki/vim": {
+  {
     "title": "Wiki: Vim - The Mighty Text Editor that lets you edit text at the speed of thought",
     "url": "https://www.barbarianmeetscoding.com/wiki/vim",
     "type": ["reference"]
   },
-  "https://www.barbarianmeetscoding.com/wiki/vim-plugins": {
+  {
     "title": "Wiki: Vim Plugins - Enhancing Your Vim Editor with Awesome Plugins",
     "url": "https://www.barbarianmeetscoding.com/wiki/vim-plugins",
     "type": ["tutorial", "collection"]
   },
-  "https://www.barbarianmeetscoding.com/wiki/neovim": {
+  {
     "title": "Wiki: Neovim - Using modern vim",
     "url": "https://www.barbarianmeetscoding.com/wiki/neovim",
     "type": ["guide"]
   },
-  "http://michael.peopleofhonoronly.com/vim": {
+  {
     "title": "Vim Cheat Sheat for Programmers",
     "url": "http://michael.peopleofhonoronly.com/vim",
     "type": ["reference"]
   },
-  "https://vimconfig.com": {
+  {
     "title": "VimConfig - Sane and simple Vim configuration",
     "url": "https://vimconfig.com",
     "type": ["generator"]
   },
-  "https://vim-bootstrap.com": {
+  {
     "title": "Your configuration generator for NeoVim and Vim - Vim Bootstrap",
     "url": "https://vim-bootstrap.com",
     "type": ["generator"]
   },
-  "https://github.com/rafi/awesome-vim-colorschemes": {
+  {
     "title": "rafi/awesome-vim-colorschemes",
     "url": "https://github.com/rafi/awesome-vim-colorschemes",
     "type": ["reference", "collection"]
   },
-  "https://github.com/amix/vimrc": {
+  {
     "title": "amix/vimrc",
     "url": "https://github.com/amix/vimrc",
     "type": ["example"]
   },
-  "https://thevaluable.dev": {
+  {
     "title": "The Valuable Dev",
     "url": "https://thevaluable.dev",
     "type": ["blog"]
   },
-  "https://dev.to/t/vim": {
+  {
     "title": "Vim - DEV Community",
     "url": "https://dev.to/t/vim",
     "type": ["blog"]
   },
-  "https://dev.to/t/neovim": {
+  {
     "title": "Neovim - DEV Community",
     "url": "https://dev.to/t/neovim",
     "type": ["blog"]
   },
-  "https://www.barbarianmeetscoding.com": {
+  {
     "title": "Barbarian Meets Coding",
     "url": "https://www.barbarianmeetscoding.com",
     "type": ["blog"]
   },
-  "http://vonheikemen.github.io/devlog": {
+  {
     "title": "Devlog",
     "url": "http://vonheikemen.github.io/devlog",
     "type": ["blog"]
   },
-  "https://vim.fandom.com/wiki/Vim_Tips_Wiki": {
+  {
     "title": "Vim Tips Wiki _ Fandom",
     "url": "https://vim.fandom.com/wiki/Vim_Tips_Wiki",
     "type": ["community"]
   },
-  "https://learnvimscriptthehardway.stevelosh.com": {
+  {
     "title": "Learn Vimscript the Hard Way",
     "url": "https://learnvimscriptthehardway.stevelosh.com",
     "type": ["course"]
   },
-  "http://vimregex.com": {
+  {
     "title": "Vim Regular Expressions 101",
     "url": "http://vimregex.com",
     "type": ["guide"]
   },
-  "http://zzapper.co.uk/vimtips.html": {
+  {
     "title": "Best of VIM Tips",
     "url": "http://zzapper.co.uk/vimtips.html",
     "type": ["reference"]
   },
-  "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs": {
+  {
     "title": "How to Do 90% of What Plugins Do (With Just Vim)",
     "url": "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs",
     "type": ["tutorial"],
     "source": "youtube.com/c/ThoughtbotVideo"
   },
-  "https://devhints.io/lua": {
+  {
     "title": "Lua cheatsheet",
     "url": "https://devhints.io/lua",
     "type": ["reference"]
   },
-  "https://github.com/ibhagwan/vim-cheatsheet": {
+  {
     "title": "ibhagwan/vim-cheatsheet",
     "url": "https://github.com/ibhagwan/vim-cheatsheet",
     "type": ["reference"]
   },
-  "https://www.hillelwayne.com/post/intermediate-vim": {
+  {
     "title": "At least one Vim trick you might not know",
     "url": "https://www.hillelwayne.com/post/intermediate-vim",
     "type": ["guide"]
   },
-  "https://www.vimgolf.com": {
+  {
     "title": "VimGolf - real Vim ninjas count every keystroke!",
     "url": "https://www.vimgolf.com",
     "type": ["game", "community"]
   }
-}
+]

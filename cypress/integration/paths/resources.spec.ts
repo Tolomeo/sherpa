@@ -1,9 +1,7 @@
-import { paths, deserializePath } from '../../../data'
+import { paths } from '../../../data'
 
 describe('Resources', () => {
-  Object.entries(paths).forEach(([_, serialisedPath]) => {
-    const path = deserializePath(serialisedPath)
-
+  Object.entries(paths).forEach(([_, path]) => {
     describe(`"${path.title}" path resources`, () => {
       path.resources.forEach((pathResource) => {
         it(`"${pathResource.title}" [ ${pathResource.url} ]`, () => {

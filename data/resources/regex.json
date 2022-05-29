@@ -1,131 +1,131 @@
-{
-  "https://github.com/ziishaned/learn-regex": {
+[
+  {
     "title": "Learn regex the easy way",
     "url": "https://github.com/ziishaned/learn-regex",
     "type": ["book"]
   },
-  "https://regexcrossword.com": {
+  {
     "title": "Regex Crossword",
     "url": "https://regexcrossword.com",
     "type": ["game", "community"]
   },
-  "https://github.com/aloisdg/awesome-regex": {
+  {
     "title": "aloisdg/awesome-regex",
     "url": "https://github.com/aloisdg/awesome-regex",
     "type": ["reference", "collection"]
   },
 
-  "https://wanago.io/courses/regex-course": {
+  {
     "title": "Regex course Archives",
     "url": "https://wanago.io/courses/regex-course",
     "type": ["guide", "collection"]
   },
-  "https://regexone.com": {
+  {
     "title": "RegexOne - Learn Regular Expressions",
     "url": "https://regexone.com",
     "type": ["course", "reference"]
   },
-  "https://flaviocopes.com/javascript-regular-expressions": {
+  {
     "title": "A guide to JavaScript Regular Expressions",
     "url": "https://flaviocopes.com/javascript-regular-expressions",
     "type": ["guide"]
   },
-  "https://regexlearn.com": {
+  {
     "title": "Regex Learn - Step by step, from zero to advanced.",
     "url": "https://regexlearn.com",
     "type": ["course", "reference"]
   },
-  "https://refrf.dev": {
+  {
     "title": "Regular Expressions for Regular Folk",
     "url": "https://refrf.dev",
     "type": ["book"]
   },
-  "https://learnbyexample.github.io/learn_js_regexp": {
+  {
     "title": "JavaScript RegExp",
     "url": "https://learnbyexample.github.io/learn_js_regexp",
     "type": ["book"]
   },
-  "https://learnbyexample.github.io/Ruby_Regexp": {
+  {
     "title": "Ruby Regexp",
     "url": "https://learnbyexample.github.io/Ruby_Regexp",
     "type": ["book"]
   },
-  "https://learnbyexample.github.io/py_regular_expressions": {
+  {
     "title": "Python re(gex)?",
     "url": "https://learnbyexample.github.io/py_regular_expressions",
     "type": ["book"]
   },
-  "http://www.rexegg.com": {
+  {
     "title": "Regex Tutorial—From Regex 101 to Advanced Regex",
     "url": "http://www.rexegg.com",
     "type": ["course", "reference"]
   },
-  "https://scrimba.com/learn/regularexpressions": {
+  {
     "title": "Regex Tutorial: Learn Regular Expressions",
     "url": "https://scrimba.com/learn/regularexpressions",
     "type": ["course"]
   },
-  "https://www.youtube.com/playlist?list=PLe30vg_FG4OSyqlTXN9CHT9-J1Y_U3QuL": {
+  {
     "title": "Regular Expressions from Scratch to Pro",
     "url": "https://www.youtube.com/playlist?list=PLe30vg_FG4OSyqlTXN9CHT9-J1Y_U3QuL",
     "type": ["course"],
     "source": "youtube.com/c/Bitfumes"
   },
-  "http://wstoop.co.za/wregex.php": {
+  {
     "title": "wregex - How Regular Expression Engines Work",
     "url": "http://wstoop.co.za/wregex.php",
     "type": ["guide"]
   },
-  "https://www.youtube.com/watch?v=LIVBktatfQI": {
+  {
     "title": "Regular Expressions With GNU grep in the Terminal - Part 01",
     "url": "https://www.youtube.com/watch?v=LIVBktatfQI",
     "type": ["guide"],
     "source": "youtube.com/channel/UCoJtk2M8bme9KXTe6F3K-Yg"
   },
-  "https://www.youtube.com/watch?v=frVuSFFv4Tk": {
+  {
     "title": "Regular Expressions With GNU grep in the Terminal - Part 02",
     "url": "https://www.youtube.com/watch?v=frVuSFFv4Tk",
     "type": ["course"],
     "source": "youtube.com/channel/UCoJtk2M8bme9KXTe6F3K-Yg"
   },
-  "https://dassur.ma/things/regexp-quote": {
+  {
     "title": "My most useful RegExp trick",
     "url": "https://dassur.ma/things/regexp-quote",
     "type": ["guide"]
   },
-  "https://regex.guide": {
+  {
     "title": "RegexGuide: Online Tool for Future Regex Users.",
     "url": "https://regex.guide",
     "type": ["generator"]
   },
-  "https://ihateregex.io": {
+  {
     "title": "i Hate Regex - The Regex Cheat Sheet",
     "url": "https://ihateregex.io",
     "type": ["generator"]
   },
-  "https://regex101.com": {
+  {
     "title": "regex101: build, test, and debug regex",
     "url": "https://regex101.com",
     "type": ["reference", "generator"]
   },
-  "https://regexr.com": {
+  {
     "title": "RegExr: Learn, Build, & Test RegEx",
     "url": "https://regexr.com",
     "type": ["reference", "generator"]
   },
-  "https://regexlib.com": {
+  {
     "title": "Regular Expression Library",
     "url": "https://regexlib.com",
-    "type": ["cheatsheet", "reference"]
+    "type": ["reference"]
   },
-  "https://www.asciitable.com": {
+  {
     "title": "ASCII Table - ASCII Character Codes, HTML, Octal, Hex, Decimal",
     "url": "https://www.asciitable.com",
     "type": ["reference"]
   },
-  "https://devhints.io/regexp": {
+  {
     "title": "regexp cheatsheet",
     "url": "https://devhints.io/regexp",
-    "type": ["cheatsheet"]
+    "type": ["reference"]
   }
-}
+]

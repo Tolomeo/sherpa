@@ -1,11 +1,11 @@
 import React from 'react'
 import NextLink from 'next/link'
-import { SerializedPaths } from '../../data'
+import { Paths, SerializedPaths } from '../../data'
 import { List, Link, Typography, Box } from '../theme'
 import { Underline } from '../theme'
 
 type Props = {
-  paths: SerializedPaths
+  paths: Paths | SerializedPaths
 }
 
 const pathsListTestId = 'paths.list'

@@ -1,11 +1,9 @@
-import { paths, deserializePath } from '../../../data'
+import { paths } from '../../../data'
 
 const baseUrl = Cypress.config('baseUrl')
 
 describe('Path pages', () => {
-  Object.entries(paths).forEach(([pathKey, serialisedPath]) => {
-    const path = deserializePath(serialisedPath)
-
+  Object.entries(paths).forEach(([pathKey, path]) => {
     describe(`The ${path.title} path page`, () => {
       before(() => {
         const pathUrl = `${baseUrl}/paths/${pathKey}`

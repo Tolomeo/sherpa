@@ -1,3 +1,5 @@
+import { SerializedResources } from './types'
+import { parseResources } from './utils'
 import alternatives from './alternatives.json'
 import htmlcss from './htmlcss.json'
 import webaccessibility from './webaccessibility.json'
@@ -12,41 +14,9 @@ import regex from './regex.json'
 import neovim from './neovim.json'
 import lua from './lua.json'
 
-export type ResourceType =
-  | 'course'
-  | 'tutorial'
-  | 'guide'
-  | 'game'
-  | 'book'
-  | 'example'
-  | 'collection'
-  | 'series'
-  | 'reference'
-  | 'community'
-  | 'exercise'
-  | 'blog'
+const alternateSources = parseResources(alternatives as SerializedResources)
 
-export interface SerializedResource {
-  title: string
-  url: string
-  type: ResourceType[]
-  source?: string
-}
-
-export interface Resource {
-  title: string
-  url: string
-  type: ResourceType[]
-  source: string
-}
-
-export type Resources = {
-  [resourceId: string]: SerializedResource
-}
-
-const alternateSources = <Resources>alternatives
-
-const resources = <Resources>{
+const resources = parseResources([
   ...htmlcss,
   ...webaccessibility,
   ...javascript,
@@ -59,13 +29,8 @@ const resources = <Resources>{
   ...regex,
   ...neovim,
   ...lua,
-}
+] as SerializedResources)
 
-const deserializeResource = (resource: SerializedResource): Resource => ({
-  ...resource,
-  source:
-    resource.source || new URL(resource.url).hostname.replace(/^www./, ''),
-})
-
-export { alternateSources, deserializeResource }
+export { alternateSources }
 export default resources
+export * from './types'
