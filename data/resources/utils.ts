@@ -1,10 +1,10 @@
+import Ajv, { JSONSchemaType } from 'ajv'
 import {
   SerializedResources,
   SerializedResource,
   Resources,
   resourceType,
 } from './types'
-import Ajv, { JSONSchemaType } from 'ajv'
 
 const ajv = new Ajv()
 

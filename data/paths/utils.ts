@@ -1,11 +1,51 @@
+import Ajv, { JSONSchemaType } from 'ajv'
 import resources from '../resources'
-import { SerializedPaths, Paths, Path } from './types'
+import { SerializedPaths, SerializedPath, Paths, Path } from './types'
+
+const ajv = new Ajv()
+
+const serializedPathSchema: JSONSchemaType<SerializedPath> = {
+  type: 'object',
+  properties: {
+    title: { type: 'string' },
+    resources: { type: 'array', items: { type: 'string' } },
+    next: { type: 'array', items: { type: 'string' }, nullable: true },
+    prev: { type: 'array', items: { type: 'string' }, nullable: true },
+    extras: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          title: { type: 'string' },
+          resources: { type: 'array', items: { type: 'string' } },
+        },
+        required: ['title', 'resources'],
+      },
+      nullable: true,
+    },
+  },
+  required: ['title', 'resources'],
+  additionalProperties: false,
+}
+
+const validateSerializedPath = ajv.compile(serializedPathSchema)
 
 export const parsePaths = <T extends SerializedPaths<string>>(
   serializedPaths: T,
 ) =>
   Object.entries(serializedPaths).reduce(
     (paths, [pathName, serializedPath]) => {
+      if (!validateSerializedPath(serializedPath)) {
+        throw new Error(
+          `SerializedPath schema error[${JSON.stringify(
+            serializedPath,
+            null,
+            4,
+          )}]:
+				${JSON.stringify(validateSerializedPath.errors, null, 4)}`,
+        )
+      }
+
       paths[pathName] = {
         ...serializedPath,
         // populating resources data
