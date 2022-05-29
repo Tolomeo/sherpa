@@ -11,7 +11,7 @@ const ajv = new Ajv()
 const serializedResourceSchema: JSONSchemaType<SerializedResource> = {
   type: 'object',
   properties: {
-    url: { type: 'string' },
+    url: { type: 'string', pattern: '^https?://' },
     type: {
       type: 'array',
       items: {

@@ -8,7 +8,10 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
   type: 'object',
   properties: {
     title: { type: 'string' },
-    resources: { type: 'array', items: { type: 'string' } },
+    resources: {
+      type: 'array',
+      items: { type: 'string', pattern: '^https?://' },
+    },
     next: { type: 'array', items: { type: 'string' }, nullable: true },
     prev: { type: 'array', items: { type: 'string' }, nullable: true },
     extras: {
@@ -17,7 +20,10 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
         type: 'object',
         properties: {
           title: { type: 'string' },
-          resources: { type: 'array', items: { type: 'string' } },
+          resources: {
+            type: 'array',
+            items: { type: 'string', pattern: '^https?://' },
+          },
         },
         required: ['title', 'resources'],
       },
@@ -30,9 +36,7 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
 
 const validateSerializedPath = ajv.compile(serializedPathSchema)
 
-export const parsePaths = <T extends SerializedPaths<string>>(
-  serializedPaths: T,
-) =>
+export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
   Object.entries(serializedPaths).reduce(
     (paths, [pathName, serializedPath]) => {
       if (!validateSerializedPath(serializedPath)) {
@@ -54,7 +58,7 @@ export const parsePaths = <T extends SerializedPaths<string>>(
 
           if (!resource)
             throw new Error(
-              `deserializePathError: resource "${resourceId}" not found`,
+              `SerializedPath resource not found error[${resourceId}]`,
             )
 
           return resource
@@ -68,7 +72,7 @@ export const parsePaths = <T extends SerializedPaths<string>>(
 
               if (!extraResource)
                 throw new Error(
-                  `deserializePathError: extra resource "${extraResourceId}" not found`,
+                  `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
                 )
 
               return extraResource
@@ -86,15 +90,27 @@ export const parsePaths = <T extends SerializedPaths<string>>(
         })),
         // populating next paths, those are optional
         next: (serializedPath.next || []).reduce((nextPaths, nextPathId) => {
-          if (serializedPaths[nextPathId])
-            nextPaths[nextPathId] = serializedPaths[nextPathId]
+          const nextPath = serializedPaths[nextPathId]
+
+          if (!nextPath)
+            throw new Error(
+              `Serializedpath next path not found error[${nextPathId}]`,
+            )
+
+          nextPaths[nextPathId] = nextPath
 
           return nextPaths
         }, {} as SerializedPaths<keyof T>),
         // populating prev paths, those are optional
         prev: (serializedPath.prev || []).reduce((prevPaths, prevPathId) => {
-          if (serializedPaths[prevPathId])
-            prevPaths[prevPathId] = serializedPaths[prevPathId]
+          const prevPath = serializedPaths[prevPathId]
+
+          if (!prevPath)
+            throw new Error(
+              `Serializedpath prev path not found error[${prevPathId}]`,
+            )
+
+          prevPaths[prevPathId] = prevPath
 
           return prevPaths
         }, {} as SerializedPaths<keyof T>),
@@ -105,14 +121,14 @@ export const parsePaths = <T extends SerializedPaths<string>>(
     {} as Paths<keyof T>,
   )
 
-export const hasNextPaths = <T extends Path<string>>(path: T) => {
+export const hasNextPaths = <T extends Path>(path: T) => {
   return Boolean(Object.keys(path.next).length)
 }
 
-export const hasPrevPaths = <T extends Path<string>>(path: T) => {
+export const hasPrevPaths = <T extends Path>(path: T) => {
   return Boolean(Object.keys(path.prev).length)
 }
 
-export const hasExtras = <T extends Path<string>>(path: T) => {
+export const hasExtras = <T extends Path>(path: T) => {
   return Boolean(path.extras.length)
 }
