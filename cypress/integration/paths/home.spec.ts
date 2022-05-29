@@ -1,6 +1,4 @@
-import { paths, deserializePath, alternateSources } from '../../../data'
-
-const baseUrl = Cypress.config('baseUrl')
+import { paths, alternateSources } from '../../../data'
 
 describe('Index page', () => {
   before(() => {
