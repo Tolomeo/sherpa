@@ -3,14 +3,15 @@
   "prev": ["javascript"],
   "resources": [
     "https://www.youtube.com/watch?v=cjoTTSbOuG0",
-    "https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool",
-    "https://auth0.com/blog/developing-npm-packages",
+    "https://survivejs.com/maintenance",
     "https://github.com/sindresorhus/awesome-npm"
   ],
   "extras": [
     {
       "title": "There's more",
       "resources": [
+        "https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool",
+        "https://auth0.com/blog/developing-npm-packages",
         "https://www.udemy.com/course/npm-for-beginners-fast-track",
         "https://www.freecodecamp.org/news/javascript-package-manager-npm-and-yarn",
         "https://github.com/workshopper/how-to-npm",
@@ -19,7 +20,6 @@
         "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSS7aup_xvT9Q1-NQZINW8X",
         "https://css-tricks.com/a-complete-beginners-guide-to-npm",
         "https://nodesource.com/blog/semver-a-primer",
-        "https://survivejs.com/maintenance",
         "https://egghead.io/courses/execute-npm-package-binaries-with-the-npx-package-runner",
         "https://lucasfcosta.com/2020/10/17/lockfile-guide.html",
         "https://css-tricks.com/why-npm-scripts"
