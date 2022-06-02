@@ -4,6 +4,7 @@ import { parsePaths } from './utils'
 import htmlcss from './htmlcss.json'
 import webaccessibility from './webaccessibility.json'
 import javascript from './javascript.json'
+import npm from './npm.json'
 import typescript from './typescript.json'
 import react from './react.json'
 import reacttypescript from './reacttypescript.json'
@@ -22,6 +23,7 @@ const serializedPaths = {
   react,
   reacttypescript,
   next,
+  npm,
   node,
   git,
   regex,
