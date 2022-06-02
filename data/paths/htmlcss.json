@@ -12,8 +12,6 @@
     "https://cssgrid.io",
     "https://cssgridgarden.com",
     "https://scrimba.com/learn/cssvariables",
-    "https://moderncss.dev",
-    "https://csslayout.io",
     "https://github.com/diegocard/awesome-html5",
     "https://github.com/awesome-css-group/awesome-css"
   ],
@@ -40,12 +38,17 @@
         "https://www.youtube.com/playlist?list=PLgBH1CvjOA63Xvt0BaeQ7zL4KXX96Wbgp",
         "https://css-challenges.com",
         "https://www.guess-css.app",
-        "https://css-speedrun.netlify.app"
+        "https://css-speedrun.netlify.app",
+        "https://codingfantasy.com/games/flexboxadventure",
+        "https://knightsoftheflexboxtable.com",
+        "https://hiddedevries.nl/en/blog/2022-01-23-more-to-give-than-just-the-div-semantics-and-how-to-get-them-right"
       ]
     },
     {
       "title": "Beyond basics",
       "resources": [
+        "https://github.com/AllThingsSmitty/css-protips",
+        "https://moderncss.dev",
         "https://egghead.io/courses/css-tips-and-tricks-930b",
         "https://css-tricks.com/how-to-section-your-html",
         "https://rtlstyling.com",
@@ -56,52 +59,69 @@
         "https://cloudfour.com/thinks/responsive-images-the-simple-way",
         "https://polypane.app/blog/the-complete-guide-to-css-media-queries",
         "https://meiert.com/en/blog/optional-html",
-        "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries"
+        "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries",
+        "https://stories.algolia.com/a-search-engine-in-css-b5ec4e902e97",
+        "https://www.youtube.com/watch?v=fc3IFF4B6Jw",
+        "https://css-tricks.com/css-cascade-layers",
+        "https://www.freecodecamp.org/news/web-animation-performance-fundamentals",
+        "https://www.joshwcomeau.com/css/understanding-layout-algorithms",
+        "https://masteringmarkdown.com"
+      ]
+    },
+    {
+      "title": "How do they do it?",
+      "resources": [
+        "https://web.dev/patterns/layout",
+        "https://csslayout.io",
+        "http://1linelayouts.glitch.me",
+        "https://sparkbox.com/foundry/bem_by_example",
+        "https://github.com/you-dont-need/You-Dont-Need-JavaScript",
+        "http://html.systems",
+        "https://undead.institute/60-days-of-animation",
+        "https://stylestage.dev",
+        "https://animatedbackgrounds.me",
+        "https://smolcss.dev"
       ]
     },
     {
       "title": "Nice to know",
       "resources": [
         "https://cssbattle.dev",
-        "https://masteringmarkdown.com",
-        "https://github.com/you-dont-need/You-Dont-Need-JavaScript",
         "http://getbem.com",
         "https://www.youtube.com/playlist?list=PLKoqnv2vTMUN6lFDz6qMBsz7-Jm8YRV9H",
         "https://www.htmhell.dev",
         "https://eev.ee/blog/2020/02/01/old-css-new-css",
         "https://rtl.wtf",
-        "https://undead.institute/60-days-of-animation",
-        "https://stylestage.dev",
-        "https://almanac.httparchive.org"
+        "https://almanac.httparchive.org",
+        "https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs",
+        "https://www.smashingmagazine.com/2022/03/html-attributes-you-never-use"
       ]
     },
     {
       "title": "Great bookmarks",
       "resources": [
-				"http://1linelayouts.glitch.me",
         "https://htmlreference.io",
         "https://cssreference.io",
-        "https://csslayout.io",
         "https://9elements.com/seo-cheat-sheet/",
         "https://learn-the-web.algonquindesign.ca/topics/cheat-sheets-checklists",
         "https://gridbyexample.com",
-        "https://sparkbox.com/foundry/bem_by_example",
         "https://html.spec.whatwg.org/multipage",
-        "http://html.systems",
         "https://cssvalues.com",
         "https://devhints.io/resolutions",
         "https://madebymike.github.io/html5-periodic-table",
         "https://caniuse.com",
         "https://caninclude.glitch.me",
         "https://www.caniemail.com",
-        "https://animatedbackgrounds.me",
         "https://modern-fluid-typography.vercel.app",
         "https://cssgradient.io",
         "https://codepen.io/anthonydugois/full/RpYBmy",
         "https://mailtolink.me",
         "https://responsivebreakpoints.com",
         "https://polypane.app/css-specificity-calculator",
-        "https://metatags.io"
+        "https://metatags.io",
+        "https://bennettfeely.com/clippy",
+        "https://css-tricks.com/almanac",
+        "https://www.joshwcomeau.com/gradient-generator"
       ]
     },
     {
@@ -112,7 +132,9 @@
         "https://www.smashingmagazine.com",
         "https://ishadeed.com",
         "https://www.joshwcomeau.com",
-        "https://codepen.io"
+        "https://codepen.io",
+        "https://stateofcss.com",
+        "https://css-irl.info"
       ]
     }
   ],

@@ -179,7 +179,7 @@
   {
     "title": "Frontend Mentor Challenges",
     "url": "https://www.youtube.com/playlist?list=PLgBH1CvjOA63Xvt0BaeQ7zL4KXX96Wbgp",
-    "type": ["example", "collection"],
+    "type": ["tutorial", "collection"],
     "source": "youtube.com/c/FlorinPop"
   },
   {
@@ -346,7 +346,7 @@
   {
     "title": "Style Stage",
     "url": "https://stylestage.dev",
-    "type": ["example", "collection"]
+    "type": ["example", "collection", "community"]
   },
   {
     "title": "Web Almanac",
@@ -438,5 +438,96 @@
     "title": "CodePen",
     "url": "https://codepen.io",
     "type": ["community"]
+  },
+  {
+    "title": "Flex Box Adventure – CSS Game to Learn Flexbox",
+    "url": "https://codingfantasy.com/games/flexboxadventure",
+    "type": ["game"]
+  },
+  {
+    "title": "Knights of the Flexbox table",
+    "url": "https://knightsoftheflexboxtable.com",
+    "type": ["game"]
+  },
+  {
+    "title": "More to give than just the div: semantics and how to get them right",
+    "url": "https://hiddedevries.nl/en/blog/2022-01-23-more-to-give-than-just-the-div-semantics-and-how-to-get-them-right",
+    "type": ["guide"]
+  },
+
+  {
+    "title": "A search engine in CSS.",
+    "url": "https://stories.algolia.com/a-search-engine-in-css-b5ec4e902e97",
+    "type": ["guide"]
+  },
+  {
+    "title": "Sass (CSS Preprocessor) Crash Course - CSS with Superpowers",
+    "url": "https://www.youtube.com/watch?v=fc3IFF4B6Jw",
+    "type": ["guide"]
+  },
+  {
+    "title": "A Complete Guide to CSS Cascade Layers",
+    "url": "https://css-tricks.com/css-cascade-layers",
+    "type": ["guide"]
+  },
+  {
+    "title": "Web Animation Performance Fundamentals – How to Make Your Pages Look Smooth",
+    "url": "https://www.freecodecamp.org/news/web-animation-performance-fundamentals",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Understanding Layout Algorithms",
+    "url": "https://www.joshwcomeau.com/css/understanding-layout-algorithms",
+    "type": ["guide"]
+  },
+  {
+    "title": "Layout patterns",
+    "url": "https://web.dev/patterns/layout",
+    "type": ["example", "collection"]
+  },
+  {
+    "title": "How to Favicon in 2022: Six files that fit most needs",
+    "url": "https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs",
+    "type": ["guide"]
+  },
+  {
+    "title": "Those HTML Attributes You Never Use",
+    "url": "https://www.smashingmagazine.com/2022/03/html-attributes-you-never-use",
+    "type": ["guide"]
+  },
+  {
+    "title": "Clippy — CSS clip-path maker",
+    "url": "https://bennettfeely.com/clippy",
+    "type": ["generator"]
+  },
+  {
+    "title": "CSS Almanac",
+    "url": "https://css-tricks.com/almanac",
+    "type": ["reference"]
+  },
+  {
+    "title": "SmolCSS",
+    "url": "https://smolcss.dev",
+    "type": ["example", "collection"]
+  },
+  {
+    "title": "AllThingsSmitty/css-protips",
+    "url": "https://github.com/AllThingsSmitty/css-protips",
+    "type": ["reference"]
+  },
+  {
+    "title": "CSS Gradient Generator",
+    "url": "https://www.joshwcomeau.com/gradient-generator",
+    "type": ["generator"]
+  },
+  {
+    "title": "The State of CSS Survey",
+    "url": "https://stateofcss.com",
+    "type": ["reference", "community"]
+  },
+  {
+    "title": "CSS { In Real Life }",
+    "url": "https://css-irl.info",
+    "type": ["blog"]
   }
 ]
