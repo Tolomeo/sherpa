@@ -319,5 +319,25 @@
     "title": "Web Accessibility Initiative (WAI)",
     "url": "https://www.w3.org/WAI",
     "type": ["reference"]
+  },
+  {
+    "title": "The Surprising Truth About Pixels and Accessibility: should I use pixels or rems?",
+    "url": "https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility",
+    "type": ["guide"]
+  },
+  {
+    "title": "WebAIM: The WebAIM Million - The 2022 report on the accessibility of the top 1,000,000 home pages",
+    "url": "https://webaim.org/projects/million",
+    "type": ["reference"]
+  },
+  {
+    "title": "Blog - craigabbott.co.uk",
+    "url": "https://www.craigabbott.co.uk/blog",
+    "type": ["blog"]
+  },
+  {
+    "title": "24 Accessibility",
+    "url": "https://www.24a11y.com",
+    "type": ["reference"]
   }
 ]
