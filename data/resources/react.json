@@ -174,7 +174,7 @@
     "type": ["exercise", "collection"]
   },
   {
-    "title": "Amelia Wattenberger",
+    "title": "Thinking in React Hooks",
     "url": "https://wattenberger.com/blog/react-hooks",
     "type": ["guide"]
   },
@@ -382,5 +382,76 @@
     "title": "brillout/awesome-react-components",
     "url": "https://github.com/brillout/awesome-react-components",
     "type": ["reference", "collection"]
+  },
+  {
+    "title": "50 Projects for React & the Static Web",
+    "url": "https://50reactprojects.com",
+    "type": ["exercise", "book"]
+  },
+  {
+    "title": "WTF is JSX",
+    "url": "https://jasonformat.com/wtf-is-jsx/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Practical React Query",
+    "url": "https://tkdodo.eu/blog/practical-react-query",
+    "type": ["course"]
+  },
+  {
+    "title": "React Storybook Tutorial",
+    "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwhC-j3x3t9la8-GQJGViDQk",
+    "type": ["course"],
+    "source": "youtube.com/c/Codevolution"
+  },
+  {
+    "title": "Internationalization in React",
+    "url": "https://arsfutura.com/magazine/internationalization-in-react",
+    "type": ["guide"]
+  },
+  {
+    "title": "Build Yourself a Redux",
+    "url": "https://zapier.com/engineering/how-to-build-redux/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Retrofit a Test Suite in an Existing React Apps",
+    "url": "https://www.javascripttutorials.net/retrofit-a-test-suite-in-an-existing-react-apps",
+    "type": ["guide"]
+  },
+  {
+    "title": "React Testing Course for Beginners – Code and Test 3 Apps",
+    "url": "https://www.youtube.com/watch?v=8vfQ6SWBZ-U",
+    "type": ["course"]
+  },
+  {
+    "title": "Testing Recipes",
+    "url": "https://reactjs.org/docs/testing-recipes.html",
+    "type": ["reference", "collection"]
+  },
+  {
+    "title": "madhu-sagar/system-design-react-code-examples",
+    "url": "https://github.com/madhu-sagar/system-design-react-code-examples",
+    "type": ["reference"]
+  },
+  {
+    "title": "React Forms - Formik vs. Hook-Form vs. Final-Form",
+    "url": "https://blog.appseed.us/react-forms-formik-vs-hookform-vs-finalform",
+    "type": ["guide", "opinion"]
+  },
+  {
+    "title": "useHooks - Easy to understand React Hook recipes",
+    "url": "https://usehooks.com",
+    "type": ["example", "collection", "reference"]
+  },
+  {
+    "title": "React Resources",
+    "url": "https://reactresources.com",
+    "type": ["reference"]
+  },
+  {
+    "title": "React Working Group",
+    "url": "https://github.com/reactwg",
+    "type": ["reference", "community"]
   }
 ]

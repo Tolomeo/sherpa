@@ -16,7 +16,7 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
     next: {
       type: 'array',
       items: { type: 'string' },
-      minLength: 1,
+      minItems: 1,
       nullable: true,
     },
     prev: {
