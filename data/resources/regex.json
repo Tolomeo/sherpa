@@ -127,5 +127,10 @@
     "title": "regexp cheatsheet",
     "url": "https://devhints.io/regexp",
     "type": ["reference"]
+  },
+  {
+    "title": "Implementing a Regular Expression Engine",
+    "url": "https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine",
+    "type": ["guide"]
   }
 ]
