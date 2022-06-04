@@ -18,6 +18,11 @@
     "source": "react2025.com"
   },
   {
+    "title": "React 2025",
+    "url": "https://docs.react2025.com",
+    "type": ["example"]
+  },
+  {
     "title": "Next.js Tutorial",
     "url": "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSQsrukurP09ksi49H9Yj40",
     "type": ["guide", "series"],
@@ -193,5 +198,52 @@
     "url": "https://www.youtube.com/c/VercelHQ",
     "type": ["blog"],
     "source": "youtube.com/c/VercelHQ"
+  },
+  {
+    "title": "The Next.js Handbook",
+    "url": "https://www.freecodecamp.org/news/the-next-js-handbook",
+    "type": ["reference"]
+  },
+  {
+    "title": "Next.js Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PLYxzS__5yYQmpzsVeR7-KnX2li19KZhxE",
+    "type": ["tutorial", "collection"],
+    "source": "youtube.com/c/codedamn"
+  },
+  {
+    "title": "Next JS Tutorial - 3 Hours | Learn Next.js From Scratch",
+    "url": "https://www.youtube.com/watch?v=tt3PUvhOVzo",
+    "type": ["course"],
+    "source": "youtube.com/c/codedamn"
+  },
+  {
+    "title": "Comparing Styling Methods In Next.js — Smashing Magazine",
+    "url": "https://www.smashingmagazine.com/2020/09/comparison-styling-methods-next-js",
+    "type": ["guide"]
+  },
+  {
+    "title": "How to keep your Lighthouse score high in Next.js applications",
+    "url": "https://tsh.io/blog/how-to-keep-your-lighthouse-score-high-in-next-js-applications-a-checklist",
+    "type": ["guide"]
+  },
+  {
+    "title": "Building a Mini Next.js",
+    "url": "https://hire.jonasgalvez.com.br/2022/may/18/building-a-mini-next-js",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "reck1ess/next-realworld-example-app",
+    "url": "https://github.com/reck1ess/next-realworld-example-app",
+    "type": ["example"]
+  },
+  {
+    "title": "The Story of Next.js",
+    "url": "https://www.youtube.com/watch?v=BILxV_vrZO0",
+    "type": ["guide"]
+  },
+  {
+    "title": "JAMstacked",
+    "url": "https://jamstack.email/",
+    "type": ["community"]
   }
 ]

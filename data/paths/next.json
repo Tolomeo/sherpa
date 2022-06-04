@@ -6,7 +6,6 @@
     "https://nextjs.org/learn/basics/create-nextjs-app",
     "https://www.youtube.com/playlist?list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH",
     "https://www.youtube.com/watch?v=EJVGzyWSCBE",
-    "https://www.youtube.com/watch?v=QjZIeA952jE&list=PLFsfg2xP7cbL6BB-LJb3BWvq9kHmGB5oo&index=4&t=120s",
     "https://github.com/unicodeveloper/awesome-nextjs"
   ],
   "extras": [
@@ -20,12 +19,15 @@
         "https://www.youtube.com/playlist?list=PLFsfg2xP7cbI1U7BZJwmJwTVs4D0pqX1F",
         "https://www.youtube.com/playlist?list=PL6bwFJ82M6FXjyBTVi6WSCWin8q_g_8RR",
         "https://www.udemy.com/course/next-js-react-hooks",
-        "https://react2025.com",
         "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSQsrukurP09ksi49H9Yj40",
         "https://www.youtube.com/playlist?list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw",
         "https://www.youtube.com/watch?v=mTz0GXj8NN0",
-        "https://github.com/salihozdemir/stackoverflow-clone",
-        "https://www.youtube.com/watch?v=6HTs8HtZMt0"
+        "https://www.youtube.com/watch?v=6HTs8HtZMt0",
+        "https://www.freecodecamp.org/news/the-next-js-handbook",
+        "https://www.youtube.com/playlist?list=PLYxzS__5yYQmpzsVeR7-KnX2li19KZhxE",
+        "https://www.youtube.com/watch?v=1WmNXEVia8I",
+        "https://www.youtube.com/watch?v=mTz0GXj8NN0",
+        "https://www.youtube.com/watch?v=tt3PUvhOVzo"
       ]
     },
     {
@@ -39,14 +41,27 @@
         "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1",
         "https://vercel.com/docs/concepts/next.js/overview",
         "https://www.saltycrane.com/blog/2021/04/nextjs-gitlab-cicd-docker-multi-stage-example",
-        "https://www.saltycrane.com/blog/2021/03/example-nextjs-gitlab-cicd-amazon-ecr-and-ecs-deploy-pipeline"
+        "https://www.saltycrane.com/blog/2021/03/example-nextjs-gitlab-cicd-amazon-ecr-and-ecs-deploy-pipeline",
+        "https://www.smashingmagazine.com/2020/09/comparison-styling-methods-next-js",
+        "https://tsh.io/blog/how-to-keep-your-lighthouse-score-high-in-next-js-applications-a-checklist",
+        "https://hire.jonasgalvez.com.br/2022/may/18/building-a-mini-next-js",
+        "https://www.youtube.com/watch?v=QjZIeA952jE&list=PLFsfg2xP7cbL6BB-LJb3BWvq9kHmGB5oo&index=4&t=120s"
+      ]
+    },
+    {
+      "title": "How do they do it?",
+      "resources": [
+        "https://docs.react2025.com",
+        "https://github.com/salihozdemir/stackoverflow-clone",
+        "https://github.com/reck1ess/next-realworld-example-app"
       ]
     },
     {
       "title": "Nice to know",
       "resources": [
         "https://github.com/jaredpalmer/minimum-viable-saas",
-        "https://web.dev/image-component"
+        "https://web.dev/image-component",
+        "https://www.youtube.com/watch?v=BILxV_vrZO0"
       ]
     },
     {
@@ -62,7 +77,8 @@
       "title": "Stay in the loop",
       "resources": [
         "https://nextjs.org/blog",
-        "https://www.youtube.com/c/VercelHQ"
+        "https://www.youtube.com/c/VercelHQ",
+        "https://jamstack.email/"
       ]
     }
   ]
