@@ -350,5 +350,25 @@
     "title": "Marcin Wanago Blog",
     "url": "https://wanago.io",
     "type": ["blog"]
+  },
+  {
+    "title": "Tao of Node - Design, Architecture & Best Practices",
+    "url": "https://alexkondov.com/tao-of-node",
+    "type": ["guide", "reference"]
+  },
+  {
+    "title": "Writing Good Tests for NodeJS APIs",
+    "url": "https://lucasfcosta.com/2017/04/06/Testing-NodeJS-APIs.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "sciner/webcraft",
+    "url": "https://github.com/sciner/webcraft",
+    "type": ["example"]
+  },
+  {
+    "title": "Hard-won lessons: Five years with Node.js",
+    "url": "https://blog.scottnonnenberg.com/hard-won-lessons-five-years-with-node-js",
+    "type": ["opinion"]
   }
 ]
