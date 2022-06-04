@@ -1,9 +1,7 @@
 {
   "title": "Git",
   "resources": [
-    "https://www.udacity.com/course/version-control-with-git--ud123",
     "https://www.coursera.org/learn/introduction-git-github",
-    "https://egghead.io/courses/practical-git-for-everyday-professional-use",
     "https://learngitbranching.js.org",
     "https://wanago.io/courses/getting-geeky-with-git",
     "https://github.com/dictcp/awesome-git"
@@ -12,6 +10,8 @@
     {
       "title": "There's more",
       "resources": [
+        "https://egghead.io/courses/practical-git-for-everyday-professional-use",
+        "https://www.udacity.com/course/version-control-with-git--ud123",
         "https://www.coursera.org/learn/version-control-with-git",
         "https://gitexercises.fracz.com",
         "https://githowto.com",
@@ -28,9 +28,10 @@
         "https://dev.to/unseenwizzard/learn-git-concepts-not-commands-4gjc",
         "https://docs.github.com/en/get-started/using-git",
         "https://www.educba.com/software-development/software-development-tutorials/git-tutorial",
-        "https://techtldr.com/19-git-tips-for-everyday-use",
         "https://danielmiessler.com/study/git",
-        "https://www.youtube.com/watch?v=i76ts_0UryI"
+        "https://www.youtube.com/watch?v=i76ts_0UryI",
+        "https://www.youtube.com/watch?v=8aV5AxJrHDg&list=PLZMWkkQEwOPmGolqJPsAm_4fcBDDc2to_",
+        "https://launchschool.com/books/git"
       ]
     },
     {
@@ -40,17 +41,16 @@
         "http://gitlet.maryrosecook.com",
         "https://trunkbaseddevelopment.com",
         "https://blog.scottnonnenberg.com/better-git-configuration",
-        "https://martinfowler.com/articles/branching-patterns.html"
+        "https://martinfowler.com/articles/branching-patterns.html",
+        "https://lucasfcosta.com/2018/01/20/Git-Bisect-Pure-Git-Wizardry.html"
       ]
     },
     {
       "title": "Nice to know",
       "resources": [
-        "http://git.or.cz/course/svn.html",
         "https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git",
-        "https://github.com/joho/awesome-code-review",
         "https://dev.to/samuelfaure/how-to-learn-git-slowly-38fa",
-        "https://github.com/RomuloOliveira/commit-messages-guide"
+        "https://techtldr.com/19-git-tips-for-everyday-use"
       ]
     },
     {
@@ -64,7 +64,10 @@
         "https://git.wiki.kernel.org/index.php/Main_Page",
         "https://gitsheet.wtf",
         "https://github.com/arslanbilal/git-cheat-sheet",
-        "https://github.com/k88hudson/git-flight-rules"
+        "https://github.com/k88hudson/git-flight-rules",
+        "https://github.com/joho/awesome-code-review",
+        "https://github.com/RomuloOliveira/commit-messages-guide",
+        "https://www.atlassian.com/git/glossary"
       ]
     },
     {
