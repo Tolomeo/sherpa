@@ -61,16 +61,14 @@
     "type": ["book"]
   },
   {
-    "title": "Vanilla JS + Web Components example app",
+    "title": "gothinkster/web-components-realworld-example-app",
     "url": "https://github.com/gothinkster/web-components-realworld-example-app",
-    "type": ["example"],
-    "source": "github.com/gothinkster"
+    "type": ["example"]
   },
   {
-    "title": "Event driven vanilla JS + Web Components example app",
+    "title": "mits-gossau/event-driven-web-components-realworld-example-app",
     "url": "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
-    "type": ["example"],
-    "source": "github.com/mits-gossau"
+    "type": ["example"]
   },
   {
     "title": "JavaScript Garden",
@@ -374,10 +372,9 @@
     "type": ["reference"]
   },
   {
-    "title": "Awesome Jest",
+    "title": "jest-community/awesome-jest",
     "url": "https://github.com/jest-community/awesome-jest",
-    "type": ["reference", "collection"],
-    "source": "github.com/jest-community"
+    "type": ["reference", "collection"]
   },
   {
     "title": "Jest cheat sheet",
@@ -459,5 +456,109 @@
     "title": "Flavio Copes",
     "url": "https://flaviocopes.com",
     "type": ["blog"]
+  },
+  {
+    "title": "JavaScript tutorial for beginners",
+    "url": "https://www.youtube.com/playlist?list=PLZPZq0r_RZOMRMjHB_IEBjOW_ufr00yG1",
+    "type": ["course"],
+    "source": "youtube.com/c/BroCodez"
+  },
+  {
+    "title": "Coding Lessons",
+    "url": "https://www.youtube.com/playlist?list=PLZld0zbNGbZRfjut6JI7ZLx8ZbTDa5zn-",
+    "type": ["course"],
+    "source": "youtube.com/c/CodingAdventures"
+  },
+  {
+    "title": "Learn and use Composition in JavaScript and TypeScript",
+    "url": "https://softchris.github.io/pages/javascript-composition.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "Regex in JS - how YOU can learn it and learn to like it",
+    "url": "https://softchris.github.io/pages/javascript-regex.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "JavaScript tutorial - a step by step, in-depth introduction to JavaScript programming",
+    "url": "https://launchschool.com/books/javascript",
+    "type": ["book"]
+  },
+  {
+    "title": "JavaScript Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V",
+    "type": ["course"],
+    "source": "youtube.com/c/Freecodecamp"
+  },
+  {
+    "title": "How to implement a programming language",
+    "url": "https://lisperator.net/pltut/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Implementing a Regular Expression Engine",
+    "url": "https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "JavaScript template engine in just 20 lines",
+    "url": "https://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Streams—The definitive guide",
+    "url": "https://web.dev/streams",
+    "type": ["guide"]
+  },
+  {
+    "title": "JSDoc typings: all the benefits of TypeScript, with none of the drawbacks",
+    "url": "https://gils-blog.tayar.org/posts/jsdoc-typings-all-the-benefits-none-of-the-drawbacks",
+    "type": ["guide"]
+  },
+  {
+    "title": "carltheperson/advanced-js-objects",
+    "url": "https://github.com/carltheperson/advanced-js-objects",
+    "type": ["book"]
+  },
+  {
+    "title": "Understand observables by building a toy library",
+    "url": "https://steveholgado.com/understanding-observables",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Jest Crash Course - Learn How to Test your JavaScript Application",
+    "url": "https://www.youtube.com/watch?v=ajiAl5UNzBU",
+    "type": ["guide"],
+    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
+  },
+  {
+    "title": "Building a JavaScript Testing Framework",
+    "url": "https://cpojer.net/posts/building-a-javascript-testing-framework",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "JavaScript AntiDebugging Tricks",
+    "url": "https://x-c3ll.github.io/posts/javascript-antidebugging",
+    "type": ["guide"]
+  },
+  {
+    "title": "Interview with Senior JS Developer in 2022",
+    "url": "https://www.youtube.com/watch?v=Uo3cL4nrGOk&t=4s",
+    "type": ["opinion"]
+  },
+  {
+    "title": "The Ultimate Guide to JavaScript Fatigue: Realities of our industry",
+    "url": "https://lucasfcosta.com/2017/07/17/The-Ultimate-Guide-to-JavaScript-Fatigue.html",
+    "type": ["opinion"]
+  },
+  {
+    "title": "[Array Builder]",
+    "url": "https://www.arraybuilder.com",
+    "type": ["generator"]
+  },
+  {
+    "title": "The State of JavaScript Survey",
+    "url": "https://stateofjs.com",
+    "type": ["community"]
   }
 ]
