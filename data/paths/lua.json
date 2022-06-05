@@ -15,7 +15,6 @@
         "https://www.tutorialspoint.com/lua/index.htm",
         "https://www.lua.org/pil/contents.html",
         "http://lua-users.org/wiki/LuaTutorial",
-        "https://www.youtube.com/playlist?list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU",
         "https://www.youtube.com/playlist?list=PL1P11yPQAo7q_BWMKFZvUlLBqLRUJLrJm",
         "https://www.youtube.com/playlist?list=PLxgtJR7f0RBKGid7F2dfv7qc-xWwSee2O"
       ]
@@ -53,7 +52,8 @@
         "https://www.youtube.com/playlist?list=PLyQg3m0a5UivaAXEfVDngKYp9jyNSTIo_",
         "https://education.roblox.com",
         "http://notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts",
-        "https://careerkarma.com/blog/who-uses-lua"
+        "https://careerkarma.com/blog/who-uses-lua",
+        "https://luakit.github.io/"
       ]
     },
     {
@@ -63,8 +63,7 @@
         "https://www.luafaq.org",
         "https://www.lua.org/manual",
         "https://learnxinyminutes.com/docs/lua",
-        "https://devhints.io/lua",
-        "https://luakit.github.io/"
+        "https://devhints.io/lua"
       ]
     },
     {
