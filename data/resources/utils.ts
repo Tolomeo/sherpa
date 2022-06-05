@@ -3,6 +3,7 @@ import {
   SerializedResources,
   SerializedResource,
   Resources,
+  Resource,
   resourceType,
 } from './types'
 
@@ -50,11 +51,27 @@ export const parseResources = (serializedResources: SerializedResources) =>
       )
     }
 
-    resourcesMap[serializedResource.url] = {
-      ...serializedResource,
-      source:
-        serializedResource.source ||
-        new URL(serializedResource.url).hostname.replace(/^www./, ''),
+    if (serializedResource.source) {
+      resourcesMap[serializedResource.url] = serializedResource as Resource
+      return resourcesMap
+    }
+
+    const resourceUrl = new URL(serializedResource.url)
+
+    switch (resourceUrl.hostname) {
+      case 'github.com':
+        resourcesMap[serializedResource.url] = {
+          ...serializedResource,
+          source: `${resourceUrl.hostname}/${
+            resourceUrl.pathname.split('/').filter(Boolean)[0]
+          }`,
+        }
+        break
+      default:
+        resourcesMap[serializedResource.url] = {
+          ...serializedResource,
+          source: resourceUrl.hostname.replace(/^www./, ''),
+        }
     }
 
     return resourcesMap

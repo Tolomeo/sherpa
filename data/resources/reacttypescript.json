@@ -1,16 +1,16 @@
 [
   {
-    "title": "angelguzmaning/ts-redux-react-realworld-example-app",
+    "title": "ts-redux-react-realworld-example-app",
     "url": "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app",
     "type": ["example"]
   },
   {
-    "title": "piotrwitek/react-redux-typescript-guide",
+    "title": "react-redux-typescript-guide",
     "url": "https://github.com/piotrwitek/react-redux-typescript-guide",
     "type": ["guide"]
   },
   {
-    "title": "mat-sz/2048",
+    "title": "2048",
     "url": "https://github.com/mat-sz/2048",
     "type": ["example"]
   },
@@ -31,7 +31,7 @@
     "type": ["course"]
   },
   {
-    "title": "hairarrow/btship",
+    "title": "btship",
     "url": "https://github.com/hairarrow/btship",
     "type": ["example"]
   },

@@ -41,7 +41,7 @@
     "source": "youtube.com/colbz"
   },
   {
-    "title": "salihozdemir/stackoverflow-clone",
+    "title": "stackoverflow-clone",
     "url": "https://github.com/salihozdemir/stackoverflow-clone",
     "type": ["example"]
   },
@@ -52,7 +52,7 @@
     "source": "smashingmagazine.com"
   },
   {
-    "title": "unicodeveloper/awesome-nextjs",
+    "title": "awesome-nextjs",
     "url": "https://github.com/unicodeveloper/awesome-nextjs",
     "type": ["collection"]
   },
@@ -179,7 +179,7 @@
     "type": ["example"]
   },
   {
-    "title": "jaredpalmer/minimum-viable-saas",
+    "title": "minimum-viable-saas",
     "url": "https://github.com/jaredpalmer/minimum-viable-saas",
     "type": ["reference", "example"]
   },
@@ -232,7 +232,7 @@
     "type": ["tutorial"]
   },
   {
-    "title": "reck1ess/next-realworld-example-app",
+    "title": "next-realworld-example-app",
     "url": "https://github.com/reck1ess/next-realworld-example-app",
     "type": ["example"]
   },

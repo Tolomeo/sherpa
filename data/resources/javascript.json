@@ -46,7 +46,7 @@
     "type": ["exercise", "collection"]
   },
   {
-    "title": "ryanmcdermott/clean-code-javascript",
+    "title": "clean-code-javascript",
     "url": "https://github.com/ryanmcdermott/clean-code-javascript",
     "type": ["guide"]
   },
@@ -56,17 +56,17 @@
     "type": ["book"]
   },
   {
-    "title": "getify/Functional-Light-JS",
+    "title": "Functional-Light-JS",
     "url": "https://github.com/getify/Functional-Light-JS",
     "type": ["book"]
   },
   {
-    "title": "gothinkster/web-components-realworld-example-app",
+    "title": "web-components-realworld-example-app",
     "url": "https://github.com/gothinkster/web-components-realworld-example-app",
     "type": ["example"]
   },
   {
-    "title": "mits-gossau/event-driven-web-components-realworld-example-app",
+    "title": "event-driven-web-components-realworld-example-app",
     "url": "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
     "type": ["example"]
   },
@@ -76,17 +76,17 @@
     "type": ["guide"]
   },
   {
-    "title": "sorrycc/awesome-javascript",
+    "title": "awesome-javascript",
     "url": "https://github.com/sorrycc/awesome-javascript",
     "type": ["reference", "collection"]
   },
   {
-    "title": "bradtraversy/vanillawebprojects",
+    "title": "vanillawebprojects",
     "url": "https://github.com/bradtraversy/vanillawebprojects",
     "type": ["example", "collection"]
   },
   {
-    "title": "leonardomso/33-js-concepts",
+    "title": "33-js-concepts",
     "url": "https://github.com/leonardomso/33-js-concepts",
     "type": ["reference", "collection"]
   },
@@ -102,12 +102,12 @@
     "type": ["guide"]
   },
   {
-    "title": "goldbergyoni/javascript-testing-best-practices",
+    "title": "javascript-testing-best-practices",
     "url": "https://github.com/goldbergyoni/javascript-testing-best-practices",
     "type": ["guide", "reference"]
   },
   {
-    "title": "mbeaudru/modern-js-cheatsheet",
+    "title": "modern-js-cheatsheet",
     "url": "https://github.com/mbeaudru/modern-js-cheatsheet",
     "type": ["reference", "collection"]
   },
@@ -124,12 +124,12 @@
     "source": "digitalocean.com/community"
   },
   {
-    "title": "getify/You-Dont-Know-JS",
+    "title": "You-Dont-Know-JS",
     "url": "https://github.com/getify/You-Dont-Know-JS",
     "type": ["book"]
   },
   {
-    "title": "lydiahallie/javascript-questions",
+    "title": "javascript-questions",
     "url": "https://github.com/lydiahallie/javascript-questions",
     "type": ["reference", "exercise", "collection"]
   },
@@ -144,12 +144,12 @@
     "type": ["course"]
   },
   {
-    "title": "micromata/awesome-javascript-learning",
+    "title": "awesome-javascript-learning",
     "url": "https://github.com/micromata/awesome-javascript-learning",
     "type": ["reference", "collection"]
   },
   {
-    "title": "workshopper/javascripting",
+    "title": "javascripting",
     "url": "https://github.com/workshopper/javascripting",
     "type": ["course"]
   },
@@ -164,7 +164,7 @@
     "type": ["book"]
   },
   {
-    "title": "artf/grapesjs",
+    "title": "grapesjs",
     "url": "https://github.com/artf/grapesjs",
     "type": ["example"]
   },
@@ -255,7 +255,7 @@
     "source": "digitalocean.com/community"
   },
   {
-    "title": "jiayihu/pretty-algorithms",
+    "title": "pretty-algorithms",
     "url": "https://github.com/jiayihu/pretty-algorithms",
     "type": ["reference", "collection"]
   },
@@ -265,7 +265,7 @@
     "type": ["book"]
   },
   {
-    "title": "trekhleb/javascript-algorithms",
+    "title": "javascript-algorithms",
     "url": "https://github.com/trekhleb/javascript-algorithms",
     "type": ["reference", "collection"]
   },
@@ -326,7 +326,7 @@
     "type": ["course"]
   },
   {
-    "title": "denysdovhan/wtfjs",
+    "title": "wtfjs",
     "url": "https://github.com/denysdovhan/wtfjs",
     "type": ["guide"]
   },
@@ -336,7 +336,7 @@
     "type": ["community"]
   },
   {
-    "title": "you-dont-need/You-Dont-Need",
+    "title": "You-Dont-Need",
     "url": "https://github.com/you-dont-need/You-Dont-Need",
     "type": ["reference", "collection"],
     "source": "github.com/you-dont-need"
@@ -372,7 +372,7 @@
     "type": ["reference"]
   },
   {
-    "title": "jest-community/awesome-jest",
+    "title": "awesome-jest",
     "url": "https://github.com/jest-community/awesome-jest",
     "type": ["reference", "collection"]
   },
@@ -516,7 +516,7 @@
     "type": ["guide"]
   },
   {
-    "title": "carltheperson/advanced-js-objects",
+    "title": "advanced-js-objects",
     "url": "https://github.com/carltheperson/advanced-js-objects",
     "type": ["book"]
   },

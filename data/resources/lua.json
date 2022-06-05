@@ -11,12 +11,12 @@
     "source": "youtube.com/c/DevJeeper"
   },
   {
-    "title": "kikito/lua_missions",
+    "title": "lua_missions",
     "url": "https://github.com/kikito/lua_missions",
     "type": ["exercise", "collection"]
   },
   {
-    "title": "LewisJEllis/awesome-lua",
+    "title": "awesome-lua",
     "url": "https://github.com/LewisJEllis/awesome-lua",
     "type": ["reference", "collection"]
   },
@@ -71,7 +71,7 @@
     "type": ["tutorial", "collection"]
   },
   {
-    "title": "bungle/awesome-resty",
+    "title": "awesome-resty",
     "url": "https://github.com/bungle/awesome-resty",
     "type": ["reference", "collection"]
   },
@@ -104,7 +104,7 @@
     "type": ["tutorial"]
   },
   {
-    "title": "love2d-community/awesome-love2d",
+    "title": "awesome-love2d",
     "url": "https://github.com/love2d-community/awesome-love2d",
     "type": ["reference", "collection"]
   },

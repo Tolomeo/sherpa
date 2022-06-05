@@ -31,12 +31,12 @@
     "source": "youtube.com/c/CodeSmell"
   },
   {
-    "title": "akrawchyk/awesome-vim",
+    "title": "awesome-vim",
     "url": "https://github.com/akrawchyk/awesome-vim",
     "type": ["reference", "collection"]
   },
   {
-    "title": "rockerBOO/awesome-neovim",
+    "title": "awesome-neovim",
     "url": "https://github.com/rockerBOO/awesome-neovim",
     "type": ["reference", "collection"]
   },
@@ -51,12 +51,12 @@
     "type": ["guide"]
   },
   {
-    "title": "iggredible/Learn-Vim",
+    "title": "Learn-Vim",
     "url": "https://github.com/iggredible/Learn-Vim",
     "type": ["course"]
   },
   {
-    "title": "mhinz/vim-galore",
+    "title": "vim-galore",
     "url": "https://github.com/mhinz/vim-galore",
     "type": ["course"]
   },
@@ -81,7 +81,7 @@
     "type": ["tutorial", "collection"]
   },
   {
-    "title": "jmoon018/PacVim",
+    "title": "PacVim",
     "url": "https://github.com/jmoon018/PacVim",
     "type": ["game"]
   },
@@ -117,7 +117,7 @@
     "type": ["reference"]
   },
   {
-    "title": "nanotee/nvim-lua-guide",
+    "title": "nvim-lua-guide",
     "url": "https://github.com/nanotee/nvim-lua-guide",
     "type": ["reference"]
   },
@@ -172,12 +172,12 @@
     "type": ["generator"]
   },
   {
-    "title": "rafi/awesome-vim-colorschemes",
+    "title": "awesome-vim-colorschemes",
     "url": "https://github.com/rafi/awesome-vim-colorschemes",
     "type": ["reference", "collection"]
   },
   {
-    "title": "amix/vimrc",
+    "title": "vimrc",
     "url": "https://github.com/amix/vimrc",
     "type": ["example"]
   },
@@ -238,7 +238,7 @@
     "type": ["reference"]
   },
   {
-    "title": "ibhagwan/vim-cheatsheet",
+    "title": "vim-cheatsheet",
     "url": "https://github.com/ibhagwan/vim-cheatsheet",
     "type": ["reference"]
   },
@@ -298,12 +298,12 @@
     "source": "youtube.com/c/TJDeVries"
   },
   {
-    "title": "NvChad/NvChad",
+    "title": "NvChad",
     "url": "https://github.com/NvChad/NvChad",
     "type": ["example"]
   },
   {
-    "title": "SpaceVim/SpaceVim",
+    "title": "SpaceVim",
     "url": "https://github.com/SpaceVim/SpaceVim",
     "type": ["example"]
   },
@@ -336,7 +336,7 @@
     "source": "youtube.com/c/ThePrimeagen"
   },
   {
-    "title": "adomokos/Vim-Katas",
+    "title": "Vim-Katas",
     "url": "https://github.com/adomokos/Vim-Katas",
     "type": ["example", "exercise"]
   },

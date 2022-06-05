@@ -87,12 +87,12 @@
     "type": ["example", "collection"]
   },
   {
-    "title": "diegocard/awesome-html5",
+    "title": "awesome-html5",
     "url": "https://github.com/diegocard/awesome-html5",
     "type": ["reference", "collection"]
   },
   {
-    "title": "awesome-css-group/awesome-css",
+    "title": "awesome-css",
     "url": "https://github.com/awesome-css-group/awesome-css",
     "type": ["reference", "collection"]
   },
@@ -132,7 +132,7 @@
     "type": ["course"]
   },
   {
-    "title": "micromata/awesome-css-learning",
+    "title": "awesome-css-learning",
     "url": "https://github.com/micromata/awesome-css-learning",
     "type": ["reference", "collection"]
   },
@@ -308,7 +308,7 @@
     "type": ["course"]
   },
   {
-    "title": "you-dont-need/You-Dont-Need-JavaScript",
+    "title": "You-Dont-Need-JavaScript",
     "url": "https://github.com/you-dont-need/You-Dont-Need-JavaScript",
     "type": ["example", "collection"]
   },
@@ -512,7 +512,7 @@
     "type": ["example", "collection"]
   },
   {
-    "title": "AllThingsSmitty/css-protips",
+    "title": "css-protips",
     "url": "https://github.com/AllThingsSmitty/css-protips",
     "type": ["reference"]
   },

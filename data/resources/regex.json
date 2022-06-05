@@ -1,6 +1,6 @@
 [
   {
-    "title": "ziishaned/learn-regex",
+    "title": "learn-regex",
     "url": "https://github.com/ziishaned/learn-regex",
     "type": ["book"]
   },
@@ -10,7 +10,7 @@
     "type": ["game", "community"]
   },
   {
-    "title": "aloisdg/awesome-regex",
+    "title": "awesome-regex",
     "url": "https://github.com/aloisdg/awesome-regex",
     "type": ["reference", "collection"]
   },

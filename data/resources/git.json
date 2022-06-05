@@ -70,7 +70,7 @@
     "type": ["guide"]
   },
   {
-    "title": "dictcp/awesome-git",
+    "title": "awesome-git",
     "url": "https://github.com/dictcp/awesome-git",
     "type": ["reference", "collection"]
   },
@@ -179,7 +179,7 @@
     "type": ["guide"]
   },
   {
-    "title": "joho/awesome-code-review",
+    "title": "awesome-code-review",
     "url": "https://github.com/joho/awesome-code-review",
     "type": ["reference", "collection"]
   },
@@ -190,7 +190,7 @@
     "source": "dev.to/samuelfaure"
   },
   {
-    "title": "RomuloOliveira/commit-messages-guide",
+    "title": "commit-messages-guide",
     "url": "https://github.com/RomuloOliveira/commit-messages-guide",
     "type": ["reference"]
   },
@@ -220,12 +220,12 @@
     "type": ["reference"]
   },
   {
-    "title": "arslanbilal/git-cheat-sheet",
+    "title": "git-cheat-sheet",
     "url": "https://github.com/arslanbilal/git-cheat-sheet",
     "type": ["reference"]
   },
   {
-    "title": "k88hudson/git-flight-rules",
+    "title": "git-flight-rules",
     "url": "https://github.com/k88hudson/git-flight-rules",
     "type": ["reference"]
   },

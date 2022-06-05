@@ -42,7 +42,7 @@
     "source": "thenodeway.io"
   },
   {
-    "title": "goldbergyoni/nodebestpractices",
+    "title": "nodebestpractices",
     "url": "https://github.com/goldbergyoni/nodebestpractices",
     "type": ["guide", "reference"]
   },
@@ -53,7 +53,7 @@
     "source": "joyent.com"
   },
   {
-    "title": "testjavascript/nodejs-integration-tests-best-practices",
+    "title": "nodejs-integration-tests-best-practices",
     "url": "https://github.com/testjavascript/nodejs-integration-tests-best-practices",
     "type": ["guide", "reference"]
   },
@@ -64,12 +64,12 @@
     "source": "softwareontheroad.com"
   },
   {
-    "title": "electerious/Ackee",
+    "title": "Ackee",
     "url": "https://github.com/electerious/Ackee",
     "type": ["example"]
   },
   {
-    "title": "nimit95/Real-world-Design-Patterns-Node-JS",
+    "title": "Real-world-Design-Patterns-Node-JS",
     "url": "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS",
     "type": ["example", "collection"]
   },
@@ -79,7 +79,7 @@
     "type": ["guide", "reference"]
   },
   {
-    "title": "sindresorhus/awesome-nodejs",
+    "title": "awesome-nodejs",
     "url": "https://github.com/sindresorhus/awesome-nodejs",
     "type": ["reference", "collection"]
   },
@@ -104,7 +104,7 @@
     "type": ["course"]
   },
   {
-    "title": "azat-co/practicalnode",
+    "title": "practicalnode",
     "url": "https://github.com/azat-co/practicalnode",
     "type": ["book"]
   },
@@ -166,7 +166,7 @@
     "type": ["guide"]
   },
   {
-    "title": "XOR-LIFE/node-production",
+    "title": "node-production",
     "url": "https://github.com/XOR-LIFE/node-production",
     "type": ["tutorial"]
   },
@@ -196,7 +196,7 @@
     "type": ["tutorial"]
   },
   {
-    "title": "ehmicky/cross-platform-node-guide",
+    "title": "cross-platform-node-guide",
     "url": "https://github.com/ehmicky/cross-platform-node-guide",
     "type": ["tutorial"]
   },
@@ -239,7 +239,7 @@
     "type": ["tutorial"]
   },
   {
-    "title": "antsmartian/lets-build-express",
+    "title": "lets-build-express",
     "url": "https://github.com/antsmartian/lets-build-express",
     "type": ["tutorial"]
   },
@@ -281,17 +281,17 @@
     "source": "youtube.com/c/JSConfEU"
   },
   {
-    "title": "public-apis/public-apis",
+    "title": "public-apis",
     "url": "https://github.com/public-apis/public-apis",
     "type": ["reference"]
   },
   {
-    "title": "learning-zone/nodejs-interview-questions",
+    "title": "nodejs-interview-questions",
     "url": "https://github.com/learning-zone/nodejs-interview-questions",
     "type": ["reference"]
   },
   {
-    "title": "marmelab/awesome-rest",
+    "title": "awesome-rest",
     "url": "https://github.com/marmelab/awesome-rest",
     "type": ["reference", "collection"]
   },
@@ -317,7 +317,7 @@
     "type": ["reference", "collection"]
   },
   {
-    "title": "Node Target Mapping · microsoft/TypeScript Wiki",
+    "title": "Node Target Mapping",
     "url": "https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping",
     "type": ["reference"]
   },
@@ -362,7 +362,7 @@
     "type": ["guide"]
   },
   {
-    "title": "sciner/webcraft",
+    "title": "webcraft",
     "url": "https://github.com/sciner/webcraft",
     "type": ["example"]
   },

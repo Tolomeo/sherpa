@@ -36,7 +36,7 @@
     "type": ["guide", "reference", "collection"]
   },
   {
-    "title": "brunopulis/awesome-a11y",
+    "title": "awesome-a11y",
     "url": "https://github.com/brunopulis/awesome-a11y",
     "type": ["reference", "collection"]
   },
@@ -250,7 +250,7 @@
     "type": ["reference", "collection"]
   },
   {
-    "title": "fejes713/accessibility-guide",
+    "title": "accessibility-guide",
     "url": "https://github.com/fejes713/accessibility-guide",
     "type": ["reference"]
   },

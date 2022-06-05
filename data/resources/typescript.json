@@ -21,7 +21,7 @@
     "type": ["reference"]
   },
   {
-    "title": "type-challenges/type-challenges",
+    "title": "type-challenges",
     "url": "https://github.com/type-challenges/type-challenges",
     "type": ["exercise", "collection"]
   },
@@ -47,7 +47,7 @@
     "type": ["course"]
   },
   {
-    "title": "zws-im/zws",
+    "title": "zws",
     "url": "https://github.com/zws-im/zws",
     "type": ["example"]
   },
@@ -57,7 +57,7 @@
     "type": ["guide", "series"]
   },
   {
-    "title": "dzharii/awesome-typescript",
+    "title": "awesome-typescript",
     "url": "https://github.com/dzharii/awesome-typescript",
     "type": ["reference", "collection"]
   },
@@ -111,12 +111,12 @@
     "type": ["guide"]
   },
   {
-    "title": "shanoysinc/Tetris",
+    "title": "Tetris",
     "url": "https://github.com/shanoysinc/Tetris",
     "type": ["example"]
   },
   {
-    "title": "itsMapleLeaf/super-mario-typescript",
+    "title": "super-mario-typescript",
     "url": "https://github.com/itsMapleLeaf/super-mario-typescript",
     "type": ["example"]
   },
@@ -142,7 +142,7 @@
     "type": ["course"]
   },
   {
-    "title": "laurent22/joplin",
+    "title": "joplin",
     "url": "https://github.com/laurent22/joplin",
     "type": ["example"]
   },
@@ -288,7 +288,7 @@
     "source": "youtube.com/c/Code"
   },
   {
-    "title": "tsconfig/bases",
+    "title": "bases",
     "url": "https://github.com/tsconfig/bases",
     "type": ["reference", "collection"]
   },
