@@ -239,7 +239,8 @@
   {
     "title": "The Story of Next.js",
     "url": "https://www.youtube.com/watch?v=BILxV_vrZO0",
-    "type": ["guide"]
+    "type": ["guide"],
+    "source": "youtube.com/c/uidotdev"
   },
   {
     "title": "JAMstacked",

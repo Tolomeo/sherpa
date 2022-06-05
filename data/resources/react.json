@@ -422,7 +422,8 @@
   {
     "title": "React Testing Course for Beginners – Code and Test 3 Apps",
     "url": "https://www.youtube.com/watch?v=8vfQ6SWBZ-U",
-    "type": ["course"]
+    "type": ["course"],
+    "source": "youtube.com/c/Freecodecamp"
   },
   {
     "title": "Testing Recipes",
