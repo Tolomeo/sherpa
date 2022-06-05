@@ -12,6 +12,7 @@ export const resourceType = [
   'exercise',
   'blog',
   'generator',
+  'opinion',
 ] as const
 
 export type ResourceType = typeof resourceType[number]

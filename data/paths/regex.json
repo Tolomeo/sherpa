@@ -1,6 +1,5 @@
 {
   "title": "Regular expressions",
-  "prev": [],
   "resources": [
     "https://github.com/ziishaned/learn-regex",
     "https://regexcrossword.com",
@@ -28,7 +27,8 @@
       "resources": [
         "http://wstoop.co.za/wregex.php",
         "https://www.youtube.com/watch?v=LIVBktatfQI",
-        "https://www.youtube.com/watch?v=frVuSFFv4Tk"
+        "https://www.youtube.com/watch?v=frVuSFFv4Tk",
+        "https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine"
       ]
     },
     {
@@ -48,6 +48,5 @@
         "https://devhints.io/regexp"
       ]
     }
-  ],
-  "next": []
+  ]
 }

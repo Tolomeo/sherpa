@@ -25,22 +25,22 @@
     "type": ["course", "collection"]
   },
   {
-    "title": "codecrafters-io/build-your-own-x: 🤓 Build your own (insert technology here)",
+    "title": "build-your-own-x: 🤓 Build your own (insert technology here)",
     "url": "https://github.com/danistefanovic/build-your-own-x",
     "type": ["course", "collection"]
   },
   {
-    "title": "EbookFoundation/free-programming-books: Freely available programming books",
+    "title": "free-programming-books: Freely available programming books",
     "url": "https://github.com/EbookFoundation/free-programming-books",
     "type": ["course", "collection"]
   },
   {
-    "title": "practical-tutorials/project-based-learning: Curated list of project-based tutorials",
+    "title": "project-based-learning: Curated list of project-based tutorials",
     "url": "https://github.com/practical-tutorials/project-based-learning",
     "type": ["course", "collection"]
   },
   {
-    "title": "karlhorky/learn-to-program: Educational resources to learn to program (Foundation in Web Development)",
+    "title": "learn-to-program: Educational resources to learn to program (Foundation in Web Development)",
     "url": "https://github.com/karlhorky/learn-to-program",
     "type": ["course", "collection"]
   },
@@ -55,7 +55,7 @@
     "type": ["course", "collection"]
   },
   {
-    "title": "sdmg15/Best-websites-a-programmer-should-visit: Some useful websites for programmers.",
+    "title": "Best-websites-a-programmer-should-visit: Some useful websites for programmers.",
     "url": "https://github.com/sdmg15/Best-websites-a-programmer-should-visit",
     "type": ["collection"]
   }

@@ -70,7 +70,7 @@
     "type": ["guide"]
   },
   {
-    "title": "dictcp/awesome-git",
+    "title": "awesome-git",
     "url": "https://github.com/dictcp/awesome-git",
     "type": ["reference", "collection"]
   },
@@ -179,7 +179,7 @@
     "type": ["guide"]
   },
   {
-    "title": "joho/awesome-code-review",
+    "title": "awesome-code-review",
     "url": "https://github.com/joho/awesome-code-review",
     "type": ["reference", "collection"]
   },
@@ -190,7 +190,7 @@
     "source": "dev.to/samuelfaure"
   },
   {
-    "title": "RomuloOliveira/commit-messages-guide",
+    "title": "commit-messages-guide",
     "url": "https://github.com/RomuloOliveira/commit-messages-guide",
     "type": ["reference"]
   },
@@ -220,12 +220,12 @@
     "type": ["reference"]
   },
   {
-    "title": "arslanbilal/git-cheat-sheet",
+    "title": "git-cheat-sheet",
     "url": "https://github.com/arslanbilal/git-cheat-sheet",
     "type": ["reference"]
   },
   {
-    "title": "k88hudson/git-flight-rules",
+    "title": "git-flight-rules",
     "url": "https://github.com/k88hudson/git-flight-rules",
     "type": ["reference"]
   },
@@ -233,5 +233,26 @@
     "title": "Git for human beings - Google Groups",
     "url": "https://groups.google.com/g/git-users",
     "type": ["community"]
+  },
+  {
+    "title": "Learn GitLab in 3 Hours | GitLab Complete Tutorial For Beginners",
+    "url": "https://www.youtube.com/watch?v=8aV5AxJrHDg&list=PLZMWkkQEwOPmGolqJPsAm_4fcBDDc2to_",
+    "type": ["course"],
+    "source": "youtube.com/c/LambdaTest"
+  },
+  {
+    "title": "A Guide to Git and Github",
+    "url": "https://launchschool.com/books/git",
+    "type": ["book"]
+  },
+  {
+    "title": "Git Bisect A.K.A. Pure Git Wizardry",
+    "url": "https://lucasfcosta.com/2018/01/20/Git-Bisect-Pure-Git-Wizardry.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "Basic Git Commands",
+    "url": "https://www.atlassian.com/git/glossary",
+    "type": ["reference"]
   }
 ]

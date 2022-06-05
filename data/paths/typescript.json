@@ -2,17 +2,19 @@
   "title": "Typescript",
   "prev": ["javascript"],
   "resources": [
+    "https://www.toptal.com/typescript/typescript-vs-javascript-guide",
     "https://www.youtube.com/watch?v=BwuLxPH8IDs",
-    "https://learntypescript.dev",
     "https://mariusschulz.com/blog/series/typescript-evolution",
-    "https://rmolinamir.github.io/typescript-cheatsheet",
     "https://github.com/type-challenges/type-challenges",
+    "https://youtu.be/eJ6R1knfsoc",
     "https://github.com/dzharii/awesome-typescript"
   ],
   "extras": [
     {
       "title": "There's more",
       "resources": [
+        "https://rmolinamir.github.io/typescript-cheatsheet",
+        "https://learntypescript.dev",
         "https://basarat.gitbook.io/typescript",
         "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-typescript",
         "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI",
@@ -22,32 +24,39 @@
         "https://www.youtube.com/watch?v=gp5H0Vw39yw",
         "https://ts.chibicode.com/todo",
         "https://ts.chibicode.com/generics",
-        "https://github.com/shanoysinc/Tetris",
-        "https://github.com/itsMapleLeaf/super-mario-typescript",
         "https://dev.to/orta/series/15226",
         "https://typescriptcourses.com/typescript-fundamentals",
-        "https://typescript-exercises.github.io"
+        "https://typescript-exercises.github.io",
+        "https://docs.joshuatz.com/cheatsheets/typescript",
+        "https://www.youtube.com/watch?v=u3L_82m5X-M",
+        "https://blog.scottnonnenberg.com/a-typescript-onramp"
       ]
     },
     {
       "title": "Beyond basics",
       "resources": [
-        "https://egghead.io/courses/maintainable-css-using-typestyle",
-        "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab",
         "https://labs42io.github.io/clean-code-typescript",
         "http://torokmark.github.io/design_patterns_in_typescript",
-        "https://github.com/laurent22/joplin",
-        "https://docs.joshuatz.com/cheatsheets/typescript",
         "https://www.davrous.com/2013/06/13/tutorial-series-learning-how-to-write-a-3d-soft-engine-from-scratch-in-c-typescript-or-javascript",
         "https://lhartikk.github.io",
         "https://naivecoinstake.learn.uno",
         "https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html",
-        "https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html",
+        "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab",
+        "https://www.javascripttutorials.net/four-steps-to-move-from-javascript-to-typescript/",
+        "https://www.youtube.com/watch?v=hBk4nV7q6-w"
+      ]
+    },
+    {
+      "title": "How do they do it?",
+      "resources": [
+        "https://github.com/itsMapleLeaf/super-mario-typescript",
+        "https://github.com/shanoysinc/Tetris",
+        "https://github.com/laurent22/joplin",
         "https://github.com/zws-im/zws"
       ]
     },
     {
-      "title": "Nice to know about",
+      "title": "Nice to know",
       "resources": [
         "https://flaviocopes.com/deno",
         "https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b"
@@ -65,7 +74,10 @@
         "https://www.typescriptlang.org/tools",
         "https://quicktype.io",
         "http://json2ts.com",
-        "https://github.com/TypeStrong"
+        "https://github.com/TypeStrong",
+        "https://github.com/tsconfig/bases",
+        "https://ts-error-translator.vercel.app",
+        "https://www.freecodecamp.org/news/advanced-typescript-types-cheat-sheet-with-examples/"
       ]
     },
     {
