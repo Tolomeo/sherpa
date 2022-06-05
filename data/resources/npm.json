@@ -16,7 +16,7 @@
     "type": ["tutorial"]
   },
   {
-    "title": "sindresorhus/awesome-npm",
+    "title": "awesome-npm",
     "url": "https://github.com/sindresorhus/awesome-npm",
     "type": ["reference", "collection"]
   },
@@ -31,7 +31,7 @@
     "type": ["guide"]
   },
   {
-    "title": "workshopper/how-to-npm",
+    "title": "how-to-npm",
     "url": "https://github.com/workshopper/how-to-npm",
     "type": ["tutorial"]
   },
@@ -87,7 +87,7 @@
     "type": ["tutorial"]
   },
   {
-    "title": "g-plane/tiny-package-manager",
+    "title": "tiny-package-manager",
     "url": "https://github.com/g-plane/tiny-package-manager",
     "type": ["reference", "example"]
   },
@@ -142,7 +142,7 @@
     "type": ["guide"]
   },
   {
-    "title": "feross/awesome-mad-science",
+    "title": "awesome-mad-science",
     "url": "https://github.com/feross/awesome-mad-science",
     "type": ["collection"]
   },
@@ -167,7 +167,7 @@
     "type": ["reference"]
   },
   {
-    "title": "parro-it/awesome-micro-npm-packages",
+    "title": "awesome-micro-npm-packages",
     "url": "https://github.com/parro-it/awesome-micro-npm-packages",
     "type": ["collection"]
   },
@@ -193,7 +193,7 @@
     "type": ["reference", "generator"]
   },
   {
-    "title": "npm/rfcs",
+    "title": "rfcs",
     "url": "https://github.com/npm/rfcs",
     "type": ["community"]
   }

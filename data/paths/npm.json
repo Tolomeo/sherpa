@@ -1,6 +1,6 @@
 {
   "title": "NPM",
-  "prev": ["javascript"],
+  "next": ["next", "node"],
   "resources": [
     "https://www.youtube.com/watch?v=cjoTTSbOuG0",
     "https://survivejs.com/maintenance",
@@ -69,6 +69,5 @@
       "title": "Stay in the loop",
       "resources": ["https://github.com/npm/rfcs"]
     }
-  ],
-  "next": []
+  ]
 }
