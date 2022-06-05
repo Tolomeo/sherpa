@@ -1,6 +1,6 @@
 {
   "title": "Next.js",
-  "prev": ["react"],
+  "prev": ["react", "npm"],
   "resources": [
     "https://medium.com/swlh/the-hitchhikers-guide-to-next-js-fd7aa14ae8d0",
     "https://nextjs.org/learn/basics/create-nextjs-app",

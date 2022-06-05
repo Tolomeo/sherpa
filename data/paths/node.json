@@ -1,6 +1,6 @@
 {
   "title": "Node.js",
-  "prev": ["javascript"],
+  "prev": ["javascript", "typescript", "npm"],
   "resources": [
     "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js",
     "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp",
@@ -62,19 +62,19 @@
       ]
     },
     {
-      "title": "How do they do it?",
-      "resources": [
-        "https://github.com/electerious/Ackee",
-        "https://github.com/sciner/webcraft"
-      ]
-    },
-    {
       "title": "Testing",
       "resources": [
         "https://github.com/goldbergyoni/javascript-testing-best-practices",
         "https://github.com/testjavascript/nodejs-integration-tests-best-practices",
         "https://mherman.org/blog/test-driven-development-with-node",
         "https://lucasfcosta.com/2017/04/06/Testing-NodeJS-APIs.html"
+      ]
+    },
+    {
+      "title": "How do they do it?",
+      "resources": [
+        "https://github.com/electerious/Ackee",
+        "https://github.com/sciner/webcraft"
       ]
     },
     {

@@ -8,6 +8,7 @@ import typescript from './typescript.json'
 import react from './react.json'
 import reacttypescript from './reacttypescript.json'
 import next from './next.json'
+import npm from './npm.json'
 import node from './node.json'
 import git from './git.json'
 import regex from './regex.json'
@@ -24,6 +25,7 @@ const resources = parseResources([
   ...react,
   ...reacttypescript,
   ...next,
+  ...npm,
   ...node,
   ...git,
   ...regex,
