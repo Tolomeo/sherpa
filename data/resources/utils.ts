@@ -3,6 +3,7 @@ import {
   SerializedResources,
   SerializedResource,
   Resources,
+  Resource,
   resourceType,
 } from './types'
 
@@ -18,9 +19,10 @@ const serializedResourceSchema: JSONSchemaType<SerializedResource> = {
         type: 'string',
         enum: resourceType,
       },
+      minItems: 1,
     },
-    title: { type: 'string' },
-    source: { type: 'string', nullable: true },
+    title: { type: 'string', minLength: 2 },
+    source: { type: 'string', minLength: 2, nullable: true },
   },
   required: ['url', 'type', 'title'],
   additionalProperties: false,
@@ -49,11 +51,27 @@ export const parseResources = (serializedResources: SerializedResources) =>
       )
     }
 
-    resourcesMap[serializedResource.url] = {
-      ...serializedResource,
-      source:
-        serializedResource.source ||
-        new URL(serializedResource.url).hostname.replace(/^www./, ''),
+    if (serializedResource.source) {
+      resourcesMap[serializedResource.url] = serializedResource as Resource
+      return resourcesMap
+    }
+
+    const resourceUrl = new URL(serializedResource.url)
+
+    switch (resourceUrl.hostname) {
+      case 'github.com':
+        resourcesMap[serializedResource.url] = {
+          ...serializedResource,
+          source: `${resourceUrl.hostname}/${
+            resourceUrl.pathname.split('/').filter(Boolean)[0]
+          }`,
+        }
+        break
+      default:
+        resourcesMap[serializedResource.url] = {
+          ...serializedResource,
+          source: resourceUrl.hostname.replace(/^www./, ''),
+        }
     }
 
     return resourcesMap

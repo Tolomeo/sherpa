@@ -7,26 +7,43 @@ const ajv = new Ajv()
 const serializedPathSchema: JSONSchemaType<SerializedPath> = {
   type: 'object',
   properties: {
-    title: { type: 'string' },
+    title: { type: 'string', minLength: 2 },
     resources: {
       type: 'array',
       items: { type: 'string', pattern: '^https?://' },
+      minItems: 1,
+      uniqueItems: true,
     },
-    next: { type: 'array', items: { type: 'string' }, nullable: true },
-    prev: { type: 'array', items: { type: 'string' }, nullable: true },
+    next: {
+      type: 'array',
+      items: { type: 'string' },
+      minItems: 1,
+      nullable: true,
+      uniqueItems: true,
+    },
+    prev: {
+      type: 'array',
+      items: { type: 'string' },
+      minItems: 1,
+      nullable: true,
+      uniqueItems: true,
+    },
     extras: {
       type: 'array',
       items: {
         type: 'object',
         properties: {
-          title: { type: 'string' },
+          title: { type: 'string', minLength: 2 },
           resources: {
             type: 'array',
             items: { type: 'string', pattern: '^https?://' },
+            minItems: 1,
+            uniqueItems: true,
           },
         },
         required: ['title', 'resources'],
       },
+      minItems: 1,
       nullable: true,
     },
   },

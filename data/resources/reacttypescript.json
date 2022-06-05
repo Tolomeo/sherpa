@@ -1,16 +1,16 @@
 [
   {
-    "title": "angelguzmaning/ts-redux-react-realworld-example-app",
+    "title": "ts-redux-react-realworld-example-app",
     "url": "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app",
     "type": ["example"]
   },
   {
-    "title": "piotrwitek/react-redux-typescript-guide",
+    "title": "react-redux-typescript-guide",
     "url": "https://github.com/piotrwitek/react-redux-typescript-guide",
     "type": ["guide"]
   },
   {
-    "title": "mat-sz/2048",
+    "title": "2048",
     "url": "https://github.com/mat-sz/2048",
     "type": ["example"]
   },
@@ -31,7 +31,7 @@
     "type": ["course"]
   },
   {
-    "title": "hairarrow/btship",
+    "title": "btship",
     "url": "https://github.com/hairarrow/btship",
     "type": ["example"]
   },
@@ -76,5 +76,16 @@
     "title": "Type Checking | React Resources",
     "url": "https://reactresources.com/topics/type-checking",
     "type": ["reference", "collection"]
+  },
+  {
+    "title": "How to write web apps · TypeScript+React Primer",
+    "url": "http://typescript-react-primer.loyc.net",
+    "type": ["course"]
+  },
+  {
+    "title": "React TypeScript Tutorial for Beginners",
+    "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK",
+    "type": ["course"],
+		"source": "youtube.com/c/Codevolution"
   }
 ]

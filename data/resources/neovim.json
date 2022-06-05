@@ -31,12 +31,12 @@
     "source": "youtube.com/c/CodeSmell"
   },
   {
-    "title": "akrawchyk/awesome-vim",
+    "title": "awesome-vim",
     "url": "https://github.com/akrawchyk/awesome-vim",
     "type": ["reference", "collection"]
   },
   {
-    "title": "rockerBOO/awesome-neovim",
+    "title": "awesome-neovim",
     "url": "https://github.com/rockerBOO/awesome-neovim",
     "type": ["reference", "collection"]
   },
@@ -51,12 +51,12 @@
     "type": ["guide"]
   },
   {
-    "title": "iggredible/Learn-Vim",
+    "title": "Learn-Vim",
     "url": "https://github.com/iggredible/Learn-Vim",
     "type": ["course"]
   },
   {
-    "title": "mhinz/vim-galore",
+    "title": "vim-galore",
     "url": "https://github.com/mhinz/vim-galore",
     "type": ["course"]
   },
@@ -81,7 +81,7 @@
     "type": ["tutorial", "collection"]
   },
   {
-    "title": "jmoon018/PacVim",
+    "title": "PacVim",
     "url": "https://github.com/jmoon018/PacVim",
     "type": ["game"]
   },
@@ -117,7 +117,7 @@
     "type": ["reference"]
   },
   {
-    "title": "nanotee/nvim-lua-guide",
+    "title": "nvim-lua-guide",
     "url": "https://github.com/nanotee/nvim-lua-guide",
     "type": ["reference"]
   },
@@ -172,12 +172,12 @@
     "type": ["generator"]
   },
   {
-    "title": "rafi/awesome-vim-colorschemes",
+    "title": "awesome-vim-colorschemes",
     "url": "https://github.com/rafi/awesome-vim-colorschemes",
     "type": ["reference", "collection"]
   },
   {
-    "title": "amix/vimrc",
+    "title": "vimrc",
     "url": "https://github.com/amix/vimrc",
     "type": ["example"]
   },
@@ -238,7 +238,7 @@
     "type": ["reference"]
   },
   {
-    "title": "ibhagwan/vim-cheatsheet",
+    "title": "vim-cheatsheet",
     "url": "https://github.com/ibhagwan/vim-cheatsheet",
     "type": ["reference"]
   },
@@ -251,5 +251,133 @@
     "title": "VimGolf - real Vim ninjas count every keystroke!",
     "url": "https://www.vimgolf.com",
     "type": ["game", "community"]
+  },
+  {
+    "title": "Neovim",
+    "url": "https://www.youtube.com/playlist?list=PLu-ydI-PCl0OEG0ZEqLRRuCrMJGAAI0tW",
+    "type": ["tutorial", "collection"],
+    "source": "youtube.com/channel/UCFU7a7OMYfcpjtIpu2j47_Q"
+  },
+  {
+    "title": "Vim Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PLRjzjpJ02WDMJOTsrdByXynk8h0ScMK9R",
+    "type": ["tutorial", "collection"],
+    "source": "youtube.com/c/BrodieRobertson"
+  },
+  {
+    "title": "Vim Un-Alphabet",
+    "url": "https://www.youtube.com/playlist?list=PL46-cKSxMYYCMpzXo6p0Cof8hJInYgohU",
+    "type": ["reference", "collection"],
+    "source": "youtube.com/user/jbranchaud"
+  },
+  {
+    "title": "VIM ALPHABET",
+    "url": "https://www.youtube.com/playlist?list=PLnc_NxpmOxaNqdGvUg8RBi8ZTaZGPdqBD",
+    "type": ["reference", "collection"],
+    "source": "youtube.com/c/chantastic"
+  },
+  {
+    "title": "How to Create Vim Text-Objects in Lua",
+    "url": "https://thevaluable.dev/vim-create-text-objects",
+    "type": ["guide"]
+  },
+  {
+    "title": "What's The Vim Runtime? A Guide With Examples",
+    "url": "https://thevaluable.dev/vim-runtime-guide-example",
+    "type": ["guide"]
+  },
+  {
+    "title": "Vim Search and Replace With Examples",
+    "url": "https://thevaluable.dev/vim-search-find-replace",
+    "type": ["guide"]
+  },
+  {
+    "title": "Bash2Basics",
+    "url": "https://www.youtube.com/playlist?list=PLep05UYkc6wTWlugE_9Lj6JlLpvSBbkZ_",
+    "type": ["guide", "collection"],
+    "source": "youtube.com/c/TJDeVries"
+  },
+  {
+    "title": "NvChad",
+    "url": "https://github.com/NvChad/NvChad",
+    "type": ["example"]
+  },
+  {
+    "title": "SpaceVim",
+    "url": "https://github.com/SpaceVim/SpaceVim",
+    "type": ["example"]
+  },
+  {
+    "title": "History and effective use of Vim",
+    "url": "https://begriffs.com/posts/2019-07-19-history-use-vim.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "Editor war",
+    "url": "https://en.wikipedia.org/wiki/Editor_war",
+    "type": ["reference"]
+  },
+  {
+    "title": "Vim: From hjkl to a platform for plugins",
+    "url": "https://www.youtube.com/watch?v=ES1L2SPgIDI",
+    "type": ["guide"],
+    "source": "youtube.com/c/Vim-jpOrg"
+  },
+  {
+    "title": "Interview with a VIM Enthusiast 2022",
+    "url": "https://www.youtube.com/watch?v=9n1dtmzqnCU",
+    "type": ["opinion"],
+    "source": "youtube.com/channel/UCi8C7TNs2ohrc6hnRQ5Sn2w"
+  },
+  {
+    "title": "Learn Vim in Less than 2 Minutes",
+    "url": "https://youtu.be/E_8B_seg8AI",
+    "type": ["opinion"],
+    "source": "youtube.com/c/ThePrimeagen"
+  },
+  {
+    "title": "Vim-Katas",
+    "url": "https://github.com/adomokos/Vim-Katas",
+    "type": ["example", "exercise"]
+  },
+  {
+    "title": "Vim Statusline Generator",
+    "url": "https://www.tdaly.co.uk/projects/vim-statusline-generator",
+    "type": ["generator"]
+  },
+  {
+    "title": "Free Online Typing Tests, Practice, Games & More",
+    "url": "http://www.atypingtest.com",
+    "type": ["reference"]
+  },
+  {
+    "title": "neovimcraft",
+    "url": "https://neovimcraft.com",
+    "type": ["collection"]
+  },
+  {
+    "title": "vim out of the box",
+    "url": "https://www.reddit.com/r/neovim",
+    "type": ["community"]
+  },
+  {
+    "title": "VIM - Vi IMproved",
+    "url": "https://www.reddit.com/r/vim",
+    "type": ["community"]
+  },
+  {
+    "title": "Vim Newsletter",
+    "url": "https://vimtricks.com",
+    "type": ["community", "reference"]
+  },
+  {
+    "title": "TJ DeVries",
+    "url": "https://www.youtube.com/c/TJDeVries",
+    "type": ["community"]
+  },
+  {
+    "title": "Code Smell",
+    "url": "https://www.youtube.com/c/CodeSmell",
+    "type": ["community"]
   }
 ]

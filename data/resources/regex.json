@@ -1,6 +1,6 @@
 [
   {
-    "title": "Learn regex the easy way",
+    "title": "learn-regex",
     "url": "https://github.com/ziishaned/learn-regex",
     "type": ["book"]
   },
@@ -10,7 +10,7 @@
     "type": ["game", "community"]
   },
   {
-    "title": "aloisdg/awesome-regex",
+    "title": "awesome-regex",
     "url": "https://github.com/aloisdg/awesome-regex",
     "type": ["reference", "collection"]
   },
@@ -127,5 +127,10 @@
     "title": "regexp cheatsheet",
     "url": "https://devhints.io/regexp",
     "type": ["reference"]
+  },
+  {
+    "title": "Implementing a Regular Expression Engine",
+    "url": "https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine",
+    "type": ["guide"]
   }
 ]

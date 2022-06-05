@@ -46,7 +46,7 @@
     "type": ["exercise", "collection"]
   },
   {
-    "title": "ryanmcdermott/clean-code-javascript",
+    "title": "clean-code-javascript",
     "url": "https://github.com/ryanmcdermott/clean-code-javascript",
     "type": ["guide"]
   },
@@ -56,21 +56,19 @@
     "type": ["book"]
   },
   {
-    "title": "getify/Functional-Light-JS",
+    "title": "Functional-Light-JS",
     "url": "https://github.com/getify/Functional-Light-JS",
     "type": ["book"]
   },
   {
-    "title": "Vanilla JS + Web Components example app",
+    "title": "web-components-realworld-example-app",
     "url": "https://github.com/gothinkster/web-components-realworld-example-app",
-    "type": ["example"],
-    "source": "github.com/gothinkster"
+    "type": ["example"]
   },
   {
-    "title": "Event driven vanilla JS + Web Components example app",
+    "title": "event-driven-web-components-realworld-example-app",
     "url": "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
-    "type": ["example"],
-    "source": "github.com/mits-gossau"
+    "type": ["example"]
   },
   {
     "title": "JavaScript Garden",
@@ -78,17 +76,17 @@
     "type": ["guide"]
   },
   {
-    "title": "sorrycc/awesome-javascript",
+    "title": "awesome-javascript",
     "url": "https://github.com/sorrycc/awesome-javascript",
     "type": ["reference", "collection"]
   },
   {
-    "title": "bradtraversy/vanillawebprojects",
+    "title": "vanillawebprojects",
     "url": "https://github.com/bradtraversy/vanillawebprojects",
     "type": ["example", "collection"]
   },
   {
-    "title": "leonardomso/33-js-concepts",
+    "title": "33-js-concepts",
     "url": "https://github.com/leonardomso/33-js-concepts",
     "type": ["reference", "collection"]
   },
@@ -104,12 +102,12 @@
     "type": ["guide"]
   },
   {
-    "title": "goldbergyoni/javascript-testing-best-practices",
+    "title": "javascript-testing-best-practices",
     "url": "https://github.com/goldbergyoni/javascript-testing-best-practices",
     "type": ["guide", "reference"]
   },
   {
-    "title": "mbeaudru/modern-js-cheatsheet",
+    "title": "modern-js-cheatsheet",
     "url": "https://github.com/mbeaudru/modern-js-cheatsheet",
     "type": ["reference", "collection"]
   },
@@ -126,12 +124,12 @@
     "source": "digitalocean.com/community"
   },
   {
-    "title": "getify/You-Dont-Know-JS",
+    "title": "You-Dont-Know-JS",
     "url": "https://github.com/getify/You-Dont-Know-JS",
     "type": ["book"]
   },
   {
-    "title": "lydiahallie/javascript-questions",
+    "title": "javascript-questions",
     "url": "https://github.com/lydiahallie/javascript-questions",
     "type": ["reference", "exercise", "collection"]
   },
@@ -146,12 +144,12 @@
     "type": ["course"]
   },
   {
-    "title": "micromata/awesome-javascript-learning",
+    "title": "awesome-javascript-learning",
     "url": "https://github.com/micromata/awesome-javascript-learning",
     "type": ["reference", "collection"]
   },
   {
-    "title": "workshopper/javascripting",
+    "title": "javascripting",
     "url": "https://github.com/workshopper/javascripting",
     "type": ["course"]
   },
@@ -166,7 +164,7 @@
     "type": ["book"]
   },
   {
-    "title": "artf/grapesjs",
+    "title": "grapesjs",
     "url": "https://github.com/artf/grapesjs",
     "type": ["example"]
   },
@@ -257,7 +255,7 @@
     "source": "digitalocean.com/community"
   },
   {
-    "title": "jiayihu/pretty-algorithms",
+    "title": "pretty-algorithms",
     "url": "https://github.com/jiayihu/pretty-algorithms",
     "type": ["reference", "collection"]
   },
@@ -267,7 +265,7 @@
     "type": ["book"]
   },
   {
-    "title": "trekhleb/javascript-algorithms",
+    "title": "javascript-algorithms",
     "url": "https://github.com/trekhleb/javascript-algorithms",
     "type": ["reference", "collection"]
   },
@@ -328,7 +326,7 @@
     "type": ["course"]
   },
   {
-    "title": "denysdovhan/wtfjs",
+    "title": "wtfjs",
     "url": "https://github.com/denysdovhan/wtfjs",
     "type": ["guide"]
   },
@@ -338,7 +336,7 @@
     "type": ["community"]
   },
   {
-    "title": "you-dont-need/You-Dont-Need",
+    "title": "You-Dont-Need",
     "url": "https://github.com/you-dont-need/You-Dont-Need",
     "type": ["reference", "collection"],
     "source": "github.com/you-dont-need"
@@ -374,10 +372,9 @@
     "type": ["reference"]
   },
   {
-    "title": "Awesome Jest",
+    "title": "awesome-jest",
     "url": "https://github.com/jest-community/awesome-jest",
-    "type": ["reference", "collection"],
-    "source": "github.com/jest-community"
+    "type": ["reference", "collection"]
   },
   {
     "title": "Jest cheat sheet",
@@ -459,5 +456,110 @@
     "title": "Flavio Copes",
     "url": "https://flaviocopes.com",
     "type": ["blog"]
+  },
+  {
+    "title": "JavaScript tutorial for beginners",
+    "url": "https://www.youtube.com/playlist?list=PLZPZq0r_RZOMRMjHB_IEBjOW_ufr00yG1",
+    "type": ["course"],
+    "source": "youtube.com/c/BroCodez"
+  },
+  {
+    "title": "Coding Lessons",
+    "url": "https://www.youtube.com/playlist?list=PLZld0zbNGbZRfjut6JI7ZLx8ZbTDa5zn-",
+    "type": ["course"],
+    "source": "youtube.com/c/CodingAdventures"
+  },
+  {
+    "title": "Learn and use Composition in JavaScript and TypeScript",
+    "url": "https://softchris.github.io/pages/javascript-composition.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "Regex in JS - how YOU can learn it and learn to like it",
+    "url": "https://softchris.github.io/pages/javascript-regex.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "JavaScript tutorial - a step by step, in-depth introduction to JavaScript programming",
+    "url": "https://launchschool.com/books/javascript",
+    "type": ["book"]
+  },
+  {
+    "title": "JavaScript Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V",
+    "type": ["course"],
+    "source": "youtube.com/c/Freecodecamp"
+  },
+  {
+    "title": "How to implement a programming language",
+    "url": "https://lisperator.net/pltut/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Implementing a Regular Expression Engine",
+    "url": "https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "JavaScript template engine in just 20 lines",
+    "url": "https://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Streams—The definitive guide",
+    "url": "https://web.dev/streams",
+    "type": ["guide"]
+  },
+  {
+    "title": "JSDoc typings: all the benefits of TypeScript, with none of the drawbacks",
+    "url": "https://gils-blog.tayar.org/posts/jsdoc-typings-all-the-benefits-none-of-the-drawbacks",
+    "type": ["guide"]
+  },
+  {
+    "title": "advanced-js-objects",
+    "url": "https://github.com/carltheperson/advanced-js-objects",
+    "type": ["book"]
+  },
+  {
+    "title": "Understand observables by building a toy library",
+    "url": "https://steveholgado.com/understanding-observables",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Jest Crash Course - Learn How to Test your JavaScript Application",
+    "url": "https://www.youtube.com/watch?v=ajiAl5UNzBU",
+    "type": ["guide"],
+    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
+  },
+  {
+    "title": "Building a JavaScript Testing Framework",
+    "url": "https://cpojer.net/posts/building-a-javascript-testing-framework",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "JavaScript AntiDebugging Tricks",
+    "url": "https://x-c3ll.github.io/posts/javascript-antidebugging",
+    "type": ["guide"]
+  },
+  {
+    "title": "Interview with Senior JS Developer in 2022",
+    "url": "https://www.youtube.com/watch?v=Uo3cL4nrGOk&t=4s",
+    "type": ["opinion"],
+    "source": "youtube.com/channel/UCi8C7TNs2ohrc6hnRQ5Sn2w"
+  },
+  {
+    "title": "The Ultimate Guide to JavaScript Fatigue: Realities of our industry",
+    "url": "https://lucasfcosta.com/2017/07/17/The-Ultimate-Guide-to-JavaScript-Fatigue.html",
+    "type": ["opinion"]
+  },
+  {
+    "title": "[Array Builder]",
+    "url": "https://www.arraybuilder.com",
+    "type": ["generator"]
+  },
+  {
+    "title": "The State of JavaScript Survey",
+    "url": "https://stateofjs.com",
+    "type": ["community"]
   }
 ]

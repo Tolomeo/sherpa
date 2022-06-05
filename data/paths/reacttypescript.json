@@ -3,21 +3,19 @@
   "prev": ["typescript", "react"],
   "resources": [
     "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml",
-    "https://react-typescript-cheatsheet.netlify.app",
-    "https://egghead.io/courses/modern-redux-with-redux-toolkit-rtk-and-typescript-64f243c8",
-    "https://github.com/hairarrow/btship"
+    "https://react-typescript-cheatsheet.netlify.app"
   ],
   "extras": [
     {
       "title": "There's more",
       "resources": [
-        "https://egghead.io/courses/design-systems-with-react-and-typescript-in-storybook",
         "https://github.com/piotrwitek/react-redux-typescript-guide",
         "https://blog.bitsrc.io/react-typescript-cheetsheet-2b6fa2cecfe2",
         "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSe71-aLlq71B2LPZzTNO8a",
-        "https://github.com/mat-sz/2048",
-        "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app",
-        "https://www.youtube.com/watch?v=udr2rx_B99w"
+        "https://www.youtube.com/watch?v=udr2rx_B99w",
+        "https://egghead.io/courses/modern-redux-with-redux-toolkit-rtk-and-typescript-64f243c8",
+        "http://typescript-react-primer.loyc.net",
+        "https://www.youtube.com/playlist?list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK"
       ]
     },
     {
@@ -27,12 +25,20 @@
       ]
     },
     {
+      "title": "How do they do it?",
+      "resources": [
+        "https://github.com/hairarrow/btship",
+        "https://github.com/mat-sz/2048",
+        "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app"
+      ]
+    },
+    {
       "title": "Great bookmarks",
       "resources": [
         "https://usehooks-ts.com",
         "https://www.typescriptlang.org/docs/handbook/jsx.html",
         "https://www.saltycrane.com/cheat-sheets/typescript/react/latest",
-				"https://reactresources.com/topics/type-checking"
+        "https://reactresources.com/topics/type-checking"
       ]
     }
   ],

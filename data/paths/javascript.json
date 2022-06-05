@@ -2,61 +2,55 @@
   "title": "Javascript",
   "prev": ["htmlcss"],
   "resources": [
-    "https://www.udemy.com/course/javascript-essentials",
-    "https://www.udemy.com/course/advanced-and-object-oriented-javascript",
-    "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu",
+    "https://code.tutsplus.com/courses/javascript-fundamentals",
     "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures",
     "https://jskatas.org",
     "https://github.com/mbeaudru/modern-js-cheatsheet",
     "https://javascript30.com",
     "https://dev.to/lydiahallie/series/3341",
     "https://github.com/leonardomso/33-js-concepts",
-    "https://www.youtube.com/watch?v=r9HdJ8P6GQI",
-    "https://github.com/goldbergyoni/javascript-testing-best-practices",
     "https://github.com/sorrycc/awesome-javascript"
   ],
   "extras": [
     {
       "title": "There's more",
       "resources": [
+        "https://www.udemy.com/course/javascript-essentials",
+        "https://www.udemy.com/course/advanced-and-object-oriented-javascript",
         "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript",
         "https://github.com/getify/You-Dont-Know-JS",
         "https://github.com/lydiahallie/javascript-questions",
-        "https://frontendmasters.com/guides/javascript-enlightenment",
         "https://www.learn-js.org",
         "https://github.com/micromata/awesome-javascript-learning",
         "https://github.com/workshopper/javascripting",
-        "https://www.udemy.com/course/asynchronous-javascript-bootcamp",
-        "https://exploringjs.com/es2016-es2017/index.html",
-        "https://github.com/artf/grapesjs",
         "https://javascript.info",
-        "https://www.udacity.com/course/javascript-testing--ud549",
-        "https://testautomationu.applitools.com/jest-testing-tutorial",
-        "https://code.tutsplus.com/courses/javascript-fundamentals",
-        "https://www.youtube.com/watch?v=DdqiXcYDv-8",
         "https://lab.reaal.me/jsrobot",
         "https://warriorjs.com",
-				"https://medium.com/@michael.karen/learning-modern-javascript-with-tetris-92d532bcd057",
         "https://dmitripavlutin.com/javascript-classes-complete-guide",
         "https://wesbos.com/javascript",
-        "https://www.youtube.com/watch?v=u5cLK1UrFyQ",
         "https://www.w3schools.com/js",
-        "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWWe8zXrViYbIM2Hhylx8DZx",
-        "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX",
         "http://tcorral.github.io/javascript-challenges-book",
-        "https://flaviocopes.com/jest"
+        "https://www.khanacademy.org/computing/computer-programming/programming",
+        "https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model",
+        "https://eloquentjavascript.net",
+        "https://www.youtube.com/playlist?list=PLZPZq0r_RZOMRMjHB_IEBjOW_ufr00yG1",
+        "https://www.youtube.com/playlist?list=PLZld0zbNGbZRfjut6JI7ZLx8ZbTDa5zn-",
+        "https://softchris.github.io/pages/javascript-composition.html",
+        "https://softchris.github.io/pages/javascript-regex.html",
+        "https://launchschool.com/books/javascript",
+        "https://www.youtube.com/playlist?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V"
       ]
     },
     {
       "title": "Beyond basics",
       "resources": [
+        "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWWe8zXrViYbIM2Hhylx8DZx",
+        "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX",
         "https://github.com/ryanmcdermott/clean-code-javascript",
-        "https://eloquentjavascript.net",
         "https://github.com/getify/Functional-Light-JS",
         "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
         "https://mostly-adequate.gitbook.io/mostly-adequate-guide",
         "https://www.javascripttutorials.net/javascript-code-analysis",
-        "https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model",
         "https://github.com/jiayihu/pretty-algorithms",
         "https://molily.de/robust-javascript/",
         "https://github.com/trekhleb/javascript-algorithms",
@@ -65,13 +59,45 @@
         "https://staltz.com/javascript-getter-setter-pyramid.html",
         "https://exploringjs.com/deep-js",
         "https://tympanus.net/codrops/2021/06/01/trigonometry-in-css-and-javascript-introduction-to-trigonometry",
-        "https://vonheikemen.github.io/devlog/web-development/learn-fp/roadmap",
         "https://www.patterns.dev",
-        "https://www.khanacademy.org/computing/computer-programming/programming",
         "https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations",
         "https://www.khanacademy.org/computing/computer-programming/programming-natural-simulations",
-        "https://github.com/micromata/awesome-javascript-learning",
-        "https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript"
+        "https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript",
+        "https://christianheilmann.com/2021/11/01/developer-tools-secrets-that-shouldnt-be-secrets/",
+        "https://lisperator.net/pltut/",
+        "https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/",
+        "https://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line",
+        "https://web.dev/streams",
+        "https://gils-blog.tayar.org/posts/jsdoc-typings-all-the-benefits-none-of-the-drawbacks",
+        "https://github.com/carltheperson/advanced-js-objects",
+        "https://steveholgado.com/understanding-observables"
+      ]
+    },
+    {
+      "title": "Testing",
+      "resources": [
+        "https://www.youtube.com/watch?v=r9HdJ8P6GQI",
+        "https://github.com/goldbergyoni/javascript-testing-best-practices",
+        "https://github.com/jest-community/awesome-jest",
+        "https://github.com/sapegin/jest-cheat-sheet",
+        "https://testautomationu.applitools.com/jest-testing-tutorial",
+        "https://flaviocopes.com/jest",
+        "https://www.udacity.com/course/javascript-testing--ud549",
+        "https://www.youtube.com/watch?v=u5cLK1UrFyQ",
+        "https://www.youtube.com/watch?v=DdqiXcYDv-8",
+        "https://testing-playground.com",
+        "https://wanago.io/courses/javascript-testing-tutorial",
+        "https://www.youtube.com/watch?v=ajiAl5UNzBU",
+        "https://cpojer.net/posts/building-a-javascript-testing-framework"
+      ]
+    },
+    {
+      "title": "How do they do it?",
+      "resources": [
+        "https://github.com/gothinkster/web-components-realworld-example-app",
+        "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
+        "https://github.com/bradtraversy/vanillawebprojects",
+        "https://github.com/artf/grapesjs"
       ]
     },
     {
@@ -79,13 +105,14 @@
       "resources": [
         "https://github.com/denysdovhan/wtfjs",
         "https://js13kgames.com",
-        "https://github.com/you-dont-need/You-Dont-Need",
         "https://turriate.com/articles/modern-javascript-everything-you-missed-over-10-years",
-        "https://christianheilmann.com/2021/11/01/developer-tools-secrets-that-shouldnt-be-secrets/",
         "http://callbackhell.com",
         "https://almanac.httparchive.org",
-        "https://www.khanacademy.org/computing/computer-programming/html-js-jquery",
-        "https://bonsaiden.github.io/JavaScript-Garden"
+        "https://bonsaiden.github.io/JavaScript-Garden",
+        "https://x-c3ll.github.io/posts/javascript-antidebugging",
+        "https://www.youtube.com/watch?v=Uo3cL4nrGOk&t=4s",
+        "https://lucasfcosta.com/2017/07/17/The-Ultimate-Guide-to-JavaScript-Fatigue.html",
+        "https://github.com/you-dont-need/You-Dont-Need-JavaScript"
       ]
     },
     {
@@ -93,14 +120,13 @@
       "resources": [
         "https://www.30secondsofcode.org/js/p/1",
         "http://jargon.js.org",
-        "https://github.com/jest-community/awesome-jest",
-        "https://github.com/sapegin/jest-cheat-sheet",
-        "https://github.com/bradtraversy/vanillawebprojects",
         "https://www.smashingmagazine.com/2021/04/vanilla-javascript-code-snippets/",
         "https://joshwcomeau.com/operator-lookup",
         "https://vanillalist.top",
         "https://htmldom.dev",
-        "https://devhints.io/es6"
+        "https://devhints.io/es6",
+        "https://github.com/micromata/awesome-javascript-learning",
+        "https://www.arraybuilder.com"
       ]
     },
     {
@@ -108,13 +134,12 @@
       "resources": [
         "https://javascriptweekly.com",
         "https://javascriptjabber.com",
-        "https://www.sitepoint.com",
         "https://www.taniarascia.com",
         "https://trekhleb.dev/blog",
-        "https://humanwhocodes.com",
         "https://davidwalsh.name",
         "https://christianheilmann.com",
-        "https://flaviocopes.com"
+        "https://flaviocopes.com",
+        "https://stateofjs.com"
       ]
     }
   ],

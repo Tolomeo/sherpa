@@ -21,7 +21,7 @@
     "type": ["reference"]
   },
   {
-    "title": "type-challenges/type-challenges",
+    "title": "type-challenges",
     "url": "https://github.com/type-challenges/type-challenges",
     "type": ["exercise", "collection"]
   },
@@ -47,7 +47,7 @@
     "type": ["course"]
   },
   {
-    "title": "zws-im/zws",
+    "title": "zws",
     "url": "https://github.com/zws-im/zws",
     "type": ["example"]
   },
@@ -57,7 +57,7 @@
     "type": ["guide", "series"]
   },
   {
-    "title": "dzharii/awesome-typescript",
+    "title": "awesome-typescript",
     "url": "https://github.com/dzharii/awesome-typescript",
     "type": ["reference", "collection"]
   },
@@ -113,11 +113,10 @@
   {
     "title": "Tetris",
     "url": "https://github.com/shanoysinc/Tetris",
-    "type": ["example"],
-    "source": "github.com/shanoysinc"
+    "type": ["example"]
   },
   {
-    "title": "itsMapleLeaf/super-mario-typescript",
+    "title": "super-mario-typescript",
     "url": "https://github.com/itsMapleLeaf/super-mario-typescript",
     "type": ["example"]
   },
@@ -143,10 +142,9 @@
     "type": ["course"]
   },
   {
-    "title": "Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS",
+    "title": "joplin",
     "url": "https://github.com/laurent22/joplin",
-    "type": ["example"],
-    "source": "github.com/laurent22"
+    "type": ["example"]
   },
   {
     "title": "TypeScript Cheatsheet, Common Errors, and More",
@@ -255,5 +253,53 @@
     "title": "All posts",
     "url": "https://www.carlrippon.com",
     "type": ["blog"]
+  },
+  {
+    "title": "TypeScript vs. JavaScript: Your Go-to Guide",
+    "url": "https://www.toptal.com/typescript/typescript-vs-javascript-guide",
+    "type": ["guide"]
+  },
+  {
+    "title": "Exploring Advanced TypeScript Concepts - Guards, Utility Functions, and More",
+    "url": "https://youtu.be/eJ6R1knfsoc",
+    "type": ["guide"],
+    "source": "youtube.com/c/Headwayio"
+  },
+  {
+    "title": "TypeScript Crash Course",
+    "url": "https://www.youtube.com/watch?v=u3L_82m5X-M",
+    "type": ["course"],
+    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
+  },
+  {
+    "title": "A Typescript onramp",
+    "url": "https://blog.scottnonnenberg.com/a-typescript-onramp",
+    "type": ["guide"]
+  },
+  {
+    "title": "Four Steps to Move from JavaScript to TypeScript",
+    "url": "https://www.javascripttutorials.net/four-steps-to-move-from-javascript-to-typescript/",
+    "type": ["tutorial", "community"]
+  },
+  {
+    "title": "TypeScript tips and Tricks with Matt",
+    "url": "https://www.youtube.com/watch?v=hBk4nV7q6-w",
+    "type": ["guide"],
+    "source": "youtube.com/c/Code"
+  },
+  {
+    "title": "bases",
+    "url": "https://github.com/tsconfig/bases",
+    "type": ["reference", "collection"]
+  },
+  {
+    "title": "TypeScript Error Translator",
+    "url": "https://ts-error-translator.vercel.app",
+    "type": ["generator", "reference"]
+  },
+  {
+    "title": "Advanced TypeScript Types Cheat Sheet (with Examples)",
+    "url": "https://www.freecodecamp.org/news/advanced-typescript-types-cheat-sheet-with-examples/",
+    "type": ["reference"]
   }
 ]
