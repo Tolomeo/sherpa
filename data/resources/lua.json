@@ -7,7 +7,8 @@
   {
     "title": "Lua Tutorial Series",
     "url": "https://www.youtube.com/playlist?list=PL1A1gsSe2tMzpqi8hE5bCUCyQdAWwthuz",
-    "type": ["guide", "collection"]
+    "type": ["guide", "collection"],
+    "source": "youtube.com/c/DevJeeper"
   },
   {
     "title": "kikito/lua_missions",
@@ -157,5 +158,31 @@
     "title": "lua",
     "url": "https://www.reddit.com/r/lua",
     "type": ["community"]
+  },
+  {
+    "title": "Full Lua Programming Crash Course",
+    "url": "https://www.youtube.com/watch?v=1srFmjt1Ib0&list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU&index=18",
+    "type": ["course"],
+    "source": "youtube.com/c/Stevesteacher"
+  },
+  {
+    "title": "Lua by Example",
+    "url": "https://luabyexample.org",
+    "type": ["reference"]
+  },
+  {
+    "title": "The Lua Integration Guide",
+    "url": "https://lua.msys.ch/lua-integration-guide.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "The Lua Module Reference",
+    "url": "https://lua.msys.ch/lua-module-reference.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "Luakit Web Browser",
+    "url": "https://luakit.github.io/",
+    "type": ["reference"]
   }
 ]

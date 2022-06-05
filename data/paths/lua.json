@@ -1,8 +1,7 @@
 {
   "title": "Lua",
   "resources": [
-    "https://www.tutorialspoint.com/lua/index.htm",
-    "https://www.youtube.com/playlist?list=PL1A1gsSe2tMzpqi8hE5bCUCyQdAWwthuz",
+    "https://www.youtube.com/watch?v=1srFmjt1Ib0&list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU&index=18",
     "https://github.com/kikito/lua_missions",
     "https://github.com/LewisJEllis/awesome-lua"
   ],
@@ -10,19 +9,24 @@
     {
       "title": "There's more",
       "resources": [
+        "https://luabyexample.org",
+        "https://en.m.wikibooks.org/wiki/Lua_Programming",
+        "https://www.youtube.com/playlist?list=PL1A1gsSe2tMzpqi8hE5bCUCyQdAWwthuz",
+        "https://www.tutorialspoint.com/lua/index.htm",
         "https://www.lua.org/pil/contents.html",
         "http://lua-users.org/wiki/LuaTutorial",
         "https://www.youtube.com/playlist?list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU",
         "https://www.youtube.com/playlist?list=PL1P11yPQAo7q_BWMKFZvUlLBqLRUJLrJm",
-        "https://www.youtube.com/playlist?list=PLxgtJR7f0RBKGid7F2dfv7qc-xWwSee2O",
-        "https://en.m.wikibooks.org/wiki/Lua_Programming"
+        "https://www.youtube.com/playlist?list=PLxgtJR7f0RBKGid7F2dfv7qc-xWwSee2O"
       ]
     },
     {
       "title": "Beyond basics",
       "resources": [
         "https://www.youtube.com/playlist?list=PLLwK93hM93Z3nhfJyRRWGRXHaXgNX0Itk",
-        "https://www.youtube.com/playlist?list=PLWKjhJtqVAbluXJKKbCIb4xd7fcRkpzoz"
+        "https://www.youtube.com/playlist?list=PLWKjhJtqVAbluXJKKbCIb4xd7fcRkpzoz",
+        "https://lua.msys.ch/lua-integration-guide.html",
+        "https://lua.msys.ch/lua-module-reference.html"
       ]
     },
     {
@@ -59,7 +63,8 @@
         "https://www.luafaq.org",
         "https://www.lua.org/manual",
         "https://learnxinyminutes.com/docs/lua",
-        "https://devhints.io/lua"
+        "https://devhints.io/lua",
+        "https://luakit.github.io/"
       ]
     },
     {
