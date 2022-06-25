@@ -328,11 +328,6 @@
     "type": ["reference"]
   },
   {
-    "title": "React Layouts",
-    "url": "https://react-layouts.com",
-    "type": ["reference", "generator"]
-  },
-  {
     "title": "Beautiful React Hooks",
     "url": "https://antonioru.github.io/beautiful-react-hooks",
     "type": ["reference"]

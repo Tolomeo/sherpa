@@ -47,12 +47,6 @@
     "type": ["guide", "reference"]
   },
   {
-    "title": "Production Practices",
-    "url": "https://www.joyent.com/node-js/production",
-    "type": ["guide", "collection"],
-    "source": "joyent.com"
-  },
-  {
     "title": "nodejs-integration-tests-best-practices",
     "url": "https://github.com/testjavascript/nodejs-integration-tests-best-practices",
     "type": ["guide", "reference"]
