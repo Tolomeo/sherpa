@@ -107,7 +107,7 @@
     "type": ["course"]
   },
   {
-    "title": "HTML and CSS course",
+    "title": "Learn HTML and CSS",
     "url": "https://scrimba.com/learn/htmlcss",
     "type": ["course"]
   },
@@ -522,7 +522,7 @@
     "type": ["generator"]
   },
   {
-    "title": "The State of CSS Survey",
+    "title": "State of CSS",
     "url": "https://stateofcss.com",
     "type": ["reference", "community"]
   },

@@ -13,6 +13,18 @@ declare global {
   }
 }
 
+const cleanHtmlEntities = (str: string) =>
+  Object.entries({
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+    '&quot;': '"',
+    '&apos;': "'",
+    '&shy;': '',
+  }).reduce((_str, [entity, replacement]) => {
+    return _str.replace(new RegExp(entity, 'gi'), replacement)
+  }, str)
+
 const resourceCheckStrategy = {
   visit(resource: Resource) {
     cy.visit(resource.url)
@@ -27,7 +39,9 @@ const resourceCheckStrategy = {
 
       // if we received the document title in the response we validate against that
       if (document.title) {
-        return expect(document.title).to.contain(resource.title)
+        return expect(cleanHtmlEntities(document.title)).to.contain(
+          resource.title,
+        )
       }
 
       // if we didn't receive the title in the response body
@@ -68,6 +82,11 @@ const checkResourceHealth = (resource: Resource) => {
     case 'usehooks-ts.com': // this one weirdly gives 404 on first load
     case 'developer.ibm.com': // this one renders client side
     case 'davrous.com': // this one returns unathorised
+    case 'zzapper.co.uk': //
+    case 'launchschool.com': //
+    case 'ui.dev': //
+    case 'wattenberger.com': //
+    case 'gameaccessibilityguidelines.com': //
       return resourceCheckStrategy.visit(resource)
     case 'codepen.io':
     case 'udemy.com':
