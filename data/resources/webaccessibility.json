@@ -225,8 +225,8 @@
     "type": ["reference", "collection"]
   },
   {
-    "title": "WAI-ARIA Authoring Practices 1.1",
-    "url": "https://www.w3.org/TR/wai-aria-practices-1.1/",
+    "title": "ARIA Authoring Practices Guide",
+    "url": "https://www.w3.org/WAI/ARIA/apg",
     "type": ["reference"]
   },
   {
@@ -275,11 +275,6 @@
     "type": ["reference"]
   },
   {
-    "title": "WAI-ARIA Authoring Practices 1.2",
-    "url": "https://www.w3.org/TR/wai-aria-practices",
-    "type": ["guide", "reference", "example", "collection"]
-  },
-  {
     "title": "Web Content Accessibility Guidelines (WCAG) 2.1",
     "url": "https://www.w3.org/TR/WCAG21",
     "type": ["guide", "reference"]
@@ -311,7 +306,7 @@
     "type": ["blog"]
   },
   {
-    "title": "Blog",
+    "title": "Sara Soueidan",
     "url": "https://www.sarasoueidan.com/blog",
     "type": ["blog"]
   },
