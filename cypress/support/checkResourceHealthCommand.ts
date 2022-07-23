@@ -88,9 +88,6 @@ const checkResourceHealth = (resource: Resource) => {
     case 'wattenberger.com': //
     case 'gameaccessibilityguidelines.com': //
       return resourceCheckStrategy.visit(resource)
-    case 'codepen.io':
-    case 'udemy.com':
-      return resourceCheckStrategy.notImplemented(resource)
     default:
       return resourceCheckStrategy.request(resource)
   }

@@ -68,7 +68,7 @@
       "resources": [
         "https://www.w3.org/WAI/ER/tools",
         "https://russmaxdesign.github.io/accessible-forms",
-        "https://www.w3.org/TR/wai-aria-practices-1.1/",
+        "https://www.w3.org/WAI/ARIA/apg",
         "https://www.a11yproject.com/checklist",
         "https://web.dev/lighthouse-accessibility",
         "https://whocanuse.com",
@@ -80,7 +80,6 @@
         "https://a11y-style-guide.com/style-guide",
         "https://learn-the-web.algonquindesign.ca/topics/cheat-sheets-checklists",
         "https://moritzgiessmann.de/accessibility-cheatsheet",
-        "https://www.w3.org/TR/wai-aria-practices",
         "https://www.w3.org/TR/WCAG21"
       ]
     },
