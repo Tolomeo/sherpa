@@ -192,12 +192,12 @@
   {
     "title": "JSRobot",
     "url": "https://lab.reaal.me/jsrobot",
-    "type": ["exercise", "game"]
+    "type": ["exercise"]
   },
   {
     "title": "WarriorJS",
     "url": "https://warriorjs.com",
-    "type": ["exercise", "game", "community"]
+    "type": ["exercise", "community"]
   },
   {
     "title": "Learning Modern JavaScript with Tetris",

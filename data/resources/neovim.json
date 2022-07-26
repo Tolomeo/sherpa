@@ -83,7 +83,7 @@
   {
     "title": "PacVim",
     "url": "https://github.com/jmoon018/PacVim",
-    "type": ["game"]
+    "type": ["exercise"]
   },
   {
     "title": "Seven habits of effective text editing",
@@ -250,7 +250,7 @@
   {
     "title": "VimGolf - real Vim ninjas count every keystroke!",
     "url": "https://www.vimgolf.com",
-    "type": ["game", "community"]
+    "type": ["exercise", "community"]
   },
   {
     "title": "Neovim",

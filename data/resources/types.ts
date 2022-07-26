@@ -1,21 +1,24 @@
-export const resourceType = [
-  'course',
-  'tutorial',
-  'guide',
-  'game',
-  'book',
-  'example',
-  'collection',
-  'series',
-  'reference',
-  'community',
-  'exercise',
-  'blog',
-  'generator',
-  'opinion',
-] as const
+export const resourceTypes = {
+  course: {
+    title: 'course',
+    description: '',
+  },
+  tutorial: { title: 'tutorial', description: '' },
+  guide: { title: 'guide', description: '' },
+  game: { title: 'game', description: '' },
+  book: { title: 'book', description: '' },
+  example: { title: 'example', description: '' },
+  collection: { title: 'collection', description: '' },
+  series: { title: 'series', description: '' },
+  reference: { title: 'reference', description: '' },
+  community: { title: 'community', description: '' },
+  exercise: { title: 'exercise', description: '' },
+  blog: { title: 'blog', description: '' },
+  generator: { title: 'generator', description: '' },
+  opinion: { title: 'opinion', description: '' },
+} as const
 
-export type ResourceType = typeof resourceType[number]
+export type ResourceType = keyof typeof resourceTypes
 
 export interface SerializedResource {
   title: string
