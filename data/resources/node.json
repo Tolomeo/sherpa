@@ -14,7 +14,7 @@
   {
     "title": "How To Code in Node.js",
     "url": "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js",
-    "type": ["guide", "series"],
+    "type": ["course", "book"],
     "source": "digitalocean.com/community"
   },
   {
@@ -167,12 +167,12 @@
   {
     "title": "Node.js TypeScript",
     "url": "https://wanago.io/courses/node-js-typescript",
-    "type": ["guide", "series"]
+    "type": ["guide", "collection"]
   },
   {
     "title": "TypeScript Express tutorial",
     "url": "https://wanago.io/courses/typescript-express-tutorial",
-    "type": ["guide", "series"]
+    "type": ["guide", "collection"]
   },
   {
     "title": "How To Develop An Interactive Command Line Application Using Node.js",

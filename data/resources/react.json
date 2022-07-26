@@ -141,7 +141,7 @@
   {
     "title": "JavaScript testing tutorial Archives",
     "url": "https://wanago.io/courses/javascript-testing-tutorial",
-    "type": ["guide", "series"]
+    "type": ["guide", "collection"]
   },
   {
     "title": "React book",
@@ -208,7 +208,7 @@
   {
     "title": "A visual guide to React Mental models",
     "url": "https://obedparla.com/code/a-visual-guide-to-react-mental-models",
-    "type": ["guide", "series"]
+    "type": ["guide"]
   },
   {
     "title": "React as a UI Runtime",
@@ -283,7 +283,7 @@
   {
     "title": "What Web Frameworks Solve And How To Do Without Them",
     "url": "https://www.smashingmagazine.com/2022/01/web-frameworks-guide-part1",
-    "type": ["guide", "series"]
+    "type": ["guide"]
   },
   {
     "title": "Building a Custom React Renderer | Sophie Alpert",

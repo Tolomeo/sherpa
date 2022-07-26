@@ -53,7 +53,7 @@
   {
     "title": "WebAIM: Articles",
     "url": "https://webaim.org/articles",
-    "type": ["guide", "series"]
+    "type": ["guide", "collection"]
   },
   {
     "title": "Sara Soueidan on Applied Accessibility: Practical Tips For Building More Accessible Front-Ends at SmashingConf Feiburg 2019",
@@ -89,7 +89,7 @@
   {
     "title": "Web Accessibility: the Complete Learning Guide",
     "url": "https://webdesign.tutsplus.com/series/web-accessibility-the-complete-learning-guide--cms-1301",
-    "type": ["guide", "series"]
+    "type": ["guide", "collection"]
   },
   {
     "title": "Web Accessibility Guidebook for Developers",

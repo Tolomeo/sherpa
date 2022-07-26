@@ -68,7 +68,7 @@
   {
     "title": "Episodes",
     "url": "http://vimcasts.org/episodes",
-    "type": ["tutorial", "series"]
+    "type": ["guide", "collection"]
   },
   {
     "title": "Exploring Vim",

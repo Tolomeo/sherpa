@@ -28,7 +28,7 @@
   {
     "title": "JavaScript Algorithms and Data Structures",
     "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures",
-    "type": ["course", "series"]
+    "type": ["course", "collection"]
   },
   {
     "title": "The Modern JavaScript Tutorial",
@@ -114,7 +114,7 @@
   {
     "title": "JavaScript Visualized",
     "url": "https://dev.to/lydiahallie/series/3341",
-    "type": ["guide", "series"],
+    "type": ["guide", "collection"],
     "source": "dev.to/lydiahallie"
   },
   {
@@ -224,7 +224,7 @@
   {
     "title": "JavaScript Tutorial",
     "url": "https://www.w3schools.com/js",
-    "type": ["tutorial", "series", "reference"]
+    "type": ["guide", "collection", "reference"]
   },
   {
     "title": "Super Mario Bros in JavaScript",
@@ -251,7 +251,7 @@
   {
     "title": "Understanding the DOM — Document Object Model",
     "url": "https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model",
-    "type": ["tutorial", "series"],
+    "type": ["course"],
     "source": "digitalocean.com/community"
   },
   {
@@ -293,7 +293,7 @@
   {
     "title": "Trigonometry in CSS and JavaScript",
     "url": "https://tympanus.net/codrops/2021/06/01/trigonometry-in-css-and-javascript-introduction-to-trigonometry",
-    "type": ["guide", "series"]
+    "type": ["guide"]
   },
   {
     "title": "Learning functional programming: A roadmap",
