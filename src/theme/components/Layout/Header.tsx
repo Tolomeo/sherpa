@@ -6,7 +6,7 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import Container from './Container'
-import Logo from './Logo'
+import Logo from '../Logo'
 
 const GithubLink = () => {
   return (

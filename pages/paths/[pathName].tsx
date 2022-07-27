@@ -10,10 +10,7 @@ import {
   hasExtras,
 } from '../../data'
 import {
-  Header,
-  Hero,
-  Villain,
-  Container,
+  Layout,
   Box,
   Typography,
   Grid,
@@ -63,7 +60,7 @@ const pathExtrasTestId = 'path.extras'
 
 export default function PathPage({ path }: Props) {
   return (
-    <Box>
+    <>
       <Head>
         <title>Sherpa: the {path.title} path</title>
         <link
@@ -94,41 +91,37 @@ export default function PathPage({ path }: Props) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      <Header />
+      <Layout>
+        <Layout.Header />
 
-      <main>
-        <Hero>
-          <Typography variant="h1" color="primary.contrastText">
-            The <Underline>{path.title}</Underline> path
-          </Typography>
-        </Hero>
+        <main>
+          <Layout.Hero>
+            <Typography variant="h1" color="primary.contrastText">
+              The <Underline>{path.title}</Underline> path
+            </Typography>
+          </Layout.Hero>
 
-        {hasPrevPaths(path) && (
-          <Box pb={4}>
-            <Container>
+          {hasPrevPaths(path) && (
+            <Layout.Container pb={4}>
               <aside>
                 <Typography variant="h3" component="h2" gutterBottom>
                   You want to come from
                 </Typography>
                 <PathsList paths={path.prev} />
               </aside>
-            </Container>
-          </Box>
-        )}
+            </Layout.Container>
+          )}
 
-        <Box pb={4}>
-          <Container data-testid={pathResourcesTestId}>
+          <Layout.Container pb={4} data-testid={pathResourcesTestId}>
             <Grid container>
               <Grid item xs={12} md={8} xl={6}>
                 <ResourcesTimeline resources={path.resources} />
               </Grid>
             </Grid>
-          </Container>
-        </Box>
+          </Layout.Container>
 
-        {hasExtras(path) && (
-          <Box py={4}>
-            <Container>
+          {hasExtras(path) && (
+            <Layout.Container pb={4}>
               <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
                 {path.extras.map((extra, index) => (
                   <Box data-testid={pathExtrasTestId} key={index}>
@@ -141,23 +134,23 @@ export default function PathPage({ path }: Props) {
                   </Box>
                 ))}
               </Masonry>
-            </Container>
-          </Box>
-        )}
-
-        <Villain>
-          {hasNextPaths(path) && (
-            <Box py={4}>
-              <aside>
-                <Typography variant="h3" component="h2" gutterBottom>
-                  You could continue with
-                </Typography>
-                <PathsList paths={path.next} />
-              </aside>
-            </Box>
+            </Layout.Container>
           )}
-        </Villain>
-      </main>
-    </Box>
+
+          <Layout.Villain>
+            {hasNextPaths(path) && (
+              <Box py={4}>
+                <aside>
+                  <Typography variant="h3" component="h2" gutterBottom>
+                    You could continue with
+                  </Typography>
+                  <PathsList paths={path.next} />
+                </aside>
+              </Box>
+            )}
+          </Layout.Villain>
+        </main>
+      </Layout>
+    </>
   )
 }
