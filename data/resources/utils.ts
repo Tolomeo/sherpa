@@ -4,7 +4,7 @@ import {
   SerializedResource,
   Resources,
   Resource,
-  resourceType,
+  resourceTypes,
 } from './types'
 
 const ajv = new Ajv()
@@ -17,7 +17,7 @@ const serializedResourceSchema: JSONSchemaType<SerializedResource> = {
       type: 'array',
       items: {
         type: 'string',
-        enum: resourceType,
+        enum: Object.keys(resourceTypes),
       },
       minItems: 1,
     },
@@ -29,6 +29,30 @@ const serializedResourceSchema: JSONSchemaType<SerializedResource> = {
 }
 
 export const validateSerializedResource = ajv.compile(serializedResourceSchema)
+
+const parseResource = (serializedResource: SerializedResource) => {
+  const parsedResource = { ...serializedResource } as Resource
+
+  if (!parsedResource.source) {
+    const resourceUrl = new URL(parsedResource.url)
+
+    switch (resourceUrl.hostname) {
+      case 'github.com':
+        parsedResource.source = `${resourceUrl.hostname}/${
+          resourceUrl.pathname.split('/').filter(Boolean)[0]
+        }`
+        break
+      default:
+        parsedResource.source = resourceUrl.hostname.replace(/^www./, '')
+    }
+  }
+
+  parsedResource.type = parsedResource.type.map(
+    (type) => resourceTypes[type].title,
+  )
+
+  return parsedResource
+}
 
 export const parseResources = (serializedResources: SerializedResources) =>
   serializedResources.reduce((resourcesMap, serializedResource) => {
@@ -51,28 +75,7 @@ export const parseResources = (serializedResources: SerializedResources) =>
       )
     }
 
-    if (serializedResource.source) {
-      resourcesMap[serializedResource.url] = serializedResource as Resource
-      return resourcesMap
-    }
-
-    const resourceUrl = new URL(serializedResource.url)
-
-    switch (resourceUrl.hostname) {
-      case 'github.com':
-        resourcesMap[serializedResource.url] = {
-          ...serializedResource,
-          source: `${resourceUrl.hostname}/${
-            resourceUrl.pathname.split('/').filter(Boolean)[0]
-          }`,
-        }
-        break
-      default:
-        resourcesMap[serializedResource.url] = {
-          ...serializedResource,
-          source: resourceUrl.hostname.replace(/^www./, ''),
-        }
-    }
+    resourcesMap[serializedResource.url] = parseResource(serializedResource)
 
     return resourcesMap
   }, {} as Resources)
