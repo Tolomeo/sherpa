@@ -191,12 +191,12 @@
   {
     "title": "Blog | Next.js",
     "url": "https://nextjs.org/blog",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Vercel - YouTube",
     "url": "https://www.youtube.com/c/VercelHQ",
-    "type": ["blog"],
+    "type": ["reference"],
     "source": "youtube.com/c/VercelHQ"
   },
   {

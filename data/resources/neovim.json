@@ -184,27 +184,27 @@
   {
     "title": "The Valuable Dev",
     "url": "https://thevaluable.dev",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Vim - DEV Community",
     "url": "https://dev.to/t/vim",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Neovim - DEV Community",
     "url": "https://dev.to/t/neovim",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Barbarian Meets Coding",
     "url": "https://www.barbarianmeetscoding.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Devlog",
     "url": "http://vonheikemen.github.io/devlog",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Vim Tips Wiki _ Fandom",

@@ -288,7 +288,7 @@
   {
     "title": "Blog | hidde.blog",
     "url": "https://hiddedevries.nl/en/blog",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "WebAIM",
@@ -298,17 +298,17 @@
   {
     "title": "Blog | Adrián Bolonio",
     "url": "https://www.adrianbolonio.com/en/blog",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Posts — Adrian Roselli",
     "url": "https://adrianroselli.com/posts",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Sara Soueidan",
     "url": "https://www.sarasoueidan.com/blog",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Web Accessibility Initiative (WAI)",
@@ -328,7 +328,7 @@
   {
     "title": "Blog - craigabbott.co.uk",
     "url": "https://www.craigabbott.co.uk/blog",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "24 Accessibility",

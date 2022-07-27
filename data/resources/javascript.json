@@ -420,42 +420,42 @@
   {
     "title": "JavaScript Jabber",
     "url": "https://javascriptjabber.com",
-    "type": ["blog", "community"]
+    "type": ["community"]
   },
   {
     "title": "SitePoint",
     "url": "https://www.sitepoint.com",
-    "type": ["blog", "reference"]
+    "type": ["reference"]
   },
   {
     "title": "Tania Rascia",
     "url": "https://www.taniarascia.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Trekhleb | Blog",
     "url": "https://trekhleb.dev/blog",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Human Who Codes",
     "url": "https://humanwhocodes.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "David Walsh Blog",
     "url": "https://davidwalsh.name",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Christian Heilmann",
     "url": "https://christianheilmann.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Flavio Copes",
     "url": "https://flaviocopes.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "JavaScript tutorial for beginners",

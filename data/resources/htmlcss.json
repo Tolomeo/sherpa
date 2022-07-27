@@ -412,27 +412,27 @@
   {
     "title": "CSS-Tricks",
     "url": "https://css-tricks.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Codrops",
     "url": "https://tympanus.net/codrops",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Smashing Magazine",
     "url": "https://www.smashingmagazine.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Ahmad Shadeed",
     "url": "https://ishadeed.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Josh W Comeau",
     "url": "https://www.joshwcomeau.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "CodePen",
@@ -529,6 +529,6 @@
   {
     "title": "CSS { In Real Life }",
     "url": "https://css-irl.info",
-    "type": ["blog"]
+    "type": ["reference"]
   }
 ]

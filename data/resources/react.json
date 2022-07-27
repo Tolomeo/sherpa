@@ -345,23 +345,23 @@
   {
     "title": "React - All Posts",
     "url": "https://reactjs.org/blog/all.html",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "JavaScript, React, TypeScript, and other Web Tech Articles and Tutorials - ui.dev",
     "url": "https://ui.dev/blog/",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Overreacted — A blog by Dan Abramov",
     "url": "https://overreacted.io",
-    "type": ["blog"]
+    "type": ["reference"]
   },
 
   {
     "title": "The Kent C. Dodds Blog",
     "url": "https://kentcdodds.com/blog",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "React Digest",

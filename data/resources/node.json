@@ -333,17 +333,17 @@
   {
     "title": "HackerNoon",
     "url": "https://hackernoon.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Software Engineering Blog & Programming Tutorials",
     "url": "https://www.toptal.com/developers/blog",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Marcin Wanago Blog",
     "url": "https://wanago.io",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Tao of Node - Design, Architecture & Best Practices",
