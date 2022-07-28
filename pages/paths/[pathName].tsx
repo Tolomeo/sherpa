@@ -149,6 +149,8 @@ export default function PathPage({ path }: Props) {
               </Box>
             )}
           </Layout.Villain>
+
+          <Layout.Drawer>menu</Layout.Drawer>
         </main>
       </Layout>
     </>

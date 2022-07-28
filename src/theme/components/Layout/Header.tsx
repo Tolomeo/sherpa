@@ -5,22 +5,38 @@ import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import GitHubIcon from '@mui/icons-material/GitHub'
-import Container from './Container'
+import MenuIcon from '@mui/icons-material/Menu'
+import IconButton from '@mui/material/IconButton'
 import Logo from '../Logo'
+import Container from './Container'
+import { useLayoutContext } from './Context'
 
 const GithubLink = () => {
   return (
-    <Typography
-      href={process.env.NEXT_PUBLIC_GITHUB_URL}
+    <IconButton
       color="inherit"
-      textTransform="uppercase"
-      component="a"
-      sx={{
-        textDecoration: 'none',
-      }}
+      aria-label="Go to repository"
+      href={process.env.NEXT_PUBLIC_GITHUB_URL!}
     >
       <GitHubIcon />
-    </Typography>
+    </IconButton>
+  )
+}
+
+const DrawerToggle = () => {
+  const { toggleDrawer } = useLayoutContext()
+  const onClick = () => toggleDrawer('menu')
+
+  return (
+    <IconButton
+      color="inherit"
+      aria-label="Open drawer"
+      onClick={onClick}
+      // edge="start"
+      // sx={{ mr: 2, ...(open && { display: 'none' }) }}
+    >
+      <MenuIcon />
+    </IconButton>
   )
 }
 
@@ -39,6 +55,7 @@ const ResponsiveAppBar = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <GithubLink />
+            <DrawerToggle />
           </Box>
         </Toolbar>
       </Container>
