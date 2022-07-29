@@ -23,6 +23,16 @@ const GithubLink = () => {
   )
 }
 
+const DrawerToggle2 = () => {
+  const { toggle } = useLayoutDrawer('menu2')
+
+  return (
+    <IconButton color="inherit" aria-label="Open drawer" onClick={toggle}>
+      <MenuIcon />
+    </IconButton>
+  )
+}
+
 const DrawerToggle = () => {
   const { toggle } = useLayoutDrawer('menu')
 
@@ -49,6 +59,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <GithubLink />
             <DrawerToggle />
+            <DrawerToggle2 />
           </Box>
         </Toolbar>
       </Container>

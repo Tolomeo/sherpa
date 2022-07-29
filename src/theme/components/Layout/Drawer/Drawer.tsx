@@ -5,11 +5,11 @@ import Box from '@mui/material/Box'
 import ToolBar from '@mui/material/ToolBar'
 
 const Drawers = () => {
-  const { drawers, setDrawer } = useLayoutContext()
+  const { getDrawers, setDrawer } = useLayoutContext()
 
   return (
     <>
-      {Object.entries(drawers).map(([drawerName, drawerOpen]) => (
+      {Object.entries(getDrawers()).map(([drawerName, drawerOpen]) => (
         <MuiDrawer
           anchor="right"
           key={drawerName}

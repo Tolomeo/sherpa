@@ -9,13 +9,12 @@ import Box from '@mui/material/Box'
 type LayoutDrawers = Record<string, boolean>
 
 type LayoutContextValue = {
-  drawers: LayoutDrawers
+  getDrawers: () => LayoutDrawers
   setDrawers: React.Dispatch<React.SetStateAction<LayoutDrawers>>
   registerDrawer: (name: string, open?: boolean) => void
   unregisterDrawer: (name: string) => void
   getDrawer: (name: string) => boolean
   setDrawer: (name: string, open: boolean) => void
-  toggleDrawer: (name: string) => void
 }
 
 const LayoutContext = createContext<LayoutContextValue | null>(null)
@@ -30,29 +29,23 @@ export const useLayoutContext = () => {
 }
 
 export const useLayoutDrawer = (name: string) => {
-  const { drawers, setDrawers, getDrawer, setDrawer } = useLayoutContext()
-  const register = (open: boolean = false) => {
-    if (name in drawers) return
-    setDrawers({ ...drawers, [name]: open })
-  }
-  const unregister = () => {
-    if (!(name in drawers)) return
-
-    const newDrawers = { ...drawers }
-    delete newDrawers[name]
-    setDrawers(newDrawers)
-  }
+  const { getDrawer, setDrawer, registerDrawer, unregisterDrawer } =
+    useLayoutContext()
+  const isOpen = () => getDrawer(name)
+  const open = () => setDrawer(name, true)
+  const close = () => setDrawer(name, false)
   const toggle = () => setDrawer(name, !getDrawer(name))
 
   useLayoutEffect(() => {
-    register()
-    return unregister
+    registerDrawer(name)
+    return () => unregisterDrawer(name)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return {
-    register,
-    unregister,
+    isOpen,
+    open,
+    close,
     toggle,
   }
 }
@@ -63,6 +56,7 @@ type Props = {
 
 const LayoutContextProvider = ({ children }: Props) => {
   const [drawers, setDrawers] = useState<Record<string, boolean>>({})
+  const getDrawers = () => drawers
   const registerDrawer = (name: string, open: boolean = false) => {
     if (name in drawers) return
     setDrawers({ ...drawers, [name]: open })
@@ -79,17 +73,26 @@ const LayoutContextProvider = ({ children }: Props) => {
   }
   const setDrawer = (name: string, open: boolean) => {
     if (!(name in drawers)) return
-    setDrawers({ ...drawers, [name]: open })
+
+    const newDrawers = Object.keys(drawers).reduce(
+      (_newDrawers, drawerName) => {
+        _newDrawers[drawerName] = false
+        return _newDrawers
+      },
+      {} as LayoutDrawers,
+    )
+
+    newDrawers[name] = open
+
+    setDrawers(newDrawers)
   }
-  const toggleDrawer = (name: string) => setDrawer(name, !getDrawer(name))
   const context = {
-    drawers,
+    getDrawers,
     setDrawers,
     registerDrawer,
     unregisterDrawer,
     getDrawer,
     setDrawer,
-    toggleDrawer,
   }
 
   return (
