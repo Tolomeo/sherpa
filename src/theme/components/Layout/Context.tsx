@@ -1,4 +1,9 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useLayoutEffect,
+} from 'react'
 import Box from '@mui/material/Box'
 
 type LayoutDrawers = Record<string, boolean>
@@ -22,6 +27,34 @@ export const useLayoutContext = () => {
     throw new Error('useLayoutContext error: LayoutContext not found')
 
   return layoutContext
+}
+
+export const useLayoutDrawer = (name: string) => {
+  const { drawers, setDrawers, getDrawer, setDrawer } = useLayoutContext()
+  const register = (open: boolean = false) => {
+    if (name in drawers) return
+    setDrawers({ ...drawers, [name]: open })
+  }
+  const unregister = () => {
+    if (!(name in drawers)) return
+
+    const newDrawers = { ...drawers }
+    delete newDrawers[name]
+    setDrawers(newDrawers)
+  }
+  const toggle = () => setDrawer(name, !getDrawer(name))
+
+  useLayoutEffect(() => {
+    register()
+    return unregister
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  return {
+    register,
+    unregister,
+    toggle,
+  }
 }
 
 type Props = {

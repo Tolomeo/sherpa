@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import IconButton from '@mui/material/IconButton'
 import Logo from '../Logo'
 import Container from './Container'
-import { useLayoutContext } from './Context'
+import { useLayoutContext, useLayoutDrawer } from './Context'
 
 const GithubLink = () => {
   return (
@@ -24,17 +24,10 @@ const GithubLink = () => {
 }
 
 const DrawerToggle = () => {
-  const { toggleDrawer, registerDrawer, unregisterDrawer } = useLayoutContext()
-
-  useLayoutEffect(() => {
-    registerDrawer('menu')
-    return () => unregisterDrawer('menu')
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-  const onClick = () => toggleDrawer('menu')
+  const { toggle } = useLayoutDrawer('menu')
 
   return (
-    <IconButton color="inherit" aria-label="Open drawer" onClick={onClick}>
+    <IconButton color="inherit" aria-label="Open drawer" onClick={toggle}>
       <MenuIcon />
     </IconButton>
   )
