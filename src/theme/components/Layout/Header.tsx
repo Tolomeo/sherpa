@@ -28,13 +28,7 @@ const DrawerToggle = () => {
   const onClick = () => toggleDrawer('menu')
 
   return (
-    <IconButton
-      color="inherit"
-      aria-label="Open drawer"
-      onClick={onClick}
-      // edge="start"
-      // sx={{ mr: 2, ...(open && { display: 'none' }) }}
-    >
+    <IconButton color="inherit" aria-label="Open drawer" onClick={onClick}>
       <MenuIcon />
     </IconButton>
   )

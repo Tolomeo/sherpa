@@ -49,6 +49,11 @@ let theme = createTheme({
 
 theme = createTheme(theme, {
   components: {
+    MuiBackdrop: {
+      defaultProps: {
+        invisible: true,
+      },
+    },
     MuiAppBar: {
       styleOverrides: {
         root: {
