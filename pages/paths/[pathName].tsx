@@ -18,7 +18,10 @@ import {
   Underline,
 } from '../../src/theme'
 import { IconLink as GithubIconLink } from '../../src/github'
-import { List as PathsList } from '../../src/paths'
+import {
+  List as PathsList,
+  ListDrawer as PathsListDrawer,
+} from '../../src/paths'
 import {
   Timeline as ResourcesTimeline,
   List as ResourcesList,
@@ -94,6 +97,7 @@ export default function PathPage({ path }: Props) {
 
       <Layout>
         <Layout.Header>
+          <PathsListDrawer />
           <GithubIconLink />
         </Layout.Header>
 
