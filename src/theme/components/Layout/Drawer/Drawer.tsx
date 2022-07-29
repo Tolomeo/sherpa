@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { useLayoutContext } from '../Context'
 import MuiDrawer from '@mui/material/Drawer'
 import Box from '@mui/material/Box'
 import ToolBar from '@mui/material/ToolBar'
+
+export const useLayoutDrawer = (name: string) => {
+  const { getDrawer, setDrawer, registerDrawer, unregisterDrawer } =
+    useLayoutContext()
+  const isOpen = () => getDrawer(name)
+  const open = () => setDrawer(name, true)
+  const close = () => setDrawer(name, false)
+  const toggle = () => setDrawer(name, !getDrawer(name))
+
+  useLayoutEffect(() => {
+    registerDrawer(name)
+    return () => unregisterDrawer(name)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  return {
+    isOpen,
+    open,
+    close,
+    toggle,
+  }
+}
 
 const Drawers = () => {
   const { getDrawers, setDrawer } = useLayoutContext()

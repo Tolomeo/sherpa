@@ -28,28 +28,6 @@ export const useLayoutContext = () => {
   return layoutContext
 }
 
-export const useLayoutDrawer = (name: string) => {
-  const { getDrawer, setDrawer, registerDrawer, unregisterDrawer } =
-    useLayoutContext()
-  const isOpen = () => getDrawer(name)
-  const open = () => setDrawer(name, true)
-  const close = () => setDrawer(name, false)
-  const toggle = () => setDrawer(name, !getDrawer(name))
-
-  useLayoutEffect(() => {
-    registerDrawer(name)
-    return () => unregisterDrawer(name)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  return {
-    isOpen,
-    open,
-    close,
-    toggle,
-  }
-}
-
 type Props = {
   children: React.ReactNode
 }
