@@ -17,6 +17,7 @@ import {
   Masonry,
   Underline,
 } from '../../src/theme'
+import { IconLink as GithubIconLink } from '../../src/github'
 import { List as PathsList } from '../../src/paths'
 import {
   Timeline as ResourcesTimeline,
@@ -92,7 +93,9 @@ export default function PathPage({ path }: Props) {
       </Head>
 
       <Layout>
-        <Layout.Header />
+        <Layout.Header>
+          <GithubIconLink />
+        </Layout.Header>
 
         <main>
           <Layout.Hero>

@@ -3,6 +3,7 @@ import Head from 'next/head'
 import paths from '../data/paths'
 import { alternateSources } from '../data/resources'
 import { Layout, Typography, Box, Grid } from '../src/theme'
+import { IconLink as GithubIconLink } from '../src/github'
 import { AlternateSourcesList } from '../src/resources'
 import { List as PathsList } from '../src/paths'
 
@@ -51,7 +52,9 @@ export default function Home({ paths, alternateSources }: Props) {
       </Head>
 
       <Layout>
-        <Layout.Header />
+        <Layout.Header>
+          <GithubIconLink />
+        </Layout.Header>
 
         <main>
           <Layout.Hero>
