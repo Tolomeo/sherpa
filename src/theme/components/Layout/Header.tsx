@@ -1,20 +1,20 @@
-import React, { useLayoutEffect } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
-import MenuIcon from '@mui/icons-material/Menu'
+import SubjectIcon from '@mui/icons-material/Subject'
 import IconButton from '@mui/material/IconButton'
 import Logo from '../Logo'
-import Container from './Container'
-import { useLayoutContext, useLayoutDrawer } from './Context'
+import Container from '@mui/material/Container'
+import { useLayoutDrawer } from './Context'
 
 const DrawerToggle = () => {
   const { toggle } = useLayoutDrawer('menu')
 
   return (
     <IconButton color="inherit" aria-label="Open drawer" onClick={toggle}>
-      <MenuIcon />
+      <SubjectIcon />
     </IconButton>
   )
 }
@@ -22,7 +22,7 @@ const DrawerToggle = () => {
 const Header: React.FC = ({ children }) => {
   return (
     <AppBar position="sticky">
-      <Container>
+      <Container maxWidth={false}>
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1 }}>
             <Link href="/" passHref>

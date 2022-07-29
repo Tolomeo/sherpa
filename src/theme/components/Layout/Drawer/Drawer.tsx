@@ -15,9 +15,18 @@ const Drawers = () => {
           key={drawerName}
           open={drawerOpen}
           onClose={() => setDrawer('menu', false)}
-          elevation={0}
+          elevation={2}
         >
-          <Box sx={{ width: 350 }}>
+          <Box
+            sx={{
+              width: {
+                xs: 300,
+                md: 450,
+                lg: 600,
+                xl: 750,
+              },
+            }}
+          >
             <ToolBar />
             <Box padding={6}>{drawerName}</Box>
           </Box>
