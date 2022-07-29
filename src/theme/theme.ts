@@ -59,6 +59,7 @@ theme = createTheme(theme, {
         root: {
           backgroundColor: theme.palette.background.default,
           color: theme.palette.text.primary,
+          zIndex: 1400,
         },
       },
     },

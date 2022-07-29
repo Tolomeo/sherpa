@@ -1,7 +1,11 @@
 import React, { createContext, useContext, useState } from 'react'
 import Box from '@mui/material/Box'
 
+type LayoutDrawers = Record<string, boolean>
+
 type LayoutContextValue = {
+  drawers: LayoutDrawers
+  setDrawers: React.Dispatch<React.SetStateAction<LayoutDrawers>>
   registerDrawer: (name: string, open?: boolean) => void
   unregisterDrawer: (name: string) => void
   getDrawer: (name: string) => boolean
@@ -46,6 +50,8 @@ const LayoutContextProvider = ({ children }: Props) => {
   }
   const toggleDrawer = (name: string) => setDrawer(name, !getDrawer(name))
   const context = {
+    drawers,
+    setDrawers,
     registerDrawer,
     unregisterDrawer,
     getDrawer,
