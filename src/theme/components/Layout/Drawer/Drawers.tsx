@@ -9,12 +9,12 @@ const Drawers = () => {
 
   return (
     <>
-      {Object.entries(getDrawers()).map(([drawerName, drawerOpen]) => (
+      {Object.entries(getDrawers()).map(([drawerName, drawer]) => (
         <MuiDrawer
           anchor="right"
           key={drawerName}
-          open={drawerOpen}
-          onClose={() => setDrawer('menu', false)}
+          open={drawer.open}
+          onClose={() => setDrawer(drawerName, { open: false })}
           elevation={2}
         >
           <Box
@@ -28,7 +28,7 @@ const Drawers = () => {
             }}
           >
             <ToolBar />
-            <Box padding={6}>{drawerName}</Box>
+            <Box padding={6}>{drawer.children}</Box>
           </Box>
         </MuiDrawer>
       ))}

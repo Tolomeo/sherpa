@@ -1,17 +1,23 @@
 import React, { createContext, useContext, useState } from 'react'
 import Box from '@mui/material/Box'
 
-type LayoutDrawer = boolean
+type LayoutDrawer = {
+  children: React.ReactNode
+  open: boolean
+}
 
 type LayoutDrawers = Record<string, LayoutDrawer>
 
 type LayoutContextValue = {
   getDrawers: () => LayoutDrawers
   setDrawers: React.Dispatch<React.SetStateAction<LayoutDrawers>>
-  registerDrawer: (name: string, open?: boolean) => void
+  registerDrawer: (name: string, drawerChildren: React.ReactNode) => void
   unregisterDrawer: (name: string) => void
-  getDrawer: (name: string) => boolean
-  setDrawer: (name: string, open: boolean) => void
+  getDrawer: (name: string) => LayoutDrawer | void
+  setDrawer: (
+    name: string,
+    drawer: Partial<Omit<LayoutDrawer, 'children'>>,
+  ) => void
 }
 
 const LayoutContext = createContext<LayoutContextValue | null>(null)
@@ -30,11 +36,15 @@ type Props = {
 }
 
 const LayoutContextProvider = ({ children }: Props) => {
-  const [drawers, setDrawers] = useState<Record<string, boolean>>({})
+  const [drawers, setDrawers] = useState<Record<string, LayoutDrawer>>({})
   const getDrawers = () => drawers
-  const registerDrawer = (name: string, open: boolean = false) => {
+  const registerDrawer = (name: string, drawerChildren: React.ReactNode) => {
     if (name in drawers) return
-    setDrawers({ ...drawers, [name]: open })
+
+    setDrawers({
+      ...drawers,
+      [name]: { children: drawerChildren, open: false },
+    })
   }
   const unregisterDrawer = (name: string) => {
     if (!(name in drawers)) return
@@ -44,20 +54,28 @@ const LayoutContextProvider = ({ children }: Props) => {
     setDrawers(newDrawers)
   }
   const getDrawer = (name: string) => {
+    if (!(name in drawers)) return
+
     return drawers[name]
   }
-  const setDrawer = (name: string, open: boolean) => {
+  const setDrawer = (
+    name: string,
+    drawer: Partial<Omit<LayoutDrawer, 'children'>>,
+  ) => {
     if (!(name in drawers)) return
 
     const newDrawers = Object.keys(drawers).reduce(
       (_newDrawers, drawerName) => {
-        _newDrawers[drawerName] = false
+        _newDrawers[drawerName] = {
+          ...drawers[drawerName],
+          open: false,
+        }
         return _newDrawers
       },
       {} as LayoutDrawers,
     )
 
-    newDrawers[name] = open
+    newDrawers[name] = { ...drawers[name], ...drawer }
 
     setDrawers(newDrawers)
   }

@@ -2,18 +2,11 @@ import React, { useLayoutEffect } from 'react'
 import { useLayoutContext } from '../Context'
 
 export const useLayoutDrawer = (name: string) => {
-  const { getDrawer, setDrawer, registerDrawer, unregisterDrawer } =
-    useLayoutContext()
-  const isOpen = () => Boolean(getDrawer(name))
-  const open = () => setDrawer(name, true)
-  const close = () => setDrawer(name, false)
-  const toggle = () => setDrawer(name, !getDrawer(name))
-
-  // useLayoutEffect(() => {
-  //   registerDrawer(name)
-  //   return () => unregisterDrawer(name)
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [])
+  const { getDrawer, setDrawer } = useLayoutContext()
+  const isOpen = () => Boolean(getDrawer(name)?.open)
+  const open = () => setDrawer(name, { open: true })
+  const close = () => setDrawer(name, { open: false })
+  const toggle = () => setDrawer(name, { open: !getDrawer(name)?.open })
 
   return {
     isOpen,
@@ -27,10 +20,10 @@ type Props = {
   name: string
 }
 
-const Drawer: React.FC<Props> = ({ name }) => {
+const Drawer: React.FC<Props> = ({ name, children }) => {
   const { registerDrawer, unregisterDrawer } = useLayoutContext()
   useLayoutEffect(() => {
-    registerDrawer(name)
+    registerDrawer(name, children)
     return () => unregisterDrawer(name)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

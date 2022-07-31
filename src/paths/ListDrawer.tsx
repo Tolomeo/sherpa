@@ -9,7 +9,9 @@ import { LayoutDrawer, useLayoutDrawer } from '../theme'
 const drawerName = 'paths-list'
 
 export const PathsListDrawer = () => (
-  <LayoutDrawer name={drawerName}>paths list content</LayoutDrawer>
+  <LayoutDrawer name={drawerName}>
+    paths <b>list</b> content
+  </LayoutDrawer>
 )
 
 export const PathsListDrawerToggle = () => {
