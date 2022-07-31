@@ -1,4 +1,5 @@
 import React from 'react'
+import { ResourceTypes } from '../../data'
 import {
   HelpIcon,
   IconButton,
@@ -6,13 +7,18 @@ import {
   LayoutDrawer,
   useLayoutDrawer,
 } from '../theme'
+import ResourceTypesList from './ResourceTypes'
 
 const drawerName = 'help'
 
-type Props = {}
+type Props = {
+  resourceTypes: ResourceTypes
+}
 
-export const HelpDrawer: React.FC<Props> = () => (
-  <LayoutDrawer name={drawerName}>eheheheheh</LayoutDrawer>
+export const HelpDrawer: React.FC<Props> = ({ resourceTypes }) => (
+  <LayoutDrawer name={drawerName}>
+    <ResourceTypesList resourceTypes={resourceTypes} />
+  </LayoutDrawer>
 )
 
 export const HelpDrawerToggle = () => {

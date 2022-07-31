@@ -5,6 +5,8 @@ export type ResourceType = {
   description: string
 }
 
-const resourceTypes: Record<string, ResourceType> = serializedResourceTypes
+export type ResourceTypes = Record<string, ResourceType>
+
+const resourceTypes: ResourceTypes = serializedResourceTypes
 
 export default resourceTypes

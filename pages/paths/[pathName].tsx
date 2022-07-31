@@ -8,6 +8,8 @@ import {
   hasPrevPaths,
   hasNextPaths,
   hasExtras,
+  resourceTypes,
+  ResourceTypes,
 } from '../../data'
 import {
   Layout,
@@ -40,6 +42,7 @@ interface Params extends ParsedUrlQuery {
 interface StaticProps {
   paths: Paths
   path: Path
+  resourceTypes: ResourceTypes
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -59,6 +62,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
     props: {
       paths,
       path,
+      resourceTypes,
     },
   }
 }
@@ -68,7 +72,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
 
-export default function PathPage({ path, paths }: Props) {
+export default function PathPage({ path, paths, resourceTypes }: Props) {
   return (
     <>
       <Head>
@@ -164,7 +168,7 @@ export default function PathPage({ path, paths }: Props) {
             )}
           </LayoutVillain>
 
-          <HelpDrawer />
+          <HelpDrawer resourceTypes={resourceTypes} />
           <PathsDrawer paths={paths} />
         </main>
       </Layout>

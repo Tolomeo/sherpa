@@ -5,7 +5,11 @@ import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined'
 
-const List: React.FC = ({ children }) => {
+type Props = {
+  bulleted?: boolean
+}
+
+const List: React.FC<Props> = ({ children, bulleted = true }) => {
   return (
     <MuiList>
       {React.Children.map(
@@ -13,9 +17,11 @@ const List: React.FC = ({ children }) => {
         (child) =>
           child && (
             <ListItem>
-              <ListItemIcon>
-                <CircleOutlinedIcon sx={{ fontSize: 14 }} />
-              </ListItemIcon>
+              {bulleted && (
+                <ListItemIcon>
+                  <CircleOutlinedIcon sx={{ fontSize: 14 }} />
+                </ListItemIcon>
+              )}{' '}
               <ListItemText primary={child} />
             </ListItem>
           ),
