@@ -67,7 +67,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
 
-export default function PathPage({ path }: Props) {
+export default function PathPage({ path, paths }: Props) {
   return (
     <>
       <Head>
@@ -161,7 +161,7 @@ export default function PathPage({ path }: Props) {
               </Box>
             )}
           </LayoutVillain>
-          <PathsListDrawer />
+          <PathsListDrawer paths={paths} />
         </main>
       </Layout>
     </>
