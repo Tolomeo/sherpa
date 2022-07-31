@@ -9,11 +9,11 @@ export const useLayoutDrawer = (name: string) => {
   const close = () => setDrawer(name, false)
   const toggle = () => setDrawer(name, !getDrawer(name))
 
-  useLayoutEffect(() => {
-    registerDrawer(name)
-    return () => unregisterDrawer(name)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  // useLayoutEffect(() => {
+  //   registerDrawer(name)
+  //   return () => unregisterDrawer(name)
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [])
 
   return {
     isOpen,
@@ -32,7 +32,8 @@ const Drawer: React.FC<Props> = ({ name }) => {
   useLayoutEffect(() => {
     registerDrawer(name)
     return () => unregisterDrawer(name)
-  }, [name, registerDrawer, unregisterDrawer])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return null
 }

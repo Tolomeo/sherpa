@@ -1,2 +1,5 @@
 export { default as List } from './List'
-export { default as ListDrawer } from './ListDrawer'
+export {
+  PathsListDrawer as ListDrawer,
+  PathsListDrawerToggle as ListDrawerToggle,
+} from './ListDrawer'

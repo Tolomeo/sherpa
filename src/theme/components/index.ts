@@ -20,5 +20,6 @@ export {
   LayoutHero,
   LayoutVillain,
   LayoutContainer,
+  LayoutDrawer,
   useLayoutDrawer,
 } from './Layout'

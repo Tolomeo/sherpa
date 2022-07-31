@@ -24,6 +24,7 @@ import {
 import { IconLink as GithubIconLink } from '../../src/github'
 import {
   List as PathsList,
+  ListDrawerToggle as PathsListDrawerToggle,
   ListDrawer as PathsListDrawer,
 } from '../../src/paths'
 import {
@@ -101,7 +102,7 @@ export default function PathPage({ path }: Props) {
 
       <Layout>
         <LayoutHeader>
-          <PathsListDrawer />
+          <PathsListDrawerToggle />
           <GithubIconLink />
         </LayoutHeader>
 
@@ -160,6 +161,7 @@ export default function PathPage({ path }: Props) {
               </Box>
             )}
           </LayoutVillain>
+          <PathsListDrawer />
         </main>
       </Layout>
     </>
