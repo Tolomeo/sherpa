@@ -6,19 +6,19 @@ import { Paths, SerializedPaths } from '../../data'
 import { LayoutDrawer, useLayoutDrawer } from '../theme'
 import PathsList from './List'
 
-const drawerName = 'paths-list'
+const drawerName = 'paths'
 
 type Props = {
   paths: Paths | SerializedPaths
 }
 
-export const PathsListDrawer: React.FC<Props> = ({ paths }) => (
+export const PathsDrawer: React.FC<Props> = ({ paths }) => (
   <LayoutDrawer name={drawerName}>
     <PathsList paths={paths} />
   </LayoutDrawer>
 )
 
-export const PathsListDrawerToggle = () => {
+export const PathsDrawerToggle = () => {
   const { toggle, isOpen } = useLayoutDrawer(drawerName)
 
   return (
@@ -27,5 +27,3 @@ export const PathsListDrawerToggle = () => {
     </IconButton>
   )
 }
-
-export default PathsListDrawerToggle
