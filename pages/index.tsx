@@ -2,7 +2,16 @@ import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import paths from '../data/paths'
 import { alternateSources } from '../data/resources'
-import { Layout, Typography, Box, Grid } from '../src/theme'
+import {
+  Layout,
+  LayoutHeader,
+  LayoutHero,
+  LayoutVillain,
+  LayoutContainer,
+  Typography,
+  Box,
+  Grid,
+} from '../src/theme'
 import { IconLink as GithubIconLink } from '../src/github'
 import { AlternateSourcesList } from '../src/resources'
 import { List as PathsList } from '../src/paths'
@@ -52,18 +61,18 @@ export default function Home({ paths, alternateSources }: Props) {
       </Head>
 
       <Layout>
-        <Layout.Header>
+        <LayoutHeader>
           <GithubIconLink />
-        </Layout.Header>
+        </LayoutHeader>
 
         <main>
-          <Layout.Hero>
+          <LayoutHero>
             <Typography variant="h1" color="primary.contrastText">
               Climbing the learning curve
             </Typography>
-          </Layout.Hero>
+          </LayoutHero>
 
-          <Layout.Container>
+          <LayoutContainer>
             <Box py={2}>
               <Grid container>
                 <Grid item sm={9}>
@@ -100,10 +109,10 @@ export default function Home({ paths, alternateSources }: Props) {
             <Box py={2}>
               <PathsList paths={paths} />
             </Box>
-          </Layout.Container>
+          </LayoutContainer>
 
           <Box pt={6}>
-            <Layout.Villain>
+            <LayoutVillain>
               <Box py={2}>
                 <Typography variant="h2">
                   There are many paths to the top of the mountain
@@ -128,7 +137,7 @@ export default function Home({ paths, alternateSources }: Props) {
                   online for what sparks one&apos;s interest.
                 </Typography>
               </Box>
-            </Layout.Villain>
+            </LayoutVillain>
           </Box>
         </main>
       </Layout>

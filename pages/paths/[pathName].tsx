@@ -11,6 +11,10 @@ import {
 } from '../../data'
 import {
   Layout,
+  LayoutHeader,
+  LayoutHero,
+  LayoutVillain,
+  LayoutContainer,
   Box,
   Typography,
   Grid,
@@ -96,39 +100,39 @@ export default function PathPage({ path }: Props) {
       </Head>
 
       <Layout>
-        <Layout.Header>
+        <LayoutHeader>
           <PathsListDrawer />
           <GithubIconLink />
-        </Layout.Header>
+        </LayoutHeader>
 
         <main>
-          <Layout.Hero>
+          <LayoutHero>
             <Typography variant="h1" color="primary.contrastText">
               The <Underline>{path.title}</Underline> path
             </Typography>
-          </Layout.Hero>
+          </LayoutHero>
 
           {hasPrevPaths(path) && (
-            <Layout.Container pb={4}>
+            <LayoutContainer pb={4}>
               <aside>
                 <Typography variant="h3" component="h2" gutterBottom>
                   You want to come from
                 </Typography>
                 <PathsList paths={path.prev} />
               </aside>
-            </Layout.Container>
+            </LayoutContainer>
           )}
 
-          <Layout.Container pb={4} data-testid={pathResourcesTestId}>
+          <LayoutContainer pb={4} data-testid={pathResourcesTestId}>
             <Grid container>
               <Grid item xs={12} md={8} xl={6}>
                 <ResourcesTimeline resources={path.resources} />
               </Grid>
             </Grid>
-          </Layout.Container>
+          </LayoutContainer>
 
           {hasExtras(path) && (
-            <Layout.Container pb={4}>
+            <LayoutContainer pb={4}>
               <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
                 {path.extras.map((extra, index) => (
                   <Box data-testid={pathExtrasTestId} key={index}>
@@ -141,10 +145,10 @@ export default function PathPage({ path }: Props) {
                   </Box>
                 ))}
               </Masonry>
-            </Layout.Container>
+            </LayoutContainer>
           )}
 
-          <Layout.Villain>
+          <LayoutVillain>
             {hasNextPaths(path) && (
               <Box py={4}>
                 <aside>
@@ -155,7 +159,7 @@ export default function PathPage({ path }: Props) {
                 </aside>
               </Box>
             )}
-          </Layout.Villain>
+          </LayoutVillain>
         </main>
       </Layout>
     </>
