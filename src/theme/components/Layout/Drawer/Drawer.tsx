@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useLayoutContext } from '../Context'
 
 export const useLayoutDrawer = (name: string) => {
@@ -22,7 +22,7 @@ type Props = {
 
 const Drawer: React.FC<Props> = ({ name, children }) => {
   const { registerDrawer, unregisterDrawer } = useLayoutContext()
-  useLayoutEffect(() => {
+  useEffect(() => {
     registerDrawer(name, children)
     return () => unregisterDrawer(name)
     // eslint-disable-next-line react-hooks/exhaustive-deps

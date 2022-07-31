@@ -2,7 +2,7 @@ import React, { useLayoutEffect } from 'react'
 import { useLayoutContext } from '../Context'
 import MuiDrawer from '@mui/material/Drawer'
 import Box from '@mui/material/Box'
-import ToolBar from '@mui/material/ToolBar'
+import Toolbar from '@mui/material/Toolbar'
 
 const Drawers = () => {
   const { getDrawers, setDrawer } = useLayoutContext()
@@ -27,7 +27,7 @@ const Drawers = () => {
               },
             }}
           >
-            <ToolBar />
+            <Toolbar />
             <Box padding={6}>{drawer.children}</Box>
           </Box>
         </MuiDrawer>
