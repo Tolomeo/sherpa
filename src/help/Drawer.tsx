@@ -1,8 +1,11 @@
 import React from 'react'
-import HelpIcon from '@mui/icons-material/Help'
-import IconButton from '@mui/material/IconButton'
-import CloseIcon from '@mui/icons-material/Close'
-import { LayoutDrawer, useLayoutDrawer } from '../theme'
+import {
+  HelpIcon,
+  IconButton,
+  CloseIcon,
+  LayoutDrawer,
+  useLayoutDrawer,
+} from '../theme'
 
 const drawerName = 'help'
 
