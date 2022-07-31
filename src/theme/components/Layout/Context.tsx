@@ -39,22 +39,24 @@ const LayoutContextProvider = ({ children }: Props) => {
   const [drawers, setDrawers] = useState<Record<string, LayoutDrawer>>({})
   const getDrawers = () => drawers
   const registerDrawer = (name: string, drawerChildren: React.ReactNode) => {
-    if (name in drawers) return
+    if (drawers[name]) return
 
-    setDrawers({
-      ...drawers,
+    setDrawers((currentDrawers) => ({
+      ...currentDrawers,
       [name]: { children: drawerChildren, open: false },
-    })
+    }))
   }
   const unregisterDrawer = (name: string) => {
-    if (!(name in drawers)) return
+    if (!drawers[name]) return
 
-    const newDrawers = { ...drawers }
-    delete newDrawers[name]
-    setDrawers(newDrawers)
+    setDrawers((currentDrawers) => {
+      const newDrawers = { ...currentDrawers }
+      delete newDrawers[name]
+      return newDrawers
+    })
   }
   const getDrawer = (name: string) => {
-    if (!(name in drawers)) return
+    if (!drawers[name]) return
 
     return drawers[name]
   }
@@ -62,7 +64,7 @@ const LayoutContextProvider = ({ children }: Props) => {
     name: string,
     drawer: Partial<Omit<LayoutDrawer, 'children'>>,
   ) => {
-    if (!(name in drawers)) return
+    if (!drawers[name]) return
 
     const newDrawers = Object.keys(drawers).reduce(
       (_newDrawers, drawerName) => {
