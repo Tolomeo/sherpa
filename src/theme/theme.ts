@@ -117,6 +117,18 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiButton: {
+      defaultProps: {
+        disableRipple: true,
+        disableFocusRipple: true,
+      },
+    },
+    MuiIconButton: {
+      defaultProps: {
+        disableRipple: true,
+        disableFocusRipple: true,
+      },
+    },
   },
 })
 
