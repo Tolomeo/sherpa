@@ -1,13 +1,10 @@
 import React, { useLayoutEffect } from 'react'
 import { useLayoutContext } from '../Context'
-import MuiDrawer from '@mui/material/Drawer'
-import Box from '@mui/material/Box'
-import ToolBar from '@mui/material/ToolBar'
 
 export const useLayoutDrawer = (name: string) => {
   const { getDrawer, setDrawer, registerDrawer, unregisterDrawer } =
     useLayoutContext()
-  const isOpen = () => getDrawer(name)
+  const isOpen = () => Boolean(getDrawer(name))
   const open = () => setDrawer(name, true)
   const close = () => setDrawer(name, false)
   const toggle = () => setDrawer(name, !getDrawer(name))
@@ -26,36 +23,18 @@ export const useLayoutDrawer = (name: string) => {
   }
 }
 
-const Drawers = () => {
-  const { getDrawers, setDrawer } = useLayoutContext()
-
-  return (
-    <>
-      {Object.entries(getDrawers()).map(([drawerName, drawerOpen]) => (
-        <MuiDrawer
-          anchor="right"
-          key={drawerName}
-          open={drawerOpen}
-          onClose={() => setDrawer('menu', false)}
-          elevation={2}
-        >
-          <Box
-            sx={{
-              width: {
-                xs: 300,
-                md: 450,
-                lg: 600,
-                xl: 750,
-              },
-            }}
-          >
-            <ToolBar />
-            <Box padding={6}>{drawerName}</Box>
-          </Box>
-        </MuiDrawer>
-      ))}
-    </>
-  )
+type Props = {
+  name: string
 }
 
-export default Drawers
+const Drawer: React.FC<Props> = ({ name }) => {
+  const { registerDrawer, unregisterDrawer } = useLayoutContext()
+  useLayoutEffect(() => {
+    registerDrawer(name)
+    return () => unregisterDrawer(name)
+  }, [name, registerDrawer, unregisterDrawer])
+
+  return null
+}
+
+export default Drawer

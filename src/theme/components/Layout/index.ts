@@ -9,6 +9,7 @@ export {
   LayoutContainer,
   LayoutHero,
   LayoutVillain,
+  LayoutDrawer,
   useLayoutDrawer,
 }
 export { default } from './Layout'
