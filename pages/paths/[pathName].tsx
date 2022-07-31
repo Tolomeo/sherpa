@@ -8,19 +8,28 @@ import {
   hasPrevPaths,
   hasNextPaths,
   hasExtras,
+  resourceTypes,
+  ResourceTypes,
 } from '../../data'
 import {
-  Header,
-  Hero,
-  Villain,
-  Container,
+  Layout,
+  LayoutHeader,
+  LayoutHero,
+  LayoutVillain,
+  LayoutContainer,
   Box,
   Typography,
   Grid,
   Masonry,
   Underline,
 } from '../../src/theme'
-import { List as PathsList } from '../../src/paths'
+import { IconLink as GithubIconLink } from '../../src/github'
+import {
+  List as PathsList,
+  PathsDrawer,
+  PathsDrawerToggle,
+} from '../../src/paths'
+import { HelpDrawer, HelpDrawerToggle } from '../../src/help'
 import {
   Timeline as ResourcesTimeline,
   List as ResourcesList,
@@ -33,6 +42,7 @@ interface Params extends ParsedUrlQuery {
 interface StaticProps {
   paths: Paths
   path: Path
+  resourceTypes: ResourceTypes
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -52,6 +62,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
     props: {
       paths,
       path,
+      resourceTypes,
     },
   }
 }
@@ -61,9 +72,9 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
 
-export default function PathPage({ path }: Props) {
+export default function PathPage({ path, paths, resourceTypes }: Props) {
   return (
-    <Box>
+    <>
       <Head>
         <title>Sherpa: the {path.title} path</title>
         <link
@@ -94,41 +105,41 @@ export default function PathPage({ path }: Props) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      <Header />
+      <Layout>
+        <LayoutHeader>
+          <HelpDrawerToggle />
+          <PathsDrawerToggle />
+          <GithubIconLink />
+        </LayoutHeader>
 
-      <main>
-        <Hero>
-          <Typography variant="h1" color="primary.contrastText">
-            The <Underline>{path.title}</Underline> path
-          </Typography>
-        </Hero>
+        <main>
+          <LayoutHero>
+            <Typography variant="h1" color="primary.contrastText">
+              The <Underline>{path.title}</Underline> path
+            </Typography>
+          </LayoutHero>
 
-        {hasPrevPaths(path) && (
-          <Box pb={4}>
-            <Container>
+          {hasPrevPaths(path) && (
+            <LayoutContainer pb={4}>
               <aside>
                 <Typography variant="h3" component="h2" gutterBottom>
                   You want to come from
                 </Typography>
                 <PathsList paths={path.prev} />
               </aside>
-            </Container>
-          </Box>
-        )}
+            </LayoutContainer>
+          )}
 
-        <Box pb={4}>
-          <Container data-testid={pathResourcesTestId}>
+          <LayoutContainer pb={4} data-testid={pathResourcesTestId}>
             <Grid container>
               <Grid item xs={12} md={8} xl={6}>
                 <ResourcesTimeline resources={path.resources} />
               </Grid>
             </Grid>
-          </Container>
-        </Box>
+          </LayoutContainer>
 
-        {hasExtras(path) && (
-          <Box py={4}>
-            <Container>
+          {hasExtras(path) && (
+            <LayoutContainer pb={4}>
               <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
                 {path.extras.map((extra, index) => (
                   <Box data-testid={pathExtrasTestId} key={index}>
@@ -141,23 +152,26 @@ export default function PathPage({ path }: Props) {
                   </Box>
                 ))}
               </Masonry>
-            </Container>
-          </Box>
-        )}
-
-        <Villain>
-          {hasNextPaths(path) && (
-            <Box py={4}>
-              <aside>
-                <Typography variant="h3" component="h2" gutterBottom>
-                  You could continue with
-                </Typography>
-                <PathsList paths={path.next} />
-              </aside>
-            </Box>
+            </LayoutContainer>
           )}
-        </Villain>
-      </main>
-    </Box>
+
+          <LayoutVillain>
+            {hasNextPaths(path) && (
+              <Box py={4}>
+                <aside>
+                  <Typography variant="h3" component="h2" gutterBottom>
+                    You could continue with
+                  </Typography>
+                  <PathsList paths={path.next} />
+                </aside>
+              </Box>
+            )}
+          </LayoutVillain>
+
+          <HelpDrawer resourceTypes={resourceTypes} />
+          <PathsDrawer paths={paths} />
+        </main>
+      </Layout>
+    </>
   )
 }

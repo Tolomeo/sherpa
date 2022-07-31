@@ -7,7 +7,7 @@
   {
     "title": "Regex Crossword",
     "url": "https://regexcrossword.com",
-    "type": ["game", "community"]
+    "type": ["exercise", "community"]
   },
   {
     "title": "awesome-regex",

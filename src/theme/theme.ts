@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material/styles'
-// import { red } from '@mui/material/colors'
 
 let theme = createTheme({
   palette: {
@@ -49,11 +48,17 @@ let theme = createTheme({
 
 theme = createTheme(theme, {
   components: {
+    MuiBackdrop: {
+      defaultProps: {
+        invisible: true,
+      },
+    },
     MuiAppBar: {
       styleOverrides: {
         root: {
           backgroundColor: theme.palette.background.default,
           color: theme.palette.text.primary,
+          zIndex: 1400,
         },
       },
     },
@@ -110,6 +115,18 @@ theme = createTheme(theme, {
         root: {
           fontSize: theme.typography.overline.fontSize,
         },
+      },
+    },
+    MuiButton: {
+      defaultProps: {
+        disableRipple: true,
+        disableFocusRipple: true,
+      },
+    },
+    MuiIconButton: {
+      defaultProps: {
+        disableRipple: true,
+        disableFocusRipple: true,
       },
     },
   },

@@ -1,8 +1,7 @@
 import React from 'react'
 import NextLink from 'next/link'
 import { Paths, SerializedPaths } from '../../data'
-import { List, Link, Typography, Box } from '../theme'
-import { Underline } from '../theme'
+import { List, Link, Typography, Box, Underline } from '../theme'
 
 type Props = {
   paths: Paths | SerializedPaths
@@ -14,7 +13,7 @@ const pathsListItemLinkTestId = 'paths.list.item.link'
 
 const PathsList = ({ paths }: Props) => (
   <Box data-testid={pathsListTestId}>
-    <List>
+    <List bulleted={false}>
       {Object.entries(paths).map(([pathName, path]) => (
         <Box key={pathName} data-testid={pathsListItemTestId} component="span">
           <NextLink href={`/paths/${pathName}`} passHref>

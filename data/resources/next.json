@@ -25,7 +25,7 @@
   {
     "title": "Next.js Tutorial",
     "url": "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSQsrukurP09ksi49H9Yj40",
-    "type": ["guide", "series"],
+    "type": ["guide", "collection"],
     "source": "youtube.com/c/BrunoAntunesPT"
   },
   {
@@ -191,12 +191,12 @@
   {
     "title": "Blog | Next.js",
     "url": "https://nextjs.org/blog",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Vercel - YouTube",
     "url": "https://www.youtube.com/c/VercelHQ",
-    "type": ["blog"],
+    "type": ["reference"],
     "source": "youtube.com/c/VercelHQ"
   },
   {

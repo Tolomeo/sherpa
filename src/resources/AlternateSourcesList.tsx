@@ -14,7 +14,7 @@ const alternativesListItemTitleTestId = 'alternatives.list.item.title'
 const AlternateSourcesList = ({ resources }: Props) => {
   return (
     <Box data-testid={alternativesListTestId}>
-      <List>
+      <List bulleted={false}>
         {Object.entries(resources).map(([resourceId, resource]) => (
           <Box data-testid={alternativesListItemTestId} key={resourceId}>
             <Link

@@ -135,7 +135,7 @@
   {
     "title": "Using Git",
     "url": "https://docs.github.com/en/get-started/using-git",
-    "type": ["guide", "series"]
+    "type": ["guide", "collection"]
   },
   {
     "title": "Git Tutorial",

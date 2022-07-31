@@ -1,0 +1,46 @@
+{
+  "course": {
+    "title": "course",
+    "description": "Provides knowledge over an entire subject. It is assumed it will be consumed linearly from start to finish."
+  },
+  "tutorial": {
+    "title": "tutorial",
+    "description": "Helps solving a specific challenge. It is focused on demonstrating how to reach a specific goal."
+  },
+  "guide": {
+    "title": "guide",
+    "description": "Investigates on a narrow subject. It is scoped over a specific aspect of a larger topic."
+  },
+  "book": {
+    "title": "book",
+    "description": "Provides knowledge over an entire subject. It is designed to be consumed as a printed work would."
+  },
+  "example": {
+    "title": "example",
+    "description": "Showcases an executed project and allows to take a look at its source."
+  },
+  "collection": {
+    "title": "collection",
+    "description": "Group of resources. Those can vary in type and organization."
+  },
+  "reference": {
+    "title": "reference",
+    "description": "Helps when a quick refresher is needed or to rely on its updates to stay current."
+  },
+  "community": {
+    "title": "community",
+    "description": "Gives insights on a niche or helps getting in contact with it. Not everything is about skills."
+  },
+  "exercise": {
+    "title": "exercise",
+    "description": "Gives the chance to practice with newly acquired skills."
+  },
+  "generator": {
+    "title": "generator",
+    "description": "Utility that could range from a simple value calculator to a complex and feature rich automatic configurator."
+  },
+  "opinion": {
+    "title": "opinion",
+    "description": "Everybody’s opinion counts because they could push to look at things from a different perspective."
+  }
+}
