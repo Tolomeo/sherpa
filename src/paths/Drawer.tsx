@@ -6,6 +6,8 @@ import {
   IconButton,
   PlaylistIcon,
   CloseIcon,
+  Typography,
+  Stack,
 } from '../theme'
 import PathsList from './List'
 
@@ -17,7 +19,12 @@ type Props = {
 
 export const PathsDrawer: React.FC<Props> = ({ paths }) => (
   <LayoutDrawer name={drawerName}>
-    <PathsList paths={paths} />
+    <Stack spacing={3}>
+      <Typography variant="h5" component="p">
+        Choose your path
+      </Typography>
+      <PathsList paths={paths} />
+    </Stack>
   </LayoutDrawer>
 )
 
