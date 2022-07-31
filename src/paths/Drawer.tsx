@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import { Paths, SerializedPaths } from '../../data'
 import {
   LayoutDrawer,
@@ -29,7 +30,13 @@ export const PathsDrawer: React.FC<Props> = ({ paths }) => (
 )
 
 export const PathsDrawerToggle = () => {
-  const { toggle, isOpen } = useLayoutDrawer(drawerName)
+  const router = useRouter()
+  const { toggle, isOpen, close } = useLayoutDrawer(drawerName)
+
+  useEffect(() => {
+    if (isOpen()) close()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.asPath])
 
   return (
     <IconButton color="inherit" aria-label="Toggle help menu" onClick={toggle}>
