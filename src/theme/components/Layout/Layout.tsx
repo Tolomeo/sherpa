@@ -1,6 +1,6 @@
 import React from 'react'
 import Box from '@mui/material/Box'
-import LayoutContext, { useLayoutContext } from './Context'
+import LayoutContext from './Context'
 import Header from './Header'
 import Container from './Container'
 import Hero from './Hero'

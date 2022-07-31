@@ -3,8 +3,8 @@ import Link from 'next/link'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
-import Logo from '../Logo'
 import Container from '@mui/material/Container'
+import Logo from '../../Logo'
 
 const Header: React.FC = ({ children }) => {
   return (

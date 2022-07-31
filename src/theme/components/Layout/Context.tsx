@@ -1,12 +1,9 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useLayoutEffect,
-} from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import Box from '@mui/material/Box'
 
-type LayoutDrawers = Record<string, boolean>
+type LayoutDrawer = boolean
+
+type LayoutDrawers = Record<string, LayoutDrawer>
 
 type LayoutContextValue = {
   getDrawers: () => LayoutDrawers
