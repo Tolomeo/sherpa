@@ -11,16 +11,16 @@ const PathsHelp = () => (
       There are some recurring patterns nonetheless.
     </Typography>
     <Typography>
-      First of all, and if possible, paths will start with a{' '}
-      <b>You want to come from</b> section, listing any other preparatory path.
+      When possible, paths will start with a <b>You want to come from</b>{' '}
+      section, listing any preparatory path.
     </Typography>
     <Typography>
       The path itself is a list of resources, ordered in such a way to cover all
-      topic’s essentials, from beginner to intermediate/advanced level.
+      the essentials, from beginner to intermediate/advanced level.
     </Typography>
     <Typography>
-      The number of following additional sections can vary, but one will
-      generally be able to find:
+      The number of additional sections coming straight after can vary, but one
+      will generally be able to find:
     </Typography>
     <Typography>
       <b>There&apos;s more</b> with alternative resources to the ones in the
@@ -43,8 +43,8 @@ const PathsHelp = () => (
       date
     </Typography>
     <Typography>
-      If possible, paths will conclude with a <b>You could continue with</b>{' '}
-      section, listing other paths to progress learning with.
+      When possible, paths will conclude with a <b>You could continue with</b>{' '}
+      section, recommending next steps.
     </Typography>
   </Stack>
 )

@@ -9,7 +9,7 @@
   },
   "guide": {
     "title": "guide",
-    "description": "Investigates on a narrow subject. It is scoped over a specific aspect of a larger topic."
+    "description": "Investigates a narrow subject. It is scoped over a specific aspect of a larger topic."
   },
   "book": {
     "title": "book",
@@ -21,26 +21,26 @@
   },
   "collection": {
     "title": "collection",
-    "description": "Group of resources. Those can vary in type and organization."
+    "description": "Groups resources, varying in type and organization."
   },
   "reference": {
     "title": "reference",
-    "description": "Helps when a quick refresher is needed or to rely on its updates to stay current."
+    "description": "Caters for quick hints, structured refeshers and updates."
   },
   "community": {
     "title": "community",
-    "description": "Gives insights on a niche or helps getting in contact with it. Not everything is about skills."
+    "description": "Gives insights on people and helps connecting with them. Not everything is about skills."
   },
   "exercise": {
     "title": "exercise",
-    "description": "Gives the chance to practice with newly acquired skills."
+    "description": "Gives the chance to practice newly acquired skills."
   },
   "generator": {
     "title": "generator",
-    "description": "Utility that could range from a simple value calculator to a complex and feature rich automatic configurator."
+    "description": "Could range from simple value calculator to complex and feature-rich automatic configurator."
   },
   "opinion": {
     "title": "opinion",
-    "description": "Everybody’s opinion counts because they could push to look at things from a different perspective."
+    "description": "Everybody’s opinion counts as it could challenge perspectives."
   }
 }

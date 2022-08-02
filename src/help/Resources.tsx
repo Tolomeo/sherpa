@@ -9,8 +9,8 @@ type Props = {
 const ResourcesHelp = ({ resourceTypes }: Props) => (
   <Stack spacing={1}>
     <Typography>
-      Every resource is marked with a label indicating its type, giving
-      indication on the organisation of the resource itself.
+      Every resource is labelled based on its type, giving indication on the
+      organisation of the resource itself.
       <br /> Many resources have more than one type.
     </Typography>
     <Typography>
@@ -27,15 +27,9 @@ const ResourcesHelp = ({ resourceTypes }: Props) => (
       </Box>
     ))}
     <Typography>
-      The path’s resources are suggestions.
-      <br />
-      Feel free to swap any of them with alternatives found in the{' '}
-      <b>There&apos;s more</b> section, if those happened to feel more
-      enjoyable.
-    </Typography>
-    <Typography>
-      Some resources could present overlapping or repetition at times. It&apos;s
-      okay to take only what fits best in one&apos;s own learning journey.
+      <b>There&apos;s more</b> offers valid alternatives to the default
+      resources of each path. Feel free to choose what works best and shape you
+      very own learning journey.
     </Typography>
   </Stack>
 )
