@@ -16,7 +16,7 @@ const List: React.FC<Props> = ({
   spaced = true,
 }) => {
   return (
-    <MuiList>
+    <MuiList disablePadding={!spaced}>
       {React.Children.map(
         children,
         (child) =>

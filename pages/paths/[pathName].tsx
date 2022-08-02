@@ -169,21 +169,19 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
           </LayoutVillain>
 
           <HelpDrawer>
-            <Stack spacing={3}>
+            <Stack spacing={4}>
               <Typography variant="h5" component="p">
                 Need a compass?
               </Typography>
               <PathsList paths={paths} spaced={false} />
-              <Stack spacing={2}>
-                <Typography variant="h6" component="p">
-                  About paths
-                </Typography>
-                <PathsHelp />
-                <Typography variant="h6" component="p">
-                  About resources
-                </Typography>
-                <ResourcesHelp resourceTypes={resourceTypes} />
-              </Stack>
+              <Typography variant="h5" component="p">
+                About paths
+              </Typography>
+              <PathsHelp />
+              <Typography variant="h5" component="p">
+                About resources
+              </Typography>
+              <ResourcesHelp resourceTypes={resourceTypes} />
             </Stack>
           </HelpDrawer>
         </main>
