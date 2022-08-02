@@ -168,7 +168,7 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
             )}
           </LayoutVillain>
 
-          <HelpDrawer resourceTypes={resourceTypes}>
+          <HelpDrawer>
             <Stack spacing={3}>
               <Typography variant="h5" component="p">
                 Need a compass?

@@ -11,19 +11,17 @@ import {
 
 const drawerName = 'help'
 
-type Props = {
-  resourceTypes: ResourceTypes
-}
-
-export const HelpDrawer: React.FC<Props> = ({ children }) => {
+export const HelpDrawer: React.FC = ({ children }) => {
   return <LayoutDrawer name={drawerName}>{children}</LayoutDrawer>
 }
 
 export const HelpDrawerToggle = () => {
   const router = useRouter()
-  const { toggle, isOpen } = useLayoutDrawer(drawerName)
+  const { toggle, isOpen, close } = useLayoutDrawer(drawerName)
 
   useEffect(() => {
+    console.log(router.asPath, isOpen())
+    close()
     if (isOpen()) close()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.asPath])

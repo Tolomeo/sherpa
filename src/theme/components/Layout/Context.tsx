@@ -60,21 +60,23 @@ const LayoutContextProvider = ({ children }: Props) => {
   const setDrawer = (name: string, drawer: Partial<LayoutDrawer>) => {
     if (!drawers[name]) return
 
-    const newDrawers = Object.keys(drawers).reduce(
-      (_newDrawers, drawerName) => {
-        _newDrawers[drawerName] = {
-          ...drawers[drawerName],
-          open: false,
-        }
-        return _newDrawers
-      },
-      {} as LayoutDrawers,
-    )
+    setDrawers((currentDrawers) => {
+      const newDrawers = Object.keys(currentDrawers).reduce(
+        (_newDrawers, drawerName) => {
+          _newDrawers[drawerName] = {
+            ...drawers[drawerName],
+            open: false,
+          }
+          return _newDrawers
+        },
+        {} as LayoutDrawers,
+      )
+      newDrawers[name] = { ...currentDrawers[name], ...drawer }
 
-    newDrawers[name] = { ...drawers[name], ...drawer }
-
-    setDrawers(newDrawers)
+      return newDrawers
+    })
   }
+
   const context = {
     getDrawers,
     setDrawers,
