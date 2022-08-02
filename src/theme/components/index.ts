@@ -1,5 +1,5 @@
 export { default as IconButton } from '@mui/material/IconButton'
-export { default as PlaylistIcon } from '@mui/icons-material/PlaylistAddCheckCircleRounded'
+export { default as SubjectsIcon } from '@mui/icons-material/Subject'
 export { default as HelpIcon } from '@mui/icons-material/Help'
 export { default as CloseIcon } from '@mui/icons-material/Close'
 export { default as Box } from '@mui/material/Box'

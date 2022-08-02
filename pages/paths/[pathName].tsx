@@ -20,16 +20,18 @@ import {
   Box,
   Typography,
   Grid,
+  Stack,
   Masonry,
   Underline,
 } from '../../src/theme'
 import { IconLink as GithubIconLink } from '../../src/github'
+import { List as PathsList } from '../../src/paths'
 import {
-  List as PathsList,
-  PathsDrawer,
-  PathsDrawerToggle,
-} from '../../src/paths'
-import { HelpDrawer, HelpDrawerToggle } from '../../src/help'
+  HelpDrawer,
+  HelpDrawerToggle,
+  Resources as ResourcesHelp,
+  Paths as PathsHelp,
+} from '../../src/help'
 import {
   Timeline as ResourcesTimeline,
   List as ResourcesList,
@@ -69,46 +71,44 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
+const PageHead = ({ path }: Pick<Props, 'path'>) => (
+  <Head>
+    <title>Sherpa: the {path.title} path</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png?v=1"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png?v=1"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png?v=1"
+    />
+    <link rel="manifest" href="/site.webmanifest?v=1" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=1" color="#5bbad5" />
+    <link rel="shortcut icon" href="/favicon.ico?v=1" />
+    <meta name="msapplication-TileColor" content="#ff6bdf" />
+    <meta name="theme-color" content="#ffffff" />
+  </Head>
+)
+
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
 
 export default function PathPage({ path, paths, resourceTypes }: Props) {
   return (
     <>
-      <Head>
-        <title>Sherpa: the {path.title} path</title>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png?v=1"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png?v=1"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png?v=1"
-        />
-        <link rel="manifest" href="/site.webmanifest?v=1" />
-        <link
-          rel="mask-icon"
-          href="/safari-pinned-tab.svg?v=1"
-          color="#5bbad5"
-        />
-        <link rel="shortcut icon" href="/favicon.ico?v=1" />
-        <meta name="msapplication-TileColor" content="#ff6bdf" />
-        <meta name="theme-color" content="#ffffff" />
-      </Head>
-
+      <PageHead path={path} />
       <Layout>
         <LayoutHeader>
           <HelpDrawerToggle />
-          <PathsDrawerToggle />
           <GithubIconLink />
         </LayoutHeader>
 
@@ -168,8 +168,24 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
             )}
           </LayoutVillain>
 
-          <HelpDrawer resourceTypes={resourceTypes} />
-          <PathsDrawer paths={paths} />
+          <HelpDrawer resourceTypes={resourceTypes}>
+            <Stack spacing={3}>
+              <Typography variant="h5" component="p">
+                Need a compass?
+              </Typography>
+              <PathsList paths={paths} spaced={false} />
+              <Stack spacing={2}>
+                <Typography variant="h6" component="p">
+                  About paths
+                </Typography>
+                <PathsHelp />
+                <Typography variant="h6" component="p">
+                  About resources
+                </Typography>
+                <ResourcesHelp resourceTypes={resourceTypes} />
+              </Stack>
+            </Stack>
+          </HelpDrawer>
         </main>
       </Layout>
     </>

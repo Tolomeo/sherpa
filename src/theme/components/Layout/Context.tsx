@@ -14,10 +14,7 @@ type LayoutContextValue = {
   registerDrawer: (name: string, drawerChildren: React.ReactNode) => void
   unregisterDrawer: (name: string) => void
   getDrawer: (name: string) => LayoutDrawer | void
-  setDrawer: (
-    name: string,
-    drawer: Partial<Omit<LayoutDrawer, 'children'>>,
-  ) => void
+  setDrawer: (name: string, drawer: Partial<LayoutDrawer>) => void
 }
 
 const LayoutContext = createContext<LayoutContextValue | null>(null)
@@ -60,10 +57,7 @@ const LayoutContextProvider = ({ children }: Props) => {
 
     return drawers[name]
   }
-  const setDrawer = (
-    name: string,
-    drawer: Partial<Omit<LayoutDrawer, 'children'>>,
-  ) => {
+  const setDrawer = (name: string, drawer: Partial<LayoutDrawer>) => {
     if (!drawers[name]) return
 
     const newDrawers = Object.keys(drawers).reduce(

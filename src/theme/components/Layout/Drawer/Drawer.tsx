@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useLayoutContext } from '../Context'
 
 export const useLayoutDrawer = (name: string) => {
@@ -21,10 +21,24 @@ type Props = {
 }
 
 const Drawer: React.FC<Props> = ({ name, children }) => {
-  const { registerDrawer, unregisterDrawer } = useLayoutContext()
+  const drawerName = useRef(name)
+  const { registerDrawer, unregisterDrawer, setDrawer } = useLayoutContext()
+
   useEffect(() => {
-    registerDrawer(name, children)
-    return () => unregisterDrawer(name)
+    unregisterDrawer(drawerName.current)
+    drawerName.current = name
+    registerDrawer(drawerName.current, children)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [name])
+
+  useEffect(() => {
+    setDrawer(drawerName.current, { children })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [children])
+
+  useEffect(() => {
+    const cleanupDrawerName = drawerName.current
+    return () => unregisterDrawer(cleanupDrawerName)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
