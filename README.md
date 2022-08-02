@@ -30,7 +30,7 @@ If this project manages to help anyone learning something, I will see it as a su
 - [x] Add "path additional resources" feature
 - [x] Add resources monitoring tests
 - [x] Add resources schema validation
-- [ ] Add "help" panel
+- [x] Add "help" panel
 - [ ] Add client side "save progress" feature
 - [ ] Add client side path customisation?
 - [ ] Add "resources with multiple URLs" support
