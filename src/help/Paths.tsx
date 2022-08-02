@@ -12,7 +12,7 @@ const PathsHelp = () => (
     </Typography>
     <Typography>
       When possible, paths will start with a <b>You want to come from</b>{' '}
-      section, listing any preparatory path.
+      section, listing preparatory paths.
     </Typography>
     <Typography>
       The path itself is a list of resources, ordered in such a way to cover all
