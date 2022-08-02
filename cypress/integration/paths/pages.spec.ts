@@ -111,6 +111,31 @@ describe('Path pages', () => {
           })
         })
       })
+
+      describe('Help drawer', () => {
+        before(() => {
+          cy.get('[data-testid="help-drawer-toggle"]')
+            .click()
+            .get('[data-testid="help-drawer"]')
+            .find('[data-testid="paths.list"]')
+            .find(
+              '[data-testid="paths.list.item"] a[data-testid="paths.list.item.link"]',
+            )
+            .as('pathLinks')
+        })
+
+        it(`Renders a list of all the available paths links`, () => {
+          Object.entries(paths).forEach(([pathKey, path], pathIndex) => {
+            const pathUrl = `/paths/${pathKey}`
+            const pathLinkText = `The ${path.title} path`
+
+            cy.get('@pathLinks')
+              .eq(pathIndex)
+              .should('have.attr', 'href', pathUrl)
+              .should('have.text', pathLinkText)
+          })
+        })
+      })
     })
   })
 })

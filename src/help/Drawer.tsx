@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { ResourceTypes } from '../../data'
 import {
   SubjectsIcon,
   IconButton,
@@ -9,10 +8,16 @@ import {
   useLayoutDrawer,
 } from '../theme'
 
-const drawerName = 'help'
+const drawerName = 'help-drawer'
+const drawerTestId = 'help-drawer'
+const toggleTestId = 'help-drawer-toggle'
 
 export const HelpDrawer: React.FC = ({ children }) => {
-  return <LayoutDrawer name={drawerName}>{children}</LayoutDrawer>
+  return (
+    <LayoutDrawer name={drawerName} data-testid={drawerTestId}>
+      {children}
+    </LayoutDrawer>
+  )
 }
 
 export const HelpDrawerToggle = () => {
@@ -20,14 +25,17 @@ export const HelpDrawerToggle = () => {
   const { toggle, isOpen, close } = useLayoutDrawer(drawerName)
 
   useEffect(() => {
-    console.log(router.asPath, isOpen())
-    close()
     if (isOpen()) close()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.asPath])
 
   return (
-    <IconButton color="inherit" aria-label="Toggle paths menu" onClick={toggle}>
+    <IconButton
+      color="inherit"
+      aria-label="Toggle menu"
+      onClick={toggle}
+      data-testid={toggleTestId}
+    >
       {isOpen() ? <CloseIcon /> : <SubjectsIcon />}
     </IconButton>
   )

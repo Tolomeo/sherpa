@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useLayoutContext } from '../Context'
+import { DrawerProps } from '@mui/material/Drawer'
 
 export const useLayoutDrawer = (name: string) => {
   const { getDrawer, setDrawer } = useLayoutContext()
@@ -16,25 +17,25 @@ export const useLayoutDrawer = (name: string) => {
   }
 }
 
-type Props = {
+type Props = DrawerProps & {
   name: string
 }
 
-const Drawer: React.FC<Props> = ({ name, children }) => {
+const Drawer: React.FC<Props> = ({ name, ...props }) => {
   const drawerName = useRef(name)
   const { registerDrawer, unregisterDrawer, setDrawer } = useLayoutContext()
 
   useEffect(() => {
     unregisterDrawer(drawerName.current)
     drawerName.current = name
-    registerDrawer(drawerName.current, children)
+    registerDrawer(drawerName.current, props)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [name])
 
   useEffect(() => {
-    setDrawer(drawerName.current, { children })
+    setDrawer(drawerName.current, props)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [children])
+  }, [props])
 
   useEffect(() => {
     const cleanupDrawerName = drawerName.current

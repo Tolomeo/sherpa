@@ -11,9 +11,9 @@ const Drawers = () => {
     <>
       {Object.entries(getDrawers()).map(([drawerName, drawer]) => (
         <MuiDrawer
-          anchor="right"
+          {...drawer}
           key={drawerName}
-          open={drawer.open}
+          anchor="right"
           onClose={() => setDrawer(drawerName, { open: false })}
           elevation={2}
         >

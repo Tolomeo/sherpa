@@ -1,20 +1,16 @@
 import React, { createContext, useContext, useState } from 'react'
+import { DrawerProps } from '@mui/material/Drawer'
 import Box from '@mui/material/Box'
 
-type LayoutDrawer = {
-  children: React.ReactNode
-  open: boolean
-}
-
-type LayoutDrawers = Record<string, LayoutDrawer>
+type LayoutDrawers = Record<string, DrawerProps>
 
 type LayoutContextValue = {
   getDrawers: () => LayoutDrawers
   setDrawers: React.Dispatch<React.SetStateAction<LayoutDrawers>>
-  registerDrawer: (name: string, drawerChildren: React.ReactNode) => void
+  registerDrawer: (name: string, drawer: DrawerProps) => void
   unregisterDrawer: (name: string) => void
-  getDrawer: (name: string) => LayoutDrawer | void
-  setDrawer: (name: string, drawer: Partial<LayoutDrawer>) => void
+  getDrawer: (name: string) => DrawerProps | void
+  setDrawer: (name: string, drawer: Partial<DrawerProps>) => void
 }
 
 const LayoutContext = createContext<LayoutContextValue | null>(null)
@@ -33,7 +29,7 @@ type Props = {
 }
 
 const LayoutContextProvider = ({ children }: Props) => {
-  const [drawers, setDrawers] = useState<Record<string, LayoutDrawer>>({})
+  const [drawers, setDrawers] = useState<Record<string, DrawerProps>>({})
   const getDrawers = () => drawers
   const registerDrawer = (name: string, drawerChildren: React.ReactNode) => {
     if (drawers[name]) return
@@ -57,7 +53,7 @@ const LayoutContextProvider = ({ children }: Props) => {
 
     return drawers[name]
   }
-  const setDrawer = (name: string, drawer: Partial<LayoutDrawer>) => {
+  const setDrawer = (name: string, drawer: Partial<DrawerProps>) => {
     if (!drawers[name]) return
 
     setDrawers((currentDrawers) => {
