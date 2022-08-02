@@ -173,15 +173,21 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
               <Typography variant="h5" component="p">
                 Need a compass?
               </Typography>
-              <PathsList paths={paths} spaced={false} />
+              <Box pb={3}>
+                <PathsList paths={paths} spaced={false} />
+              </Box>
               <Typography variant="h5" component="p">
                 About paths
               </Typography>
-              <PathsHelp />
+              <Box pb={3}>
+                <PathsHelp />
+              </Box>
               <Typography variant="h5" component="p">
                 About resources
               </Typography>
-              <ResourcesHelp resourceTypes={resourceTypes} />
+              <Box>
+                <ResourcesHelp resourceTypes={resourceTypes} />
+              </Box>
             </Stack>
           </HelpDrawer>
         </main>
