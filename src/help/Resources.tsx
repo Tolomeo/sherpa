@@ -9,14 +9,12 @@ type Props = {
 const ResourcesHelp = ({ resourceTypes }: Props) => (
   <Stack spacing={1}>
     <Typography>
-      Every resource is marked with a label indicating its type.
-      <br />
-      That is useful to have an idea of the structure of the resource itself and
-      the learning goals it provides help with. A resource can have more than
-      one type assigned.
+      Every resource is marked with a label indicating its type, giving
+      indication on the organisation of the resource itself.
+      <br /> Many resources have more than one type.
     </Typography>
     <Typography>
-      The resource type provides indication of how a resource can help:
+      There are several resource types, for different formats:
     </Typography>
     {Object.entries(resourceTypes).map(([resourceTypeId, resourceType]) => (
       <Box key={resourceTypeId}>
@@ -29,14 +27,15 @@ const ResourcesHelp = ({ resourceTypes }: Props) => (
       </Box>
     ))}
     <Typography>
-      As an advice to beginners: the paths’s core resources are just suggestions
-      and there are plenty of alternatives found in the <b>There&apos;s more</b>{' '}
-      section of every path. One could find themselves more comfortable swapping
-      one or more core resources with alternative ones.
+      The path’s resources are suggestions.
+      <br />
+      Feel free to swap any of them with alternatives found in the{' '}
+      <b>There&apos;s more</b> section, if those happened to feel more
+      enjoyable.
     </Typography>
     <Typography>
-      Finally, some resources could present overlapping or repetition at times.
-      One could decide to take only what fit best with their learning needs.
+      Some resources could present overlapping or repetition at times. It&apos;s
+      okay to take only what fits best in one&apos;s own learning journey.
     </Typography>
   </Stack>
 )
