@@ -11,6 +11,7 @@ import next from './next.json'
 import npm from './npm.json'
 import node from './node.json'
 import git from './git.json'
+import python from './python.json'
 import regex from './regex.json'
 import neovim from './neovim.json'
 import lua from './lua.json'
@@ -28,6 +29,7 @@ const resources = parseResources([
   ...npm,
   ...node,
   ...git,
+  ...python,
   ...regex,
   ...neovim,
   ...lua,

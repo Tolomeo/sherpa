@@ -11,6 +11,7 @@ import reacttypescript from './reacttypescript.json'
 import next from './next.json'
 import node from './node.json'
 import git from './git.json'
+import python from './python.json'
 import regex from './regex.json'
 import neovim from './neovim.json'
 import lua from './lua.json'
@@ -26,6 +27,7 @@ const serializedPaths = {
   npm,
   node,
   git,
+  python,
   regex,
   neovim,
   lua,
