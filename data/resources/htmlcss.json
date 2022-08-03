@@ -24,7 +24,7 @@
   {
     "title": "CSS Diner",
     "url": "https://flukeout.github.io",
-    "type": ["game"],
+    "type": ["exercise"],
     "source": "flukeout.github.io"
   },
   {
@@ -48,7 +48,7 @@
   {
     "title": "Flexbox Froggy",
     "url": "https://flexboxfroggy.com",
-    "type": ["game"],
+    "type": ["exercise"],
     "source": "flexboxfroggy.com"
   },
   {
@@ -60,7 +60,7 @@
   {
     "title": "Grid Garden",
     "url": "https://cssgridgarden.com",
-    "type": ["game"],
+    "type": ["exercise"],
     "source": "cssgridgarden.com"
   },
   {
@@ -144,7 +144,7 @@
   {
     "title": "Flexbox Defense",
     "url": "http://www.flexboxdefense.com",
-    "type": ["game"]
+    "type": ["exercise"]
   },
   {
     "title": "Conquering Responsive Layouts",
@@ -190,7 +190,7 @@
   {
     "title": "Guess CSS! HTML & CSS puzzler game",
     "url": "https://www.guess-css.app",
-    "type": ["game"]
+    "type": ["exercise"]
   },
   {
     "title": "SEO Cheat Sheet by 9elements",
@@ -245,7 +245,7 @@
   {
     "title": "CSS Speedrun",
     "url": "https://css-speedrun.netlify.app",
-    "type": ["game"]
+    "type": ["exercise"]
   },
   {
     "title": "CSS Tips and Tricks",
@@ -300,7 +300,7 @@
   {
     "title": "CSSBattle",
     "url": "https://cssbattle.dev",
-    "type": ["game", "community"]
+    "type": ["exercise", "community"]
   },
   {
     "title": "Mastering Markdown",
@@ -412,27 +412,27 @@
   {
     "title": "CSS-Tricks",
     "url": "https://css-tricks.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Codrops",
     "url": "https://tympanus.net/codrops",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Smashing Magazine",
     "url": "https://www.smashingmagazine.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Ahmad Shadeed",
     "url": "https://ishadeed.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Josh W Comeau",
     "url": "https://www.joshwcomeau.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "CodePen",
@@ -442,12 +442,12 @@
   {
     "title": "Flex Box Adventure – CSS Game to Learn Flexbox",
     "url": "https://codingfantasy.com/games/flexboxadventure",
-    "type": ["game"]
+    "type": ["exercise"]
   },
   {
     "title": "Knights of the Flexbox table",
     "url": "https://knightsoftheflexboxtable.com",
-    "type": ["game"]
+    "type": ["exercise"]
   },
   {
     "title": "More to give than just the div: semantics and how to get them right",
@@ -529,6 +529,6 @@
   {
     "title": "CSS { In Real Life }",
     "url": "https://css-irl.info",
-    "type": ["blog"]
+    "type": ["reference"]
   }
 ]

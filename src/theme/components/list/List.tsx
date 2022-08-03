@@ -5,17 +5,28 @@ import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined'
 
-const List: React.FC = ({ children }) => {
+type Props = {
+  bulleted?: boolean
+  spaced?: boolean
+}
+
+const List: React.FC<Props> = ({
+  children,
+  bulleted = true,
+  spaced = true,
+}) => {
   return (
-    <MuiList>
+    <MuiList disablePadding={!spaced}>
       {React.Children.map(
         children,
         (child) =>
           child && (
-            <ListItem>
-              <ListItemIcon>
-                <CircleOutlinedIcon sx={{ fontSize: 14 }} />
-              </ListItemIcon>
+            <ListItem disableGutters={!spaced}>
+              {bulleted && (
+                <ListItemIcon>
+                  <CircleOutlinedIcon sx={{ fontSize: 14 }} />
+                </ListItemIcon>
+              )}{' '}
               <ListItemText primary={child} />
             </ListItem>
           ),

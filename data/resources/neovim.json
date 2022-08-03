@@ -68,7 +68,7 @@
   {
     "title": "Episodes",
     "url": "http://vimcasts.org/episodes",
-    "type": ["tutorial", "series"]
+    "type": ["guide", "collection"]
   },
   {
     "title": "Exploring Vim",
@@ -83,7 +83,7 @@
   {
     "title": "PacVim",
     "url": "https://github.com/jmoon018/PacVim",
-    "type": ["game"]
+    "type": ["exercise"]
   },
   {
     "title": "Seven habits of effective text editing",
@@ -184,27 +184,27 @@
   {
     "title": "The Valuable Dev",
     "url": "https://thevaluable.dev",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Vim - DEV Community",
     "url": "https://dev.to/t/vim",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Neovim - DEV Community",
     "url": "https://dev.to/t/neovim",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Barbarian Meets Coding",
     "url": "https://www.barbarianmeetscoding.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Devlog",
     "url": "http://vonheikemen.github.io/devlog",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Vim Tips Wiki _ Fandom",
@@ -250,7 +250,7 @@
   {
     "title": "VimGolf - real Vim ninjas count every keystroke!",
     "url": "https://www.vimgolf.com",
-    "type": ["game", "community"]
+    "type": ["exercise", "community"]
   },
   {
     "title": "Neovim",

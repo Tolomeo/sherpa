@@ -28,7 +28,7 @@
   {
     "title": "JavaScript Algorithms and Data Structures",
     "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures",
-    "type": ["course", "series"]
+    "type": ["course", "collection"]
   },
   {
     "title": "The Modern JavaScript Tutorial",
@@ -114,7 +114,7 @@
   {
     "title": "JavaScript Visualized",
     "url": "https://dev.to/lydiahallie/series/3341",
-    "type": ["guide", "series"],
+    "type": ["guide", "collection"],
     "source": "dev.to/lydiahallie"
   },
   {
@@ -192,12 +192,12 @@
   {
     "title": "JSRobot",
     "url": "https://lab.reaal.me/jsrobot",
-    "type": ["exercise", "game"]
+    "type": ["exercise"]
   },
   {
     "title": "WarriorJS",
     "url": "https://warriorjs.com",
-    "type": ["exercise", "game", "community"]
+    "type": ["exercise", "community"]
   },
   {
     "title": "Learning Modern JavaScript with Tetris",
@@ -224,7 +224,7 @@
   {
     "title": "JavaScript Tutorial",
     "url": "https://www.w3schools.com/js",
-    "type": ["tutorial", "series", "reference"]
+    "type": ["guide", "collection", "reference"]
   },
   {
     "title": "Super Mario Bros in JavaScript",
@@ -251,7 +251,7 @@
   {
     "title": "Understanding the DOM — Document Object Model",
     "url": "https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model",
-    "type": ["tutorial", "series"],
+    "type": ["course"],
     "source": "digitalocean.com/community"
   },
   {
@@ -293,7 +293,7 @@
   {
     "title": "Trigonometry in CSS and JavaScript",
     "url": "https://tympanus.net/codrops/2021/06/01/trigonometry-in-css-and-javascript-introduction-to-trigonometry",
-    "type": ["guide", "series"]
+    "type": ["guide"]
   },
   {
     "title": "Learning functional programming: A roadmap",
@@ -420,42 +420,42 @@
   {
     "title": "JavaScript Jabber",
     "url": "https://javascriptjabber.com",
-    "type": ["blog", "community"]
+    "type": ["community"]
   },
   {
     "title": "SitePoint",
     "url": "https://www.sitepoint.com",
-    "type": ["blog", "reference"]
+    "type": ["reference"]
   },
   {
     "title": "Tania Rascia",
     "url": "https://www.taniarascia.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Trekhleb | Blog",
     "url": "https://trekhleb.dev/blog",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Human Who Codes",
     "url": "https://humanwhocodes.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "David Walsh Blog",
     "url": "https://davidwalsh.name",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Christian Heilmann",
     "url": "https://christianheilmann.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Flavio Copes",
     "url": "https://flaviocopes.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "JavaScript tutorial for beginners",

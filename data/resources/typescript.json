@@ -54,7 +54,7 @@
   {
     "title": "TypeScript Evolution",
     "url": "https://mariusschulz.com/blog/series/typescript-evolution",
-    "type": ["guide", "series"]
+    "type": ["guide", "collection"]
   },
   {
     "title": "awesome-typescript",
@@ -237,12 +237,12 @@
   {
     "title": "TypeScript",
     "url": "https://devblogs.microsoft.com/typescript",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "Marius Schulz",
     "url": "https://mariusschulz.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "TypeScript Weekly",
@@ -252,7 +252,7 @@
   {
     "title": "All posts",
     "url": "https://www.carlrippon.com",
-    "type": ["blog"]
+    "type": ["reference"]
   },
   {
     "title": "TypeScript vs. JavaScript: Your Go-to Guide",
