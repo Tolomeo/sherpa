@@ -7,7 +7,7 @@
   {
     "title": "The Big Book of Small Python Projects",
     "url": "https://inventwithpython.com/bigbookpython",
-    "type": ["book"]
+    "type": ["book", "example"]
   },
   {
     "title": "Beyond the Basic Stuff with Python",
@@ -22,7 +22,7 @@
   {
     "title": "Practice Python Projects",
     "url": "https://learnbyexample.github.io/practice_python_projects",
-    "type": ["exercise"]
+    "type": ["exercise", "book"]
   },
   {
     "title": "The Complete Python Development Guide",
