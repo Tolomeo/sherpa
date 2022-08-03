@@ -1,0 +1,135 @@
+{
+  "title": "Python",
+  "resources": [
+    "https://runestone.academy/ns/books/published/thinkcspy/index.html",
+    "https://inventwithpython.com/bigbookpython",
+    "https://inventwithpython.com/beyond",
+    "https://book.pythontips.com/en/latest",
+    "https://learnbyexample.github.io/practice_python_projects",
+    "https://testdriven.io/guides/complete-python",
+    "https://github.com/vinta/awesome-python"
+  ],
+  "extras": [
+    {
+      "title": "There's more",
+      "resources": [
+        "https://www.learnpython.org/",
+        "https://data-flair.training/blogs/python-tutorials-home/",
+        "https://www.youtube.com/watch?v=7utwZYKweho",
+        "https://www.youtube.com/playlist?list=PLZPZq0r_RZOOkUQbat8LyQii36cJf2SWT",
+        "https://tinypythonprojects.com",
+        "https://github.com/zhiwehu/100_plus_Python_Projects_Challenge",
+        "https://learn.arcade.academy/en/latest/index.html",
+        "https://pymbook.readthedocs.io/en/py3",
+        "https://github.com/gregmalcolm/python_koans",
+        "https://goalkicker.com/PythonBook/",
+        "https://www.tutorialspoint.com/python/",
+        "https://pythonnumericalmethods.berkeley.edu/notebooks/Index.html",
+        "https://www.scaler.com/topics/python/",
+        "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-python-3",
+        "https://futurecoder.io",
+        "https://learnpythontherightway.com",
+        "https://automatetheboringstuff.com",
+        "https://www.coursera.org/specializations/python",
+        "https://learnbyexample.github.io/100_page_python_intro",
+        "https://en.wikibooks.org/wiki/Python_Programming",
+        "https://inventwithpython.com/invent4thed",
+        "https://inventwithpython.com/cracking",
+        "https://anandology.com/python-practice-book/index.html",
+        "https://github.com/Akuli/python-tutorial",
+        "https://github.com/huangsam/ultimate-python",
+        "https://robertheaton.com/2018/12/08/programming-projects-for-advanced-beginners/",
+        "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
+        "https://realpython.com/python-testing"
+      ]
+    },
+    {
+      "title": "Beyond basics",
+      "resources": [
+        "https://github.com/faif/python-patterns",
+        "https://www.thedigitalcatbooks.com/pycabook-introduction",
+        "https://www.youtube.com/watch?v=QU1pPzEGrqw",
+        "https://cjolowicz.github.io/posts/hypermodern-python-01-setup",
+        "https://runestone.academy/ns/books/published/pythonds3/index.html",
+        "https://github.com/amontalenti/elements-of-python-style",
+        "https://www.cosmicpython.com",
+        "https://www.ashwinhariharan.tech/blog/thinking-of-building-a-contact-tracing-application-heres-what-you-can-do-instead/",
+        "https://wyag.thb.lt/",
+        "http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/",
+        "https://python-gtk-3-tutorial.readthedocs.io/en/latest",
+        "https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript",
+        "https://www.youtube.com/watch?v=PXMJ6FS7llk",
+        "https://github.com/TheAlgorithms/Python",
+        "https://greenteapress.com/wp/data-structures-and-information-retrieval-in-python",
+        "https://www.freecodecamp.org/learn/data-analysis-with-python",
+        "https://www.freecodecamp.org/learn/machine-learning-with-python",
+        "https://www.youtube.com/watch?v=oXlwWbU8l2o",
+        "https://realpython.com/python-virtual-environments-a-primer"
+      ]
+    },
+    {
+      "title": "Django",
+      "resources": [
+        "https://www.youtube.com/watch?v=jBzwzrDvZ18",
+        "https://www.youtube.com/watch?v=Lx5-XtMGDsA",
+        "https://www.youtube.com/watch?v=xSUm6iMtREA",
+        "https://www.youtube.com/watch?v=mlr9BF4JomE",
+        "https://www.youtube.com/watch?v=sm1mokevMWk&list=PLi39COpmJvHMGkGFHoFM7ix45nqD7jeFk&index=29",
+        "https://data-flair.training/blogs/django-tutorials-home",
+        "https://github.com/wsvincent/awesome-django"
+      ]
+    },
+    {
+      "title": "How do they do it?",
+      "resources": [
+        "https://github.com/mx0c/super-mario-python",
+        "https://github.com/jorzel/opentable",
+        "https://github.com/ramzitannous/medium-graphql-backend"
+      ]
+    },
+    {
+      "title": "Nice to know",
+      "resources": [
+        "https://diveintopython3.problemsolving.io",
+        "http://docs.quantifiedcode.com/python-anti-patterns",
+        "https://jython.readthedocs.io/en/latest",
+        "http://impracticalprogrammer.com/2021/12/14/python-for-leetcode.html",
+        "https://lp.jetbrains.com/python-developers-survey-2021",
+        "https://www.youtube.com/watch?v=qPowhg9nnS0",
+        "https://github.com/mmicu/python-for-coding-interviews",
+        "https://github.com/brennerm/PyTricks",
+        "https://github.com/satwikkansal/wtfpython",
+        "https://www.youtube.com/watch?v=BgxklT94W0I",
+        "https://www.youtube.com/watch?v=xyrgkui0uCA",
+        "https://www.youtube.com/watch?v=YnL9vAFphmE"
+      ]
+    },
+    {
+      "title": "Great bookmarks",
+      "resources": [
+        "https://www.py4e.com",
+        "https://docs.python-guide.org/",
+        "https://www.fullstackpython.com",
+        "https://pymotw.com/3",
+        "https://learnxinyminutes.com/docs/python",
+        "https://github.com/sfermigier/awesome-functional-python",
+        "https://github.com/typeddjango/awesome-python-typing",
+        "https://learnbyexample.github.io/py_resources",
+        "https://www.pythoncheatsheet.org",
+        "https://realpython.com",
+        "https://github.com/ml-tooling/best-of-python",
+        "https://github.com/crazyguitar/pysheeet",
+        "https://calmcode.io/"
+      ]
+    },
+    {
+      "title": "Stay in the loop",
+      "resources": [
+        "https://pyvideo.org",
+        "https://pycoders.com",
+        "https://www.python.org/blogs/",
+        "https://python.libhunt.com/newsletter"
+      ]
+    }
+  ]
+}
