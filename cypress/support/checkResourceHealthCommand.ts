@@ -21,13 +21,14 @@ const cleanHtmlEntities = (str: string) =>
     '&quot;': '"',
     '&apos;': "'",
     '&shy;': '',
+    '&nbsp;': ' ',
   }).reduce((_str, [entity, replacement]) => {
     return _str.replace(new RegExp(entity, 'gi'), replacement)
   }, str)
 
 const resourceCheckStrategy = {
   visit(resource: Resource) {
-    cy.visit(resource.url)
+    cy.visit(resource.url, { headers: { Referer: resource.url } })
     cy.get('title').should('contain.text', resource.title)
   },
   request(resource: Resource) {
