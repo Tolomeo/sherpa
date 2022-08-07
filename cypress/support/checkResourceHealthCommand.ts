@@ -27,7 +27,7 @@ const cleanHtmlEntities = (str: string) =>
 
 const resourceCheckStrategy = {
   visit(resource: Resource) {
-    cy.visit(resource.url)
+    cy.visit(resource.url, { headers: { Referer: resource.url } })
     cy.get('title').should('contain.text', resource.title)
   },
   request(resource: Resource) {
