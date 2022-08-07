@@ -21,6 +21,7 @@ const cleanHtmlEntities = (str: string) =>
     '&quot;': '"',
     '&apos;': "'",
     '&shy;': '',
+    '&nbsp;': ' ',
   }).reduce((_str, [entity, replacement]) => {
     return _str.replace(new RegExp(entity, 'gi'), replacement)
   }, str)
