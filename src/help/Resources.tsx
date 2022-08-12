@@ -28,7 +28,7 @@ const ResourcesHelp = ({ resourceTypes }: Props) => (
     ))}
     <Typography>
       <b>There&apos;s more</b> offers valid alternatives to the default
-      resources of each path. Feel free to choose what works best and shape you
+      resources of each path. Feel free to choose what works best and shape your
       very own learning journey.
     </Typography>
   </Stack>
