@@ -130,7 +130,7 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
             </LayoutContainer>
           )}
 
-          <LayoutContainer pb={4} data-testid={pathResourcesTestId}>
+          <LayoutContainer pb={8} data-testid={pathResourcesTestId}>
             <Grid container>
               <Grid item xs={12} md={8} xl={6}>
                 <ResourcesTimeline resources={path.resources} />

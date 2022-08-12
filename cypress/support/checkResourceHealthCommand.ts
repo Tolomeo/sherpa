@@ -88,6 +88,12 @@ const checkResourceHealth = (resource: Resource) => {
     case 'ui.dev': //
     case 'wattenberger.com': //
     case 'gameaccessibilityguidelines.com': //
+    case 'udemy.com': //
+    case 'codepen.io': //
+    case 'testing-playground.com': //
+    case 'arsfutura.com': //
+    case 'reactdigest.net': //
+    case 'data-flair.training': //
       return resourceCheckStrategy.visit(resource)
     default:
       return resourceCheckStrategy.request(resource)
