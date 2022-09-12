@@ -83,21 +83,6 @@
     "type": ["course", "collection"]
   },
   {
-    "title": "Introduction to Node with Express",
-    "url": "https://lab.github.com/everydeveloper/introduction-to-node-with-express",
-    "type": ["course"]
-  },
-  {
-    "title": "Intermediate NodeJS Course",
-    "url": "https://lab.github.com/everydeveloper/intermediate-nodejs-course",
-    "type": ["course"]
-  },
-  {
-    "title": "Create REST server with NodeJS and Express",
-    "url": "https://lab.github.com/M3kH/create-rest-server-with-nodejs-and-express",
-    "type": ["course"]
-  },
-  {
     "title": "practicalnode",
     "url": "https://github.com/azat-co/practicalnode",
     "type": ["book"]
