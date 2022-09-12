@@ -28,7 +28,6 @@
         "https://github.com/micromata/awesome-css-learning",
         "https://frontendmasters.com/bootcamp",
         "http://www.flexboxdefense.com",
-        "https://courses.kevinpowell.co/courses/conquering-responsive-layouts",
         "https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855",
         "https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11",
         "https://learncssgrid.com",
@@ -40,7 +39,8 @@
         "https://css-speedrun.netlify.app",
         "https://codingfantasy.com/games/flexboxadventure",
         "https://knightsoftheflexboxtable.com",
-        "https://hiddedevries.nl/en/blog/2022-01-23-more-to-give-than-just-the-div-semantics-and-how-to-get-them-right"
+        "https://hiddedevries.nl/en/blog/2022-01-23-more-to-give-than-just-the-div-semantics-and-how-to-get-them-right",
+        "https://www.learn-html.org"
       ]
     },
     {
@@ -64,7 +64,8 @@
         "https://css-tricks.com/css-cascade-layers",
         "https://www.freecodecamp.org/news/web-animation-performance-fundamentals",
         "https://www.joshwcomeau.com/css/understanding-layout-algorithms",
-        "https://masteringmarkdown.com"
+        "https://masteringmarkdown.com",
+        "https://blog.logrocket.com/complete-guide-using-css-filters-svgs"
       ]
     },
     {
@@ -79,7 +80,8 @@
         "https://undead.institute/60-days-of-animation",
         "https://stylestage.dev",
         "https://animatedbackgrounds.me",
-        "https://smolcss.dev"
+        "https://smolcss.dev",
+        "https://ui-buttons.web.app"
       ]
     },
     {
