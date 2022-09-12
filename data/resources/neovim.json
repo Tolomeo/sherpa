@@ -157,11 +157,6 @@
     "type": ["guide"]
   },
   {
-    "title": "Vim Cheat Sheat for Programmers",
-    "url": "http://michael.peopleofhonoronly.com/vim",
-    "type": ["reference"]
-  },
-  {
     "title": "VimConfig - Sane and simple Vim configuration",
     "url": "https://vimconfig.com",
     "type": ["generator"]
