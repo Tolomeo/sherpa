@@ -449,5 +449,15 @@
     "title": "React Working Group",
     "url": "https://github.com/reactwg",
     "type": ["reference", "community"]
+  },
+  {
+    "title": "Examples of large production-grade, open-source React apps",
+    "url": "https://maxrozen.com/examples-of-large-production-grade-open-source-react-apps",
+    "type": ["example", "collection"]
+  },
+  {
+    "title": "Advanced React component composition",
+    "url": "https://frontendmastery.com/posts/advanced-react-component-composition-guide",
+    "type": ["guide"]
   }
 ]

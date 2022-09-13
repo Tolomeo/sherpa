@@ -52,7 +52,8 @@
         "https://egghead.io/courses/component-driven-development-in-react-e0bf",
         "https://tkdodo.eu/blog/practical-react-query",
         "https://www.youtube.com/playlist?list=PLC3y8-rFHvwhC-j3x3t9la8-GQJGViDQk",
-        "https://arsfutura.com/magazine/internationalization-in-react"
+        "https://arsfutura.com/magazine/internationalization-in-react",
+        "https://frontendmastery.com/posts/advanced-react-component-composition-guide"
       ]
     },
     {
@@ -86,6 +87,7 @@
         "https://github.com/khaledosman/react-redux-realworld-example-app",
         "https://github.com/oguz3/spotify-web-player",
         "https://github.com/arturmolenda/project-manager",
+        "https://maxrozen.com/examples-of-large-production-grade-open-source-react-apps",
         "https://github.com/madhu-sagar/system-design-react-code-examples"
       ]
     },
@@ -123,9 +125,9 @@
         "https://reactjs.org/blog/all.html",
         "https://ui.dev/blog/",
         "https://overreacted.io",
-        "https://flaviocopes.com",
         "https://reactdigest.net",
-        "https://github.com/reactwg"
+        "https://github.com/reactwg",
+        "https://www.joshwcomeau.com"
       ]
     }
   ],
