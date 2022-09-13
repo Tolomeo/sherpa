@@ -301,5 +301,31 @@
     "title": "Advanced TypeScript Types Cheat Sheet (with Examples)",
     "url": "https://www.freecodecamp.org/news/advanced-typescript-types-cheat-sheet-with-examples/",
     "type": ["reference"]
+  },
+  {
+    "title": "Extreme Explorations of TypeScript's Type System",
+    "url": "https://www.learningtypescript.com/articles/extreme-explorations-of-typescripts-type-system",
+    "type": ["example", "collection"]
+  },
+  {
+    "title": "No BS TS",
+    "url": "https://www.youtube.com/playlist?list=PLNqp92_EXZBJYFrpEzdO2EapvU0GOJ09n",
+    "type": ["course"],
+    "source": "youtube.com/c/JackHerrington"
+  },
+  {
+    "title": "Learning TypeScript",
+    "url": "https://www.learningtypescript.com",
+    "type": ["reference"]
+  },
+  {
+    "title": "Typescript",
+    "url": "https://fjolt.com/category/typescript",
+    "type": ["guide", "collection"]
+  },
+  {
+    "title": "Extract parameter types from string literal types with TypeScript",
+    "url": "https://lihautan.com/extract-parameters-type-from-string-literal-types-with-typescript",
+    "type": ["guide"]
   }
 ]
