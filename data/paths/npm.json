@@ -22,7 +22,8 @@
         "https://nodesource.com/blog/semver-a-primer",
         "https://egghead.io/courses/execute-npm-package-binaries-with-the-npx-package-runner",
         "https://lucasfcosta.com/2020/10/17/lockfile-guide.html",
-        "https://css-tricks.com/why-npm-scripts"
+        "https://css-tricks.com/why-npm-scripts",
+        "https://github.com/frehner/modern-guide-to-packaging-js-library"
       ]
     },
     {
@@ -35,7 +36,10 @@
         "https://devopedia.org/semantic-versioning",
         "https://devopedia.org/dependency-manager",
         "https://devopedia.org/package-manager",
-        "https://monorepo.tools"
+        "https://2ality.com/2021/07/simple-monorepos.html",
+        "https://2ality.com/2022/08/installing-nodejs-bin-scripts.html",
+        "https://2ality.com/2022/01/esm-specifiers.html",
+        "https://www.robinwieruch.de/javascript-monorepos"
       ]
     },
 
@@ -47,7 +51,8 @@
         "http://bytearcher.com/articles/evaluating-packages-2-review-repository",
         "https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosaurs-f695e9747b70",
         "https://github.com/feross/awesome-mad-science",
-        "https://medium.com/autodesk-tlv/lerna-has-gone-which-monorepo-is-right-for-a-node-js-backend-fc075cad51b0"
+        "https://medium.com/autodesk-tlv/lerna-has-gone-which-monorepo-is-right-for-a-node-js-backend-fc075cad51b0",
+        "https://monorepo.tools"
       ]
     },
     {
@@ -62,12 +67,13 @@
         "https://cost-of-modules.herokuapp.com",
         "https://devhints.io/npm",
         "https://www.digitalocean.com/community/tutorials/nodejs-npm-yarn-cheatsheet",
-        "https://semver.npmjs.com"
+        "https://semver.npmjs.com",
+        "https://jubianchi.github.io/semver-check"
       ]
     },
     {
       "title": "Stay in the loop",
-      "resources": ["https://github.com/npm/rfcs"]
+      "resources": ["https://github.com/npm/rfcs", "https://2ality.com"]
     }
   ]
 }

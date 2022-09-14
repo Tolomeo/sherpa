@@ -196,5 +196,40 @@
     "title": "rfcs",
     "url": "https://github.com/npm/rfcs",
     "type": ["community"]
+  },
+  {
+    "title": "Online Semver checker",
+    "url": "https://jubianchi.github.io/semver-check",
+    "type": ["generator"]
+  },
+  {
+    "title": "Simple monorepos via npm workspaces and TypeScript project references",
+    "url": "https://2ality.com/2021/07/simple-monorepos.html",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Publishing and consuming ECMAScript modules via packages",
+    "url": "https://2ality.com/2022/01/esm-specifiers.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "modern-guide-to-packaging-js-library",
+    "url": "https://github.com/frehner/modern-guide-to-packaging-js-library",
+    "type": ["guide", "reference"]
+  },
+  {
+    "title": "Installing and running Node.js bin scripts",
+    "url": "https://2ality.com/2022/08/installing-nodejs-bin-scripts.html",
+    "type": ["guide", "reference"]
+  },
+  {
+    "title": "2ality",
+    "url": "https://2ality.com",
+    "type": ["community"]
+  },
+  {
+    "title": "Monorepos in JavaScript & TypeScript",
+    "url": "https://www.robinwieruch.de/javascript-monorepos",
+    "type": ["guide"]
   }
 ]
