@@ -4,6 +4,7 @@
   "resources": [
     "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js",
     "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp",
+    "https://2ality.com/2022/09/nodejs-overview.html",
     "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js",
     "https://github.com/goldbergyoni/nodebestpractices",
     "https://github.com/sindresorhus/awesome-nodejs"
@@ -34,10 +35,8 @@
         "https://wanago.io/courses/node-js-typescript",
         "https://www.smashingmagazine.com/2017/03/interactive-command-line-application-node-js",
         "https://www.freecodecamp.org/news/video-clean-architecture-in-node-js",
-        "https://medium.com/hackernoon/implementing-a-websocket-server-with-node-js-d9b78ec5ffa8",
         "https://github.com/ehmicky/cross-platform-node-guide",
         "https://www.youtube.com/watch?v=AzQ6_DTcG6c",
-        "https://www.youtube.com/watch?v=JaTbzPcyiOE",
         "https://www.youtube.com/watch?v=asVDzgdyYLk",
         "https://allenkim67.github.io/programming/2016/05/04/how-to-make-your-own-bittorrent-client.html",
         "https://www.codementor.io/@ziad-saab/let-s-code-a-web-server-from-scratch-with-nodejs-streams-h4uc9utji",
@@ -45,7 +44,11 @@
         "https://codeburst.io/building-a-simple-single-sign-on-sso-server-and-solution-from-scratch-in-node-js-ea6ee5fdf340",
         "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
         "https://gils-blog.tayar.org/posts/using-jsm-esm-in-nodejs-a-practical-guide-part-1",
-        "https://nikhilm.github.io/uvbook/"
+        "https://2ality.com/2022/07/nodejs-path.html",
+        "https://2ality.com/2022/06/web-streams-nodejs.html",
+        "https://2ality.com/2022/07/nodejs-esm-shell-scripts.html",
+        "https://www.coursera.org/specializations/aws-nodejs-serverless-development",
+        "https://www.digitalocean.com/community/tutorials/how-to-use-multithreading-in-node-js"
       ]
     },
     {
@@ -79,6 +82,7 @@
         "https://yonigoldberg.medium.com/20-ways-to-become-a-better-node-js-developer-in-2020-d6bd73fcf424",
         "https://www.youtube.com/watch?v=M3BM9TB-8yA",
         "https://github.com/learning-zone/nodejs-interview-questions",
+        "https://nikhilm.github.io/uvbook/",
         "https://blog.scottnonnenberg.com/hard-won-lessons-five-years-with-node-js"
       ]
     },
@@ -101,8 +105,7 @@
       "title": "Stay in the loop",
       "resources": [
         "https://nodeweekly.com",
-        "https://hackernoon.com",
-        "https://www.toptal.com/developers/blog",
+        "https://2ality.com",
         "https://wanago.io"
       ]
     }

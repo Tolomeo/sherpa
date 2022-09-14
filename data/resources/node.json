@@ -170,11 +170,6 @@
     "type": ["guide"]
   },
   {
-    "title": "Implementing a WebSocket server with Node.js",
-    "url": "https://medium.com/hackernoon/implementing-a-websocket-server-with-node-js-d9b78ec5ffa8",
-    "type": ["tutorial"]
-  },
-  {
     "title": "cross-platform-node-guide",
     "url": "https://github.com/ehmicky/cross-platform-node-guide",
     "type": ["tutorial"]
@@ -192,12 +187,6 @@
   {
     "title": "Redis with Node Crash Course - Cache Data for Improved Performance",
     "url": "https://www.youtube.com/watch?v=AzQ6_DTcG6c",
-    "type": ["tutorial"],
-    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
-  },
-  {
-    "title": "TypeORM Crash Course - TypeScript & Node ORM",
-    "url": "https://www.youtube.com/watch?v=JaTbzPcyiOE",
     "type": ["tutorial"],
     "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
   },
@@ -316,16 +305,6 @@
     "type": ["community"]
   },
   {
-    "title": "HackerNoon",
-    "url": "https://hackernoon.com",
-    "type": ["reference"]
-  },
-  {
-    "title": "Software Engineering Blog & Programming Tutorials",
-    "url": "https://www.toptal.com/developers/blog",
-    "type": ["reference"]
-  },
-  {
     "title": "Marcin Wanago Blog",
     "url": "https://wanago.io",
     "type": ["reference"]
@@ -349,5 +328,35 @@
     "title": "Hard-won lessons: Five years with Node.js",
     "url": "https://blog.scottnonnenberg.com/hard-won-lessons-five-years-with-node-js",
     "type": ["opinion"]
+  },
+  {
+    "title": "Working with file system paths and file URLs on Node.js",
+    "url": "https://2ality.com/2022/07/nodejs-path.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "Using web streams on Node.js",
+    "url": "https://2ality.com/2022/06/web-streams-nodejs.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "Creating ESM-based shell scripts for Unix and Windows with Node.js",
+    "url": "https://2ality.com/2022/07/nodejs-esm-shell-scripts.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "How To Use Multithreading in Node",
+    "url": "https://www.digitalocean.com/community/tutorials/how-to-use-multithreading-in-node-js",
+    "type": ["guide"]
+  },
+  {
+    "title": "An overview of Node.js: architecture, APIs, event loop, concurrency",
+    "url": "https://2ality.com/2022/09/nodejs-overview.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "Modern Application Development with Node.js on AWS",
+    "url": "https://www.coursera.org/specializations/aws-nodejs-serverless-development",
+    "type": ["course"]
   }
 ]
