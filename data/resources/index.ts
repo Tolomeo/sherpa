@@ -6,7 +6,6 @@ import webaccessibility from './webaccessibility.json'
 import javascript from './javascript.json'
 import typescript from './typescript.json'
 import react from './react.json'
-import reacttypescript from './reacttypescript.json'
 import next from './next.json'
 import npm from './npm.json'
 import node from './node.json'
@@ -24,7 +23,6 @@ const resources = parseResources([
   ...javascript,
   ...typescript,
   ...react,
-  ...reacttypescript,
   ...next,
   ...npm,
   ...node,

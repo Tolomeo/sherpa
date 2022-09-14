@@ -95,5 +95,5 @@
       ]
     }
   ],
-  "next": ["reacttypescript"]
+  "next": ["react", "npm", "node"]
 }

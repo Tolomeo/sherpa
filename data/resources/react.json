@@ -195,12 +195,6 @@
     "type": ["guide"]
   },
   {
-    "title": "React Testing Library Crash Course",
-    "url": "https://www.youtube.com/watch?v=GLSSRtnNY0g",
-    "type": ["course"],
-    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
-  },
-  {
     "title": "Hacking with React ",
     "url": "http://www.hackingwithreact.com",
     "type": ["book"]
@@ -459,5 +453,43 @@
     "title": "Advanced React component composition",
     "url": "https://frontendmastery.com/posts/advanced-react-component-composition-guide",
     "type": ["guide"]
+  },
+  {
+    "title": "React TypeScript Cheatsheets",
+    "url": "https://react-typescript-cheatsheet.netlify.app",
+    "type": ["guide", "reference"]
+  },
+  {
+    "title": "React Typescript Course",
+    "url": "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml",
+    "type": ["course"],
+    "source": "youtube.com/c/TechbaseDev"
+  },
+  {
+    "title": "Modern Redux with Redux Toolkit (RTK) and TypeScript",
+    "url": "https://egghead.io/courses/modern-redux-with-redux-toolkit-rtk-and-typescript-64f243c8",
+    "type": ["course"]
+  },
+  {
+    "title": "react-redux-typescript-guide",
+    "url": "https://github.com/piotrwitek/react-redux-typescript-guide",
+    "type": ["guide"]
+  },
+  {
+    "title": "React Testing Library Crash Course",
+    "url": "https://www.youtube.com/watch?v=GLSSRtnNY0g",
+    "type": ["course"],
+    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
+  },
+  {
+    "title": "ts-redux-react-realworld-example-app",
+    "url": "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app",
+    "type": ["example"]
+  },
+  {
+    "title": "React Redux with TypeScript Crash Course - 2021",
+    "url": "https://www.youtube.com/watch?v=udr2rx_B99w",
+    "type": ["guide"],
+    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
   }
 ]
