@@ -3,8 +3,8 @@
   "prev": ["javascript", "typescript", "npm"],
   "resources": [
     "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js",
+		"https://2ality.com/2022/09/nodejs-overview.html",
     "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp",
-    "https://2ality.com/2022/09/nodejs-overview.html",
     "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js",
     "https://github.com/goldbergyoni/nodebestpractices",
     "https://github.com/sindresorhus/awesome-nodejs"

@@ -254,5 +254,26 @@
     "title": "Basic Git Commands",
     "url": "https://www.atlassian.com/git/glossary",
     "type": ["reference"]
+  },
+  {
+    "title": "beautify-github-profile",
+    "url": "https://github.com/rzashakeri/beautify-github-profile",
+    "type": ["reference"]
+  },
+  {
+    "title": "GitOps",
+    "url": "https://www.youtube.com/playlist?list=PLms-chRSi2s2RBSP1oZpBr_f6XA7iqIhm",
+    "type": ["guide", "community"],
+    "source": "youtube.com/c/VSHNDevOps"
+  },
+  {
+    "title": "Code Reviews 101",
+    "url": "https://www.semasoftware.com/blog/code-reviews-101-the-basics",
+    "type": ["reference", "guide"]
+  },
+  {
+    "title": "Git's database internals",
+    "url": "https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store",
+    "type": ["guide", "collection"]
   }
 ]
