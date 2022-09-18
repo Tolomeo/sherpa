@@ -228,6 +228,11 @@
     "type": ["community"]
   },
   {
+    "title": "Running cross-platform tasks via npm package scripts",
+    "url": "https://2ality.com/2022/08/npm-package-scripts.html",
+    "type": ["guide"]
+  },
+  {
     "title": "Monorepos in JavaScript & TypeScript",
     "url": "https://www.robinwieruch.de/javascript-monorepos",
     "type": ["guide"]

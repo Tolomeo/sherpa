@@ -555,7 +555,8 @@
   {
     "title": "Will Javascript win?",
     "url": "https://www.youtube.com/watch?v=rczu8kc8JZA",
-    "type": ["opinion"]
+    "type": ["opinion"],
+    "source": "youtube.com/c/LexClips"
   },
   {
     "title": "learning-promises",

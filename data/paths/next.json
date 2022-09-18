@@ -31,15 +31,8 @@
     {
       "title": "Beyond basics",
       "resources": [
-        "https://www.alanjohn.dev/blog/Building-a-Developer-Portfolio-Creating-a-NextJS-blog-in-typescript-using-Notion-API#5189bcaa45944fdba485474c5395e750",
         "https://www.smashingmagazine.com/2021/09/lessons-learned-ecommerce-nextjs-case-study",
-        "https://egghead.io/courses/create-contextual-video-analysis-app-with-nextjs-and-symbl-ai-4efb",
-        "https://www.youtube.com/watch?v=mx1dbMzd3tU",
-        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9ig-veuRaLI4QB0Ws8xMzjv",
-        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1",
         "https://vercel.com/docs/concepts/next.js/overview",
-        "https://www.saltycrane.com/blog/2021/04/nextjs-gitlab-cicd-docker-multi-stage-example",
-        "https://www.saltycrane.com/blog/2021/03/example-nextjs-gitlab-cicd-amazon-ecr-and-ecs-deploy-pipeline",
         "https://www.smashingmagazine.com/2020/09/comparison-styling-methods-next-js",
         "https://tsh.io/blog/how-to-keep-your-lighthouse-score-high-in-next-js-applications-a-checklist",
         "https://hire.jonasgalvez.com.br/2022/may/18/building-a-mini-next-js",
@@ -52,7 +45,14 @@
       "title": "How do they do it?",
       "resources": [
         "https://docs.react2025.com",
+        "https://www.saltycrane.com/blog/2021/04/nextjs-gitlab-cicd-docker-multi-stage-example",
+        "https://www.alanjohn.dev/blog/Building-a-Developer-Portfolio-Creating-a-NextJS-blog-in-typescript-using-Notion-API#5189bcaa45944fdba485474c5395e750",
+        "https://www.saltycrane.com/blog/2021/03/example-nextjs-gitlab-cicd-amazon-ecr-and-ecs-deploy-pipeline",
         "https://github.com/salihozdemir/stackoverflow-clone",
+        "https://www.youtube.com/watch?v=mx1dbMzd3tU",
+        "https://egghead.io/courses/create-contextual-video-analysis-app-with-nextjs-and-symbl-ai-4efb",
+        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9ig-veuRaLI4QB0Ws8xMzjv",
+        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1",
         "https://github.com/reck1ess/next-realworld-example-app"
       ]
     },

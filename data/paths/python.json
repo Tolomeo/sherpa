@@ -58,7 +58,6 @@
         "https://github.com/amontalenti/elements-of-python-style",
         "https://www.cosmicpython.com",
         "https://wyag.thb.lt/",
-        "http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/",
         "https://python-gtk-3-tutorial.readthedocs.io/en/latest",
         "https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript",
         "https://www.youtube.com/watch?v=PXMJ6FS7llk",
@@ -96,6 +95,7 @@
       "title": "How do they do it?",
       "resources": [
         "https://github.com/mx0c/super-mario-python",
+        "http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/",
         "https://github.com/jorzel/opentable",
         "https://github.com/ramzitannous/medium-graphql-backend"
       ]

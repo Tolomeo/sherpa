@@ -38,11 +38,8 @@
       "title": "Beyond basics",
       "resources": [
         "https://labs42io.github.io/clean-code-typescript",
+        "https://www.learningtypescript.com/articles/extreme-explorations-of-typescripts-type-system",
         "http://torokmark.github.io/design_patterns_in_typescript",
-        "https://www.davrous.com/2013/06/13/tutorial-series-learning-how-to-write-a-3d-soft-engine-from-scratch-in-c-typescript-or-javascript",
-        "https://lhartikk.github.io",
-        "https://naivecoinstake.learn.uno",
-        "https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html",
         "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab",
         "https://www.javascripttutorials.net/four-steps-to-move-from-javascript-to-typescript/",
         "https://www.youtube.com/watch?v=hBk4nV7q6-w",
@@ -53,10 +50,13 @@
       "title": "How do they do it?",
       "resources": [
         "https://github.com/itsMapleLeaf/super-mario-typescript",
+        "https://lhartikk.github.io",
+        "https://www.davrous.com/2013/06/13/tutorial-series-learning-how-to-write-a-3d-soft-engine-from-scratch-in-c-typescript-or-javascript",
+        "https://naivecoinstake.learn.uno",
+        "https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html",
         "https://github.com/shanoysinc/Tetris",
         "https://github.com/laurent22/joplin",
-        "https://github.com/zws-im/zws",
-        "https://www.learningtypescript.com/articles/extreme-explorations-of-typescripts-type-system"
+        "https://github.com/zws-im/zws"
       ]
     },
     {

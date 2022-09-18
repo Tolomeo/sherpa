@@ -10,20 +10,14 @@
     {
       "title": "There's more",
       "resources": [
-        "https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool",
-        "https://auth0.com/blog/developing-npm-packages",
         "https://www.udemy.com/course/npm-for-beginners-fast-track",
         "https://www.freecodecamp.org/news/javascript-package-manager-npm-and-yarn",
         "https://github.com/workshopper/how-to-npm",
-        "https://egghead.io/courses/publish-javascript-packages-on-npm",
-        "https://egghead.io/courses/how-to-write-an-open-source-javascript-library",
-        "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSS7aup_xvT9Q1-NQZINW8X",
         "https://css-tricks.com/a-complete-beginners-guide-to-npm",
         "https://nodesource.com/blog/semver-a-primer",
         "https://egghead.io/courses/execute-npm-package-binaries-with-the-npx-package-runner",
         "https://lucasfcosta.com/2020/10/17/lockfile-guide.html",
-        "https://css-tricks.com/why-npm-scripts",
-        "https://github.com/frehner/modern-guide-to-packaging-js-library"
+        "https://2ality.com/2022/01/esm-specifiers.html"
       ]
     },
     {
@@ -31,18 +25,29 @@
       "resources": [
         "https://yarnpkg.com/blog/2017/07/11/lets-dev-a-package-manager",
         "https://github.com/g-plane/tiny-package-manager",
-        "https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html",
         "https://cpojer.net/posts/dependency-managers-dont-manage-your-dependencies",
         "https://devopedia.org/semantic-versioning",
         "https://devopedia.org/dependency-manager",
         "https://devopedia.org/package-manager",
-        "https://2ality.com/2021/07/simple-monorepos.html",
         "https://2ality.com/2022/08/installing-nodejs-bin-scripts.html",
-        "https://2ality.com/2022/01/esm-specifiers.html",
         "https://www.robinwieruch.de/javascript-monorepos"
       ]
     },
-
+    {
+      "title": "How do they do it?",
+      "resources": [
+        "https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html",
+        "https://egghead.io/courses/publish-javascript-packages-on-npm",
+        "https://egghead.io/courses/how-to-write-an-open-source-javascript-library",
+        "https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool",
+        "https://github.com/frehner/modern-guide-to-packaging-js-library",
+        "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSS7aup_xvT9Q1-NQZINW8X",
+        "https://auth0.com/blog/developing-npm-packages",
+        "https://2ality.com/2022/08/npm-package-scripts.html",
+        "https://css-tricks.com/why-npm-scripts",
+        "https://2ality.com/2021/07/simple-monorepos.html"
+      ]
+    },
     {
       "title": "Nice to know",
       "resources": [

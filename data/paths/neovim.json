@@ -34,19 +34,19 @@
         "https://learnvimscriptthehardway.stevelosh.com",
         "http://vimregex.com",
         "https://www.hillelwayne.com/post/intermediate-vim",
-        "http://zzapper.co.uk/vimtips.html",
         "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs",
         "https://thevaluable.dev/vim-create-text-objects",
         "https://thevaluable.dev/vim-runtime-guide-example",
         "https://thevaluable.dev/vim-search-find-replace",
-        "https://www.youtube.com/playlist?list=PLep05UYkc6wTWlugE_9Lj6JlLpvSBbkZ_",
-        "https://jdhao.github.io/2019/03/28/nifty_nvim_techniques_s1"
+        "https://www.youtube.com/playlist?list=PLep05UYkc6wTWlugE_9Lj6JlLpvSBbkZ_"
       ]
     },
     {
       "title": "How do they do it?",
       "resources": [
         "https://github.com/amix/vimrc",
+        "http://zzapper.co.uk/vimtips.html",
+        "https://jdhao.github.io/2019/03/28/nifty_nvim_techniques_s1",
         "https://github.com/NvChad/NvChad",
         "https://github.com/SpaceVim/SpaceVim"
       ]

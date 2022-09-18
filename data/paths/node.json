@@ -3,7 +3,7 @@
   "prev": ["javascript", "typescript", "npm"],
   "resources": [
     "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js",
-		"https://2ality.com/2022/09/nodejs-overview.html",
+    "https://2ality.com/2022/09/nodejs-overview.html",
     "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp",
     "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js",
     "https://github.com/goldbergyoni/nodebestpractices",
@@ -29,24 +29,15 @@
       "resources": [
         "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS",
         "https://www.smashingmagazine.com/2018/06/nodejs-tools-techniques-performance-servers",
-        "https://www.smashingmagazine.com/2018/12/multiplayer-text-adventure-engine-node-js",
         "https://www.smashingmagazine.com/2020/04/nodejs-internals",
         "https://github.com/XOR-LIFE/node-production",
         "https://wanago.io/courses/node-js-typescript",
-        "https://www.smashingmagazine.com/2017/03/interactive-command-line-application-node-js",
         "https://www.freecodecamp.org/news/video-clean-architecture-in-node-js",
         "https://github.com/ehmicky/cross-platform-node-guide",
-        "https://www.youtube.com/watch?v=AzQ6_DTcG6c",
-        "https://www.youtube.com/watch?v=asVDzgdyYLk",
-        "https://allenkim67.github.io/programming/2016/05/04/how-to-make-your-own-bittorrent-client.html",
         "https://www.codementor.io/@ziad-saab/let-s-code-a-web-server-from-scratch-with-nodejs-streams-h4uc9utji",
-        "https://www.webdevdrops.com/en/build-static-site-generator-nodejs-8969ebe34b22",
-        "https://codeburst.io/building-a-simple-single-sign-on-sso-server-and-solution-from-scratch-in-node-js-ea6ee5fdf340",
-        "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
         "https://gils-blog.tayar.org/posts/using-jsm-esm-in-nodejs-a-practical-guide-part-1",
         "https://2ality.com/2022/07/nodejs-path.html",
         "https://2ality.com/2022/06/web-streams-nodejs.html",
-        "https://2ality.com/2022/07/nodejs-esm-shell-scripts.html",
         "https://www.coursera.org/specializations/aws-nodejs-serverless-development",
         "https://www.digitalocean.com/community/tutorials/how-to-use-multithreading-in-node-js"
       ]
@@ -73,7 +64,16 @@
       "title": "How do they do it?",
       "resources": [
         "https://github.com/electerious/Ackee",
-        "https://github.com/sciner/webcraft"
+        "https://allenkim67.github.io/programming/2016/05/04/how-to-make-your-own-bittorrent-client.html",
+        "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
+        "https://github.com/sciner/webcraft",
+        "https://www.youtube.com/watch?v=AzQ6_DTcG6c",
+        "https://www.youtube.com/watch?v=asVDzgdyYLk",
+        "https://www.webdevdrops.com/en/build-static-site-generator-nodejs-8969ebe34b22",
+        "https://2ality.com/2022/07/nodejs-esm-shell-scripts.html",
+        "https://www.smashingmagazine.com/2018/12/multiplayer-text-adventure-engine-node-js",
+        "https://www.smashingmagazine.com/2017/03/interactive-command-line-application-node-js",
+        "https://codeburst.io/building-a-simple-single-sign-on-sso-server-and-solution-from-scratch-in-node-js-ea6ee5fdf340"
       ]
     },
     {

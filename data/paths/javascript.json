@@ -44,8 +44,6 @@
     {
       "title": "Beyond basics",
       "resources": [
-        "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWWe8zXrViYbIM2Hhylx8DZx",
-        "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX",
         "https://github.com/ryanmcdermott/clean-code-javascript",
         "https://github.com/getify/Functional-Light-JS",
         "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
@@ -64,7 +62,6 @@
         "https://christianheilmann.com/2021/11/01/developer-tools-secrets-that-shouldnt-be-secrets/",
         "https://lisperator.net/pltut/",
         "https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/",
-        "https://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line",
         "https://web.dev/streams",
         "https://gils-blog.tayar.org/posts/jsdoc-typings-all-the-benefits-none-of-the-drawbacks",
         "https://github.com/carltheperson/advanced-js-objects",
@@ -95,9 +92,12 @@
       "title": "How do they do it?",
       "resources": [
         "https://github.com/gothinkster/web-components-realworld-example-app",
+        "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX",
         "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
         "https://github.com/bradtraversy/vanillawebprojects",
-        "https://github.com/artf/grapesjs"
+        "https://github.com/artf/grapesjs",
+        "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWWe8zXrViYbIM2Hhylx8DZx",
+        "https://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line"
       ]
     },
     {
