@@ -111,12 +111,8 @@ export default function Home({ paths, alternateSources }: Props) {
               </Box>
               <Box py={2}>
                 <Typography variant="body1" component="p" gutterBottom>
-                  You don&apos;t like what you found here?
-                </Typography>
-                <Typography variant="body1" component="p">
-                  You can try to have a look at other similar projects. <br />{' '}
-                  Some of them were direct inspiration in the creation of
-                  Sherpa!
+                  Not happy with what you found here? You can try to have a look
+                  at other similar projects.
                 </Typography>
               </Box>
               <Box py={2}>
