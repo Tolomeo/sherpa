@@ -79,25 +79,17 @@ export default function Home({ paths, alternateSources }: Props) {
                     Learning new things is amazing.
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
-                    It is cool to know there are many platforms providing high
-                    quality paid educational content. It is even cooler to know
-                    there are equally stunning online resources provided for
-                    free!
+                    There are many platforms providing paid access to high
+                    quality educational material, but did you know there are
+                    equally stunning online resources provided for free?
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
-                    The web is a chaotic place though, and one could be
-                    sometimes confused by the quantity and variety of available
-                    materials.
+                    Sherpa collects hundreds of those, organizing them into
+                    learning paths to help you discover different technologies.
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
-                    Sherpa aims to solve that issue, providing you with paths to
-                    follow and plenty of references to help you on your journey
-                    on the discovery of different technologies.
-                  </Typography>
-                  <Typography variant="body1" component="p" gutterBottom>
-                    All resources are free and were hand-picked to create
-                    collections aiming to be as comprehensive and consistent as
-                    possible.
+                    All resources are free, hand-picked to create open and
+                    comprehensive collections.
                   </Typography>
                   <Typography variant="body1" component="p">
                     Happy learning!
