@@ -331,8 +331,24 @@
     "type": ["reference"]
   },
   {
-    "title": "24 Accessibility",
-    "url": "https://www.24a11y.com",
+    "title": "WAI-ARIA 1.1 Cheat Sheet",
+    "url": "https://www.digitala11y.com/wai-aria-1-1-cheat-sheet",
     "type": ["reference"]
+  },
+  {
+    "title": "Understanding WCAG Success Criterion",
+    "url": "https://www.digitala11y.com/wcag2-0",
+    "type": ["guide", "collection"]
+  },
+  {
+		"title": "DigitalA11Y",
+    "url": "https://www.digitala11y.com",
+    "type": ["reference"]
+  },
+  {
+		"title": "EightShapes Contrast Grid",
+    "url": "https://contrast-grid.eightshapes.com",
+    "type": ["generator"]
   }
+
 ]

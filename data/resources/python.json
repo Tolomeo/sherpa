@@ -41,11 +41,6 @@
     "type": ["course"]
   },
   {
-    "title": "Learn Python Tutorial",
-    "url": "https://data-flair.training/blogs/python-tutorials-home/",
-    "type": ["guide", "collection"]
-  },
-  {
     "title": "Python for Beginners",
     "url": "https://www.youtube.com/watch?v=7utwZYKweho",
     "source": "youtube.com/c/TheCyberMentor",
@@ -56,6 +51,51 @@
     "url": "https://www.youtube.com/playlist?list=PLZPZq0r_RZOOkUQbat8LyQii36cJf2SWT",
     "source": "youtube.com/c/BroCodez",
     "type": ["course"]
+  },
+  {
+    "title": "Nick Coghlan’s Python Notes",
+    "url": "http://python-notes.curiousefficiency.org",
+    "type": ["reference"]
+  },
+  {
+    "title": "Fundamental Cryptography in Theory and Python",
+    "url": "https://www.youtube.com/playlist?list=PLWjMI9CAmVU4--SmpzgswTvxLkZqC9QWn",
+    "type": ["course"],
+    "source": "youtube.com/channel/UCp1rLlh9AQN9Pejzbg9dcAg"
+  },
+  {
+    "title": "Multiprocessing Pool in Python",
+    "url": "https://superfastpython.com/multiprocessing-pool-python",
+    "type": ["guide"]
+  },
+  {
+    "title": "Pygame Tutorial for Beginners",
+    "url": "https://www.youtube.com/watch?v=FfWpgLFMI7w",
+    "type": ["course"],
+    "source": "youtube.com/c/Freecodecamp"
+  },
+  {
+    "title": "Drum Machine with Python and Pygame",
+    "url": "https://www.youtube.com/watch?v=F3J3PZj0zi0",
+    "type": ["course"],
+    "source": "youtube.com/c/Freecodecamp"
+  },
+  {
+    "title": "20 Beginner Python Projects",
+    "url": "https://www.youtube.com/watch?v=pdy3nh1tn6I",
+    "type": ["example", "exercise"],
+    "source": "youtube.com/c/Freecodecamp"
+  },
+  {
+    "title": "Stardew Valley Game Clone with Python and Pygame",
+    "url": "https://www.youtube.com/watch?v=R9apl6B_ZgI",
+    "type": ["tutorial"],
+    "source": "youtube.com/c/Freecodecamp"
+  },
+  {
+    "title": "Uncommon Uses of Python in Commonly Used Libraries",
+    "url": "https://eugeneyan.com/writing/uncommon-python",
+    "type": ["guide"]
   },
   {
     "title": "Tiny Python Projects",
@@ -170,7 +210,8 @@
   {
     "title": "Python Tutorials",
     "url": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
-    "type": ["course"]
+    "type": ["course"],
+    "source": "youtube.com/c/Coreyms"
   },
   {
     "title": "Getting Started With Testing in Python",
@@ -183,6 +224,12 @@
     "type": ["guide"]
   },
   {
+    "title": "The ultimate introduction to Python in 2022",
+    "url": "https://www.youtube.com/watch?v=mDKM-JtUhhc",
+    "type": ["course"],
+    "source": "youtube.com/c/ClearCode"
+  },
+  {
     "title": "Clean Architectures in Python",
     "url": "https://www.thedigitalcatbooks.com/pycabook-introduction",
     "type": ["book"]
@@ -190,7 +237,8 @@
   {
     "title": "Creating a Zelda style game in Python",
     "url": "https://www.youtube.com/watch?v=QU1pPzEGrqw",
-    "type": ["tutorial"]
+    "type": ["tutorial"],
+    "source": "youtube.com/c/ClearCode"
   },
   {
     "title": "Hypermodern Python",
@@ -211,11 +259,6 @@
     "title": "cosmic_python",
     "url": "https://www.cosmicpython.com",
     "type": ["book"]
-  },
-  {
-    "title": "Thinking of Building a Contact-tracing Application? Here's what you can do instead",
-    "url": "https://www.ashwinhariharan.tech/blog/thinking-of-building-a-contact-tracing-application-heres-what-you-can-do-instead/",
-    "type": ["tutorial"]
   },
   {
     "title": "Write yourself a Git!",
@@ -357,7 +400,8 @@
   {
     "title": "Introducing Python ",
     "url": "https://www.youtube.com/watch?v=qPowhg9nnS0",
-    "type": ["community"]
+    "type": ["community"],
+    "source": "youtube.com/c/RichWareham"
   },
   {
     "title": "python-for-coding-interviews",
@@ -377,17 +421,20 @@
   {
     "title": "Interview with a Senior Python Developer in 2022",
     "url": "https://www.youtube.com/watch?v=BgxklT94W0I",
-    "type": ["community"]
+    "type": ["community"],
+    "source": "youtube.com/channel/UCi8C7TNs2ohrc6hnRQ5Sn2w"
   },
   {
     "title": "Interview with a Senior Python Developer in 2022 - Part2",
     "url": "https://www.youtube.com/watch?v=xyrgkui0uCA",
-    "type": ["community"]
+    "type": ["community"],
+    "source": "youtube.com/channel/UCi8C7TNs2ohrc6hnRQ5Sn2w"
   },
   {
     "title": "Interview with a Postdoc, Junior Python Developer in 2022",
     "url": "https://www.youtube.com/watch?v=YnL9vAFphmE",
-    "type": ["community"]
+    "type": ["community"],
+    "source": "youtube.com/channel/UCi8C7TNs2ohrc6hnRQ5Sn2w"
   },
   {
     "title": "PY4E - Python for Everybody",
@@ -454,16 +501,25 @@
     "url": "https://calmcode.io/",
     "type": ["guide", "collection"]
   },
-  { "title": "PyVideo", "url": "https://pyvideo.org", "type": ["reference"] },
   {
     "title": "PyCoder’s Weekly",
     "url": "https://pycoders.com",
     "type": ["reference"]
   },
   {
+    "title": "Modern Application Development with Python on AWS",
+    "url": "https://www.coursera.org/specializations/aws-python-serverless-development",
+    "type": ["course"]
+  },
+  {
     "title": "Python.org",
     "url": "https://www.python.org/blogs/",
     "type": ["reference"]
+  },
+  {
+    "title": "Learney",
+    "url": "https://app.learney.me/maps/PythonCurriculum",
+    "type": ["course"]
   },
   {
     "title": "Awesome Python Weekly",

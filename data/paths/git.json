@@ -42,7 +42,9 @@
         "https://trunkbaseddevelopment.com",
         "https://blog.scottnonnenberg.com/better-git-configuration",
         "https://martinfowler.com/articles/branching-patterns.html",
-        "https://lucasfcosta.com/2018/01/20/Git-Bisect-Pure-Git-Wizardry.html"
+        "https://lucasfcosta.com/2018/01/20/Git-Bisect-Pure-Git-Wizardry.html",
+        "https://www.youtube.com/playlist?list=PLms-chRSi2s2RBSP1oZpBr_f6XA7iqIhm",
+        "https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store"
       ]
     },
     {
@@ -50,7 +52,8 @@
       "resources": [
         "https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git",
         "https://dev.to/samuelfaure/how-to-learn-git-slowly-38fa",
-        "https://techtldr.com/19-git-tips-for-everyday-use"
+        "https://techtldr.com/19-git-tips-for-everyday-use",
+        "https://github.com/rzashakeri/beautify-github-profile"
       ]
     },
     {
@@ -67,7 +70,8 @@
         "https://github.com/k88hudson/git-flight-rules",
         "https://github.com/joho/awesome-code-review",
         "https://github.com/RomuloOliveira/commit-messages-guide",
-        "https://www.atlassian.com/git/glossary"
+        "https://www.atlassian.com/git/glossary",
+        "https://www.semasoftware.com/blog/code-reviews-101-the-basics"
       ]
     },
     {

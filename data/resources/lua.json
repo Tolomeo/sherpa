@@ -181,6 +181,12 @@
     "type": ["guide"]
   },
   {
+    "title": "Game Development with LÖVE 2D and Lua",
+    "url": "https://www.youtube.com/watch?v=I549C6SmUnk",
+    "type": ["course"],
+    "source": "youtube.com/c/Freecodecamp"
+  },
+  {
     "title": "Luakit Web Browser",
     "url": "https://luakit.github.io/",
     "type": ["reference"]

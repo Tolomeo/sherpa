@@ -2,24 +2,23 @@
   "title": "Neovim",
   "resources": [
     "https://danielmiessler.com/study/vim",
-    "http://www.vimgenius.com/lessons/vim-intro",
+    "https://www.youtube.com/watch?v=RZ4p-saaQkc",
     "https://thevaluable.dev/vim-beginner",
     "https://github.com/nanotee/nvim-lua-guide",
-    "https://www.youtube.com/playlist?list=PLu-ydI-PCl0OEG0ZEqLRRuCrMJGAAI0tW",
+    "https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ",
     "https://github.com/rockerBOO/awesome-neovim"
   ],
   "extras": [
     {
       "title": "There's more",
       "resources": [
+        "https://www.youtube.com/playlist?list=PLu-ydI-PCl0OEG0ZEqLRRuCrMJGAAI0tW",
         "https://thoughtbot.com/upcase/vim",
-        "https://github.com/akrawchyk/awesome-vim",
         "https://www.openvim.com",
         "https://github.com/iggredible/Learn-Vim",
         "https://github.com/mhinz/vim-galore",
         "https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f",
         "http://vimcasts.org/episodes",
-        "https://www.barbarianmeetscoding.com/series/exploring-vim",
         "http://www.vimgenius.com/lessons",
         "https://github.com/jmoon018/PacVim",
         "https://www.youtube.com/playlist?list=PLRjzjpJ02WDMJOTsrdByXynk8h0ScMK9R",
@@ -35,7 +34,6 @@
         "https://learnvimscriptthehardway.stevelosh.com",
         "http://vimregex.com",
         "https://www.hillelwayne.com/post/intermediate-vim",
-        "http://zzapper.co.uk/vimtips.html",
         "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs",
         "https://thevaluable.dev/vim-create-text-objects",
         "https://thevaluable.dev/vim-runtime-guide-example",
@@ -47,6 +45,8 @@
       "title": "How do they do it?",
       "resources": [
         "https://github.com/amix/vimrc",
+        "http://zzapper.co.uk/vimtips.html",
+        "https://jdhao.github.io/2019/03/28/nifty_nvim_techniques_s1",
         "https://github.com/NvChad/NvChad",
         "https://github.com/SpaceVim/SpaceVim"
       ]
@@ -62,7 +62,8 @@
         "https://en.wikipedia.org/wiki/Editor_war",
         "https://www.youtube.com/watch?v=ES1L2SPgIDI",
         "https://www.youtube.com/watch?v=9n1dtmzqnCU",
-        "https://youtu.be/E_8B_seg8AI"
+        "https://youtu.be/E_8B_seg8AI",
+        "https://github.com/hakluke/how-to-exit-vim"
       ]
     },
     {
@@ -76,20 +77,19 @@
         "https://www.vimgolf.com",
         "https://www.tdaly.co.uk/projects/vim-statusline-generator",
         "http://www.atypingtest.com",
-        "https://neovimcraft.com"
+        "https://neovimcraft.com",
+        "https://github.com/akrawchyk/awesome-vim"
       ]
     },
     {
       "title": "Stay in the loop",
       "resources": [
         "https://thevaluable.dev",
-        "https://dev.to/t/vim",
-        "https://dev.to/t/neovim",
-        "https://www.reddit.com/r/neovim",
-        "https://www.reddit.com/r/vim",
+        "https://www.youtube.com/c/ChrisAtMachine",
         "https://vimtricks.com",
         "https://www.youtube.com/c/TJDeVries",
-        "https://www.youtube.com/c/CodeSmell"
+        "https://www.youtube.com/c/CodeSmell",
+        "https://this-week-in-neovim.org"
       ]
     }
   ],

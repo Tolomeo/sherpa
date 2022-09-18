@@ -147,11 +147,6 @@
     "type": ["exercise"]
   },
   {
-    "title": "Conquering Responsive Layouts",
-    "url": "https://courses.kevinpowell.co/courses/conquering-responsive-layouts",
-    "type": ["course"]
-  },
-  {
     "title": "Everything you need to know about CSS Variables",
     "url": "https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855",
     "type": ["guide", "reference"]
@@ -530,5 +525,20 @@
     "title": "CSS { In Real Life }",
     "url": "https://css-irl.info",
     "type": ["reference"]
+  },
+  {
+    "title": "Learn HTML",
+    "url": "https://www.learn-html.org",
+    "type": ["course", "reference"]
+  },
+  {
+    "title": "A complete guide to using CSS filters with SVGs",
+    "url": "https://blog.logrocket.com/complete-guide-using-css-filters-svgs",
+    "type": ["guide"]
+  },
+  {
+    "title": "UI Buttons",
+    "url": "https://ui-buttons.web.app",
+    "type": ["reference", "collection"]
   }
 ]

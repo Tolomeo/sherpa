@@ -10,11 +10,6 @@
     "type": ["tutorial"]
   },
   {
-    "title": "VimGenius",
-    "url": "http://www.vimgenius.com/lessons/vim-intro",
-    "type": ["tutorial"]
-  },
-  {
     "title": "Vim Commands",
     "url": "https://thevaluable.dev/vim-beginner",
     "type": ["course"]
@@ -69,11 +64,6 @@
     "title": "Episodes",
     "url": "http://vimcasts.org/episodes",
     "type": ["guide", "collection"]
-  },
-  {
-    "title": "Exploring Vim",
-    "url": "https://www.barbarianmeetscoding.com/series/exploring-vim",
-    "type": ["course"]
   },
   {
     "title": "VimGenius",
@@ -374,5 +364,37 @@
     "title": "Code Smell",
     "url": "https://www.youtube.com/c/CodeSmell",
     "type": ["community"]
+  },
+  {
+    "title": "Nifty Little Nvim Techniques to Make My Life Easier",
+    "url": "https://jdhao.github.io/2019/03/28/nifty_nvim_techniques_s1",
+    "type": ["guide", "collection", "reference"]
+  },
+  {
+    "title": "Neovim from Scratch",
+    "url": "https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ",
+    "type": ["course"],
+    "source": "youtube.com/c/ChrisAtMachine"
+  },
+  {
+    "title": "This Week In Neovim",
+    "url": "https://this-week-in-neovim.org",
+    "type": ["community"]
+  },
+  {
+    "title": "chris@machine",
+    "url": "https://www.youtube.com/c/ChrisAtMachine",
+    "type": ["community"]
+  },
+  {
+    "title": "how-to-exit-vim",
+    "url": "https://github.com/hakluke/how-to-exit-vim",
+    "type": ["guide", "community"]
+  },
+  {
+    "title": "Vim Tutorial for Beginners",
+    "url": "https://www.youtube.com/watch?v=RZ4p-saaQkc",
+    "type": ["course"],
+    "source": "youtube.com/c/Freecodecamp"
   }
 ]

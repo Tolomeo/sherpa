@@ -31,7 +31,8 @@
         "https://www.w3.org/WAI/roles/designers",
         "https://www.w3.org/WAI/roles/writers",
         "https://www.w3.org/WAI/roles/testers",
-        "https://www.w3.org/WAI/roles/managers/"
+        "https://www.w3.org/WAI/roles/managers/",
+        "https://www.digitala11y.com/wcag2-0"
       ]
     },
     {
@@ -80,7 +81,9 @@
         "https://a11y-style-guide.com/style-guide",
         "https://learn-the-web.algonquindesign.ca/topics/cheat-sheets-checklists",
         "https://moritzgiessmann.de/accessibility-cheatsheet",
-        "https://www.w3.org/TR/WCAG21"
+        "https://www.w3.org/TR/WCAG21",
+        "https://www.digitala11y.com/wai-aria-1-1-cheat-sheet",
+        "https://contrast-grid.eightshapes.com"
       ]
     },
     {
@@ -94,7 +97,7 @@
         "https://www.sarasoueidan.com/blog",
         "https://www.w3.org/WAI",
         "https://www.craigabbott.co.uk/blog",
-        "https://www.24a11y.com"
+        "https://www.digitala11y.com"
       ]
     }
   ]

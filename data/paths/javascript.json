@@ -16,7 +16,6 @@
       "title": "There's more",
       "resources": [
         "https://www.udemy.com/course/javascript-essentials",
-        "https://www.udemy.com/course/advanced-and-object-oriented-javascript",
         "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript",
         "https://github.com/getify/You-Dont-Know-JS",
         "https://github.com/lydiahallie/javascript-questions",
@@ -38,25 +37,22 @@
         "https://softchris.github.io/pages/javascript-composition.html",
         "https://softchris.github.io/pages/javascript-regex.html",
         "https://launchschool.com/books/javascript",
-        "https://www.youtube.com/playlist?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V"
+        "https://www.youtube.com/playlist?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V",
+        "https://github.com/TimothyGu/learning-promises"
       ]
     },
     {
       "title": "Beyond basics",
       "resources": [
-        "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWWe8zXrViYbIM2Hhylx8DZx",
-        "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX",
         "https://github.com/ryanmcdermott/clean-code-javascript",
         "https://github.com/getify/Functional-Light-JS",
         "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
-        "https://mostly-adequate.gitbook.io/mostly-adequate-guide",
         "https://www.javascripttutorials.net/javascript-code-analysis",
         "https://github.com/jiayihu/pretty-algorithms",
         "https://molily.de/robust-javascript/",
         "https://github.com/trekhleb/javascript-algorithms",
         "https://www.youtube.com/playlist?list=PLKoqnv2vTMUPOalM1zuWDP9OQl851WMM9",
         "https://css-tricks.com/an-introduction-to-web-components",
-        "https://staltz.com/javascript-getter-setter-pyramid.html",
         "https://exploringjs.com/deep-js",
         "https://tympanus.net/codrops/2021/06/01/trigonometry-in-css-and-javascript-introduction-to-trigonometry",
         "https://www.patterns.dev",
@@ -66,11 +62,12 @@
         "https://christianheilmann.com/2021/11/01/developer-tools-secrets-that-shouldnt-be-secrets/",
         "https://lisperator.net/pltut/",
         "https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/",
-        "https://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line",
         "https://web.dev/streams",
         "https://gils-blog.tayar.org/posts/jsdoc-typings-all-the-benefits-none-of-the-drawbacks",
         "https://github.com/carltheperson/advanced-js-objects",
-        "https://steveholgado.com/understanding-observables"
+        "https://steveholgado.com/understanding-observables",
+        "https://www.coursera.org/specializations/javascript-security",
+        "https://getbutterfly.com/code-golfing-tips-tricks-how-to-minify-your-javascript-code"
       ]
     },
     {
@@ -95,9 +92,12 @@
       "title": "How do they do it?",
       "resources": [
         "https://github.com/gothinkster/web-components-realworld-example-app",
+        "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX",
         "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
         "https://github.com/bradtraversy/vanillawebprojects",
-        "https://github.com/artf/grapesjs"
+        "https://github.com/artf/grapesjs",
+        "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWWe8zXrViYbIM2Hhylx8DZx",
+        "https://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line"
       ]
     },
     {
@@ -112,7 +112,8 @@
         "https://x-c3ll.github.io/posts/javascript-antidebugging",
         "https://www.youtube.com/watch?v=Uo3cL4nrGOk&t=4s",
         "https://lucasfcosta.com/2017/07/17/The-Ultimate-Guide-to-JavaScript-Fatigue.html",
-        "https://github.com/you-dont-need/You-Dont-Need-JavaScript"
+        "https://github.com/you-dont-need/You-Dont-Need-JavaScript",
+        "https://www.youtube.com/watch?v=rczu8kc8JZA"
       ]
     },
     {
@@ -143,5 +144,5 @@
       ]
     }
   ],
-  "next": ["typescript", "react", "node"]
+  "next": ["typescript", "react", "npm", "node"]
 }

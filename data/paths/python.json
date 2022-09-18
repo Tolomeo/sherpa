@@ -1,8 +1,8 @@
 {
   "title": "Python",
   "resources": [
-    "https://runestone.academy/ns/books/published/thinkcspy/index.html",
-    "https://inventwithpython.com/bigbookpython",
+    "https://www.youtube.com/playlist?list=PLZPZq0r_RZOOkUQbat8LyQii36cJf2SWT",
+    "https://www.youtube.com/watch?v=pdy3nh1tn6I",
     "https://inventwithpython.com/beyond",
     "https://book.pythontips.com/en/latest",
     "https://learnbyexample.github.io/practice_python_projects",
@@ -13,10 +13,12 @@
     {
       "title": "There's more",
       "resources": [
+        "https://www.youtube.com/watch?v=mDKM-JtUhhc",
+        "https://inventwithpython.com/bigbookpython",
+        "https://runestone.academy/ns/books/published/thinkcspy/index.html",
+        "https://app.learney.me/maps/PythonCurriculum",
         "https://www.learnpython.org/",
-        "https://data-flair.training/blogs/python-tutorials-home/",
         "https://www.youtube.com/watch?v=7utwZYKweho",
-        "https://www.youtube.com/playlist?list=PLZPZq0r_RZOOkUQbat8LyQii36cJf2SWT",
         "https://tinypythonprojects.com",
         "https://github.com/zhiwehu/100_plus_Python_Projects_Challenge",
         "https://learn.arcade.academy/en/latest/index.html",
@@ -46,16 +48,16 @@
     {
       "title": "Beyond basics",
       "resources": [
+        "https://superfastpython.com/multiprocessing-pool-python",
+        "https://www.youtube.com/playlist?list=PLWjMI9CAmVU4--SmpzgswTvxLkZqC9QWn",
+        "http://python-notes.curiousefficiency.org",
         "https://github.com/faif/python-patterns",
         "https://www.thedigitalcatbooks.com/pycabook-introduction",
-        "https://www.youtube.com/watch?v=QU1pPzEGrqw",
         "https://cjolowicz.github.io/posts/hypermodern-python-01-setup",
         "https://runestone.academy/ns/books/published/pythonds3/index.html",
         "https://github.com/amontalenti/elements-of-python-style",
         "https://www.cosmicpython.com",
-        "https://www.ashwinhariharan.tech/blog/thinking-of-building-a-contact-tracing-application-heres-what-you-can-do-instead/",
         "https://wyag.thb.lt/",
-        "http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/",
         "https://python-gtk-3-tutorial.readthedocs.io/en/latest",
         "https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript",
         "https://www.youtube.com/watch?v=PXMJ6FS7llk",
@@ -64,7 +66,8 @@
         "https://www.freecodecamp.org/learn/data-analysis-with-python",
         "https://www.freecodecamp.org/learn/machine-learning-with-python",
         "https://www.youtube.com/watch?v=oXlwWbU8l2o",
-        "https://realpython.com/python-virtual-environments-a-primer"
+        "https://realpython.com/python-virtual-environments-a-primer",
+        "https://www.coursera.org/specializations/aws-python-serverless-development"
       ]
     },
     {
@@ -80,9 +83,19 @@
       ]
     },
     {
+      "title": "Pygame",
+      "resources": [
+        "https://www.youtube.com/watch?v=FfWpgLFMI7w",
+        "https://www.youtube.com/watch?v=F3J3PZj0zi0",
+        "https://www.youtube.com/watch?v=QU1pPzEGrqw",
+        "https://www.youtube.com/watch?v=R9apl6B_ZgI"
+      ]
+    },
+    {
       "title": "How do they do it?",
       "resources": [
         "https://github.com/mx0c/super-mario-python",
+        "http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/",
         "https://github.com/jorzel/opentable",
         "https://github.com/ramzitannous/medium-graphql-backend"
       ]
@@ -90,6 +103,7 @@
     {
       "title": "Nice to know",
       "resources": [
+        "https://eugeneyan.com/writing/uncommon-python",
         "https://diveintopython3.problemsolving.io",
         "http://docs.quantifiedcode.com/python-anti-patterns",
         "https://jython.readthedocs.io/en/latest",
@@ -125,8 +139,8 @@
     {
       "title": "Stay in the loop",
       "resources": [
-        "https://pyvideo.org",
         "https://pycoders.com",
+        "https://realpython.com",
         "https://www.python.org/blogs/",
         "https://python.libhunt.com/newsletter"
       ]

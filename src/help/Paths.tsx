@@ -30,7 +30,7 @@ const PathsHelp = () => (
       <b>Beyond basics</b> with advanced topics and in-depth analyses
     </Typography>
     <Typography>
-      <b>How do they do it?</b> with example projects to get inspiration from
+      <b>How do they do it?</b> with example projects and practical tutorials
     </Typography>
     <Typography>
       <b>Nice to know</b> with curiosities and contextual information

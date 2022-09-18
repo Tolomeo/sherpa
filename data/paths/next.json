@@ -32,25 +32,27 @@
       "title": "Beyond basics",
       "resources": [
         "https://www.smashingmagazine.com/2021/09/lessons-learned-ecommerce-nextjs-case-study",
-        "https://egghead.io/courses/build-static-pages-dynamically-using-next-js-and-the-notion-api-34849fc4",
-        "https://egghead.io/courses/create-contextual-video-analysis-app-with-nextjs-and-symbl-ai-4efb",
-        "https://www.youtube.com/watch?v=mx1dbMzd3tU",
-        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9ig-veuRaLI4QB0Ws8xMzjv",
-        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1",
         "https://vercel.com/docs/concepts/next.js/overview",
-        "https://www.saltycrane.com/blog/2021/04/nextjs-gitlab-cicd-docker-multi-stage-example",
-        "https://www.saltycrane.com/blog/2021/03/example-nextjs-gitlab-cicd-amazon-ecr-and-ecs-deploy-pipeline",
         "https://www.smashingmagazine.com/2020/09/comparison-styling-methods-next-js",
         "https://tsh.io/blog/how-to-keep-your-lighthouse-score-high-in-next-js-applications-a-checklist",
         "https://hire.jonasgalvez.com.br/2022/may/18/building-a-mini-next-js",
-        "https://www.youtube.com/watch?v=QjZIeA952jE&list=PLFsfg2xP7cbL6BB-LJb3BWvq9kHmGB5oo&index=4&t=120s"
+        "https://www.youtube.com/watch?v=QjZIeA952jE&list=PLFsfg2xP7cbL6BB-LJb3BWvq9kHmGB5oo&index=4&t=120s",
+        "https://vercel.com/blog/build-your-own-web-framework",
+        "https://www.smashingmagazine.com/2021/08/state-management-nextjs"
       ]
     },
     {
       "title": "How do they do it?",
       "resources": [
         "https://docs.react2025.com",
+        "https://www.saltycrane.com/blog/2021/04/nextjs-gitlab-cicd-docker-multi-stage-example",
+        "https://www.alanjohn.dev/blog/Building-a-Developer-Portfolio-Creating-a-NextJS-blog-in-typescript-using-Notion-API#5189bcaa45944fdba485474c5395e750",
+        "https://www.saltycrane.com/blog/2021/03/example-nextjs-gitlab-cicd-amazon-ecr-and-ecs-deploy-pipeline",
         "https://github.com/salihozdemir/stackoverflow-clone",
+        "https://www.youtube.com/watch?v=mx1dbMzd3tU",
+        "https://egghead.io/courses/create-contextual-video-analysis-app-with-nextjs-and-symbl-ai-4efb",
+        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9ig-veuRaLI4QB0Ws8xMzjv",
+        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1",
         "https://github.com/reck1ess/next-realworld-example-app"
       ]
     },
@@ -68,7 +70,8 @@
         "https://www.saltycrane.com/blog/2021/04/buildtime-vs-runtime-environment-variables-nextjs-docker",
         "https://www.saltycrane.com/cheat-sheets/typescript/next.js/latest",
         "https://reactresources.com/topics/nextjs",
-        "https://www.patterns.dev"
+        "https://www.patterns.dev",
+        "https://jamstack.org"
       ]
     },
     {

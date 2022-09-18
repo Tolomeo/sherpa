@@ -5,11 +5,6 @@
     "type": ["course"]
   },
   {
-    "title": "Advanced and Object Oriented JavaScript and ES6",
-    "url": "https://www.udemy.com/course/advanced-and-object-oriented-javascript",
-    "type": ["course"]
-  },
-  {
     "title": "Asynchronous JavaScript",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu",
     "type": ["course"],
@@ -239,11 +234,6 @@
     "source": "youtube.com/c/MethMethMethod"
   },
   {
-    "title": "mostly-adequate-guide",
-    "url": "https://mostly-adequate.gitbook.io/mostly-adequate-guide",
-    "type": ["book"]
-  },
-  {
     "title": "JavaScript Code Analysis",
     "url": "https://www.javascripttutorials.net/javascript-code-analysis",
     "type": ["tutorial"]
@@ -278,11 +268,6 @@
   {
     "title": "An Introduction to Web Components",
     "url": "https://css-tricks.com/an-introduction-to-web-components",
-    "type": ["guide"]
-  },
-  {
-    "title": "JavaScript Getter-Setter Pyramid",
-    "url": "https://staltz.com/javascript-getter-setter-pyramid.html",
     "type": ["guide"]
   },
   {
@@ -561,5 +546,26 @@
     "title": "State of JavaScript",
     "url": "https://stateofjs.com",
     "type": ["community"]
+  },
+  {
+    "title": "JavaScript Security",
+    "url": "https://www.coursera.org/specializations/javascript-security",
+    "type": ["course"]
+  },
+  {
+    "title": "Will Javascript win?",
+    "url": "https://www.youtube.com/watch?v=rczu8kc8JZA",
+    "type": ["opinion"],
+    "source": "youtube.com/c/LexClips"
+  },
+  {
+    "title": "learning-promises",
+    "url": "https://github.com/TimothyGu/learning-promises",
+    "type": ["guide"]
+  },
+  {
+    "title": "Code Golfing Tips & Tricks",
+    "url": "https://getbutterfly.com/code-golfing-tips-tricks-how-to-minify-your-javascript-code",
+    "type": ["guide"]
   }
 ]
