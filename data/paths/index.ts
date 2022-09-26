@@ -9,6 +9,7 @@ import typescript from './typescript.json'
 import react from './react.json'
 import next from './next.json'
 import node from './node.json'
+import docker from './docker.json'
 import git from './git.json'
 import python from './python.json'
 import regex from './regex.json'
@@ -24,6 +25,7 @@ const serializedPaths = {
   next,
   npm,
   node,
+  docker,
   git,
   python,
   regex,

@@ -1,0 +1,128 @@
+{
+  "title": "Docker",
+  "resources": [
+    "https://www.digitalocean.com/community/conceptual_articles/introduction-to-containers",
+    "https://devopedia.org/docker",
+    "https://robertcooper.me/post/docker-guide",
+    "https://www.youtube.com/playlist?list=PLXl_isu8qxvmDOAnUkG5x16LzBzGzY_Ww",
+    "https://github.com/veggiemonk/awesome-docker"
+  ],
+  "extras": [
+    {
+      "title": "There's more",
+      "resources": [
+        "https://serversforhackers.com/s/docker-in-dev-v2-i",
+        "https://serversforhackers.com/s/docker-in-dev-v2-ii",
+        "https://dockerlabs.collabnix.com/workshop/docker",
+        "https://dockerlabs.collabnix.com/intermediate/workshop",
+        "https://dockerlabs.collabnix.com/beginners/README.html",
+        "https://dockerlabs.collabnix.com/intermediate/README.html",
+        "https://www.youtube.com/watch?v=Tyy1BUEmhwg",
+        "https://www.syncfusion.com/succinctly-free-ebooks/docker-succinctly",
+        "https://www.youtube.com/watch?v=9zUHg7xjIqQ",
+        "https://docker-curriculum.com",
+        "https://training.play-with-docker.com",
+        "https://www.youtube.com/watch?v=3c-iBn73dDE&t=20s",
+        "https://www.youtube.com/watch?v=p28piYY_wv8",
+        "https://github.com/docker/labs",
+        "https://github.com/dockersamples/101-tutorial",
+        "https://devopedia.org/containerization",
+        "https://github.com/dwyl/learn-docker",
+        "https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction",
+        "https://docker-handbook.farhan.dev",
+        "https://www.coursera.org/projects/build-local-development-environments-using-docker-containers",
+        "https://devopswithdocker.com"
+      ]
+    },
+    {
+      "title": "Beyond basics",
+      "resources": [
+        "https://devopedia.org/container-orchestration",
+        "https://dockerlabs.collabnix.com/advanced/workshop",
+        "https://dockerlabs.collabnix.com/advanced/README.html",
+        "https://devopedia.org/design-patterns-for-microservices-and-containers",
+        "https://devopedia.org/container-security",
+        "https://www.freecodecamp.org/news/build-your-on-custom-container-without-docker",
+        "https://www.tutorialworks.com/difference-docker-containerd-runc-crio-oci",
+        "https://www.digitalocean.com/community/tutorial_series/the-docker-ecosystem",
+        "https://www.youtube.com/playlist?list=PLX0bTycx8m-UhIXY2c4-7AXaEokaTdn6S",
+        "https://www.linode.com/content/hackersploit-docker-security-essentials-ebook",
+        "https://app.codecrafters.io/courses/docker/overview",
+        "https://martinheinz.dev/blog/42",
+        "https://martinheinz.dev/blog/44",
+        "https://nickjanetakis.com/blog/best-practices-around-production-ready-web-apps-with-docker-compose",
+        "https://ryanfb.github.io/etc/2015/07/29/git_strategies_for_docker.html",
+        "https://www.coursera.org/learn/containerized-applications-on-aws",
+        "https://www.youtube.com/playlist?list=PLXl_isu8qxvm4CzwO5I27QxrdmxCzpS2E",
+        "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1JEu7BLraz8MdKJILJir7oY",
+        "https://pythonspeed.com/docker",
+        "https://github.com/Fewbytes/rubber-docker",
+        "https://github.com/p8952/bocker",
+        "https://www.coursera.org/projects/implement-docker-registry"
+      ]
+    },
+    {
+      "title": "With Kubernetes",
+      "resources": [
+        "https://www.digitalocean.com/community/tutorial_series/from-containers-to-kubernetes-with-node-js",
+        "https://developpaper.com/comparison-of-docker-k8s-network-architecture",
+        "https://www.youtube.com/watch?v=yOu1APg7jtA",
+        "https://github.com/semaphoreci/book-cicd-docker-kubernetes",
+        "https://github.com/ramitsurana/awesome-kubernetes",
+        "https://docker-k8s-lab.readthedocs.io",
+        "https://www.coursera.org/learn/ibm-containers-docker-kubernetes-openshift",
+        "https://www.youtube.com/watch?v=Wf2eSG3owoA",
+        "https://www.youtube.com/playlist?list=PLlI3peB1V-roY_90v7XfHX19ATS4tP2e0",
+        "https://github.com/gravitational/workshop"
+      ]
+    },
+    {
+      "title": "How do they do it?",
+      "resources": [
+        "https://www.digitalocean.com/community/tutorial_series/rails-on-containers",
+        "https://www.digitalocean.com/community/tutorial_series/how-to-build-a-links-landing-page-in-php-with-laravel-and-docker-compose",
+        "https://github.com/docker/awesome-compose",
+        "https://firehydrant.com/blog/develop-a-go-app-with-docker-compose",
+        "https://paltman.com/docker-django-from-development-to-deployment",
+        "https://earthly.dev/blog/dos-gaming-in-docker",
+        "https://www.smashingmagazine.com/2022/07/using-nothing-but-docker-projects",
+        "https://nodejs.org/en/docs/guides/nodejs-docker-webapp",
+        "https://www.docker.com/blog/docker-compose-from-local-to-amazon-ecs"
+      ]
+    },
+    {
+      "title": "Nice to know",
+      "resources": [
+        "https://cloud.redhat.com/blog/mitigate-impact-of-docker-hub-pull-request-limits",
+        "https://www.digitalocean.com/community/tutorials/how-to-upload-your-consciousness-to-physical-infrastructure-using-docker-compose",
+        "https://martinheinz.dev/blog/35",
+        "https://gregoryszorc.com/blog/2018/05/16/revisiting-using-docker",
+        "https://dockerlabs.collabnix.com/docker/docker-interview-questions.html",
+        "https://www.nccgroup.com/globalassets/our-research/us/whitepapers/2016/april/ncc_group_understanding_hardening_linux_containers-1-1.pdf",
+        "https://www.manuel-strehl.de/quick_docker_commands"
+      ]
+    },
+    {
+      "title": "Great bookmarks",
+      "resources": [
+        "https://labs.play-with-docker.com",
+        "https://opencontainers.org",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html",
+        "https://dockerlabs.collabnix.com",
+        "https://github.com/Friz-zy/awesome-linux-containers",
+        "https://github.com/cicdops/awesome-ciandcd",
+        "https://github.com/alexmacarthur/local-docker-db",
+        "https://github.com/hexops/dockerfile",
+        "https://github.com/wsargent/docker-cheat-sheet",
+        "https://docker.jens-piegsa.com",
+        "https://www.digitalocean.com/community/tutorial_collections/how-to-install-and-use-docker",
+        "https://www.digitalocean.com/community/tutorial_collections/how-to-install-docker-compose",
+        "https://docs.docker.com"
+      ]
+    },
+    {
+      "title": "Stay in the loop",
+      "resources": ["https://www.docker.com/newsletter-subscription"]
+    }
+  ]
+}
