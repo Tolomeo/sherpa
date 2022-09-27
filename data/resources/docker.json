@@ -168,7 +168,7 @@
     "type": ["guide"]
   },
   {
-    "title": "The differences between Docker, containerd, CRI-O and runc - Tutorial Works",
+    "title": "The differences between Docker, containerd, CRI-O and runc",
     "url": "https://www.tutorialworks.com/difference-docker-containerd-runc-crio-oci",
     "type": ["guide"]
   },
