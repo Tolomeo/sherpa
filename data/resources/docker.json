@@ -271,7 +271,8 @@
   {
     "title": "Creating a Twelve-Factor App with Docker That Also Works on Kubernetes",
     "url": "https://www.youtube.com/watch?v=yOu1APg7jtA",
-    "type": ["guide"]
+    "type": ["guide"],
+    "source": "youtube.com/c/NickJanetakis"
   },
   {
     "title": "book-cicd-docker-kubernetes",
