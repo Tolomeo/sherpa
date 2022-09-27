@@ -9,6 +9,7 @@ import react from './react.json'
 import next from './next.json'
 import npm from './npm.json'
 import node from './node.json'
+import docker from './docker.json'
 import git from './git.json'
 import python from './python.json'
 import regex from './regex.json'
@@ -26,6 +27,7 @@ const resources = parseResources([
   ...next,
   ...npm,
   ...node,
+  ...docker,
   ...git,
   ...python,
   ...regex,
