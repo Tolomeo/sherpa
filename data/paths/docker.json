@@ -37,6 +37,7 @@
     {
       "title": "Beyond basics",
       "resources": [
+        "https://www.manuel-strehl.de/quick_docker_commands",
         "https://devopedia.org/container-orchestration",
         "https://dockerlabs.collabnix.com/advanced/workshop",
         "https://dockerlabs.collabnix.com/advanced/README.html",
@@ -97,9 +98,7 @@
         "https://www.digitalocean.com/community/tutorials/how-to-upload-your-consciousness-to-physical-infrastructure-using-docker-compose",
         "https://martinheinz.dev/blog/35",
         "https://gregoryszorc.com/blog/2018/05/16/revisiting-using-docker",
-        "https://dockerlabs.collabnix.com/docker/docker-interview-questions.html",
-        "https://www.nccgroup.com/globalassets/our-research/us/whitepapers/2016/april/ncc_group_understanding_hardening_linux_containers-1-1.pdf",
-        "https://www.manuel-strehl.de/quick_docker_commands"
+        "https://dockerlabs.collabnix.com/docker/docker-interview-questions.html"
       ]
     },
     {
@@ -122,7 +121,10 @@
     },
     {
       "title": "Stay in the loop",
-      "resources": ["https://www.docker.com/newsletter-subscription"]
+      "resources": [
+        "https://www.docker.com/newsletter-subscription",
+        "https://containerjournal.com"
+      ]
     }
   ]
 }

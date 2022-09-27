@@ -459,5 +459,10 @@
     "title": "Docker Developer Newsletter",
     "url": "https://www.docker.com/newsletter-subscription",
     "type": ["community"]
+  },
+  {
+    "title": "Container Journal",
+    "url": "https://containerjournal.com",
+    "type": ["community", "reference"]
   }
 ]
