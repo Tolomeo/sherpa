@@ -1,6 +1,7 @@
 {
   "title": "Node.js",
   "prev": ["javascript", "typescript", "npm"],
+  "next": ["docker"],
   "resources": [
     "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js",
     "https://2ality.com/2022/09/nodejs-overview.html",
