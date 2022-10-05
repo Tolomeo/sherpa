@@ -264,11 +264,6 @@
     "source": "digitalocean.com/community"
   },
   {
-    "title": "Comparison of docker k8s network architecture",
-    "url": "https://developpaper.com/comparison-of-docker-k8s-network-architecture",
-    "type": ["guide"]
-  },
-  {
     "title": "Creating a Twelve-Factor App with Docker That Also Works on Kubernetes",
     "url": "https://www.youtube.com/watch?v=yOu1APg7jtA",
     "type": ["guide"],
