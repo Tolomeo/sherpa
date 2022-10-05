@@ -66,7 +66,6 @@
       "title": "With Kubernetes",
       "resources": [
         "https://www.digitalocean.com/community/tutorial_series/from-containers-to-kubernetes-with-node-js",
-        "https://developpaper.com/comparison-of-docker-k8s-network-architecture",
         "https://www.youtube.com/watch?v=yOu1APg7jtA",
         "https://github.com/semaphoreci/book-cicd-docker-kubernetes",
         "https://github.com/ramitsurana/awesome-kubernetes",
