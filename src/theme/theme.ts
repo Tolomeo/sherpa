@@ -115,12 +115,23 @@ theme = createTheme(theme, {
         root: {
           fontSize: theme.typography.overline.fontSize,
         },
+        iconColorDefault: {
+          // color: theme.palette.text.disabled,
+          color: theme.palette.grey[400],
+        },
       },
     },
     MuiButton: {
       defaultProps: {
         disableRipple: true,
         disableFocusRipple: true,
+      },
+    },
+    MuiSvgIcon: {
+      styleOverrides: {
+        fontSizeSmall: {
+          fontSize: '1rem',
+        },
       },
     },
     MuiIconButton: {

@@ -1,6 +1,7 @@
 import React from 'react'
 import { ResourceTypes } from '../../data'
 import { Box, Chip, Typography, Stack } from '../theme'
+import { ResourceTypeLabel } from '../resourceTypes'
 
 type Props = {
   resourceTypes: ResourceTypes
@@ -18,10 +19,9 @@ const ResourcesHelp = ({ resourceTypes }: Props) => (
     </Typography>
     {Object.entries(resourceTypes).map(([resourceTypeId, resourceType]) => (
       <Box key={resourceTypeId}>
-        <Chip
+        <ResourceTypeLabel
           // data-testid={timelineItemTypeTestId}
-          label={resourceType.title}
-          size="small"
+          resourceType={resourceType.title}
         />{' '}
         <Typography component="span">{resourceType.description}</Typography>
       </Box>

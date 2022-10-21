@@ -11,8 +11,8 @@ import {
   TimelineDot,
   Box,
   Stack,
-  Chip,
 } from '../theme'
+import { ResourceTypeLabel } from '../resourceTypes'
 
 type Props = {
   resources: Resource[]
@@ -73,11 +73,10 @@ const ResourcesTimeline = ({ resources }: Props) => {
                 </Typography>
                 <Stack direction="row" spacing={1} component="span">
                   {resource.type.map((type) => (
-                    <Chip
+                    <ResourceTypeLabel
+                      resourceType={type}
                       data-testid={timelineItemTypeTestId}
                       key={type}
-                      label={type}
-                      size="small"
                     />
                   ))}
                 </Stack>
