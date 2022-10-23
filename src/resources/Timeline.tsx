@@ -71,7 +71,7 @@ const ResourcesTimeline = ({ resources }: Props) => {
                 >
                   {resource.title}
                 </Typography>
-                <Stack direction="row" spacing={1} component="span">
+                <Stack direction="row" spacing={1.5} component="span">
                   {resource.type.map((type) => (
                     <ResourceTypeLabel
                       resourceType={type}

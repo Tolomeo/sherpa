@@ -1,7 +1,7 @@
 import React from 'react'
 import { Resource } from '../../data'
 import { Link, Typography, List, Box, Stack } from '../theme'
-import { ResourceTypeIcon } from '../resourceTypes'
+import { ResourceTypeIcon, ResourceTypeLabel } from '../resourceTypes'
 
 type Props = {
   resources: Array<Resource>
@@ -41,9 +41,9 @@ const ResourcesList = ({ resources }: Props) => {
               >
                 {resource.title}
               </Typography>
-              <Stack direction="row" spacing={1} component="span">
+              <Stack direction="row" spacing={1.5} component="span">
                 {resource.type.map((type) => (
-                  <ResourceTypeIcon resourceType={type} key={type} />
+									<ResourceTypeLabel resourceType={type} key={type} />
                 ))}
               </Stack>
             </Link>

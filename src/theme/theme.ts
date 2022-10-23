@@ -115,8 +115,10 @@ theme = createTheme(theme, {
         root: {
           fontSize: theme.typography.overline.fontSize,
         },
+        colorDefault: {
+          borderColor: 'transparent',
+        },
         iconColorDefault: {
-          // color: theme.palette.text.disabled,
           color: theme.palette.grey[400],
         },
       },

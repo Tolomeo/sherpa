@@ -1,6 +1,6 @@
 import React from 'react'
 import { resourceTypes } from '../../data'
-import { Chip } from '../theme'
+import { Chip, Stack, Typography } from '../theme'
 import Icon from './Icon'
 
 type Props = React.ComponentProps<typeof Chip> & {
@@ -8,14 +8,10 @@ type Props = React.ComponentProps<typeof Chip> & {
 }
 const ResourceTypeLabel = ({ resourceType, ...props }: Props) => {
   return (
-    <Chip
-      label={resourceType}
-      size="small"
-      icon={<Icon resourceType={resourceType} />}
-      color="default"
-      variant="outlined"
-      {...props}
-    />
+    <Stack direction="row" spacing={0.5}>
+      <Icon resourceType={resourceType} />
+      <Typography variant="body2" color="text.secondary">{resourceType}</Typography>
+    </Stack>
   )
 }
 
