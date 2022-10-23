@@ -43,7 +43,7 @@ const ResourcesList = ({ resources }: Props) => {
               </Typography>
               <Stack direction="row" spacing={1.5} component="span">
                 {resource.type.map((type) => (
-									<ResourceTypeLabel resourceType={type} key={type} />
+                  <ResourceTypeLabel resourceType={type} key={type} />
                 ))}
               </Stack>
             </Link>

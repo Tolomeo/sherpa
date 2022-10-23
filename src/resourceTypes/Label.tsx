@@ -6,11 +6,13 @@ import Icon from './Icon'
 type Props = React.ComponentProps<typeof Chip> & {
   resourceType: keyof typeof resourceTypes
 }
-const ResourceTypeLabel = ({ resourceType, ...props }: Props) => {
+const ResourceTypeLabel = ({ resourceType }: Props) => {
   return (
     <Stack direction="row" spacing={0.5}>
       <Icon resourceType={resourceType} />
-      <Typography variant="body2" color="text.secondary">{resourceType}</Typography>
+      <Typography variant="body2" color="text.secondary">
+        {resourceType}
+      </Typography>
     </Stack>
   )
 }
