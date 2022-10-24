@@ -5,6 +5,7 @@ export type ThemeMode = 'light' | 'dark'
 const getThemeTokens = (mode: ThemeMode) =>
   createMuiTheme({
     palette: {
+			mode,
       primary: {
         main: '#ff6bdf',
         dark: '#da72ff',
