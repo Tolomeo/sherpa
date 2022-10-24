@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import CssBaseline from '@mui/material/CssBaseline'
 import { CacheProvider, EmotionCache } from './emotion'
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
-import theme from './theme'
-
-type ThemeMode = 'light' | 'dark'
+import createTheme, { ThemeMode } from './theme'
 
 type Props = {
   cache: EmotionCache
@@ -12,10 +10,11 @@ type Props = {
 
 const ThemeProvider: React.FC<Props> = ({ children, cache }) => {
   const [mode, setMode] = useState<ThemeMode>('light')
+  const theme = useMemo(() => createTheme(mode), [mode])
+
   return (
     <CacheProvider value={cache}>
       <MuiThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         {children}
       </MuiThemeProvider>
