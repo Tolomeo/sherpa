@@ -120,7 +120,7 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
           </LayoutHero>
 
           {hasPrevPaths(path) && (
-            <LayoutContainer pb={4}>
+            <LayoutContainer pb={8}>
               <aside>
                 <Typography variant="h3" component="h2" gutterBottom>
                   You want to come from
@@ -131,6 +131,9 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
           )}
 
           <LayoutContainer pb={8} data-testid={pathResourcesTestId}>
+            <Typography component="h2" variant="h5">
+              The path
+            </Typography>
             <Grid container>
               <Grid item xs={12} md={8} xl={6}>
                 <ResourcesTimeline resources={path.resources} />
