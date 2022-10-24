@@ -1,3 +1,3 @@
 export * from './emotion'
 export * from './components'
-export { default } from './theme'
+export { default } from './Provider'
