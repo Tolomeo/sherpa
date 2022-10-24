@@ -1,7 +1,14 @@
-import React, { useState, useMemo, createContext, useContext } from 'react'
+import React, {
+  useState,
+  useMemo,
+  createContext,
+  useContext,
+  useEffect,
+} from 'react'
+import { Theme, ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import CssBaseline from '@mui/material/CssBaseline'
 import { CacheProvider, EmotionCache } from './emotion'
-import { Theme, ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
 import createTheme, { ThemeMode } from './theme'
 
 type ThemeContextValue = {
@@ -16,7 +23,10 @@ type Props = {
 }
 
 const ThemeProvider: React.FC<Props> = ({ children, cache }) => {
-  const [mode, setMode] = useState<ThemeMode>('dark')
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+  const [mode, setMode] = useState<ThemeMode>(
+    prefersDarkMode ? 'dark' : 'light',
+  )
   const theme = useMemo(() => createTheme(mode), [mode])
   const themeContext = useMemo<ThemeContextValue>(
     () => ({
@@ -25,6 +35,13 @@ const ThemeProvider: React.FC<Props> = ({ children, cache }) => {
     }),
     [setMode, theme],
   )
+
+  useEffect(() => {
+    const themeMode = prefersDarkMode ? 'dark' : 'light'
+
+    if (mode !== themeMode) setMode(themeMode)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [prefersDarkMode])
 
   return (
     <CacheProvider value={cache}>
