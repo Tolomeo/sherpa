@@ -1,4 +1,10 @@
-import { createTheme } from '@mui/material/styles'
+import React from 'react'
+import CssBaseline from '@mui/material/CssBaseline'
+import { CacheProvider, EmotionCache } from './emotion'
+import {
+  createTheme,
+  ThemeProvider as MuiThemeProvider,
+} from '@mui/material/styles'
 
 let theme = createTheme({
   palette: {
@@ -145,4 +151,21 @@ theme = createTheme(theme, {
   },
 })
 
-export default theme
+type Props = {
+  cache: EmotionCache
+}
+
+const ThemeProvider: React.FC<Props> = ({ children, cache }) => {
+  return (
+    <CacheProvider value={cache}>
+      <MuiThemeProvider theme={theme}>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        {children}
+      </MuiThemeProvider>
+    </CacheProvider>
+  )
+}
+
+export { theme }
+export default ThemeProvider
