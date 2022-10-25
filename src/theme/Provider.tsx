@@ -39,12 +39,11 @@ const setUserThemeModePreference = (mode: ThemeMode) => {
   window.localStorage.setItem('theme.preferences.mode', mode)
 }
 
-const ThemeProvider: React.FC<Props> = ({ children, cache }) => {
+const useThemeMode = (): [ThemeMode, (mode: ThemeMode) => void] => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const [mode, setModeValue] = useState<ThemeMode>(
     prefersDarkMode ? 'dark' : 'light',
   )
-  const theme = useMemo(() => createTheme(mode), [mode])
 
   const setMode = useCallback((mode: ThemeMode) => {
     setModeValue(mode)
@@ -67,6 +66,13 @@ const ThemeProvider: React.FC<Props> = ({ children, cache }) => {
     if (mode !== themeMode) setModeValue(themeMode)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [prefersDarkMode])
+
+  return [mode, setMode]
+}
+
+const ThemeProvider: React.FC<Props> = ({ children, cache }) => {
+  const [mode, setMode] = useThemeMode()
+  const theme = useMemo(() => createTheme(mode), [mode])
 
   const themeContext = useMemo<ThemeContextValue>(
     () => ({
