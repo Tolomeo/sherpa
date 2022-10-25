@@ -1,11 +1,13 @@
+import React, { useState, useEffect, useCallback } from 'react'
 import { createTheme as createMuiTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 export type ThemeMode = 'light' | 'dark'
 
 const getThemeTokens = (mode: ThemeMode) =>
   createMuiTheme({
     palette: {
-			mode,
+      mode,
       primary: {
         main: '#ff6bdf',
         dark: '#da72ff',
@@ -50,7 +52,7 @@ const getThemeTokens = (mode: ThemeMode) =>
     },
   })
 
-const createTheme = (mode: ThemeMode) => {
+export const createTheme = (mode: ThemeMode) => {
   const themeTokens = getThemeTokens(mode)
 
   return createMuiTheme(themeTokens, {
@@ -145,4 +147,49 @@ const createTheme = (mode: ThemeMode) => {
   })
 }
 
-export default createTheme
+const getUserThemeModePreference = () => {
+  if (typeof window === 'undefined') return null
+
+  const modePreference = window.localStorage.getItem('theme.preferences.mode')
+
+  if (!modePreference) return null
+
+  return modePreference as ThemeMode
+}
+
+const setUserThemeModePreference = (mode: ThemeMode) => {
+  if (typeof window === 'undefined') return
+
+  window.localStorage.setItem('theme.preferences.mode', mode)
+}
+
+export const useThemeMode = (): [ThemeMode, (mode: ThemeMode) => void] => {
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+  const [mode, setModeValue] = useState<ThemeMode>(
+    prefersDarkMode ? 'dark' : 'light',
+  )
+
+  const setMode = useCallback((mode: ThemeMode) => {
+    setModeValue(mode)
+    setUserThemeModePreference(mode)
+  }, [])
+
+  useEffect(() => {
+    const userThemeModePreference = getUserThemeModePreference()
+
+    if (userThemeModePreference) setModeValue(userThemeModePreference)
+  }, [])
+
+  useEffect(() => {
+    const userThemeModePreference = getUserThemeModePreference()
+
+    if (userThemeModePreference) return
+
+    const themeMode = prefersDarkMode ? 'dark' : 'light'
+
+    if (mode !== themeMode) setModeValue(themeMode)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [prefersDarkMode])
+
+  return [mode, setMode]
+}
