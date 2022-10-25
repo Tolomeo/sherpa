@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import { createTheme as createMuiTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
@@ -192,4 +192,15 @@ export const useThemeMode = (): [ThemeMode, (mode: ThemeMode) => void] => {
   }, [prefersDarkMode])
 
   return [mode, setMode]
+}
+
+export const useTheme = () => {
+  const [mode, setMode] = useThemeMode()
+  const theme = useMemo(() => createTheme(mode), [mode])
+
+  return {
+    theme,
+    mode,
+    setMode,
+  }
 }

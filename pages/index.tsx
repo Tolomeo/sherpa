@@ -12,7 +12,6 @@ import {
   Box,
   Grid,
 } from '../src/theme'
-import { IconLink as GithubIconLink } from '../src/github'
 import { AlternateSourcesList } from '../src/resources'
 import { List as PathsList } from '../src/paths'
 
@@ -60,9 +59,7 @@ export default function Home({ paths, alternateSources }: Props) {
     <>
       <PageHead />
       <Layout>
-        <LayoutHeader>
-          <GithubIconLink />
-        </LayoutHeader>
+        <LayoutHeader />
 
         <main>
           <LayoutHero>

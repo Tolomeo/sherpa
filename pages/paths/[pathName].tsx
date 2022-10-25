@@ -24,7 +24,6 @@ import {
   Masonry,
   Underline,
 } from '../../src/theme'
-import { IconLink as GithubIconLink } from '../../src/github'
 import { List as PathsList } from '../../src/paths'
 import {
   HelpDrawer,
@@ -109,7 +108,6 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
       <Layout>
         <LayoutHeader>
           <HelpDrawerToggle />
-          <GithubIconLink />
         </LayoutHeader>
 
         <main>

@@ -2,7 +2,7 @@ import React, { useMemo, createContext, useContext } from 'react'
 import { Theme, ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { CacheProvider, EmotionCache } from './emotion'
-import { createTheme, useThemeMode, ThemeMode } from './theme'
+import { useTheme, ThemeMode } from './theme'
 
 type ThemeContextValue = {
   mode: ThemeMode
@@ -17,8 +17,7 @@ type Props = {
 }
 
 const ThemeProvider: React.FC<Props> = ({ children, cache }) => {
-  const [mode, setMode] = useThemeMode()
-  const theme = useMemo(() => createTheme(mode), [mode])
+  const { theme, mode, setMode } = useTheme()
 
   const themeContext = useMemo<ThemeContextValue>(
     () => ({

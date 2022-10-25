@@ -6,6 +6,7 @@ import Toolbar from '@mui/material/Toolbar'
 import Container from '@mui/material/Container'
 import Logo from '../../Logo'
 import ThemeModeToggle from './ThemeModeToggle'
+import GitHubLink from './GitHubLink'
 
 const Header: React.FC = ({ children }) => {
   return (
@@ -21,7 +22,9 @@ const Header: React.FC = ({ children }) => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            {children} <ThemeModeToggle />
+            {children}
+            <GitHubLink />
+            <ThemeModeToggle />
           </Box>
         </Toolbar>
       </Container>
