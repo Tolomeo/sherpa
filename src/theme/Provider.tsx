@@ -4,6 +4,7 @@ import React, {
   createContext,
   useContext,
   useEffect,
+  useCallback,
 } from 'react'
 import { Theme, ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
@@ -22,12 +23,51 @@ type Props = {
   cache: EmotionCache
 }
 
+const getUserThemeModePreference = () => {
+  if (typeof window === 'undefined') return null
+
+  const modePreference = window.localStorage.getItem('theme.preferences.mode')
+
+  if (!modePreference) return null
+
+  return modePreference as ThemeMode
+}
+
+const setUserThemeModePreference = (mode: ThemeMode) => {
+  if (typeof window === 'undefined') return
+
+  window.localStorage.setItem('theme.preferences.mode', mode)
+}
+
 const ThemeProvider: React.FC<Props> = ({ children, cache }) => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
-  const [mode, setMode] = useState<ThemeMode>(
+  const [mode, setModeValue] = useState<ThemeMode>(
     prefersDarkMode ? 'dark' : 'light',
   )
   const theme = useMemo(() => createTheme(mode), [mode])
+
+  const setMode = useCallback((mode: ThemeMode) => {
+    setModeValue(mode)
+    setUserThemeModePreference(mode)
+  }, [])
+
+  useEffect(() => {
+    const userThemeModePreference = getUserThemeModePreference()
+
+    if (userThemeModePreference) setModeValue(userThemeModePreference)
+  }, [])
+
+  useEffect(() => {
+    const userThemeModePreference = getUserThemeModePreference()
+
+    if (userThemeModePreference) return
+
+    const themeMode = prefersDarkMode ? 'dark' : 'light'
+
+    if (mode !== themeMode) setModeValue(themeMode)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [prefersDarkMode])
+
   const themeContext = useMemo<ThemeContextValue>(
     () => ({
       setMode,
@@ -35,13 +75,6 @@ const ThemeProvider: React.FC<Props> = ({ children, cache }) => {
     }),
     [setMode, theme],
   )
-
-  useEffect(() => {
-    const themeMode = prefersDarkMode ? 'dark' : 'light'
-
-    if (mode !== themeMode) setMode(themeMode)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [prefersDarkMode])
 
   return (
     <CacheProvider value={cache}>
