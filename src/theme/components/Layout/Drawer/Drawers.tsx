@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react'
+import React from 'react'
 import { useLayoutContext } from '../Context'
 import MuiDrawer from '@mui/material/Drawer'
 import Box from '@mui/material/Box'

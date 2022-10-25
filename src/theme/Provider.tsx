@@ -5,6 +5,7 @@ import { CacheProvider, EmotionCache } from './emotion'
 import { createTheme, useThemeMode, ThemeMode } from './theme'
 
 type ThemeContextValue = {
+  mode: ThemeMode
   setMode: (mode: ThemeMode) => void
   theme: Theme
 } | null
@@ -21,10 +22,11 @@ const ThemeProvider: React.FC<Props> = ({ children, cache }) => {
 
   const themeContext = useMemo<ThemeContextValue>(
     () => ({
+      mode,
       setMode,
       theme,
     }),
-    [setMode, theme],
+    [mode, setMode, theme],
   )
 
   return (
