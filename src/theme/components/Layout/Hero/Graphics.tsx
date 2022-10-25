@@ -1,6 +1,6 @@
 import React, { SVGProps, Ref, forwardRef } from 'react'
 import { styled } from '@mui/material/styles'
-import { useTheme } from '../../../Provider'
+import { useThemeContext } from '../../../Provider'
 
 const dimensions = {
   width: 760,
@@ -11,7 +11,7 @@ const SvgComponent = (
   props: SVGProps<SVGSVGElement>,
   ref: Ref<SVGSVGElement>,
 ) => {
-  const { theme } = useTheme()
+  const { theme } = useThemeContext()
 
   return (
     <svg

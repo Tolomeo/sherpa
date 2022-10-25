@@ -39,7 +39,7 @@ const ThemeProvider: React.FC<Props> = ({ children, cache }) => {
   )
 }
 
-export const useTheme = () => {
+export const useThemeContext = () => {
   const themeContext = useContext(ThemeContext)
 
   if (!themeContext)
