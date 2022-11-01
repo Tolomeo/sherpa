@@ -79,21 +79,22 @@ const checkResourceHealth = (resource: Resource) => {
         domain: '.youtube.com',
       })
       return resourceCheckStrategy.request(resource)
-    case 'thevaluable.dev': // this one renders its own url instead of the title on first load
-    case 'usehooks-ts.com': // this one weirdly gives 404 on first load
-    case 'developer.ibm.com': // this one renders client side
-    case 'davrous.com': // this one returns unathorised
-    case 'zzapper.co.uk': //
-    case 'launchschool.com': //
-    case 'ui.dev': //
-    case 'wattenberger.com': //
-    case 'gameaccessibilityguidelines.com': //
-    case 'udemy.com': //
-    case 'codepen.io': //
-    case 'testing-playground.com': //
-    case 'arsfutura.com': //
-    case 'reactdigest.net': //
-    case 'data-flair.training': //
+    case 'thevaluable.dev':
+    case 'usehooks-ts.com':
+    case 'developer.ibm.com':
+    case 'davrous.com':
+    case 'zzapper.co.uk':
+    case 'launchschool.com':
+    case 'ui.dev':
+    case 'wattenberger.com':
+    case 'gameaccessibilityguidelines.com':
+    case 'udemy.com':
+    case 'codepen.io':
+    case 'testing-playground.com':
+    case 'arsfutura.com':
+    case 'reactdigest.net':
+    case 'data-flair.training':
+    case 'tooltester.com':
       return resourceCheckStrategy.visit(resource)
     default:
       return resourceCheckStrategy.request(resource)
