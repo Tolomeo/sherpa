@@ -235,8 +235,8 @@
     "type": ["reference", "collection"]
   },
   {
-    "title": "Accessibility audits",
-    "url": "https://web.dev/lighthouse-accessibility",
+    "title": "Accessibility Audits",
+    "url": "https://developer.chrome.com/docs/lighthouse/accessibility",
     "type": ["guide", "collection"]
   },
   {
@@ -341,14 +341,13 @@
     "type": ["guide", "collection"]
   },
   {
-		"title": "DigitalA11Y",
+    "title": "DigitalA11Y",
     "url": "https://www.digitala11y.com",
     "type": ["reference"]
   },
   {
-		"title": "EightShapes Contrast Grid",
+    "title": "EightShapes Contrast Grid",
     "url": "https://contrast-grid.eightshapes.com",
     "type": ["generator"]
   }
-
 ]

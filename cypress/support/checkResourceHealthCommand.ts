@@ -57,8 +57,25 @@ const resourceCheckStrategy = {
       encoding: 'binary',
     })
   },
-  notImplemented(resource: Resource) {
-    cy.log(`Resource check not implemented for ${resource.source}`)
+  scraper(resource: Resource) {
+    cy.request({
+      url: `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
+        resource.url,
+      )}`,
+      headers: {
+        apikey: Cypress.env('ZENSCRAPE_API_KEY'),
+      },
+      log: false,
+    }).then((response) => {
+      const document = new DOMParser().parseFromString(
+        response.body,
+        'text/html',
+      )
+
+      return expect(cleanHtmlEntities(document.title)).to.contain(
+        resource.title,
+      )
+    })
   },
 }
 
@@ -79,22 +96,24 @@ const checkResourceHealth = (resource: Resource) => {
         domain: '.youtube.com',
       })
       return resourceCheckStrategy.request(resource)
-    case 'thevaluable.dev': // this one renders its own url instead of the title on first load
-    case 'usehooks-ts.com': // this one weirdly gives 404 on first load
-    case 'developer.ibm.com': // this one renders client side
-    case 'davrous.com': // this one returns unathorised
-    case 'zzapper.co.uk': //
-    case 'launchschool.com': //
-    case 'ui.dev': //
-    case 'wattenberger.com': //
-    case 'gameaccessibilityguidelines.com': //
-    case 'udemy.com': //
-    case 'codepen.io': //
-    case 'testing-playground.com': //
-    case 'arsfutura.com': //
-    case 'reactdigest.net': //
-    case 'data-flair.training': //
+    case 'thevaluable.dev':
+    case 'usehooks-ts.com':
+    case 'developer.ibm.com':
+    case 'davrous.com':
+    case 'zzapper.co.uk':
+    case 'launchschool.com':
+    case 'wattenberger.com':
+    case 'gameaccessibilityguidelines.com':
+    case 'testing-playground.com':
+    case 'arsfutura.com':
+    case 'tooltester.com':
       return resourceCheckStrategy.visit(resource)
+    case 'udemy.com':
+    case 'codepen.io':
+    case 'ui.dev':
+    case 'reactdigest.net':
+    case 'data-flair.training':
+      return resourceCheckStrategy.scraper(resource)
     default:
       return resourceCheckStrategy.request(resource)
   }
