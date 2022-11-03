@@ -59,7 +59,7 @@ const resourceCheckStrategy = {
   },
   scraper(resource: Resource) {
     cy.request({
-      url: `https://app.zenscrape.com/api/v1/get?&url=${encodeURIComponent(
+      url: `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
         resource.url,
       )}`,
       headers: {
@@ -101,17 +101,18 @@ const checkResourceHealth = (resource: Resource) => {
     case 'davrous.com':
     case 'zzapper.co.uk':
     case 'launchschool.com':
-    case 'ui.dev':
     case 'wattenberger.com':
     case 'gameaccessibilityguidelines.com':
-    case 'udemy.com':
-    case 'codepen.io':
     case 'testing-playground.com':
     case 'arsfutura.com':
-    case 'reactdigest.net':
-    case 'data-flair.training':
     case 'tooltester.com':
       return resourceCheckStrategy.visit(resource)
+    case 'udemy.com':
+    case 'codepen.io':
+    case 'ui.dev':
+    case 'reactdigest.net':
+    case 'data-flair.training':
+      return resourceCheckStrategy.scraper(resource)
     default:
       return resourceCheckStrategy.request(resource)
   }
