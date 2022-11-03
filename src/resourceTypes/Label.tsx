@@ -1,14 +1,17 @@
 import React from 'react'
 import { resourceTypes } from '../../data'
-import { Chip, Stack, Typography } from '../theme'
+import { Stack, Typography } from '../theme'
 import Icon from './Icon'
 
-type Props = React.ComponentProps<typeof Chip> & {
+type Props = Omit<
+  React.ComponentProps<typeof Stack>,
+  'direction' | 'spacing'
+> & {
   resourceType: keyof typeof resourceTypes
 }
-const ResourceTypeLabel = ({ resourceType }: Props) => {
+const ResourceTypeLabel = ({ resourceType, ...props }: Props) => {
   return (
-    <Stack direction="row" spacing={0.5}>
+    <Stack component="span" {...props} direction="row" spacing={0.5}>
       <Icon resourceType={resourceType} />
       <Typography variant="body2" color="text.secondary">
         {resourceType}
