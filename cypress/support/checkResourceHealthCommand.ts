@@ -57,8 +57,24 @@ const resourceCheckStrategy = {
       encoding: 'binary',
     })
   },
-  notImplemented(resource: Resource) {
-    cy.log(`Resource check not implemented for ${resource.source}`)
+  scraper(resource: Resource) {
+    cy.request({
+      url: `https://app.zenscrape.com/api/v1/get?&url=${encodeURIComponent(
+        resource.url,
+      )}`,
+      headers: {
+        apikey: Cypress.env('SCRAPER_API_KEY'),
+      },
+    }).then((response) => {
+      const document = new DOMParser().parseFromString(
+        response.body,
+        'text/html',
+      )
+
+      return expect(cleanHtmlEntities(document.title)).to.contain(
+        resource.title,
+      )
+    })
   },
 }
 
