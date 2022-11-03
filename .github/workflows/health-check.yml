@@ -18,6 +18,7 @@ jobs:
           CYPRESS_retries: 2
           CYPRESS_pageLoadTimeout: 60000
           CYPRESS_requestTimeout: 30000
+          CYPRESS_ZENSCRAPE_API_KEY: ${{ secrets.ZENSCRAPE_API_KEY }}
         with:
           browser: chrome
           spec: cypress/integration/paths/resources.spec.ts # Running only resources tests

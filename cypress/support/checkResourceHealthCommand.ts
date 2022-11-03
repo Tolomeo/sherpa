@@ -63,8 +63,9 @@ const resourceCheckStrategy = {
         resource.url,
       )}`,
       headers: {
-        apikey: Cypress.env('SCRAPER_API_KEY'),
+        apikey: Cypress.env('ZENSCRAPE_API_KEY'),
       },
+      log: false,
     }).then((response) => {
       const document = new DOMParser().parseFromString(
         response.body,
