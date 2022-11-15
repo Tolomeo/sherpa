@@ -15,7 +15,7 @@ jobs:
         uses: cypress-io/github-action@v2
         env:
           CYPRESS_baseUrl: https://the-learning-path.vercel.app
-          CYPRESS_retries: 2
+          CYPRESS_retries: 0
           CYPRESS_pageLoadTimeout: 60000
           CYPRESS_requestTimeout: 30000
           CYPRESS_ZENSCRAPE_API_KEY: ${{ secrets.ZENSCRAPE_API_KEY }}
