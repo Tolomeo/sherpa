@@ -1,6 +1,6 @@
-import resources, { Resource } from '../resources'
 import { SerializedPaths } from './types'
 import { parsePaths } from './utils'
+import uidesign from './uidesign.json'
 import htmlcss from './htmlcss.json'
 import webaccessibility from './webaccessibility.json'
 import javascript from './javascript.json'
@@ -17,6 +17,7 @@ import neovim from './neovim.json'
 import lua from './lua.json'
 
 const serializedPaths = {
+  uidesign,
   htmlcss,
   webaccessibility,
   javascript,

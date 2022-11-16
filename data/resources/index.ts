@@ -1,6 +1,7 @@
 import { SerializedResources } from './types'
 import { parseResources } from './utils'
 import alternatives from './alternatives.json'
+import uidesign from './uidesign.json'
 import htmlcss from './htmlcss.json'
 import webaccessibility from './webaccessibility.json'
 import javascript from './javascript.json'
@@ -19,6 +20,7 @@ import lua from './lua.json'
 const alternateSources = parseResources(alternatives as SerializedResources)
 
 const resources = parseResources([
+  ...uidesign,
   ...htmlcss,
   ...webaccessibility,
   ...javascript,
