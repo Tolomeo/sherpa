@@ -11,7 +11,13 @@ type Props = Omit<
 }
 const ResourceTypeLabel = ({ resourceType, ...props }: Props) => {
   return (
-    <Stack component="span" {...props} direction="row" spacing={0.5}>
+    <Stack
+      component="span"
+      {...props}
+      direction="row"
+      alignItems="center"
+      spacing={0.5}
+    >
       <Icon resourceType={resourceType} />
       <Typography variant="body2" color="text.secondary">
         {resourceType}
