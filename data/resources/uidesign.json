@@ -277,12 +277,6 @@
     "url": "https://fonts.google.com/knowledge",
     "type": ["guide", "collection", "reference"]
   },
-  { "title": "typewar", "url": "https://typewar.com", "type": ["exercise"] },
-  {
-    "title": "Interactive Typography Tutorial",
-    "url": "https://www.learnui.design/tools/typography-tutorial.html",
-    "type": ["guide"]
-  },
   {
     "title": "Typographic Hierarchies",
     "url": "https://www.smashingmagazine.com/2022/10/typographic-hierarchies",
@@ -395,12 +389,6 @@
     "source": "youtube.com/c/Mizko"
   },
   {
-    "title": "Design System Series - Figma",
-    "url": "https://www.youtube.com/playlist?list=PLvnhVb8yYRQ1rvEFiPEyNbVPiJxvuCbgL",
-    "type": ["course"],
-    "source": "youtube.com/c/Mizko"
-  },
-  {
     "title": "Exploring Sketch Plugins",
     "url": "https://www.youtube.com/playlist?list=PLLnpHn493BHHUZe9bihv37Z6CyXBTyb-9",
     "type": ["course"],
@@ -478,11 +466,6 @@
     "type": ["course", "collection"]
   },
   {
-    "title": "Atlassian Design System",
-    "url": "https://atlassian.design",
-    "type": ["example", "reference"]
-  },
-  {
     "title": "Human Interface Guidelines",
     "url": "https://developer.apple.com/design/human-interface-guidelines/guidelines/overview",
     "type": ["reference"]
@@ -491,31 +474,6 @@
     "title": "Material Design",
     "url": "https://m3.material.io",
     "type": ["reference"]
-  },
-  {
-    "title": "Primer Design System",
-    "url": "https://primer.style",
-    "type": ["example", "reference"]
-  },
-  {
-    "title": "Spectrum, Adobe’s design system",
-    "url": "https://spectrum.adobe.com",
-    "type": ["example", "reference"]
-  },
-  {
-    "title": "Carbon Design System",
-    "url": "https://carbondesignsystem.com",
-    "type": ["example", "reference"]
-  },
-  {
-    "title": "IBM Design Language",
-    "url": "https://www.ibm.com/design/language",
-    "type": ["example", "reference"]
-  },
-  {
-    "title": "Government Design Principles",
-    "url": "https://www.gov.uk/guidance/government-design-principles",
-    "type": ["example", "reference"]
   },
   {
     "title": "User Inyerface - A worst-practice UI experiment",
@@ -550,7 +508,7 @@
   {
     "title": "I Regret My $46k Website Redesign",
     "url": "https://mtlynch.io/tinypilot-redesign",
-    "type": ["community"]
+    "type": ["opinion"]
   },
   {
     "title": "Dark UIs. The Good and the Bad. Dos and Don’ts.",
@@ -720,5 +678,50 @@
     "title": "A List Apart",
     "url": "https://alistapart.com",
     "type": ["reference"]
+  },
+  {
+    "title": "Colorful",
+    "url": "https://github.com/Siddharth11/Colorful",
+    "type": ["reference", "collection"]
+  },
+  {
+    "title": "Build a Color Scheme: The Fundamentals",
+    "url": "https://tympanus.net/codrops/2012/09/17/build-a-color-scheme-the-fundamentals",
+    "type": ["guide"]
+  },
+  {
+    "title": "Color Realism and Color Science",
+    "url": "http://web.mit.edu/abyrne/www/ColorRealism.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "typography",
+    "url": "https://github.com/deanhume/typography",
+    "type": ["reference", "collection"]
+  },
+  {
+    "title": "Combining Typefaces",
+    "url": "https://blog.typekit.com/2016/04/29/combining-typefaces-free-guide-to-great-typography",
+    "type": ["guide"]
+  },
+  {
+    "title": "The Elements of Typographic Style Applied to the Web",
+    "url": "http://webtypography.net",
+    "type": ["book"]
+  },
+  {
+    "title": "Typography for User Interfaces",
+    "url": "https://viljamis.com/2016/typography-for-user-interfaces",
+    "type": ["guide"]
+  },
+  {
+    "title": "Typewolf",
+    "url": "https://www.typewolf.com",
+    "type": ["reference"]
+  },
+  {
+    "title": "Designing Grids",
+    "url": "https://vimeo.com/239782886",
+    "type": ["guide", "community"]
   }
 ]

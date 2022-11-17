@@ -1,5 +1,6 @@
 {
   "title": "User Interface Design",
+  "next": ["htmlcss", "webaccessibility"],
   "resources": [
     "https://whydoweinterface.com",
     "https://www.udacity.com/course/human-computer-interaction--ud400",
@@ -77,7 +78,9 @@
       "resources": [
         "https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color",
         "https://www.nickkolenda.com/color-psychology",
-        "https://colorandcontrast.com"
+        "https://colorandcontrast.com",
+        "https://github.com/Siddharth11/Colorful",
+        "https://tympanus.net/codrops/2012/09/17/build-a-color-scheme-the-fundamentals"
       ]
     },
     {
@@ -85,11 +88,14 @@
       "resources": [
         "https://typographyhandbook.com",
         "https://fonts.google.com/knowledge",
-        "https://typewar.com",
-        "https://www.learnui.design/tools/typography-tutorial.html",
         "https://www.smashingmagazine.com/2022/10/typographic-hierarchies",
         "https://design.tutsplus.com/courses/the-ultimate-guide-to-typography",
-        "https://www.nickkolenda.com/font-psychology"
+        "https://www.nickkolenda.com/font-psychology",
+        "https://github.com/deanhume/typography",
+        "https://blog.typekit.com/2016/04/29/combining-typefaces-free-guide-to-great-typography",
+        "http://webtypography.net",
+        "https://viljamis.com/2016/typography-for-user-interfaces",
+        "https://www.typewolf.com"
       ]
     },
     {
@@ -110,7 +116,8 @@
         "http://learndesignprinciples.com",
         "https://mediaqueri.es",
         "https://webdesign.tutsplus.com/series/invisible-forces-in-design--cms-1060",
-        "https://www.smashingmagazine.com/2017/12/building-better-ui-designs-layout-grids"
+        "https://www.smashingmagazine.com/2017/12/building-better-ui-designs-layout-grids",
+        "https://vimeo.com/239782886"
       ]
     },
     {
@@ -119,7 +126,6 @@
         "https://github.com/alexpate/awesome-design-systems",
         "https://alistapart.com/article/selling-design-systems",
         "https://www.designbetter.co/design-systems-handbook",
-        "https://designsystemsrepo.com",
         "https://atomicdesign.bradfrost.com",
         "https://www.designsystemchecklist.com",
         "https://www.invisionapp.com/inside-design/guide-to-design-systems",
@@ -141,7 +147,6 @@
         "https://www.youtube.com/playlist?list=PLFW6ct83_wC_N-IrrU60lH4G0dV6u1B4n",
         "https://www.youtube.com/watch?v=c9Wg6Cb_YlU",
         "https://www.youtube.com/playlist?list=PLvnhVb8yYRQ3TDOsSgN0pf0XqG6E56IYM",
-        "https://www.youtube.com/playlist?list=PLvnhVb8yYRQ1rvEFiPEyNbVPiJxvuCbgL",
         "https://www.youtube.com/playlist?list=PLLnpHn493BHHUZe9bihv37Z6CyXBTyb-9",
         "https://www.youtube.com/watch?v=oo5EoelQ_DQ"
       ]
@@ -149,14 +154,7 @@
     {
       "title": "How do they do it",
       "resources": [
-        "https://atlassian.design",
-        "https://developer.apple.com/design/human-interface-guidelines/guidelines/overview",
-        "https://m3.material.io",
-        "https://primer.style",
-        "https://spectrum.adobe.com",
-        "https://carbondesignsystem.com",
-        "https://www.ibm.com/design/language",
-        "https://www.gov.uk/guidance/government-design-principles",
+        "https://designsystemsrepo.com",
         "https://nicelydone.club",
         "https://dribbble.com/",
         "https://www.calltoidea.com",
@@ -170,19 +168,22 @@
       "title": "Nice to know",
       "resources": [
         "https://userinyerface.com",
+        "https://www.webdesignmuseum.org",
         "https://cantunsee.space",
         "http://www.patternlanguage.com",
         "http://toastytech.com/guis/index.html",
         "https://mtlynch.io/tinypilot-redesign",
         "https://matthewstrom.com/writing/copying",
         "https://webdesign.tutsplus.com/series/web-design-across-the-world--cms-1038",
-        "https://www.deceptive.design"
+        "https://www.deceptive.design",
+        "http://web.mit.edu/abyrne/www/ColorRealism.html"
       ]
     },
     {
       "title": "Great bookmarks",
       "resources": [
-        "https://www.webdesignmuseum.org",
+        "https://developer.apple.com/design/human-interface-guidelines/guidelines/overview",
+        "https://m3.material.io",
         "https://biasedbydesign.com",
         "https://www.nngroup.com",
         "https://www.smashingmagazine.com/2022/09/ux-checklists-for-interface-designers",
