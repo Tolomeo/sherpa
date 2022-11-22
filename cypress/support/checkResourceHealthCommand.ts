@@ -61,7 +61,7 @@ const resourceCheckStrategy = {
     cy.request({
       url: `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
         resource.url,
-      )}`,
+      )}&render=true`,
       headers: {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
       },
