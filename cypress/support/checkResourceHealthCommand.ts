@@ -107,6 +107,10 @@ const checkResourceHealth = (resource: Resource) => {
     case 'testing-playground.com':
     case 'arsfutura.com':
     case 'tooltester.com':
+    case 'developer.apple.com':
+    case 'regexr.com':
+    case 'pexels.com':
+    case 'tooltester.com':
       return resourceCheckStrategy.visit(resource)
     case 'udemy.com':
     case 'codepen.io':
