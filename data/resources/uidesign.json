@@ -187,7 +187,7 @@
     "type": ["book"]
   },
   {
-    "title": " A brief guide to design feedback",
+    "title": "A brief guide to design feedback",
     "url": "https://matthewstrom.com/writing/critique-vs-review",
     "type": ["guide"]
   },
@@ -263,7 +263,7 @@
     "type": ["guide"]
   },
   {
-    "title": "Color and Contrast",
+    "title": "Color & Contrast",
     "url": "https://colorandcontrast.com",
     "type": ["guide", "reference"]
   },
@@ -333,7 +333,7 @@
     "type": ["guide"]
   },
   {
-    "title": "Media Queries ",
+    "title": "Media Queries",
     "url": "https://mediaqueri.es",
     "type": ["example", "collection"]
   },
@@ -516,7 +516,7 @@
     "type": ["guide"]
   },
   {
-    "title": " Copying is the way design works",
+    "title": "Copying is the way design works",
     "url": "https://matthewstrom.com/writing/copying",
     "type": ["guide"]
   },
@@ -526,7 +526,7 @@
     "type": ["guide", "collection"]
   },
   {
-    "title": "Deceptive Design -  user interfaces crafted to trick you",
+    "title": "Deceptive Design - user interfaces crafted to trick you",
     "url": "https://www.deceptive.design",
     "type": ["reference"]
   },

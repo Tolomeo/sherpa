@@ -61,7 +61,7 @@ const resourceCheckStrategy = {
     cy.request({
       url: `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
         resource.url,
-      )}`,
+      )}&render=true`,
       headers: {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
       },
@@ -106,6 +106,10 @@ const checkResourceHealth = (resource: Resource) => {
     case 'gameaccessibilityguidelines.com':
     case 'testing-playground.com':
     case 'arsfutura.com':
+    case 'tooltester.com':
+    case 'developer.apple.com':
+    case 'regexr.com':
+    case 'pexels.com':
     case 'tooltester.com':
       return resourceCheckStrategy.visit(resource)
     case 'udemy.com':
