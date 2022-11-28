@@ -1,4 +1,48 @@
-import { paths } from '../../../data'
+import { paths, Resource } from '../../../data'
+
+const checkResourceHealth = (resource: Resource) => {
+  // checking if it is a downloadable resource
+  // so far only PDFs
+  if (resource.url.match(/\.pdf$/)) {
+    return cy.checkHealthByBinaryRequest(resource)
+  }
+
+  const host = new URL(resource.url).hostname.replace(/^www./, '')
+
+  switch (host) {
+    case 'youtube.com':
+      // skipping consent check page
+      // TODO: evaluate using youtube apis instead?
+      cy.setCookie('CONSENT', 'YES+cb.20220215-09-p0.en-GB+F+903', {
+        domain: '.youtube.com',
+      })
+      return cy.checkHealthByUrlRequest(resource)
+    case 'thevaluable.dev':
+    case 'usehooks-ts.com':
+    case 'developer.ibm.com':
+    case 'davrous.com':
+    case 'zzapper.co.uk':
+    case 'launchschool.com':
+    case 'wattenberger.com':
+    case 'gameaccessibilityguidelines.com':
+    case 'testing-playground.com':
+    case 'arsfutura.com':
+    case 'tooltester.com':
+    case 'developer.apple.com':
+    case 'regexr.com':
+    case 'pexels.com':
+    case 'tooltester.com':
+      return cy.checkHealthByVisit(resource)
+    case 'udemy.com':
+    case 'codepen.io':
+    case 'ui.dev':
+    case 'reactdigest.net':
+    case 'data-flair.training':
+      return cy.checkHealthByScraperRequest(resource)
+    default:
+      return cy.checkHealthByUrlRequest(resource)
+  }
+}
 
 describe('Resources', () => {
   Object.entries(paths).forEach(([_, path]) => {
@@ -10,7 +54,7 @@ describe('Resources', () => {
         cy.on('uncaught:exception', () => false)
 
         it(`"${pathResource.title}" [ ${pathResource.url} ]`, () => {
-          cy.checkResourceHealth(pathResource)
+          checkResourceHealth(pathResource)
         })
       })
     })
@@ -25,7 +69,7 @@ describe('Resources', () => {
               // failing the test when an uncaught exception is thrown by the resource page
               cy.on('uncaught:exception', () => false)
 
-              cy.checkResourceHealth(pathExtraResource)
+              checkResourceHealth(pathExtraResource)
             })
           })
         })
