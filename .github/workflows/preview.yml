@@ -31,10 +31,10 @@ jobs:
     timeout-minutes: 20 # to prevent a hanging process from using all CI minutes
     steps:
       - uses: actions/checkout@v2
-      - uses: cypress-io/github-action@v2
+      - uses: cypress-io/github-action@v4
         env:
           CYPRESS_BASE_URL: ${{ needs.Deploy.outputs.preview-url }}
         with:
           spec: |
-            cypress/integration/paths/home.spec.ts
-            cypress/integration/paths/pages.spec.ts
+            cypress/e2e/paths/home.cy.ts
+            cypress/e2e/paths/pages.cy.ts
