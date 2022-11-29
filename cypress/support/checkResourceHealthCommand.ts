@@ -10,12 +10,15 @@ declare global {
 
       checkHealthByBinaryRequest(value: Resource): void
 
-      checkHealthByScraperRequest(value: Resource): void
+      checkHealthByScraperRequest(
+        value: Resource,
+        options?: { render?: boolean },
+      ): void
     }
   }
 }
 
-const cleanHtmlEntities = (str: string) =>
+const cleanTitleString = (str: string) =>
   Object.entries({
     '&amp;': '&',
     '&lt;': '<',
@@ -24,13 +27,24 @@ const cleanHtmlEntities = (str: string) =>
     '&apos;': "'",
     '&shy;': '',
     '&nbsp;': ' ',
-  }).reduce((_str, [entity, replacement]) => {
-    return _str.replace(new RegExp(entity, 'gi'), replacement)
-  }, str)
+  })
+    .reduce((_str, [entity, replacement]) => {
+      return _str.replace(new RegExp(entity, 'gi'), replacement)
+    }, str)
+    // cleaning any possible additional bothering special chars filtering by character code
+    .split('')
+    .filter((char) => {
+      // 173 is soft wrap (equivalent of &shy;)
+      return ![173].includes(char.charCodeAt(0))
+    })
+    .join('')
 
 const checkHealthByVisit = (resource: Resource) => {
   cy.visit(resource.url, { headers: { Referer: resource.url } })
-  cy.get('title').should('contain.text', resource.title)
+  cy.get('title').should(($title) => {
+    const titleText = cleanTitleString($title.text())
+    return expect(titleText).to.contain(resource.title)
+  })
 }
 
 const checkHealthByUrlRequest = (resource: Resource) => {
@@ -39,9 +53,8 @@ const checkHealthByUrlRequest = (resource: Resource) => {
 
     // if we received the document title in the response we validate against that
     if (document.title) {
-      return expect(cleanHtmlEntities(document.title)).to.contain(
-        resource.title,
-      )
+      const titleText = cleanTitleString(document.title)
+      return expect(titleText).to.contain(resource.title)
     }
 
     // if we didn't receive the title in the response body
@@ -58,11 +71,15 @@ const checkHealthByBinaryRequest = (resource: Resource) => {
   })
 }
 
-const checkHealthByScraperRequest = (resource: Resource) => {
+const checkHealthByScraperRequest = (
+  resource: Resource,
+  { render = false }: { render?: boolean } = {},
+) => {
+  cy.wait(1000)
   cy.request({
     url: `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
       resource.url,
-    )}&render=true`,
+    )}&render=${JSON.stringify(render)}`,
     headers: {
       apikey: Cypress.env('ZENSCRAPE_API_KEY'),
     },
@@ -70,7 +87,7 @@ const checkHealthByScraperRequest = (resource: Resource) => {
   }).then((response) => {
     const document = new DOMParser().parseFromString(response.body, 'text/html')
 
-    return expect(cleanHtmlEntities(document.title)).to.contain(resource.title)
+    return expect(cleanTitleString(document.title)).to.contain(resource.title)
   })
 }
 
