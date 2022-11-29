@@ -12,13 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Path resources healthcheck
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         env:
-          CYPRESS_baseUrl: https://the-learning-path.vercel.app
+          CYPRESS_baseUrl: https://www.sherpa.guide
           CYPRESS_retries: 0
           CYPRESS_pageLoadTimeout: 60000
           CYPRESS_requestTimeout: 30000
           CYPRESS_ZENSCRAPE_API_KEY: ${{ secrets.ZENSCRAPE_API_KEY }}
         with:
           browser: chrome
-          spec: cypress/integration/paths/resources.spec.ts # Running only resources tests
+          spec: cypress/e2e/paths/resources.cy.ts # Running only resources tests
