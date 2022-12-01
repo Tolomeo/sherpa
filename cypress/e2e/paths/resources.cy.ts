@@ -35,9 +35,14 @@ const checkResourceHealth = (resource: Resource) => {
     case 'pexels.com':
     case 'regexr.com':
     case 'udemy.com':
-      return cy.checkHealthByScraperRequest(resource)
+      return cy.checkHealthByScraperRequest(resource, {
+        apikey: Cypress.env('ZENSCRAPE_API_KEY'),
+      })
     case 'codepen.io':
-      return cy.checkHealthByScraperRequest(resource, { render: true })
+      return cy.checkHealthByScraperRequest(resource, {
+        apikey: Cypress.env('ZENSCRAPE_API_KEY'),
+        render: true,
+      })
     default:
       return cy.checkHealthByUrlRequest(resource)
   }

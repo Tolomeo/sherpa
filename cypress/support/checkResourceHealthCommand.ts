@@ -12,7 +12,7 @@ declare global {
 
       checkHealthByScraperRequest(
         value: Resource,
-        options?: { render?: boolean },
+        options: { apikey: string; render?: boolean },
       ): void
     }
   }
@@ -73,12 +73,11 @@ const checkHealthByBinaryRequest = (resource: Resource) => {
 
 const checkHealthByScraperRequest = (
   resource: Resource,
-  { render = false }: { render?: boolean } = {},
+  { apikey, render = false }: { apikey: string; render?: boolean },
 ) => {
   let url = `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
     resource.url,
   )}`
-  const apikey = Cypress.env('ZENSCRAPE_API_KEY')
 
   if (render) {
     url = `${url}&render=true`
