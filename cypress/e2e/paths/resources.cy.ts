@@ -25,8 +25,6 @@ const checkResourceHealth = (resource: Resource) => {
     case 'launchschool.com':
     case 'wattenberger.com':
     case 'gameaccessibilityguidelines.com':
-    case 'developer.apple.com':
-    case 'regexr.com':
     case 'app.codecrafters.io':
       return cy.checkHealthByVisit(resource)
     case 'tooltester.com':
@@ -34,10 +32,18 @@ const checkResourceHealth = (resource: Resource) => {
     case 'reactdigest.net':
     case 'data-flair.training':
     case 'pexels.com':
-      return cy.checkHealthByScraperRequest(resource)
-    case 'codepen.io':
+    case 'regexr.com':
+    case 'developer.apple.com':
     case 'udemy.com':
-      return cy.checkHealthByScraperRequest(resource, { render: true })
+    case 'codepen.io':
+      return cy.checkHealthByScraperRequest(resource, {
+        apikey: Cypress.env('ZENSCRAPE_API_KEY'),
+      })
+    /* case '':
+			return cy.checkHealthByScraperRequest(resource, {
+				apikey: Cypress.env('ZENSCRAPE_API_KEY'),
+				render: true,
+			}) */
     default:
       return cy.checkHealthByUrlRequest(resource)
   }
