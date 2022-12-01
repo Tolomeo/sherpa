@@ -26,7 +26,6 @@ const checkResourceHealth = (resource: Resource) => {
     case 'wattenberger.com':
     case 'gameaccessibilityguidelines.com':
     case 'developer.apple.com':
-    case 'regexr.com':
     case 'app.codecrafters.io':
       return cy.checkHealthByVisit(resource)
     case 'tooltester.com':
@@ -34,9 +33,10 @@ const checkResourceHealth = (resource: Resource) => {
     case 'reactdigest.net':
     case 'data-flair.training':
     case 'pexels.com':
+    case 'regexr.com':
+    case 'udemy.com':
       return cy.checkHealthByScraperRequest(resource)
     case 'codepen.io':
-    case 'udemy.com':
       return cy.checkHealthByScraperRequest(resource, { render: true })
     default:
       return cy.checkHealthByUrlRequest(resource)

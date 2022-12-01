@@ -75,13 +75,22 @@ const checkHealthByScraperRequest = (
   resource: Resource,
   { render = false }: { render?: boolean } = {},
 ) => {
+  let url = `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
+    resource.url,
+  )}`
+  const apikey = Cypress.env('ZENSCRAPE_API_KEY')
+
+  if (render) {
+    url = `${url}&render=true`
+  }
+
+  // waiting for enough time to avoid 429 error (too many concurrent requests)
   cy.wait(1000)
+
   cy.request({
-    url: `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
-      resource.url,
-    )}&render=${JSON.stringify(render)}`,
+    url,
     headers: {
-      apikey: Cypress.env('ZENSCRAPE_API_KEY'),
+      apikey,
     },
     log: false,
   }).then((response) => {
