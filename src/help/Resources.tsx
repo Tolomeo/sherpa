@@ -1,6 +1,6 @@
 import React from 'react'
 import { ResourceTypes } from '../../data'
-import { Box, Chip, Typography, Stack } from '../theme'
+import { Box, Typography, Stack } from '../theme'
 import { ResourceTypeLabel } from '../resourceTypes'
 
 type Props = {

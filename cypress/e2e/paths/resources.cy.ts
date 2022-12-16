@@ -31,7 +31,6 @@ const checkResourceHealth = (resource: Resource) => {
     case 'ui.dev':
     case 'reactdigest.net':
     case 'data-flair.training':
-    case 'pexels.com':
     case 'regexr.com':
     case 'developer.apple.com':
     case 'udemy.com':
@@ -39,11 +38,11 @@ const checkResourceHealth = (resource: Resource) => {
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
       })
-    /* case '':
-			return cy.checkHealthByScraperRequest(resource, {
-				apikey: Cypress.env('ZENSCRAPE_API_KEY'),
-				render: true,
-			}) */
+    case 'pexels.com':
+      return cy.checkHealthByScraperRequest(resource, {
+        apikey: Cypress.env('ZENSCRAPE_API_KEY'),
+        render: true,
+      })
     default:
       return cy.checkHealthByUrlRequest(resource)
   }
