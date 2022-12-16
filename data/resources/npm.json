@@ -173,11 +173,6 @@
   },
   { "title": "npms", "url": "https://npms.io", "type": ["reference"] },
   {
-    "title": "BundlePhobia | cost of adding a npm package",
-    "url": "https://cost-of-modules.herokuapp.com",
-    "type": ["reference"]
-  },
-  {
     "title": "npm cheatsheet",
     "url": "https://devhints.io/npm",
     "type": ["reference"]

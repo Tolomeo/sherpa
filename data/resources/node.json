@@ -353,10 +353,5 @@
     "title": "An overview of Node.js: architecture, APIs, event loop, concurrency",
     "url": "https://2ality.com/2022/09/nodejs-overview.html",
     "type": ["guide"]
-  },
-  {
-    "title": "Modern Application Development with Node.js on AWS",
-    "url": "https://www.coursera.org/specializations/aws-nodejs-serverless-development",
-    "type": ["course"]
   }
 ]
