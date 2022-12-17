@@ -723,5 +723,66 @@
     "title": "Designing Grids",
     "url": "https://vimeo.com/239782886",
     "type": ["guide", "community"]
+  },
+  {
+    "title": "The UX psychology glossary",
+    "url": "https://builtformars.com/ux-glossary",
+    "type": ["reference", "guide"]
+  },
+
+  {
+    "title": "Patterns",
+    "url": "https://maggieappleton.com/patterns",
+    "type": ["guide", "collection"]
+  },
+  {
+    "title": "A complete guide to iconography",
+    "url": "https://www.designsystems.com/iconography-guide/",
+    "type": ["guide"]
+  },
+  {
+    "title": "The Anatomy Of Themed Design System Components",
+    "url": "https://www.smashingmagazine.com/2022/12/anatomy-themed-design-system-components/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Design System Maturity Levels",
+    "url": "https://www.millisecond.co/blog/design-systems-maturity",
+    "type": ["guide"]
+  },
+  {
+    "title": "Adobe XD tutorials",
+    "url": "https://www.adobe.com/products/xd/learn/view-all-xd-tutorials.html",
+    "type": ["tutorial", "collection"]
+  },
+  {
+    "title": "Design Systems For Figma",
+    "url": "https://www.designsystemsforfigma.com/",
+    "type": ["generator", "collection"]
+  },
+  {
+    "title": "Design Threads",
+    "url": "https://designthreads.report/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Type Scale",
+    "url": "https://type-scale.com/",
+    "type": ["generator"]
+  },
+  {
+    "title": "Utopia",
+    "url": "https://utopia.fyi/",
+    "type": ["generator", "collection"]
+  },
+  {
+    "title": "The UX Bookmark",
+    "url": "https://theuxbookmark.conetrees.com/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Built For Mars",
+    "url": "https://builtformars.com/",
+    "type": ["reference"]
   }
 ]
