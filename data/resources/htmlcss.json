@@ -6,7 +6,7 @@
   },
   {
     "title": "Responsive Web Design Certification",
-    "url": "https://www.freecodecamp.org/learn/responsive-web-design",
+    "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
     "type": ["course", "collection"]
   },
   {
@@ -308,11 +308,6 @@
     "type": ["example", "collection"]
   },
   {
-    "title": "BEM — Block Element Modifier",
-    "url": "http://getbem.com",
-    "type": ["reference"]
-  },
-  {
     "title": "SEO Mythbusting",
     "url": "https://www.youtube.com/playlist?list=PLKoqnv2vTMUN6lFDz6qMBsz7-Jm8YRV9H",
     "type": ["collection"],
@@ -347,12 +342,6 @@
     "title": "Web Almanac",
     "url": "https://almanac.httparchive.org",
     "type": ["reference"]
-  },
-  {
-    "title": "CSS Grid Template Builder",
-    "url": "https://codepen.io/anthonydugois/full/RpYBmy",
-    "type": ["generator"],
-    "source": "codepen.io/anthonydugois"
   },
   {
     "title": "Mailtolink.me",
@@ -449,12 +438,6 @@
     "url": "https://hiddedevries.nl/en/blog/2022-01-23-more-to-give-than-just-the-div-semantics-and-how-to-get-them-right",
     "type": ["guide"]
   },
-
-  {
-    "title": "A search engine in CSS.",
-    "url": "https://stories.algolia.com/a-search-engine-in-css-b5ec4e902e97",
-    "type": ["guide"]
-  },
   {
     "title": "Sass (CSS Preprocessor) Crash Course - CSS with Superpowers",
     "url": "https://www.youtube.com/watch?v=fc3IFF4B6Jw",
@@ -540,5 +523,80 @@
     "title": "UI Buttons",
     "url": "https://ui-buttons.web.app",
     "type": ["reference", "collection"]
+  },
+  {
+    "title": "Learn HTML",
+    "url": "https://web.dev/learn/html/",
+    "type": ["course"]
+  },
+  {
+    "title": "100 Days Of More Or Less Modern CSS",
+    "url": "https://www.matuzo.at/blog/2022/100-days-of-more-or-less-modern-css/",
+    "type": ["guide", "collection"]
+  },
+  {
+    "title": "A Primer On CSS Container Queries",
+    "url": "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries/",
+    "type": ["guide"]
+  },
+  {
+    "title": "The Complete Guide to Using CSS Variables",
+    "url": "https://webdesign.tutsplus.com/courses/the-complete-guide-to-using-css-variables",
+    "type": ["course"]
+  },
+  {
+    "title": "css-basics",
+    "url": "https://github.com/learning-zone/css-basics",
+    "type": ["guide", "collection"]
+  },
+  {
+    "title": "html-basics",
+    "url": "https://github.com/learning-zone/html-basics",
+    "type": ["guide", "collection"]
+  },
+  {
+    "title": "An Interactive Guide to Flexbox in CSS",
+    "url": "https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/",
+    "type": ["guide"]
+  },
+  {
+    "title": "A Practical Guide to CSS Media Queries",
+    "url": "https://stackdiary.com/css-media-queries",
+    "type": ["guide"]
+  },
+  {
+    "title": "HTML & CSS Full Course",
+    "url": "https://www.youtube.com/watch?v=G3e-cpL7ofc",
+    "type": ["course"]
+  },
+  {
+    "title": "A Nerd's Guide to Color on the Web",
+    "url": "https://css-tricks.com/nerds-guide-color-web/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Tree views in CSS ",
+    "url": "https://iamkate.com/code/tree-views/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Practical Color Theory for People Who Code",
+    "url": "https://tallys.github.io/color-theory/",
+    "type": ["guide"]
+  },
+  {
+    "title": "BEM 101",
+    "url": "https://css-tricks.com/bem-101/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Layoutit Grid",
+    "url": "https://grid.layoutit.com/",
+    "type": ["generator"]
+  },
+  {
+    "title": "cccreate",
+    "url": "https://cccreate.co/",
+    "type": ["generator", "collection"]
   }
 ]
