@@ -56,12 +56,6 @@
     "type": ["guide", "collection"]
   },
   {
-    "title": "Sara Soueidan on Applied Accessibility: Practical Tips For Building More Accessible Front-Ends at SmashingConf Feiburg 2019",
-    "url": "https://vimeo.com/362155651",
-    "type": ["guide"],
-    "source": "vimeo.com/smashingmagazine"
-  },
-  {
     "title": "Accessible to all",
     "url": "https://web.dev/accessible",
     "type": ["guide", "collection"]
@@ -77,7 +71,7 @@
     "type": ["guide", "collection"]
   },
   {
-    "title": "How A Screen Reader User Accesses The Web: A Smashing Video",
+    "title": "How A Screen Reader User Accesses The Web",
     "url": "https://www.smashingmagazine.com/2019/02/accessibility-webinar",
     "type": ["guide"]
   },
@@ -150,18 +144,6 @@
     "title": "When CSS Isn’t Enough: JavaScript Requirements For Accessible Components",
     "url": "https://www.smashingmagazine.com/2021/06/css-javascript-requirements-accessible-components",
     "type": ["guide"]
-  },
-  {
-    "title": "Writing CSS with Accessibility in Mind",
-    "url": "https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939",
-    "type": ["guide"],
-    "source": "medium.com/@matuzo"
-  },
-  {
-    "title": "Writing JavaScript with accessibility in mind",
-    "url": "https://medium.com/@matuzo/writing-javascript-with-accessibility-in-mind-a1f6a5f467b9",
-    "type": ["guide"],
-    "source": "medium.com/@matuzo"
   },
   {
     "title": "Writing HTML with accessibility in mind",
@@ -349,5 +331,62 @@
     "title": "EightShapes Contrast Grid",
     "url": "https://contrast-grid.eightshapes.com",
     "type": ["generator"]
+  },
+  {
+    "title": "Introduction to Accessibility",
+    "url": "https://a11y-101.com/",
+    "type": ["course"]
+  },
+  {
+    "title": "Learn Accessibility",
+    "url": "https://web.dev/learn/accessibility/",
+    "type": ["course"]
+  },
+  { "title": "a11yphant", "url": "https://a11yphant.com/", "type": ["course"] },
+  {
+    "title": "A Guide To Keyboard Accessibility: HTML And CSS (Part 1)",
+    "url": "https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-html-css-part1/",
+    "type": ["guide"]
+  },
+  {
+    "title": "A Guide To Keyboard Accessibility: HTML And CSS (Part 2)",
+    "url": "https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-javascript-part2/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Accessible Front-End Patterns For Responsive Tables (Part 1)",
+    "url": "https://www.smashingmagazine.com/2022/12/accessible-front-end-patterns-responsive-tables-part1/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Accessible Front-End Patterns For Responsive Tables (Part 2)",
+    "url": "https://www.smashingmagazine.com/2022/12/accessible-front-end-patterns-responsive-tables-part2/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Making Sense Of WAI-ARIA: A Comprehensive Guide",
+    "url": "https://www.smashingmagazine.com/2022/09/wai-aria-guide/",
+    "type": ["guide"]
+  },
+  {
+    "title": "The Realities And Myths Of Contrast And Color",
+    "url": "https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Writing CSS with Accessibility in Mind",
+    "url": "https://www.youtube.com/watch?v=EOiC2M47GBY",
+    "type": ["guide"],
+    "source": "youtube.com/@jsconf_"
+  },
+  {
+    "title": "Setting up a screen reader testing environment on your computer",
+    "url": "https://www.sarasoueidan.com/blog/testing-environment-setup/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": " Curricula on Web Accessibility: A Framework to Build Your Own Courses",
+    "url": "https://www.w3.org/WAI/curricula/",
+    "type": ["reference"]
   }
 ]
