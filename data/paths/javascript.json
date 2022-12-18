@@ -38,7 +38,9 @@
         "https://softchris.github.io/pages/javascript-regex.html",
         "https://launchschool.com/books/javascript",
         "https://www.youtube.com/playlist?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V",
-        "https://github.com/TimothyGu/learning-promises"
+        "https://github.com/TimothyGu/learning-promises",
+        "https://frontendmasters.com/blog/vanilla-javascript-todomvc/",
+        "https://jrsinclair.com/articles/2022/why-would-anyone-need-javascript-generator-functions/"
       ]
     },
     {
@@ -113,12 +115,15 @@
         "https://www.youtube.com/watch?v=Uo3cL4nrGOk&t=4s",
         "https://lucasfcosta.com/2017/07/17/The-Ultimate-Guide-to-JavaScript-Fatigue.html",
         "https://github.com/you-dont-need/You-Dont-Need-JavaScript",
+        "https://github.com/learning-zone/javascript-basics",
         "https://www.youtube.com/watch?v=rczu8kc8JZA"
       ]
     },
     {
       "title": "Great bookmarks",
       "resources": [
+        "https://codepo8.github.io/dearconsole/",
+        "https://unjs.io/",
         "https://www.30secondsofcode.org/js/p/1",
         "http://jargon.js.org",
         "https://www.smashingmagazine.com/2021/04/vanilla-javascript-code-snippets/",

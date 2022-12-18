@@ -567,5 +567,30 @@
     "title": "Code Golfing Tips & Tricks",
     "url": "https://getbutterfly.com/code-golfing-tips-tricks-how-to-minify-your-javascript-code",
     "type": ["guide"]
+  },
+  {
+    "title": "Writing a TodoMVC App With Vanilla JS in 2022",
+    "url": "https://frontendmasters.com/blog/vanilla-javascript-todomvc/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Why would anyone need JavaScript generator functions?",
+    "url": "https://jrsinclair.com/articles/2022/why-would-anyone-need-javascript-generator-functions/",
+    "type": ["guide"]
+  },
+  {
+    "title": "javascript-basics",
+    "url": "https://github.com/learning-zone/javascript-basics",
+    "type": ["reference"]
+  },
+  {
+    "title": "Dear Console",
+    "url": "https://codepo8.github.io/dearconsole/",
+    "type": ["reference"]
+  },
+  {
+    "title": "UnJS",
+    "url": "https://unjs.io/",
+    "type": ["generator", "collection"]
   }
 ]
