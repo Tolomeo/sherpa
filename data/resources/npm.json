@@ -213,23 +213,28 @@
     "type": ["guide", "reference"]
   },
   {
-    "title": "Installing and running Node.js bin scripts",
-    "url": "https://2ality.com/2022/08/installing-nodejs-bin-scripts.html",
-    "type": ["guide", "reference"]
-  },
-  {
     "title": "2ality",
     "url": "https://2ality.com",
     "type": ["community"]
   },
   {
-    "title": "Running cross-platform tasks via npm package scripts",
-    "url": "https://2ality.com/2022/08/npm-package-scripts.html",
-    "type": ["guide"]
-  },
-  {
     "title": "Monorepos in JavaScript & TypeScript",
     "url": "https://www.robinwieruch.de/javascript-monorepos",
     "type": ["guide"]
+  },
+  {
+    "title": "Best practices for creating a modern npm package",
+    "url": "https://snyk.io/blog/best-practices-create-modern-npm-package/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Shell scripting with Node.js",
+    "url": "https://exploringjs.com/nodejs-shell-scripting/",
+    "type": ["book"]
+  },
+  {
+    "title": "How to build, test, and publish a TypeScript npm package in 2022",
+    "url": "https://www.strictmode.io/articles/build-test-and-publish-npm-package-2022",
+    "type": ["tutorial"]
   }
 ]
