@@ -61,7 +61,6 @@
         "https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations",
         "https://www.khanacademy.org/computing/computer-programming/programming-natural-simulations",
         "https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript",
-        "https://christianheilmann.com/2021/11/01/developer-tools-secrets-that-shouldnt-be-secrets/",
         "https://lisperator.net/pltut/",
         "https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/",
         "https://web.dev/streams",
@@ -106,6 +105,7 @@
       "title": "Nice to know",
       "resources": [
         "https://github.com/denysdovhan/wtfjs",
+        "https://christianheilmann.com/2021/11/01/developer-tools-secrets-that-shouldnt-be-secrets/",
         "https://js13kgames.com",
         "https://turriate.com/articles/modern-javascript-everything-you-missed-over-10-years",
         "http://callbackhell.com",

@@ -22,7 +22,6 @@
         "https://blog.sapegin.me/all/accessibility-testing",
         "https://www.adrianbolonio.com/en/testing-web-accessibility-part-1",
         "https://www.smashingmagazine.com/2019/02/accessibility-webinar",
-        "https://inclusive-components.design",
         "https://webdesign.tutsplus.com/series/web-accessibility-the-complete-learning-guide--cms-1301",
         "https://www.telerik.com/blogs/web-accessibility-guidebook-for-developers",
         "https://www.pauljadam.com/guides.html",
@@ -58,7 +57,8 @@
     {
       "title": "How do they do it?",
       "resources": [
-        "https://www.sarasoueidan.com/blog/testing-environment-setup/"
+        "https://www.sarasoueidan.com/blog/testing-environment-setup/",
+        "https://inclusive-components.design"
       ]
     },
     {
