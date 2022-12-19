@@ -275,5 +275,30 @@
     "title": "Git's database internals",
     "url": "https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store",
     "type": ["guide", "collection"]
+  },
+  {
+    "title": "The Basics of Version Control System Git Explained by Designing A New Car",
+    "url": "https://pixelpioneers.co/blog/2017/git-basics-explained-by-designing-a-new-car",
+    "type": ["guide"]
+  },
+  {
+    "title": "Advanced Git Features You Didn’t Know You Needed",
+    "url": "https://martinheinz.dev/blog/43",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Idiot proof git",
+    "url": "https://softwaredoug.com/blog/2022/11/09/idiot-proof-git-aliases.html",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Git Explorer",
+    "url": "https://gitexplorer.com/",
+    "type": ["generator"]
+  },
+  {
+    "title": "gitignore.io",
+    "url": "https://www.toptal.com/developers/gitignore",
+    "type": ["generator"]
   }
 ]
