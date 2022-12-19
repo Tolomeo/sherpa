@@ -252,12 +252,6 @@
     "type": ["example"]
   },
   {
-    "title": "Implement a Docker Registry",
-    "url": "https://www.coursera.org/projects/implement-docker-registry",
-    "type": ["tutorial"]
-  },
-
-  {
     "title": "From Containers to Kubernetes with Node.js",
     "url": "https://www.digitalocean.com/community/tutorial_series/from-containers-to-kubernetes-with-node-js",
     "type": ["guide", "collection"],
@@ -288,12 +282,6 @@
     "title": "Introduction to Containers w/ Docker, Kubernetes & OpenShift",
     "url": "https://www.coursera.org/learn/ibm-containers-docker-kubernetes-openshift",
     "type": ["course"]
-  },
-  {
-    "title": "Docker and Kubernetes",
-    "url": "https://www.youtube.com/watch?v=Wf2eSG3owoA",
-    "type": ["course"],
-    "source": "youtube.com/c/Freecodecamp"
   },
   {
     "title": "Docker & Kubernetes",
@@ -460,5 +448,21 @@
     "title": "Container Journal",
     "url": "https://containerjournal.com",
     "type": ["community", "reference"]
+  },
+  {
+    "title": "wasm-docker-better-together",
+    "url": "https://github.com/collabnix/wasm-docker-better-together",
+    "type": ["reference", "collection"]
+  },
+  {
+    "title": "Docker Containers and Kubernetes Fundamentals",
+    "url": "https://www.youtube.com/watch?v=kTp5xUtcalw",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "playground",
+    "url": "https://github.com/luisaveiro/playground",
+    "type": ["example"]
   }
 ]

@@ -3,7 +3,6 @@
   "resources": [
     "https://www.digitalocean.com/community/conceptual_articles/introduction-to-containers",
     "https://devopedia.org/docker",
-    "https://robertcooper.me/post/docker-guide",
     "https://www.youtube.com/playlist?list=PLXl_isu8qxvmDOAnUkG5x16LzBzGzY_Ww",
     "https://github.com/veggiemonk/awesome-docker"
   ],
@@ -11,6 +10,7 @@
     {
       "title": "There's more",
       "resources": [
+        "https://robertcooper.me/post/docker-guide",
         "https://serversforhackers.com/s/docker-in-dev-v2-i",
         "https://serversforhackers.com/s/docker-in-dev-v2-ii",
         "https://dockerlabs.collabnix.com/workshop/docker",
@@ -37,6 +37,7 @@
     {
       "title": "Beyond basics",
       "resources": [
+        "https://github.com/collabnix/wasm-docker-better-together",
         "https://www.manuel-strehl.de/quick_docker_commands",
         "https://devopedia.org/container-orchestration",
         "https://dockerlabs.collabnix.com/advanced/workshop",
@@ -58,20 +59,19 @@
         "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1JEu7BLraz8MdKJILJir7oY",
         "https://pythonspeed.com/docker",
         "https://github.com/Fewbytes/rubber-docker",
-        "https://github.com/p8952/bocker",
-        "https://www.coursera.org/projects/implement-docker-registry"
+        "https://github.com/p8952/bocker"
       ]
     },
     {
       "title": "With Kubernetes",
       "resources": [
+        "https://www.youtube.com/watch?v=kTp5xUtcalw",
         "https://www.digitalocean.com/community/tutorial_series/from-containers-to-kubernetes-with-node-js",
         "https://www.youtube.com/watch?v=yOu1APg7jtA",
         "https://github.com/semaphoreci/book-cicd-docker-kubernetes",
         "https://github.com/ramitsurana/awesome-kubernetes",
         "https://docker-k8s-lab.readthedocs.io",
         "https://www.coursera.org/learn/ibm-containers-docker-kubernetes-openshift",
-        "https://www.youtube.com/watch?v=Wf2eSG3owoA",
         "https://www.youtube.com/playlist?list=PLlI3peB1V-roY_90v7XfHX19ATS4tP2e0",
         "https://github.com/gravitational/workshop"
       ]
@@ -79,6 +79,7 @@
     {
       "title": "How do they do it?",
       "resources": [
+        "https://github.com/luisaveiro/playground",
         "https://www.digitalocean.com/community/tutorial_series/rails-on-containers",
         "https://www.digitalocean.com/community/tutorial_series/how-to-build-a-links-landing-page-in-php-with-laravel-and-docker-compose",
         "https://github.com/docker/awesome-compose",
