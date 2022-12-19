@@ -2,15 +2,9 @@
   "title": "HTML and CSS",
   "resources": [
     "https://internetingishard.netlify.app",
-    "https://learn-the-web.algonquindesign.ca/topics/information-architecture",
     "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
+    "https://learn-the-web.algonquindesign.ca/topics/information-architecture",
     "https://learn-the-web.algonquindesign.ca/topics/search-engine-optimization",
-    "https://flukeout.github.io",
-    "https://flexbox.io",
-    "https://flexboxfroggy.com",
-    "https://cssgrid.io",
-    "https://cssgridgarden.com",
-    "https://scrimba.com/learn/cssvariables",
     "https://github.com/diegocard/awesome-html5",
     "https://github.com/awesome-css-group/awesome-css"
   ],
@@ -18,6 +12,12 @@
     {
       "title": "There's more",
       "resources": [
+        "https://flukeout.github.io",
+        "https://flexbox.io",
+        "https://flexboxfroggy.com",
+        "https://cssgrid.io",
+        "https://cssgridgarden.com",
+        "https://scrimba.com/learn/cssvariables",
         "https://learn.shayhowe.com/html-css",
         "https://learn.shayhowe.com/advanced-html-css",
         "https://scrimba.com/learn/htmlcss",
