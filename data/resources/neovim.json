@@ -20,12 +20,6 @@
     "type": ["guide"]
   },
   {
-    "title": "Vim and You",
-    "url": "https://www.youtube.com/playlist?list=PLSf43fnldIpYipi-FjzjV6fAYUGysfjY8",
-    "type": ["tutorial", "collection"],
-    "source": "youtube.com/c/CodeSmell"
-  },
-  {
     "title": "awesome-vim",
     "url": "https://github.com/akrawchyk/awesome-vim",
     "type": ["reference", "collection"]
@@ -61,19 +55,9 @@
     "type": ["tutorial", "collection"]
   },
   {
-    "title": "Episodes",
-    "url": "http://vimcasts.org/episodes",
-    "type": ["guide", "collection"]
-  },
-  {
     "title": "VimGenius",
     "url": "http://www.vimgenius.com/lessons",
     "type": ["tutorial", "collection"]
-  },
-  {
-    "title": "PacVim",
-    "url": "https://github.com/jmoon018/PacVim",
-    "type": ["exercise"]
   },
   {
     "title": "Seven habits of effective text editing",
@@ -241,7 +225,7 @@
     "title": "Neovim",
     "url": "https://www.youtube.com/playlist?list=PLu-ydI-PCl0OEG0ZEqLRRuCrMJGAAI0tW",
     "type": ["tutorial", "collection"],
-    "source": "youtube.com/channel/UCFU7a7OMYfcpjtIpu2j47_Q"
+    "source": "youtube.com/@devonduty"
   },
   {
     "title": "Vim Tutorials",
@@ -391,5 +375,49 @@
     "url": "https://www.youtube.com/watch?v=RZ4p-saaQkc",
     "type": ["course"],
     "source": "youtube.com/c/Freecodecamp"
+  },
+  {
+    "title": "Full Neovim Setup",
+    "url": "https://www.youtube.com/watch?v=M5tJ47JyUP8",
+    "type": ["tutorial"],
+    "source": "youtube.com/@neilsabde2334"
+  },
+  {
+    "title": "Neovim Lua From Scratch",
+    "url": "https://www.youtube.com/playlist?list=PLPDVgSbOnt7LXQ8DTzu37UwCpA0elyD0V",
+    "type": ["course"],
+    "source": "youtube.com/@neilsabde2334"
+  },
+  {
+    "title": "Vim",
+    "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1Eevqs4-XmlSfrFOKb5C97K",
+    "type": ["course"],
+    "source": "youtube.com/@NeuralNine"
+  },
+  {
+    "title": "How I Setup Neovim On My Mac To Make It Amazing",
+    "url": "https://www.youtube.com/watch?v=vdn_pKJUda8",
+    "type": ["tutorial"],
+    "source": "youtube.com/@joseanmartinez"
+  },
+  {
+    "title": "Debugging in Neovim",
+    "url": "https://harrisoncramer.me/debugging-in-neovim/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "nvimdots",
+    "url": "https://github.com/ayamir/nvimdots",
+    "type": ["example"]
+  },
+  {
+    "title": "kickstart",
+    "url": "https://github.com/nvim-lua/kickstart.nvim",
+    "type": ["example"]
+  },
+  {
+    "title": "vim-cheatsheet",
+    "url": "https://github.com/chloneda/vim-cheatsheet",
+    "type": ["reference"]
   }
 ]
