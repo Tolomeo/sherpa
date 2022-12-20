@@ -64,11 +64,6 @@
     "source": "youtube.com/channel/UCp1rLlh9AQN9Pejzbg9dcAg"
   },
   {
-    "title": "Python Multiprocessing Pool: The Complete Guide",
-    "url": "https://superfastpython.com/multiprocessing-pool-python",
-    "type": ["guide"]
-  },
-  {
     "title": "Pygame Tutorial for Beginners",
     "url": "https://www.youtube.com/watch?v=FfWpgLFMI7w",
     "type": ["course"],
@@ -84,12 +79,6 @@
     "title": "20 Beginner Python Projects",
     "url": "https://www.youtube.com/watch?v=pdy3nh1tn6I",
     "type": ["example", "exercise"],
-    "source": "youtube.com/c/Freecodecamp"
-  },
-  {
-    "title": "Stardew Valley Game Clone with Python and Pygame",
-    "url": "https://www.youtube.com/watch?v=R9apl6B_ZgI",
-    "type": ["tutorial"],
     "source": "youtube.com/c/Freecodecamp"
   },
   {
@@ -336,12 +325,6 @@
     "type": ["tutorial"]
   },
   {
-    "title": "Build a Rest API with Django Rest Framework",
-    "url": "https://www.youtube.com/watch?v=mlr9BF4JomE",
-    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA",
-    "type": ["course"]
-  },
-  {
     "title": "Django For Beginners",
     "url": "https://www.youtube.com/watch?v=sm1mokevMWk&list=PLi39COpmJvHMGkGFHoFM7ix45nqD7jeFk&index=29",
     "source": "youtube.com/c/TechWithTim",
@@ -525,5 +508,175 @@
     "title": "Awesome Python Weekly",
     "url": "https://python.libhunt.com/newsletter",
     "type": ["reference"]
+  },
+  {
+    "title": "Python Tutorial For Beginners (With Notes)",
+    "url": "https://www.youtube.com/watch?v=EyEqWFvLDT8",
+    "type": ["course"],
+    "source": "youtube.com/@ProgrammingWithHarry"
+  },
+  {
+    "title": "Pytest for Beginners",
+    "url": "https://testdriven.io/blog/pytest-for-beginners/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Learn Python by Thinking in Types",
+    "url": "https://www.youtube.com/watch?v=jH85McHenvw",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "100 Days of Code - Learn Python",
+    "url": "https://www.youtube.com/playlist?list=PLto9KpJAqHMQNY3XP0JqLs7NyeU_dnNj0",
+    "type": ["course"],
+    "source": "youtube.com/@replit"
+  },
+  {
+    "title": "learn-python",
+    "url": "https://github.com/animator/learn-python",
+    "type": ["book"]
+  },
+  {
+    "title": "CS50's Introduction to Programming with Python",
+    "url": "https://www.youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+    "type": ["course"],
+    "source": "youtube.com/@cs50"
+  },
+  {
+    "title": "Learn Python (either on its own or for AP CSP)",
+    "url": "https://www.youtube.com/playlist?list=PL9YOvPKwvPULm7tjWCfhpFHBxy22KpVXx",
+    "type": ["course"],
+    "source": "youtube.com/@dr_wu3964"
+  },
+  {
+    "title": "Python Course for Beginners",
+    "url": "https://www.askpython.com/python-course-for-beginners",
+    "type": ["course"]
+  },
+  {
+    "title": "The NumPy Tutorial",
+    "url": "https://www.youtube.com/watch?v=TyIE3py-rFQ",
+    "type": ["course"],
+    "source": "youtube.com/@laithacademy"
+  },
+  {
+    "title": "Python FastAPI Playlist + testing + deployment + CI/CD",
+    "url": "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1L5QpSapVEzoSfob-4CR8zM",
+    "type": ["course"],
+    "source": "youtube.com/@SanjeevThiyagarajan"
+  },
+  {
+    "title": "Microservice Architecture and System Design with Python & Kubernetes",
+    "url": "https://www.youtube.com/watch?v=hmkF77F9TLw",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Python Concurrency Guides",
+    "url": "https://superfastpython.com/python-concurrency-guides/",
+    "type": ["guide", "collection"]
+  },
+  {
+    "title": "python-obj-system",
+    "url": "https://github.com/MoserMichael/python-obj-system",
+    "type": ["guide", "collection"]
+  },
+  {
+    "title": "Learn Python GUI Development for Desktop – PySide6 and Qt Tutorial",
+    "url": "https://www.youtube.com/watch?v=Z1N9JzNax2k",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "CS50's Introduction to Artificial Intelligence with Python",
+    "url": "https://www.youtube.com/playlist?list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv",
+    "type": ["course"],
+    "source": "youtube.com/@cs50"
+  },
+  {
+    "title": "Python Programming Fundamentals Towards Django Development",
+    "url": "https://www.youtube.com/playlist?list=PLOLrQ9Pn6cawb13MugxL-p1M4w7ZfT-qR",
+    "type": ["course"],
+    "source": "youtube.com/@veryacademy"
+  },
+  {
+    "title": "Django REST Framework Course",
+    "url": "https://www.youtube.com/watch?v=tujhGdn1EMI",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Creating a Stardew Valley inspired game in Python",
+    "url": "https://www.youtube.com/watch?v=T4IX36sP_0c",
+    "type": ["course"],
+    "source": "youtube.com/@ClearCode"
+  },
+  {
+    "title": "The ultimate introduction to Pygame",
+    "url": "https://www.youtube.com/watch?v=AY9MnQ4x3zk",
+    "type": ["course"],
+    "source": "youtube.com/@ClearCode"
+  },
+  {
+    "title": "How I setup a Python project",
+    "url": "https://blog.pamelafox.org/2022/09/how-i-setup-python-project.html",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "How to build a modular arithmetic library in Python",
+    "url": "https://monadical.com/posts/modular-arithmetic.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "Adding types to a large Python codebase",
+    "url": "https://dagster.io/blog/adding-python-types",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "How to Benchmark (Python) Code",
+    "url": "https://switowski.com/blog/how-to-benchmark-python-code/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Defensive coding guide",
+    "url": "https://docs.fedoraproject.org/en-US/defensive-coding/",
+    "type": ["guide", "reference"]
+  },
+  {
+    "title": "The Origins of Python | Lambert Meertens",
+    "url": "https://inference-review.com/article/the-origins-of-python",
+    "type": ["guide"]
+  },
+  {
+    "title": "All Top 40 Python Libraries EXPLAINED in 20 minutes",
+    "url": "https://www.youtube.com/watch?v=-29x_deQQus",
+    "type": ["guide"],
+    "source": "youtube.com/@KiteHQ"
+  },
+  {
+    "title": "Explore Flask",
+    "url": "https://exploreflask.com",
+    "type": ["book"]
+  },
+  {
+    "title": "How To Build Web Applications with Flask",
+    "url": "https://www.digitalocean.com/community/tutorial_series/how-to-create-web-sites-with-flask",
+    "type": ["guide", "collection"]
+  },
+  {
+    "title": "How to Dockerize a Flask Application",
+    "url": "https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Ultimate Flask Tutorial 2022",
+    "url": "https://www.docdroid.net/0GOZUFr/ultimate-flask-tutorial-2022-reddit-pdf",
+    "type": ["book"]
+  },
+  {
+    "title": "awesome-flask",
+    "url": "https://github.com/humiaozuzu/awesome-flask",
+    "type": ["reference", "collection"]
   }
 ]
