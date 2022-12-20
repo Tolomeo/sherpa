@@ -473,7 +473,7 @@
     "title": "JavaScript Tutorials",
     "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V",
     "type": ["course"],
-    "source": "youtube.com/c/Freecodecamp"
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "How to implement a programming language",
@@ -514,7 +514,7 @@
     "title": "Jest Crash Course - Learn How to Test your JavaScript Application",
     "url": "https://www.youtube.com/watch?v=ajiAl5UNzBU",
     "type": ["guide"],
-    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
+    "source": "youtube.com/@laithacademy"
   },
   {
     "title": "Building a JavaScript Testing Framework",
@@ -528,9 +528,9 @@
   },
   {
     "title": "Interview with Senior JS Developer in 2022",
-    "url": "https://www.youtube.com/watch?v=Uo3cL4nrGOk&t=4s",
+    "url": "youtube.com/@programmersarealsohuman5909",
     "type": ["opinion"],
-    "source": "youtube.com/channel/UCi8C7TNs2ohrc6hnRQ5Sn2w"
+    "source": "youtube.com/@programmersarealsohuman5909"
   },
   {
     "title": "The Ultimate Guide to JavaScript Fatigue: Realities of our industry",

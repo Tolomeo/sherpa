@@ -33,7 +33,7 @@
     "title": "Node.js and Express.js - Full Course",
     "url": "https://www.youtube.com/watch?v=Oe421EPjeBE",
     "type": ["course"],
-    "source": "youtube.com/c/Freecodecamp"
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "The Node Way",
@@ -188,13 +188,13 @@
     "title": "Redis with Node Crash Course - Cache Data for Improved Performance",
     "url": "https://www.youtube.com/watch?v=AzQ6_DTcG6c",
     "type": ["tutorial"],
-    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
+    "source": "youtube.com/@laithacademy"
   },
   {
     "title": "Socket.io Crash Course - Build a Real Time Chat Application",
     "url": "https://www.youtube.com/watch?v=asVDzgdyYLk",
     "type": ["tutorial"],
-    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
+    "source": "youtube.com/@laithacademy"
   },
   {
     "title": "How to make your own bittorrent client",

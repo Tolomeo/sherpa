@@ -40,7 +40,7 @@
     "title": "Lua and Love2d programming and game development",
     "url": "https://www.youtube.com/playlist?list=PL1P11yPQAo7q_BWMKFZvUlLBqLRUJLrJm",
     "type": ["course"],
-    "source": "youtube.com/channel/UC4L3JyeL7TXQM1f3yD6iVQQ"
+    "source": "youtube.com/@atibyte"
   },
   {
     "title": "Lua Programming",
@@ -51,7 +51,7 @@
     "title": "CS50's Introduction to Game Development",
     "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbluXJKKbCIb4xd7fcRkpzoz",
     "type": ["tutorial", "collection"],
-    "source": "youtube.com/c/Freecodecamp"
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Embedding Lua in C++",

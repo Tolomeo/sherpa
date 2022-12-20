@@ -43,7 +43,7 @@
   {
     "title": "Python for Beginners",
     "url": "https://www.youtube.com/watch?v=7utwZYKweho",
-    "source": "youtube.com/c/TheCyberMentor",
+    "source": "youtube.com/@TCMSecurityAcademy",
     "type": ["course"]
   },
   {
@@ -61,25 +61,25 @@
     "title": "Fundamental Cryptography in Theory and Python",
     "url": "https://www.youtube.com/playlist?list=PLWjMI9CAmVU4--SmpzgswTvxLkZqC9QWn",
     "type": ["course"],
-    "source": "youtube.com/channel/UCp1rLlh9AQN9Pejzbg9dcAg"
+    "source": "youtube.com/@cyrillgossi"
   },
   {
     "title": "Pygame Tutorial for Beginners",
     "url": "https://www.youtube.com/watch?v=FfWpgLFMI7w",
     "type": ["course"],
-    "source": "youtube.com/c/Freecodecamp"
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Drum Machine with Python and Pygame",
     "url": "https://www.youtube.com/watch?v=F3J3PZj0zi0",
     "type": ["course"],
-    "source": "youtube.com/c/Freecodecamp"
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "20 Beginner Python Projects",
     "url": "https://www.youtube.com/watch?v=pdy3nh1tn6I",
     "type": ["example", "exercise"],
-    "source": "youtube.com/c/Freecodecamp"
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Uncommon Uses of Python in Commonly Used Libraries",
@@ -272,7 +272,7 @@
   {
     "title": "Automate with Python",
     "url": "https://www.youtube.com/watch?v=PXMJ6FS7llk",
-    "source": "youtube.com/c/Freecodecamp",
+    "source": "youtube.com/@freecodecamp",
     "type": ["guide"]
   },
   {
@@ -298,7 +298,7 @@
   {
     "title": "OpenCV Course",
     "url": "https://www.youtube.com/watch?v=oXlwWbU8l2o",
-    "source": "youtube.com/c/Freecodecamp",
+    "source": "youtube.com/@freecodecamp",
     "type": ["course"]
   },
   {
@@ -309,7 +309,7 @@
   {
     "title": "Python Backend Web Development Course",
     "url": "https://www.youtube.com/watch?v=jBzwzrDvZ18",
-    "source": "youtube.com/c/Freecodecamp",
+    "source": "youtube.com/@freecodecamp",
     "type": ["course"]
   },
   {
@@ -321,7 +321,7 @@
   {
     "title": "Build a Social Media App with Django",
     "url": "https://www.youtube.com/watch?v=xSUm6iMtREA",
-    "source": "youtube.com/c/Freecodecamp",
+    "source": "youtube.com/@freecodecamp",
     "type": ["tutorial"]
   },
   {
@@ -405,19 +405,19 @@
     "title": "Interview with a Senior Python Developer in 2022",
     "url": "https://www.youtube.com/watch?v=BgxklT94W0I",
     "type": ["community"],
-    "source": "youtube.com/channel/UCi8C7TNs2ohrc6hnRQ5Sn2w"
+    "source": "youtube.com/@programmersarealsohuman5909"
   },
   {
     "title": "Interview with a Senior Python Developer in 2022 - Part2",
     "url": "https://www.youtube.com/watch?v=xyrgkui0uCA",
     "type": ["community"],
-    "source": "youtube.com/channel/UCi8C7TNs2ohrc6hnRQ5Sn2w"
+    "source": "youtube.com/@programmersarealsohuman5909"
   },
   {
     "title": "Interview with a Postdoc, Junior Python Developer in 2022",
     "url": "https://www.youtube.com/watch?v=YnL9vAFphmE",
     "type": ["community"],
-    "source": "youtube.com/channel/UCi8C7TNs2ohrc6hnRQ5Sn2w"
+    "source": "youtube.com/@programmersarealsohuman5909"
   },
   {
     "title": "PY4E - Python for Everybody",
