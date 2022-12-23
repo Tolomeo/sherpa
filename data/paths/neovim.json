@@ -41,7 +41,9 @@
         "https://thevaluable.dev/vim-create-text-objects",
         "https://thevaluable.dev/vim-runtime-guide-example",
         "https://thevaluable.dev/vim-search-find-replace",
-        "https://www.youtube.com/playlist?list=PLep05UYkc6wTWlugE_9Lj6JlLpvSBbkZ_"
+        "https://www.youtube.com/playlist?list=PLep05UYkc6wTWlugE_9Lj6JlLpvSBbkZ_",
+        "https://jdhao.github.io/2019/03/28/nifty_nvim_techniques_s1",
+        "https://www.integralist.co.uk/posts/vim/"
       ]
     },
     {
@@ -49,13 +51,11 @@
       "resources": [
         "https://github.com/amix/vimrc",
         "http://zzapper.co.uk/vimtips.html",
-        "https://jdhao.github.io/2019/03/28/nifty_nvim_techniques_s1",
         "https://github.com/NvChad/NvChad",
         "https://github.com/SpaceVim/SpaceVim",
         "https://github.com/AstroNvim/AstroNvim",
         "https://github.com/ayamir/nvimdots",
-        "https://github.com/nvim-lua/kickstart.nvim",
-        "https://www.integralist.co.uk/posts/vim/"
+        "https://github.com/nvim-lua/kickstart.nvim"
       ]
     },
     {
