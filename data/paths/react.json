@@ -18,7 +18,6 @@
         "https://www.udemy.com/course/react-tutorial",
         "https://www.udemy.com/course/modern-react",
         "https://www.udemy.com/course/react-hooks-with-react-redux-migration",
-        "https://softchris.github.io/books/react",
         "https://reactbyexample.github.io",
         "https://reactpatterns.com",
         "http://www.react.express",
@@ -31,7 +30,9 @@
         "http://www.hackingwithreact.com",
         "https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc",
         "https://50reactprojects.com",
-        "https://jasonformat.com/wtf-is-jsx/"
+        "https://www.youtube.com/watch?v=l4G2MVgXFkw",
+        "https://www.youtube.com/watch?v=-bEzt5ISACA",
+        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9iVKmtNuCeIswnQ97in2GGf"
       ]
     },
     {
@@ -53,7 +54,11 @@
         "https://tkdodo.eu/blog/practical-react-query",
         "https://www.youtube.com/playlist?list=PLC3y8-rFHvwhC-j3x3t9la8-GQJGViDQk",
         "https://arsfutura.com/magazine/internationalization-in-react",
-        "https://frontendmastery.com/posts/advanced-react-component-composition-guide"
+        "https://frontendmastery.com/posts/advanced-react-component-composition-guide",
+        "https://www.causal.app/blog/react-perf",
+        "https://www.joshwcomeau.com/css/css-variables-for-react-devs/",
+        "https://www.rafaelquintanilha.com/react-best-practices-how-to-write-better-react-apps/",
+        "https://blog.maximeheckel.com/posts/building-a-design-system-from-scratch/"
       ]
     },
     {
@@ -63,20 +68,20 @@
         "https://github.com/xgrommx/awesome-redux",
         "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37",
         "https://egghead.io/courses/building-react-applications-with-idiomatic-redux",
-        "https://zapier.com/engineering/how-to-build-redux/"
+        "https://zapier.com/engineering/how-to-build-redux/",
+        "https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3"
       ]
     },
     {
       "title": "Testing",
       "resources": [
-        "https://www.youtube.com/playlist?list=PLYSZyzpwBEWTBdbfStjqJSGaulqcHoNkT",
         "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ",
         "https://wanago.io/courses/javascript-testing-tutorial",
         "https://www.youtube.com/watch?v=GLSSRtnNY0g",
         "https://learntdd.in/react",
         "https://www.javascripttutorials.net/retrofit-a-test-suite-in-an-existing-react-apps",
         "https://www.youtube.com/watch?v=8vfQ6SWBZ-U",
-        "https://reactjs.org/docs/testing-recipes.html"
+        "https://maxrozen.com/beginners-guide-to-react-testing"
       ]
     },
     {
@@ -86,20 +91,21 @@
         "https://www.youtube.com/watch?v=udr2rx_B99w",
         "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml",
         "https://egghead.io/courses/modern-redux-with-redux-toolkit-rtk-and-typescript-64f243c8",
-        "https://github.com/piotrwitek/react-redux-typescript-guide"
+        "https://github.com/piotrwitek/react-redux-typescript-guide",
+        "https://fettblog.eu/typescript-react/"
       ]
     },
     {
       "title": "How do they do it?",
       "resources": [
-        "https://reactjs.org/community/examples.html",
         "https://github.com/djohal/imdb-replica-react",
         "https://github.com/khaledosman/react-redux-realworld-example-app",
         "https://github.com/oguz3/spotify-web-player",
         "https://github.com/arturmolenda/project-manager",
         "https://maxrozen.com/examples-of-large-production-grade-open-source-react-apps",
+        "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app",
         "https://github.com/madhu-sagar/system-design-react-code-examples",
-        "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app"
+        "https://blog.openreplay.com/implementing-3d-graphics-in-react"
       ]
     },
     {
@@ -107,11 +113,14 @@
       "resources": [
         "https://github.com/sudheerj/reactjs-interview-questions",
         "https://ui.dev/why-react-hooks",
+        "https://jasonformat.com/wtf-is-jsx/",
         "https://johnpolacek.github.io/css-in-js-or-css-and-js",
         "https://www.smashingmagazine.com/2022/01/web-frameworks-guide-part1",
         "https://sebastiandedeyne.com/react-for-vue-developers",
         "https://www.youtube.com/watch?v=Wm_xI7KntDs",
-        "https://blog.appseed.us/react-forms-formik-vs-hookform-vs-finalform"
+        "https://blog.appseed.us/react-forms-formik-vs-hookform-vs-finalform",
+        "https://marmelab.com/blog/2022/09/20/react-i-love-you.html",
+        "https://www.freecodecamp.org/news/javascript-concepts-you-should-know-before-learning-react"
       ]
     },
     {

@@ -10,6 +10,7 @@
     {
       "title": "There's more",
       "resources": [
+        "https://pixelpioneers.co/blog/2017/git-basics-explained-by-designing-a-new-car",
         "https://egghead.io/courses/practical-git-for-everyday-professional-use",
         "https://www.udacity.com/course/version-control-with-git--ud123",
         "https://www.coursera.org/learn/version-control-with-git",
@@ -40,11 +41,19 @@
         "https://maryrosecook.com/blog/post/git-from-the-inside-out",
         "http://gitlet.maryrosecook.com",
         "https://trunkbaseddevelopment.com",
-        "https://blog.scottnonnenberg.com/better-git-configuration",
         "https://martinfowler.com/articles/branching-patterns.html",
         "https://lucasfcosta.com/2018/01/20/Git-Bisect-Pure-Git-Wizardry.html",
         "https://www.youtube.com/playlist?list=PLms-chRSi2s2RBSP1oZpBr_f6XA7iqIhm",
-        "https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store"
+        "https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store",
+        "https://www.integralist.co.uk/posts/git-internals/"
+      ]
+    },
+    {
+      "title": "How do they do it",
+      "resources": [
+        "https://softwaredoug.com/blog/2022/11/09/idiot-proof-git-aliases.html",
+        "https://martinheinz.dev/blog/43",
+        "https://blog.scottnonnenberg.com/better-git-configuration"
       ]
     },
     {
@@ -59,6 +68,8 @@
     {
       "title": "Great bookmarks",
       "resources": [
+        "https://gitexplorer.com/",
+        "https://www.toptal.com/developers/gitignore",
         "https://dangitgit.com/en",
         "http://ndpsoftware.com/git-cheatsheet.html",
         "https://learnxinyminutes.com/docs/git",

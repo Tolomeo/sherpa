@@ -14,6 +14,14 @@
     {
       "title": "There's more",
       "resources": [
+        "https://www.youtube.com/watch?v=EyEqWFvLDT8",
+        "https://testdriven.io/blog/pytest-for-beginners/",
+        "https://www.youtube.com/watch?v=jH85McHenvw",
+        "https://www.youtube.com/playlist?list=PLto9KpJAqHMQNY3XP0JqLs7NyeU_dnNj0",
+        "https://github.com/animator/learn-python",
+        "https://www.youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+        "https://www.youtube.com/playlist?list=PL9YOvPKwvPULm7tjWCfhpFHBxy22KpVXx",
+        "https://www.askpython.com/python-course-for-beginners",
         "https://www.youtube.com/watch?v=mDKM-JtUhhc",
         "https://inventwithpython.com/bigbookpython",
         "https://runestone.academy/ns/books/published/thinkcspy/index.html",
@@ -49,7 +57,13 @@
     {
       "title": "Beyond basics",
       "resources": [
-        "https://superfastpython.com/multiprocessing-pool-python",
+        "https://www.youtube.com/watch?v=TyIE3py-rFQ",
+        "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1L5QpSapVEzoSfob-4CR8zM",
+        "https://www.youtube.com/watch?v=hmkF77F9TLw",
+        "https://superfastpython.com/python-concurrency-guides/",
+        "https://github.com/MoserMichael/python-obj-system",
+        "https://www.youtube.com/watch?v=Z1N9JzNax2k",
+        "https://www.youtube.com/playlist?list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv",
         "https://www.youtube.com/playlist?list=PLWjMI9CAmVU4--SmpzgswTvxLkZqC9QWn",
         "http://python-notes.curiousefficiency.org",
         "https://github.com/faif/python-patterns",
@@ -67,8 +81,17 @@
         "https://www.freecodecamp.org/learn/data-analysis-with-python",
         "https://www.freecodecamp.org/learn/machine-learning-with-python",
         "https://www.youtube.com/watch?v=oXlwWbU8l2o",
-        "https://realpython.com/python-virtual-environments-a-primer",
-        "https://www.coursera.org/specializations/aws-python-serverless-development"
+        "https://realpython.com/python-virtual-environments-a-primer"
+      ]
+    },
+    {
+      "title": "Flask",
+      "resources": [
+        "https://exploreflask.com",
+        "https://www.digitalocean.com/community/tutorial_series/how-to-create-web-sites-with-flask",
+        "https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/",
+        "https://www.docdroid.net/0GOZUFr/ultimate-flask-tutorial-2022-reddit-pdf",
+        "https://github.com/humiaozuzu/awesome-flask"
       ]
     },
     {
@@ -77,24 +100,30 @@
         "https://www.youtube.com/watch?v=jBzwzrDvZ18",
         "https://www.youtube.com/watch?v=Lx5-XtMGDsA",
         "https://www.youtube.com/watch?v=xSUm6iMtREA",
-        "https://www.youtube.com/watch?v=mlr9BF4JomE",
         "https://www.youtube.com/watch?v=sm1mokevMWk&list=PLi39COpmJvHMGkGFHoFM7ix45nqD7jeFk&index=29",
         "https://data-flair.training/blogs/django-tutorials-home",
-        "https://github.com/wsvincent/awesome-django"
+        "https://github.com/wsvincent/awesome-django",
+        "https://www.youtube.com/playlist?list=PLOLrQ9Pn6cawb13MugxL-p1M4w7ZfT-qR",
+        "https://www.youtube.com/watch?v=tujhGdn1EMI"
       ]
     },
     {
       "title": "Pygame",
       "resources": [
+        "https://www.youtube.com/watch?v=T4IX36sP_0c",
+        "https://www.youtube.com/watch?v=AY9MnQ4x3zk",
         "https://www.youtube.com/watch?v=FfWpgLFMI7w",
         "https://www.youtube.com/watch?v=F3J3PZj0zi0",
-        "https://www.youtube.com/watch?v=QU1pPzEGrqw",
-        "https://www.youtube.com/watch?v=R9apl6B_ZgI"
+        "https://www.youtube.com/watch?v=QU1pPzEGrqw"
       ]
     },
     {
       "title": "How do they do it?",
       "resources": [
+        "https://blog.pamelafox.org/2022/09/how-i-setup-python-project.html",
+        "https://monadical.com/posts/modular-arithmetic.html",
+        "https://dagster.io/blog/adding-python-types",
+        "https://switowski.com/blog/how-to-benchmark-python-code/",
         "https://github.com/mx0c/super-mario-python",
         "http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/",
         "https://github.com/jorzel/opentable",
@@ -104,6 +133,9 @@
     {
       "title": "Nice to know",
       "resources": [
+        "https://docs.fedoraproject.org/en-US/defensive-coding/",
+        "https://inference-review.com/article/the-origins-of-python",
+        "https://www.youtube.com/watch?v=-29x_deQQus",
         "https://eugeneyan.com/writing/uncommon-python",
         "https://diveintopython3.problemsolving.io",
         "http://docs.quantifiedcode.com/python-anti-patterns",

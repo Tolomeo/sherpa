@@ -95,12 +95,6 @@
     "type": ["course"]
   },
   {
-    "title": "Learn TypeScript - Full Course for Beginners",
-    "url": "https://www.youtube.com/watch?v=gp5H0Vw39yw",
-    "type": ["course"],
-    "source": "youtube.com/c/Freecodecamp"
-  },
-  {
     "title": "TypeScript Tutorial for JS Programmers Who Know How to Build a Todo App",
     "url": "https://ts.chibicode.com/todo",
     "type": ["guide"]
@@ -269,7 +263,7 @@
     "title": "TypeScript Crash Course",
     "url": "https://www.youtube.com/watch?v=u3L_82m5X-M",
     "type": ["course"],
-    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
+    "source": "youtube.com/@laithacademy"
   },
   {
     "title": "A Typescript onramp",
@@ -327,5 +321,41 @@
     "title": "Extract parameter types from string literal types with TypeScript",
     "url": "https://lihautan.com/extract-parameters-type-from-string-literal-types-with-typescript",
     "type": ["guide"]
+  },
+  {
+    "title": "Beginner's TypeScript Tutorial",
+    "url": "https://www.totaltypescript.com/tutorials/beginners-typescript",
+    "type": ["course"]
+  },
+  {
+    "title": "cooking-with-typescript",
+    "url": "https://github.com/adamshaylor/cooking-with-typescript",
+    "type": ["example", "reference"]
+  },
+  {
+    "title": "Learn TypeScript – Full Tutorial",
+    "url": "https://www.youtube.com/watch?v=30LWjhZzg50",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "TypeScript Typelevel Tic-Tac-Toe: Overkill edition!",
+    "url": "https://note89.github.io/typescript-typelevel-tic-tac-toe/",
+    "type": ["guide"]
+  },
+  {
+    "title": "I wrote a GameBoy game in TypeScript (And it runs on real hardware!)",
+    "url": "https://www.youtube.com/watch?v=TIlx5nBnx-o",
+    "type": ["guide"]
+  },
+  {
+    "title": "Transform",
+    "url": "https://transform.tools/",
+    "type": ["generator"]
+  },
+  {
+    "title": "TypeScript Error Translator",
+    "url": "https://ts-error-translator.vercel.app/",
+    "type": ["generator"]
   }
 ]

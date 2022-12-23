@@ -20,12 +20,6 @@
     "type": ["guide"]
   },
   {
-    "title": "Vim and You",
-    "url": "https://www.youtube.com/playlist?list=PLSf43fnldIpYipi-FjzjV6fAYUGysfjY8",
-    "type": ["tutorial", "collection"],
-    "source": "youtube.com/c/CodeSmell"
-  },
-  {
     "title": "awesome-vim",
     "url": "https://github.com/akrawchyk/awesome-vim",
     "type": ["reference", "collection"]
@@ -61,19 +55,9 @@
     "type": ["tutorial", "collection"]
   },
   {
-    "title": "Episodes",
-    "url": "http://vimcasts.org/episodes",
-    "type": ["guide", "collection"]
-  },
-  {
     "title": "VimGenius",
     "url": "http://www.vimgenius.com/lessons",
     "type": ["tutorial", "collection"]
-  },
-  {
-    "title": "PacVim",
-    "url": "https://github.com/jmoon018/PacVim",
-    "type": ["exercise"]
   },
   {
     "title": "Seven habits of effective text editing",
@@ -241,7 +225,7 @@
     "title": "Neovim",
     "url": "https://www.youtube.com/playlist?list=PLu-ydI-PCl0OEG0ZEqLRRuCrMJGAAI0tW",
     "type": ["tutorial", "collection"],
-    "source": "youtube.com/channel/UCFU7a7OMYfcpjtIpu2j47_Q"
+    "source": "youtube.com/@devonduty"
   },
   {
     "title": "Vim Tutorials",
@@ -285,12 +269,12 @@
   {
     "title": "NvChad",
     "url": "https://github.com/NvChad/NvChad",
-    "type": ["example"]
+    "type": ["generator"]
   },
   {
     "title": "SpaceVim",
     "url": "https://github.com/SpaceVim/SpaceVim",
-    "type": ["example"]
+    "type": ["generator"]
   },
   {
     "title": "History and effective use of Vim",
@@ -309,10 +293,10 @@
     "source": "youtube.com/c/Vim-jpOrg"
   },
   {
-    "title": "Interview with a VIM Enthusiast 2022",
+    "title": "Interview with a VIM Enthusiast",
     "url": "https://www.youtube.com/watch?v=9n1dtmzqnCU",
     "type": ["opinion"],
-    "source": "youtube.com/channel/UCi8C7TNs2ohrc6hnRQ5Sn2w"
+    "source": "youtube.com/@programmersarealsohuman5909"
   },
   {
     "title": "Learn Vim in Less than 2 Minutes",
@@ -390,6 +374,60 @@
     "title": "Vim Tutorial for Beginners",
     "url": "https://www.youtube.com/watch?v=RZ4p-saaQkc",
     "type": ["course"],
-    "source": "youtube.com/c/Freecodecamp"
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Full Neovim Setup",
+    "url": "https://www.youtube.com/watch?v=M5tJ47JyUP8",
+    "type": ["tutorial"],
+    "source": "youtube.com/@neilsabde2334"
+  },
+  {
+    "title": "Neovim Lua From Scratch",
+    "url": "https://www.youtube.com/playlist?list=PLPDVgSbOnt7LXQ8DTzu37UwCpA0elyD0V",
+    "type": ["course"],
+    "source": "youtube.com/@neilsabde2334"
+  },
+  {
+    "title": "Vim",
+    "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1Eevqs4-XmlSfrFOKb5C97K",
+    "type": ["course"],
+    "source": "youtube.com/@NeuralNine"
+  },
+  {
+    "title": "How I Setup Neovim On My Mac To Make It Amazing",
+    "url": "https://www.youtube.com/watch?v=vdn_pKJUda8",
+    "type": ["tutorial"],
+    "source": "youtube.com/@joseanmartinez"
+  },
+  {
+    "title": "Debugging in Neovim",
+    "url": "https://harrisoncramer.me/debugging-in-neovim/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "nvimdots",
+    "url": "https://github.com/ayamir/nvimdots",
+    "type": ["example"]
+  },
+  {
+    "title": "kickstart",
+    "url": "https://github.com/nvim-lua/kickstart.nvim",
+    "type": ["example"]
+  },
+  {
+    "title": "vim-cheatsheet",
+    "url": "https://github.com/chloneda/vim-cheatsheet",
+    "type": ["reference"]
+  },
+  {
+    "title": "AstroNvim",
+    "url": "https://github.com/AstroNvim/AstroNvim",
+    "type": ["generator"]
+  },
+  {
+    "title": "Advanced Vim topics, tips and tricks",
+    "url": "https://www.integralist.co.uk/posts/vim/",
+    "type": ["tutorial"]
   }
 ]

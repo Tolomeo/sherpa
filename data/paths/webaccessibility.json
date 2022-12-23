@@ -18,12 +18,10 @@
         "https://www.udacity.com/course/web-accessibility--ud891",
         "https://www.accessguide.io",
         "https://webaim.org/articles",
-        "https://vimeo.com/362155651",
         "https://web.dev/accessible",
         "https://blog.sapegin.me/all/accessibility-testing",
         "https://www.adrianbolonio.com/en/testing-web-accessibility-part-1",
         "https://www.smashingmagazine.com/2019/02/accessibility-webinar",
-        "https://inclusive-components.design",
         "https://webdesign.tutsplus.com/series/web-accessibility-the-complete-learning-guide--cms-1301",
         "https://www.telerik.com/blogs/web-accessibility-guidebook-for-developers",
         "https://www.pauljadam.com/guides.html",
@@ -32,7 +30,10 @@
         "https://www.w3.org/WAI/roles/writers",
         "https://www.w3.org/WAI/roles/testers",
         "https://www.w3.org/WAI/roles/managers/",
-        "https://www.digitala11y.com/wcag2-0"
+        "https://www.digitala11y.com/wcag2-0",
+        "https://a11y-101.com/",
+        "https://web.dev/learn/accessibility/",
+        "https://a11yphant.com/"
       ]
     },
     {
@@ -42,10 +43,22 @@
         "https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing",
         "https://www.smashingmagazine.com/2020/08/accessibility-chrome-devtools",
         "https://www.smashingmagazine.com/2021/06/css-javascript-requirements-accessible-components",
-        "https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939",
-        "https://medium.com/@matuzo/writing-javascript-with-accessibility-in-mind-a1f6a5f467b9",
         "https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412",
-        "https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility"
+        "https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility",
+        "https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-html-css-part1/",
+        "https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-javascript-part2/",
+        "https://www.smashingmagazine.com/2022/12/accessible-front-end-patterns-responsive-tables-part1/",
+        "https://www.smashingmagazine.com/2022/12/accessible-front-end-patterns-responsive-tables-part2/",
+        "https://www.smashingmagazine.com/2022/09/wai-aria-guide/",
+        "https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/",
+        "https://www.youtube.com/watch?v=EOiC2M47GBY"
+      ]
+    },
+    {
+      "title": "How do they do it?",
+      "resources": [
+        "https://www.sarasoueidan.com/blog/testing-environment-setup/",
+        "https://inclusive-components.design"
       ]
     },
     {
@@ -61,7 +74,8 @@
         "https://accessibility-for-teams.com",
         "https://a11ymyths.com",
         "https://dequeuniversity.com/resources/disability-statistics",
-        "https://www.tooltester.com/en/blog/accessible-websites"
+        "https://www.tooltester.com/en/blog/accessible-websites",
+        "https://www.w3.org/WAI/curricula/"
       ]
     },
     {

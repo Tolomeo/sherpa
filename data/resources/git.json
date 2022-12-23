@@ -113,13 +113,13 @@
     "title": "Learning Git",
     "url": "https://www.youtube.com/playlist?list=PLyuRouwmQCjmYaG21ijCw0KrFiFEG0Oh9",
     "type": ["course"],
-    "source": "youtube.com/c/SteveGriffith-Prof3ssorSt3v3"
+    "source": "youtube.com/@SteveGriffith-Prof3ssorSt3v3"
   },
   {
     "title": "Learning GitHub",
     "url": "https://www.youtube.com/playlist?list=PLyuRouwmQCjlxyO-45o53YCWjBCM-fA7L",
     "type": ["course"],
-    "source": "youtube.com/c/SteveGriffith-Prof3ssorSt3v3"
+    "source": "youtube.com/@SteveGriffith-Prof3ssorSt3v3"
   },
   {
     "title": "Learn Git",
@@ -156,7 +156,7 @@
     "title": "The Ultimate Git & GitHub Crash Course - Learn to Version Control for Beginners",
     "url": "https://www.youtube.com/watch?v=i76ts_0UryI",
     "type": ["course"],
-    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
+    "source": "youtube.com/@laithacademy"
   },
   {
     "title": "Introduction",
@@ -275,5 +275,35 @@
     "title": "Git's database internals",
     "url": "https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store",
     "type": ["guide", "collection"]
+  },
+  {
+    "title": "The Basics of Version Control System Git Explained by Designing A New Car",
+    "url": "https://pixelpioneers.co/blog/2017/git-basics-explained-by-designing-a-new-car",
+    "type": ["guide"]
+  },
+  {
+    "title": "Advanced Git Features You Didn’t Know You Needed",
+    "url": "https://martinheinz.dev/blog/43",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Idiot proof git",
+    "url": "https://softwaredoug.com/blog/2022/11/09/idiot-proof-git-aliases.html",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Git Explorer",
+    "url": "https://gitexplorer.com/",
+    "type": ["generator"]
+  },
+  {
+    "title": "gitignore.io",
+    "url": "https://www.toptal.com/developers/gitignore",
+    "type": ["generator"]
+  },
+  {
+    "title": "Git Internals",
+    "url": "https://www.integralist.co.uk/posts/git-internals/",
+    "type": ["guide"]
   }
 ]

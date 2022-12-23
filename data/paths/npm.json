@@ -17,20 +17,22 @@
         "https://nodesource.com/blog/semver-a-primer",
         "https://egghead.io/courses/execute-npm-package-binaries-with-the-npx-package-runner",
         "https://lucasfcosta.com/2020/10/17/lockfile-guide.html",
-        "https://2ality.com/2022/01/esm-specifiers.html"
+        "https://2ality.com/2022/01/esm-specifiers.html",
+        "https://devopedia.org/semantic-versioning",
+        "https://devopedia.org/dependency-manager",
+        "https://devopedia.org/package-manager"
       ]
     },
     {
       "title": "Beyond basics",
       "resources": [
+        "https://snyk.io/blog/best-practices-create-modern-npm-package/",
+        "https://exploringjs.com/nodejs-shell-scripting/",
         "https://yarnpkg.com/blog/2017/07/11/lets-dev-a-package-manager",
         "https://github.com/g-plane/tiny-package-manager",
         "https://cpojer.net/posts/dependency-managers-dont-manage-your-dependencies",
-        "https://devopedia.org/semantic-versioning",
-        "https://devopedia.org/dependency-manager",
-        "https://devopedia.org/package-manager",
-        "https://2ality.com/2022/08/installing-nodejs-bin-scripts.html",
-        "https://www.robinwieruch.de/javascript-monorepos"
+        "https://www.robinwieruch.de/javascript-monorepos",
+        "https://github.com/frehner/modern-guide-to-packaging-js-library"
       ]
     },
     {
@@ -40,12 +42,11 @@
         "https://egghead.io/courses/publish-javascript-packages-on-npm",
         "https://egghead.io/courses/how-to-write-an-open-source-javascript-library",
         "https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool",
-        "https://github.com/frehner/modern-guide-to-packaging-js-library",
         "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSS7aup_xvT9Q1-NQZINW8X",
         "https://auth0.com/blog/developing-npm-packages",
-        "https://2ality.com/2022/08/npm-package-scripts.html",
         "https://css-tricks.com/why-npm-scripts",
-        "https://2ality.com/2021/07/simple-monorepos.html"
+        "https://2ality.com/2021/07/simple-monorepos.html",
+        "https://www.strictmode.io/articles/build-test-and-publish-npm-package-2022"
       ]
     },
     {

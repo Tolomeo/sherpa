@@ -66,11 +66,6 @@
     "type": ["example"]
   },
   {
-    "title": "JavaScript Garden",
-    "url": "https://bonsaiden.github.io/JavaScript-Garden",
-    "type": ["guide"]
-  },
-  {
     "title": "awesome-javascript",
     "url": "https://github.com/sorrycc/awesome-javascript",
     "type": ["reference", "collection"]
@@ -473,7 +468,7 @@
     "title": "JavaScript Tutorials",
     "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V",
     "type": ["course"],
-    "source": "youtube.com/c/Freecodecamp"
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "How to implement a programming language",
@@ -514,7 +509,7 @@
     "title": "Jest Crash Course - Learn How to Test your JavaScript Application",
     "url": "https://www.youtube.com/watch?v=ajiAl5UNzBU",
     "type": ["guide"],
-    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
+    "source": "youtube.com/@laithacademy"
   },
   {
     "title": "Building a JavaScript Testing Framework",
@@ -530,7 +525,7 @@
     "title": "Interview with Senior JS Developer in 2022",
     "url": "https://www.youtube.com/watch?v=Uo3cL4nrGOk&t=4s",
     "type": ["opinion"],
-    "source": "youtube.com/channel/UCi8C7TNs2ohrc6hnRQ5Sn2w"
+    "source": "youtube.com/@programmersarealsohuman5909"
   },
   {
     "title": "The Ultimate Guide to JavaScript Fatigue: Realities of our industry",
@@ -567,5 +562,36 @@
     "title": "Code Golfing Tips & Tricks",
     "url": "https://getbutterfly.com/code-golfing-tips-tricks-how-to-minify-your-javascript-code",
     "type": ["guide"]
+  },
+  {
+    "title": "Writing a TodoMVC App With Vanilla JS in 2022",
+    "url": "https://frontendmasters.com/blog/vanilla-javascript-todomvc/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Why would anyone need JavaScript generator functions?",
+    "url": "https://jrsinclair.com/articles/2022/why-would-anyone-need-javascript-generator-functions/",
+    "type": ["guide"]
+  },
+  {
+    "title": "javascript-basics",
+    "url": "https://github.com/learning-zone/javascript-basics",
+    "type": ["reference"]
+  },
+  {
+    "title": "Dear Console",
+    "url": "https://codepo8.github.io/dearconsole/",
+    "type": ["reference"]
+  },
+  {
+    "title": "UnJS",
+    "url": "https://unjs.io/",
+    "type": ["generator", "collection"]
+  },
+  {
+    "title": "Replit Learn - JavaScript",
+    "url": "https://www.youtube.com/playlist?list=PLto9KpJAqHMRMl4DHajWvIi0gGnwIKMX5",
+    "type": ["course", "guide", "collection"],
+    "source": "youtube.com/@replit"
   }
 ]

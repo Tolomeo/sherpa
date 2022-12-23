@@ -4,7 +4,6 @@
   "next": ["docker"],
   "resources": [
     "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js",
-    "https://2ality.com/2022/09/nodejs-overview.html",
     "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp",
     "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js",
     "https://github.com/goldbergyoni/nodebestpractices",
@@ -22,12 +21,18 @@
         "https://nodejs.dev/en/learn",
         "https://goalkicker.com/NodeJSBook",
         "https://www.freecodecamp.org/news/the-definitive-node-js-handbook-6912378afc6e",
-        "https://alexkondov.com/tao-of-node"
+        "https://alexkondov.com/tao-of-node",
+        "https://www.youtube.com/playlist?list=PLC3y8-rFHvwh8shCMHFA5kWxD9PaPwxaY"
       ]
     },
     {
       "title": "Beyond basics",
       "resources": [
+        "https://exploringjs.com/nodejs-shell-scripting/",
+        "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1JEu7BLraz8MdKJILJir7oY",
+        "https://www.youtube.com/watch?v=ynNDmp7hBdo",
+        "https://www.coursera.org/learn/building-modern-node-applications-on-aws",
+        "https://www.coursera.org/learn/server-side-nodejs",
         "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS",
         "https://www.smashingmagazine.com/2018/06/nodejs-tools-techniques-performance-servers",
         "https://www.smashingmagazine.com/2020/04/nodejs-internals",
@@ -37,8 +42,6 @@
         "https://github.com/ehmicky/cross-platform-node-guide",
         "https://www.codementor.io/@ziad-saab/let-s-code-a-web-server-from-scratch-with-nodejs-streams-h4uc9utji",
         "https://gils-blog.tayar.org/posts/using-jsm-esm-in-nodejs-a-practical-guide-part-1",
-        "https://2ality.com/2022/07/nodejs-path.html",
-        "https://2ality.com/2022/06/web-streams-nodejs.html",
         "https://www.digitalocean.com/community/tutorials/how-to-use-multithreading-in-node-js"
       ]
     },
@@ -61,8 +64,17 @@
       ]
     },
     {
+      "title": "Security",
+      "resources": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html",
+        "https://github.com/lirantal/awesome-nodejs-security"
+      ]
+    },
+    {
       "title": "How do they do it?",
       "resources": [
+        "https://rrawat.com/blog/deploy-nodejs-on-aws-cicd",
+        "https://www.youtube.com/watch?v=fU4o_BKaUZE",
         "https://github.com/electerious/Ackee",
         "https://allenkim67.github.io/programming/2016/05/04/how-to-make-your-own-bittorrent-client.html",
         "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
@@ -70,7 +82,6 @@
         "https://www.youtube.com/watch?v=AzQ6_DTcG6c",
         "https://www.youtube.com/watch?v=asVDzgdyYLk",
         "https://www.webdevdrops.com/en/build-static-site-generator-nodejs-8969ebe34b22",
-        "https://2ality.com/2022/07/nodejs-esm-shell-scripts.html",
         "https://www.smashingmagazine.com/2018/12/multiplayer-text-adventure-engine-node-js",
         "https://www.smashingmagazine.com/2017/03/interactive-command-line-application-node-js",
         "https://codeburst.io/building-a-simple-single-sign-on-sso-server-and-solution-from-scratch-in-node-js-ea6ee5fdf340"
@@ -79,7 +90,8 @@
     {
       "title": "Nice to know",
       "resources": [
-        "https://yonigoldberg.medium.com/20-ways-to-become-a-better-node-js-developer-in-2020-d6bd73fcf424",
+        "https://blog.appsignal.com/2022/11/23/nodejs-architecture-pitfalls-to-avoid.html",
+        "https://practica.dev/blog/popular-nodejs-pattern-and-tools-to-reconsider",
         "https://www.youtube.com/watch?v=M3BM9TB-8yA",
         "https://github.com/learning-zone/nodejs-basics",
         "https://nikhilm.github.io/uvbook/",
@@ -96,7 +108,6 @@
         "https://www.openmymind.net/redis.pdf",
         "https://github.com/APIDevTools",
         "https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping",
-        "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html",
         "https://web.dev/identity",
         "https://rapidapi.com/learn"
       ]

@@ -2,15 +2,9 @@
   "title": "HTML and CSS",
   "resources": [
     "https://internetingishard.netlify.app",
+    "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
     "https://learn-the-web.algonquindesign.ca/topics/information-architecture",
-    "https://www.freecodecamp.org/learn/responsive-web-design",
     "https://learn-the-web.algonquindesign.ca/topics/search-engine-optimization",
-    "https://flukeout.github.io",
-    "https://flexbox.io",
-    "https://flexboxfroggy.com",
-    "https://cssgrid.io",
-    "https://cssgridgarden.com",
-    "https://scrimba.com/learn/cssvariables",
     "https://github.com/diegocard/awesome-html5",
     "https://github.com/awesome-css-group/awesome-css"
   ],
@@ -18,6 +12,12 @@
     {
       "title": "There's more",
       "resources": [
+        "https://flukeout.github.io",
+        "https://flexbox.io",
+        "https://flexboxfroggy.com",
+        "https://cssgrid.io",
+        "https://cssgridgarden.com",
+        "https://scrimba.com/learn/cssvariables",
         "https://learn.shayhowe.com/html-css",
         "https://learn.shayhowe.com/advanced-html-css",
         "https://scrimba.com/learn/htmlcss",
@@ -40,7 +40,15 @@
         "https://codingfantasy.com/games/flexboxadventure",
         "https://knightsoftheflexboxtable.com",
         "https://hiddedevries.nl/en/blog/2022-01-23-more-to-give-than-just-the-div-semantics-and-how-to-get-them-right",
-        "https://www.learn-html.org"
+        "https://www.learn-html.org",
+        "https://web.dev/learn/html/",
+        "https://www.matuzo.at/blog/2022/100-days-of-more-or-less-modern-css/",
+        "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries/",
+        "https://webdesign.tutsplus.com/courses/the-complete-guide-to-using-css-variables",
+        "https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/",
+        "https://stackdiary.com/css-media-queries",
+        "https://www.youtube.com/watch?v=G3e-cpL7ofc",
+        "https://polypane.app/blog/the-complete-guide-to-css-media-queries"
       ]
     },
     {
@@ -56,16 +64,15 @@
         "https://web.dev/learn/forms",
         "https://www.smashingmagazine.com/2021/04/complete-guide-html-email-templates-tools",
         "https://cloudfour.com/thinks/responsive-images-the-simple-way",
-        "https://polypane.app/blog/the-complete-guide-to-css-media-queries",
         "https://meiert.com/en/blog/optional-html",
         "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries",
-        "https://stories.algolia.com/a-search-engine-in-css-b5ec4e902e97",
         "https://www.youtube.com/watch?v=fc3IFF4B6Jw",
         "https://css-tricks.com/css-cascade-layers",
         "https://www.freecodecamp.org/news/web-animation-performance-fundamentals",
         "https://www.joshwcomeau.com/css/understanding-layout-algorithms",
-        "https://masteringmarkdown.com",
-        "https://blog.logrocket.com/complete-guide-using-css-filters-svgs"
+        "https://blog.logrocket.com/complete-guide-using-css-filters-svgs",
+        "https://css-tricks.com/nerds-guide-color-web/",
+        "https://css-tricks.com/bem-101/"
       ]
     },
     {
@@ -81,26 +88,30 @@
         "https://stylestage.dev",
         "https://animatedbackgrounds.me",
         "https://smolcss.dev",
-        "https://ui-buttons.web.app"
+        "https://ui-buttons.web.app",
+        "https://iamkate.com/code/tree-views/"
       ]
     },
     {
       "title": "Nice to know",
       "resources": [
         "https://cssbattle.dev",
-        "http://getbem.com",
         "https://www.youtube.com/playlist?list=PLKoqnv2vTMUN6lFDz6qMBsz7-Jm8YRV9H",
+        "https://masteringmarkdown.com",
         "https://www.htmhell.dev",
         "https://eev.ee/blog/2020/02/01/old-css-new-css",
-        "https://rtl.wtf",
         "https://almanac.httparchive.org",
         "https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs",
-        "https://www.smashingmagazine.com/2022/03/html-attributes-you-never-use"
+        "https://www.smashingmagazine.com/2022/03/html-attributes-you-never-use",
+        "https://github.com/learning-zone/css-basics",
+        "https://github.com/learning-zone/html-basics",
+        "https://tallys.github.io/color-theory/"
       ]
     },
     {
       "title": "Great bookmarks",
       "resources": [
+        "https://rtl.wtf",
         "https://htmlreference.io",
         "https://cssreference.io",
         "https://9elements.com/seo-cheat-sheet/",
@@ -115,14 +126,17 @@
         "https://www.caniemail.com",
         "https://modern-fluid-typography.vercel.app",
         "https://cssgradient.io",
-        "https://codepen.io/anthonydugois/full/RpYBmy",
         "https://mailtolink.me",
         "https://responsivebreakpoints.com",
         "https://polypane.app/css-specificity-calculator",
         "https://metatags.io",
         "https://bennettfeely.com/clippy",
         "https://css-tricks.com/almanac",
-        "https://www.joshwcomeau.com/gradient-generator"
+        "https://www.joshwcomeau.com/gradient-generator",
+        "https://grid.layoutit.com/",
+        "https://cccreate.co/",
+        "https://utopia.fyi/",
+        "https://type-scale.com/"
       ]
     },
     {

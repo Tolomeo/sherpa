@@ -33,7 +33,7 @@
     "title": "Node.js and Express.js - Full Course",
     "url": "https://www.youtube.com/watch?v=Oe421EPjeBE",
     "type": ["course"],
-    "source": "youtube.com/c/Freecodecamp"
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "The Node Way",
@@ -180,7 +180,7 @@
     "type": ["guide", "collection"]
   },
   {
-    "title": "RapidAPI Learn",
+    "title": "Rapid API Learn",
     "url": "https://rapidapi.com/learn",
     "type": ["guide", "collection"]
   },
@@ -188,13 +188,13 @@
     "title": "Redis with Node Crash Course - Cache Data for Improved Performance",
     "url": "https://www.youtube.com/watch?v=AzQ6_DTcG6c",
     "type": ["tutorial"],
-    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
+    "source": "youtube.com/@laithacademy"
   },
   {
     "title": "Socket.io Crash Course - Build a Real Time Chat Application",
     "url": "https://www.youtube.com/watch?v=asVDzgdyYLk",
     "type": ["tutorial"],
-    "source": "youtube.com/channel/UCyLNhHSiEVkVwPSFKxJAfSA"
+    "source": "youtube.com/@laithacademy"
   },
   {
     "title": "How to make your own bittorrent client",
@@ -238,12 +238,7 @@
     "type": ["guide"]
   },
   {
-    "title": "20 ways to become a better Node.js developer in 2020",
-    "url": "https://yonigoldberg.medium.com/20-ways-to-become-a-better-node-js-developer-in-2020-d6bd73fcf424",
-    "type": ["guide"]
-  },
-  {
-    "title": "10 Things I Regret About Node.js - Ryan Dahl - JSConf EU",
+    "title": "10 Things I Regret About Node.js",
     "url": "https://www.youtube.com/watch?v=M3BM9TB-8yA",
     "type": ["community"],
     "source": "youtube.com/c/JSConfEU"
@@ -330,28 +325,56 @@
     "type": ["opinion"]
   },
   {
-    "title": "Working with file system paths and file URLs on Node.js",
-    "url": "https://2ality.com/2022/07/nodejs-path.html",
-    "type": ["guide"]
-  },
-  {
-    "title": "Using web streams on Node.js",
-    "url": "https://2ality.com/2022/06/web-streams-nodejs.html",
-    "type": ["guide"]
-  },
-  {
-    "title": "Creating ESM-based shell scripts for Unix and Windows with Node.js",
-    "url": "https://2ality.com/2022/07/nodejs-esm-shell-scripts.html",
-    "type": ["guide"]
-  },
-  {
     "title": "How To Use Multithreading in Node",
     "url": "https://www.digitalocean.com/community/tutorials/how-to-use-multithreading-in-node-js",
     "type": ["guide"]
   },
   {
-    "title": "An overview of Node.js: architecture, APIs, event loop, concurrency",
-    "url": "https://2ality.com/2022/09/nodejs-overview.html",
+    "title": "Node.js Tutorial for Beginners",
+    "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwh8shCMHFA5kWxD9PaPwxaY",
+    "type": ["course"],
+    "source": "youtube.com/@Codevolution"
+  },
+  {
+    "title": "Bun? Deno? Node.js? Creating your own JavaScript Runtime using V8, Libuv and more",
+    "url": "https://www.youtube.com/watch?v=ynNDmp7hBdo",
+    "type": ["guide"],
+    "source": "youtube.com/@ErickWendelTraining"
+  },
+  {
+    "title": "Building Modern Node.js Applications on AWS",
+    "url": "https://www.coursera.org/learn/building-modern-node-applications-on-aws",
+    "type": ["course"]
+  },
+  {
+    "title": "Server-side Development with NodeJS, Express and MongoDB",
+    "url": "https://www.coursera.org/learn/server-side-nodejs",
+    "type": ["course"]
+  },
+  {
+    "title": "awesome-nodejs-security",
+    "url": "https://github.com/lirantal/awesome-nodejs-security",
+    "type": ["collection"]
+  },
+  {
+    "title": "Deploy Node.js to AWS: Build an Automated CI/CD Pipeline",
+    "url": "https://rrawat.com/blog/deploy-nodejs-on-aws-cicd",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Build An AI Image Generator With OpenAI & Node.js",
+    "url": "https://www.youtube.com/watch?v=fU4o_BKaUZE",
+    "type": ["tutorial"],
+    "source": "youtube.com/@TraversyMedia"
+  },
+  {
+    "title": "Node.js Architecture Pitfalls to Avoid",
+    "url": "https://blog.appsignal.com/2022/11/23/nodejs-architecture-pitfalls-to-avoid.html",
     "type": ["guide"]
+  },
+  {
+    "title": "Popular Node.js patterns and tools to re-consider",
+    "url": "https://practica.dev/blog/popular-nodejs-pattern-and-tools-to-reconsider",
+    "type": ["opinion"]
   }
 ]

@@ -21,7 +21,6 @@
         "https://scrimba.com/learn/intrototypescript",
         "https://www.youtube.com/playlist?list=PLqq-6Pq4lTTanfgsbnFzfWUhhAz3tIezU",
         "https://www.typescripttutorial.net",
-        "https://www.youtube.com/watch?v=gp5H0Vw39yw",
         "https://ts.chibicode.com/todo",
         "https://ts.chibicode.com/generics",
         "https://dev.to/orta/series/15226",
@@ -31,7 +30,10 @@
         "https://www.youtube.com/watch?v=u3L_82m5X-M",
         "https://blog.scottnonnenberg.com/a-typescript-onramp",
         "https://www.youtube.com/playlist?list=PLNqp92_EXZBJYFrpEzdO2EapvU0GOJ09n",
-        "https://fjolt.com/category/typescript"
+        "https://fjolt.com/category/typescript",
+        "https://www.totaltypescript.com/tutorials/beginners-typescript",
+        "https://github.com/adamshaylor/cooking-with-typescript",
+        "https://www.youtube.com/watch?v=30LWjhZzg50"
       ]
     },
     {
@@ -43,7 +45,8 @@
         "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab",
         "https://www.javascripttutorials.net/four-steps-to-move-from-javascript-to-typescript/",
         "https://www.youtube.com/watch?v=hBk4nV7q6-w",
-        "https://lihautan.com/extract-parameters-type-from-string-literal-types-with-typescript"
+        "https://lihautan.com/extract-parameters-type-from-string-literal-types-with-typescript",
+        "https://note89.github.io/typescript-typelevel-tic-tac-toe/"
       ]
     },
     {
@@ -63,7 +66,8 @@
       "title": "Nice to know",
       "resources": [
         "https://flaviocopes.com/deno",
-        "https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b"
+        "https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b",
+        "https://www.youtube.com/watch?v=TIlx5nBnx-o"
       ]
     },
     {
@@ -82,7 +86,9 @@
         "https://github.com/tsconfig/bases",
         "https://ts-error-translator.vercel.app",
         "https://www.freecodecamp.org/news/advanced-typescript-types-cheat-sheet-with-examples/",
-        "https://www.learningtypescript.com"
+        "https://www.learningtypescript.com",
+        "https://transform.tools/",
+        "https://ts-error-translator.vercel.app/"
       ]
     },
     {
