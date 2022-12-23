@@ -402,19 +402,19 @@
     "type": ["guide"]
   },
   {
-    "title": "Interview with a Senior Python Developer in 2022",
+    "title": "Interview with a Senior Python Developer - Part1",
     "url": "https://www.youtube.com/watch?v=BgxklT94W0I",
     "type": ["community"],
     "source": "youtube.com/@programmersarealsohuman5909"
   },
   {
-    "title": "Interview with a Senior Python Developer in 2022 - Part2",
+    "title": "Interview with a Senior Python Developer - Part2",
     "url": "https://www.youtube.com/watch?v=xyrgkui0uCA",
     "type": ["community"],
     "source": "youtube.com/@programmersarealsohuman5909"
   },
   {
-    "title": "Interview with a Postdoc, Junior Python Developer in 2022",
+    "title": "Interview with a Postdoc, Junior Python Developer",
     "url": "https://www.youtube.com/watch?v=YnL9vAFphmE",
     "type": ["community"],
     "source": "youtube.com/@programmersarealsohuman5909"
@@ -488,11 +488,6 @@
     "title": "PyCoder’s Weekly",
     "url": "https://pycoders.com",
     "type": ["reference"]
-  },
-  {
-    "title": "Modern Application Development with Python on AWS",
-    "url": "https://www.coursera.org/specializations/aws-python-serverless-development",
-    "type": ["course"]
   },
   {
     "title": "Python.org",

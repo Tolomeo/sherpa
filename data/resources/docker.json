@@ -312,7 +312,7 @@
     "type": ["example", "collection"]
   },
   {
-    "title": "Develop a Go app with Docker Compose",
+    "title": "Develop a go app with docker compose",
     "url": "https://firehydrant.com/blog/develop-a-go-app-with-docker-compose",
     "type": ["tutorial"]
   },
