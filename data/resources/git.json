@@ -300,5 +300,10 @@
     "title": "gitignore.io",
     "url": "https://www.toptal.com/developers/gitignore",
     "type": ["generator"]
+  },
+  {
+    "title": "Git Internals",
+    "url": "https://www.integralist.co.uk/posts/git-internals/",
+    "type": ["guide"]
   }
 ]

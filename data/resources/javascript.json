@@ -592,5 +592,11 @@
     "title": "UnJS",
     "url": "https://unjs.io/",
     "type": ["generator", "collection"]
+  },
+  {
+    "title": "Replit Learn - JavaScript",
+    "url": "https://www.youtube.com/playlist?list=PLto9KpJAqHMRMl4DHajWvIi0gGnwIKMX5",
+    "type": ["course", "guide", "collection"],
+    "source": "youtube.com/@replit"
   }
 ]

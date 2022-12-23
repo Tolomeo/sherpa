@@ -52,8 +52,10 @@
         "https://jdhao.github.io/2019/03/28/nifty_nvim_techniques_s1",
         "https://github.com/NvChad/NvChad",
         "https://github.com/SpaceVim/SpaceVim",
+        "https://github.com/AstroNvim/AstroNvim",
         "https://github.com/ayamir/nvimdots",
-        "https://github.com/nvim-lua/kickstart.nvim"
+        "https://github.com/nvim-lua/kickstart.nvim",
+        "https://www.integralist.co.uk/posts/vim/"
       ]
     },
     {

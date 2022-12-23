@@ -327,5 +327,11 @@
     "url": "https://www.youtube.com/@colbyfayock",
     "type": ["community"],
     "source": "youtube.com/@colbyfayock"
+  },
+  {
+    "title": "Replit Learn - NextJS",
+    "url": "https://www.youtube.com/playlist?list=PLto9KpJAqHMQJCMuP3-JjjffygOUJo86U",
+    "type": ["tutorial", "collection"],
+    "source": "youtube.com/@replit"
   }
 ]

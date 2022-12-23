@@ -269,12 +269,12 @@
   {
     "title": "NvChad",
     "url": "https://github.com/NvChad/NvChad",
-    "type": ["example"]
+    "type": ["generator"]
   },
   {
     "title": "SpaceVim",
     "url": "https://github.com/SpaceVim/SpaceVim",
-    "type": ["example"]
+    "type": ["generator"]
   },
   {
     "title": "History and effective use of Vim",
@@ -419,5 +419,15 @@
     "title": "vim-cheatsheet",
     "url": "https://github.com/chloneda/vim-cheatsheet",
     "type": ["reference"]
+  },
+  {
+    "title": "AstroNvim",
+    "url": "https://github.com/AstroNvim/AstroNvim",
+    "type": ["generator"]
+  },
+  {
+    "title": "Advanced Vim topics, tips and tricks",
+    "url": "https://www.integralist.co.uk/posts/vim/",
+    "type": ["tutorial"]
   }
 ]

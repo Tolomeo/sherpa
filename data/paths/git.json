@@ -44,7 +44,8 @@
         "https://martinfowler.com/articles/branching-patterns.html",
         "https://lucasfcosta.com/2018/01/20/Git-Bisect-Pure-Git-Wizardry.html",
         "https://www.youtube.com/playlist?list=PLms-chRSi2s2RBSP1oZpBr_f6XA7iqIhm",
-        "https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store"
+        "https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store",
+        "https://www.integralist.co.uk/posts/git-internals/"
       ]
     },
     {

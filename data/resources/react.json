@@ -531,5 +531,11 @@
     "title": "The JavaScript Concepts You Should Know Before Learning React",
     "url": "https://www.freecodecamp.org/news/javascript-concepts-you-should-know-before-learning-react",
     "type": ["guide"]
+  },
+  {
+    "title": "Redux Toolkit Tutorial",
+    "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3",
+    "type": ["course"],
+    "source": "youtube.com/@Codevolution"
   }
 ]
