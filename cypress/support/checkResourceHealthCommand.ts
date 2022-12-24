@@ -92,6 +92,7 @@ const checkHealthByScraperRequest = (
       apikey,
     },
     log: false,
+    timeout: 60000,
   }).then((response) => {
     const document = new DOMParser().parseFromString(response.body, 'text/html')
 
