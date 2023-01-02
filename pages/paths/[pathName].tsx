@@ -7,7 +7,7 @@ import {
   Paths,
   hasPrevPaths,
   hasNextPaths,
-  hasExtras,
+  hasOtherResources,
   resourceTypes,
   ResourceTypes,
 } from '../../data'
@@ -134,15 +134,15 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
             </Typography>
             <Grid container>
               <Grid item xs={12} md={8} xl={6}>
-                <ResourcesTimeline resources={path.core} />
+                <ResourcesTimeline resources={path.main} />
               </Grid>
             </Grid>
           </LayoutContainer>
 
-          {hasExtras(path) && (
+          {hasOtherResources(path) && (
             <LayoutContainer pb={4}>
               <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
-                {path.extras.map((extra, index) => (
+                {path.other.map((extra, index) => (
                   <Box data-testid={pathExtrasTestId} key={index}>
                     <aside>
                       <Typography component="h2" variant="h5" gutterBottom>
