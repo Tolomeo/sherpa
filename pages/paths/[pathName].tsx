@@ -148,7 +148,7 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
                       <Typography component="h2" variant="h5" gutterBottom>
                         {extra.title}
                       </Typography>
-                      <ResourcesList resources={extra.resources} />
+                      <ResourcesList resources={extra.other} />
                     </aside>
                   </Box>
                 ))}
