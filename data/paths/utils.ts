@@ -34,14 +34,22 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
         type: 'object',
         properties: {
           title: { type: 'string', minLength: 2 },
-          resources: {
+          main: {
             type: 'array',
             items: { type: 'string', pattern: '^https?://' },
             minItems: 1,
             uniqueItems: true,
+            nullable: true,
+          },
+          other: {
+            type: 'array',
+            items: { type: 'string', pattern: '^https?://' },
+            minItems: 1,
+            uniqueItems: true,
+            nullable: true,
           },
         },
-        required: ['title', 'resources'],
+        required: ['title'],
       },
       minItems: 1,
       nullable: true,
@@ -83,7 +91,17 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
         // populating extra resources, those are optional
         other: (serializedPath.other || []).map((extra) => ({
           ...extra,
-          resources: extra.resources
+          main: (extra.main || []).map((extraResourceId) => {
+            const extraResource = resources[extraResourceId]
+
+            if (!extraResource)
+              throw new Error(
+                `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
+              )
+
+            return extraResource
+          }),
+          other: (extra.other || [])
             .map((extraResourceId) => {
               const extraResource = resources[extraResourceId]
 

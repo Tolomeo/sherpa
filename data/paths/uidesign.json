@@ -15,7 +15,7 @@
   "other": [
     {
       "title": "There's more",
-      "resources": [
+      "other": [
         "https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed",
         "https://growth.design/psychology",
         "https://webdesign.tutsplus.com/series/a-beginners-guide-to-ux-design--cms-1168",
@@ -41,7 +41,7 @@
     },
     {
       "title": "Beyond basics",
-      "resources": [
+      "other": [
         "https://mahdif.com/blog/the-art-of-design-specing",
         "https://www.designbetter.co/designops-handbook",
         "https://www.designbetter.co/enterprise-design-sprints",
@@ -65,7 +65,7 @@
     },
     {
       "title": "Design principles",
-      "resources": [
+      "other": [
         "https://www.designbetter.co/principles-of-product-design",
         "https://www.designprinciplesftw.com/",
         "https://principles.adactio.com",
@@ -77,7 +77,7 @@
     },
     {
       "title": "Color theory",
-      "resources": [
+      "other": [
         "https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color",
         "https://www.nickkolenda.com/color-psychology",
         "https://colorandcontrast.com",
@@ -87,7 +87,7 @@
     },
     {
       "title": "Typography",
-      "resources": [
+      "other": [
         "https://typographyhandbook.com",
         "https://fonts.google.com/knowledge",
         "https://www.smashingmagazine.com/2022/10/typographic-hierarchies",
@@ -102,7 +102,7 @@
     },
     {
       "title": "Iconography",
-      "resources": [
+      "other": [
         "https://www.smashingmagazine.com/2018/02/user-interfaces-icons-visual-elements-screen-design",
         "https://design.tutsplus.com/courses/icon-design",
         "https://github.com/notlmn/awesome-icons",
@@ -115,7 +115,7 @@
     },
     {
       "title": "Layout",
-      "resources": [
+      "other": [
         "http://learndesignprinciples.com",
         "https://mediaqueri.es",
         "https://webdesign.tutsplus.com/series/invisible-forces-in-design--cms-1060",
@@ -125,7 +125,7 @@
     },
     {
       "title": "Design systems",
-      "resources": [
+      "other": [
         "https://github.com/alexpate/awesome-design-systems",
         "https://alistapart.com/article/selling-design-systems",
         "https://www.designbetter.co/design-systems-handbook",
@@ -144,7 +144,7 @@
     },
     {
       "title": "Design tools",
-      "resources": [
+      "other": [
         "https://www.youtube.com/watch?v=pvpRGUYvbCw&list=PLgGbWId6zgaXQi_U88w9ywdBTXCaJMvmB&index=5",
         "https://www.youtube.com/watch?v=WEljsc2jorI&list=PLgGbWId6zgaXQi_U88w9ywdBTXCaJMvmB&index=7",
         "https://www.youtube.com/watch?v=g6rQFP9zCAM&list=PLgGbWId6zgaXQi_U88w9ywdBTXCaJMvmB&index=7",
@@ -160,7 +160,7 @@
     },
     {
       "title": "How do they do it",
-      "resources": [
+      "other": [
         "https://designsystemsrepo.com",
         "https://nicelydone.club",
         "https://dribbble.com/",
@@ -173,7 +173,7 @@
     },
     {
       "title": "Nice to know",
-      "resources": [
+      "other": [
         "https://userinyerface.com",
         "https://www.webdesignmuseum.org",
         "https://cantunsee.space",
@@ -189,7 +189,7 @@
     },
     {
       "title": "Great bookmarks",
-      "resources": [
+      "other": [
         "https://developer.apple.com/design/human-interface-guidelines/guidelines/overview",
         "https://m3.material.io",
         "https://biasedbydesign.com",
@@ -215,7 +215,7 @@
     },
     {
       "title": "Stay in the loop",
-      "resources": [
+      "other": [
         "https://xd.adobe.com/ideas",
         "https://design.google",
         "https://www.smashingmagazine.com",

@@ -9,7 +9,7 @@
   "other": [
     {
       "title": "There's more",
-      "resources": [
+      "other": [
         "https://www.udemy.com/course/npm-for-beginners-fast-track",
         "https://www.freecodecamp.org/news/javascript-package-manager-npm-and-yarn",
         "https://github.com/workshopper/how-to-npm",
@@ -25,7 +25,7 @@
     },
     {
       "title": "Beyond basics",
-      "resources": [
+      "other": [
         "https://snyk.io/blog/best-practices-create-modern-npm-package/",
         "https://exploringjs.com/nodejs-shell-scripting/",
         "https://yarnpkg.com/blog/2017/07/11/lets-dev-a-package-manager",
@@ -37,7 +37,7 @@
     },
     {
       "title": "How do they do it?",
-      "resources": [
+      "other": [
         "https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html",
         "https://egghead.io/courses/publish-javascript-packages-on-npm",
         "https://egghead.io/courses/how-to-write-an-open-source-javascript-library",
@@ -51,7 +51,7 @@
     },
     {
       "title": "Nice to know",
-      "resources": [
+      "other": [
         "https://cpojer.net/posts/rethinking-javascript-infrastructure",
         "https://bytearcher.com/articles/evaluating-packages-1-check-community",
         "http://bytearcher.com/articles/evaluating-packages-2-review-repository",
@@ -63,7 +63,7 @@
     },
     {
       "title": "Great bookmarks",
-      "resources": [
+      "other": [
         "http://jargon.js.org",
         "https://docs.npmjs.com",
         "https://www.runpkg.com",
@@ -78,7 +78,7 @@
     },
     {
       "title": "Stay in the loop",
-      "resources": ["https://github.com/npm/rfcs", "https://2ality.com"]
+      "other": ["https://github.com/npm/rfcs", "https://2ality.com"]
     }
   ]
 }

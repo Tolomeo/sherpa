@@ -51,7 +51,7 @@ const checkResourceHealth = (resource: Resource) => {
 describe('Resources', () => {
   Object.entries(paths).forEach(([_, path]) => {
     describe(`"${path.title}" path resources`, () => {
-      path.resources.forEach((pathResource) => {
+      path.main.forEach((pathResource) => {
         // this event will automatically be unbound when this test ends
         // returning false here prevents Cypress from
         // failing the test when an uncaught exception is thrown by the resource page
@@ -66,7 +66,7 @@ describe('Resources', () => {
     describe(`"${path.title}" additional resources`, () => {
       path.other.forEach((pathExtra) => {
         describe(`"${pathExtra.title}" additional resources`, () => {
-          pathExtra.resources.forEach((pathExtraResource) => {
+          pathExtra.other.forEach((pathExtraResource) => {
             it(`"${pathExtraResource.title}" [ ${pathExtraResource.url} ]`, () => {
               // this event will automatically be unbound when this test ends
               // returning false here prevents Cypress from

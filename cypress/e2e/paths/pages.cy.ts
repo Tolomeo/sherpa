@@ -23,7 +23,7 @@ describe('Path pages', () => {
             .as('pathResources')
         })
 
-        path.resources.forEach((pathResource, pathResourceIndex) => {
+        path.main.forEach((pathResource, pathResourceIndex) => {
           const resourceOrder = pathResourceIndex + 1
 
           describe(`#${resourceOrder} "${pathResource.title}"`, () => {
@@ -88,7 +88,7 @@ describe('Path pages', () => {
               )
             })
 
-            pathExtra.resources.forEach((pathExtraResource) => {
+            pathExtra.other.forEach((pathExtraResource) => {
               describe(`"${pathExtraResource.title}"`, () => {
                 beforeEach(() => {
                   cy.get('@extraResources')

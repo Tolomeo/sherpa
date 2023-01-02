@@ -1,16 +1,17 @@
 import { Resource, Resources } from '../resources'
 
-export type SerializedPathExtra = {
+export type SerializedSubPath = {
   title: string
-  resources: Array<keyof Resources>
+  main?: Array<keyof Resources>
+  other?: Array<keyof Resources>
 }
 
 export interface SerializedPath<PathNames = string> {
   title: string
   main: Array<keyof Resources>
+  other?: Array<SerializedSubPath>
   next?: Array<PathNames>
   prev?: Array<PathNames>
-  other?: Array<SerializedPathExtra>
 }
 
 export type SerializedPaths<PathNames = string> = Record<
@@ -18,15 +19,16 @@ export type SerializedPaths<PathNames = string> = Record<
   SerializedPath<PathNames>
 >
 
-export type PathExtra = {
+export type SubPath = {
   title: string
-  resources: Resource[]
+  main: Resource[]
+  other: Resource[]
 }
 
 export interface Path<PathNames = string> {
   title: string
   main: Resource[]
-  other: Array<PathExtra>
+  other: Array<SubPath>
   next: SerializedPaths<PathNames>
   prev: SerializedPaths<PathNames>
 }

@@ -11,7 +11,7 @@
   "other": [
     {
       "title": "There's more",
-      "resources": [
+      "other": [
         "https://scrimba.com/learn/learnreact",
         "https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795",
         "https://www.coursera.org/learn/front-end-react",
@@ -37,7 +37,7 @@
     },
     {
       "title": "Beyond basics",
-      "resources": [
+      "other": [
         "https://www.youtube.com/watch?v=CGpMlWVcHok",
         "https://egghead.io/courses/develop-accessible-web-apps-with-react",
         "https://obedparla.com/code/a-visual-guide-to-react-mental-models",
@@ -63,7 +63,7 @@
     },
     {
       "title": "Redux",
-      "resources": [
+      "other": [
         "https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867",
         "https://github.com/xgrommx/awesome-redux",
         "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37",
@@ -74,7 +74,7 @@
     },
     {
       "title": "Testing",
-      "resources": [
+      "other": [
         "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ",
         "https://wanago.io/courses/javascript-testing-tutorial",
         "https://www.youtube.com/watch?v=GLSSRtnNY0g",
@@ -86,7 +86,7 @@
     },
     {
       "title": "With Typescript",
-      "resources": [
+      "other": [
         "https://react-typescript-cheatsheet.netlify.app",
         "https://www.youtube.com/watch?v=udr2rx_B99w",
         "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml",
@@ -97,7 +97,7 @@
     },
     {
       "title": "How do they do it?",
-      "resources": [
+      "other": [
         "https://github.com/djohal/imdb-replica-react",
         "https://github.com/khaledosman/react-redux-realworld-example-app",
         "https://github.com/oguz3/spotify-web-player",
@@ -110,7 +110,7 @@
     },
     {
       "title": "Nice to know",
-      "resources": [
+      "other": [
         "https://github.com/sudheerj/reactjs-interview-questions",
         "https://ui.dev/why-react-hooks",
         "https://jasonformat.com/wtf-is-jsx/",
@@ -125,7 +125,7 @@
     },
     {
       "title": "Great bookmarks",
-      "resources": [
+      "other": [
         "https://devhints.io/react",
         "https://react-svgr.com/playground",
         "https://reactjs.org/docs/getting-started.html",
@@ -141,7 +141,7 @@
     },
     {
       "title": "Stay in the loop",
-      "resources": [
+      "other": [
         "https://reactjs.org/blog/all.html",
         "https://ui.dev/blog/",
         "https://overreacted.io",

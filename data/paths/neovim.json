@@ -11,7 +11,7 @@
   "other": [
     {
       "title": "There's more",
-      "resources": [
+      "other": [
         "https://www.youtube.com/playlist?list=PLu-ydI-PCl0OEG0ZEqLRRuCrMJGAAI0tW",
         "https://thoughtbot.com/upcase/vim",
         "https://www.openvim.com",
@@ -31,7 +31,7 @@
     },
     {
       "title": "Beyond basics",
-      "resources": [
+      "other": [
         "https://harrisoncramer.me/debugging-in-neovim/",
         "https://thoughtbot.com/upcase/tmux",
         "https://learnvimscriptthehardway.stevelosh.com",
@@ -48,7 +48,7 @@
     },
     {
       "title": "How do they do it?",
-      "resources": [
+      "other": [
         "https://github.com/amix/vimrc",
         "http://zzapper.co.uk/vimtips.html",
         "https://github.com/NvChad/NvChad",
@@ -60,7 +60,7 @@
     },
     {
       "title": "Nice to know",
-      "resources": [
+      "other": [
         "https://www.moolenaar.net/habits.html",
         "https://blog.codinghorror.com/we-are-typists-first-programmers-second",
         "https://stevelosh.com/blog/2010/09/coming-home-to-vim",
@@ -76,7 +76,7 @@
     },
     {
       "title": "Great bookmarks",
-      "resources": [
+      "other": [
         "https://github.com/chloneda/vim-cheatsheet",
         "https://devhints.io/vim",
         "https://devhints.io/vimscript",
@@ -90,7 +90,7 @@
     },
     {
       "title": "Stay in the loop",
-      "resources": [
+      "other": [
         "https://thevaluable.dev",
         "https://www.youtube.com/c/ChrisAtMachine",
         "https://vimtricks.com",

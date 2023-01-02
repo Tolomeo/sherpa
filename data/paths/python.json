@@ -13,7 +13,7 @@
   "other": [
     {
       "title": "There's more",
-      "resources": [
+      "other": [
         "https://www.youtube.com/watch?v=EyEqWFvLDT8",
         "https://testdriven.io/blog/pytest-for-beginners/",
         "https://www.youtube.com/watch?v=jH85McHenvw",
@@ -56,7 +56,7 @@
     },
     {
       "title": "Beyond basics",
-      "resources": [
+      "other": [
         "https://www.youtube.com/watch?v=TyIE3py-rFQ",
         "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1L5QpSapVEzoSfob-4CR8zM",
         "https://www.youtube.com/watch?v=hmkF77F9TLw",
@@ -86,7 +86,7 @@
     },
     {
       "title": "Flask",
-      "resources": [
+      "other": [
         "https://exploreflask.com",
         "https://www.digitalocean.com/community/tutorial_series/how-to-create-web-sites-with-flask",
         "https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/",
@@ -96,7 +96,7 @@
     },
     {
       "title": "Django",
-      "resources": [
+      "other": [
         "https://www.youtube.com/watch?v=jBzwzrDvZ18",
         "https://www.youtube.com/watch?v=Lx5-XtMGDsA",
         "https://www.youtube.com/watch?v=xSUm6iMtREA",
@@ -109,7 +109,7 @@
     },
     {
       "title": "Pygame",
-      "resources": [
+      "other": [
         "https://www.youtube.com/watch?v=T4IX36sP_0c",
         "https://www.youtube.com/watch?v=AY9MnQ4x3zk",
         "https://www.youtube.com/watch?v=FfWpgLFMI7w",
@@ -119,7 +119,7 @@
     },
     {
       "title": "How do they do it?",
-      "resources": [
+      "other": [
         "https://blog.pamelafox.org/2022/09/how-i-setup-python-project.html",
         "https://monadical.com/posts/modular-arithmetic.html",
         "https://dagster.io/blog/adding-python-types",
@@ -132,7 +132,7 @@
     },
     {
       "title": "Nice to know",
-      "resources": [
+      "other": [
         "https://docs.fedoraproject.org/en-US/defensive-coding/",
         "https://inference-review.com/article/the-origins-of-python",
         "https://www.youtube.com/watch?v=-29x_deQQus",
@@ -153,7 +153,7 @@
     },
     {
       "title": "Great bookmarks",
-      "resources": [
+      "other": [
         "https://www.py4e.com",
         "https://docs.python-guide.org/",
         "https://www.fullstackpython.com",
@@ -171,7 +171,7 @@
     },
     {
       "title": "Stay in the loop",
-      "resources": [
+      "other": [
         "https://pycoders.com",
         "https://realpython.com",
         "https://www.python.org/blogs/",

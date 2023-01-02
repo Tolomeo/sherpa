@@ -9,7 +9,7 @@
   "other": [
     {
       "title": "There's more",
-      "resources": [
+      "other": [
         "https://robertcooper.me/post/docker-guide",
         "https://serversforhackers.com/s/docker-in-dev-v2-i",
         "https://serversforhackers.com/s/docker-in-dev-v2-ii",
@@ -36,7 +36,7 @@
     },
     {
       "title": "Beyond basics",
-      "resources": [
+      "other": [
         "https://github.com/collabnix/wasm-docker-better-together",
         "https://www.manuel-strehl.de/quick_docker_commands",
         "https://devopedia.org/container-orchestration",
@@ -64,7 +64,7 @@
     },
     {
       "title": "With Kubernetes",
-      "resources": [
+      "other": [
         "https://www.youtube.com/watch?v=kTp5xUtcalw",
         "https://www.digitalocean.com/community/tutorial_series/from-containers-to-kubernetes-with-node-js",
         "https://www.youtube.com/watch?v=yOu1APg7jtA",
@@ -78,7 +78,7 @@
     },
     {
       "title": "How do they do it?",
-      "resources": [
+      "other": [
         "https://github.com/luisaveiro/playground",
         "https://www.digitalocean.com/community/tutorial_series/rails-on-containers",
         "https://www.digitalocean.com/community/tutorial_series/how-to-build-a-links-landing-page-in-php-with-laravel-and-docker-compose",
@@ -93,7 +93,7 @@
     },
     {
       "title": "Nice to know",
-      "resources": [
+      "other": [
         "https://cloud.redhat.com/blog/mitigate-impact-of-docker-hub-pull-request-limits",
         "https://www.digitalocean.com/community/tutorials/how-to-upload-your-consciousness-to-physical-infrastructure-using-docker-compose",
         "https://martinheinz.dev/blog/35",
@@ -103,7 +103,7 @@
     },
     {
       "title": "Great bookmarks",
-      "resources": [
+      "other": [
         "https://labs.play-with-docker.com",
         "https://opencontainers.org",
         "https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html",
@@ -121,7 +121,7 @@
     },
     {
       "title": "Stay in the loop",
-      "resources": [
+      "other": [
         "https://www.docker.com/newsletter-subscription",
         "https://containerjournal.com"
       ]

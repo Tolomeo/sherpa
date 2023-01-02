@@ -14,7 +14,7 @@
   "other": [
     {
       "title": "There's more",
-      "resources": [
+      "other": [
         "https://www.udacity.com/course/web-accessibility--ud891",
         "https://www.accessguide.io",
         "https://webaim.org/articles",
@@ -38,7 +38,7 @@
     },
     {
       "title": "Beyond basics",
-      "resources": [
+      "other": [
         "https://alistapart.com/article/semantics-to-screen-readers",
         "https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing",
         "https://www.smashingmagazine.com/2020/08/accessibility-chrome-devtools",
@@ -56,14 +56,14 @@
     },
     {
       "title": "How do they do it?",
-      "resources": [
+      "other": [
         "https://www.sarasoueidan.com/blog/testing-environment-setup/",
         "https://inclusive-components.design"
       ]
     },
     {
       "title": "Nice to know",
-      "resources": [
+      "other": [
         "https://webaim.org/projects/million",
         "https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score",
         "https://alt-text-as-poetry.net",
@@ -80,7 +80,7 @@
     },
     {
       "title": "Great bookmarks",
-      "resources": [
+      "other": [
         "https://www.w3.org/WAI/ER/tools",
         "https://russmaxdesign.github.io/accessible-forms",
         "https://www.w3.org/WAI/ARIA/apg",
@@ -102,7 +102,7 @@
     },
     {
       "title": "Stay in the loop",
-      "resources": [
+      "other": [
         "https://www.smashingmagazine.com",
         "https://hiddedevries.nl/en/blog",
         "https://webaim.org",
