@@ -1,6 +1,6 @@
 {
   "title": "Git",
-  "resources": [
+  "core": [
     "https://www.coursera.org/learn/introduction-git-github",
     "https://learngitbranching.js.org",
     "https://wanago.io/courses/getting-geeky-with-git",

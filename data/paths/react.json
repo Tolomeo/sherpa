@@ -1,7 +1,7 @@
 {
   "title": "React",
   "prev": ["javascript"],
-  "resources": [
+  "core": [
     "https://egghead.io/courses/the-beginner-s-guide-to-react",
     "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-react-js",
     "https://epic-react-exercises.vercel.app",

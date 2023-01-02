@@ -1,7 +1,7 @@
 {
   "title": "NPM",
   "next": ["next", "node"],
-  "resources": [
+  "core": [
     "https://www.youtube.com/watch?v=cjoTTSbOuG0",
     "https://survivejs.com/maintenance",
     "https://github.com/sindresorhus/awesome-npm"

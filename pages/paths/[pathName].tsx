@@ -134,7 +134,7 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
             </Typography>
             <Grid container>
               <Grid item xs={12} md={8} xl={6}>
-                <ResourcesTimeline resources={path.resources} />
+                <ResourcesTimeline resources={path.core} />
               </Grid>
             </Grid>
           </LayoutContainer>

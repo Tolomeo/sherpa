@@ -1,6 +1,6 @@
 {
   "title": "Regular expressions",
-  "resources": [
+  "core": [
     "https://github.com/ziishaned/learn-regex",
     "https://regexcrossword.com",
     "https://github.com/aloisdg/awesome-regex"

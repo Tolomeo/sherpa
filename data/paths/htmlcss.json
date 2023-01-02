@@ -1,6 +1,6 @@
 {
   "title": "HTML and CSS",
-  "resources": [
+  "core": [
     "https://internetingishard.netlify.app",
     "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
     "https://learn-the-web.algonquindesign.ca/topics/information-architecture",

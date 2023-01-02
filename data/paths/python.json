@@ -1,7 +1,7 @@
 {
   "title": "Python",
   "next": ["docker"],
-  "resources": [
+  "core": [
     "https://www.youtube.com/playlist?list=PLZPZq0r_RZOOkUQbat8LyQii36cJf2SWT",
     "https://www.youtube.com/watch?v=pdy3nh1tn6I",
     "https://inventwithpython.com/beyond",

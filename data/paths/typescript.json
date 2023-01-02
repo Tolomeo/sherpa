@@ -1,7 +1,7 @@
 {
   "title": "Typescript",
   "prev": ["javascript"],
-  "resources": [
+  "core": [
     "https://www.toptal.com/typescript/typescript-vs-javascript-guide",
     "https://www.youtube.com/watch?v=BwuLxPH8IDs",
     "https://mariusschulz.com/blog/series/typescript-evolution",

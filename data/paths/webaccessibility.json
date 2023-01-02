@@ -1,7 +1,7 @@
 {
   "title": "Web Accessibility",
   "prev": ["htmlcss"],
-  "resources": [
+  "core": [
     "https://learn-the-web.algonquindesign.ca/topics/accessibility",
     "https://learn-the-web.algonquindesign.ca/topics/content-accessibility",
     "https://learn-the-web.algonquindesign.ca/topics/accessibility-for-design",

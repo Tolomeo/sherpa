@@ -2,7 +2,7 @@
   "title": "Node.js",
   "prev": ["javascript", "typescript", "npm"],
   "next": ["docker"],
-  "resources": [
+  "core": [
     "https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js",
     "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp",
     "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js",
