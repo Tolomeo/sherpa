@@ -1,12 +1,12 @@
 {
   "title": "Docker",
-  "core": [
+  "main": [
     "https://www.digitalocean.com/community/conceptual_articles/introduction-to-containers",
     "https://devopedia.org/docker",
     "https://www.youtube.com/playlist?list=PLXl_isu8qxvmDOAnUkG5x16LzBzGzY_Ww",
     "https://github.com/veggiemonk/awesome-docker"
   ],
-  "extras": [
+  "other": [
     {
       "title": "There's more",
       "resources": [

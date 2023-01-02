@@ -66,7 +66,7 @@ describe('Path pages', () => {
           cy.get('[data-testid="path.extras"]').as('extras')
         })
 
-        path.extras.forEach((pathExtra, pathExtraIndex) => {
+        path.other.forEach((pathExtra, pathExtraIndex) => {
           describe(`"${pathExtra.title}" additional resources`, () => {
             beforeEach(() => {
               cy.get('@extras')

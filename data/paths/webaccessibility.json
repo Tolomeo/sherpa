@@ -1,7 +1,7 @@
 {
   "title": "Web Accessibility",
   "prev": ["htmlcss"],
-  "core": [
+  "main": [
     "https://learn-the-web.algonquindesign.ca/topics/accessibility",
     "https://learn-the-web.algonquindesign.ca/topics/content-accessibility",
     "https://learn-the-web.algonquindesign.ca/topics/accessibility-for-design",
@@ -11,7 +11,7 @@
     "https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components",
     "https://github.com/brunopulis/awesome-a11y"
   ],
-  "extras": [
+  "other": [
     {
       "title": "There's more",
       "resources": [

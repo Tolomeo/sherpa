@@ -1,11 +1,11 @@
 {
   "title": "Regular expressions",
-  "core": [
+  "main": [
     "https://github.com/ziishaned/learn-regex",
     "https://regexcrossword.com",
     "https://github.com/aloisdg/awesome-regex"
   ],
-  "extras": [
+  "other": [
     {
       "title": "There's more",
       "resources": [

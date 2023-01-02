@@ -1,7 +1,7 @@
 {
   "title": "Typescript",
   "prev": ["javascript"],
-  "core": [
+  "main": [
     "https://www.toptal.com/typescript/typescript-vs-javascript-guide",
     "https://www.youtube.com/watch?v=BwuLxPH8IDs",
     "https://mariusschulz.com/blog/series/typescript-evolution",
@@ -9,7 +9,7 @@
     "https://youtu.be/eJ6R1knfsoc",
     "https://github.com/dzharii/awesome-typescript"
   ],
-  "extras": [
+  "other": [
     {
       "title": "There's more",
       "resources": [

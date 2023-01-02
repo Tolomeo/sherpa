@@ -1,7 +1,7 @@
 {
   "title": "Javascript",
   "prev": ["htmlcss"],
-  "core": [
+  "main": [
     "https://code.tutsplus.com/courses/javascript-fundamentals",
     "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures",
     "https://jskatas.org",
@@ -11,7 +11,7 @@
     "https://github.com/leonardomso/33-js-concepts",
     "https://github.com/sorrycc/awesome-javascript"
   ],
-  "extras": [
+  "other": [
     {
       "title": "There's more",
       "resources": [

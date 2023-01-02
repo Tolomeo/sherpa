@@ -1,12 +1,12 @@
 {
   "title": "Lua",
-  "core": [
+  "main": [
     "https://www.youtube.com/watch?v=jUuqBZwwkQw",
     "https://www.youtube.com/watch?v=1srFmjt1Ib0&list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU&index=18",
     "https://github.com/kikito/lua_missions",
     "https://github.com/LewisJEllis/awesome-lua"
   ],
-  "extras": [
+  "other": [
     {
       "title": "There's more",
       "resources": [

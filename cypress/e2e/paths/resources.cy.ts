@@ -64,7 +64,7 @@ describe('Resources', () => {
     })
 
     describe(`"${path.title}" additional resources`, () => {
-      path.extras.forEach((pathExtra) => {
+      path.other.forEach((pathExtra) => {
         describe(`"${pathExtra.title}" additional resources`, () => {
           pathExtra.resources.forEach((pathExtraResource) => {
             it(`"${pathExtraResource.title}" [ ${pathExtraResource.url} ]`, () => {

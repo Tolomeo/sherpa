@@ -1,12 +1,12 @@
 {
   "title": "Git",
-  "core": [
+  "main": [
     "https://www.coursera.org/learn/introduction-git-github",
     "https://learngitbranching.js.org",
     "https://wanago.io/courses/getting-geeky-with-git",
     "https://github.com/dictcp/awesome-git"
   ],
-  "extras": [
+  "other": [
     {
       "title": "There's more",
       "resources": [

@@ -2,13 +2,13 @@
   "title": "Next.js",
   "prev": ["react", "npm"],
   "next": ["node"],
-  "core": [
+  "main": [
     "https://medium.com/swlh/the-hitchhikers-guide-to-next-js-fd7aa14ae8d0",
     "https://nextjs.org/learn/basics/create-nextjs-app",
     "https://www.youtube.com/playlist?list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH",
     "https://github.com/unicodeveloper/awesome-nextjs"
   ],
-  "extras": [
+  "other": [
     {
       "title": "There's more",
       "resources": [

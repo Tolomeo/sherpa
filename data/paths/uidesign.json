@@ -1,7 +1,7 @@
 {
   "title": "User Interface Design",
   "next": ["htmlcss", "webaccessibility"],
-  "core": [
+  "main": [
     "https://whydoweinterface.com",
     "https://www.udacity.com/course/human-computer-interaction--ud400",
     "https://thegymnasium.com/courses/GYM/103/0/about",
@@ -12,7 +12,7 @@
     "https://humanebydesign.com",
     "https://github.com/gztchan/awesome-design"
   ],
-  "extras": [
+  "other": [
     {
       "title": "There's more",
       "resources": [
