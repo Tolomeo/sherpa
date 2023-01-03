@@ -48,40 +48,38 @@ const ResourcesTimeline = ({ resources }: Props) => {
             />
           </TimelineSeparator>
           <TimelineContent>
-            <Box pb={1.4}>
-              <Link
-                data-testid={timelineItemLinkTestId}
-                href={resource.url}
-                target="_blank"
-                rel="noreferrer"
+            <Link
+              data-testid={timelineItemLinkTestId}
+              href={resource.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Typography
+                data-testid={timelineItemSourceTestId}
+                variant="overline"
+                color="text.secondary"
               >
-                <Typography
-                  data-testid={timelineItemSourceTestId}
-                  variant="overline"
-                  color="text.secondary"
-                >
-                  {resource.source}
-                </Typography>
-                <Typography
-                  data-testid={timelineItemTitleTestId}
-                  component="span"
-                  variant="h6"
-                  paddingBottom={1}
-                  display="block"
-                >
-                  {resource.title}
-                </Typography>
-                <Stack direction="row" spacing={1.5} component="span">
-                  {resource.type.map((type) => (
-                    <ResourceTypeLabel
-                      resourceType={type}
-                      data-testid={timelineItemTypeTestId}
-                      key={type}
-                    />
-                  ))}
-                </Stack>
-              </Link>
-            </Box>
+                {resource.source}
+              </Typography>
+              <Typography
+                data-testid={timelineItemTitleTestId}
+                component="span"
+                variant="h6"
+                paddingBottom={1}
+                display="block"
+              >
+                {resource.title}
+              </Typography>
+              <Stack direction="row" spacing={1.5} component="span">
+                {resource.type.map((type) => (
+                  <ResourceTypeLabel
+                    resourceType={type}
+                    data-testid={timelineItemTypeTestId}
+                    key={type}
+                  />
+                ))}
+              </Stack>
+            </Link>
           </TimelineContent>
         </TimelineItem>
       ))}
