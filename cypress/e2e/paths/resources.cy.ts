@@ -66,6 +66,17 @@ describe('Resources', () => {
     describe(`"${path.title}" additional resources`, () => {
       path.extra.forEach((pathExtra) => {
         describe(`"${pathExtra.title}" additional resources`, () => {
+          pathExtra.main.forEach((pathExtraResource) => {
+            it(`"${pathExtraResource.title}" [ ${pathExtraResource.url} ]`, () => {
+              // this event will automatically be unbound when this test ends
+              // returning false here prevents Cypress from
+              // failing the test when an uncaught exception is thrown by the resource page
+              cy.on('uncaught:exception', () => false)
+
+              checkResourceHealth(pathExtraResource)
+            })
+          })
+
           pathExtra.extra.forEach((pathExtraResource) => {
             it(`"${pathExtraResource.title}" [ ${pathExtraResource.url} ]`, () => {
               // this event will automatically be unbound when this test ends
