@@ -10,6 +10,8 @@ import {
   hasOtherResources,
   resourceTypes,
   ResourceTypes,
+  hasOtherResourcesMain,
+  hasOtherResourcesOther,
 } from '../../data'
 import {
   Layout,
@@ -148,7 +150,12 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
                       <Typography component="h2" variant="h5" gutterBottom>
                         {extra.title}
                       </Typography>
-                      <ResourcesList resources={extra.other} />
+                      {hasOtherResourcesMain(extra) && (
+                        <ResourcesTimeline resources={extra.main} />
+                      )}
+                      {hasOtherResourcesOther(extra) && (
+                        <ResourcesList resources={extra.other} />
+                      )}
                     </aside>
                   </Box>
                 ))}

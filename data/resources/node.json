@@ -376,5 +376,10 @@
     "title": "Popular Node.js patterns and tools to re-consider",
     "url": "https://practica.dev/blog/popular-nodejs-pattern-and-tools-to-reconsider",
     "type": ["opinion"]
+  },
+  {
+    "title": "awesome-express",
+    "url": "https://github.com/rajikaimal/awesome-express",
+    "type": ["collection", "reference"]
   }
 ]

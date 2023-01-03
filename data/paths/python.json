@@ -86,32 +86,38 @@
     },
     {
       "title": "Flask",
-      "other": [
+      "main": [
         "https://exploreflask.com",
+        "https://github.com/humiaozuzu/awesome-flask"
+      ],
+      "other": [
         "https://www.digitalocean.com/community/tutorial_series/how-to-create-web-sites-with-flask",
         "https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/",
-        "https://www.docdroid.net/0GOZUFr/ultimate-flask-tutorial-2022-reddit-pdf",
-        "https://github.com/humiaozuzu/awesome-flask"
+        "https://www.docdroid.net/0GOZUFr/ultimate-flask-tutorial-2022-reddit-pdf"
       ]
     },
     {
       "title": "Django",
-      "other": [
+      "main": [
         "https://www.youtube.com/watch?v=jBzwzrDvZ18",
+        "https://github.com/wsvincent/awesome-django"
+      ],
+      "other": [
         "https://www.youtube.com/watch?v=Lx5-XtMGDsA",
         "https://www.youtube.com/watch?v=xSUm6iMtREA",
         "https://www.youtube.com/watch?v=sm1mokevMWk&list=PLi39COpmJvHMGkGFHoFM7ix45nqD7jeFk&index=29",
         "https://data-flair.training/blogs/django-tutorials-home",
-        "https://github.com/wsvincent/awesome-django",
         "https://www.youtube.com/playlist?list=PLOLrQ9Pn6cawb13MugxL-p1M4w7ZfT-qR",
         "https://www.youtube.com/watch?v=tujhGdn1EMI"
       ]
     },
     {
       "title": "Pygame",
-      "other": [
-        "https://www.youtube.com/watch?v=T4IX36sP_0c",
+      "main": [
         "https://www.youtube.com/watch?v=AY9MnQ4x3zk",
+        "https://www.youtube.com/watch?v=T4IX36sP_0c"
+      ],
+      "other": [
         "https://www.youtube.com/watch?v=FfWpgLFMI7w",
         "https://www.youtube.com/watch?v=F3J3PZj0zi0",
         "https://www.youtube.com/watch?v=QU1pPzEGrqw"

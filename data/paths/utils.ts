@@ -1,6 +1,6 @@
 import Ajv, { JSONSchemaType } from 'ajv'
 import resources from '../resources'
-import { SerializedPaths, SerializedPath, Paths, Path } from './types'
+import { SerializedPaths, SerializedPath, Paths, Path, SubPath } from './types'
 
 const ajv = new Ajv()
 
@@ -11,7 +11,7 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
     main: {
       type: 'array',
       items: { type: 'string', pattern: '^https?://' },
-      minItems: 1,
+      minItems: 2,
       uniqueItems: true,
     },
     next: {
@@ -37,7 +37,7 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
           main: {
             type: 'array',
             items: { type: 'string', pattern: '^https?://' },
-            minItems: 1,
+            minItems: 2,
             uniqueItems: true,
             nullable: true,
           },
@@ -166,4 +166,12 @@ export const hasPrevPaths = <T extends Path>(path: T) => {
 
 export const hasOtherResources = <T extends Path>(path: T) => {
   return Boolean(path.other.length)
+}
+
+export const hasOtherResourcesMain = <T extends SubPath>(subPath: T) => {
+  return Boolean(subPath.main.length)
+}
+
+export const hasOtherResourcesOther = <T extends SubPath>(subPath: T) => {
+  return Boolean(subPath.other.length)
 }
