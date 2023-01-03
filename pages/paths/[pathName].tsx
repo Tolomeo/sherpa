@@ -131,7 +131,7 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
           )}
 
           <LayoutContainer pb={8} data-testid={pathResourcesTestId}>
-            <Typography component="h2" variant="h5">
+            <Typography component="h2" variant="h5" gutterBottom>
               The path
             </Typography>
             <Grid container>
