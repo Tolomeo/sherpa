@@ -48,7 +48,7 @@ const ResourcesTimeline = ({ resources }: Props) => {
             />
           </TimelineSeparator>
           <TimelineContent>
-            <Box pt={1.5}>
+            <Box pb={1.4}>
               <Link
                 data-testid={timelineItemLinkTestId}
                 href={resource.url}
