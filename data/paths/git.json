@@ -6,10 +6,10 @@
     "https://wanago.io/courses/getting-geeky-with-git",
     "https://github.com/dictcp/awesome-git"
   ],
-  "other": [
+  "extra": [
     {
       "title": "There's more",
-      "other": [
+      "extra": [
         "https://pixelpioneers.co/blog/2017/git-basics-explained-by-designing-a-new-car",
         "https://egghead.io/courses/practical-git-for-everyday-professional-use",
         "https://www.udacity.com/course/version-control-with-git--ud123",
@@ -37,7 +37,7 @@
     },
     {
       "title": "Beyond basics",
-      "other": [
+      "extra": [
         "https://maryrosecook.com/blog/post/git-from-the-inside-out",
         "http://gitlet.maryrosecook.com",
         "https://trunkbaseddevelopment.com",
@@ -50,7 +50,7 @@
     },
     {
       "title": "How do they do it",
-      "other": [
+      "extra": [
         "https://softwaredoug.com/blog/2022/11/09/idiot-proof-git-aliases.html",
         "https://martinheinz.dev/blog/43",
         "https://blog.scottnonnenberg.com/better-git-configuration"
@@ -58,7 +58,7 @@
     },
     {
       "title": "Nice to know",
-      "other": [
+      "extra": [
         "https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git",
         "https://dev.to/samuelfaure/how-to-learn-git-slowly-38fa",
         "https://techtldr.com/19-git-tips-for-everyday-use",
@@ -67,7 +67,7 @@
     },
     {
       "title": "Great bookmarks",
-      "other": [
+      "extra": [
         "https://gitexplorer.com/",
         "https://www.toptal.com/developers/gitignore",
         "https://dangitgit.com/en",
@@ -87,7 +87,7 @@
     },
     {
       "title": "Stay in the loop",
-      "other": ["https://groups.google.com/g/git-users"]
+      "extra": ["https://groups.google.com/g/git-users"]
     }
   ]
 }

@@ -8,10 +8,10 @@
     "https://github.com/alan2207/bulletproof-react",
     "https://github.com/enaqx/awesome-react"
   ],
-  "other": [
+  "extra": [
     {
       "title": "There's more",
-      "other": [
+      "extra": [
         "https://scrimba.com/learn/learnreact",
         "https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795",
         "https://www.coursera.org/learn/front-end-react",
@@ -37,7 +37,7 @@
     },
     {
       "title": "Beyond basics",
-      "other": [
+      "extra": [
         "https://www.youtube.com/watch?v=CGpMlWVcHok",
         "https://egghead.io/courses/develop-accessible-web-apps-with-react",
         "https://obedparla.com/code/a-visual-guide-to-react-mental-models",
@@ -68,7 +68,7 @@
         "https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3",
         "https://github.com/xgrommx/awesome-redux"
       ],
-      "other": [
+      "extra": [
         "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37",
         "https://egghead.io/courses/building-react-applications-with-idiomatic-redux",
         "https://zapier.com/engineering/how-to-build-redux/"
@@ -82,7 +82,7 @@
 				"https://www.youtube.com/watch?v=8vfQ6SWBZ-U",
         "https://github.com/jest-community/awesome-jest"
       ],
-      "other": [
+      "extra": [
         "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ",
         "https://www.youtube.com/watch?v=GLSSRtnNY0g",
         "https://learntdd.in/react",
@@ -95,7 +95,7 @@
         "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml",
         "https://react-typescript-cheatsheet.netlify.app"
       ],
-      "other": [
+      "extra": [
         "https://www.youtube.com/watch?v=udr2rx_B99w",
         "https://egghead.io/courses/modern-redux-with-redux-toolkit-rtk-and-typescript-64f243c8",
         "https://github.com/piotrwitek/react-redux-typescript-guide",
@@ -104,7 +104,7 @@
     },
     {
       "title": "How do they do it?",
-      "other": [
+      "extra": [
         "https://github.com/djohal/imdb-replica-react",
         "https://github.com/khaledosman/react-redux-realworld-example-app",
         "https://github.com/oguz3/spotify-web-player",
@@ -117,7 +117,7 @@
     },
     {
       "title": "Nice to know",
-      "other": [
+      "extra": [
         "https://github.com/sudheerj/reactjs-interview-questions",
         "https://ui.dev/why-react-hooks",
         "https://jasonformat.com/wtf-is-jsx/",
@@ -132,7 +132,7 @@
     },
     {
       "title": "Great bookmarks",
-      "other": [
+      "extra": [
         "https://devhints.io/react",
         "https://react-svgr.com/playground",
         "https://reactjs.org/docs/getting-started.html",
@@ -148,7 +148,7 @@
     },
     {
       "title": "Stay in the loop",
-      "other": [
+      "extra": [
         "https://reactjs.org/blog/all.html",
         "https://ui.dev/blog/",
         "https://overreacted.io",

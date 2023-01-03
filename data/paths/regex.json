@@ -5,10 +5,10 @@
     "https://regexcrossword.com",
     "https://github.com/aloisdg/awesome-regex"
   ],
-  "other": [
+  "extra": [
     {
       "title": "There's more",
-      "other": [
+      "extra": [
         "https://wanago.io/courses/regex-course",
         "https://regexone.com",
         "https://flaviocopes.com/javascript-regular-expressions",
@@ -24,7 +24,7 @@
     },
     {
       "title": "Beyond basics",
-      "other": [
+      "extra": [
         "http://wstoop.co.za/wregex.php",
         "https://www.youtube.com/watch?v=LIVBktatfQI",
         "https://www.youtube.com/watch?v=frVuSFFv4Tk",
@@ -33,11 +33,11 @@
     },
     {
       "title": "Nice to know",
-      "other": ["https://dassur.ma/things/regexp-quote"]
+      "extra": ["https://dassur.ma/things/regexp-quote"]
     },
     {
       "title": "Great bookmarks",
-      "other": [
+      "extra": [
         "https://regexcrossword.com",
         "https://regex.guide",
         "https://ihateregex.io",

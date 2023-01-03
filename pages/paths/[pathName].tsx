@@ -144,7 +144,7 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
           {hasOtherResources(path) && (
             <LayoutContainer pb={4}>
               <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
-                {path.other.map((extra, index) => (
+                {path.extra.map((extra, index) => (
                   <Box data-testid={pathExtrasTestId} key={index}>
                     <aside>
                       <Typography component="h2" variant="h5" gutterBottom>
@@ -154,7 +154,7 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
                         <ResourcesTimeline resources={extra.main} />
                       )}
                       {hasOtherResourcesOther(extra) && (
-                        <ResourcesList resources={extra.other} />
+                        <ResourcesList resources={extra.extra} />
                       )}
                     </aside>
                   </Box>

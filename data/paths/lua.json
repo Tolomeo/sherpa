@@ -6,10 +6,10 @@
     "https://github.com/kikito/lua_missions",
     "https://github.com/LewisJEllis/awesome-lua"
   ],
-  "other": [
+  "extra": [
     {
       "title": "There's more",
-      "other": [
+      "extra": [
         "https://www.youtube.com/playlist?list=PLxgtJR7f0RBKGid7F2dfv7qc-xWwSee2O",
         "https://luabyexample.org",
         "https://en.m.wikibooks.org/wiki/Lua_Programming",
@@ -21,7 +21,7 @@
     },
     {
       "title": "Beyond basics",
-      "other": [
+      "extra": [
         "https://www.youtube.com/playlist?list=PLLwK93hM93Z3nhfJyRRWGRXHaXgNX0Itk",
         "https://www.youtube.com/playlist?list=PLWKjhJtqVAbluXJKKbCIb4xd7fcRkpzoz",
         "https://lua.msys.ch/lua-integration-guide.html",
@@ -43,7 +43,7 @@
         "https://github.com/a327ex/blog/issues/30",
         "https://github.com/love2d-community/awesome-love2d"
       ],
-      "other": [
+      "extra": [
         "https://www.youtube.com/playlist?list=PL1P11yPQAo7q_BWMKFZvUlLBqLRUJLrJm",
         "https://www.youtube.com/playlist?list=PLqPLyUreLV8DrLcLvQQ64Uz_h_JGLgGg2",
         "https://sheepolution.com/learn",
@@ -53,14 +53,14 @@
     },
     {
       "title": "How do they do it?",
-      "other": [
+      "extra": [
         "https://leafo.net/guides/customizing-the-luarocks-tree.html",
         "https://leafo.net/guides/testing-lua-modules-with-github-actions.html"
       ]
     },
     {
       "title": "Nice to know",
-      "other": [
+      "extra": [
         "https://www.youtube.com/playlist?list=PLyQg3m0a5UivaAXEfVDngKYp9jyNSTIo_",
         "http://notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts",
         "https://luakit.github.io/"
@@ -68,7 +68,7 @@
     },
     {
       "title": "Great bookmarks",
-      "other": [
+      "extra": [
         "http://lua-users.org/wiki",
         "https://www.luafaq.org",
         "https://www.lua.org/manual",
@@ -79,7 +79,7 @@
     },
     {
       "title": "Stay in the loop",
-      "other": [
+      "extra": [
         "https://www.lua.org/lua-l.html",
         "https://www.reddit.com/r/lua"
       ]

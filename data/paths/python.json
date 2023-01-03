@@ -10,10 +10,10 @@
     "https://testdriven.io/guides/complete-python",
     "https://github.com/vinta/awesome-python"
   ],
-  "other": [
+  "extra": [
     {
       "title": "There's more",
-      "other": [
+      "extra": [
         "https://www.youtube.com/watch?v=EyEqWFvLDT8",
         "https://testdriven.io/blog/pytest-for-beginners/",
         "https://www.youtube.com/watch?v=jH85McHenvw",
@@ -56,7 +56,7 @@
     },
     {
       "title": "Beyond basics",
-      "other": [
+      "extra": [
         "https://www.youtube.com/watch?v=TyIE3py-rFQ",
         "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1L5QpSapVEzoSfob-4CR8zM",
         "https://www.youtube.com/watch?v=hmkF77F9TLw",
@@ -90,7 +90,7 @@
         "https://exploreflask.com",
         "https://github.com/humiaozuzu/awesome-flask"
       ],
-      "other": [
+      "extra": [
         "https://www.digitalocean.com/community/tutorial_series/how-to-create-web-sites-with-flask",
         "https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/",
         "https://www.docdroid.net/0GOZUFr/ultimate-flask-tutorial-2022-reddit-pdf"
@@ -102,7 +102,7 @@
         "https://www.youtube.com/watch?v=jBzwzrDvZ18",
         "https://github.com/wsvincent/awesome-django"
       ],
-      "other": [
+      "extra": [
         "https://www.youtube.com/watch?v=Lx5-XtMGDsA",
         "https://www.youtube.com/watch?v=xSUm6iMtREA",
         "https://www.youtube.com/watch?v=sm1mokevMWk&list=PLi39COpmJvHMGkGFHoFM7ix45nqD7jeFk&index=29",
@@ -117,7 +117,7 @@
         "https://www.youtube.com/watch?v=AY9MnQ4x3zk",
         "https://www.youtube.com/watch?v=T4IX36sP_0c"
       ],
-      "other": [
+      "extra": [
         "https://www.youtube.com/watch?v=FfWpgLFMI7w",
         "https://www.youtube.com/watch?v=F3J3PZj0zi0",
         "https://www.youtube.com/watch?v=QU1pPzEGrqw"
@@ -125,7 +125,7 @@
     },
     {
       "title": "How do they do it?",
-      "other": [
+      "extra": [
         "https://blog.pamelafox.org/2022/09/how-i-setup-python-project.html",
         "https://monadical.com/posts/modular-arithmetic.html",
         "https://dagster.io/blog/adding-python-types",
@@ -138,7 +138,7 @@
     },
     {
       "title": "Nice to know",
-      "other": [
+      "extra": [
         "https://docs.fedoraproject.org/en-US/defensive-coding/",
         "https://inference-review.com/article/the-origins-of-python",
         "https://www.youtube.com/watch?v=-29x_deQQus",
@@ -159,7 +159,7 @@
     },
     {
       "title": "Great bookmarks",
-      "other": [
+      "extra": [
         "https://www.py4e.com",
         "https://docs.python-guide.org/",
         "https://www.fullstackpython.com",
@@ -177,7 +177,7 @@
     },
     {
       "title": "Stay in the loop",
-      "other": [
+      "extra": [
         "https://pycoders.com",
         "https://realpython.com",
         "https://www.python.org/blogs/",

@@ -64,9 +64,9 @@ describe('Resources', () => {
     })
 
     describe(`"${path.title}" additional resources`, () => {
-      path.other.forEach((pathExtra) => {
+      path.extra.forEach((pathExtra) => {
         describe(`"${pathExtra.title}" additional resources`, () => {
-          pathExtra.other.forEach((pathExtraResource) => {
+          pathExtra.extra.forEach((pathExtraResource) => {
             it(`"${pathExtraResource.title}" [ ${pathExtraResource.url} ]`, () => {
               // this event will automatically be unbound when this test ends
               // returning false here prevents Cypress from

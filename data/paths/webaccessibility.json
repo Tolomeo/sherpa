@@ -11,10 +11,10 @@
     "https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components",
     "https://github.com/brunopulis/awesome-a11y"
   ],
-  "other": [
+  "extra": [
     {
       "title": "There's more",
-      "other": [
+      "extra": [
         "https://www.udacity.com/course/web-accessibility--ud891",
         "https://www.accessguide.io",
         "https://webaim.org/articles",
@@ -38,7 +38,7 @@
     },
     {
       "title": "Beyond basics",
-      "other": [
+      "extra": [
         "https://alistapart.com/article/semantics-to-screen-readers",
         "https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing",
         "https://www.smashingmagazine.com/2020/08/accessibility-chrome-devtools",
@@ -56,14 +56,14 @@
     },
     {
       "title": "How do they do it?",
-      "other": [
+      "extra": [
         "https://www.sarasoueidan.com/blog/testing-environment-setup/",
         "https://inclusive-components.design"
       ]
     },
     {
       "title": "Nice to know",
-      "other": [
+      "extra": [
         "https://webaim.org/projects/million",
         "https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score",
         "https://alt-text-as-poetry.net",
@@ -80,7 +80,7 @@
     },
     {
       "title": "Great bookmarks",
-      "other": [
+      "extra": [
         "https://www.w3.org/WAI/ER/tools",
         "https://russmaxdesign.github.io/accessible-forms",
         "https://www.w3.org/WAI/ARIA/apg",
@@ -102,7 +102,7 @@
     },
     {
       "title": "Stay in the loop",
-      "other": [
+      "extra": [
         "https://www.smashingmagazine.com",
         "https://hiddedevries.nl/en/blog",
         "https://webaim.org",

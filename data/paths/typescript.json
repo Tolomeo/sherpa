@@ -9,10 +9,10 @@
     "https://youtu.be/eJ6R1knfsoc",
     "https://github.com/dzharii/awesome-typescript"
   ],
-  "other": [
+  "extra": [
     {
       "title": "There's more",
-      "other": [
+      "extra": [
         "https://rmolinamir.github.io/typescript-cheatsheet",
         "https://learntypescript.dev",
         "https://basarat.gitbook.io/typescript",
@@ -38,7 +38,7 @@
     },
     {
       "title": "Beyond basics",
-      "other": [
+      "extra": [
         "https://labs42io.github.io/clean-code-typescript",
         "https://www.learningtypescript.com/articles/extreme-explorations-of-typescripts-type-system",
         "http://torokmark.github.io/design_patterns_in_typescript",
@@ -51,7 +51,7 @@
     },
     {
       "title": "How do they do it?",
-      "other": [
+      "extra": [
         "https://github.com/itsMapleLeaf/super-mario-typescript",
         "https://lhartikk.github.io",
         "https://www.davrous.com/2013/06/13/tutorial-series-learning-how-to-write-a-3d-soft-engine-from-scratch-in-c-typescript-or-javascript",
@@ -64,7 +64,7 @@
     },
     {
       "title": "Nice to know",
-      "other": [
+      "extra": [
         "https://flaviocopes.com/deno",
         "https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b",
         "https://www.youtube.com/watch?v=TIlx5nBnx-o"
@@ -72,7 +72,7 @@
     },
     {
       "title": "Great bookmarks",
-      "other": [
+      "extra": [
         "https://www.sitepen.com/blog/typescript-cheat-sheet",
         "https://github.com/typescript-cheatsheets",
         "https://www.saltycrane.com/cheat-sheets/typescript/latest/",
@@ -93,7 +93,7 @@
     },
     {
       "title": "Stay in the loop",
-      "other": [
+      "extra": [
         "https://devblogs.microsoft.com/typescript",
         "https://mariusschulz.com",
         "https://www.typescript-weekly.com",

@@ -11,10 +11,10 @@
     "https://github.com/leonardomso/33-js-concepts",
     "https://github.com/sorrycc/awesome-javascript"
   ],
-  "other": [
+  "extra": [
     {
       "title": "There's more",
-      "other": [
+      "extra": [
         "https://www.udemy.com/course/javascript-essentials",
         "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript",
         "https://github.com/getify/You-Dont-Know-JS",
@@ -46,7 +46,7 @@
     },
     {
       "title": "Beyond basics",
-      "other": [
+      "extra": [
         "https://github.com/ryanmcdermott/clean-code-javascript",
         "https://github.com/getify/Functional-Light-JS",
         "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
@@ -80,7 +80,7 @@
         "https://github.com/goldbergyoni/javascript-testing-best-practices",
         "https://github.com/jest-community/awesome-jest"
       ],
-      "other": [
+      "extra": [
         "https://www.youtube.com/watch?v=r9HdJ8P6GQI",
         "https://github.com/sapegin/jest-cheat-sheet",
         "https://testautomationu.applitools.com/jest-testing-tutorial",
@@ -94,7 +94,7 @@
     },
     {
       "title": "How do they do it?",
-      "other": [
+      "extra": [
         "https://github.com/gothinkster/web-components-realworld-example-app",
         "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX",
         "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
@@ -106,7 +106,7 @@
     },
     {
       "title": "Nice to know",
-      "other": [
+      "extra": [
         "https://github.com/denysdovhan/wtfjs",
         "https://christianheilmann.com/2021/11/01/developer-tools-secrets-that-shouldnt-be-secrets/",
         "https://js13kgames.com",
@@ -123,7 +123,7 @@
     },
     {
       "title": "Great bookmarks",
-      "other": [
+      "extra": [
         "https://codepo8.github.io/dearconsole/",
         "https://unjs.io/",
         "https://www.30secondsofcode.org/js/p/1",
@@ -139,7 +139,7 @@
     },
     {
       "title": "Stay in the loop",
-      "other": [
+      "extra": [
         "https://javascriptweekly.com",
         "https://javascriptjabber.com",
         "https://www.taniarascia.com",

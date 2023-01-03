@@ -9,10 +9,10 @@
     "https://github.com/goldbergyoni/nodebestpractices",
     "https://github.com/sindresorhus/awesome-nodejs"
   ],
-  "other": [
+  "extra": [
     {
       "title": "There's more",
-      "other": [
+      "extra": [
         "https://www.freecodecamp.org/learn/back-end-development-and-apis",
         "https://github.com/azat-co/practicalnode",
         "https://www.youtube.com/playlist?list=PLlxmoA0rQ-LyMoEYRyd1L9oDaTRXOXdZa",
@@ -27,7 +27,7 @@
     },
     {
       "title": "Beyond basics",
-      "other": [
+      "extra": [
         "https://exploringjs.com/nodejs-shell-scripting/",
         "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1JEu7BLraz8MdKJILJir7oY",
         "https://www.youtube.com/watch?v=ynNDmp7hBdo",
@@ -51,7 +51,7 @@
         "https://www.youtube.com/watch?v=Oe421EPjeBE",
         "https://github.com/rajikaimal/awesome-express"
       ],
-      "other": [
+      "extra": [
         "https://www.youtube.com/playlist?list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q",
         "https://github.com/antsmartian/lets-build-express",
         "https://wanago.io/courses/typescript-express-tutorial"
@@ -59,7 +59,7 @@
     },
     {
       "title": "Testing",
-      "other": [
+      "extra": [
         "https://github.com/goldbergyoni/javascript-testing-best-practices",
         "https://github.com/testjavascript/nodejs-integration-tests-best-practices",
         "https://mherman.org/blog/test-driven-development-with-node",
@@ -68,14 +68,14 @@
     },
     {
       "title": "Security",
-      "other": [
+      "extra": [
         "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html",
         "https://github.com/lirantal/awesome-nodejs-security"
       ]
     },
     {
       "title": "How do they do it?",
-      "other": [
+      "extra": [
         "https://rrawat.com/blog/deploy-nodejs-on-aws-cicd",
         "https://www.youtube.com/watch?v=fU4o_BKaUZE",
         "https://github.com/electerious/Ackee",
@@ -92,7 +92,7 @@
     },
     {
       "title": "Nice to know",
-      "other": [
+      "extra": [
         "https://blog.appsignal.com/2022/11/23/nodejs-architecture-pitfalls-to-avoid.html",
         "https://practica.dev/blog/popular-nodejs-pattern-and-tools-to-reconsider",
         "https://www.youtube.com/watch?v=M3BM9TB-8yA",
@@ -103,7 +103,7 @@
     },
     {
       "title": "Great bookmarks",
-      "other": [
+      "extra": [
         "https://github.com/public-apis/public-apis",
         "https://github.com/marmelab/awesome-rest",
         "https://node.green",
@@ -117,7 +117,7 @@
     },
     {
       "title": "Stay in the loop",
-      "other": [
+      "extra": [
         "https://nodeweekly.com",
         "https://2ality.com",
         "https://wanago.io"

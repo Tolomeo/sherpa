@@ -8,10 +8,10 @@
     "https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ",
     "https://github.com/rockerBOO/awesome-neovim"
   ],
-  "other": [
+  "extra": [
     {
       "title": "There's more",
-      "other": [
+      "extra": [
         "https://www.youtube.com/playlist?list=PLu-ydI-PCl0OEG0ZEqLRRuCrMJGAAI0tW",
         "https://thoughtbot.com/upcase/vim",
         "https://www.openvim.com",
@@ -31,7 +31,7 @@
     },
     {
       "title": "Beyond basics",
-      "other": [
+      "extra": [
         "https://harrisoncramer.me/debugging-in-neovim/",
         "https://thoughtbot.com/upcase/tmux",
         "https://learnvimscriptthehardway.stevelosh.com",
@@ -48,7 +48,7 @@
     },
     {
       "title": "How do they do it?",
-      "other": [
+      "extra": [
         "https://github.com/amix/vimrc",
         "http://zzapper.co.uk/vimtips.html",
         "https://github.com/NvChad/NvChad",
@@ -60,7 +60,7 @@
     },
     {
       "title": "Nice to know",
-      "other": [
+      "extra": [
         "https://www.moolenaar.net/habits.html",
         "https://blog.codinghorror.com/we-are-typists-first-programmers-second",
         "https://stevelosh.com/blog/2010/09/coming-home-to-vim",
@@ -76,7 +76,7 @@
     },
     {
       "title": "Great bookmarks",
-      "other": [
+      "extra": [
         "https://github.com/chloneda/vim-cheatsheet",
         "https://devhints.io/vim",
         "https://devhints.io/vimscript",
@@ -90,7 +90,7 @@
     },
     {
       "title": "Stay in the loop",
-      "other": [
+      "extra": [
         "https://thevaluable.dev",
         "https://www.youtube.com/c/ChrisAtMachine",
         "https://vimtricks.com",

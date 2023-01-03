@@ -3,13 +3,13 @@ import { Resource, Resources } from '../resources'
 export type SerializedSubPath = {
   title: string
   main?: Array<keyof Resources>
-  other?: Array<keyof Resources>
+  extra?: Array<keyof Resources>
 }
 
 export interface SerializedPath<PathNames = string> {
   title: string
   main: Array<keyof Resources>
-  other?: Array<SerializedSubPath>
+  extra?: Array<SerializedSubPath>
   next?: Array<PathNames>
   prev?: Array<PathNames>
 }
@@ -22,13 +22,13 @@ export type SerializedPaths<PathNames = string> = Record<
 export type SubPath = {
   title: string
   main: Resource[]
-  other: Resource[]
+  extra: Resource[]
 }
 
 export interface Path<PathNames = string> {
   title: string
   main: Resource[]
-  other: Array<SubPath>
+  extra: Array<SubPath>
   next: SerializedPaths<PathNames>
   prev: SerializedPaths<PathNames>
 }

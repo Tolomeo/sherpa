@@ -28,7 +28,7 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
       nullable: true,
       uniqueItems: true,
     },
-    other: {
+    extra: {
       type: 'array',
       items: {
         type: 'object',
@@ -41,7 +41,7 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
             uniqueItems: true,
             nullable: true,
           },
-          other: {
+          extra: {
             type: 'array',
             items: { type: 'string', pattern: '^https?://' },
             minItems: 1,
@@ -89,7 +89,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
           return resource
         }),
         // populating extra resources, those are optional
-        other: (serializedPath.other || []).map((extra) => ({
+        extra: (serializedPath.extra || []).map((extra) => ({
           ...extra,
           main: (extra.main || []).map((extraResourceId) => {
             const extraResource = resources[extraResourceId]
@@ -101,7 +101,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
 
             return extraResource
           }),
-          other: (extra.other || [])
+          extra: (extra.extra || [])
             .map((extraResourceId) => {
               const extraResource = resources[extraResourceId]
 
@@ -165,7 +165,7 @@ export const hasPrevPaths = <T extends Path>(path: T) => {
 }
 
 export const hasOtherResources = <T extends Path>(path: T) => {
-  return Boolean(path.other.length)
+  return Boolean(path.extra.length)
 }
 
 export const hasOtherResourcesMain = <T extends SubPath>(subPath: T) => {
@@ -173,5 +173,5 @@ export const hasOtherResourcesMain = <T extends SubPath>(subPath: T) => {
 }
 
 export const hasOtherResourcesOther = <T extends SubPath>(subPath: T) => {
-  return Boolean(subPath.other.length)
+  return Boolean(subPath.extra.length)
 }
