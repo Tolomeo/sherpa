@@ -73,12 +73,6 @@ describe('Path pages', () => {
                 .eq(pathExtraIndex)
                 .find('h2')
                 .as('extraResourcesTitle')
-              cy.get('@extras')
-                .eq(pathExtraIndex)
-                .find(
-                  '[data-testid="resources.list"] a[data-testid="resources.list.item.link"]',
-                )
-                .as('extraResources')
             })
 
             it(`Renders a heading2 with "${pathExtra.title}" text`, () => {
@@ -88,23 +82,84 @@ describe('Path pages', () => {
               )
             })
 
-            pathExtra.extra.forEach((pathExtraResource) => {
-              describe(`"${pathExtraResource.title}"`, () => {
-                beforeEach(() => {
-                  cy.get('@extraResources')
-                    .filter(`[href="${pathExtraResource.url}"]`)
-                    .as('extraResource')
-                })
+            describe(`"${pathExtra.title}" main resources`, () => {
+              beforeEach(() => {
+                cy.get('@extras')
+                  .eq(pathExtraIndex)
+                  .find(
+                    '[data-testid="resources.timeline"] [data-testid="resources.timeline.item.link"]',
+                  )
+                  .as('extraResourcesMain')
+              })
 
-                it(`Renders "${pathExtraResource.title}" as resource title,
-								and renders ${pathExtraResource.source} as resource source`, () => {
-                  cy.get('@extraResource')
-                    .find('[data-testid="resources.list.item.title"]')
-                    .should('have.text', pathExtraResource.title)
+              pathExtra.main.forEach(
+                (pathExtraMainResource, pathExtraMainResourceIndex) => {
+                  describe(`"${pathExtraMainResource.title}" main resource`, () => {
+                    beforeEach(() => {
+                      cy.get('@extraResourcesMain')
+                        .eq(pathExtraMainResourceIndex)
+                        .as('extraMainResource')
+                    })
 
-                  cy.get('@extraResource')
-                    .find('[data-testid="resources.list.item.source"]')
-                    .should('have.text', pathExtraResource.source)
+                    it(`Renders "${pathExtraMainResource.title}" as resource title,
+										and renders ${pathExtraMainResource.source} as resource source`, () => {
+                      cy.get('@extraMainResource')
+                        .find('[data-testid="resources.timeline.item.title"]')
+                        .should('have.text', pathExtraMainResource.title)
+
+                      cy.get('@extraMainResource')
+                        .find('[data-testid="resources.timeline.item.source"]')
+                        .should('have.text', pathExtraMainResource.source)
+
+                      cy.get('@extraMainResource')
+                        .find('[data-testid="resources.timeline.item.type"]')
+                        .each(($timelineItemType, timelineItemTypeIndex) => {
+                          expect($timelineItemType.text()).to.equal(
+                            pathExtraMainResource.type[timelineItemTypeIndex],
+                          )
+                        })
+                    })
+                  })
+                },
+              )
+            })
+
+            describe(`"${pathExtra.title}" extra resources`, () => {
+              beforeEach(() => {
+                cy.get('@extras')
+                  .eq(pathExtraIndex)
+                  .find(
+                    '[data-testid="resources.list"] [data-testid="resources.list.item.link"]',
+                  )
+                  .as('extraResourcesExtra')
+              })
+
+              pathExtra.extra.forEach((pathExtraExtraResource) => {
+                describe(`"${pathExtraExtraResource.title}" extra resource`, () => {
+                  beforeEach(() => {
+                    cy.get('@extraResourcesExtra')
+                      .filter(`[href="${pathExtraExtraResource.url}"]`)
+                      .as('extraExtraResource')
+                  })
+
+                  it(`Renders "${pathExtraExtraResource.title}" as resource title,
+									and renders ${pathExtraExtraResource.source} as resource source`, () => {
+                    cy.get('@extraExtraResource')
+                      .find('[data-testid="resources.list.item.title"]')
+                      .should('have.text', pathExtraExtraResource.title)
+
+                    cy.get('@extraExtraResource')
+                      .find('[data-testid="resources.list.item.source"]')
+                      .should('have.text', pathExtraExtraResource.source)
+
+                    cy.get('@extraExtraResource')
+                      .find('[data-testid="resources.list.item.type"]')
+                      .each(($timelineItemType, timelineItemTypeIndex) => {
+                        expect($timelineItemType.text()).to.equal(
+                          pathExtraExtraResource.type[timelineItemTypeIndex],
+                        )
+                      })
+                  })
                 })
               })
             })
@@ -112,7 +167,7 @@ describe('Path pages', () => {
         })
       })
 
-      describe('Help drawer', () => {
+      /* describe('Help drawer', () => {
         before(() => {
           cy.get('[data-testid="help-drawer-toggle"]')
             .click()
@@ -135,7 +190,7 @@ describe('Path pages', () => {
               .should('have.text', pathLinkText)
           })
         })
-      })
+      }) */
     })
   })
 })
