@@ -101,8 +101,13 @@ describe('Path pages', () => {
                         .as('extraMainResource')
                     })
 
-                    it(`Renders "${pathExtraMainResource.title}" as resource title,
-										and renders ${pathExtraMainResource.source} as resource source`, () => {
+                    it(`Renders "${
+                      pathExtraMainResource.title
+                    }" as resource title,
+										and renders ${pathExtraMainResource.source} as resource source
+										and renders "${pathExtraMainResource.type.join(
+                      '", "',
+                    )}" as resource types`, () => {
                       cy.get('@extraMainResource')
                         .find('[data-testid="resources.timeline.item.title"]')
                         .should('have.text', pathExtraMainResource.title)
@@ -142,8 +147,13 @@ describe('Path pages', () => {
                       .as('extraExtraResource')
                   })
 
-                  it(`Renders "${pathExtraExtraResource.title}" as resource title,
-									and renders ${pathExtraExtraResource.source} as resource source`, () => {
+                  it(`Renders "${
+                    pathExtraExtraResource.title
+                  }" as resource title,
+									and renders ${pathExtraExtraResource.source} as resource source
+									and renders "${pathExtraExtraResource.type.join(
+                    '", "',
+                  )}" as resource types`, () => {
                     cy.get('@extraExtraResource')
                       .find('[data-testid="resources.list.item.title"]')
                       .should('have.text', pathExtraExtraResource.title)

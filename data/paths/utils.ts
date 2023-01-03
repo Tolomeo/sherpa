@@ -168,10 +168,10 @@ export const hasOtherResources = <T extends Path>(path: T) => {
   return Boolean(path.extra.length)
 }
 
-export const hasOtherResourcesMain = <T extends SubPath>(subPath: T) => {
+export const hasExtraResourcesMain = <T extends SubPath>(subPath: T) => {
   return Boolean(subPath.main.length)
 }
 
-export const hasOtherResourcesOther = <T extends SubPath>(subPath: T) => {
+export const hasExtraResourcesExtra = <T extends SubPath>(subPath: T) => {
   return Boolean(subPath.extra.length)
 }
