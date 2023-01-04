@@ -1,12 +1,14 @@
 import Ajv, { JSONSchemaType } from 'ajv'
 import resources from '../resources'
 import {
-  SerializedPathExtraType,
+  SerializedSubPath,
+  SerializedSubTopic,
   SerializedPaths,
   SerializedPath,
   Paths,
   Path,
   SubPath,
+  SubTopic,
 } from './types'
 
 const ajv = new Ajv()
@@ -43,7 +45,6 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
             type: 'object',
             properties: {
               title: { type: 'string', minLength: 2 },
-              type: { type: 'string', const: SerializedPathExtraType.subpath },
               main: {
                 type: 'array',
                 items: { type: 'string', pattern: '^https?://' },
@@ -58,13 +59,12 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
                 nullable: true,
               },
             },
-            required: ['title', 'type'],
+            required: ['title', 'main'],
           },
           {
             type: 'object',
             properties: {
               title: { type: 'string', minLength: 2 },
-              type: { type: 'string', const: SerializedPathExtraType.subtopic },
               resources: {
                 type: 'array',
                 items: { type: 'string', pattern: '^https?://' },
@@ -72,7 +72,7 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
                 uniqueItems: true,
               },
             },
-            required: ['title', 'type'],
+            required: ['title', 'resources'],
           },
         ],
       },
@@ -85,6 +85,18 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
 }
 
 const validateSerializedPath = ajv.compile(serializedPathSchema)
+
+export const isSerializedSubTopic = (
+  pathExtra: SerializedSubPath | SerializedSubTopic,
+): pathExtra is SerializedSubPath => {
+  return 'resources' in pathExtra
+}
+
+export const isSerializedSubPath = (
+  pathExtra: SerializedSubPath | SerializedSubTopic,
+): pathExtra is SerializedSubPath => {
+  return 'main' in pathExtra
+}
 
 export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
   Object.entries(serializedPaths).reduce(
@@ -115,11 +127,21 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
         }),
         // populating extra resources, those are optional
         extra: (serializedPath.extra || []).map((extra) => {
-          switch (extra.type) {
-            case 'subpath':
-              return {
-                ...extra,
-                main: (extra.main || []).map((extraResourceId) => {
+          if (isSerializedSubPath(extra)) {
+            return {
+              ...extra,
+              main: (extra.main || []).map((extraResourceId) => {
+                const extraResource = resources[extraResourceId]
+
+                if (!extraResource)
+                  throw new Error(
+                    `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
+                  )
+
+                return extraResource
+              }),
+              extra: (extra.extra || [])
+                .map((extraResourceId) => {
                   const extraResource = resources[extraResourceId]
 
                   if (!extraResource)
@@ -128,60 +150,54 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
                     )
 
                   return extraResource
+                })
+                // sorting alphabetically by resource title
+                .sort((resourceA, resourceB) => {
+                  const titleA = resourceA.title.toUpperCase()
+                  const titleB = resourceB.title.toUpperCase()
+
+                  if (titleA > titleB) return 1
+                  else if (titleA < titleB) return -1
+
+                  return 0
                 }),
-                extra: (extra.extra || [])
-                  .map((extraResourceId) => {
-                    const extraResource = resources[extraResourceId]
-
-                    if (!extraResource)
-                      throw new Error(
-                        `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
-                      )
-
-                    return extraResource
-                  })
-                  // sorting alphabetically by resource title
-                  .sort((resourceA, resourceB) => {
-                    const titleA = resourceA.title.toUpperCase()
-                    const titleB = resourceB.title.toUpperCase()
-
-                    if (titleA > titleB) return 1
-                    else if (titleA < titleB) return -1
-
-                    return 0
-                  }),
-              }
-
-            case 'subtopic':
-              return {
-                ...extra,
-                resources: (extra.resources || [])
-                  .map((extraResourceId) => {
-                    const extraResource = resources[extraResourceId]
-
-                    if (!extraResource)
-                      throw new Error(
-                        `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
-                      )
-
-                    return extraResource
-                  })
-                  // sorting alphabetically by resource title
-                  .sort((resourceA, resourceB) => {
-                    const titleA = resourceA.title.toUpperCase()
-                    const titleB = resourceB.title.toUpperCase()
-
-                    if (titleA > titleB) return 1
-                    else if (titleA < titleB) return -1
-
-                    return 0
-                  }),
-              }
-            default:
-              throw new Error(
-                `Serializedpath '${extra.title}' uknown type error[${extra.type}]`,
-              )
+            }
           }
+
+          if (isSerializedSubTopic(extra)) {
+            return {
+              ...extra,
+              resources: extra.resources
+                .map((extraResourceId) => {
+                  const extraResource = resources[extraResourceId]
+
+                  if (!extraResource)
+                    throw new Error(
+                      `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
+                    )
+
+                  return extraResource
+                })
+                // sorting alphabetically by resource title
+                .sort((resourceA, resourceB) => {
+                  const titleA = resourceA.title.toUpperCase()
+                  const titleB = resourceB.title.toUpperCase()
+
+                  if (titleA > titleB) return 1
+                  else if (titleA < titleB) return -1
+
+                  return 0
+                }),
+            }
+          }
+
+          throw new Error(
+            `Serializedpath '${extra.title}' uknown type error[${JSON.stringify(
+              extra,
+              null,
+              4,
+            )}]`,
+          )
         }),
         // populating next paths, those are optional
         next: (serializedPath.next || []).reduce((nextPaths, nextPathId) => {
@@ -228,10 +244,18 @@ export const hasOtherResources = <T extends Path>(path: T) => {
   return Boolean(path.extra.length)
 }
 
-export const hasExtraResourcesMain = <T extends SubPath>(subPath: T) => {
-  return Boolean(subPath.main.length)
+export const hasSubPathExtraResources = <T extends SubPath>(subpath: T) => {
+  return Boolean(subpath.extra.length)
 }
 
-export const hasExtraResourcesExtra = <T extends SubPath>(subPath: T) => {
-  return Boolean(subPath.extra.length)
+export const isSubTopic = (
+  pathExtra: SubPath | SubTopic,
+): pathExtra is SubTopic => {
+  return 'resources' in pathExtra
+}
+
+export const isSubPath = (
+  pathExtra: SubPath | SubTopic,
+): pathExtra is SubPath => {
+  return 'main' in pathExtra
 }

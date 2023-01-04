@@ -1,21 +1,14 @@
 import { Resource, Resources } from '../resources'
 
-export enum SerializedPathExtraType {
-  subtopic = 'subtopic',
-  subpath = 'subpath',
-}
-
-interface SerializedPathExtra {
+export interface SerializedPathExtra {
   title: string
 }
 
 export interface SerializedSubTopic extends SerializedPathExtra {
-  type: SerializedPathExtraType.subtopic
   resources: Array<keyof Resources>
 }
 
 export interface SerializedSubPath extends SerializedPathExtra {
-  type: SerializedPathExtraType.subpath
   main: Array<keyof Resources>
   extra?: Array<keyof Resources>
 }

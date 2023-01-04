@@ -9,7 +9,7 @@
   "extra": [
     {
       "title": "There's more",
-      "extra": [
+      "resources": [
         "https://www.youtube.com/playlist?list=PLxgtJR7f0RBKGid7F2dfv7qc-xWwSee2O",
         "https://luabyexample.org",
         "https://en.m.wikibooks.org/wiki/Lua_Programming",
@@ -21,7 +21,7 @@
     },
     {
       "title": "Beyond basics",
-      "extra": [
+      "resources": [
         "https://www.youtube.com/playlist?list=PLLwK93hM93Z3nhfJyRRWGRXHaXgNX0Itk",
         "https://www.youtube.com/playlist?list=PLWKjhJtqVAbluXJKKbCIb4xd7fcRkpzoz",
         "https://lua.msys.ch/lua-integration-guide.html",
@@ -53,14 +53,14 @@
     },
     {
       "title": "How do they do it?",
-      "extra": [
+      "resources": [
         "https://leafo.net/guides/customizing-the-luarocks-tree.html",
         "https://leafo.net/guides/testing-lua-modules-with-github-actions.html"
       ]
     },
     {
       "title": "Nice to know",
-      "extra": [
+      "resources": [
         "https://www.youtube.com/playlist?list=PLyQg3m0a5UivaAXEfVDngKYp9jyNSTIo_",
         "http://notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts",
         "https://luakit.github.io/"
@@ -68,7 +68,7 @@
     },
     {
       "title": "Great bookmarks",
-      "extra": [
+      "resources": [
         "http://lua-users.org/wiki",
         "https://www.luafaq.org",
         "https://www.lua.org/manual",
@@ -79,7 +79,7 @@
     },
     {
       "title": "Stay in the loop",
-      "extra": [
+      "resources": [
         "https://www.lua.org/lua-l.html",
         "https://www.reddit.com/r/lua"
       ]

@@ -10,8 +10,9 @@ import {
   hasOtherResources,
   resourceTypes,
   ResourceTypes,
-  hasExtraResourcesMain,
-  hasExtraResourcesExtra,
+  isSubPath,
+  isSubTopic,
+  hasSubPathExtraResources,
 } from '../../data'
 import {
   Layout,
@@ -150,11 +151,18 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
                       <Typography component="h2" variant="h5" gutterBottom>
                         {extra.title}
                       </Typography>
-                      {hasExtraResourcesMain(extra) && (
-                        <ResourcesTimeline resources={extra.main} />
+
+                      {isSubTopic(extra) && (
+                        <ResourcesList resources={extra.resources} />
                       )}
-                      {hasExtraResourcesExtra(extra) && (
-                        <ResourcesList resources={extra.extra} />
+
+                      {isSubPath(extra) && (
+                        <>
+                          <ResourcesTimeline resources={extra.main} />
+                          {hasSubPathExtraResources(extra) && (
+                            <ResourcesList resources={extra.extra} />
+                          )}
+                        </>
                       )}
                     </aside>
                   </Box>
