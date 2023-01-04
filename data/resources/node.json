@@ -376,5 +376,37 @@
     "title": "Popular Node.js patterns and tools to re-consider",
     "url": "https://practica.dev/blog/popular-nodejs-pattern-and-tools-to-reconsider",
     "type": ["opinion"]
+  },
+  {
+    "title": "awesome-express",
+    "url": "https://github.com/rajikaimal/awesome-express",
+    "type": ["collection", "reference"]
+  },
+  {
+    "title": "NestJs Course for Beginners",
+    "url": "https://www.youtube.com/watch?v=GHTA143_b-s",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "awesome-nestjs",
+    "url": "https://github.com/nestjs/awesome-nestjs",
+    "type": ["collection", "reference"]
+  },
+  {
+    "title": "NestJS Crash Course",
+    "url": "https://www.youtube.com/watch?v=S0R82Osg-Mk",
+    "type": ["course"],
+    "source": "youtube.com/@laithacademy"
+  },
+  {
+    "title": "API with NestJS",
+    "url": "https://wanago.io/courses/api-with-nestjs/",
+    "type": ["guide", "collection"]
+  },
+  {
+    "title": "Learn NestJS Best Practices",
+    "url": "https://www.tomray.dev",
+    "type": ["tutorial", "collection"]
   }
 ]

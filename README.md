@@ -31,10 +31,10 @@ If this project manages to help anyone learning something, I will see it as a su
 - [x] Add resources monitoring tests
 - [x] Add resources schema validation
 - [x] Add "help" panel
+- [x] Add "path sub-paths" support
 - [ ] Add client side "save progress" feature
 - [ ] Add client side path customisation?
-- [ ] Add "resources with multiple URLs" support
-- [ ] Add "path sub-paths" support
+- [ ] Add "resources with multiple URLs" support?
 - [ ] Add path descriptions?
 - [ ] Split website code from json data source into separate monorepo packages
 - [ ] Add contributing automations and templates

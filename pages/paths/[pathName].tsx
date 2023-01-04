@@ -7,9 +7,12 @@ import {
   Paths,
   hasPrevPaths,
   hasNextPaths,
-  hasExtras,
+  hasExtraResources,
   resourceTypes,
   ResourceTypes,
+  isSubPath,
+  isSubTopic,
+  hasSubPathExtraResources,
 } from '../../data'
 import {
   Layout,
@@ -129,26 +132,38 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
           )}
 
           <LayoutContainer pb={8} data-testid={pathResourcesTestId}>
-            <Typography component="h2" variant="h5">
+            <Typography component="h2" variant="h5" gutterBottom>
               The path
             </Typography>
             <Grid container>
               <Grid item xs={12} md={8} xl={6}>
-                <ResourcesTimeline resources={path.resources} />
+                <ResourcesTimeline resources={path.main} />
               </Grid>
             </Grid>
           </LayoutContainer>
 
-          {hasExtras(path) && (
+          {hasExtraResources(path) && (
             <LayoutContainer pb={4}>
               <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
-                {path.extras.map((extra, index) => (
+                {path.extra.map((extra, index) => (
                   <Box data-testid={pathExtrasTestId} key={index}>
                     <aside>
                       <Typography component="h2" variant="h5" gutterBottom>
                         {extra.title}
                       </Typography>
-                      <ResourcesList resources={extra.resources} />
+
+                      {isSubTopic(extra) && (
+                        <ResourcesList resources={extra.resources} />
+                      )}
+
+                      {isSubPath(extra) && (
+                        <>
+                          <ResourcesTimeline resources={extra.main} />
+                          {hasSubPathExtraResources(extra) && (
+                            <ResourcesList resources={extra.extra} />
+                          )}
+                        </>
+                      )}
                     </aside>
                   </Box>
                 ))}

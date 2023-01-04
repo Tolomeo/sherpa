@@ -1,6 +1,6 @@
 {
   "title": "Neovim",
-  "resources": [
+  "main": [
     "https://danielmiessler.com/study/vim",
     "https://www.youtube.com/watch?v=RZ4p-saaQkc",
     "https://thevaluable.dev/vim-beginner",
@@ -8,7 +8,7 @@
     "https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ",
     "https://github.com/rockerBOO/awesome-neovim"
   ],
-  "extras": [
+  "extra": [
     {
       "title": "There's more",
       "resources": [

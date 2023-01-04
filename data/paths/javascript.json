@@ -1,7 +1,7 @@
 {
   "title": "Javascript",
   "prev": ["htmlcss"],
-  "resources": [
+  "main": [
     "https://code.tutsplus.com/courses/javascript-fundamentals",
     "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures",
     "https://jskatas.org",
@@ -11,7 +11,7 @@
     "https://github.com/leonardomso/33-js-concepts",
     "https://github.com/sorrycc/awesome-javascript"
   ],
-  "extras": [
+  "extra": [
     {
       "title": "There's more",
       "resources": [
@@ -74,19 +74,21 @@
     },
     {
       "title": "Testing",
-      "resources": [
-        "https://www.youtube.com/watch?v=r9HdJ8P6GQI",
+      "main": [
+        "https://www.youtube.com/watch?v=u5cLK1UrFyQ",
+        "https://www.youtube.com/watch?v=ajiAl5UNzBU",
         "https://github.com/goldbergyoni/javascript-testing-best-practices",
-        "https://github.com/jest-community/awesome-jest",
+        "https://github.com/jest-community/awesome-jest"
+      ],
+      "extra": [
+        "https://www.youtube.com/watch?v=r9HdJ8P6GQI",
         "https://github.com/sapegin/jest-cheat-sheet",
         "https://testautomationu.applitools.com/jest-testing-tutorial",
         "https://flaviocopes.com/jest",
         "https://www.udacity.com/course/javascript-testing--ud549",
-        "https://www.youtube.com/watch?v=u5cLK1UrFyQ",
         "https://www.youtube.com/watch?v=DdqiXcYDv-8",
         "https://testing-playground.com",
         "https://wanago.io/courses/javascript-testing-tutorial",
-        "https://www.youtube.com/watch?v=ajiAl5UNzBU",
         "https://cpojer.net/posts/building-a-javascript-testing-framework"
       ]
     },

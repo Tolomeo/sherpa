@@ -1,14 +1,14 @@
 {
   "title": "React",
   "prev": ["javascript"],
-  "resources": [
+  "main": [
     "https://egghead.io/courses/the-beginner-s-guide-to-react",
     "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-react-js",
     "https://epic-react-exercises.vercel.app",
     "https://github.com/alan2207/bulletproof-react",
     "https://github.com/enaqx/awesome-react"
   ],
-  "extras": [
+  "extra": [
     {
       "title": "There's more",
       "resources": [
@@ -63,33 +63,40 @@
     },
     {
       "title": "Redux",
-      "resources": [
+      "main": [
         "https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867",
-        "https://github.com/xgrommx/awesome-redux",
+        "https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3",
+        "https://github.com/xgrommx/awesome-redux"
+      ],
+      "extra": [
         "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37",
         "https://egghead.io/courses/building-react-applications-with-idiomatic-redux",
-        "https://zapier.com/engineering/how-to-build-redux/",
-        "https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3"
+        "https://zapier.com/engineering/how-to-build-redux/"
       ]
     },
     {
       "title": "Testing",
-      "resources": [
-        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ",
+      "main": [
+        "https://maxrozen.com/beginners-guide-to-react-testing",
         "https://wanago.io/courses/javascript-testing-tutorial",
+				"https://www.youtube.com/watch?v=8vfQ6SWBZ-U",
+        "https://github.com/jest-community/awesome-jest"
+      ],
+      "extra": [
+        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ",
         "https://www.youtube.com/watch?v=GLSSRtnNY0g",
         "https://learntdd.in/react",
-        "https://www.javascripttutorials.net/retrofit-a-test-suite-in-an-existing-react-apps",
-        "https://www.youtube.com/watch?v=8vfQ6SWBZ-U",
-        "https://maxrozen.com/beginners-guide-to-react-testing"
+        "https://www.javascripttutorials.net/retrofit-a-test-suite-in-an-existing-react-apps"
       ]
     },
     {
       "title": "With Typescript",
-      "resources": [
-        "https://react-typescript-cheatsheet.netlify.app",
-        "https://www.youtube.com/watch?v=udr2rx_B99w",
+      "main": [
         "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml",
+        "https://react-typescript-cheatsheet.netlify.app"
+      ],
+      "extra": [
+        "https://www.youtube.com/watch?v=udr2rx_B99w",
         "https://egghead.io/courses/modern-redux-with-redux-toolkit-rtk-and-typescript-64f243c8",
         "https://github.com/piotrwitek/react-redux-typescript-guide",
         "https://fettblog.eu/typescript-react/"

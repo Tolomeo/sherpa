@@ -1,12 +1,12 @@
 {
   "title": "Lua",
-  "resources": [
+  "main": [
     "https://www.youtube.com/watch?v=jUuqBZwwkQw",
     "https://www.youtube.com/watch?v=1srFmjt1Ib0&list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU&index=18",
     "https://github.com/kikito/lua_missions",
     "https://github.com/LewisJEllis/awesome-lua"
   ],
-  "extras": [
+  "extra": [
     {
       "title": "There's more",
       "resources": [
@@ -31,22 +31,24 @@
     },
     {
       "title": "OpenResty",
-      "resources": [
+      "main": [
         "https://openresty.org/en/videos.html",
         "https://github.com/bungle/awesome-resty"
       ]
     },
     {
       "title": "Löve",
-      "resources": [
-        "https://www.youtube.com/playlist?list=PL1P11yPQAo7q_BWMKFZvUlLBqLRUJLrJm",
+      "main": [
         "https://www.youtube.com/watch?v=I549C6SmUnk",
+        "https://github.com/a327ex/blog/issues/30",
+        "https://github.com/love2d-community/awesome-love2d"
+      ],
+      "extra": [
+        "https://www.youtube.com/playlist?list=PL1P11yPQAo7q_BWMKFZvUlLBqLRUJLrJm",
         "https://www.youtube.com/playlist?list=PLqPLyUreLV8DrLcLvQQ64Uz_h_JGLgGg2",
         "https://sheepolution.com/learn",
         "https://www.youtube.com/playlist?list=PLqPLyUreLV8D3Ckd_9UFNvEpg4xCvbL1a",
-        "https://www.youtube.com/playlist?list=PLYBJzqz8zpWYip5ZkTMQiOkqya9Iiefm9",
-        "https://github.com/a327ex/blog/issues/30",
-        "https://github.com/love2d-community/awesome-love2d"
+        "https://www.youtube.com/playlist?list=PLYBJzqz8zpWYip5ZkTMQiOkqya9Iiefm9"
       ]
     },
     {

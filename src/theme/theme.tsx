@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import { createTheme as createMuiTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
@@ -75,6 +75,8 @@ export const createTheme = (mode: ThemeMode) => {
         styleOverrides: {
           root: {
             margin: 0,
+            paddingTop: 0,
+            paddingBottom: 0,
           },
         },
       },
@@ -87,9 +89,27 @@ export const createTheme = (mode: ThemeMode) => {
           },
         },
       },
+      MuiTimelineContent: {
+        styleOverrides: {
+          root: {
+            paddingTop: '1rem',
+            paddingBottom: '1rem',
+          },
+        },
+      },
+      MuiList: {
+        styleOverrides: {
+          root: {
+            paddingTop: '1rem',
+            paddingBottom: '1rem',
+          },
+        },
+      },
       MuiListItem: {
         styleOverrides: {
           root: {
+            paddingTop: '1rem',
+            paddingBottom: '1rem',
             '&:first-of-type': {
               paddingTop: 0,
             },
@@ -103,6 +123,13 @@ export const createTheme = (mode: ThemeMode) => {
         styleOverrides: {
           root: {
             minWidth: 28,
+          },
+        },
+      },
+      MuiListItemText: {
+        styleOverrides: {
+          root: {
+            margin: 0,
           },
         },
       },
