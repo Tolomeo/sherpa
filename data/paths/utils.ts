@@ -1,6 +1,13 @@
 import Ajv, { JSONSchemaType } from 'ajv'
 import resources from '../resources'
-import { SerializedPaths, SerializedPath, Paths, Path, SubPath } from './types'
+import {
+  SerializedPathExtraType,
+  SerializedPaths,
+  SerializedPath,
+  Paths,
+  Path,
+  SubPath,
+} from './types'
 
 const ajv = new Ajv()
 
@@ -31,25 +38,43 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
     extra: {
       type: 'array',
       items: {
-        type: 'object',
-        properties: {
-          title: { type: 'string', minLength: 2 },
-          main: {
-            type: 'array',
-            items: { type: 'string', pattern: '^https?://' },
-            minItems: 2,
-            uniqueItems: true,
-            nullable: true,
+        anyOf: [
+          {
+            type: 'object',
+            properties: {
+              title: { type: 'string', minLength: 2 },
+              type: { type: 'string', const: SerializedPathExtraType.subpath },
+              main: {
+                type: 'array',
+                items: { type: 'string', pattern: '^https?://' },
+                minItems: 2,
+                uniqueItems: true,
+              },
+              extra: {
+                type: 'array',
+                items: { type: 'string', pattern: '^https?://' },
+                minItems: 1,
+                uniqueItems: true,
+                nullable: true,
+              },
+            },
+            required: ['title', 'type'],
           },
-          extra: {
-            type: 'array',
-            items: { type: 'string', pattern: '^https?://' },
-            minItems: 1,
-            uniqueItems: true,
-            nullable: true,
+          {
+            type: 'object',
+            properties: {
+              title: { type: 'string', minLength: 2 },
+              type: { type: 'string', const: SerializedPathExtraType.subtopic },
+              resources: {
+                type: 'array',
+                items: { type: 'string', pattern: '^https?://' },
+                minItems: 1,
+                uniqueItems: true,
+              },
+            },
+            required: ['title', 'type'],
           },
-        },
-        required: ['title'],
+        ],
       },
       minItems: 1,
       nullable: true,
@@ -89,40 +114,75 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
           return resource
         }),
         // populating extra resources, those are optional
-        extra: (serializedPath.extra || []).map((extra) => ({
-          ...extra,
-          main: (extra.main || []).map((extraResourceId) => {
-            const extraResource = resources[extraResourceId]
+        extra: (serializedPath.extra || []).map((extra) => {
+          switch (extra.type) {
+            case 'subpath':
+              return {
+                ...extra,
+                main: (extra.main || []).map((extraResourceId) => {
+                  const extraResource = resources[extraResourceId]
 
-            if (!extraResource)
+                  if (!extraResource)
+                    throw new Error(
+                      `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
+                    )
+
+                  return extraResource
+                }),
+                extra: (extra.extra || [])
+                  .map((extraResourceId) => {
+                    const extraResource = resources[extraResourceId]
+
+                    if (!extraResource)
+                      throw new Error(
+                        `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
+                      )
+
+                    return extraResource
+                  })
+                  // sorting alphabetically by resource title
+                  .sort((resourceA, resourceB) => {
+                    const titleA = resourceA.title.toUpperCase()
+                    const titleB = resourceB.title.toUpperCase()
+
+                    if (titleA > titleB) return 1
+                    else if (titleA < titleB) return -1
+
+                    return 0
+                  }),
+              }
+
+            case 'subtopic':
+              return {
+                ...extra,
+                resources: (extra.resources || [])
+                  .map((extraResourceId) => {
+                    const extraResource = resources[extraResourceId]
+
+                    if (!extraResource)
+                      throw new Error(
+                        `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
+                      )
+
+                    return extraResource
+                  })
+                  // sorting alphabetically by resource title
+                  .sort((resourceA, resourceB) => {
+                    const titleA = resourceA.title.toUpperCase()
+                    const titleB = resourceB.title.toUpperCase()
+
+                    if (titleA > titleB) return 1
+                    else if (titleA < titleB) return -1
+
+                    return 0
+                  }),
+              }
+            default:
               throw new Error(
-                `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
+                `Serializedpath '${extra.title}' uknown type error[${extra.type}]`,
               )
-
-            return extraResource
-          }),
-          extra: (extra.extra || [])
-            .map((extraResourceId) => {
-              const extraResource = resources[extraResourceId]
-
-              if (!extraResource)
-                throw new Error(
-                  `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
-                )
-
-              return extraResource
-            })
-            // sorting alphabetically by resource title
-            .sort((resourceA, resourceB) => {
-              const titleA = resourceA.title.toUpperCase()
-              const titleB = resourceB.title.toUpperCase()
-
-              if (titleA > titleB) return 1
-              else if (titleA < titleB) return -1
-
-              return 0
-            }),
-        })),
+          }
+        }),
         // populating next paths, those are optional
         next: (serializedPath.next || []).reduce((nextPaths, nextPathId) => {
           const nextPath = serializedPaths[nextPathId]
