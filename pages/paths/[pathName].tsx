@@ -7,7 +7,7 @@ import {
   Paths,
   hasPrevPaths,
   hasNextPaths,
-  hasOtherResources,
+  hasExtraResources,
   resourceTypes,
   ResourceTypes,
   isSubPath,
@@ -142,7 +142,7 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
             </Grid>
           </LayoutContainer>
 
-          {hasOtherResources(path) && (
+          {hasExtraResources(path) && (
             <LayoutContainer pb={4}>
               <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
                 {path.extra.map((extra, index) => (

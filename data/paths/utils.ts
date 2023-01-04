@@ -240,7 +240,7 @@ export const hasPrevPaths = <T extends Path>(path: T) => {
   return Boolean(Object.keys(path.prev).length)
 }
 
-export const hasOtherResources = <T extends Path>(path: T) => {
+export const hasExtraResources = <T extends Path>(path: T) => {
   return Boolean(path.extra.length)
 }
 
