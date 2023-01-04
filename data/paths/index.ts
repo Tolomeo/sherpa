@@ -17,7 +17,7 @@ import neovim from './neovim.json'
 import lua from './lua.json'
 
 const serializedPaths = {
-  /* uidesign,
+  uidesign,
   htmlcss,
   webaccessibility,
   javascript,
@@ -30,7 +30,7 @@ const serializedPaths = {
   git,
   python,
   regex,
-  neovim, */
+  neovim,
   lua,
 }
 
