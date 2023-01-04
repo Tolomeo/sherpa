@@ -11,7 +11,7 @@
   "extra": [
     {
       "title": "There's more",
-      "extra": [
+      "resources": [
         "https://www.youtube.com/watch?v=EJVGzyWSCBE",
         "https://explorers.netlify.com/learn/nextjs",
         "https://www.youtube.com/watch?v=1WmNXEVia8I",
@@ -35,7 +35,7 @@
     },
     {
       "title": "Beyond basics",
-      "extra": [
+      "resources": [
         "https://www.smashingmagazine.com/2021/09/lessons-learned-ecommerce-nextjs-case-study",
         "https://vercel.com/docs/concepts/next.js/overview",
         "https://www.smashingmagazine.com/2020/09/comparison-styling-methods-next-js",
@@ -51,7 +51,7 @@
     },
     {
       "title": "How do they do it?",
-      "extra": [
+      "resources": [
         "https://docs.react2025.com",
         "https://www.saltycrane.com/blog/2021/04/nextjs-gitlab-cicd-docker-multi-stage-example",
         "https://www.alanjohn.dev/blog/Building-a-Developer-Portfolio-Creating-a-NextJS-blog-in-typescript-using-Notion-API#5189bcaa45944fdba485474c5395e750",
@@ -70,7 +70,7 @@
     },
     {
       "title": "Nice to know",
-      "extra": [
+      "resources": [
         "https://github.com/jaredpalmer/minimum-viable-saas",
         "https://web.dev/image-component",
         "https://www.youtube.com/watch?v=BILxV_vrZO0",
@@ -79,7 +79,7 @@
     },
     {
       "title": "Great bookmarks",
-      "extra": [
+      "resources": [
         "https://www.saltycrane.com/blog/2021/04/buildtime-vs-runtime-environment-variables-nextjs-docker",
         "https://www.saltycrane.com/cheat-sheets/typescript/next.js/latest",
         "https://reactresources.com/topics/nextjs",
@@ -89,7 +89,7 @@
     },
     {
       "title": "Stay in the loop",
-      "extra": [
+      "resources": [
         "https://nextjs.org/blog",
         "https://www.youtube.com/c/VercelHQ",
         "https://jamstack.email/",

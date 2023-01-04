@@ -11,7 +11,7 @@
   "extra": [
     {
       "title": "There's more",
-      "extra": [
+      "resources": [
         "https://flukeout.github.io",
         "https://flexbox.io",
         "https://flexboxfroggy.com",
@@ -53,7 +53,7 @@
     },
     {
       "title": "Beyond basics",
-      "extra": [
+      "resources": [
         "https://github.com/AllThingsSmitty/css-protips",
         "https://moderncss.dev",
         "https://egghead.io/courses/css-tips-and-tricks-930b",
@@ -77,7 +77,7 @@
     },
     {
       "title": "How do they do it?",
-      "extra": [
+      "resources": [
         "https://web.dev/patterns/layout",
         "https://csslayout.io",
         "http://1linelayouts.glitch.me",
@@ -94,7 +94,7 @@
     },
     {
       "title": "Nice to know",
-      "extra": [
+      "resources": [
         "https://cssbattle.dev",
         "https://www.youtube.com/playlist?list=PLKoqnv2vTMUN6lFDz6qMBsz7-Jm8YRV9H",
         "https://masteringmarkdown.com",
@@ -110,7 +110,7 @@
     },
     {
       "title": "Great bookmarks",
-      "extra": [
+      "resources": [
         "https://rtl.wtf",
         "https://htmlreference.io",
         "https://cssreference.io",
@@ -141,7 +141,7 @@
     },
     {
       "title": "Stay in the loop",
-      "extra": [
+      "resources": [
         "https://css-tricks.com",
         "https://tympanus.net/codrops",
         "https://www.smashingmagazine.com",

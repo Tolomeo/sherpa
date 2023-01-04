@@ -35,7 +35,7 @@ const serializedPaths = {
 }
 
 const paths = parsePaths(
-  serializedPaths as unknown as SerializedPaths<keyof typeof serializedPaths>,
+  serializedPaths as SerializedPaths<keyof typeof serializedPaths>,
 )
 
 export * from './utils'

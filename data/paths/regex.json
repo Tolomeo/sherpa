@@ -8,7 +8,7 @@
   "extra": [
     {
       "title": "There's more",
-      "extra": [
+      "resources": [
         "https://wanago.io/courses/regex-course",
         "https://regexone.com",
         "https://flaviocopes.com/javascript-regular-expressions",
@@ -24,7 +24,7 @@
     },
     {
       "title": "Beyond basics",
-      "extra": [
+      "resources": [
         "http://wstoop.co.za/wregex.php",
         "https://www.youtube.com/watch?v=LIVBktatfQI",
         "https://www.youtube.com/watch?v=frVuSFFv4Tk",
@@ -33,11 +33,11 @@
     },
     {
       "title": "Nice to know",
-      "extra": ["https://dassur.ma/things/regexp-quote"]
+      "resources": ["https://dassur.ma/things/regexp-quote"]
     },
     {
       "title": "Great bookmarks",
-      "extra": [
+      "resources": [
         "https://regexcrossword.com",
         "https://regex.guide",
         "https://ihateregex.io",

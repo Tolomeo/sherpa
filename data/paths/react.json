@@ -11,7 +11,7 @@
   "extra": [
     {
       "title": "There's more",
-      "extra": [
+      "resources": [
         "https://scrimba.com/learn/learnreact",
         "https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795",
         "https://www.coursera.org/learn/front-end-react",
@@ -37,7 +37,7 @@
     },
     {
       "title": "Beyond basics",
-      "extra": [
+      "resources": [
         "https://www.youtube.com/watch?v=CGpMlWVcHok",
         "https://egghead.io/courses/develop-accessible-web-apps-with-react",
         "https://obedparla.com/code/a-visual-guide-to-react-mental-models",
@@ -104,7 +104,7 @@
     },
     {
       "title": "How do they do it?",
-      "extra": [
+      "resources": [
         "https://github.com/djohal/imdb-replica-react",
         "https://github.com/khaledosman/react-redux-realworld-example-app",
         "https://github.com/oguz3/spotify-web-player",
@@ -117,7 +117,7 @@
     },
     {
       "title": "Nice to know",
-      "extra": [
+      "resources": [
         "https://github.com/sudheerj/reactjs-interview-questions",
         "https://ui.dev/why-react-hooks",
         "https://jasonformat.com/wtf-is-jsx/",
@@ -132,7 +132,7 @@
     },
     {
       "title": "Great bookmarks",
-      "extra": [
+      "resources": [
         "https://devhints.io/react",
         "https://react-svgr.com/playground",
         "https://reactjs.org/docs/getting-started.html",
@@ -148,7 +148,7 @@
     },
     {
       "title": "Stay in the loop",
-      "extra": [
+      "resources": [
         "https://reactjs.org/blog/all.html",
         "https://ui.dev/blog/",
         "https://overreacted.io",

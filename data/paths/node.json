@@ -12,7 +12,7 @@
   "extra": [
     {
       "title": "There's more",
-      "extra": [
+      "resources": [
         "https://www.freecodecamp.org/learn/back-end-development-and-apis",
         "https://github.com/azat-co/practicalnode",
         "https://www.youtube.com/playlist?list=PLlxmoA0rQ-LyMoEYRyd1L9oDaTRXOXdZa",
@@ -27,7 +27,7 @@
     },
     {
       "title": "Beyond basics",
-      "extra": [
+      "resources": [
         "https://exploringjs.com/nodejs-shell-scripting/",
         "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1JEu7BLraz8MdKJILJir7oY",
         "https://www.youtube.com/watch?v=ynNDmp7hBdo",
@@ -71,7 +71,7 @@
     },
     {
       "title": "Testing",
-      "extra": [
+      "resources": [
         "https://github.com/goldbergyoni/javascript-testing-best-practices",
         "https://github.com/testjavascript/nodejs-integration-tests-best-practices",
         "https://mherman.org/blog/test-driven-development-with-node",
@@ -80,14 +80,14 @@
     },
     {
       "title": "Security",
-      "extra": [
+      "resources": [
         "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html",
         "https://github.com/lirantal/awesome-nodejs-security"
       ]
     },
     {
       "title": "How do they do it?",
-      "extra": [
+      "resources": [
         "https://rrawat.com/blog/deploy-nodejs-on-aws-cicd",
         "https://www.youtube.com/watch?v=fU4o_BKaUZE",
         "https://github.com/electerious/Ackee",
@@ -104,7 +104,7 @@
     },
     {
       "title": "Nice to know",
-      "extra": [
+      "resources": [
         "https://blog.appsignal.com/2022/11/23/nodejs-architecture-pitfalls-to-avoid.html",
         "https://practica.dev/blog/popular-nodejs-pattern-and-tools-to-reconsider",
         "https://www.youtube.com/watch?v=M3BM9TB-8yA",
@@ -115,7 +115,7 @@
     },
     {
       "title": "Great bookmarks",
-      "extra": [
+      "resources": [
         "https://github.com/public-apis/public-apis",
         "https://github.com/marmelab/awesome-rest",
         "https://node.green",
@@ -129,7 +129,7 @@
     },
     {
       "title": "Stay in the loop",
-      "extra": [
+      "resources": [
         "https://nodeweekly.com",
         "https://2ality.com",
         "https://wanago.io"

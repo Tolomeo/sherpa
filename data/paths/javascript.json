@@ -14,7 +14,7 @@
   "extra": [
     {
       "title": "There's more",
-      "extra": [
+      "resources": [
         "https://www.udemy.com/course/javascript-essentials",
         "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript",
         "https://github.com/getify/You-Dont-Know-JS",
@@ -46,7 +46,7 @@
     },
     {
       "title": "Beyond basics",
-      "extra": [
+      "resources": [
         "https://github.com/ryanmcdermott/clean-code-javascript",
         "https://github.com/getify/Functional-Light-JS",
         "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
@@ -94,7 +94,7 @@
     },
     {
       "title": "How do they do it?",
-      "extra": [
+      "resources": [
         "https://github.com/gothinkster/web-components-realworld-example-app",
         "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX",
         "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
@@ -106,7 +106,7 @@
     },
     {
       "title": "Nice to know",
-      "extra": [
+      "resources": [
         "https://github.com/denysdovhan/wtfjs",
         "https://christianheilmann.com/2021/11/01/developer-tools-secrets-that-shouldnt-be-secrets/",
         "https://js13kgames.com",
@@ -123,7 +123,7 @@
     },
     {
       "title": "Great bookmarks",
-      "extra": [
+      "resources": [
         "https://codepo8.github.io/dearconsole/",
         "https://unjs.io/",
         "https://www.30secondsofcode.org/js/p/1",
@@ -139,7 +139,7 @@
     },
     {
       "title": "Stay in the loop",
-      "extra": [
+      "resources": [
         "https://javascriptweekly.com",
         "https://javascriptjabber.com",
         "https://www.taniarascia.com",
