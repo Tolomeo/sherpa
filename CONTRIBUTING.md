@@ -36,7 +36,7 @@ Import the newly created path and add it to other paths in `/data/paths/index.ts
 
 ## Guidelines
 
-Gathering and organising learning resources mostly involve an intense content curation type of effort.
+Gathering and organising learning resources mostly involves an intense content curation type of effort.
 Following are criteria which lead the creation of paths and selection of resources.
 
 ### Creating and updating paths
@@ -54,15 +54,15 @@ I could be useful to keep in mind the following propositions when creating or up
 - The number of other extra sections may vary, especially when the path topic is wide and there are entire sub-topics with worthy resources which would make the main path too long.
   When it is not possible instead to group an extra resource into a specific additional section, they generally ends up in:
   ”How do they do it?”: examples and tutorials
-  ”Nice to know**”:** indirectly related information and curiosities
+  ”Nice to know”: indirectly related information and curiosities
   ”Great bookmarks”: tools, utilities and references to go back to
-  ”Stay in the loop**”:** blogs, newsletters, podcasts to stay updated
+  ”Stay in the loop”: blogs, newsletters, podcasts to stay updated
 - Paths suggested as possible continuation should be accessible to a user who has completed the path main.
-- The overall number of resources present in a path should be enough to make it rich without feeling overwhelming. The acceptable quantity of resources mostly depends on the how wide the path topic is.
+- The overall number of resources present in a path should be enough to make it rich without feeling overwhelming. The acceptable quantity of resources mostly depends on how wide the path topic is.
 
 ### Selecting resources
 
-Evaluating the quality of a resource for it to be included a path is more difficult than it seems.
+Evaluating the quality of a resource for it to be included in a path is more difficult than it seems.
 Following is a list of questions which could help making a decision.
 Sometimes there are several resources or combinations of them which would all make for a good path. In those cases, the decision will most likely be arbitrary.
 

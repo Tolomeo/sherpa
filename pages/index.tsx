@@ -77,12 +77,12 @@ export default function Home({ paths, alternateSources }: Props) {
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
                     Did you know there are lots of stunning free online
-                    resources which can help you doing that?
+                    resources which can help you do that?
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
                     Sherpa collects hundreds of those to create learning paths
-                    and help you discover different topics. No subscription
-                    required.
+                    and guide on the discovery of different topics. No
+                    subscription required.
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
                     All resources are free, hand-picked to create open and
