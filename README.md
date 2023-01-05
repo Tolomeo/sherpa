@@ -1,21 +1,17 @@
 # Sherpa
 
-Static website containing lists of URLs which contents are helpful to learn about several technologies.
-
-## About The Project
-
-At its core, this project is a collection of online free resources gathered and organised in the form of educational paths.
+Collection of free learning resources collected and organised in the form of educational paths.
 <br/>
-Each path guides you through the journey of learning a new technology, from basic concepts to advanced topics.
+Each path guides through the journey of learning a new topic, from beginner to intermediate/advanced level.
 <br/>
-The final aim is to provide a valid alternative to similar paid offers, relying on free online resources only.
+The aim is to provide a quality, open source and free alternative to similar paid offers.
 <br/>
-If this project manages to help anyone learning something, I will see it as a success.
+If this project manages to help you, give it a star!.
 
 ## Built With
 
-* [Next.js](https://nextjs.org/)
-* [Vercel](https://vercel.com/)
+- [Next.js](https://nextjs.org/)
+- [Vercel](https://vercel.com/)
 
 ## Roadmap
 
@@ -32,14 +28,20 @@ If this project manages to help anyone learning something, I will see it as a su
 - [x] Add resources schema validation
 - [x] Add "help" panel
 - [x] Add "path sub-paths" support
+- [x] Add contributing documentation
 - [ ] Add client side "save progress" feature
 - [ ] Add client side path customisation?
 - [ ] Add "resources with multiple URLs" support?
 - [ ] Add path descriptions?
 - [ ] Split website code from json data source into separate monorepo packages
 - [ ] Add contributing automations and templates
-- [ ] Add contributing documentation
 - [ ] ~~Add "path multiple alternative resources" support~~
+
+## Contributing
+
+If you have a suggestion for a resource to add or even an entire path you would like to create, please fork the repo and create a pull request.
+
+See `CONTRIBUTING.md` for more information.
 
 ## License
 
@@ -47,8 +49,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-* [Diego Frattini](https://github.com/Tolomeo) - dgfrattini@gmail.com
+- [Diego Frattini](https://github.com/Tolomeo) - dgfrattini@gmail.com
 
 ## Acknowledgements
 
-* [Salvatore Tedde](https://microcipcip.digital)
+- [Salvatore Tedde](https://microcipcip.digital)
