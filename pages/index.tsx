@@ -73,16 +73,16 @@ export default function Home({ paths, alternateSources }: Props) {
               <Grid container>
                 <Grid item sm={9}>
                   <Typography variant="body1" component="p" gutterBottom>
-                    Learning new things is amazing.
+                    Learning new things is amazing!
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
-                    There are many platforms providing paid access to high
-                    quality educational material, but did you know there are
-                    equally stunning online resources provided for free?
+                    Did you know there are lots of stunning free online
+                    resources which can help you doing that?
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
-                    Sherpa collects hundreds of those, organizing them into
-                    learning paths to help you discover different technologies.
+                    Sherpa collects hundreds of those to create learning paths
+                    and help you discover different topics. No subscription
+                    required.
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
                     All resources are free, hand-picked to create open and
