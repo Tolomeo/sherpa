@@ -1,13 +1,21 @@
 # Contributing
 
-The project uses `Next.js` with `Typescript`, `eslint` and `prettier` for code checks and formatting, `yarn` as package manager.
-Please launch:
+The project uses `Next.js` with `Typescript`, `eslint` and `prettier` for code checks and formatting, `yarn` as package manager.<br/>
+To contribute:
+
+1. Fork the project
+2. Create your Feat branch (ex: `Feat/cobol-path`)
+3. Commit and push your changes
+4. Open a pull request
+
+## Scripts
 
 ```bash
+# Installing dependencies
+yarn
+# Launching Next dev server
 yarn dev
 ```
-
-to launch the project locally.
 
 See `/package.json` for all available scripts.
 
