@@ -14,8 +14,8 @@ If this project manages to help anyone learning something, I will see it as a su
 
 ## Built With
 
-* [Next.js](https://nextjs.org/)
-* [Vercel](https://vercel.com/)
+- [Next.js](https://nextjs.org/)
+- [Vercel](https://vercel.com/)
 
 ## Roadmap
 
@@ -41,14 +41,20 @@ If this project manages to help anyone learning something, I will see it as a su
 - [ ] Add contributing documentation
 - [ ] ~~Add "path multiple alternative resources" support~~
 
+## Contributing
+
+If you have a suggestion for a resource to add or even an entire path you would like to create, please fork the repo and create a pull request.
+
+Please see `CONTRIBUTING.md` for more information.
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-* [Diego Frattini](https://github.com/Tolomeo) - dgfrattini@gmail.com
+- [Diego Frattini](https://github.com/Tolomeo) - dgfrattini@gmail.com
 
 ## Acknowledgements
 
-* [Salvatore Tedde](https://microcipcip.digital)
+- [Salvatore Tedde](https://microcipcip.digital)
