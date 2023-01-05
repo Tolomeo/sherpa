@@ -76,7 +76,7 @@ export default function Home({ paths, alternateSources }: Props) {
                     Learning new things is amazing!
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
-                    Did you know there are lots of stunning free online
+                    Did you know there are lots of stunning online free
                     resources which can help you do that?
                   </Typography>
                   <Typography variant="body1" component="p" gutterBottom>
