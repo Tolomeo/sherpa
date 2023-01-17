@@ -15,11 +15,62 @@ If this project manages to help you, give it a star!.
 
 ## Roadmap
 
+### Paths
+
+- [x] Html and CSS
+- [x] Javascript
+  - [x] Testing
+- [x] Typescript
+- [x] React
+  - [x] Redux
+  - [x] Testing
+- [x] Next.js
+- [x] Web Accessibility
+- [x] Node.js
+  - [x] Express
+  - [x] Nest
+- [x] Git
+- [x] Neovim
+- [x] Lua
+  - [x] OpenResty
+  - [x] Löve
+- [x] Regular Expressions
+- [x] Python
+  - [x] Flask
+  - [x] Django
+  - [x] PyGame
+- [x] NPM
+  - [ ] Webpack
+- [x] Docker
+  - [ ] Podman and Buildah
+- [x] UI design
+  - [ ] Design systems
+- [ ] Command line
+- [ ] API development
+  - [ ] Rest
+  - [ ] Graphql
+- [ ] C#
+  - [ ] DotNet
+- [ ] Flutter
+- [ ] React Native
+- [ ] Go
+- [ ] Java
+- [ ] PHP
+  - [ ] Wordpress
+  - [ ] Laravel
+- [ ] Ruby
+  - [ ] Rails
+- [ ] SQL
+  - [ ] MySQL
+  - [ ] Postgres
+- [ ] WebGL-
+  - [ ] ThreeJS
+
+### Features
+
 - [x] MVP
 - [x] Add GitHub repo link to website
 - [x] Write something somewhere to let people know this even exists
-- [x] Add Next.js learning path
-- [x] Add Node.js learning path
 - [x] Add Accessibility learning path
 - [x] Swap the handmade approach for a component library
 - [x] Add "path useful tools" feature
@@ -35,11 +86,12 @@ If this project manages to help you, give it a star!.
 - [ ] Add path descriptions?
 - [ ] Split website code from json data source into separate monorepo packages
 - [ ] Add contributing automations and templates
+- [ ] Add roadmaps support
 - [ ] ~~Add "path multiple alternative resources" support~~
 
 ## Contributing
 
-If you have a suggestion for a resource to add or even an entire path you would like to create, please fork the repo and create a pull request.
+If you have a suggestion for a resource to add or even an entire path you would like to suggest or create, please fork the repo and create a pull request.
 
 See `CONTRIBUTING.md` for more information.
 
