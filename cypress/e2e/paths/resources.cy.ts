@@ -26,6 +26,7 @@ const checkResourceHealth = (resource: Resource) => {
     case 'wattenberger.com':
     case 'gameaccessibilityguidelines.com':
     case 'app.codecrafters.io':
+    case 'animatedbackgrounds.me':
       return cy.checkHealthByVisit(resource)
     case 'tooltester.com':
     case 'ui.dev':
