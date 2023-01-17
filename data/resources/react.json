@@ -93,11 +93,6 @@
     "type": ["reference", "guide"]
   },
   {
-    "title": "Front-End Web Development with React",
-    "url": "https://www.coursera.org/learn/front-end-react",
-    "type": ["course"]
-  },
-  {
     "title": "React JS Frontend Web Development for Beginners",
     "url": "https://www.udemy.com/course/react-tutorial",
     "type": ["course"]

@@ -169,11 +169,6 @@
     "type": ["guide"]
   },
   {
-    "title": "Git - SVN Crash Course",
-    "url": "http://git.or.cz/course/svn.html",
-    "type": ["guide"]
-  },
-  {
     "title": "Little Things I Like to Do with Git",
     "url": "https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git",
     "type": ["guide"]

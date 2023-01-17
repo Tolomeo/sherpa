@@ -26,6 +26,8 @@ const checkResourceHealth = (resource: Resource) => {
     case 'wattenberger.com':
     case 'gameaccessibilityguidelines.com':
     case 'app.codecrafters.io':
+    case 'animatedbackgrounds.me':
+    case 'adobe.com':
       return cy.checkHealthByVisit(resource)
     case 'tooltester.com':
     case 'ui.dev':
@@ -33,12 +35,12 @@ const checkResourceHealth = (resource: Resource) => {
     case 'data-flair.training':
     case 'regexr.com':
     case 'developer.apple.com':
-    case 'udemy.com':
     case 'codepen.io':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
       })
     case 'pexels.com':
+    case 'udemy.com':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
         render: true,
@@ -50,12 +52,12 @@ const checkResourceHealth = (resource: Resource) => {
 
 describe('Resources', () => {
   Object.values(resources).forEach((resource) => {
-    // this event will automatically be unbound when this test ends
-    // returning false here prevents Cypress from
-    // failing the test when an uncaught exception is thrown by the resource page
-    cy.on('uncaught:exception', () => false)
-
     it(`"${resource.title}" [ ${resource.url} ]`, () => {
+      // this event will automatically be unbound when this test ends
+      // returning false here prevents Cypress from
+      // failing the test when an uncaught exception is thrown by the resource page
+      cy.on('uncaught:exception', () => false)
+
       checkResourceHealth(resource)
     })
   })

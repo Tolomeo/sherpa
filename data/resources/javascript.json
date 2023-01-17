@@ -144,11 +144,6 @@
     "type": ["course"]
   },
   {
-    "title": "Asynchronous JavaScript Bootcamp",
-    "url": "https://www.udemy.com/course/asynchronous-javascript-bootcamp",
-    "type": ["course"]
-  },
-  {
     "title": "Exploring ES2016 and ES2017",
     "url": "https://exploringjs.com/es2016-es2017/index.html",
     "type": ["book"]
@@ -433,11 +428,6 @@
     "type": ["reference"]
   },
   {
-    "title": "Flavio Copes",
-    "url": "https://flaviocopes.com",
-    "type": ["reference"]
-  },
-  {
     "title": "JavaScript tutorial for beginners",
     "url": "https://www.youtube.com/playlist?list=PLZPZq0r_RZOMRMjHB_IEBjOW_ufr00yG1",
     "type": ["course"],
@@ -522,7 +512,7 @@
     "type": ["guide"]
   },
   {
-    "title": "Interview with Senior JS Developer in 2022",
+    "title": "Interview with Senior JS Developer",
     "url": "https://www.youtube.com/watch?v=Uo3cL4nrGOk&t=4s",
     "type": ["opinion"],
     "source": "youtube.com/@programmersarealsohuman5909"

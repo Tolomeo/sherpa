@@ -103,11 +103,11 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
     (paths, [pathName, serializedPath]) => {
       if (!validateSerializedPath(serializedPath)) {
         throw new Error(
-          `SerializedPath schema error[${JSON.stringify(
+          `${pathName} path error: schema error[ ${JSON.stringify(
             serializedPath,
             null,
             4,
-          )}]:
+          )} ]:
 				${JSON.stringify(validateSerializedPath.errors, null, 4)}`,
         )
       }
@@ -120,7 +120,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
 
           if (!resource)
             throw new Error(
-              `SerializedPath resource not found error[${resourceId}]`,
+              `${pathName} path error: resource not found error[ ${resourceId} ]`,
             )
 
           return resource
@@ -135,7 +135,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
 
                 if (!extraResource)
                   throw new Error(
-                    `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
+                    `${pathName} path error: '${extra.title}' resource not found error[ ${extraResourceId} ]`,
                   )
 
                 return extraResource
@@ -146,7 +146,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
 
                   if (!extraResource)
                     throw new Error(
-                      `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
+                      `${pathName} path error: '${extra.title}' resource not found error[ ${extraResourceId} ]`,
                     )
 
                   return extraResource
@@ -173,7 +173,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
 
                   if (!extraResource)
                     throw new Error(
-                      `Serializedpath '${extra.title}' resource not found error[${extraResourceId}]`,
+                      `${pathName} path error: '${extra.title}' resource not found error[ ${extraResourceId} ]`,
                     )
 
                   return extraResource
@@ -192,11 +192,9 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
           }
 
           throw new Error(
-            `Serializedpath '${extra.title}' uknown type error[${JSON.stringify(
-              extra,
-              null,
-              4,
-            )}]`,
+            `${pathName} path error: '${
+              extra.title
+            }' uknown type error[ ${JSON.stringify(extra, null, 4)} ]`,
           )
         }),
         // populating next paths, those are optional
@@ -205,7 +203,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
 
           if (!nextPath)
             throw new Error(
-              `Serializedpath next path not found error[${nextPathId}]`,
+              `${pathName} path error: next path not found error[ ${nextPathId} ]`,
             )
 
           nextPaths[nextPathId] = nextPath
@@ -218,7 +216,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
 
           if (!prevPath)
             throw new Error(
-              `Serializedpath prev path not found error[${prevPathId}]`,
+              `${pathName} path error: prev path not found error[ ${prevPathId} ]`,
             )
 
           prevPaths[prevPathId] = prevPath

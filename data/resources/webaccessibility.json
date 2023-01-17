@@ -56,7 +56,7 @@
     "type": ["guide", "collection"]
   },
   {
-    "title": "Accessible to all",
+    "title": "web.dev",
     "url": "https://web.dev/accessible",
     "type": ["guide", "collection"]
   },
@@ -349,7 +349,7 @@
     "type": ["guide"]
   },
   {
-    "title": "A Guide To Keyboard Accessibility: HTML And CSS (Part 2)",
+    "title": "A Guide To Keyboard Accessibility: JavaScript (Part 2)",
     "url": "https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-javascript-part2/",
     "type": ["guide"]
   },
@@ -385,7 +385,7 @@
     "type": ["tutorial"]
   },
   {
-    "title": " Curricula on Web Accessibility: A Framework to Build Your Own Courses",
+    "title": "Curricula on Web Accessibility: A Framework to Build Your Own Courses",
     "url": "https://www.w3.org/WAI/curricula/",
     "type": ["reference"]
   }
