@@ -150,11 +150,6 @@
     "source": "youtube.com/c/Stevesteacher"
   },
   {
-    "title": "Lua by Example",
-    "url": "https://luabyexample.org",
-    "type": ["reference"]
-  },
-  {
     "title": "The Lua Integration Guide",
     "url": "https://lua.msys.ch/lua-integration-guide.html",
     "type": ["guide"]

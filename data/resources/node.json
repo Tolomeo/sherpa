@@ -18,12 +18,6 @@
     "source": "digitalocean.com/community"
   },
   {
-    "title": "The Node Handbook",
-    "url": "https://flaviocopes.com/page/node-handbook",
-    "type": ["course"],
-    "source": "flaviocopes.com"
-  },
-  {
     "title": "Back End Development and APIs",
     "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis/#back-end-development-and-apis-projects",
     "type": ["guide", "collection"],
@@ -34,12 +28,6 @@
     "url": "https://www.youtube.com/watch?v=Oe421EPjeBE",
     "type": ["course"],
     "source": "youtube.com/@freecodecamp"
-  },
-  {
-    "title": "The Node Way",
-    "url": "http://thenodeway.io/introduction",
-    "type": ["guide", "collection"],
-    "source": "thenodeway.io"
   },
   {
     "title": "nodebestpractices",
@@ -344,11 +332,6 @@
   {
     "title": "Building Modern Node.js Applications on AWS",
     "url": "https://www.coursera.org/learn/building-modern-node-applications-on-aws",
-    "type": ["course"]
-  },
-  {
-    "title": "Server-side Development with NodeJS, Express and MongoDB",
-    "url": "https://www.coursera.org/learn/server-side-nodejs",
     "type": ["course"]
   },
   {
