@@ -27,23 +27,27 @@ const checkResourceHealth = (resource: Resource) => {
     case 'gameaccessibilityguidelines.com':
     case 'app.codecrafters.io':
     case 'animatedbackgrounds.me':
-    case 'adobe.com':
       return cy.checkHealthByVisit(resource)
-    case 'tooltester.com':
-    case 'ui.dev':
+    case 'adobe.com':
     case 'reactdigest.net':
     case 'data-flair.training':
     case 'regexr.com':
-    case 'developer.apple.com':
     case 'codepen.io':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
       })
-    case 'pexels.com':
-    case 'udemy.com':
+    case 'tooltester.com':
+    case 'ui.dev':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
         render: true,
+      })
+    case 'developer.apple.com':
+    case 'udemy.com':
+    case 'pexels.com':
+      return cy.checkHealthByScraperRequest(resource, {
+        apikey: Cypress.env('ZENSCRAPE_API_KEY'),
+        premium: true,
       })
     default:
       return cy.checkHealthByUrlRequest(resource)
