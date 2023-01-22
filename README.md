@@ -18,6 +18,7 @@ If this project manages to help you, give it a star!.
 ### Paths
 
 - [x] Html and CSS
+  - [ ] SVG
 - [x] Javascript
   - [x] Testing
 - [x] Typescript
@@ -49,11 +50,12 @@ If this project manages to help you, give it a star!.
 - [ ] API development
   - [ ] Rest
   - [ ] Graphql
-- [ ] C#
-  - [ ] DotNet
 - [ ] Flutter
 - [ ] React Native
 - [ ] Go
+- [ ] Rust
+- [ ] C#
+  - [ ] DotNet
 - [ ] Java
 - [ ] PHP
   - [ ] Wordpress
