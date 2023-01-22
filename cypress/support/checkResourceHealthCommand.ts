@@ -12,7 +12,7 @@ declare global {
 
       checkHealthByScraperRequest(
         value: Resource,
-        options: { apikey: string; render?: boolean },
+        options: { apikey: string; render?: boolean; premium?: boolean },
       ): void
     }
   }
@@ -73,7 +73,11 @@ const checkHealthByBinaryRequest = (resource: Resource) => {
 
 const checkHealthByScraperRequest = (
   resource: Resource,
-  { apikey, render = false }: { apikey: string; render?: boolean },
+  {
+    apikey,
+    render = false,
+    premium = false,
+  }: { apikey: string; render?: boolean; premium?: boolean },
 ) => {
   let url = `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
     resource.url,
@@ -81,6 +85,10 @@ const checkHealthByScraperRequest = (
 
   if (render) {
     url = `${url}&render=true`
+  }
+
+  if (premium) {
+    url = `${url}&premium=true`
   }
 
   // waiting for enough time to avoid 429 error (too many concurrent requests)
@@ -92,6 +100,8 @@ const checkHealthByScraperRequest = (
       apikey,
     },
     log: false,
+    // longer timeout to make sure the request process ends on the scraper side
+    // before possibly calling the service again
     timeout: 60000,
   }).then((response) => {
     const document = new DOMParser().parseFromString(response.body, 'text/html')
