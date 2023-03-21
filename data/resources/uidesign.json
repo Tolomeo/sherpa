@@ -66,7 +66,7 @@
     "type": ["guide"]
   },
   {
-    "title": "A List of UX/UI Best Practices",
+    "title": "A List of UX Best Practices",
     "url": "https://www.nickkolenda.com/user-experience",
     "type": ["reference"]
   },
@@ -258,7 +258,7 @@
     "type": ["guide"]
   },
   {
-    "title": "Color Psychology in Marketing: A Full Guide",
+    "title": "What Does Each Color Mean? And Why?",
     "url": "https://www.nickkolenda.com/color-psychology",
     "type": ["guide"]
   },
@@ -288,7 +288,7 @@
     "type": ["course"]
   },
   {
-    "title": "Font Psychology: A Full Guide",
+    "title": "What Does Each Font Mean? And Why?",
     "url": "https://www.nickkolenda.com/font-psychology",
     "type": ["guide"]
   },
@@ -526,7 +526,7 @@
     "type": ["guide", "collection"]
   },
   {
-    "title": "Deceptive Design - user interfaces crafted to trick you",
+    "title": "Deceptive patterns - user interfaces crafted to trick you",
     "url": "https://www.deceptive.design",
     "type": ["reference"]
   },

@@ -435,7 +435,7 @@
     "source": "digitalocean.com/community"
   },
   {
-    "title": "Docker Documentation",
+    "title": "Docker Docs",
     "url": "https://docs.docker.com",
     "type": ["reference"]
   },

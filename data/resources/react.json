@@ -300,7 +300,7 @@
     "type": ["reference"]
   },
   {
-    "title": "Beautiful React Hooks",
+    "title": "beautiful-react-hooks",
     "url": "https://antonioru.github.io/beautiful-react-hooks",
     "type": ["reference"]
   },
@@ -310,7 +310,7 @@
     "type": ["reference", "guide"]
   },
   {
-    "title": "Where To Get Support – React",
+    "title": "React Community",
     "url": "https://reactjs.org/community/support.html",
     "type": ["community"]
   },
