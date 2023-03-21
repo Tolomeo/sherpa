@@ -36,12 +36,12 @@ const checkResourceHealth = (resource: Resource) => {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
       })
     case 'tooltester.com':
-    case 'adobe.com':
-    case 'ui.dev':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
         render: true,
       })
+    case 'adobe.com':
+    case 'ui.dev':
     case 'developer.apple.com':
     case 'udemy.com':
     case 'pexels.com':
