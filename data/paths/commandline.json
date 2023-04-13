@@ -1,0 +1,279 @@
+{
+  "title": "Command line",
+  "main": [
+    "https://thevaluable.dev/guide-terminal-shell-console/",
+    "https://launchschool.com/books/command_line",
+    "https://learnbyexample.github.io/cli-computing/",
+    "https://github.com/alebcay/awesome-shell"
+  ],
+  "extra": [
+    {
+      "title": "There's more",
+      "resources": [
+        "http://conqueringthecommandline.com/book",
+        "http://www.ee.surrey.ac.uk/Teaching/Unix/",
+        "https://cmdchallenge.com/#/current_working_directory",
+        "https://dev.to/napicella/linux-terminals-tty-pty-and-shell-192e",
+        "https://flaviocopes.com/shells/",
+        "https://github.com/jlevy/the-art-of-command-line",
+        "https://linuxcommand.org/tlcl.php",
+        "https://miteshshah.github.io/linux/basics/",
+        "https://ryanstutorials.net/linuxtutorial/",
+        "https://thoughtbot.com/upcase/mastering-the-shell",
+        "https://www.coursera.org/specializations/unix-and-bash-for-beginners",
+        "https://www.freecodecamp.org/news/the-linux-commands-handbook/",
+        "https://www.guru99.com/unix-linux-tutorial.html",
+        "https://www.integralist.co.uk/posts/basic-shell-scripting/",
+        "https://www.joshwcomeau.com/javascript/terminal-for-js-devs/",
+        "https://www.learnshell.org/",
+        "https://www.maths.ox.ac.uk/system/files/legacy/2356/basic-unix.pdf",
+        "https://www.oliverelliott.org/article/computing/tut_unix/",
+        "https://www.rithmschool.com/courses/terminal",
+        "https://www.tutorialspoint.com/unix/index.htm",
+        "https://www.wezm.net/technical/2019/10/useful-command-line-tools/",
+        "https://www.youtube.com/playlist?list=PL5--8gKSku174EnRTbP4DzU2W80Q1vqtm",
+        "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1LMB14RCwauofMc4BWqVa4B",
+        "https://www.youtube.com/playlist?list=PLS1QulWo1RIb9WVQGJ_vh-RQusbZgO_As",
+        "https://www.youtube.com/playlist?list=PLT98CRl2KxKHaKA9-4_I38sLzK134p4GJ",
+        "https://www.youtube.com/playlist?list=PLy7Kah3WzqrHPrgkBgwzXyfDDCvthdUfl",
+        "https://www.youtube.com/watch?v=s3ii48qYBxA",
+        "https://www.youtube.com/watch?v=uwAqEzhyjtw",
+        "https://youtu.be/uwAqEzhyjtw"
+      ]
+    },
+    {
+      "title": "Beyond basics",
+      "resources": [
+        "https://0xax.gitbooks.io/linux-insides/content/index.html",
+        "https://blog.sanctum.geek.nz/series/unix-as-ide/",
+        "https://brennan.io/2015/01/16/write-a-shell-in-c/",
+        "https://citw.dev/tutorial/create-your-own-cli-tool",
+        "https://clig.dev/",
+        "https://code.tutsplus.com/courses/advanced-command-line-techniques",
+        "https://datascienceatthecommandline.com/2e/",
+        "https://debian-handbook.info/browse/stable/",
+        "https://everything.curl.dev/",
+        "https://freebsdfrau.gitbook.io/serious-shell-programming/",
+        "https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line",
+        "https://github.com/dylanaraps/pure-bash-bible",
+        "https://github.com/termstandard/colors",
+        "https://indradhanush.github.io/blog/writing-a-unix-shell-part-1/",
+        "https://ishuah.com/2021/03/10/build-a-terminal-emulator-in-100-lines-of-go/",
+        "https://jeroenjanssens.com/dsatcl/",
+        "https://jvns.ca/blog/2022/07/20/pseudoterminals/",
+        "https://learnbyexample.github.io/cli_text_processing_coreutils/",
+        "https://learnbyexample.github.io/cli_text_processing_rust/",
+        "https://learnbyexample.github.io/learn_gnuawk/",
+        "https://learnbyexample.github.io/learn_gnugrep_ripgrep/",
+        "https://learnbyexample.github.io/learn_gnused/",
+        "https://lucasfcosta.com/2022/06/01/ux-patterns-cli-tools.html",
+        "https://nullprogram.com/blog/2020/08/01/",
+        "https://peteris.rocks/blog/htop/",
+        "https://rust-cli.github.io/book/index.html",
+        "https://seirdy.one/posts/2022/06/10/cli-best-practices/",
+        "https://thevaluable.dev/mouseless-development-environment/",
+        "https://unixgame.io/unix50",
+        "https://www.coursera.org/specializations/unix-and-bash-for-beginners#courses",
+        "https://www.datafix.com.au/BASHing/",
+        "https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories",
+        "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
+        "https://www.joshmcguigan.com/blog/build-your-own-shell-rust/",
+        "https://www.smashingmagazine.com/2022/12/guide-command-line-data-manipulation-cli-miller/",
+        "https://www.uninformativ.de/blog/postings/2018-02-24/0/POSTING-en.html",
+        "https://www.youtube.com/playlist?list=PLmcTCfaoOo_huhLl9_i6IOjiqURVDgEFB"
+      ]
+    },
+    {
+      "title": "Scripting",
+      "resources": [
+        "https://docs.fedoraproject.org/en-US/defensive-coding/programming-languages/Shell/",
+        "https://github.com/SixArm/unix-shell-script-tactics",
+        "https://linuxhandbook.com/tag/bash-beginner/",
+        "https://tldp.org/LDP/abs/html/",
+        "https://www.dartmouth.edu/~rc/classes/ksh/print_pages.shtml",
+        "https://www.digitalocean.com/community/tutorial_series/an-introduction-to-shell-scripting",
+        "https://www.educba.com/software-development/software-development-tutorials/shell-scripting-tutorial/",
+        "https://www.pixelbeat.org/programming/shell_script_mistakes.html",
+        "https://www.youtube.com/playlist?list=PLPVjdHc9ZzjZC2Y7jjDyJk7Tg8lW8AlJ-",
+        "https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w",
+        "https://www.youtube.com/watch?v=GtovwKDemnI"
+      ]
+    },
+    {
+      "title": "Bash",
+      "resources": [
+        "https://guide.bash.academy/",
+        "https://github.com/Idnan/bash-guide",
+        "https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je",
+        "https://github.com/awesome-lists/awesome-bash",
+        "https://bash.cyberciti.biz/guide/Main_Page",
+        "https://www.youtube.com/playlist?list=PLRU13thWaP5m-O2mNQRChZ6mI1ejLE9OQ",
+        "https://tldp.org/LDP/Bash-Beginners-Guide/html/",
+        "https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html",
+        "https://mywiki.wooledge.org/BashPitfalls",
+        "https://mywiki.wooledge.org/EnglishFrontPage",
+        "https://github.com/denysdovhan/bash-handbook",
+        "https://github.com/alexanderepstein/Bash-Snippets",
+        "https://www.bashoneliners.com/",
+        "https://github.com/trinib/Linux-Bash-Commands",
+        "https://ebook.bobby.sh/",
+        "https://mrzool.cc/writing/sensible-bash/",
+        "https://ryanstutorials.net/bash-scripting-tutorial/"
+      ]
+    },
+    {
+      "title": "Zsh",
+      "resources": [
+        "https://thevaluable.dev/zsh-install-configure-mouseless/",
+        "https://commandlinepoweruser.com/",
+        "https://zsh.sourceforge.io/Doc/",
+        "https://scriptingosx.com/2019/06/moving-to-zsh/",
+        "https://github.com/unixorn/awesome-zsh-plugins",
+        "https://zsh.sourceforge.io/Guide/zshguide.html",
+        "https://github.com/Apress/from-bash-to-z-shell",
+        "https://github.com/romkatv/zsh4humans",
+        "https://candid.technology/zsh-windows-10/"
+      ]
+    },
+    {
+      "title": "Fish",
+      "resources": [
+        "https://fishshell.com/docs/current/tutorial.html",
+        "https://github.com/jorgebucaran/awsm.fish",
+        "https://rootnroll.com/d/fish-shell/",
+        "https://fishshell.com/"
+      ]
+    },
+    {
+      "title": "WSL",
+      "resources": [
+        "https://github.com/mikeroyal/WSL-Guide",
+        "https://www.youtube.com/playlist?list=PLhfrWIlLOoKNMHhB39bh3XBpoLxV3f0V9",
+        "https://docs.microsoft.com/en-us/windows/wsl/",
+        "https://devblogs.microsoft.com/commandline/",
+        "https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview",
+        "https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview",
+        "https://ubuntu.com/tutorials/enabling-gpu-acceleration-on-ubuntu-on-wsl2-with-the-nvidia-cuda-platform#1-overview",
+        "https://github.com/sirredbeard/Awesome-WSL"
+      ]
+    },
+    {
+      "title": "Powershell",
+      "resources": [
+        "https://learn.microsoft.com/en-us/training/paths/powershell/",
+        "https://learn.microsoft.com/en-us/shows/getting-started-with-microsoft-powershell/",
+        "https://www.youtube.com/playlist?list=PL-esmhgrps8ZWkcC3Bd0C_QUCIhT65aDb",
+        "https://www.youtube.com/playlist?list=PLlVtbbG169nFq_hR7FcMYg32xsSAObuq8",
+        "https://www.youtube.com/playlist?list=PL-esmhgrps8Zv9bAHesStPRQ1AiUL1wY3",
+        "https://github.com/vexx32/PSKoans",
+        "https://www.youtube.com/playlist?list=PL7T06JEc5PF6kusr3cg6eYqCAiU6ezVj5",
+        "https://www.codelivly.com/mastering-powershell-scripting-the-ultimate-guide-to-writing-efficient-and-effective-scripts/",
+        "https://www.syncfusion.com/succinctly-free-ebooks/powershell"
+      ]
+    },
+    {
+      "title": "Tmux",
+      "resources": [
+        "https://pragmaticpineapple.com/gentle-guide-to-get-started-with-tmux/",
+        "https://www.youtube.com/playlist?list=PLT98CRl2KxKGiyV1u6wHDV8VwcQdzfuKe",
+        "https://thoughtbot.com/upcase/tmux"
+      ]
+    },
+    {
+      "title": "Terminal UIs",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PL5--8gKSku160eJGeY2EsWQ9C5fEZw5WC",
+        "https://github.com/rothgar/awesome-tuis"
+      ]
+    },
+    {
+      "title": "Dotfiles",
+      "resources": [
+        "https://0x46.net/thoughts/2019/02/01/dotfile-madness/",
+        "https://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html",
+        "https://dotfiles.github.io/",
+        "https://driesvints.com/blog/getting-started-with-dotfiles",
+        "https://github.com/Torbet/Dot-It-Up",
+        "https://github.com/daler/dotfiles",
+        "https://github.com/thoughtbot/dotfiles",
+        "https://github.com/webpro/awesome-dotfiles",
+        "https://myme.no/posts/2022-04-11-a-dotfile-history.html",
+        "https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html",
+        "https://wiki.archlinux.org/title/Dotfiles",
+        "https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/",
+        "https://youtu.be/r_MpUP6aKiQ"
+      ]
+    },
+    {
+      "title": "How do they do it?",
+      "resources": [
+        "https://lucasfcosta.com/2019/02/10/terminal-guide-2019.html",
+        "https://www.darraghoriordan.com/2022/01/28/developer-shell-modern-bat-fzf-antigen-zsh-wsl-mac/",
+        "https://www.integralist.co.uk/posts/tools/",
+        "https://remysharp.com/2018/08/23/cli-improved",
+        "https://switowski.com/blog/favorite-cli-tools/",
+        "https://smallstep.com/blog/command-line-secrets/",
+        "https://www.smashingmagazine.com/2021/11/powerful-terminal-commandline-tools-modern-web-development/",
+        "https://medium.com/fundbox-engineering/cheating-at-a-company-group-activity-using-unix-tools-5c1d706f3d58",
+        "https://github.com/HariSekhon/DevOps-Bash-tools",
+        "https://github.com/ibraheemdev/modern-unix",
+        "https://github.com/dylanaraps/pure-sh-bible",
+        "https://www.youtube.com/watch?v=YDLxnHQG-LY&list=WL&index=4&pp=gAQBiAQB"
+      ]
+    },
+    {
+      "title": "Nice to know",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PL-p5XmQHB_JREOtBfLdKSswBGYyXwXMUy",
+        "https://www.expressionsofchange.org/reification-of-interaction/",
+        "https://zaiste.net/posts/shell-commands-rust/",
+        "https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/",
+        "https://www.youtube.com/watch?v=IcV9TVb-vF4",
+        "https://fathy.fr/carbonyl",
+        "https://new.pythonforengineers.com/blog/best-command-line-tools-ive-played-with/"
+      ]
+    },
+    {
+      "title": "Great bookmarks",
+      "resources": [
+        "http://www.compciv.org/unix-tools/",
+        "https://chmodcommand.com/",
+        "https://command-not-found.com/",
+        "https://curlbuilder.com/",
+        "https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je",
+        "https://devconnected.com/",
+        "https://explainshell.com/",
+        "https://git.herrbischoff.com/awesome-command-line-apps/about/",
+        "https://git.herrbischoff.com/awesome-macos-command-line/about/",
+        "https://github.com/Gogh-Co/Gogh",
+        "https://github.com/agarrharr/awesome-cli-apps",
+        "https://github.com/alexanderepstein/Bash-Snippets",
+        "https://github.com/cdleon/awesome-terminals",
+        "https://github.com/chubin/awesome-console-services",
+        "https://github.com/ibraheemdev/modern-unix",
+        "https://github.com/k4m4/terminals-are-sexy",
+        "https://github.com/learn-anything/command-line-tools",
+        "https://github.com/onceupon/Bash-Oneliner",
+        "https://github.com/toolleeo/cli-apps",
+        "https://github.com/vastutsav/command-line-quick-reference",
+        "https://github.com/you-dont-need/You-Dont-Need-GUI",
+        "https://google.github.io/styleguide/shellguide.html",
+        "https://linuxcommand.org/",
+        "https://linuxcommandlibrary.com/",
+        "https://mywiki.wooledge.org/BashFAQ",
+        "https://mywiki.wooledge.org/BashPitfalls",
+        "https://sed.js.org/index.html",
+        "https://ss64.com/",
+        "https://wiki.bash-hackers.org/scripting/style",
+        "https://www.cheatsheet.wtf/bash/",
+        "https://www.commandlinefu.com/commands/browse",
+        "https://www.digitalocean.com/community/tools/glob?comments=true&glob=%7Bdevelop%2Ctest-release%2F%2A%2A%7D&matches=false&tests=develop&tests=test-release%2Fiteration-1&tests=test-release%2Fiteration-2",
+        "https://www.shellcheck.net/"
+      ]
+    },
+    {
+      "title": "Stay in the loop",
+      "resources": ["https://linuxhandbook.com/"]
+    }
+  ]
+}

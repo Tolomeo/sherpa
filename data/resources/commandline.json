@@ -2,1639 +2,1101 @@
   {
     "title": "A Guide to the Terminal, Console, and Shell",
     "url": "https://thevaluable.dev/guide-terminal-shell-console/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Introduction to the Command Line",
     "url": "https://launchschool.com/books/command_line",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "Computing from the Command Line",
     "url": "https://learnbyexample.github.io/cli-computing/",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "awesome-shell",
     "url": "https://github.com/alebcay/awesome-shell",
-    "type": [
-      "collection",
-      "reference"
-    ]
+    "type": ["collection", "reference"]
   },
   {
     "title": "An Introduction to the Command-Line (on Unix-like systems)",
     "url": "https://www.oliverelliott.org/article/computing/tut_unix/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Linux terminals, tty, pty and shell",
     "url": "https://dev.to/napicella/linux-terminals-tty-pty-and-shell-192e",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Basic Shell Scripting",
     "url": "https://www.integralist.co.uk/posts/basic-shell-scripting/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Beginner's Guide To The Linux Terminal",
     "url": "https://www.youtube.com/watch?v=s3ii48qYBxA",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Free Terminal and UNIX Course",
     "url": "https://www.rithmschool.com/courses/terminal",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Command Challenge",
     "url": "https://cmdchallenge.com/#/current_working_directory",
-    "type": [
-      "exercise"
-    ]
+    "type": ["exercise"]
   },
   {
     "title": "UNIX / LINUX Tutorial",
     "url": "https://www.tutorialspoint.com/unix/index.htm",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Conquering the Command Line",
     "url": "http://conqueringthecommandline.com/book",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "Free Interactive Shell Tutorial",
     "url": "https://www.learnshell.org/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "the-art-of-command-line",
     "url": "https://github.com/jlevy/the-art-of-command-line",
-    "type": [
-      "guide",
-      "reference"
-    ]
+    "type": ["guide", "reference"]
   },
   {
     "title": "Linux Tutorial for Beginners",
     "url": "https://ryanstutorials.net/linuxtutorial/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "UNIX / Linux Tutorial for Beginners",
     "url": "http://www.ee.surrey.ac.uk/Teaching/Unix/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Linux Basics",
     "url": "https://miteshshah.github.io/linux/basics/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Linux Command Line Books",
     "url": "https://linuxcommand.org/tlcl.php",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "Unix Shells Tutorial",
     "url": "https://flaviocopes.com/shells/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "The Linux Command Handbook",
     "url": "https://www.freecodecamp.org/news/the-linux-commands-handbook/",
-    "type": [
-      "guide",
-      "reference"
-    ]
+    "type": ["guide", "reference"]
   },
   {
     "title": "Linux Command Line",
     "url": "https://www.youtube.com/playlist?list=PLy7Kah3WzqrHPrgkBgwzXyfDDCvthdUfl",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@TheFrugalComputerGuy"
   },
   {
     "title": "The Front-End Developer's Guide to the Terminal",
     "url": "https://www.joshwcomeau.com/javascript/terminal-for-js-devs/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Command Line Crash Course For Beginners",
     "url": "https://www.youtube.com/watch?v=uwAqEzhyjtw",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@TraversyMedia"
   },
   {
     "title": "Linux for beginners",
     "url": "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1LMB14RCwauofMc4BWqVa4B",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@SanjeevThiyagarajan"
   },
   {
     "title": "Linux Commands for Beginners",
     "url": "https://www.youtube.com/playlist?list=PLT98CRl2KxKHaKA9-4_I38sLzK134p4GJ",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@LearnLinuxTV"
   },
   {
     "title": "Unix and Bash for Beginners",
     "url": "https://www.coursera.org/specializations/unix-and-bash-for-beginners",
-    "type": [
-      "course",
-      "collection"
-    ]
+    "type": ["course", "collection"]
   },
   {
     "title": "The Command Line",
     "url": "https://www.youtube.com/playlist?list=PL5--8gKSku174EnRTbP4DzU2W80Q1vqtm",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@DistroTube"
   },
   {
     "title": "An Illustrated Guide to Some Useful Command Line Tools",
     "url": "https://www.wezm.net/technical/2019/10/useful-command-line-tools/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Command Line Crash Course For Beginners",
     "url": "https://youtu.be/uwAqEzhyjtw",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@TraversyMedia"
   },
   {
     "title": "Mastering the Shell Course",
     "url": "https://thoughtbot.com/upcase/mastering-the-shell",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "UNIX / Linux Tutorial for Beginners",
     "url": "https://www.guru99.com/unix-linux-tutorial.html",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Linux Command Line Tutorial For Beginners",
     "url": "https://www.youtube.com/playlist?list=PLS1QulWo1RIb9WVQGJ_vh-RQusbZgO_As",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@ProgrammingKnowledge"
-  },
-  {
-    "title": "Conquering the Command Line",
-    "url": "http://conqueringthecommandline.com/book",
-    "type": [
-      "book"
-    ]
   },
   {
     "title": "basic-unix",
     "url": "https://www.maths.ox.ac.uk/system/files/legacy/2356/basic-unix.pdf",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "colors",
     "url": "https://github.com/termstandard/colors",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Everything curl",
     "url": "https://everything.curl.dev/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "The Unix Game",
     "url": "https://unixgame.io/unix50",
-    "type": [
-      "exercise"
-    ]
+    "type": ["exercise"]
   },
   {
     "title": "pure-bash-bible",
     "url": "https://github.com/dylanaraps/pure-bash-bible",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Serious Shell Programming",
     "url": "https://freebsdfrau.gitbook.io/serious-shell-programming/",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "Linux Inside",
     "url": "https://0xax.gitbooks.io/linux-insides/content/index.html",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "The Debian Administrator's Handbook",
     "url": "https://debian-handbook.info/browse/stable/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Data Science at the Command Line",
     "url": "https://datascienceatthecommandline.com/2e/",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "BASHing data",
     "url": "https://www.datafix.com.au/BASHing/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "How To Use Rsync to Sync Local and Remote Directories",
     "url": "https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories",
-    "type": [
-      "tutorial"
-    ]
+    "type": ["tutorial"]
   },
   {
     "title": "htop explained",
     "url": "https://peteris.rocks/blog/htop/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Unix as IDE",
     "url": "https://blog.sanctum.geek.nz/series/unix-as-ide/",
-    "type": [
-      "example",
-      "reference"
-    ]
+    "type": ["example", "reference"]
   },
   {
     "title": "Writing a Unix Shell",
     "url": "https://indradhanush.github.io/blog/writing-a-unix-shell-part-1/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Build Your Own Shell using Rust",
     "url": "https://www.joshmcguigan.com/blog/build-your-own-shell-rust/",
-    "type": [
-      "tutorial"
-    ]
+    "type": ["tutorial"]
   },
   {
     "title": "Build A Simple Terminal Emulator In 100 Lines of Golang",
     "url": "https://ishuah.com/2021/03/10/build-a-terminal-emulator-in-100-lines-of-go/",
-    "type": [
-      "tutorial"
-    ]
+    "type": ["tutorial"]
   },
   {
     "title": "Write a Shell in C",
     "url": "https://brennan.io/2015/01/16/write-a-shell-in-c/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "A Mouseless Development Environment",
     "url": "https://thevaluable.dev/mouseless-development-environment/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "GNU AWK",
     "url": "https://learnbyexample.github.io/learn_gnuawk/",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "GNU SED",
     "url": "https://learnbyexample.github.io/learn_gnused/",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "GNU GREP and RIPGREP",
     "url": "https://learnbyexample.github.io/learn_gnugrep_ripgrep/",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "Command line text processing with GNU Coreutils",
     "url": "https://learnbyexample.github.io/cli_text_processing_coreutils/",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "Command line text processing with Rust tools",
     "url": "https://learnbyexample.github.io/cli_text_processing_rust/",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "What happens when you press a key in your terminal?",
     "url": "https://jvns.ca/blog/2022/07/20/pseudoterminals/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Unix and Bash for Beginners",
     "url": "https://www.coursera.org/specializations/unix-and-bash-for-beginners#courses",
-    "type": [
-      "course",
-      "collection"
-    ]
+    "type": ["course", "collection"]
   },
   {
     "title": "A Guide To Command-Line Data Manipulation",
     "url": "https://www.smashingmagazine.com/2022/12/guide-command-line-data-manipulation-cli-miller/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Conventions for Command Line Options",
     "url": "https://nullprogram.com/blog/2020/08/01/",
-    "type": [
-      "guide",
-      "reference"
-    ]
+    "type": ["guide", "reference"]
   },
   {
     "title": "Command Line Interface Guidelines",
     "url": "https://clig.dev/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "UX patterns for CLI tools",
     "url": "https://lucasfcosta.com/2022/06/01/ux-patterns-cli-tools.html",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Best practices for inclusive CLIs",
     "url": "https://seirdy.one/posts/2022/06/10/cli-best-practices/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Data Science at the Command Line",
     "url": "https://jeroenjanssens.com/dsatcl/",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "Learning-Bitcoin-from-the-Command-Line",
     "url": "https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Create Your Own CLI Tool",
     "url": "https://citw.dev/tutorial/create-your-own-cli-tool",
-    "type": [
-      "tutorial",
-      "guide"
-    ]
+    "type": ["tutorial", "guide"]
   },
   {
     "title": "Command Line Applications in Rust",
     "url": "https://rust-cli.github.io/book/index.html",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "The very basics of a terminal emulator",
     "url": "https://www.uninformativ.de/blog/postings/2018-02-24/0/POSTING-en.html",
-    "type": [
-      "guide"
-    ]
-  },
-  {
-    "title": "Build A Simple Terminal Emulator In 100 Lines of Golang",
-    "url": "https://ishuah.com/2021/03/10/build-a-terminal-emulator-in-100-lines-of-go/",
-    "type": [
-      "guide"
-    ]
-  },
-  {
-    "title": "How to create a real-world Node CLI app with Node",
-    "url": "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
-    "type": [
-      "tutorial"
-    ]
-  },
-  {
-    "title": "Command line text processing with GNU Coreutils",
-    "url": "https://learnbyexample.github.io/cli_text_processing_coreutils/",
-    "type": [
-      "book"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Advanced Command Line Techniques",
     "url": "https://code.tutsplus.com/courses/advanced-command-line-techniques",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Terminal Productivity",
     "url": "https://www.youtube.com/playlist?list=PLmcTCfaoOo_huhLl9_i6IOjiqURVDgEFB",
-    "type": [
-      "guide",
-      "collection"
-    ]
+    "type": ["guide", "collection"]
   },
   {
     "title": "Bash Tutorials for Beginners",
     "url": "https://linuxhandbook.com/tag/bash-beginner/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Complete Beginners Guide to Shell Scripting",
     "url": "https://www.educba.com/software-development/software-development-tutorials/shell-scripting-tutorial/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "An Introduction to Shell Scripting",
     "url": "https://www.digitalocean.com/community/tutorial_series/an-introduction-to-shell-scripting",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Advanced Bash-Scripting Guide",
     "url": "https://tldp.org/LDP/abs/html/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Common shell script mistakes",
     "url": "https://www.pixelbeat.org/programming/shell_script_mistakes.html",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Unix shell scripting with ksh/bash",
     "url": "https://www.dartmouth.edu/~rc/classes/ksh/print_pages.shtml",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Bash Scripting on Linux",
     "url": "https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@LearnLinuxTV"
   },
   {
     "title": "Shell Scripting Crash Course",
     "url": "https://www.youtube.com/watch?v=GtovwKDemnI",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@edurekaIN"
   },
   {
     "title": "Shell Programming and bash",
     "url": "https://docs.fedoraproject.org/en-US/defensive-coding/programming-languages/Shell/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "unix-shell-script-tactics",
     "url": "https://github.com/SixArm/unix-shell-script-tactics",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Bash Programming - Noob to Advanced",
     "url": "https://www.youtube.com/playlist?list=PLPVjdHc9ZzjZC2Y7jjDyJk7Tg8lW8AlJ-",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@EvilSaintEthicalHacking"
   },
   {
     "title": "Dotfiles",
     "url": "https://wiki.archlinux.org/title/Dotfiles",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Managing Your Dotfiles",
     "url": "https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "GitHub does dotfiles",
     "url": "https://dotfiles.github.io/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "awesome-dotfiles",
     "url": "https://github.com/webpro/awesome-dotfiles",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "dotfiles",
     "url": "https://github.com/thoughtbot/dotfiles",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "dotfiles",
     "url": "https://github.com/daler/dotfiles",
-    "type": [
-      "example"
-    ]
+    "type": ["example"]
   },
   {
     "title": "Dot-It-Up",
     "url": "https://github.com/Torbet/Dot-It-Up",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Using GNU Stow to manage your dotfiles",
     "url": "https://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html",
-    "type": [
-      "tutorial"
-    ]
+    "type": ["tutorial"]
   },
   {
     "title": "A Dotfile History",
     "url": "https://myme.no/posts/2022-04-11-a-dotfile-history.html",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Dotfile madness",
     "url": "https://0x46.net/thoughts/2019/02/01/dotfile-madness/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "XDG Base Directory Specification",
     "url": "https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "~/.dotfiles in 100 Seconds",
     "url": "https://youtu.be/r_MpUP6aKiQ",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Getting Started with Dotfiles",
     "url": "https://driesvints.com/blog/getting-started-with-dotfiles",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "The Bash Guide",
     "url": "https://guide.bash.academy/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "bash-guide",
     "url": "https://github.com/Idnan/bash-guide",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "101 Bash Commands and Tips for Beginners to Experts",
     "url": "https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "awesome-bash",
     "url": "https://github.com/awesome-lists/awesome-bash",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Linux Shell Scripting Tutorial",
     "url": "https://bash.cyberciti.biz/guide/Main_Page",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Bash Best Practices",
     "url": "https://www.youtube.com/playlist?list=PLRU13thWaP5m-O2mNQRChZ6mI1ejLE9OQ",
-    "type": [
-      "guide",
-      "collection"
-    ]
+    "type": ["guide", "collection"]
   },
   {
     "title": "Bash Guide for Beginners",
     "url": "https://tldp.org/LDP/Bash-Beginners-Guide/html/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "BASH Programming",
     "url": "https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "BashPitfalls",
     "url": "https://mywiki.wooledge.org/BashPitfalls",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Greg's Wiki",
     "url": "https://mywiki.wooledge.org/EnglishFrontPage",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "bash-handbook",
     "url": "https://github.com/denysdovhan/bash-handbook",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Bash-Snippets",
     "url": "https://github.com/alexanderepstein/Bash-Snippets",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Bash One-Liners",
     "url": "https://www.bashoneliners.com/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Linux-Bash-Commands",
     "url": "https://github.com/trinib/Linux-Bash-Commands",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Introduction to Bash Scripting",
     "url": "https://ebook.bobby.sh/",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "Sensible Bash",
     "url": "https://mrzool.cc/writing/sensible-bash/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Bash Scripting Tutorial",
     "url": "https://ryanstutorials.net/bash-scripting-tutorial/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Configuring Zsh Without Dependencies",
     "url": "https://thevaluable.dev/zsh-install-configure-mouseless/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Command Line Power User",
     "url": "https://commandlinepoweruser.com/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "ZSH - Documentation",
     "url": "https://zsh.sourceforge.io/Doc/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Moving to zsh",
     "url": "https://scriptingosx.com/2019/06/moving-to-zsh/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "awesome-zsh-plugins",
     "url": "https://github.com/unixorn/awesome-zsh-plugins",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "A User's Guide to the Z-Shell",
     "url": "https://zsh.sourceforge.io/Guide/zshguide.html",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "from-bash-to-z-shell",
     "url": "https://github.com/Apress/from-bash-to-z-shell",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "zsh4humans",
     "url": "https://github.com/romkatv/zsh4humans",
-    "type": [
-      "generator"
-    ]
+    "type": ["generator"]
   },
   {
     "title": "Automate administrative tasks by using PowerShell",
     "url": "https://learn.microsoft.com/en-us/training/paths/powershell/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Getting Started with Microsoft PowerShell",
     "url": "https://learn.microsoft.com/en-us/shows/getting-started-with-microsoft-powershell/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "PowerShell for IT Professionals",
     "url": "https://www.youtube.com/playlist?list=PL-esmhgrps8ZWkcC3Bd0C_QUCIhT65aDb",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@kamilpro"
   },
   {
     "title": "PowerShell Master Class",
     "url": "https://www.youtube.com/playlist?list=PLlVtbbG169nFq_hR7FcMYg32xsSAObuq8",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@NTFAQGuy"
   },
   {
     "title": "About PowerShell",
     "url": "https://www.youtube.com/playlist?list=PL-esmhgrps8Zv9bAHesStPRQ1AiUL1wY3",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@kamilpro"
   },
   {
     "title": "PSKoans",
     "url": "https://github.com/vexx32/PSKoans",
-    "type": [
-      "exercise"
-    ]
+    "type": ["exercise"]
   },
   {
     "title": "Powershell",
     "url": "https://www.youtube.com/playlist?list=PL7T06JEc5PF6kusr3cg6eYqCAiU6ezVj5",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@Nerdslesson"
   },
   {
     "title": "Mastering PowerShell Scripting",
     "url": "https://www.codelivly.com/mastering-powershell-scripting-the-ultimate-guide-to-writing-efficient-and-effective-scripts/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "PowerShell Succinctly",
     "url": "https://www.syncfusion.com/succinctly-free-ebooks/powershell",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "Tutorial — fish-shell",
     "url": "https://fishshell.com/docs/current/tutorial.html",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "awsm.fish",
     "url": "https://github.com/jorgebucaran/awsm.fish",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Fish shell playground",
     "url": "https://rootnroll.com/d/fish-shell/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "fish shell",
     "url": "https://fishshell.com/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "WSL-Guide",
     "url": "https://github.com/mikeroyal/WSL-Guide",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "WSL 2",
     "url": "https://www.youtube.com/playlist?list=PLhfrWIlLOoKNMHhB39bh3XBpoLxV3f0V9",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@davidbombal"
   },
   {
     "title": "Windows Subsystem for Linux Documentation",
     "url": "https://docs.microsoft.com/en-us/windows/wsl/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Windows Command Line",
     "url": "https://devblogs.microsoft.com/commandline/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Install Ubuntu on WSL2 on Windows 10",
     "url": "https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Install Ubuntu on WSL2 and get started with graphical applications",
     "url": "https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Enabling GPU acceleration on Ubuntu on WSL2 with the NVIDIA CUDA Platform",
     "url": "https://ubuntu.com/tutorials/enabling-gpu-acceleration-on-ubuntu-on-wsl2-with-the-nvidia-cuda-platform#1-overview",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Awesome-WSL",
     "url": "https://github.com/sirredbeard/Awesome-WSL",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Introduction to Linux",
     "url": "https://www.edx.org/course/introduction-to-linux",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Awesome-Linux-Software",
     "url": "https://github.com/LewisVo/Awesome-Linux-Software",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Linux Survival",
     "url": "https://linuxsurvival.com/",
-    "type": [
-      "tutorial"
-    ]
+    "type": ["tutorial"]
   },
   {
     "title": "awesome-linux-resources",
     "url": "https://github.com/itech001/awesome-linux-resources",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Linux Journey",
     "url": "https://linuxjourney.com/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Linux command line for you and me",
     "url": "https://lym.readthedocs.io/en/latest/index.html",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "Getting Started with Linux",
     "url": "https://www.digitalocean.com/community/tutorial_series/getting-started-with-linux",
-    "type": [
-      "course"
-    ]
-  },
-  {
-    "title": "Introduction to Linux",
-    "url": "https://www.edx.org/course/introduction-to-linux?utm_medium=partner-marketing\u0026utm_source=affiliate\u0026utm_campaign=linuxfoundation\u0026utm_content=blog-lfs101",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "DorianDotSlash - YouTube",
     "url": "https://www.youtube.com/@Doriandotslash",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Linux Server Course",
     "url": "https://www.youtube.com/watch?v=WMy3OzvBWc0",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Linux online course",
     "url": "https://geek-university.com/linux-online-course/",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Before you continue to YouTube",
     "url": "https://www.youtube.com/playlist?list=PLT98CRl2KxKFfumnJiR8FxBsbJepGgMoN",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Interview with a GNU/Linux user - Partition 1",
     "url": "https://www.youtube.com/watch?v=lE4UXdJSJM4",
-    "type": [
-      "community"
-    ],
+    "type": ["community"],
     "source": "youtube.com/@programmersarealsohuman5909"
-  },
-  {
-    "title": "Linux for beginners",
-    "url": "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1LMB14RCwauofMc4BWqVa4B",
-    "type": [
-      "course"
-    ],
-    "source": "youtube.com/@SanjeevThiyagarajan"
   },
   {
     "title": "Linux.org",
     "url": "https://www.linux.org/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Linux From Scratch!",
     "url": "https://www.linuxfromscratch.org/",
-    "type": [
-      "book"
-    ]
+    "type": ["book"]
   },
   {
     "title": "Introduction to Linux",
     "url": "https://www.youtube.com/watch?v=sWbUDq4S6Y8",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Mastering Linux: The Top Commands Every Server Administrator Should Know",
     "url": "https://www.codelivly.com/mastering-linux-the-top-commands-every-server-administrator-should-know/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "awesome-linux",
     "url": "https://github.com/inputsh/awesome-linux",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Ubuntu Linux Tutorials for Beginners",
     "url": "https://www.youtube.com/playlist?list=PLS1QulWo1RIaS1s08yM5FGzPkXXKStVTX",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@ProgrammingKnowledge"
   },
   {
     "title": "Linux Succinctly",
     "url": "https://www.syncfusion.com/succinctly-free-ebooks/linux",
-    "type": [
-      "book"
-    ]
-  },
-  {
-    "title": "Introduction to Linux",
-    "url": "https://www.edx.org/course/introduction-to-linux",
-    "type": [
-      "course"
-    ]
+    "type": ["book"]
   },
   {
     "title": "linux · GitHub Topics · GitHub",
     "url": "https://github.com/topics/linux",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "GitHub - mikeroyal/Perfect-Ubuntu-Guide: Ubuntu Guide. Learn about getting your Ubuntu Desktop/Server ready for development. Including Ubuntu Security, Graphics (AMD/NVIDIA/Intel ARC), and Software Apps.",
     "url": "https://github.com/mikeroyal/Perfect-Ubuntu-Guide",
-    "type": [
-      "course"
-    ]
+    "type": ["course"]
   },
   {
     "title": "Gentle Guide to Get Started With tmux",
     "url": "https://pragmaticpineapple.com/gentle-guide-to-get-started-with-tmux/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Getting Started with tmux",
     "url": "https://www.youtube.com/playlist?list=PLT98CRl2KxKGiyV1u6wHDV8VwcQdzfuKe",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@LearnLinuxTV"
-  },
-  {
-    "title": "Learn tmux",
-    "url": "https://thoughtbot.com/upcase/tmux",
-    "type": [
-      "course"
-    ]
   },
   {
     "title": "Learn X in Y Minutes",
     "url": "https://learnxinyminutes.com/docs/tmux/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Terminal User Interface Programs",
     "url": "https://www.youtube.com/playlist?list=PL5--8gKSku160eJGeY2EsWQ9C5fEZw5WC",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@DistroTube"
   },
   {
     "title": "awesome-tuis",
     "url": "https://github.com/rothgar/awesome-tuis",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "How to install and use Zsh in Windows 10?",
     "url": "https://candid.technology/zsh-windows-10/",
-    "type": [
-      "tutorial"
-    ]
+    "type": ["tutorial"]
   },
   {
     "title": "How I'm still not using GUIs: A guide to the terminal",
     "url": "https://lucasfcosta.com/2019/02/10/terminal-guide-2019.html",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Consistent modern shell tooling on MacOS and Windows WSL for developer",
     "url": "https://www.darraghoriordan.com/2022/01/28/developer-shell-modern-bat-fzf-antigen-zsh-wsl-mac/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Developer Tools",
     "url": "https://www.integralist.co.uk/posts/tools/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "CLI: improved",
     "url": "https://remysharp.com/2018/08/23/cli-improved",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "My Favorite CLI Tools",
     "url": "https://switowski.com/blog/favorite-cli-tools/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "How to Handle Secrets on the Command Line",
     "url": "https://smallstep.com/blog/command-line-secrets/",
-    "type": [
-      "tutorial"
-    ]
+    "type": ["tutorial"]
   },
   {
     "title": "Powerful Terminal And Command-Line (CLI) Tools For Modern Web Development",
     "url": "https://www.smashingmagazine.com/2021/11/powerful-terminal-commandline-tools-modern-web-development/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Cheating at a Company Group Activity Using Unix Tools",
     "url": "https://medium.com/fundbox-engineering/cheating-at-a-company-group-activity-using-unix-tools-5c1d706f3d58",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "DevOps-Bash-tools",
     "url": "https://github.com/HariSekhon/DevOps-Bash-tools",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "modern-unix",
     "url": "https://github.com/ibraheemdev/modern-unix",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "pure-sh-bible",
     "url": "https://github.com/dylanaraps/pure-sh-bible",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "How To Set Up your Terminal for MAXIMUM PRODUCTIVITY",
     "url": "https://www.youtube.com/watch?v=YDLxnHQG-LY\u0026list=WL\u0026index=4\u0026pp=gAQBiAQB",
-    "type": [
-      "guide"
-    ],
+    "type": ["guide"],
     "source": "youtube.com/@devopstoolbox"
   },
   {
     "title": "Bash, Shell and UNIX Chaddery",
     "url": "https://www.youtube.com/playlist?list=PL-p5XmQHB_JREOtBfLdKSswBGYyXwXMUy",
-    "type": [
-      "course"
-    ],
+    "type": ["course"],
     "source": "youtube.com/@LukeSmithxyz"
   },
   {
     "title": "CLIs are reified UIs",
     "url": "https://www.expressionsofchange.org/reification-of-interaction/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "Modern Alternatives of Command-Line Tools",
     "url": "https://zaiste.net/posts/shell-commands-rust/",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "A list of new(ish) command line tools",
     "url": "https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "CLI Tools Are Not Inherently User-Hostile",
     "url": "https://www.youtube.com/watch?v=IcV9TVb-vF4",
-    "type": [
-      "guide"
-    ],
+    "type": ["guide"],
     "source": "youtube.com/@ZigSHOWTIME"
   },
   {
     "title": "Forking Chrome to render in a terminal",
     "url": "https://fathy.fr/carbonyl",
-    "type": [
-      "guide"
-    ]
+    "type": ["guide"]
   },
   {
     "title": "The Most Useful Command Line Tools",
     "url": "https://new.pythonforengineers.com/blog/best-command-line-tools-ive-played-with/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
-  {
-    "title": "101 Bash Commands and Tips for Beginners to Experts",
-    "url": "https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je",
-    "type": [
-      "reference"
-    ]
-  },
+
   {
     "title": "Chmod Calculator",
     "url": "https://chmodcommand.com/",
-    "type": [
-      "generator"
-    ]
+    "type": ["generator"]
   },
   {
     "title": "devconnected",
     "url": "https://devconnected.com/",
-    "type": [
-      "reference"
-    ]
-  },
-  {
-    "title": "Bash-Snippets",
-    "url": "https://github.com/alexanderepstein/Bash-Snippets",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "You-Dont-Need-GUI",
     "url": "https://github.com/you-dont-need/You-Dont-Need-GUI",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "ShellCheck",
     "url": "https://www.shellcheck.net/",
-    "type": [
-      "generator"
-    ]
-  },
-  {
-    "title": "BashPitfalls",
-    "url": "https://mywiki.wooledge.org/BashPitfalls",
-    "type": [
-      "reference"
-    ]
+    "type": ["generator"]
   },
   {
     "title": "BashFAQ",
     "url": "https://mywiki.wooledge.org/BashFAQ",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "styleguide",
     "url": "https://google.github.io/styleguide/shellguide.html",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "LinuxCommand",
     "url": "https://linuxcommand.org/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "All commands",
     "url": "https://www.commandlinefu.com/commands/browse",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Bash-Oneliner",
     "url": "https://github.com/onceupon/Bash-Oneliner",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "explainshell",
     "url": "https://explainshell.com/",
-    "type": [
-      "generator"
-    ]
+    "type": ["generator"]
   },
   {
     "title": "General purpose command-line tools",
     "url": "http://www.compciv.org/unix-tools/",
-    "type": [
-      "reference"
-    ]
-  },
-  {
-    "title": "terminals-are-sexy",
-    "url": "https://github.com/k4m4/terminals-are-sexy",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "SS64 Command line reference",
     "url": "https://ss64.com/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Glob Tool",
     "url": "https://www.digitalocean.com/community/tools/glob?comments=true\u0026glob=%7Bdevelop%2Ctest-release%2F%2A%2A%7D\u0026matches=false\u0026tests=develop\u0026tests=test-release%2Fiteration-1\u0026tests=test-release%2Fiteration-2",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "terminals-are-sexy",
     "url": "https://github.com/k4m4/terminals-are-sexy",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Bash Cheatsheet",
     "url": "https://www.cheatsheet.wtf/bash/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "command-not-found",
     "url": "https://command-not-found.com/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "awesome-terminals",
     "url": "https://github.com/cdleon/awesome-terminals",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "command-line-tools",
     "url": "https://github.com/learn-anything/command-line-tools",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "awesome-console-services",
     "url": "https://github.com/chubin/awesome-console-services",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "awesome-cli-apps",
     "url": "https://github.com/agarrharr/awesome-cli-apps",
-    "type": [
-      "reference"
-    ]
-  },
-  {
-    "title": "modern-unix",
-    "url": "https://github.com/ibraheemdev/modern-unix",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "command-line-quick-reference",
     "url": "https://github.com/vastutsav/command-line-quick-reference",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "cli-apps",
     "url": "https://github.com/toolleeo/cli-apps",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "GNU sed live editor",
     "url": "https://sed.js.org/index.html",
-    "type": [
-      "generator"
-    ]
+    "type": ["generator"]
   },
   {
     "title": "Linux Command Library",
     "url": "https://linuxcommandlibrary.com/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Online curl command line builder",
     "url": "https://curlbuilder.com/",
-    "type": [
-      "generator"
-    ]
+    "type": ["generator"]
   },
   {
     "title": "awesome-macos-command-line",
     "url": "https://git.herrbischoff.com/awesome-macos-command-line/about/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "awesome-command-line-apps",
     "url": "https://git.herrbischoff.com/awesome-command-line-apps/about/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Gogh",
     "url": "https://github.com/Gogh-Co/Gogh",
-    "type": [
-      "generator"
-    ]
-  },
-  {
-    "title": "styleguide",
-    "url": "https://google.github.io/styleguide/shellguide.html",
-    "type": [
-      "reference"
-    ]
+    "type": ["generator"]
   },
   {
     "title": "Scripting with style",
     "url": "https://wiki.bash-hackers.org/scripting/style",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   },
   {
     "title": "Linux Handbook",
     "url": "https://linuxhandbook.com/",
-    "type": [
-      "reference"
-    ]
+    "type": ["reference"]
   }
 ]
