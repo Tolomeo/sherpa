@@ -3,13 +3,16 @@
   "main": [
     "https://thevaluable.dev/guide-terminal-shell-console/",
     "https://learnbyexample.github.io/cli-computing/",
-    "https://cmdchallenge.com/#/current_working_directory",
+    "https://cmdchallenge.com/",
+    "https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w",
     "https://github.com/alebcay/awesome-shell"
   ],
   "extra": [
     {
       "title": "There's more",
       "resources": [
+        "https://www.youtube.com/playlist?list=PLPVjdHc9ZzjZC2Y7jjDyJk7Tg8lW8AlJ-",
+        "https://www.dartmouth.edu/~rc/classes/ksh/print_pages.shtml",
         "https://launchschool.com/books/command_line",
         "http://conqueringthecommandline.com/book",
         "http://www.ee.surrey.ac.uk/Teaching/Unix/",
@@ -33,24 +36,22 @@
         "https://www.youtube.com/playlist?list=PLT98CRl2KxKHaKA9-4_I38sLzK134p4GJ",
         "https://www.youtube.com/playlist?list=PLy7Kah3WzqrHPrgkBgwzXyfDDCvthdUfl",
         "https://www.youtube.com/watch?v=s3ii48qYBxA",
-        "https://youtu.be/uwAqEzhyjtw"
+        "https://youtu.be/uwAqEzhyjtw",
+        "https://www.youtube.com/watch?v=GtovwKDemnI"
       ]
     },
     {
       "title": "Beyond basics",
       "resources": [
-        "https://0xax.gitbooks.io/linux-insides/content/index.html",
+        "https://tldp.org/LDP/abs/html/",
         "https://blog.sanctum.geek.nz/series/unix-as-ide/",
         "https://brennan.io/2015/01/16/write-a-shell-in-c/",
         "https://citw.dev/tutorial/create-your-own-cli-tool",
         "https://clig.dev/",
         "https://code.tutsplus.com/courses/advanced-command-line-techniques",
-        "https://datascienceatthecommandline.com/2e/",
         "https://debian-handbook.info/browse/stable/",
         "https://everything.curl.dev/",
-        "https://freebsdfrau.gitbook.io/serious-shell-programming/",
         "https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line",
-        "https://github.com/dylanaraps/pure-bash-bible",
         "https://github.com/termstandard/colors",
         "https://indradhanush.github.io/blog/writing-a-unix-shell-part-1/",
         "https://ishuah.com/2021/03/10/build-a-terminal-emulator-in-100-lines-of-go/",
@@ -62,41 +63,23 @@
         "https://learnbyexample.github.io/learn_gnugrep_ripgrep/",
         "https://learnbyexample.github.io/learn_gnused/",
         "https://lucasfcosta.com/2022/06/01/ux-patterns-cli-tools.html",
-        "https://nullprogram.com/blog/2020/08/01/",
         "https://peteris.rocks/blog/htop/",
         "https://rust-cli.github.io/book/index.html",
-        "https://seirdy.one/posts/2022/06/10/cli-best-practices/",
-        "https://thevaluable.dev/mouseless-development-environment/",
         "https://unixgame.io/unix50",
         "https://www.coursera.org/specializations/unix-and-bash-for-beginners#courses",
-        "https://www.datafix.com.au/BASHing/",
-        "https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories",
         "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
         "https://www.joshmcguigan.com/blog/build-your-own-shell-rust/",
         "https://www.smashingmagazine.com/2022/12/guide-command-line-data-manipulation-cli-miller/",
         "https://www.uninformativ.de/blog/postings/2018-02-24/0/POSTING-en.html",
-        "https://www.youtube.com/playlist?list=PLmcTCfaoOo_huhLl9_i6IOjiqURVDgEFB"
-      ]
-    },
-    {
-      "title": "Scripting",
-      "resources": [
-        "https://docs.fedoraproject.org/en-US/defensive-coding/programming-languages/Shell/",
-        "https://github.com/SixArm/unix-shell-script-tactics",
-        "https://linuxhandbook.com/tag/bash-beginner/",
-        "https://tldp.org/LDP/abs/html/",
-        "https://www.dartmouth.edu/~rc/classes/ksh/print_pages.shtml",
-        "https://www.digitalocean.com/community/tutorial_series/an-introduction-to-shell-scripting",
-        "https://www.educba.com/software-development/software-development-tutorials/shell-scripting-tutorial/",
-        "https://www.pixelbeat.org/programming/shell_script_mistakes.html",
-        "https://www.youtube.com/playlist?list=PLPVjdHc9ZzjZC2Y7jjDyJk7Tg8lW8AlJ-",
-        "https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w",
-        "https://www.youtube.com/watch?v=GtovwKDemnI"
+        "https://www.youtube.com/playlist?list=PLmcTCfaoOo_huhLl9_i6IOjiqURVDgEFB",
+				"https://github.com/SixArm/unix-shell-script-tactics"
       ]
     },
     {
       "title": "Bash",
       "resources": [
+        "https://linuxhandbook.com/tag/bash-beginner/",
+        "https://github.com/dylanaraps/pure-bash-bible",
         "https://guide.bash.academy/",
         "https://github.com/Idnan/bash-guide",
         "https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je",
@@ -202,6 +185,10 @@
     {
       "title": "How do they do it?",
       "resources": [
+        "https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories",
+        "https://nullprogram.com/blog/2020/08/01/",
+        "https://www.datafix.com.au/BASHing/",
+        "https://thevaluable.dev/mouseless-development-environment/",
         "https://www.wezm.net/technical/2019/10/useful-command-line-tools/",
         "https://lucasfcosta.com/2019/02/10/terminal-guide-2019.html",
         "https://www.darraghoriordan.com/2022/01/28/developer-shell-modern-bat-fzf-antigen-zsh-wsl-mac/",
@@ -220,6 +207,7 @@
     {
       "title": "Nice to know",
       "resources": [
+        "https://www.pixelbeat.org/programming/shell_script_mistakes.html",
         "https://www.youtube.com/playlist?list=PL-p5XmQHB_JREOtBfLdKSswBGYyXwXMUy",
         "https://www.expressionsofchange.org/reification-of-interaction/",
         "https://zaiste.net/posts/shell-commands-rust/",

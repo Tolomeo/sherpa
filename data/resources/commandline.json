@@ -20,7 +20,7 @@
     "type": ["collection", "reference"]
   },
   {
-    "title": "An Introduction to the Command-Line (on Unix-like systems)",
+    "title": "An Introduction to the Command-Line",
     "url": "https://www.oliverelliott.org/article/computing/tut_unix/",
     "type": ["course"]
   },
@@ -47,7 +47,7 @@
   },
   {
     "title": "Command Challenge",
-    "url": "https://cmdchallenge.com/#/current_working_directory",
+    "url": "https://cmdchallenge.com/",
     "type": ["exercise"]
   },
   {
@@ -176,24 +176,9 @@
     "type": ["reference"]
   },
   {
-    "title": "Serious Shell Programming",
-    "url": "https://freebsdfrau.gitbook.io/serious-shell-programming/",
-    "type": ["book"]
-  },
-  {
-    "title": "Linux Inside",
-    "url": "https://0xax.gitbooks.io/linux-insides/content/index.html",
-    "type": ["book"]
-  },
-  {
     "title": "The Debian Administrator's Handbook",
     "url": "https://debian-handbook.info/browse/stable/",
     "type": ["course"]
-  },
-  {
-    "title": "Data Science at the Command Line",
-    "url": "https://datascienceatthecommandline.com/2e/",
-    "type": ["book"]
   },
   {
     "title": "BASHing data",
@@ -296,11 +281,6 @@
     "type": ["guide"]
   },
   {
-    "title": "Best practices for inclusive CLIs",
-    "url": "https://seirdy.one/posts/2022/06/10/cli-best-practices/",
-    "type": ["guide"]
-  },
-  {
     "title": "Data Science at the Command Line",
     "url": "https://jeroenjanssens.com/dsatcl/",
     "type": ["book"]
@@ -341,16 +321,6 @@
     "type": ["course"]
   },
   {
-    "title": "Complete Beginners Guide to Shell Scripting",
-    "url": "https://www.educba.com/software-development/software-development-tutorials/shell-scripting-tutorial/",
-    "type": ["course"]
-  },
-  {
-    "title": "An Introduction to Shell Scripting",
-    "url": "https://www.digitalocean.com/community/tutorial_series/an-introduction-to-shell-scripting",
-    "type": ["guide"]
-  },
-  {
     "title": "Advanced Bash-Scripting Guide",
     "url": "https://tldp.org/LDP/abs/html/",
     "type": ["course"]
@@ -376,11 +346,6 @@
     "url": "https://www.youtube.com/watch?v=GtovwKDemnI",
     "type": ["course"],
     "source": "youtube.com/@edurekaIN"
-  },
-  {
-    "title": "Shell Programming and bash",
-    "url": "https://docs.fedoraproject.org/en-US/defensive-coding/programming-languages/Shell/",
-    "type": ["course"]
   },
   {
     "title": "unix-shell-script-tactics",
