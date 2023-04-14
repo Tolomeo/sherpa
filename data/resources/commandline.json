@@ -37,7 +37,8 @@
   {
     "title": "Beginner's Guide To The Linux Terminal",
     "url": "https://www.youtube.com/watch?v=s3ii48qYBxA",
-    "type": ["course"]
+    "type": ["course"],
+    "source": "youtube.com/@DistroTube"
   },
   {
     "title": "Free Terminal and UNIX Course",
@@ -60,7 +61,7 @@
     "type": ["book"]
   },
   {
-    "title": "Free Interactive Shell Tutorial",
+    "title": "Learn Shell",
     "url": "https://www.learnshell.org/",
     "type": ["course"]
   },
@@ -90,11 +91,6 @@
     "type": ["book"]
   },
   {
-    "title": "Unix Shells Tutorial",
-    "url": "https://flaviocopes.com/shells/",
-    "type": ["guide"]
-  },
-  {
     "title": "The Linux Command Handbook",
     "url": "https://www.freecodecamp.org/news/the-linux-commands-handbook/",
     "type": ["guide", "reference"]
@@ -109,12 +105,6 @@
     "title": "The Front-End Developer's Guide to the Terminal",
     "url": "https://www.joshwcomeau.com/javascript/terminal-for-js-devs/",
     "type": ["guide"]
-  },
-  {
-    "title": "Command Line Crash Course For Beginners",
-    "url": "https://www.youtube.com/watch?v=uwAqEzhyjtw",
-    "type": ["course"],
-    "source": "youtube.com/@TraversyMedia"
   },
   {
     "title": "Linux for beginners",
@@ -159,12 +149,6 @@
     "title": "UNIX / Linux Tutorial for Beginners",
     "url": "https://www.guru99.com/unix-linux-tutorial.html",
     "type": ["course"]
-  },
-  {
-    "title": "Linux Command Line Tutorial For Beginners",
-    "url": "https://www.youtube.com/playlist?list=PLS1QulWo1RIb9WVQGJ_vh-RQusbZgO_As",
-    "type": ["course"],
-    "source": "youtube.com/@ProgrammingKnowledge"
   },
   {
     "title": "basic-unix",

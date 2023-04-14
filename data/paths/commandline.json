@@ -2,22 +2,20 @@
   "title": "Command line",
   "main": [
     "https://thevaluable.dev/guide-terminal-shell-console/",
-    "https://launchschool.com/books/command_line",
     "https://learnbyexample.github.io/cli-computing/",
+    "https://cmdchallenge.com/#/current_working_directory",
     "https://github.com/alebcay/awesome-shell"
   ],
   "extra": [
     {
       "title": "There's more",
       "resources": [
+        "https://launchschool.com/books/command_line",
         "http://conqueringthecommandline.com/book",
         "http://www.ee.surrey.ac.uk/Teaching/Unix/",
-        "https://cmdchallenge.com/#/current_working_directory",
         "https://dev.to/napicella/linux-terminals-tty-pty-and-shell-192e",
-        "https://flaviocopes.com/shells/",
         "https://github.com/jlevy/the-art-of-command-line",
         "https://linuxcommand.org/tlcl.php",
-        "https://miteshshah.github.io/linux/basics/",
         "https://ryanstutorials.net/linuxtutorial/",
         "https://thoughtbot.com/upcase/mastering-the-shell",
         "https://www.coursera.org/specializations/unix-and-bash-for-beginners",
@@ -30,14 +28,11 @@
         "https://www.oliverelliott.org/article/computing/tut_unix/",
         "https://www.rithmschool.com/courses/terminal",
         "https://www.tutorialspoint.com/unix/index.htm",
-        "https://www.wezm.net/technical/2019/10/useful-command-line-tools/",
         "https://www.youtube.com/playlist?list=PL5--8gKSku174EnRTbP4DzU2W80Q1vqtm",
         "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1LMB14RCwauofMc4BWqVa4B",
-        "https://www.youtube.com/playlist?list=PLS1QulWo1RIb9WVQGJ_vh-RQusbZgO_As",
         "https://www.youtube.com/playlist?list=PLT98CRl2KxKHaKA9-4_I38sLzK134p4GJ",
         "https://www.youtube.com/playlist?list=PLy7Kah3WzqrHPrgkBgwzXyfDDCvthdUfl",
         "https://www.youtube.com/watch?v=s3ii48qYBxA",
-        "https://www.youtube.com/watch?v=uwAqEzhyjtw",
         "https://youtu.be/uwAqEzhyjtw"
       ]
     },
@@ -207,6 +202,7 @@
     {
       "title": "How do they do it?",
       "resources": [
+        "https://www.wezm.net/technical/2019/10/useful-command-line-tools/",
         "https://lucasfcosta.com/2019/02/10/terminal-guide-2019.html",
         "https://www.darraghoriordan.com/2022/01/28/developer-shell-modern-bat-fzf-antigen-zsh-wsl-mac/",
         "https://www.integralist.co.uk/posts/tools/",
