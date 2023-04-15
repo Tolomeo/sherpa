@@ -311,11 +311,6 @@
     "type": ["course"]
   },
   {
-    "title": "Terminal Productivity",
-    "url": "https://www.youtube.com/playlist?list=PLmcTCfaoOo_huhLl9_i6IOjiqURVDgEFB",
-    "type": ["guide", "collection"]
-  },
-  {
     "title": "Bash Tutorials for Beginners",
     "url": "https://linuxhandbook.com/tag/bash-beginner/",
     "type": ["course"]
@@ -323,16 +318,6 @@
   {
     "title": "Advanced Bash-Scripting Guide",
     "url": "https://tldp.org/LDP/abs/html/",
-    "type": ["course"]
-  },
-  {
-    "title": "Common shell script mistakes",
-    "url": "https://www.pixelbeat.org/programming/shell_script_mistakes.html",
-    "type": ["guide"]
-  },
-  {
-    "title": "Unix shell scripting with ksh/bash",
-    "url": "https://www.dartmouth.edu/~rc/classes/ksh/print_pages.shtml",
     "type": ["course"]
   },
   {
@@ -424,11 +409,6 @@
     "type": ["guide"]
   },
   {
-    "title": "The Bash Guide",
-    "url": "https://guide.bash.academy/",
-    "type": ["course"]
-  },
-  {
     "title": "bash-guide",
     "url": "https://github.com/Idnan/bash-guide",
     "type": ["course"]
@@ -441,7 +421,7 @@
   {
     "title": "awesome-bash",
     "url": "https://github.com/awesome-lists/awesome-bash",
-    "type": ["reference"]
+    "type": ["collection", "reference"]
   },
   {
     "title": "Linux Shell Scripting Tutorial",
@@ -451,7 +431,8 @@
   {
     "title": "Bash Best Practices",
     "url": "https://www.youtube.com/playlist?list=PLRU13thWaP5m-O2mNQRChZ6mI1ejLE9OQ",
-    "type": ["guide", "collection"]
+    "type": ["guide", "collection"],
+    "source": "youtube.com/@themouselessdev8655"
   },
   {
     "title": "Bash Guide for Beginners",
@@ -466,11 +447,6 @@
   {
     "title": "BashPitfalls",
     "url": "https://mywiki.wooledge.org/BashPitfalls",
-    "type": ["reference"]
-  },
-  {
-    "title": "Greg's Wiki",
-    "url": "https://mywiki.wooledge.org/EnglishFrontPage",
     "type": ["reference"]
   },
   {
@@ -497,11 +473,6 @@
     "title": "Introduction to Bash Scripting",
     "url": "https://ebook.bobby.sh/",
     "type": ["book"]
-  },
-  {
-    "title": "Sensible Bash",
-    "url": "https://mrzool.cc/writing/sensible-bash/",
-    "type": ["reference"]
   },
   {
     "title": "Bash Scripting Tutorial",
