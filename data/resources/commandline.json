@@ -515,11 +515,6 @@
     "type": ["book"]
   },
   {
-    "title": "zsh4humans",
-    "url": "https://github.com/romkatv/zsh4humans",
-    "type": ["generator"]
-  },
-  {
     "title": "Automate administrative tasks by using PowerShell",
     "url": "https://learn.microsoft.com/en-us/training/paths/powershell/",
     "type": ["course"]
@@ -553,12 +548,6 @@
     "type": ["exercise"]
   },
   {
-    "title": "Powershell",
-    "url": "https://www.youtube.com/playlist?list=PL7T06JEc5PF6kusr3cg6eYqCAiU6ezVj5",
-    "type": ["course"],
-    "source": "youtube.com/@Nerdslesson"
-  },
-  {
     "title": "Mastering PowerShell Scripting",
     "url": "https://www.codelivly.com/mastering-powershell-scripting-the-ultimate-guide-to-writing-efficient-and-effective-scripts/",
     "type": ["guide"]
@@ -569,7 +558,7 @@
     "type": ["book"]
   },
   {
-    "title": "Tutorial — fish-shell",
+    "title": "Tutorial",
     "url": "https://fishshell.com/docs/current/tutorial.html",
     "type": ["guide"]
   },
@@ -764,11 +753,6 @@
     "title": "awesome-tuis",
     "url": "https://github.com/rothgar/awesome-tuis",
     "type": ["reference"]
-  },
-  {
-    "title": "How to install and use Zsh in Windows 10?",
-    "url": "https://candid.technology/zsh-windows-10/",
-    "type": ["tutorial"]
   },
   {
     "title": "How I'm still not using GUIs: A guide to the terminal",
@@ -1018,5 +1002,22 @@
     "title": "Linux Handbook",
     "url": "https://linuxhandbook.com/",
     "type": ["reference"]
+  },
+  {
+    "title": "awesome-powershell",
+    "url": "https://github.com/janikvonrotz/awesome-powershell",
+    "type": ["reference", "collection"]
+  },
+  {
+    "title": "Powershell Advanced Tools and Scripting",
+    "url": "https://www.youtube.com/watch?v=K4YDHFalAK8",
+    "type": ["course"],
+    "source": "youtube.com/@Nerdslesson"
+  },
+  {
+    "title": "PowerShell For Beginners",
+    "url": "https://www.youtube.com/watch?v=UVUd9_k9C6A",
+    "type": ["course"],
+    "source": "youtube.com/@Nerdslesson"
   }
 ]

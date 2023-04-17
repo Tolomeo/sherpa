@@ -83,50 +83,55 @@
     },
     {
       "title": "Zsh",
-      "resources": [
-        "https://thevaluable.dev/zsh-install-configure-mouseless/",
-        "https://commandlinepoweruser.com/",
-        "https://zsh.sourceforge.io/Doc/",
+      "main": [
         "https://scriptingosx.com/2019/06/moving-to-zsh/",
-        "https://github.com/unixorn/awesome-zsh-plugins",
+        "https://github.com/unixorn/awesome-zsh-plugins"
+      ],
+      "extra": [
+        "https://commandlinepoweruser.com/",
+        "https://thevaluable.dev/zsh-install-configure-mouseless/",
+        "https://zsh.sourceforge.io/Doc/",
         "https://zsh.sourceforge.io/Guide/zshguide.html",
-        "https://github.com/Apress/from-bash-to-z-shell",
-        "https://github.com/romkatv/zsh4humans",
-        "https://candid.technology/zsh-windows-10/"
+        "https://github.com/Apress/from-bash-to-z-shell"
       ]
     },
     {
       "title": "Fish",
-      "resources": [
+      "main": [
         "https://fishshell.com/docs/current/tutorial.html",
-        "https://github.com/jorgebucaran/awsm.fish",
-        "https://rootnroll.com/d/fish-shell/",
-        "https://fishshell.com/"
-      ]
+        "https://github.com/jorgebucaran/awsm.fish"
+      ],
+      "extra": ["https://rootnroll.com/d/fish-shell/", "https://fishshell.com/"]
     },
     {
       "title": "WSL",
-      "resources": [
+      "main": [
         "https://github.com/mikeroyal/WSL-Guide",
+        "https://github.com/sirredbeard/Awesome-WSL"
+      ],
+      "extra": [
         "https://www.youtube.com/playlist?list=PLhfrWIlLOoKNMHhB39bh3XBpoLxV3f0V9",
         "https://docs.microsoft.com/en-us/windows/wsl/",
         "https://devblogs.microsoft.com/commandline/",
         "https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview",
         "https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview",
-        "https://ubuntu.com/tutorials/enabling-gpu-acceleration-on-ubuntu-on-wsl2-with-the-nvidia-cuda-platform#1-overview",
-        "https://github.com/sirredbeard/Awesome-WSL"
+        "https://ubuntu.com/tutorials/enabling-gpu-acceleration-on-ubuntu-on-wsl2-with-the-nvidia-cuda-platform#1-overview"
       ]
     },
     {
       "title": "Powershell",
-      "resources": [
-        "https://learn.microsoft.com/en-us/training/paths/powershell/",
+      "main": [
+        "https://www.youtube.com/watch?v=UVUd9_k9C6A",
+        "https://github.com/janikvonrotz/awesome-powershell"
+      ],
+      "extra": [
         "https://learn.microsoft.com/en-us/shows/getting-started-with-microsoft-powershell/",
+        "https://www.youtube.com/watch?v=K4YDHFalAK8",
+        "https://learn.microsoft.com/en-us/training/paths/powershell/",
         "https://www.youtube.com/playlist?list=PL-esmhgrps8ZWkcC3Bd0C_QUCIhT65aDb",
         "https://www.youtube.com/playlist?list=PLlVtbbG169nFq_hR7FcMYg32xsSAObuq8",
         "https://www.youtube.com/playlist?list=PL-esmhgrps8Zv9bAHesStPRQ1AiUL1wY3",
         "https://github.com/vexx32/PSKoans",
-        "https://www.youtube.com/playlist?list=PL7T06JEc5PF6kusr3cg6eYqCAiU6ezVj5",
         "https://www.codelivly.com/mastering-powershell-scripting-the-ultimate-guide-to-writing-efficient-and-effective-scripts/",
         "https://www.syncfusion.com/succinctly-free-ebooks/powershell"
       ]
