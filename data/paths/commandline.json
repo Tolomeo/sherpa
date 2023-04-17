@@ -12,7 +12,6 @@
     {
       "title": "There's more",
       "resources": [
-        "https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je",
         "https://www.youtube.com/playlist?list=PLPVjdHc9ZzjZC2Y7jjDyJk7Tg8lW8AlJ-",
         "https://bash.cyberciti.biz/guide/Main_Page",
         "https://ebook.bobby.sh/",
@@ -55,6 +54,7 @@
       "resources": [
         "https://tldp.org/LDP/abs/html/",
         "https://www.youtube.com/playlist?list=PLRU13thWaP5m-O2mNQRChZ6mI1ejLE9OQ",
+        "https://thevaluable.dev/mouseless-development-environment/",
         "https://blog.sanctum.geek.nz/series/unix-as-ide/",
         "https://brennan.io/2015/01/16/write-a-shell-in-c/",
         "https://citw.dev/tutorial/create-your-own-cli-tool",
@@ -149,8 +149,21 @@
       ]
     },
     {
-      "title": "Terminal UIs",
+      "title": "CLI apps",
       "resources": [
+        "https://git.herrbischoff.com/awesome-command-line-apps/about/",
+        "https://github.com/chubin/awesome-console-services",
+        "https://github.com/toolleeo/cli-apps",
+        "http://www.compciv.org/unix-tools/",
+        "https://github.com/learn-anything/command-line-tools",
+        "https://git.herrbischoff.com/awesome-macos-command-line/about/",
+        "https://github.com/agarrharr/awesome-cli-apps",
+        "https://www.wezm.net/technical/2019/10/useful-command-line-tools/",
+        "https://github.com/ibraheemdev/modern-unix",
+        "https://remysharp.com/2018/08/23/cli-improved",
+        "https://zaiste.net/posts/shell-commands-rust/",
+        "https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/",
+        "https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je",
         "https://www.youtube.com/playlist?list=PL5--8gKSku160eJGeY2EsWQ9C5fEZw5WC",
         "https://github.com/rothgar/awesome-tuis"
       ]
@@ -185,22 +198,16 @@
         "https://lucasfcosta.com/2019/02/10/terminal-guide-2019.html",
         "https://smallstep.com/blog/command-line-secrets/",
         "https://switowski.com/blog/favorite-cli-tools/",
-        "https://thevaluable.dev/mouseless-development-environment/",
         "https://www.darraghoriordan.com/2022/01/28/developer-shell-modern-bat-fzf-antigen-zsh-wsl-mac/",
-        "https://www.datafix.com.au/BASHing/",
-        "https://www.wezm.net/technical/2019/10/useful-command-line-tools/"
+        "https://www.datafix.com.au/BASHing/"
       ]
     },
     {
       "title": "Nice to know",
       "resources": [
-        "https://github.com/ibraheemdev/modern-unix",
-        "https://remysharp.com/2018/08/23/cli-improved",
         "https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line",
         "https://www.youtube.com/playlist?list=PL-p5XmQHB_JREOtBfLdKSswBGYyXwXMUy",
         "https://www.expressionsofchange.org/reification-of-interaction/",
-        "https://zaiste.net/posts/shell-commands-rust/",
-        "https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/",
         "https://www.youtube.com/watch?v=IcV9TVb-vF4",
         "https://fathy.fr/carbonyl"
       ]
@@ -208,23 +215,16 @@
     {
       "title": "Great bookmarks",
       "resources": [
-        "http://www.compciv.org/unix-tools/",
         "https://github.com/trinib/Linux-Bash-Commands",
         "https://chmodcommand.com/",
         "https://command-not-found.com/",
         "https://curlbuilder.com/",
         "https://explainshell.com/",
-        "https://git.herrbischoff.com/awesome-command-line-apps/about/",
-        "https://git.herrbischoff.com/awesome-macos-command-line/about/",
         "https://github.com/Gogh-Co/Gogh",
-        "https://github.com/agarrharr/awesome-cli-apps",
         "https://github.com/alexanderepstein/Bash-Snippets",
         "https://github.com/cdleon/awesome-terminals",
-        "https://github.com/chubin/awesome-console-services",
         "https://github.com/k4m4/terminals-are-sexy",
-        "https://github.com/learn-anything/command-line-tools",
         "https://github.com/onceupon/Bash-Oneliner",
-        "https://github.com/toolleeo/cli-apps",
         "https://github.com/vastutsav/command-line-quick-reference",
         "https://linuxcommand.org/",
         "https://linuxcommandlibrary.com/",
