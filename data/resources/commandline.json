@@ -186,11 +186,6 @@
     "type": ["reference"]
   },
   {
-    "title": "How To Use Rsync to Sync Local and Remote Directories",
-    "url": "https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories",
-    "type": ["tutorial"]
-  },
-  {
     "title": "htop explained",
     "url": "https://peteris.rocks/blog/htop/",
     "type": ["guide"]
@@ -264,11 +259,6 @@
     "title": "A Guide To Command-Line Data Manipulation",
     "url": "https://www.smashingmagazine.com/2022/12/guide-command-line-data-manipulation-cli-miller/",
     "type": ["guide"]
-  },
-  {
-    "title": "Conventions for Command Line Options",
-    "url": "https://nullprogram.com/blog/2020/08/01/",
-    "type": ["guide", "reference"]
   },
   {
     "title": "Command Line Interface Guidelines",
@@ -766,11 +756,6 @@
     "type": ["guide"]
   },
   {
-    "title": "Developer Tools",
-    "url": "https://www.integralist.co.uk/posts/tools/",
-    "type": ["reference"]
-  },
-  {
     "title": "CLI: improved",
     "url": "https://remysharp.com/2018/08/23/cli-improved",
     "type": ["guide"]
@@ -791,11 +776,6 @@
     "type": ["guide"]
   },
   {
-    "title": "Cheating at a Company Group Activity Using Unix Tools",
-    "url": "https://medium.com/fundbox-engineering/cheating-at-a-company-group-activity-using-unix-tools-5c1d706f3d58",
-    "type": ["guide"]
-  },
-  {
     "title": "DevOps-Bash-tools",
     "url": "https://github.com/HariSekhon/DevOps-Bash-tools",
     "type": ["reference"]
@@ -809,12 +789,6 @@
     "title": "pure-sh-bible",
     "url": "https://github.com/dylanaraps/pure-sh-bible",
     "type": ["reference"]
-  },
-  {
-    "title": "How To Set Up your Terminal for MAXIMUM PRODUCTIVITY",
-    "url": "https://www.youtube.com/watch?v=YDLxnHQG-LY\u0026list=WL\u0026index=4\u0026pp=gAQBiAQB",
-    "type": ["guide"],
-    "source": "youtube.com/@devopstoolbox"
   },
   {
     "title": "Bash, Shell and UNIX Chaddery",
@@ -849,20 +823,9 @@
     "type": ["guide"]
   },
   {
-    "title": "The Most Useful Command Line Tools",
-    "url": "https://new.pythonforengineers.com/blog/best-command-line-tools-ive-played-with/",
-    "type": ["reference"]
-  },
-
-  {
     "title": "Chmod Calculator",
     "url": "https://chmodcommand.com/",
     "type": ["generator"]
-  },
-  {
-    "title": "devconnected",
-    "url": "https://devconnected.com/",
-    "type": ["reference"]
   },
   {
     "title": "You-Dont-Need-GUI",
@@ -993,11 +956,6 @@
     "title": "Gogh",
     "url": "https://github.com/Gogh-Co/Gogh",
     "type": ["generator"]
-  },
-  {
-    "title": "Scripting with style",
-    "url": "https://wiki.bash-hackers.org/scripting/style",
-    "type": ["reference"]
   },
   {
     "title": "Linux Handbook",
