@@ -400,8 +400,9 @@
   },
   {
     "title": "~/.dotfiles in 100 Seconds",
-    "url": "https://youtu.be/r_MpUP6aKiQ",
-    "type": ["guide"]
+    "url": "https://www.youtube.com/watch?v=r_MpUP6aKiQ",
+    "type": ["guide"],
+    "source": "youtube.com/@Fireship"
   },
   {
     "title": "Getting Started with Dotfiles",
