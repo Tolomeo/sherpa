@@ -978,5 +978,16 @@
     "url": "https://www.youtube.com/watch?v=UVUd9_k9C6A",
     "type": ["course"],
     "source": "youtube.com/@Nerdslesson"
+  },
+  {
+    "title": "Bash Scripting Tutorial for Beginners",
+    "url": "https://www.youtube.com/watch?v=tK9Oc6AEnR4",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Shell Field Guide",
+    "url": "https://raimonster.com/scripting-field-guide/",
+    "type": ["reference"]
   }
 ]
