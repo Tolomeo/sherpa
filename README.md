@@ -46,7 +46,7 @@ If this project manages to help you, give it a star!.
   - [ ] Podman and Buildah
 - [x] UI design
   - [ ] Design systems
-- [ ] Command line
+- [x] Command line
 - [ ] API development
   - [ ] Rest
   - [ ] Graphql
