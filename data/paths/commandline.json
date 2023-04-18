@@ -4,7 +4,6 @@
     "https://thevaluable.dev/guide-terminal-shell-console/",
     "https://learnbyexample.github.io/cli-computing/",
     "https://cmdchallenge.com/",
-    "https://www.youtube.com/watch?v=tK9Oc6AEnR4",
     "https://github.com/alebcay/awesome-shell",
     "https://github.com/awesome-lists/awesome-bash"
   ],
@@ -12,6 +11,7 @@
     {
       "title": "There's more",
       "resources": [
+        "https://www.youtube.com/watch?v=tK9Oc6AEnR4",
         "https://www.youtube.com/playlist?list=PLPVjdHc9ZzjZC2Y7jjDyJk7Tg8lW8AlJ-",
         "https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w",
         "https://bash.cyberciti.biz/guide/Main_Page",
