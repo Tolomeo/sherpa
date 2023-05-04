@@ -30,7 +30,6 @@
         "https://github.com/dwyl/learn-docker",
         "https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction",
         "https://docker-handbook.farhan.dev",
-        "https://www.coursera.org/projects/build-local-development-environments-using-docker-containers",
         "https://devopswithdocker.com"
       ]
     },
@@ -121,10 +120,7 @@
     },
     {
       "title": "Stay in the loop",
-      "resources": [
-        "https://www.docker.com/newsletter-subscription",
-        "https://containerjournal.com"
-      ]
+      "resources": ["https://www.docker.com/newsletter-subscription"]
     }
   ]
 }
