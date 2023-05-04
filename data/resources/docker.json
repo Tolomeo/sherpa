@@ -173,13 +173,13 @@
     "source": "digitalocean.com/community"
   },
   {
-    "title": "DevOps and Docker Live",
+    "title": "DevOps and Docker Talk Live",
     "url": "https://www.youtube.com/playlist?list=PLX0bTycx8m-UhIXY2c4-7AXaEokaTdn6S",
     "type": ["guide", "collection"],
     "source": "youtube.com/c/BretFisherDockerandDevOps"
   },
   {
-    "title": "HackerSploit Docker Security Essentials",
+    "title": "Docker Security Essentials",
     "url": "https://www.linode.com/content/hackersploit-docker-security-essentials-ebook",
     "type": ["book"]
   },

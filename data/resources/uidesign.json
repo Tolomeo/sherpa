@@ -521,7 +521,7 @@
     "type": ["guide", "collection"]
   },
   {
-    "title": "Deceptive patterns - user interfaces crafted to trick you",
+    "title": "Deceptive Patterns",
     "url": "https://www.deceptive.design",
     "type": ["reference"]
   },
@@ -720,7 +720,7 @@
     "type": ["guide", "community"]
   },
   {
-    "title": "The UX psychology glossary",
+    "title": "UX glossary",
     "url": "https://builtformars.com/ux-glossary",
     "type": ["reference", "guide"]
   },
