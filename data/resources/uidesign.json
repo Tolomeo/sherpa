@@ -328,11 +328,6 @@
     "type": ["guide"]
   },
   {
-    "title": "Design Principles",
-    "url": "http://learndesignprinciples.com",
-    "type": ["guide"]
-  },
-  {
     "title": "Media Queries",
     "url": "https://mediaqueri.es",
     "type": ["example", "collection"]

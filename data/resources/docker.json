@@ -132,12 +132,6 @@
     "type": ["course"]
   },
   {
-    "title": "Build local development environments using Docker containers",
-    "url": "https://www.coursera.org/projects/build-local-development-environments-using-docker-containers",
-    "type": ["tutorial"]
-  },
-
-  {
     "title": "Container Orchestration",
     "url": "https://devopedia.org/container-orchestration",
     "type": ["guide"]
@@ -443,11 +437,6 @@
     "title": "Docker Developer Newsletter",
     "url": "https://www.docker.com/newsletter-subscription",
     "type": ["community"]
-  },
-  {
-    "title": "Container Journal",
-    "url": "https://containerjournal.com",
-    "type": ["community", "reference"]
   },
   {
     "title": "wasm-docker-better-together",

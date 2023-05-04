@@ -218,11 +218,6 @@
     "type": ["generator"]
   },
   {
-    "title": "json2ts - generate TypeScript interfaces from json",
-    "url": "http://json2ts.com",
-    "type": ["generator"]
-  },
-  {
     "title": "TypeStrong",
     "url": "https://github.com/TypeStrong",
     "type": ["reference", "collection"],

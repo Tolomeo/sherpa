@@ -55,11 +55,6 @@
     "type": ["book"]
   },
   {
-    "title": "First Aid git",
-    "url": "https://firstaidgit.io",
-    "type": ["reference"]
-  },
-  {
     "title": "Patterns for Managing Source Code Branches",
     "url": "https://martinfowler.com/articles/branching-patterns.html",
     "type": ["guide"]
