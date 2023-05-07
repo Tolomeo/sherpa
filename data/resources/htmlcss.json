@@ -520,11 +520,6 @@
     "type": ["reference", "collection"]
   },
   {
-    "title": "Learn HTML",
-    "url": "https://web.dev/learn/html/",
-    "type": ["course"]
-  },
-  {
     "title": "100 Days Of More Or Less Modern CSS",
     "url": "https://www.matuzo.at/blog/2022/100-days-of-more-or-less-modern-css/",
     "type": ["guide", "collection"]
@@ -593,5 +588,133 @@
     "title": "cccreate",
     "url": "https://cccreate.co/",
     "type": ["generator", "collection"]
+  },
+  {
+    "title": "Hello, animation!",
+    "url": "https://css-animations.io/",
+    "type": ["tutorial", "exercise"]
+  },
+  {
+    "title": "Learn HTML",
+    "url": "https://web.dev/learn/html/",
+    "type": ["course"]
+  },
+  {
+    "title": "Learn CSS",
+    "url": "https://web.dev/learn/css/",
+    "type": ["course"]
+  },
+  {
+    "title": "Deploying CSS Logical Properties On Web Apps",
+    "url": "https://www.smashingmagazine.com/2022/12/deploying-css-logical-properties-on-web-apps/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Modern HTML email",
+    "url": "https://fullystacked.net/posts/modern-html-email/",
+    "type": ["guide"]
+  },
+  {
+    "title": "How To Build A Magazine Layout With CSS Grid Areas",
+    "url": "https://www.smashingmagazine.com/2023/02/build-magazine-layout-css-grid-areas/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "The Guide To Responsive Design In 2023 and Beyond",
+    "url": "https://ishadeed.com/article/responsive-design",
+    "type": ["guide"]
+  },
+  {
+    "title": "Learn CSS the easy way",
+    "url": "https://css-tip.com/",
+    "type": ["tutorial", "collection"]
+  },
+  {
+    "title": "A simple visual cheatsheet for flexbox",
+    "url": "https://flexbox.malven.co/",
+    "type": ["reference"]
+  },
+  {
+    "title": "The complete guide to CSS media queries",
+    "url": "https://polypane.app/blog/the-complete-guide-to-css-media-queries/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Responsible Web Applications",
+    "url": "https://responsibleweb.app/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Open-Source UI elements",
+    "url": "https://uiverse.io/",
+    "type": ["example", "collection"]
+  },
+  {
+    "title": "CSS Guidelines",
+    "url": "https://cssguidelin.es/",
+    "type": ["guide", "reference"]
+  },
+  {
+    "title": "CSS Design Awards",
+    "url": "https://www.cssdesignawards.com/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Level Up Your CSS Animation Skills",
+    "url": "https://www.youtube.com/playlist?list=PLHKH6Uj0Seea4gnA8A80PvW9XAQkT37bD",
+    "type": ["course"],
+    "source": "youtube.com/@cssanimationrocks"
+  },
+  {
+    "title": "CSS Weekly",
+    "url": "https://css-weekly.com/",
+    "type": ["reference", "community"]
+  },
+  {
+    "title": "CSS Animation Weekly",
+    "url": "https://weekly.cssanimation.rocks/",
+    "type": ["reference", "community"]
+  },
+  {
+    "title": "HTML \u0026 Coding Introduction",
+    "url": "https://www.youtube.com/watch?v=GDGejH3SDNQ",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "CSS Style Queries",
+    "url": "https://ishadeed.com/article/css-container-style-queries/",
+    "type": ["guide"]
+  },
+  {
+    "title": "3D in CSS",
+    "url": "https://garden.bradwoods.io/notes/css/3d",
+    "type": ["guide"]
+  },
+  {
+    "title": "CSS Blend Modes",
+    "url": "https://garden.bradwoods.io/notes/css/blend-modes",
+    "type": ["guide"]
+  },
+  {
+    "title": "Learn Images",
+    "url": "https://web.dev/learn/images/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Code Guide",
+    "url": "https://codeguide.co/",
+    "type": ["reference"]
+  },
+  {
+    "title": "A simple visual cheatsheet for CSS Grid Layout",
+    "url": "https://grid.malven.co/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Learn HTML5 and CSS3 From Scratch",
+    "url": "https://www.youtube.com/watch?v=mU6anWqZJcc",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
   }
 ]

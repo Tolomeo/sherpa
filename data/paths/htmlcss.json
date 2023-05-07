@@ -12,6 +12,13 @@
     {
       "title": "There's more",
       "resources": [
+        "https://css-animations.io/",
+        "https://ishadeed.com/article/responsive-design",
+        "https://polypane.app/blog/the-complete-guide-to-css-media-queries/",
+        "https://web.dev/learn/css/",
+        "https://www.youtube.com/playlist?list=PLHKH6Uj0Seea4gnA8A80PvW9XAQkT37bD",
+        "https://www.youtube.com/watch?v=GDGejH3SDNQ",
+        "https://www.youtube.com/watch?v=mU6anWqZJcc",
         "https://flukeout.github.io",
         "https://flexbox.io",
         "https://flexboxfroggy.com",
@@ -54,6 +61,14 @@
     {
       "title": "Beyond basics",
       "resources": [
+        "https://fullystacked.net/posts/modern-html-email/",
+        "https://garden.bradwoods.io/notes/css/3d",
+        "https://garden.bradwoods.io/notes/css/blend-modes",
+        "https://ishadeed.com/article/css-container-style-queries/",
+        "https://responsibleweb.app/",
+        "https://web.dev/learn/images/",
+        "https://www.matuzo.at/blog/2022/100-days-of-more-or-less-modern-css/",
+        "https://www.smashingmagazine.com/2022/12/deploying-css-logical-properties-on-web-apps/",
         "https://github.com/AllThingsSmitty/css-protips",
         "https://moderncss.dev",
         "https://egghead.io/courses/css-tips-and-tricks-930b",
@@ -78,6 +93,8 @@
     {
       "title": "How do they do it?",
       "resources": [
+        "https://uiverse.io/",
+        "https://www.smashingmagazine.com/2023/02/build-magazine-layout-css-grid-areas/",
         "https://web.dev/patterns/layout",
         "https://csslayout.io",
         "https://sparkbox.com/foundry/bem_by_example",
@@ -110,6 +127,11 @@
     {
       "title": "Great bookmarks",
       "resources": [
+        "https://codeguide.co/",
+        "https://css-tip.com/",
+        "https://cssguidelin.es/",
+        "https://flexbox.malven.co/",
+        "https://grid.malven.co/",
         "https://rtl.wtf",
         "https://htmlreference.io",
         "https://cssreference.io",
@@ -141,6 +163,9 @@
     {
       "title": "Stay in the loop",
       "resources": [
+        "https://css-weekly.com/",
+        "https://weekly.cssanimation.rocks/",
+        "https://www.cssdesignawards.com/",
         "https://css-tricks.com",
         "https://tympanus.net/codrops",
         "https://www.smashingmagazine.com",
