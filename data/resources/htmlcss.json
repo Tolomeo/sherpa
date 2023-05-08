@@ -102,23 +102,8 @@
     "type": ["course"]
   },
   {
-    "title": "Learn HTML and CSS",
-    "url": "https://scrimba.com/learn/htmlcss",
-    "type": ["course"]
-  },
-  {
-    "title": "Learn CSS",
-    "url": "https://web.dev/learn/css",
-    "type": ["course"]
-  },
-  {
     "title": "Introduction to HTML",
     "url": "https://www.cronj.com/frontend-development/html.html",
-    "type": ["course"]
-  },
-  {
-    "title": "CSS: Zero to Hero in CSS by Styling a Website from Scratch",
-    "url": "https://www.udemy.com/course/css-zero-to-hero",
     "type": ["course"]
   },
   {
@@ -273,11 +258,6 @@
     "type": ["guide"]
   },
   {
-    "title": "The complete guide to CSS media queries",
-    "url": "https://polypane.app/blog/the-complete-guide-to-css-media-queries",
-    "type": ["guide"]
-  },
-  {
     "title": "Optional HTML: Everything You Need to Know",
     "url": "https://meiert.com/en/blog/optional-html",
     "type": ["guide"]
@@ -419,11 +399,6 @@
     "type": ["community"]
   },
   {
-    "title": "Flex Box Adventure – CSS Game to Learn Flexbox",
-    "url": "https://codingfantasy.com/games/flexboxadventure",
-    "type": ["exercise"]
-  },
-  {
     "title": "Knights of the Flexbox table",
     "url": "https://knightsoftheflexboxtable.com",
     "type": ["exercise"]
@@ -445,7 +420,7 @@
     "type": ["guide"]
   },
   {
-    "title": "Web Animation Performance Fundamentals – How to Make Your Pages Look Smooth",
+    "title": "Web Animation Performance Fundamentals",
     "url": "https://www.freecodecamp.org/news/web-animation-performance-fundamentals",
     "type": ["tutorial"]
   },
@@ -525,11 +500,6 @@
     "type": ["guide", "collection"]
   },
   {
-    "title": "A Primer On CSS Container Queries",
-    "url": "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries/",
-    "type": ["guide"]
-  },
-  {
     "title": "The Complete Guide to Using CSS Variables",
     "url": "https://webdesign.tutsplus.com/courses/the-complete-guide-to-using-css-variables",
     "type": ["course"]
@@ -557,7 +527,8 @@
   {
     "title": "HTML & CSS Full Course",
     "url": "https://www.youtube.com/watch?v=G3e-cpL7ofc",
-    "type": ["course"]
+    "type": ["course"],
+    "source": "youtube.com/@SuperSimpleDev"
   },
   {
     "title": "A Nerd's Guide to Color on the Web",
@@ -607,11 +578,6 @@
   {
     "title": "Deploying CSS Logical Properties On Web Apps",
     "url": "https://www.smashingmagazine.com/2022/12/deploying-css-logical-properties-on-web-apps/",
-    "type": ["guide"]
-  },
-  {
-    "title": "Modern HTML email",
-    "url": "https://fullystacked.net/posts/modern-html-email/",
     "type": ["guide"]
   },
   {

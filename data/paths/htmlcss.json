@@ -27,41 +27,32 @@
         "https://scrimba.com/learn/cssvariables",
         "https://learn.shayhowe.com/html-css",
         "https://learn.shayhowe.com/advanced-html-css",
-        "https://scrimba.com/learn/htmlcss",
-        "https://web.dev/learn/css",
         "https://www.cronj.com/frontend-development/html.html",
-        "https://www.udemy.com/course/css-zero-to-hero",
         "https://www.khanacademy.org/computing/computer-programming/html-css",
-        "https://github.com/micromata/awesome-css-learning",
-        "https://frontendmasters.com/bootcamp",
         "http://www.flexboxdefense.com",
         "https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855",
         "https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11",
         "https://learncssgrid.com",
         "https://developer.mozilla.org/en-US/docs/Learn/HTML",
         "https://developer.mozilla.org/en-US/docs/Learn/CSS",
-        "https://www.youtube.com/playlist?list=PLgBH1CvjOA63Xvt0BaeQ7zL4KXX96Wbgp",
         "https://css-challenges.com",
         "https://www.guess-css.app",
         "https://css-speedrun.netlify.app",
-        "https://codingfantasy.com/games/flexboxadventure",
         "https://knightsoftheflexboxtable.com",
         "https://hiddedevries.nl/en/blog/2022-01-23-more-to-give-than-just-the-div-semantics-and-how-to-get-them-right",
         "https://www.learn-html.org",
         "https://web.dev/learn/html/",
-        "https://www.matuzo.at/blog/2022/100-days-of-more-or-less-modern-css/",
-        "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries/",
         "https://webdesign.tutsplus.com/courses/the-complete-guide-to-using-css-variables",
         "https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/",
         "https://stackdiary.com/css-media-queries",
         "https://www.youtube.com/watch?v=G3e-cpL7ofc",
-        "https://polypane.app/blog/the-complete-guide-to-css-media-queries"
+        "https://css-tricks.com/how-to-section-your-html"
       ]
     },
     {
       "title": "Beyond basics",
       "resources": [
-        "https://fullystacked.net/posts/modern-html-email/",
+        "https://frontendmasters.com/bootcamp",
         "https://garden.bradwoods.io/notes/css/3d",
         "https://garden.bradwoods.io/notes/css/blend-modes",
         "https://ishadeed.com/article/css-container-style-queries/",
@@ -69,16 +60,13 @@
         "https://web.dev/learn/images/",
         "https://www.matuzo.at/blog/2022/100-days-of-more-or-less-modern-css/",
         "https://www.smashingmagazine.com/2022/12/deploying-css-logical-properties-on-web-apps/",
-        "https://github.com/AllThingsSmitty/css-protips",
         "https://moderncss.dev",
         "https://egghead.io/courses/css-tips-and-tricks-930b",
-        "https://css-tricks.com/how-to-section-your-html",
         "https://rtlstyling.com",
         "https://cssanimation.rocks",
         "https://www.madebymike.com.au/writing/css-architecture-for-modern-web-applications",
         "https://web.dev/learn/forms",
         "https://www.smashingmagazine.com/2021/04/complete-guide-html-email-templates-tools",
-        "https://cloudfour.com/thinks/responsive-images-the-simple-way",
         "https://meiert.com/en/blog/optional-html",
         "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries",
         "https://www.youtube.com/watch?v=fc3IFF4B6Jw",
@@ -86,23 +74,31 @@
         "https://www.freecodecamp.org/news/web-animation-performance-fundamentals",
         "https://www.joshwcomeau.com/css/understanding-layout-algorithms",
         "https://blog.logrocket.com/complete-guide-using-css-filters-svgs",
-        "https://css-tricks.com/nerds-guide-color-web/",
+        "https://css-tricks.com/nerds-guide-color-web/"
+      ]
+    },
+    {
+      "title": "BEM",
+      "resources": [
+        "https://sparkbox.com/foundry/bem_by_example",
         "https://css-tricks.com/bem-101/"
       ]
     },
     {
       "title": "How do they do it?",
       "resources": [
+        "https://css-tip.com/",
+        "https://cloudfour.com/thinks/responsive-images-the-simple-way",
+        "https://github.com/AllThingsSmitty/css-protips",
+        "https://www.youtube.com/playlist?list=PLgBH1CvjOA63Xvt0BaeQ7zL4KXX96Wbgp",
         "https://uiverse.io/",
         "https://www.smashingmagazine.com/2023/02/build-magazine-layout-css-grid-areas/",
         "https://web.dev/patterns/layout",
         "https://csslayout.io",
-        "https://sparkbox.com/foundry/bem_by_example",
         "https://github.com/you-dont-need/You-Dont-Need-JavaScript",
         "http://html.systems",
         "https://undead.institute/60-days-of-animation",
         "https://stylestage.dev",
-        "https://animatedbackgrounds.me",
         "https://smolcss.dev",
         "https://ui-buttons.web.app",
         "https://iamkate.com/code/tree-views/"
@@ -125,10 +121,28 @@
       ]
     },
     {
+      "title": "Work smarter, not harder",
+      "resources": [
+        "https://animatedbackgrounds.me",
+        "https://responsivebreakpoints.com",
+        "https://grid.layoutit.com/",
+        "https://utopia.fyi/",
+        "https://type-scale.com/",
+        "https://mailtolink.me",
+        "https://metatags.io",
+        "https://modern-fluid-typography.vercel.app",
+        "https://cccreate.co/",
+        "https://polypane.app/css-specificity-calculator",
+        "https://bennettfeely.com/clippy",
+        "https://www.joshwcomeau.com/gradient-generator",
+        "https://cssgradient.io"
+      ]
+    },
+    {
       "title": "Great bookmarks",
       "resources": [
+        "https://github.com/micromata/awesome-css-learning",
         "https://codeguide.co/",
-        "https://css-tip.com/",
         "https://cssguidelin.es/",
         "https://flexbox.malven.co/",
         "https://grid.malven.co/",
@@ -145,19 +159,7 @@
         "https://caniuse.com",
         "https://caninclude.glitch.me",
         "https://www.caniemail.com",
-        "https://modern-fluid-typography.vercel.app",
-        "https://cssgradient.io",
-        "https://mailtolink.me",
-        "https://responsivebreakpoints.com",
-        "https://polypane.app/css-specificity-calculator",
-        "https://metatags.io",
-        "https://bennettfeely.com/clippy",
-        "https://css-tricks.com/almanac",
-        "https://www.joshwcomeau.com/gradient-generator",
-        "https://grid.layoutit.com/",
-        "https://cccreate.co/",
-        "https://utopia.fyi/",
-        "https://type-scale.com/"
+        "https://css-tricks.com/almanac"
       ]
     },
     {
