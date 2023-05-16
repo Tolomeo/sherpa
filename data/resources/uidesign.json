@@ -214,7 +214,8 @@
   {
     "title": "Stanford CS547 - Human-Computer Interaction Seminar Series",
     "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMyupDF2O00r19JsmolyXdD",
-    "type": ["guide", "collection"]
+    "type": ["guide", "collection"],
+		"source": "youtube.com/@stanfordonline"
   },
   {
     "title": "Embedded Interface Design",
