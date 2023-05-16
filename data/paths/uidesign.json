@@ -202,7 +202,18 @@
       "resources": [
         "https://randoma11y.com/",
         "https://uigoodies.com/",
-        "https://www.iconhunt.site/"
+        "https://www.iconhunt.site/",
+        "https://www.fontshare.com/",
+        "https://www.fontsquirrel.com/",
+        "https://unsplash.com/",
+        "https://www.pexels.com/",
+        "https://icons8.com",
+        "https://undraw.co/",
+        "https://type-scale.com/",
+        "https://utopia.fyi/",
+        "https://iconmonstr.com/",
+        "https://fonts.google.com/",
+        "https://undesign.learn.uno"
       ]
     },
     {
@@ -215,28 +226,17 @@
         "https://biasedbydesign.com",
         "https://www.nngroup.com",
         "https://www.smashingmagazine.com/2022/09/ux-checklists-for-interface-designers",
-        "https://undesign.learn.uno",
         "https://component.gallery",
         "https://lemon.io/127-design-websites",
         "https://open-ui.org",
         "https://fffuel.co",
-        "https://fonts.google.com/",
-        "https://www.fontshare.com/",
-        "https://www.fontsquirrel.com/",
-        "https://unsplash.com/",
-        "https://www.pexels.com/",
-        "https://icons8.com",
-        "https://undraw.co/",
-        "https://iconmonstr.com/",
-        "https://uxchecklist.github.io",
-        "https://type-scale.com/",
-        "https://utopia.fyi/"
+        "https://uxchecklist.github.io"
       ]
     },
     {
       "title": "Stay in the loop",
       "resources": [
-				"https://goodui.org/",
+        "https://goodui.org/",
         "https://maggieappleton.com/",
         "https://www.webdesignerdepot.com/",
         "https://xd.adobe.com/ideas",

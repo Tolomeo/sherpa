@@ -825,7 +825,8 @@
   {
     "title": "The UI/UX Crash Course for 2023",
     "url": "https://www.youtube.com/watch?v=QwSN4n2sjR8",
-    "type": ["course"]
+    "type": ["course"],
+    "source": "youtube.com/@DesignCourse"
   },
   {
     "title": "UX Strategy: Study Guide",
