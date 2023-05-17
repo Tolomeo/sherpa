@@ -214,7 +214,8 @@
   {
     "title": "Stanford CS547 - Human-Computer Interaction Seminar Series",
     "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMyupDF2O00r19JsmolyXdD",
-    "type": ["guide", "collection"]
+    "type": ["guide", "collection"],
+		"source": "youtube.com/@stanfordonline"
   },
   {
     "title": "Embedded Interface Design",
@@ -779,5 +780,105 @@
     "title": "Built For Mars",
     "url": "https://builtformars.com/",
     "type": ["reference"]
+  },
+
+  {
+    "title": "Visual design rules you can safely follow every time",
+    "url": "https://anthonyhobday.com/sideprojects/saferules/",
+    "type": ["guide"]
+  },
+  {
+    "title": "How Should Designers Learn To Code? Git, HTML/CSS, Engineering Principles (Part 2) — Smashing Magazine",
+    "url": "https://www.smashingmagazine.com/2020/03/designers-code-git-hmtl-css-engineering-principles/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Randoma11y",
+    "url": "https://randoma11y.com/",
+    "type": ["generator"]
+  },
+  {
+    "title": "Reading Design",
+    "url": "https://www.readingdesign.org/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Google UX Design Professional Certificate Courses",
+    "url": "https://www.youtube.com/playlist?list=PLtS8Ubq2bIlUWixdH_1Q2yzZh8QJSBVmT",
+    "type": ["course"],
+    "source": "youtube.com/@MyLesson007"
+  },
+  {
+    "title": "Accessibility for designer: where do I start?",
+    "url": "https://stephaniewalter.design/blog/accessibility-resources-tools-articles-books-for-designer/",
+    "type": ["guide"]
+  },
+  {
+    "title": "GoodUI ideas and A/B tested patterns for higher conversion rates and growth",
+    "url": "https://goodui.org/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Webdesigner Depot",
+    "url": "https://www.webdesignerdepot.com/",
+    "type": ["reference"]
+  },
+  {
+    "title": "The UI/UX Crash Course for 2023",
+    "url": "https://www.youtube.com/watch?v=QwSN4n2sjR8",
+    "type": ["course"],
+    "source": "youtube.com/@DesignCourse"
+  },
+  {
+    "title": "UX Strategy: Study Guide",
+    "url": "https://www.nngroup.com/articles/strategy-study-guide",
+    "type": ["reference"]
+  },
+  {
+    "title": "Type Design Resources",
+    "url": "https://typedesignresources.com/",
+    "type": ["reference"]
+  },
+  {
+    "title": "A Comprehensive Checklist For Running Design Workshops",
+    "url": "https://www.smashingmagazine.com/2023/03/organizing-design-workshops-checklist/",
+    "type": ["guide"]
+  },
+  {
+    "title": "UI Goodies",
+    "url": "https://uigoodies.com/",
+    "type": ["generator"]
+  },
+  {
+    "title": "Maggie Appleton",
+    "url": "https://maggieappleton.com/",
+    "type": ["reference"]
+  },
+  {
+    "title": "UX Basics: Study Guide",
+    "url": "https://www.nngroup.com/articles/ux-basics-study-guide/",
+    "type": ["reference"]
+  },
+  {
+    "title": "UI Design Tutorial For Beginners - (Full Course)",
+    "url": "https://www.youtube.com/watch?v=OSSn2xW2ANs",
+    "type": ["course"],
+    "source": "youtube.com/@MyLesson007"
+  },
+  {
+    "title": "Learn About Fonts",
+    "url": "https://www.youtube.com/playlist?list=PLgGbWId6zgaVDvP5IPMIIYeiqqHzj5quu",
+    "type": ["guide", "collection"],
+    "source": "youtube.com/@envatotuts"
+  },
+  {
+    "title": "How Should Designers Learn To Code? The Terminal And Text Editors (Part 1)",
+    "url": "https://www.smashingmagazine.com/2020/03/designers-code-terminal-text-editors-part-1/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Iconhunt",
+    "url": "https://www.iconhunt.site/",
+    "type": ["generator"]
   }
 ]

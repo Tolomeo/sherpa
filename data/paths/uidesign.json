@@ -16,6 +16,10 @@
     {
       "title": "There's more",
       "resources": [
+        "https://www.nngroup.com/articles/ux-basics-study-guide/",
+        "https://www.youtube.com/playlist?list=PLtS8Ubq2bIlUWixdH_1Q2yzZh8QJSBVmT",
+        "https://www.youtube.com/watch?v=OSSn2xW2ANs",
+        "https://www.youtube.com/watch?v=QwSN4n2sjR8",
         "https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed",
         "https://growth.design/psychology",
         "https://webdesign.tutsplus.com/series/a-beginners-guide-to-ux-design--cms-1168",
@@ -42,6 +46,7 @@
     {
       "title": "Beyond basics",
       "resources": [
+        "https://www.nngroup.com/articles/strategy-study-guide",
         "https://mahdif.com/blog/the-art-of-design-specing",
         "https://www.designbetter.co/designops-handbook",
         "https://www.designbetter.co/enterprise-design-sprints",
@@ -88,6 +93,8 @@
     {
       "title": "Typography",
       "resources": [
+        "https://www.youtube.com/playlist?list=PLgGbWId6zgaVDvP5IPMIIYeiqqHzj5quu",
+        "https://typedesignresources.com/",
         "https://typographyhandbook.com",
         "https://fonts.google.com/knowledge",
         "https://www.smashingmagazine.com/2022/10/typographic-hierarchies",
@@ -160,7 +167,9 @@
     {
       "title": "How do they do it",
       "resources": [
+        "https://www.smashingmagazine.com/2023/03/organizing-design-workshops-checklist/",
         "https://designsystemsrepo.com",
+        "https://anthonyhobday.com/sideprojects/saferules/",
         "https://nicelydone.club",
         "https://dribbble.com/",
         "https://www.calltoidea.com",
@@ -173,6 +182,8 @@
     {
       "title": "Nice to know",
       "resources": [
+        "https://www.smashingmagazine.com/2020/03/designers-code-terminal-text-editors-part-1/",
+        "https://www.smashingmagazine.com/2020/03/designers-code-git-hmtl-css-engineering-principles/",
         "https://userinyerface.com",
         "https://www.webdesignmuseum.org",
         "https://cantunsee.space",
@@ -187,34 +198,47 @@
       ]
     },
     {
-      "title": "Great bookmarks",
+      "title": "Work smarter, not harder",
       "resources": [
-        "https://developer.apple.com/design/human-interface-guidelines/guidelines/overview",
-        "https://m3.material.io",
-        "https://biasedbydesign.com",
-        "https://www.nngroup.com",
-        "https://www.smashingmagazine.com/2022/09/ux-checklists-for-interface-designers",
-        "https://undesign.learn.uno",
-        "https://component.gallery",
-        "https://lemon.io/127-design-websites",
-        "https://open-ui.org",
-        "https://fffuel.co",
-        "https://fonts.google.com/",
+        "https://randoma11y.com/",
+        "https://uigoodies.com/",
+        "https://www.iconhunt.site/",
         "https://www.fontshare.com/",
         "https://www.fontsquirrel.com/",
         "https://unsplash.com/",
         "https://www.pexels.com/",
         "https://icons8.com",
         "https://undraw.co/",
-        "https://iconmonstr.com/",
-        "https://uxchecklist.github.io",
         "https://type-scale.com/",
-        "https://utopia.fyi/"
+        "https://utopia.fyi/",
+        "https://iconmonstr.com/",
+        "https://fonts.google.com/",
+        "https://undesign.learn.uno"
+      ]
+    },
+    {
+      "title": "Great bookmarks",
+      "resources": [
+        "https://www.readingdesign.org/",
+        "https://stephaniewalter.design/blog/accessibility-resources-tools-articles-books-for-designer/",
+        "https://developer.apple.com/design/human-interface-guidelines/guidelines/overview",
+        "https://m3.material.io",
+        "https://biasedbydesign.com",
+        "https://www.nngroup.com",
+        "https://www.smashingmagazine.com/2022/09/ux-checklists-for-interface-designers",
+        "https://component.gallery",
+        "https://lemon.io/127-design-websites",
+        "https://open-ui.org",
+        "https://fffuel.co",
+        "https://uxchecklist.github.io"
       ]
     },
     {
       "title": "Stay in the loop",
       "resources": [
+        "https://goodui.org/",
+        "https://maggieappleton.com/",
+        "https://www.webdesignerdepot.com/",
         "https://xd.adobe.com/ideas",
         "https://design.google",
         "https://www.smashingmagazine.com",
