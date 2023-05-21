@@ -15,6 +15,10 @@
     {
       "title": "There's more",
       "resources": [
+        "https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html",
+        "https://blog.pope.tech/2023/03/01/a-beginners-guide-to-manual-accessibility-testing/",
+        "https://stephaniewalter.design/blog/accessibility-resources-tools-articles-books-for-designer/",
+        "https://www.w3.org/WAI/fundamentals/",
         "https://www.udacity.com/course/web-accessibility--ud891",
         "https://www.accessguide.io",
         "https://webaim.org/articles",
@@ -39,6 +43,8 @@
     {
       "title": "Beyond basics",
       "resources": [
+        "https://adrianroselli.com/2023/01/comparing-manual-and-free-automated-wcag-reviews.html",
+        "https://www.digitala11y.com/connecting-dots-of-an-accessibility-audit/",
         "https://alistapart.com/article/semantics-to-screen-readers",
         "https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing",
         "https://www.smashingmagazine.com/2020/08/accessibility-chrome-devtools",
@@ -55,8 +61,18 @@
       ]
     },
     {
+      "title": "Testing",
+      "resources": [
+        "https://blog.pope.tech/2023/03/01/a-beginners-guide-to-manual-accessibility-testing/",
+        "https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/"
+      ]
+    },
+    {
       "title": "How do they do it?",
       "resources": [
+        "https://css-tricks.com/making-calendars-with-accessibility-and-internationalization-in-mind/",
+        "https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/",
+        "https://stackdiary.com/web-accessibility/",
         "https://www.sarasoueidan.com/blog/testing-environment-setup/",
         "https://inclusive-components.design"
       ]
@@ -75,12 +91,24 @@
         "https://a11ymyths.com",
         "https://dequeuniversity.com/resources/disability-statistics",
         "https://www.tooltester.com/en/blog/accessible-websites",
-        "https://www.w3.org/WAI/curricula/"
+        "https://www.w3.org/WAI/curricula/",
+        "https://www.smashingmagazine.com/2023/02/keys-accessibility-mindset/",
+        "https://hidde.blog/ideal-a11y-guidance/"
+      ]
+    },
+    {
+      "title": "Work smarter, not harder",
+      "resources": [
+        "https://www.accessibilitychecker.org/",
+        "https://randoma11y.com/"
       ]
     },
     {
       "title": "Great bookmarks",
       "resources": [
+        "https://act-rules.github.io/pages/about",
+        "https://www.w3.org/WAI/ARIA/apg/",
+        "https://www.smashingmagazine.com/2023/04/accessible-tap-target-sizes-rage-taps-clicks/",
         "https://www.w3.org/WAI/ER/tools",
         "https://russmaxdesign.github.io/accessible-forms",
         "https://www.w3.org/WAI/ARIA/apg",
@@ -111,7 +139,8 @@
         "https://www.sarasoueidan.com/blog",
         "https://www.w3.org/WAI",
         "https://www.craigabbott.co.uk/blog",
-        "https://www.digitala11y.com"
+        "https://www.digitala11y.com",
+        "https://www.webaxe.org/"
       ]
     }
   ]

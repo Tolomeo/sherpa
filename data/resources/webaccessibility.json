@@ -388,5 +388,85 @@
     "title": "Curricula on Web Accessibility: A Framework to Build Your Own Courses",
     "url": "https://www.w3.org/WAI/curricula/",
     "type": ["reference"]
+  },
+  {
+    "title": "A Guide To Accessible Form Validation",
+    "url": "https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Understanding WCAG 2.0",
+    "url": "https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "Comparing Manual and Free Automated WCAG Reviews",
+    "url": "https://adrianroselli.com/2023/01/comparing-manual-and-free-automated-wcag-reviews.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "Web Accessibility: A Reference to Creating Inclusive Websites",
+    "url": "https://stackdiary.com/web-accessibility/",
+    "type": ["guide"]
+  },
+  {
+    "title": "My ideal accessible components resource is holistic, well tested and easy to use",
+    "url": "https://hidde.blog/ideal-a11y-guidance/",
+    "type": ["opinion"]
+  },
+  {
+    "title": "Accessibility Checker",
+    "url": "https://www.accessibilitychecker.org/",
+    "type": ["generator"]
+  },
+  {
+    "title": "Accessible Target Sizes Cheatsheet",
+    "url": "https://www.smashingmagazine.com/2023/04/accessible-tap-target-sizes-rage-taps-clicks/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Web Axe",
+    "url": "https://www.webaxe.org/",
+    "type": ["reference"]
+  },
+  {
+    "title": "A beginner’s guide to manual accessibility testing",
+    "url": "https://blog.pope.tech/2023/03/01/a-beginners-guide-to-manual-accessibility-testing/",
+    "type": ["guide"]
+  },
+  {
+    "title": "A Definitive Guide On How To Do An Accessibility Audit",
+    "url": "https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Keys To An Accessibility Mindset",
+    "url": "https://www.smashingmagazine.com/2023/02/keys-accessibility-mindset/",
+    "type": ["guide"]
+  },
+  {
+    "title": "ACT-Rules Community",
+    "url": "https://act-rules.github.io/pages/about",
+    "type": ["reference"]
+  },
+  {
+    "title": "Integrating Accessibility into the Design and Development Process: A Shift Left Approach",
+    "url": "https://www.digitala11y.com/connecting-dots-of-an-accessibility-audit/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Making Calendars With Accessibility and Internationalization in Mind",
+    "url": "https://css-tricks.com/making-calendars-with-accessibility-and-internationalization-in-mind/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "ARIA Authoring Practices Guide",
+    "url": "https://www.w3.org/WAI/ARIA/apg/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Accessibility Fundamentals",
+    "url": "https://www.w3.org/WAI/fundamentals/",
+    "type": ["course"]
   }
 ]
