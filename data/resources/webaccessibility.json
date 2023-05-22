@@ -56,7 +56,7 @@
     "type": ["guide", "collection"]
   },
   {
-    "title": "web.dev",
+    "title": "Accessible to all",
     "url": "https://web.dev/accessible",
     "type": ["guide", "collection"]
   },
@@ -207,29 +207,14 @@
     "type": ["reference", "collection"]
   },
   {
-    "title": "ARIA Authoring Practices Guide",
-    "url": "https://www.w3.org/WAI/ARIA/apg",
-    "type": ["reference"]
-  },
-  {
     "title": "Checklist - The A11Y Project",
     "url": "https://www.a11yproject.com/checklist",
     "type": ["reference", "collection"]
   },
   {
-    "title": "Accessibility Audits",
-    "url": "https://developer.chrome.com/docs/lighthouse/accessibility",
-    "type": ["guide", "collection"]
-  },
-  {
     "title": "WhoCanUse",
     "url": "https://whocanuse.com",
     "type": ["generator", "reference"]
-  },
-  {
-    "title": "Accessibility tools for designers and developers",
-    "url": "https://uxdesign.cc/accessibility-tools-for-designers-and-developers-ea400a415c0a",
-    "type": ["reference", "collection"]
   },
   {
     "title": "accessibility-guide",
@@ -262,13 +247,7 @@
     "type": ["guide", "reference"]
   },
   {
-    "title": "Collection: Web accessibility",
-    "url": "https://github.com/collections/web-accessibility",
-    "type": ["reference", "collection"],
-    "source": "github.com/collections"
-  },
-  {
-    "title": "Blog | hidde.blog",
+    "title": "hidde.blog",
     "url": "https://hiddedevries.nl/en/blog",
     "type": ["reference"]
   },
@@ -278,12 +257,7 @@
     "type": ["reference"]
   },
   {
-    "title": "Adrián Bolonio",
-    "url": "https://www.adrianbolonio.com/en/blog",
-    "type": ["reference"]
-  },
-  {
-    "title": "Posts — Adrian Roselli",
+    "title": "Adrian Roselli",
     "url": "https://adrianroselli.com/posts",
     "type": ["reference"]
   },
@@ -305,11 +279,6 @@
   {
     "title": "The WebAIM Million",
     "url": "https://webaim.org/projects/million",
-    "type": ["reference"]
-  },
-  {
-    "title": "Blog - craigabbott.co.uk",
-    "url": "https://www.craigabbott.co.uk/blog",
     "type": ["reference"]
   },
   {
@@ -468,5 +437,15 @@
     "title": "Accessibility Fundamentals",
     "url": "https://www.w3.org/WAI/fundamentals/",
     "type": ["course"]
+  },
+  {
+    "title": "Making microservices accessible",
+    "url": "https://www.craigabbott.co.uk/blog/making-microservices-accessible/",
+    "type": ["guide"]
+  },
+  {
+    "title": "The Contrast Triangle",
+    "url": "https://contrast-triangle.com/",
+    "type": ["generator"]
   }
 ]
