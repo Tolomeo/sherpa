@@ -15,9 +15,11 @@
     {
       "title": "There's more",
       "resources": [
+        "https://thejsway.net/",
         "https://www.udemy.com/course/javascript-essentials",
         "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript",
         "https://github.com/getify/You-Dont-Know-JS",
+        "https://eqeq.js.org/",
         "https://github.com/lydiahallie/javascript-questions",
         "https://www.learn-js.org",
         "https://github.com/micromata/awesome-javascript-learning",
@@ -47,6 +49,10 @@
     {
       "title": "Beyond basics",
       "resources": [
+        "https://www.coursera.org/learn/javascript-security-refreshers",
+        "https://github.com/sohamkamani/javascript-design-patterns-for-humans",
+        "https://www.youtube.com/watch?v=KKM_4-uQpow",
+        "https://www.youtube.com/watch?v=U34l-Xz5ynU",
         "https://github.com/ryanmcdermott/clean-code-javascript",
         "https://github.com/getify/Functional-Light-JS",
         "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
@@ -82,6 +88,7 @@
       ],
       "extra": [
         "https://www.youtube.com/watch?v=r9HdJ8P6GQI",
+        "https://www.javascripttutorials.net/write-tests-that-dont-suck-test-driven-development-in-javascript/",
         "https://github.com/sapegin/jest-cheat-sheet",
         "https://testautomationu.applitools.com/jest-testing-tutorial",
         "https://flaviocopes.com/jest",
@@ -95,6 +102,8 @@
     {
       "title": "How do they do it?",
       "resources": [
+        "https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore",
+        "https://www.bbss.dev/posts/eventloop/",
         "https://github.com/gothinkster/web-components-realworld-example-app",
         "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX",
         "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
@@ -107,6 +116,7 @@
     {
       "title": "Nice to know",
       "resources": [
+        "https://www.youtube.com/watch?v=tbqVqP5ilzQ",
         "https://github.com/denysdovhan/wtfjs",
         "https://christianheilmann.com/2021/11/01/developer-tools-secrets-that-shouldnt-be-secrets/",
         "https://js13kgames.com",
@@ -122,8 +132,17 @@
       ]
     },
     {
+      "title": "Work smarter, not harder",
+      "resources": [
+        "https://vanillalist.top/",
+        "https://make-bookmarklets.com/"
+      ]
+    },
+    {
       "title": "Great bookmarks",
       "resources": [
+				"https://openjsf.org/",
+				"https://developer.mozilla.org/",
         "https://codepo8.github.io/dearconsole/",
         "https://unjs.io/",
         "https://www.30secondsofcode.org/js/p/1",

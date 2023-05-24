@@ -583,5 +583,77 @@
     "url": "https://www.youtube.com/playlist?list=PLto9KpJAqHMRMl4DHajWvIi0gGnwIKMX5",
     "type": ["course", "guide", "collection"],
     "source": "youtube.com/@replit"
+  },
+  {
+    "title": "OpenJS Foundation",
+    "url": "https://openjsf.org/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Code an Animated Physics Game",
+    "url": "https://www.youtube.com/watch?v=U34l-Xz5ynU",
+    "type": ["course"],
+		"source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Vanilla List",
+    "url": "https://vanillalist.top/",
+    "type": ["collection", "generator"]
+  },
+  {
+    "title": "sohamkamani/javascript-design-patterns-for-humans",
+    "url": "https://github.com/sohamkamani/javascript-design-patterns-for-humans",
+    "type": ["reference"]
+  },
+  {
+    "title": "A Deep Dive Into the Node js Event Loop",
+    "url": "https://www.youtube.com/watch?v=KKM_4-uQpow",
+    "type": ["guide"]
+  },
+  {
+    "title": "The JavaScript Way",
+    "url": "https://thejsway.net/",
+    "type": ["book"]
+  },
+  {
+    "title": "Practical Guide To Not Blocking The Event Loop",
+    "url": "https://www.bbss.dev/posts/eventloop/",
+    "type": ["guide"]
+  },
+  {
+    "title": "JavaScript Interview Prep: Functions, Closures, Currying",
+    "url": "https://www.youtube.com/watch?v=tbqVqP5ilzQ",
+    "type": ["guide"],
+		"source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Make Bookmarklets",
+    "url": "https://make-bookmarklets.com/",
+    "type": ["generator"]
+  },
+  {
+    "title": "JavaScript Equality Table Game",
+    "url": "https://eqeq.js.org/",
+    "type": ["exercise"]
+  },
+  {
+    "title": "MDN Web Docs",
+    "url": "https://developer.mozilla.org/",
+    "type": ["reference"]
+  },
+  {
+    "title": "JavaScript Security Refreshers",
+    "url": "https://www.coursera.org/learn/javascript-security-refreshers",
+    "type": ["course"]
+  },
+  {
+    "title": "Tests That Don’t Suck: Test Driven Development in JavaScript",
+    "url": "https://www.javascripttutorials.net/write-tests-that-dont-suck-test-driven-development-in-javascript/",
+    "type": ["guide"]
+  },
+  {
+    "title": "you-dont-need/You-Dont-Need-Lodash-Underscore",
+    "url": "https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore",
+    "type": ["example", "collection"]
   }
 ]
