@@ -16,11 +16,6 @@
     "type": ["exercise", "tutorial", "collection"]
   },
   {
-    "title": "Learning JavaScript Design Patterns",
-    "url": "https://addyosmani.com/resources/essentialjsdesignpatterns/book",
-    "type": ["book"]
-  },
-  {
     "title": "JavaScript Algorithms and Data Structures",
     "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures",
     "type": ["course", "collection"]
@@ -54,11 +49,6 @@
     "title": "Functional-Light-JS",
     "url": "https://github.com/getify/Functional-Light-JS",
     "type": ["book"]
-  },
-  {
-    "title": "web-components-realworld-example-app",
-    "url": "https://github.com/gothinkster/web-components-realworld-example-app",
-    "type": ["example"]
   },
   {
     "title": "event-driven-web-components-realworld-example-app",
@@ -147,11 +137,6 @@
     "title": "Exploring ES2016 and ES2017",
     "url": "https://exploringjs.com/es2016-es2017/index.html",
     "type": ["book"]
-  },
-  {
-    "title": "grapesjs",
-    "url": "https://github.com/artf/grapesjs",
-    "type": ["example"]
   },
   {
     "title": "JavaScript Testing",
@@ -254,11 +239,6 @@
     "url": "https://www.youtube.com/playlist?list=PLKoqnv2vTMUPOalM1zuWDP9OQl851WMM9",
     "type": ["tutorial", "collection"],
     "source": "youtube.com/c/GoogleSearchCentral"
-  },
-  {
-    "title": "An Introduction to Web Components",
-    "url": "https://css-tricks.com/an-introduction-to-web-components",
-    "type": ["guide"]
   },
   {
     "title": "Deep JavaScript: Theory and techniques",
@@ -596,11 +576,6 @@
 		"source": "youtube.com/@freecodecamp"
   },
   {
-    "title": "Vanilla List",
-    "url": "https://vanillalist.top/",
-    "type": ["collection", "generator"]
-  },
-  {
     "title": "sohamkamani/javascript-design-patterns-for-humans",
     "url": "https://github.com/sohamkamani/javascript-design-patterns-for-humans",
     "type": ["reference"]
@@ -608,7 +583,8 @@
   {
     "title": "A Deep Dive Into the Node js Event Loop",
     "url": "https://www.youtube.com/watch?v=KKM_4-uQpow",
-    "type": ["guide"]
+    "type": ["guide"],
+		"source": "youtube.com/@UtahJS"
   },
   {
     "title": "The JavaScript Way",
@@ -640,11 +616,6 @@
     "title": "MDN Web Docs",
     "url": "https://developer.mozilla.org/",
     "type": ["reference"]
-  },
-  {
-    "title": "JavaScript Security Refreshers",
-    "url": "https://www.coursera.org/learn/javascript-security-refreshers",
-    "type": ["course"]
   },
   {
     "title": "Tests That Don’t Suck: Test Driven Development in JavaScript",
