@@ -6,20 +6,18 @@
     "https://www.youtube.com/watch?v=BwuLxPH8IDs",
     "https://mariusschulz.com/blog/series/typescript-evolution",
     "https://github.com/type-challenges/type-challenges",
-    "https://youtu.be/eJ6R1knfsoc",
+    "https://www.youtube.com/watch?v=eJ6R1knfsoc",
     "https://github.com/dzharii/awesome-typescript"
   ],
   "extra": [
     {
       "title": "There's more",
       "resources": [
-        "https://rmolinamir.github.io/typescript-cheatsheet",
         "https://learntypescript.dev",
         "https://basarat.gitbook.io/typescript",
         "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-typescript",
         "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI",
         "https://scrimba.com/learn/intrototypescript",
-        "https://www.youtube.com/playlist?list=PLqq-6Pq4lTTanfgsbnFzfWUhhAz3tIezU",
         "https://www.typescripttutorial.net",
         "https://ts.chibicode.com/todo",
         "https://ts.chibicode.com/generics",
@@ -30,7 +28,6 @@
         "https://www.youtube.com/watch?v=u3L_82m5X-M",
         "https://blog.scottnonnenberg.com/a-typescript-onramp",
         "https://www.youtube.com/playlist?list=PLNqp92_EXZBJYFrpEzdO2EapvU0GOJ09n",
-        "https://fjolt.com/category/typescript",
         "https://www.totaltypescript.com/tutorials/beginners-typescript",
         "https://github.com/adamshaylor/cooking-with-typescript",
         "https://www.youtube.com/watch?v=30LWjhZzg50"
@@ -39,11 +36,9 @@
     {
       "title": "Beyond basics",
       "resources": [
-				"https://www.youtube.com/watch?v=MEl2R7mEAP8",
-				"https://www.youtube.com/playlist?list=PLIvujZeVDLMx040-j1W4WFs1BxuTGdI_b",
-        "https://labs42io.github.io/clean-code-typescript",
+        "https://www.youtube.com/watch?v=MEl2R7mEAP8",
+        "https://www.youtube.com/playlist?list=PLIvujZeVDLMx040-j1W4WFs1BxuTGdI_b",
         "https://www.learningtypescript.com/articles/extreme-explorations-of-typescripts-type-system",
-        "http://torokmark.github.io/design_patterns_in_typescript",
         "https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab",
         "https://www.javascripttutorials.net/four-steps-to-move-from-javascript-to-typescript/",
         "https://www.youtube.com/watch?v=hBk4nV7q6-w",
@@ -54,14 +49,12 @@
     {
       "title": "How do they do it?",
       "resources": [
-        "https://github.com/itsMapleLeaf/super-mario-typescript",
+        "https://labs42io.github.io/clean-code-typescript",
+        "http://torokmark.github.io/design_patterns_in_typescript",
         "https://lhartikk.github.io",
         "https://www.davrous.com/2013/06/13/tutorial-series-learning-how-to-write-a-3d-soft-engine-from-scratch-in-c-typescript-or-javascript",
         "https://naivecoinstake.learn.uno",
-        "https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html",
-        "https://github.com/shanoysinc/Tetris",
-        "https://github.com/laurent22/joplin",
-        "https://github.com/zws-im/zws"
+        "https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html"
       ]
     },
     {
@@ -73,24 +66,23 @@
       ]
     },
     {
+      "title": "Work smarter, not harder",
+      "resources": [
+        "https://quicktype.io",
+        "https://transform.tools/",
+        "https://ts-error-translator.vercel.app"
+      ]
+    },
+    {
       "title": "Great bookmarks",
       "resources": [
-				"https://decipher.dev/30-seconds-of-typescript",
-        "https://www.sitepen.com/blog/typescript-cheat-sheet",
+        "https://decipher.dev/30-seconds-of-typescript",
+        "https://fjolt.com/category/typescript",
         "https://github.com/typescript-cheatsheets",
-        "https://www.saltycrane.com/cheat-sheets/typescript/latest/",
-        "https://www.typescriptlang.org/docs",
-        "https://www.typescriptlang.org/play/",
-        "https://www.typescriptlang.org/community",
-        "https://www.typescriptlang.org/tools",
-        "https://quicktype.io",
-        "https://github.com/TypeStrong",
         "https://github.com/tsconfig/bases",
-        "https://ts-error-translator.vercel.app",
+        "https://rmolinamir.github.io/typescript-cheatsheet",
         "https://www.freecodecamp.org/news/advanced-typescript-types-cheat-sheet-with-examples/",
-        "https://www.learningtypescript.com",
-        "https://transform.tools/",
-        "https://ts-error-translator.vercel.app/"
+        "https://www.typescriptlang.org/"
       ]
     },
     {
@@ -98,8 +90,7 @@
       "resources": [
         "https://devblogs.microsoft.com/typescript",
         "https://mariusschulz.com",
-        "https://www.typescript-weekly.com",
-        "https://www.carlrippon.com"
+        "https://www.typescript-weekly.com"
       ]
     }
   ],
