@@ -269,7 +269,8 @@
   {
     "title": "I wrote a GameBoy game in TypeScript (And it runs on real hardware!)",
     "url": "https://www.youtube.com/watch?v=TIlx5nBnx-o",
-    "type": ["guide"]
+    "type": ["guide"],
+		"source": "youtube.com/@LowByteProductions"
   },
   {
     "title": "Transform",
