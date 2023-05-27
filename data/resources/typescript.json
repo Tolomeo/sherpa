@@ -16,11 +16,6 @@
     "type": ["guide", "reference"]
   },
   {
-    "title": "TypeScript: The starting point for learning TypeScript",
-    "url": "https://www.typescriptlang.org/docs",
-    "type": ["reference"]
-  },
-  {
     "title": "type-challenges",
     "url": "https://github.com/type-challenges/type-challenges",
     "type": ["exercise", "collection"]
@@ -45,11 +40,6 @@
     "title": "TypeScript course for JavaScript developers",
     "url": "https://learntypescript.dev",
     "type": ["course"]
-  },
-  {
-    "title": "zws",
-    "url": "https://github.com/zws-im/zws",
-    "type": ["example"]
   },
   {
     "title": "TypeScript Evolution",
@@ -79,12 +69,6 @@
     "type": ["course"]
   },
   {
-    "title": "TypeScript Basics",
-    "url": "https://www.youtube.com/playlist?list=PLqq-6Pq4lTTanfgsbnFzfWUhhAz3tIezU",
-    "type": ["course"],
-    "source": "youtube.com/c/JavaBrainsChannel"
-  },
-  {
     "title": "TypeScript Design Patterns",
     "url": "https://www.udemy.com/course/typescript-design-patterns",
     "type": ["course"]
@@ -103,16 +87,6 @@
     "title": "TypeScript Generics for People Who Gave Up on Understanding Generics",
     "url": "https://ts.chibicode.com/generics",
     "type": ["guide"]
-  },
-  {
-    "title": "Tetris",
-    "url": "https://github.com/shanoysinc/Tetris",
-    "type": ["example"]
-  },
-  {
-    "title": "super-mario-typescript",
-    "url": "https://github.com/itsMapleLeaf/super-mario-typescript",
-    "type": ["example"]
   },
   {
     "title": "type | treat 2021",
@@ -134,11 +108,6 @@
     "title": "Maintainable CSS using TypeStyle",
     "url": "https://egghead.io/courses/maintainable-css-using-typestyle",
     "type": ["course"]
-  },
-  {
-    "title": "joplin",
-    "url": "https://github.com/laurent22/joplin",
-    "type": ["example"]
   },
   {
     "title": "TypeScript Cheatsheet, Common Errors, and More",
@@ -182,46 +151,15 @@
     "source": "medium.com/javascript-scene"
   },
   {
-    "title": "TypeScript 4.8 Cheat Sheet",
-    "url": "https://www.sitepen.com/blog/typescript-cheat-sheet",
-    "type": ["reference"]
-  },
-  {
     "title": "TypeScript Cheatsheets",
     "url": "https://github.com/typescript-cheatsheets",
     "type": ["reference", "collection"],
     "source": "github.com/typescript-cheatsheets"
   },
   {
-    "title": "TypeScript Cheat Sheet",
-    "url": "https://www.saltycrane.com/cheat-sheets/typescript/latest/",
-    "type": ["reference"]
-  },
-  {
-    "title": "TypeScript: TS Playground - An online editor for exploring TypeScript and JavaScript",
-    "url": "https://www.typescriptlang.org/play/",
-    "type": ["generator"]
-  },
-  {
-    "title": "TypeScript Community Resources",
-    "url": "https://www.typescriptlang.org/community",
-    "type": ["community"]
-  },
-  {
-    "title": "TypeScript: Reference Tools",
-    "url": "https://www.typescriptlang.org/tools",
-    "type": ["reference", "collection"]
-  },
-  {
     "title": "quicktype",
     "url": "https://quicktype.io",
     "type": ["generator"]
-  },
-  {
-    "title": "TypeStrong",
-    "url": "https://github.com/TypeStrong",
-    "type": ["reference", "collection"],
-    "source": "github.com/TypeStrong"
   },
   {
     "title": "TypeScript",
@@ -239,18 +177,13 @@
     "type": ["community"]
   },
   {
-    "title": "All posts",
-    "url": "https://www.carlrippon.com",
-    "type": ["reference"]
-  },
-  {
     "title": "TypeScript vs. JavaScript: Your Go-to Guide",
     "url": "https://www.toptal.com/typescript/typescript-vs-javascript-guide",
     "type": ["guide"]
   },
   {
-    "title": "Exploring Advanced TypeScript Concepts - Guards, Utility Functions, and More",
-    "url": "https://youtu.be/eJ6R1knfsoc",
+    "title": "Exploring Advanced TypeScript Concepts",
+    "url": "https://www.youtube.com/watch?v=eJ6R1knfsoc",
     "type": ["guide"],
     "source": "youtube.com/c/Headwayio"
   },
@@ -287,7 +220,7 @@
     "type": ["generator", "reference"]
   },
   {
-    "title": "Advanced TypeScript Types Cheat Sheet (with Examples)",
+    "title": "Advanced TypeScript Types Cheat Sheet",
     "url": "https://www.freecodecamp.org/news/advanced-typescript-types-cheat-sheet-with-examples/",
     "type": ["reference"]
   },
@@ -301,11 +234,6 @@
     "url": "https://www.youtube.com/playlist?list=PLNqp92_EXZBJYFrpEzdO2EapvU0GOJ09n",
     "type": ["course"],
     "source": "youtube.com/c/JackHerrington"
-  },
-  {
-    "title": "Learning TypeScript",
-    "url": "https://www.learningtypescript.com",
-    "type": ["reference"]
   },
   {
     "title": "Typescript",
@@ -341,7 +269,8 @@
   {
     "title": "I wrote a GameBoy game in TypeScript (And it runs on real hardware!)",
     "url": "https://www.youtube.com/watch?v=TIlx5nBnx-o",
-    "type": ["guide"]
+    "type": ["guide"],
+		"source": "youtube.com/@LowByteProductions"
   },
   {
     "title": "Transform",
@@ -352,5 +281,27 @@
     "title": "TypeScript Error Translator",
     "url": "https://ts-error-translator.vercel.app/",
     "type": ["generator"]
+  },
+  {
+    "title": "30-seconds-of-typescript",
+    "url": "https://decipher.dev/30-seconds-of-typescript",
+    "type": ["example", "collection"]
+  },
+  {
+    "title": "A horrifically deep dive into TypeScript module resolution",
+    "url": "https://www.youtube.com/watch?v=MEl2R7mEAP8",
+    "type": ["guide"],
+    "source": "youtube.com/@MichiganTypeScript"
+  },
+  {
+    "title": "Advanced TypeScript",
+    "url": "https://www.youtube.com/playlist?list=PLIvujZeVDLMx040-j1W4WFs1BxuTGdI_b",
+    "type": ["course"],
+    "source": "youtube.com/@mattpocockuk"
+  },
+  {
+    "title": "TypeScript",
+    "url": "https://www.typescriptlang.org/",
+    "type": ["reference"]
   }
 ]
