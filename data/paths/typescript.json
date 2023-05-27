@@ -39,6 +39,8 @@
     {
       "title": "Beyond basics",
       "resources": [
+				"https://www.youtube.com/watch?v=MEl2R7mEAP8",
+				"https://www.youtube.com/playlist?list=PLIvujZeVDLMx040-j1W4WFs1BxuTGdI_b",
         "https://labs42io.github.io/clean-code-typescript",
         "https://www.learningtypescript.com/articles/extreme-explorations-of-typescripts-type-system",
         "http://torokmark.github.io/design_patterns_in_typescript",
@@ -73,6 +75,7 @@
     {
       "title": "Great bookmarks",
       "resources": [
+				"https://decipher.dev/30-seconds-of-typescript",
         "https://www.sitepen.com/blog/typescript-cheat-sheet",
         "https://github.com/typescript-cheatsheets",
         "https://www.saltycrane.com/cheat-sheets/typescript/latest/",

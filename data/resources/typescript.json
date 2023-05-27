@@ -352,5 +352,22 @@
     "title": "TypeScript Error Translator",
     "url": "https://ts-error-translator.vercel.app/",
     "type": ["generator"]
+  },
+  {
+    "title": "30-seconds-of-typescript",
+    "url": "https://decipher.dev/30-seconds-of-typescript",
+    "type": ["example", "collection"]
+  },
+  {
+    "title": "A horrifically deep dive into TypeScript module resolution",
+    "url": "https://www.youtube.com/watch?v=MEl2R7mEAP8",
+    "type": ["guide"],
+    "source": "youtube.com/@MichiganTypeScript"
+  },
+  {
+    "title": "Advanced TypeScript",
+    "url": "https://www.youtube.com/playlist?list=PLIvujZeVDLMx040-j1W4WFs1BxuTGdI_b",
+    "type": ["course"],
+    "source": "youtube.com/@mattpocockuk"
   }
 ]
