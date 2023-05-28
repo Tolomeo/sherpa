@@ -11,12 +11,6 @@
     "source": "digitalocean.com/community"
   },
   {
-    "title": "React Patterns",
-    "url": "https://reactpatterns.com",
-    "type": ["guide", "reference", "collection"],
-    "source": "reactpatterns.com"
-  },
-  {
     "title": "Fundamentals of Redux Course from Dan Abramov",
     "url": "https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867",
     "type": ["course"]
@@ -40,11 +34,6 @@
     "title": "Build Advanced Components with React Hooks",
     "url": "https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc",
     "type": ["course"]
-  },
-  {
-    "title": "project-manager",
-    "url": "https://github.com/arturmolenda/project-manager",
-    "type": ["example"]
   },
   {
     "title": "Learn TDD in React",
@@ -73,11 +62,6 @@
     "type": ["collection"]
   },
   {
-    "title": "react-redux-realworld-example-app",
-    "url": "https://github.com/khaledosman/react-redux-realworld-example-app",
-    "type": ["example"]
-  },
-  {
     "title": "6 Fun React Project Ideas",
     "url": "https://daveceddia.com/react-practice-projects",
     "type": ["guide"]
@@ -103,11 +87,6 @@
     "type": ["course"]
   },
   {
-    "title": "React Hooks and Context (with React-Redux migration guide)",
-    "url": "https://www.udemy.com/course/react-hooks-with-react-redux-migration",
-    "type": ["course"]
-  },
-  {
     "title": "Build Advanced Components with React Hooks",
     "url": "https://egghead.io/courses/build-advanced-component-with-react-hooks-cd6a",
     "type": ["course"]
@@ -116,16 +95,6 @@
     "title": "Design Systems with React and Typescript in Storybook",
     "url": "https://egghead.io/courses/design-systems-with-react-and-typescript-in-storybook",
     "type": ["course"]
-  },
-  {
-    "title": "imdb-replica-react",
-    "url": "https://github.com/djohal/imdb-replica-react",
-    "type": ["example"]
-  },
-  {
-    "title": "spotify-web-player",
-    "url": "https://github.com/oguz3/spotify-web-player",
-    "type": ["example"]
   },
   {
     "title": "JavaScript testing tutorial Archives",
@@ -171,11 +140,6 @@
     "title": "A Complete Guide to React Router: Everything You Need to Know",
     "url": "https://ui.dev/react-router-tutorial",
     "type": ["guide"]
-  },
-  {
-    "title": "Hacking with React ",
-    "url": "http://www.hackingwithreact.com",
-    "type": ["book"]
   },
   {
     "title": "A visual guide to React Mental models",
@@ -285,11 +249,6 @@
     "type": ["generator"]
   },
   {
-    "title": "Getting Started – React",
-    "url": "https://reactjs.org/docs/getting-started.html",
-    "type": ["reference"]
-  },
-  {
     "title": "Collection of React Hooks",
     "url": "https://nikgraf.github.io/react-hooks",
     "type": ["reference"]
@@ -305,34 +264,8 @@
     "type": ["reference"]
   },
   {
-    "title": "A Visual Guide to React Rendering - Cheat Sheet",
-    "url": "https://alexsidorenko.com/blog/react-render-cheat-sheet",
-    "type": ["reference", "guide"]
-  },
-  {
-    "title": "React Community",
-    "url": "https://reactjs.org/community/support.html",
-    "type": ["community"]
-  },
-  {
-    "title": "React - All Posts",
-    "url": "https://reactjs.org/blog/all.html",
-    "type": ["reference"]
-  },
-  {
     "title": "JavaScript, React, TypeScript, and other Web Tech Articles and Tutorials - ui.dev",
     "url": "https://ui.dev/blog/",
-    "type": ["reference"]
-  },
-  {
-    "title": "Overreacted — A blog by Dan Abramov",
-    "url": "https://overreacted.io",
-    "type": ["reference"]
-  },
-
-  {
-    "title": "The Kent C. Dodds Blog",
-    "url": "https://kentcdodds.com/blog",
     "type": ["reference"]
   },
   {
@@ -354,11 +287,6 @@
     "title": "50 Projects for React & the Static Web",
     "url": "https://50reactprojects.com",
     "type": ["exercise", "book"]
-  },
-  {
-    "title": "WTF is JSX",
-    "url": "https://jasonformat.com/wtf-is-jsx/",
-    "type": ["guide"]
   },
   {
     "title": "Practical React Query",
@@ -403,16 +331,6 @@
     "type": ["example", "collection", "reference"]
   },
   {
-    "title": "React Resources",
-    "url": "https://reactresources.com",
-    "type": ["reference"]
-  },
-  {
-    "title": "React Working Group",
-    "url": "https://github.com/reactwg",
-    "type": ["reference", "community"]
-  },
-  {
     "title": "Examples of large production-grade, open-source React apps",
     "url": "https://maxrozen.com/examples-of-large-production-grade-open-source-react-apps",
     "type": ["example", "collection"]
@@ -450,12 +368,7 @@
     "source": "youtube.com/@laithacademy"
   },
   {
-    "title": "ts-redux-react-realworld-example-app",
-    "url": "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app",
-    "type": ["example"]
-  },
-  {
-    "title": "React Redux with TypeScript Crash Course - 2021",
+    "title": "React Redux with TypeScript Crash Course",
     "url": "https://www.youtube.com/watch?v=udr2rx_B99w",
     "type": ["guide"],
     "source": "youtube.com/@laithacademy"
@@ -469,7 +382,8 @@
   {
     "title": "React State Management",
     "url": "https://www.youtube.com/watch?v=-bEzt5ISACA",
-    "type": ["course"]
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Improving React Interaction Times by 4x",
@@ -532,5 +446,177 @@
     "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3",
     "type": ["course"],
     "source": "youtube.com/@Codevolution"
+  },
+
+  {
+    "title": "ChatGPT Clone – OpenAI API and React Tutorial",
+    "url": "https://www.youtube.com/watch?v=98bGwOYoEGg",
+    "type": ["tutorial"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "A Historical Reference of React Criticism",
+    "url": "https://www.zachleat.com/web/react-criticism/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Awesome Web Based React",
+    "url": "https://awesome-web-react.js.org/",
+    "type": ["collection", "reference"]
+  },
+  {
+    "title": "React Query Tutorial for Beginners",
+    "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwjTELCrPrcZlo6blLBUspd2",
+    "type": ["course"],
+    "source": "youtube.com/@Codevolution"
+  },
+  {
+    "title": "React with TypeScript Tutorial",
+    "url": "https://www.totaltypescript.com/tutorials/react-with-typescript",
+    "type": ["course"]
+  },
+  {
+    "title": "React.js: The Documentary",
+    "url": "https://www.youtube.com/watch?v=8pDqJVdNa44",
+    "type": ["guide"],
+    "source": "youtube.com/@Honeypotio"
+  },
+  {
+    "title": "Data Binding in React",
+    "url": "https://www.joshwcomeau.com/react/data-binding/",
+    "type": ["guide"]
+  },
+  {
+    "title": "React Context: The Detailed Guide",
+    "url": "https://deadsimplechat.com/blog/react-context-tutorial/",
+    "type": ["guide"]
+  },
+  {
+    "title": "React Testing Tutorial",
+    "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd",
+    "type": ["course"],
+    "source": "youtube.com/@Codevolution"
+  },
+  {
+    "title": "React TypeScript Tutorial for Beginners",
+    "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK",
+    "type": ["course"],
+    "source": "youtube.com/@Codevolution"
+  },
+  {
+    "title": "React treeview component",
+    "url": "https://www.joshuawootonn.com/react-treeview-component",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Learn React 18 with Redux Toolkit – Full Tutorial for Beginners",
+    "url": "https://www.youtube.com/watch?v=2-crBg6wpp0",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "React Basics",
+    "url": "https://www.coursera.org/learn/react-basics",
+    "type": ["course"]
+  },
+  {
+    "title": "React Styled Components",
+    "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwgu-G08-7ovbN9EyhF_cltM",
+    "type": ["course"],
+    "source": "youtube.com/@Codevolution"
+  },
+  {
+    "title": "React Libraries",
+    "url": "https://www.reactlibraries.com/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Higher Order Components in React",
+    "url": "https://deadsimplechat.com/blog/higher-order-componets-in-react/",
+    "type": ["guide"]
+  },
+  {
+    "title": "How to handle errors in React: full guide",
+    "url": "https://www.developerway.com/posts/how-to-handle-errors-in-react",
+    "type": ["guide"]
+  },
+  {
+    "title": "React Router 6 – Full Course",
+    "url": "https://www.youtube.com/watch?v=nDGA3km5He4",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "React reconciliation: how it works and why should we care",
+    "url": "https://www.developerway.com/posts/reconciliation-in-react",
+    "type": ["guide"]
+  },
+  {
+    "title": "The Key To Good Component Design Is Selfishness",
+    "url": "https://www.smashingmagazine.com/2023/01/key-good-component-design-selfishness/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Advanced React",
+    "url": "https://www.coursera.org/learn/advanced-react",
+    "type": ["course"]
+  },
+  {
+    "title": "React Hook Form Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwjmgBr1327BA5bVXoQH-w5s",
+    "type": ["course"],
+    "source": "youtube.com/@Codevolution"
+  },
+  {
+    "title": "Using WebSockets in a Redux Application",
+    "url": "https://www.taniarascia.com/websockets-in-redux/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "How to Drag and Drop in React",
+    "url": "https://www.robinwieruch.de/react-drag-and-drop/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Rethinking React best practices",
+    "url": "https://frontendmastery.com/posts/rethinking-react-best-practices/",
+    "type": ["guide"]
+  },
+  {
+    "title": "The Interactive Guide to Rendering in React",
+    "url": "https://ui.dev/why-react-renders",
+    "type": ["guide"]
+  },
+  {
+    "title": "Zustand React State Management Course",
+    "url": "https://www.youtube.com/watch?v=fZPgBnL2x-Q",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "A Guide To Redux Toolkit With TypeScript",
+    "url": "https://www.smashingmagazine.com/2023/05/guide-redux-toolkit-typescript/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Say no to \"flickering\" UI: useLayoutEffect, painting and browsers story",
+    "url": "https://www.developerway.com/posts/no-more-flickering-ui",
+    "type": ["guide"]
+  },
+  {
+    "title": "Demystifying Debugging With React Developer Tools",
+    "url": "https://www.toptal.com/react/debugging-react-developer-tools",
+    "type": ["guide"]
+  },
+  {
+    "title": "Dan Abramov explores React Server Components",
+    "url": "https://www.youtube.com/watch?v=Fctw7WjmxpU",
+    "type": ["guide", "community"],
+    "source": "youtube.com/@bholmesdev"
+  },
+  {
+    "title": "React Blog",
+    "url": "https://react.dev/blog",
+    "type": ["reference"]
   }
 ]
