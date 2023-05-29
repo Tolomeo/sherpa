@@ -67,7 +67,7 @@
     "type": ["book"]
   },
   {
-    "title": "Execute npm Package Binaries with the npx Package Runner | egghead.io",
+    "title": "Execute npm Package Binaries with the npx Package Runner",
     "url": "https://egghead.io/courses/execute-npm-package-binaries-with-the-npx-package-runner",
     "type": ["course"]
   },
@@ -142,11 +142,6 @@
     "type": ["guide"]
   },
   {
-    "title": "awesome-mad-science",
-    "url": "https://github.com/feross/awesome-mad-science",
-    "type": ["collection"]
-  },
-  {
     "title": "Which Monorepo is right for a Node.js BACKEND now",
     "url": "https://medium.com/autodesk-tlv/lerna-has-gone-which-monorepo-is-right-for-a-node-js-backend-fc075cad51b0",
     "type": ["guide", "opinion"]
@@ -186,11 +181,6 @@
     "title": "npm semantic version calculator",
     "url": "https://semver.npmjs.com",
     "type": ["reference", "generator"]
-  },
-  {
-    "title": "rfcs",
-    "url": "https://github.com/npm/rfcs",
-    "type": ["community"]
   },
   {
     "title": "Online Semver checker",
@@ -236,5 +226,79 @@
     "title": "How to build, test, and publish a TypeScript npm package in 2022",
     "url": "https://www.strictmode.io/articles/build-test-and-publish-npm-package-2022",
     "type": ["tutorial"]
+  },
+
+  {
+    "title": "Writing Javascript without a build system",
+    "url": "https://jvns.ca/blog/2023/02/16/writing-javascript-without-a-build-system/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "How to JavaScript - Setup Tutorial",
+    "url": "https://www.robinwieruch.de/javascript-project-setup-tutorial/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Speeding up the JavaScript ecosystem",
+    "url": "https://marvinh.dev/blog/speeding-up-javascript-ecosystem/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Analysis Tools and Linters to Improve Code Quality and Avoid Bugs",
+    "url": "https://analysis-tools.dev/",
+    "type": ["reference"]
+  },
+  {
+    "title": "The NPM Library Speedrun - 90 minutes to build, CI, and publish",
+    "url": "https://www.youtube.com/watch?v=aKTSC4D1GL8",
+    "type": ["course"],
+    "source": "youtube.com/@mattpocockuk"
+  },
+  {
+    "title": "The Lost Art of the Makefile",
+    "url": "http://www.olioapps.com/blog/the-lost-art-of-the-makefile/",
+    "type": ["guide"]
+  },
+  {
+    "title": "SurviveJS – Webpack",
+    "url": "https://survivejs.com/webpack/",
+    "type": ["book"]
+  },
+  {
+    "title": "GoogleChromeLabs/webpack-libs-optimizations",
+    "url": "https://github.com/GoogleChromeLabs/webpack-libs-optimizations",
+    "type": ["reference", "collection"]
+  },
+  {
+    "title": "How to Set Up webpack 5 From Scratch",
+    "url": "https://www.taniarascia.com/how-to-use-webpack/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Building a simplified webpack clone",
+    "url": "https://lihautan.com/building-a-simplified-webpack-clone/",
+    "type": ["guide"]
+  },
+  {
+    "title": "vitejs/awesome-vite",
+    "url": "https://github.com/vitejs/awesome-vite",
+    "type": ["reference", "collection"]
+  },
+  {
+    "title": "Vite Crash Course",
+    "url": "https://www.youtube.com/watch?v=89NJdbYTgJ8",
+    "type": ["course"],
+    "source": "youtube.com/@TraversyMedia"
+  },
+  {
+    "title": "Learn Vite – Frontend Build Tool Course",
+    "url": "https://www.youtube.com/watch?v=VAeRhmpcWEQ",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Awesome webpack",
+    "url": "https://webpack.js.org/awesome-webpack/",
+    "type": ["reference", "collection"]
   }
 ]
