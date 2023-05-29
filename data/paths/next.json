@@ -6,6 +6,7 @@
     "https://medium.com/swlh/the-hitchhikers-guide-to-next-js-fd7aa14ae8d0",
     "https://nextjs.org/learn/basics/create-nextjs-app",
     "https://www.youtube.com/playlist?list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH",
+    "https://www.youtube.com/watch?v=Y6KDk5iyrYE",
     "https://github.com/unicodeveloper/awesome-nextjs"
   ],
   "extra": [
@@ -36,6 +37,12 @@
     {
       "title": "Beyond basics",
       "resources": [
+        "https://prismic.io/blog/advanced-nextjs-server-context",
+        "https://www.smashingmagazine.com/2023/03/internationalization-nextjs-13-react-server-components/",
+        "https://www.youtube.com/watch?v=FRmCxj9K7II",
+        "https://www.youtube.com/watch?v=GnodscC2p-A",
+        "https://www.youtube.com/watch?v=OcTPaUfay5I",
+        "https://www.youtube.com/watch?v=rCm5RVYKWVg",
         "https://www.smashingmagazine.com/2021/09/lessons-learned-ecommerce-nextjs-case-study",
         "https://vercel.com/docs/concepts/next.js/overview",
         "https://www.smashingmagazine.com/2020/09/comparison-styling-methods-next-js",
@@ -52,6 +59,10 @@
     {
       "title": "How do they do it?",
       "resources": [
+        "https://bejamas.io/blog/getting-started-with-the-next-js-serverless-framework/",
+        "https://garden.bradwoods.io/notes/javascript/state-management/xstate/global-state",
+        "https://soshace.com/using-swr-for-efficient-data-fetching-in-next-js-applications/",
+        "https://stackoverflow.blog/2022/12/20/best-practices-to-increase-the-speed-for-next-js-apps/",
         "https://docs.react2025.com",
         "https://www.saltycrane.com/blog/2021/04/nextjs-gitlab-cicd-docker-multi-stage-example",
         "https://www.alanjohn.dev/blog/Building-a-Developer-Portfolio-Creating-a-NextJS-blog-in-typescript-using-Notion-API#5189bcaa45944fdba485474c5395e750",
@@ -71,6 +82,8 @@
     {
       "title": "Nice to know",
       "resources": [
+        "https://www.smashingmagazine.com/2021/07/how-to-choose-a-headless-cms/",
+        "https://bejamas.io/blog/remix-vs-nextjs/",
         "https://github.com/jaredpalmer/minimum-viable-saas",
         "https://web.dev/image-component",
         "https://www.youtube.com/watch?v=BILxV_vrZO0",
