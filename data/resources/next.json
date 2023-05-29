@@ -41,11 +41,6 @@
     "source": "youtube.com/colbz"
   },
   {
-    "title": "stackoverflow-clone",
-    "url": "https://github.com/salihozdemir/stackoverflow-clone",
-    "type": ["example"]
-  },
-  {
     "title": "Rebuilding A Large E-Commerce Website With Next.js (Case Study)",
     "url": "https://www.smashingmagazine.com/2021/09/lessons-learned-ecommerce-nextjs-case-study",
     "type": ["guide"],
@@ -109,7 +104,7 @@
     "source": "youtube.com/c/TraversyMedia"
   },
   {
-    "title": "Advanced Next.js Course | Learn Next.js in 2021",
+    "title": "Advanced Next.js Course",
     "url": "https://www.youtube.com/watch?v=EJVGzyWSCBE",
     "type": ["course"],
     "source": "youtube.com/c/codedamn"
@@ -159,11 +154,6 @@
     "type": ["reference"]
   },
   {
-    "title": "Using Next.js",
-    "url": "https://reactresources.com/topics/nextjs",
-    "type": ["reference", "collection"]
-  },
-  {
     "title": "Next.js GitLab CI/CD Docker multi-stage example",
     "url": "https://www.saltycrane.com/blog/2021/04/nextjs-gitlab-cicd-docker-multi-stage-example",
     "type": ["example"]
@@ -184,15 +174,9 @@
     "type": ["guide"]
   },
   {
-    "title": "Blog | Next.js",
+    "title": "Next.js",
     "url": "https://nextjs.org/blog",
     "type": ["reference"]
-  },
-  {
-    "title": "Vercel - YouTube",
-    "url": "https://www.youtube.com/c/VercelHQ",
-    "type": ["reference"],
-    "source": "youtube.com/c/VercelHQ"
   },
   {
     "title": "The Next.js Handbook",
@@ -227,11 +211,6 @@
     "type": ["tutorial"]
   },
   {
-    "title": "next-realworld-example-app",
-    "url": "https://github.com/reck1ess/next-realworld-example-app",
-    "type": ["example"]
-  },
-  {
     "title": "The Story of Next.js",
     "url": "https://www.youtube.com/watch?v=BILxV_vrZO0",
     "type": ["guide"],
@@ -250,11 +229,6 @@
   {
     "title": "Build your own web framework",
     "url": "https://vercel.com/blog/build-your-own-web-framework",
-    "type": ["tutorial"]
-  },
-  {
-    "title": "Building a Developer Portfolio: Creating a NextJS blog in typescript using Notion API",
-    "url": "https://www.alanjohn.dev/blog/Building-a-Developer-Portfolio-Creating-a-NextJS-blog-in-typescript-using-Notion-API#5189bcaa45944fdba485474c5395e750",
     "type": ["tutorial"]
   },
   {
@@ -333,5 +307,82 @@
     "url": "https://www.youtube.com/playlist?list=PLto9KpJAqHMQJCMuP3-JjjffygOUJo86U",
     "type": ["tutorial", "collection"],
     "source": "youtube.com/@replit"
+  },
+
+  {
+    "title": "Personal Website Tutorial with Next.js 13, Sanity.io, TailwindCSS, and TypeScript",
+    "url": "https://www.youtube.com/watch?v=OcTPaUfay5I",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Full-Stack Next.js, TypeScript, and AWS Course – Code a Quote Generator",
+    "url": "https://www.youtube.com/watch?v=FRmCxj9K7II",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Global State in Next.js using XState",
+    "url": "https://garden.bradwoods.io/notes/javascript/state-management/xstate/global-state",
+    "type": ["guide"]
+  },
+  {
+    "title": "Leveraging Server Context for Advanced Next.js Optimization Patterns",
+    "url": "https://prismic.io/blog/advanced-nextjs-server-context",
+    "type": ["guide"]
+  },
+  {
+    "title": "Internationalization In Next.js 13 With React Server Components",
+    "url": "https://www.smashingmagazine.com/2023/03/internationalization-nextjs-13-react-server-components/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Build and Deploy a LeetCode Clone with React, Next JS, TypeScript, Tailwind CSS, Firebase",
+    "url": "https://www.youtube.com/watch?v=GnodscC2p-A",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Best practices to increase the speed for Next.js apps",
+    "url": "https://stackoverflow.blog/2022/12/20/best-practices-to-increase-the-speed-for-next-js-apps/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Getting started with the Next.js serverless framework",
+    "url": "https://bejamas.io/blog/getting-started-with-the-next-js-serverless-framework/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Using SWR for Efficient Data Fetching in Next.js Applications",
+    "url": "https://soshace.com/using-swr-for-efficient-data-fetching-in-next-js-applications/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "How To Choose A Headless CMS",
+    "url": "https://www.smashingmagazine.com/2021/07/how-to-choose-a-headless-cms/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Remix vs Next.js",
+    "url": "https://bejamas.io/blog/remix-vs-nextjs/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Next.js 13 Crash Course",
+    "url": "https://www.youtube.com/watch?v=Y6KDk5iyrYE",
+    "type": ["course"],
+    "source": "youtube.com/@TraversyMedia"
+  },
+  {
+    "title": "Code a Reddit Clone with React, Next.js, Firebase v9, Chakra UI",
+    "url": "https://www.youtube.com/watch?v=rCm5RVYKWVg",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Lee Robinson",
+    "url": "https://www.youtube.com/@leerob",
+    "type": ["reference"],
+    "source": "youtube.com/@leerob"
   }
 ]
