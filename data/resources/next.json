@@ -41,11 +41,6 @@
     "source": "youtube.com/colbz"
   },
   {
-    "title": "stackoverflow-clone",
-    "url": "https://github.com/salihozdemir/stackoverflow-clone",
-    "type": ["example"]
-  },
-  {
     "title": "Rebuilding A Large E-Commerce Website With Next.js (Case Study)",
     "url": "https://www.smashingmagazine.com/2021/09/lessons-learned-ecommerce-nextjs-case-study",
     "type": ["guide"],
@@ -109,7 +104,7 @@
     "source": "youtube.com/c/TraversyMedia"
   },
   {
-    "title": "Advanced Next.js Course | Learn Next.js in 2021",
+    "title": "Advanced Next.js Course",
     "url": "https://www.youtube.com/watch?v=EJVGzyWSCBE",
     "type": ["course"],
     "source": "youtube.com/c/codedamn"
@@ -159,11 +154,6 @@
     "type": ["reference"]
   },
   {
-    "title": "Using Next.js",
-    "url": "https://reactresources.com/topics/nextjs",
-    "type": ["reference", "collection"]
-  },
-  {
     "title": "Next.js GitLab CI/CD Docker multi-stage example",
     "url": "https://www.saltycrane.com/blog/2021/04/nextjs-gitlab-cicd-docker-multi-stage-example",
     "type": ["example"]
@@ -184,15 +174,9 @@
     "type": ["guide"]
   },
   {
-    "title": "Blog | Next.js",
+    "title": "Next.js",
     "url": "https://nextjs.org/blog",
     "type": ["reference"]
-  },
-  {
-    "title": "Vercel - YouTube",
-    "url": "https://www.youtube.com/c/VercelHQ",
-    "type": ["reference"],
-    "source": "youtube.com/c/VercelHQ"
   },
   {
     "title": "The Next.js Handbook",
@@ -227,11 +211,6 @@
     "type": ["tutorial"]
   },
   {
-    "title": "next-realworld-example-app",
-    "url": "https://github.com/reck1ess/next-realworld-example-app",
-    "type": ["example"]
-  },
-  {
     "title": "The Story of Next.js",
     "url": "https://www.youtube.com/watch?v=BILxV_vrZO0",
     "type": ["guide"],
@@ -250,11 +229,6 @@
   {
     "title": "Build your own web framework",
     "url": "https://vercel.com/blog/build-your-own-web-framework",
-    "type": ["tutorial"]
-  },
-  {
-    "title": "Building a Developer Portfolio: Creating a NextJS blog in typescript using Notion API",
-    "url": "https://www.alanjohn.dev/blog/Building-a-Developer-Portfolio-Creating-a-NextJS-blog-in-typescript-using-Notion-API#5189bcaa45944fdba485474c5395e750",
     "type": ["tutorial"]
   },
   {
@@ -404,5 +378,11 @@
     "url": "https://www.youtube.com/watch?v=rCm5RVYKWVg",
     "type": ["course"],
     "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Lee Robinson",
+    "url": "https://www.youtube.com/@leerob",
+    "type": ["reference"],
+    "source": "youtube.com/@leerob"
   }
 ]
