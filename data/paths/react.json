@@ -5,38 +5,49 @@
     "https://egghead.io/courses/the-beginner-s-guide-to-react",
     "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-react-js",
     "https://epic-react-exercises.vercel.app",
-    "https://github.com/alan2207/bulletproof-react",
     "https://github.com/enaqx/awesome-react"
   ],
   "extra": [
     {
       "title": "There's more",
       "resources": [
+        "https://www.youtube.com/watch?v=2-crBg6wpp0",
+        "https://www.joshwcomeau.com/react/data-binding/",
+        "https://deadsimplechat.com/blog/react-context-tutorial/",
+        "https://deadsimplechat.com/blog/higher-order-componets-in-react/",
+        "https://www.coursera.org/learn/react-basics",
+        "https://www.coursera.org/learn/advanced-react",
         "https://scrimba.com/learn/learnreact",
         "https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795",
         "https://www.udemy.com/course/react-tutorial",
-        "https://www.udemy.com/course/modern-react",
-        "https://www.udemy.com/course/react-hooks-with-react-redux-migration",
         "https://reactbyexample.github.io",
-        "https://reactpatterns.com",
         "http://www.react.express",
         "https://github.com/tyroprogrammer/learn-react-app",
-        "https://www.taniarascia.com/redux-react-guide",
-        "https://epic-react-exercises.vercel.app",
         "https://wattenberger.com/blog/react-hooks",
         "https://github.com/Asabeneh/30-Days-Of-React",
-        "https://ui.dev/react-router-tutorial",
-        "http://www.hackingwithreact.com",
         "https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc",
         "https://50reactprojects.com",
         "https://www.youtube.com/watch?v=l4G2MVgXFkw",
-        "https://www.youtube.com/watch?v=-bEzt5ISACA",
-        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9iVKmtNuCeIswnQ97in2GGf"
+        "https://www.youtube.com/watch?v=-bEzt5ISACA"
       ]
     },
     {
       "title": "Beyond basics",
       "resources": [
+        "https://www.udemy.com/course/modern-react",
+        "https://www.developerway.com/posts/no-more-flickering-ui",
+        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9iVKmtNuCeIswnQ97in2GGf",
+        "https://ui.dev/react-router-tutorial",
+        "https://www.toptal.com/react/debugging-react-developer-tools",
+        "https://www.developerway.com/posts/how-to-handle-errors-in-react",
+        "https://www.youtube.com/watch?v=Fctw7WjmxpU",
+        "https://www.youtube.com/watch?v=nDGA3km5He4",
+        "https://www.youtube.com/watch?v=fZPgBnL2x-Q",
+        "https://ui.dev/why-react-renders",
+        "https://www.developerway.com/posts/reconciliation-in-react",
+        "https://www.youtube.com/playlist?list=PLC3y8-rFHvwjmgBr1327BA5bVXoQH-w5s",
+        "https://www.youtube.com/playlist?list=PLC3y8-rFHvwgu-G08-7ovbN9EyhF_cltM",
+        "https://www.youtube.com/playlist?list=PLC3y8-rFHvwjTELCrPrcZlo6blLBUspd2",
         "https://www.youtube.com/watch?v=CGpMlWVcHok",
         "https://egghead.io/courses/develop-accessible-web-apps-with-react",
         "https://obedparla.com/code/a-visual-guide-to-react-mental-models",
@@ -54,22 +65,21 @@
         "https://www.youtube.com/playlist?list=PLC3y8-rFHvwhC-j3x3t9la8-GQJGViDQk",
         "https://arsfutura.com/magazine/internationalization-in-react",
         "https://frontendmastery.com/posts/advanced-react-component-composition-guide",
-        "https://www.causal.app/blog/react-perf",
-        "https://www.joshwcomeau.com/css/css-variables-for-react-devs/",
-        "https://www.rafaelquintanilha.com/react-best-practices-how-to-write-better-react-apps/",
-        "https://blog.maximeheckel.com/posts/building-a-design-system-from-scratch/"
+        "https://www.causal.app/blog/react-perf"
       ]
     },
     {
       "title": "Redux",
       "main": [
         "https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867",
+        "https://egghead.io/courses/building-react-applications-with-idiomatic-redux",
         "https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3",
         "https://github.com/xgrommx/awesome-redux"
       ],
       "extra": [
+        "https://www.taniarascia.com/redux-react-guide",
+        "https://www.taniarascia.com/websockets-in-redux/",
         "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37",
-        "https://egghead.io/courses/building-react-applications-with-idiomatic-redux",
         "https://zapier.com/engineering/how-to-build-redux/"
       ]
     },
@@ -78,10 +88,11 @@
       "main": [
         "https://maxrozen.com/beginners-guide-to-react-testing",
         "https://wanago.io/courses/javascript-testing-tutorial",
-				"https://www.youtube.com/watch?v=8vfQ6SWBZ-U",
+        "https://www.youtube.com/watch?v=8vfQ6SWBZ-U",
         "https://github.com/jest-community/awesome-jest"
       ],
       "extra": [
+        "https://www.youtube.com/playlist?list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd",
         "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ",
         "https://www.youtube.com/watch?v=GLSSRtnNY0g",
         "https://learntdd.in/react",
@@ -92,10 +103,13 @@
       "title": "With Typescript",
       "main": [
         "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml",
+        "https://www.youtube.com/watch?v=udr2rx_B99w",
         "https://react-typescript-cheatsheet.netlify.app"
       ],
       "extra": [
-        "https://www.youtube.com/watch?v=udr2rx_B99w",
+        "https://www.totaltypescript.com/tutorials/react-with-typescript",
+        "https://www.smashingmagazine.com/2023/05/guide-redux-toolkit-typescript/",
+        "https://www.youtube.com/playlist?list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK",
         "https://egghead.io/courses/modern-redux-with-redux-toolkit-rtk-and-typescript-64f243c8",
         "https://github.com/piotrwitek/react-redux-typescript-guide",
         "https://fettblog.eu/typescript-react/"
@@ -104,12 +118,16 @@
     {
       "title": "How do they do it?",
       "resources": [
-        "https://github.com/djohal/imdb-replica-react",
-        "https://github.com/khaledosman/react-redux-realworld-example-app",
-        "https://github.com/oguz3/spotify-web-player",
-        "https://github.com/arturmolenda/project-manager",
+        "https://www.joshwcomeau.com/css/css-variables-for-react-devs/",
+        "https://blog.maximeheckel.com/posts/building-a-design-system-from-scratch/",
+        "https://www.patterns.dev",
+        "https://www.rafaelquintanilha.com/react-best-practices-how-to-write-better-react-apps/",
+        "https://github.com/alan2207/bulletproof-react",
+        "https://www.robinwieruch.de/react-drag-and-drop/",
+        "https://www.joshuawootonn.com/react-treeview-component",
+        "https://www.smashingmagazine.com/2023/01/key-good-component-design-selfishness/",
+        "https://www.youtube.com/watch?v=98bGwOYoEGg",
         "https://maxrozen.com/examples-of-large-production-grade-open-source-react-apps",
-        "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app",
         "https://github.com/madhu-sagar/system-design-react-code-examples",
         "https://blog.openreplay.com/implementing-3d-graphics-in-react"
       ]
@@ -117,9 +135,11 @@
     {
       "title": "Nice to know",
       "resources": [
+        "https://www.zachleat.com/web/react-criticism/",
+        "https://www.youtube.com/watch?v=8pDqJVdNa44",
+        "https://frontendmastery.com/posts/rethinking-react-best-practices/",
         "https://github.com/sudheerj/reactjs-interview-questions",
         "https://ui.dev/why-react-hooks",
-        "https://jasonformat.com/wtf-is-jsx/",
         "https://johnpolacek.github.io/css-in-js-or-css-and-js",
         "https://www.smashingmagazine.com/2022/01/web-frameworks-guide-part1",
         "https://sebastiandedeyne.com/react-for-vue-developers",
@@ -130,30 +150,29 @@
       ]
     },
     {
+      "title": "Work smarter, not harder",
+      "resources": ["https://react-svgr.com/playground"]
+    },
+    {
       "title": "Great bookmarks",
       "resources": [
+        "https://awesome-web-react.js.org/",
+        "https://www.reactlibraries.com/",
         "https://devhints.io/react",
-        "https://react-svgr.com/playground",
-        "https://reactjs.org/docs/getting-started.html",
         "https://nikgraf.github.io/react-hooks",
         "https://react-hooks-cheatsheet.com",
         "https://antonioru.github.io/beautiful-react-hooks",
-        "https://alexsidorenko.com/blog/react-render-cheat-sheet",
-        "https://www.patterns.dev",
         "https://github.com/brillout/awesome-react-components",
-        "https://usehooks.com",
-        "https://reactresources.com"
+        "https://usehooks.com"
       ]
     },
     {
       "title": "Stay in the loop",
       "resources": [
-        "https://reactjs.org/blog/all.html",
         "https://ui.dev/blog/",
-        "https://overreacted.io",
         "https://reactdigest.net",
-        "https://github.com/reactwg",
-        "https://www.joshwcomeau.com"
+        "https://www.joshwcomeau.com",
+        "https://react.dev/blog"
       ]
     }
   ],
