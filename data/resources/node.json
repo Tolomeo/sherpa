@@ -46,11 +46,6 @@
     "source": "softwareontheroad.com"
   },
   {
-    "title": "Ackee",
-    "url": "https://github.com/electerious/Ackee",
-    "type": ["example"]
-  },
-  {
     "title": "Real-world-Design-Patterns-Node-JS",
     "url": "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS",
     "type": ["example", "collection"]
@@ -163,11 +158,6 @@
     "type": ["tutorial"]
   },
   {
-    "title": "web.dev",
-    "url": "https://web.dev/identity",
-    "type": ["guide", "collection"]
-  },
-  {
     "title": "Rapid API Learn",
     "url": "https://rapidapi.com/learn",
     "type": ["guide", "collection"]
@@ -205,11 +195,6 @@
     "type": ["tutorial"]
   },
   {
-    "title": "Building A Simple Single Sign On(SSO) Server And Solution From Scratch In Node.js.",
-    "url": "https://codeburst.io/building-a-simple-single-sign-on-sso-server-and-solution-from-scratch-in-node-js-ea6ee5fdf340",
-    "type": ["tutorial"]
-  },
-  {
     "title": "How to create a real-world Node CLI app with Node",
     "url": "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
     "type": ["tutorial"]
@@ -219,11 +204,6 @@
     "url": "https://www.digitalocean.com/community/tutorials/building-a-real-time-markdown-viewer",
     "type": ["tutorial"],
     "source": "digitalocean.com/community"
-  },
-  {
-    "title": "Test Driven Development with Node, Postgres, and Knex (Red/Green/Refactor)",
-    "url": "https://mherman.org/blog/test-driven-development-with-node",
-    "type": ["guide"]
   },
   {
     "title": "10 Things I Regret About Node.js",
@@ -252,20 +232,9 @@
     "type": ["reference"]
   },
   {
-    "title": "Tools",
-    "url": "https://www.digitalocean.com/community/tools",
-    "type": ["generator", "collection"],
-    "source": "digitalocean.com/community"
-  },
-  {
     "title": "The Little Redis Book",
     "url": "https://www.openmymind.net/redis.pdf",
     "type": ["book"]
-  },
-  {
-    "title": "API Dev Tools",
-    "url": "https://github.com/APIDevTools",
-    "type": ["reference", "collection"]
   },
   {
     "title": "Node Target Mapping",
@@ -301,11 +270,6 @@
     "title": "Writing Good Tests for NodeJS APIs",
     "url": "https://lucasfcosta.com/2017/04/06/Testing-NodeJS-APIs.html",
     "type": ["guide"]
-  },
-  {
-    "title": "webcraft",
-    "url": "https://github.com/sciner/webcraft",
-    "type": ["example"]
   },
   {
     "title": "Hard-won lessons: Five years with Node.js",
@@ -399,11 +363,6 @@
     "type": ["course"]
   },
   {
-    "title": "Web App Development with the Power of Node.js",
-    "url": "https://www.edx.org/course/web-app-development-with-the-power-of-nodejs",
-    "type": ["course"]
-  },
-  {
     "title": "Building the Twitter Backend with Node.js",
     "url": "https://www.youtube.com/watch?v=mABcyifdsww",
     "type": ["course"],
@@ -415,19 +374,16 @@
     "type": ["guide"]
   },
   {
-    "title": "Create a CLI Chatbot with the ChatGPT API and Node.js",
-    "url": "https://philna.sh/blog/2023/03/13/create-a-cli-chatbot-with-chatgpt-api-and-node-js/",
-    "type": ["tutorial"]
-  },
-  {
     "title": "The Complete Guide To Building A REST API With Node, Express, TypeScript \u0026 MongoDB + Authentication",
     "url": "https://www.youtube.com/watch?v=b8ZUb_Okxro",
-    "type": ["tutorial"]
+    "type": ["tutorial"],
+    "source": "youtube.com/@codewithantonio"
   },
   {
-    "title": "Implementing the WebSocket Protocol with JavaScript  || Crash Course || Erick Wendel - YouTube",
-    "url": "https://www.youtube.com/watch?v=qFoFKLI3O8w\u0026list=PLqFwRPueWb5fl_-rJ_6WdgCn9P87A7WNq\u0026index=6",
-    "type": ["course"]
+    "title": "Implementing the WebSocket Protocol with JavaScript",
+    "url": "https://www.youtube.com/watch?v=qFoFKLI3O8w\u0026list=PLqFwRPueWb5fl_-rJ_6WdgCn9P87A7WNq",
+    "type": ["course"],
+    "source": "youtube.com/@ErickWendelTraining"
   },
   {
     "title": "Express JS (Node REST API) Crash Course",
@@ -463,7 +419,7 @@
   },
   {
     "title": "Everything You Should Know about Node.js Streams",
-    "url": "https://www.youtube.com/watch?v=BdePYKgrMh0\u0026list=PLqFwRPueWb5fl_-rJ_6WdgCn9P87A7WNq\u0026index=3",
+    "url": "https://www.youtube.com/watch?v=BdePYKgrMh0\u0026list=PLqFwRPueWb5fl_-rJ_6WdgCn9P87A7WNq",
     "type": ["course"],
     "source": "youtube.com/@ErickWendelTraining"
   },
