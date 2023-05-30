@@ -391,5 +391,102 @@
     "title": "Learn NestJS Best Practices",
     "url": "https://www.tomray.dev",
     "type": ["tutorial", "collection"]
+  },
+
+  {
+    "title": "Developing Cloud Apps with Node.js and React",
+    "url": "https://www.coursera.org/learn/node-js",
+    "type": ["course"]
+  },
+  {
+    "title": "Web App Development with the Power of Node.js",
+    "url": "https://www.edx.org/course/web-app-development-with-the-power-of-nodejs",
+    "type": ["course"]
+  },
+  {
+    "title": "Building the Twitter Backend with Node.js",
+    "url": "https://www.youtube.com/watch?v=mABcyifdsww",
+    "type": ["course"],
+    "source": "youtube.com/@notjustdev"
+  },
+  {
+    "title": "Best Practices to Secure Your Node.js Containers on Kubernetes",
+    "url": "https://www.javascripttutorials.net/best-practices-to-secure-your-node-js-containers-on-kubernetes/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Create a CLI Chatbot with the ChatGPT API and Node.js",
+    "url": "https://philna.sh/blog/2023/03/13/create-a-cli-chatbot-with-chatgpt-api-and-node-js/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "The Complete Guide To Building A REST API With Node, Express, TypeScript \u0026 MongoDB + Authentication",
+    "url": "https://www.youtube.com/watch?v=b8ZUb_Okxro",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Implementing the WebSocket Protocol with JavaScript  || Crash Course || Erick Wendel - YouTube",
+    "url": "https://www.youtube.com/watch?v=qFoFKLI3O8w\u0026list=PLqFwRPueWb5fl_-rJ_6WdgCn9P87A7WNq\u0026index=6",
+    "type": ["course"]
+  },
+  {
+    "title": "Express JS (Node REST API) Crash Course",
+    "url": "https://www.youtube.com/watch?v=P5q8rUGCN9k\u0026t=6s",
+    "type": ["course"],
+    "source": "youtube.com/@laithacademy"
+  },
+  {
+    "title": "bitloops/ddd-hexagonal-cqrs-es-eda",
+    "url": "https://github.com/bitloops/ddd-hexagonal-cqrs-es-eda",
+    "type": ["example", "reference"]
+  },
+  {
+    "title": "10 best practices to containerize Node.js web applications with Docker",
+    "url": "https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/",
+    "type": ["reference"]
+  },
+  {
+    "title": "3 Ways to Code a BuzzFeed Clone",
+    "url": "https://www.youtube.com/watch?v=qkQr42DmaEE",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Blue Green Deployment for Node.js Without Kubernetes",
+    "url": "https://semaphoreci.com/blog/blue-green-deployment-nodejs",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Scaling Node.js Applications",
+    "url": "https://betterstack.com/community/guides/scaling-nodejs/",
+    "type": ["course"]
+  },
+  {
+    "title": "Everything You Should Know about Node.js Streams",
+    "url": "https://www.youtube.com/watch?v=BdePYKgrMh0\u0026list=PLqFwRPueWb5fl_-rJ_6WdgCn9P87A7WNq\u0026index=3",
+    "type": ["course"],
+    "source": "youtube.com/@ErickWendelTraining"
+  },
+  {
+    "title": "Nest.js Crash Course",
+    "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9g8YFseGdkyj9RH9kVs_cMr",
+    "type": ["course"],
+    "source": "youtube.com/@NetNinja"
+  },
+  {
+    "title": "Fixing a Memory Leak in a Production Node.js App",
+    "url": "https://kentcdodds.com/blog/fixing-a-memory-leak-in-a-production-node-js-app",
+    "type": ["guide"]
+  },
+  {
+    "title": "How To Scale Node.js Applications with Clustering",
+    "url": "https://www.digitalocean.com/community/tutorials/how-to-scale-node-js-applications-with-clustering",
+    "type": ["guide"]
+  },
+  {
+    "title": "Erick Wendel",
+    "url": "https://www.youtube.com/@ErickWendelTraining",
+    "type": ["community"],
+    "source": "youtube.com/@ErickWendelTraining"
   }
 ]
