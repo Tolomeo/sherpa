@@ -3,8 +3,8 @@
   "prev": ["javascript", "typescript", "npm"],
   "next": ["docker"],
   "main": [
-    "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp",
-    "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js",
+    "https://www.youtube.com/playlist?list=PLC3y8-rFHvwh8shCMHFA5kWxD9PaPwxaY",
+    "https://www.freecodecamp.org/learn/back-end-development-and-apis",
     "https://github.com/sindresorhus/awesome-nodejs"
   ],
   "extra": [
@@ -12,15 +12,15 @@
       "title": "There's more",
       "resources": [
         "https://www.coursera.org/learn/node-js",
-        "https://www.freecodecamp.org/learn/back-end-development-and-apis",
+        "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js",
         "https://github.com/azat-co/practicalnode",
+        "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp",
         "https://www.youtube.com/playlist?list=PLlxmoA0rQ-LyMoEYRyd1L9oDaTRXOXdZa",
         "https://developer.ibm.com/learningpaths/get-started-nodejs",
         "https://developer.ibm.com/languages/node-js/tutorials",
-        "https://nodejs.dev/en/learn",
+        "https://nodejs.org/en/docs/guides",
         "https://goalkicker.com/NodeJSBook",
-        "https://www.freecodecamp.org/news/the-definitive-node-js-handbook-6912378afc6e",
-        "https://www.youtube.com/playlist?list=PLC3y8-rFHvwh8shCMHFA5kWxD9PaPwxaY"
+        "https://www.freecodecamp.org/news/the-definitive-node-js-handbook-6912378afc6e"
       ]
     },
     {
