@@ -46,11 +46,6 @@
     "source": "softwareontheroad.com"
   },
   {
-    "title": "Ackee",
-    "url": "https://github.com/electerious/Ackee",
-    "type": ["example"]
-  },
-  {
     "title": "Real-world-Design-Patterns-Node-JS",
     "url": "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS",
     "type": ["example", "collection"]
@@ -98,8 +93,8 @@
     "source": "youtube.com/c/Academind"
   },
   {
-    "title": "Introduction to Node.js",
-    "url": "https://nodejs.dev/en/learn",
+    "title": "Guides",
+    "url": "https://nodejs.org/en/docs/guides",
     "type": ["course"]
   },
   {
@@ -163,11 +158,6 @@
     "type": ["tutorial"]
   },
   {
-    "title": "web.dev",
-    "url": "https://web.dev/identity",
-    "type": ["guide", "collection"]
-  },
-  {
     "title": "Rapid API Learn",
     "url": "https://rapidapi.com/learn",
     "type": ["guide", "collection"]
@@ -205,11 +195,6 @@
     "type": ["tutorial"]
   },
   {
-    "title": "Building A Simple Single Sign On(SSO) Server And Solution From Scratch In Node.js.",
-    "url": "https://codeburst.io/building-a-simple-single-sign-on-sso-server-and-solution-from-scratch-in-node-js-ea6ee5fdf340",
-    "type": ["tutorial"]
-  },
-  {
     "title": "How to create a real-world Node CLI app with Node",
     "url": "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
     "type": ["tutorial"]
@@ -219,11 +204,6 @@
     "url": "https://www.digitalocean.com/community/tutorials/building-a-real-time-markdown-viewer",
     "type": ["tutorial"],
     "source": "digitalocean.com/community"
-  },
-  {
-    "title": "Test Driven Development with Node, Postgres, and Knex (Red/Green/Refactor)",
-    "url": "https://mherman.org/blog/test-driven-development-with-node",
-    "type": ["guide"]
   },
   {
     "title": "10 Things I Regret About Node.js",
@@ -252,20 +232,9 @@
     "type": ["reference"]
   },
   {
-    "title": "Tools",
-    "url": "https://www.digitalocean.com/community/tools",
-    "type": ["generator", "collection"],
-    "source": "digitalocean.com/community"
-  },
-  {
     "title": "The Little Redis Book",
     "url": "https://www.openmymind.net/redis.pdf",
     "type": ["book"]
-  },
-  {
-    "title": "API Dev Tools",
-    "url": "https://github.com/APIDevTools",
-    "type": ["reference", "collection"]
   },
   {
     "title": "Node Target Mapping",
@@ -301,11 +270,6 @@
     "title": "Writing Good Tests for NodeJS APIs",
     "url": "https://lucasfcosta.com/2017/04/06/Testing-NodeJS-APIs.html",
     "type": ["guide"]
-  },
-  {
-    "title": "webcraft",
-    "url": "https://github.com/sciner/webcraft",
-    "type": ["example"]
   },
   {
     "title": "Hard-won lessons: Five years with Node.js",
@@ -391,5 +355,94 @@
     "title": "Learn NestJS Best Practices",
     "url": "https://www.tomray.dev",
     "type": ["tutorial", "collection"]
+  },
+
+  {
+    "title": "Developing Cloud Apps with Node.js and React",
+    "url": "https://www.coursera.org/learn/node-js",
+    "type": ["course"]
+  },
+  {
+    "title": "Building the Twitter Backend with Node.js",
+    "url": "https://www.youtube.com/watch?v=mABcyifdsww",
+    "type": ["course"],
+    "source": "youtube.com/@notjustdev"
+  },
+  {
+    "title": "Best Practices to Secure Your Node.js Containers on Kubernetes",
+    "url": "https://www.javascripttutorials.net/best-practices-to-secure-your-node-js-containers-on-kubernetes/",
+    "type": ["guide"]
+  },
+  {
+    "title": "The Complete Guide To Building A REST API With Node, Express, TypeScript \u0026 MongoDB + Authentication",
+    "url": "https://www.youtube.com/watch?v=b8ZUb_Okxro",
+    "type": ["tutorial"],
+    "source": "youtube.com/@codewithantonio"
+  },
+  {
+    "title": "Implementing the WebSocket Protocol with JavaScript",
+    "url": "https://www.youtube.com/watch?v=qFoFKLI3O8w\u0026list=PLqFwRPueWb5fl_-rJ_6WdgCn9P87A7WNq",
+    "type": ["course"],
+    "source": "youtube.com/@ErickWendelTraining"
+  },
+  {
+    "title": "Express JS (Node REST API) Crash Course",
+    "url": "https://www.youtube.com/watch?v=P5q8rUGCN9k\u0026t=6s",
+    "type": ["course"],
+    "source": "youtube.com/@laithacademy"
+  },
+  {
+    "title": "bitloops/ddd-hexagonal-cqrs-es-eda",
+    "url": "https://github.com/bitloops/ddd-hexagonal-cqrs-es-eda",
+    "type": ["example", "reference"]
+  },
+  {
+    "title": "10 best practices to containerize Node.js web applications with Docker",
+    "url": "https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/",
+    "type": ["reference"]
+  },
+  {
+    "title": "3 Ways to Code a BuzzFeed Clone",
+    "url": "https://www.youtube.com/watch?v=qkQr42DmaEE",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Blue Green Deployment for Node.js Without Kubernetes",
+    "url": "https://semaphoreci.com/blog/blue-green-deployment-nodejs",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Scaling Node.js Applications",
+    "url": "https://betterstack.com/community/guides/scaling-nodejs/",
+    "type": ["course"]
+  },
+  {
+    "title": "Everything You Should Know about Node.js Streams",
+    "url": "https://www.youtube.com/watch?v=BdePYKgrMh0\u0026list=PLqFwRPueWb5fl_-rJ_6WdgCn9P87A7WNq",
+    "type": ["course"],
+    "source": "youtube.com/@ErickWendelTraining"
+  },
+  {
+    "title": "Nest.js Crash Course",
+    "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9g8YFseGdkyj9RH9kVs_cMr",
+    "type": ["course"],
+    "source": "youtube.com/@NetNinja"
+  },
+  {
+    "title": "Fixing a Memory Leak in a Production Node.js App",
+    "url": "https://kentcdodds.com/blog/fixing-a-memory-leak-in-a-production-node-js-app",
+    "type": ["guide"]
+  },
+  {
+    "title": "How To Scale Node.js Applications with Clustering",
+    "url": "https://www.digitalocean.com/community/tutorials/how-to-scale-node-js-applications-with-clustering",
+    "type": ["guide"]
+  },
+  {
+    "title": "Erick Wendel",
+    "url": "https://www.youtube.com/@ErickWendelTraining",
+    "type": ["community"],
+    "source": "youtube.com/@ErickWendelTraining"
   }
 ]
