@@ -35,12 +35,6 @@
     "type": ["guide"]
   },
   {
-    "title": "Beginner's Guide To The Linux Terminal",
-    "url": "https://www.youtube.com/watch?v=s3ii48qYBxA",
-    "type": ["course"],
-    "source": "youtube.com/@DistroTube"
-  },
-  {
     "title": "Rithm School Terminal and UNIX",
     "url": "https://www.rithmschool.com/courses/terminal",
     "type": ["guide"]
@@ -84,11 +78,6 @@
     "title": "Linux Basics",
     "url": "https://miteshshah.github.io/linux/basics/",
     "type": ["course"]
-  },
-  {
-    "title": "Linux Command Line Books",
-    "url": "https://linuxcommand.org/tlcl.php",
-    "type": ["book"]
   },
   {
     "title": "The Linux Command Handbook",

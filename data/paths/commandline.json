@@ -28,7 +28,6 @@
         "http://www.ee.surrey.ac.uk/Teaching/Unix/",
         "https://dev.to/napicella/linux-terminals-tty-pty-and-shell-192e",
         "https://github.com/jlevy/the-art-of-command-line",
-        "https://linuxcommand.org/tlcl.php",
         "https://ryanstutorials.net/linuxtutorial/",
         "https://thoughtbot.com/upcase/mastering-the-shell",
         "https://www.coursera.org/specializations/unix-and-bash-for-beginners",
@@ -44,7 +43,6 @@
         "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1LMB14RCwauofMc4BWqVa4B",
         "https://www.youtube.com/playlist?list=PLT98CRl2KxKHaKA9-4_I38sLzK134p4GJ",
         "https://www.youtube.com/playlist?list=PLy7Kah3WzqrHPrgkBgwzXyfDDCvthdUfl",
-        "https://www.youtube.com/watch?v=s3ii48qYBxA",
         "https://github.com/Idnan/bash-guide",
         "https://unixgame.io/unix50",
         "https://youtu.be/uwAqEzhyjtw",
@@ -56,7 +54,6 @@
       "resources": [
         "https://raimonster.com/scripting-field-guide/",
         "https://tldp.org/LDP/abs/html/",
-        "https://www.youtube.com/playlist?list=PLRU13thWaP5m-O2mNQRChZ6mI1ejLE9OQ",
         "https://thevaluable.dev/mouseless-development-environment/",
         "https://blog.sanctum.geek.nz/series/unix-as-ide/",
         "https://brennan.io/2015/01/16/write-a-shell-in-c/",
@@ -64,7 +61,6 @@
         "https://clig.dev/",
         "https://code.tutsplus.com/courses/advanced-command-line-techniques",
         "https://www.smashingmagazine.com/2021/11/powerful-terminal-commandline-tools-modern-web-development/",
-        "https://google.github.io/styleguide/shellguide.html",
         "https://debian-handbook.info/browse/stable/",
         "https://everything.curl.dev/",
         "https://github.com/termstandard/colors",
@@ -83,9 +79,7 @@
         "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
         "https://www.joshmcguigan.com/blog/build-your-own-shell-rust/",
         "https://www.smashingmagazine.com/2022/12/guide-command-line-data-manipulation-cli-miller/",
-        "https://www.uninformativ.de/blog/postings/2018-02-24/0/POSTING-en.html",
-        "https://github.com/SixArm/unix-shell-script-tactics",
-        "https://mywiki.wooledge.org/BashPitfalls"
+        "https://www.uninformativ.de/blog/postings/2018-02-24/0/POSTING-en.html"
       ]
     },
     {
@@ -161,6 +155,7 @@
         "https://github.com/learn-anything/command-line-tools",
         "https://git.herrbischoff.com/awesome-macos-command-line/about/",
         "https://github.com/agarrharr/awesome-cli-apps",
+        "https://www.darraghoriordan.com/2022/01/28/developer-shell-modern-bat-fzf-antigen-zsh-wsl-mac/",
         "https://www.wezm.net/technical/2019/10/useful-command-line-tools/",
         "https://github.com/ibraheemdev/modern-unix",
         "https://remysharp.com/2018/08/23/cli-improved",
@@ -194,14 +189,17 @@
     {
       "title": "How do they do it?",
       "resources": [
+        "https://mywiki.wooledge.org/BashPitfalls",
+        "https://google.github.io/styleguide/shellguide.html",
         "https://github.com/you-dont-need/You-Dont-Need-GUI",
+        "https://www.youtube.com/playlist?list=PLRU13thWaP5m-O2mNQRChZ6mI1ejLE9OQ",
         "https://github.com/HariSekhon/DevOps-Bash-tools",
         "https://github.com/dylanaraps/pure-bash-bible",
         "https://github.com/dylanaraps/pure-sh-bible",
         "https://lucasfcosta.com/2019/02/10/terminal-guide-2019.html",
         "https://smallstep.com/blog/command-line-secrets/",
+        "https://github.com/SixArm/unix-shell-script-tactics",
         "https://switowski.com/blog/favorite-cli-tools/",
-        "https://www.darraghoriordan.com/2022/01/28/developer-shell-modern-bat-fzf-antigen-zsh-wsl-mac/",
         "https://www.datafix.com.au/BASHing/"
       ]
     },
@@ -216,13 +214,21 @@
       ]
     },
     {
+      "title": "Work smarter, not harder",
+      "resources": [
+        "https://chmodcommand.com/",
+        "https://www.shellcheck.net/",
+        "https://sed.js.org/index.html",
+        "https://curlbuilder.com/",
+        "https://explainshell.com/",
+        "https://www.digitalocean.com/community/tools/glob?comments=true&glob=%7Bdevelop%2Ctest-release%2F%2A%2A%7D&matches=false&tests=develop&tests=test-release%2Fiteration-1&tests=test-release%2Fiteration-2"
+      ]
+    },
+    {
       "title": "Great bookmarks",
       "resources": [
         "https://github.com/trinib/Linux-Bash-Commands",
-        "https://chmodcommand.com/",
         "https://command-not-found.com/",
-        "https://curlbuilder.com/",
-        "https://explainshell.com/",
         "https://github.com/Gogh-Co/Gogh",
         "https://github.com/alexanderepstein/Bash-Snippets",
         "https://github.com/cdleon/awesome-terminals",
@@ -232,13 +238,10 @@
         "https://linuxcommand.org/",
         "https://linuxcommandlibrary.com/",
         "https://mywiki.wooledge.org/BashFAQ",
-        "https://sed.js.org/index.html",
         "https://ss64.com/",
         "https://www.bashoneliners.com/",
         "https://www.cheatsheet.wtf/bash/",
-        "https://www.commandlinefu.com/commands/browse",
-        "https://www.digitalocean.com/community/tools/glob?comments=true&glob=%7Bdevelop%2Ctest-release%2F%2A%2A%7D&matches=false&tests=develop&tests=test-release%2Fiteration-1&tests=test-release%2Fiteration-2",
-        "https://www.shellcheck.net/"
+        "https://www.commandlinefu.com/commands/browse"
       ]
     },
     {
