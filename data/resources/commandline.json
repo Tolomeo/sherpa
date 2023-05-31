@@ -989,5 +989,10 @@
     "title": "Shell Field Guide",
     "url": "https://raimonster.com/scripting-field-guide/",
     "type": ["reference"]
+  },
+  {
+    "title": "A Comprehensive Bash Scripting Tutorial for Beginners",
+    "url": "https://www.codelivly.com/bash-scripting-tutorial/",
+    "type": ["guide"]
   }
 ]
