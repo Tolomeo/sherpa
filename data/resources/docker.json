@@ -102,8 +102,8 @@
     "type": ["guide", "collection"]
   },
   {
-    "title": "101-tutorial",
-    "url": "https://github.com/dockersamples/101-tutorial",
+    "title": "docker/getting-started",
+    "url": "https://github.com/docker/getting-started",
     "type": ["guide"]
   },
   {
@@ -453,5 +453,74 @@
     "title": "playground",
     "url": "https://github.com/luisaveiro/playground",
     "type": ["example"]
+  },
+
+  {
+    "title": "The Docker Crash Course",
+    "url": "https://www.youtube.com/watch?v=KfGr49Z7OaA",
+    "type": ["course"],
+    "source": "youtube.com/@laithacademy"
+  },
+  {
+    "title": "Docker Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBkvpSIgwchk0glHLz7CQ-7",
+    "type": ["course"],
+    "source": "youtube.com/@thenewboston"
+  },
+  {
+    "title": "Docker in Production",
+    "url": "https://betterstack.com/community/guides/scaling-docker/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Mastering Container Networking",
+    "url": "https://iximiuz.com/en/series/mastering-container-networking/",
+    "type": ["guide"]
+  },
+  {
+    "title": "jessfraz/dockerfiles",
+    "url": "https://github.com/jessfraz/dockerfiles",
+    "type": ["example", "collection"]
+  },
+  {
+    "title": "Debugging Containers Like a Pro",
+    "url": "https://iximiuz.com/en/series/mastering-container-debugging/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Implementing Container Manager",
+    "url": "https://iximiuz.com/en/series/implementing-container-manager/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Build Robust Continuous Integration With Docker and Friends",
+    "url": "https://realpython.com/docker-continuous-integration/",
+    "type": ["guide"]
+  },
+  {
+    "title": "What’s the Difference Between Docker and Kubernetes?",
+    "url": "https://cloudnativenow.com/features/whats-the-difference-between-docker-and-kubernetes/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Containers Patterns",
+    "url": "https://l0rd.github.io/containerspatterns",
+    "type": ["example", "collection"]
+  },
+  {
+    "title": "Docker Alternatives for Your Containerization Needs",
+    "url": "https://linuxhandbook.com/docker-alternatives/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Ivan on Containers, Kubernetes, and Server-Side",
+    "url": "https://iximiuz.com/en/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Bret Fisher Docker and DevOps",
+    "url": "https://www.youtube.com/@BretFisher",
+    "type": ["reference"],
+    "source": "youtube.com/@BretFisher"
   }
 ]
