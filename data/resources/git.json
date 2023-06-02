@@ -75,11 +75,6 @@
     "type": ["course"]
   },
   {
-    "title": "Git Exercises",
-    "url": "https://gitexercises.fracz.com",
-    "type": ["exercise", "collection"]
-  },
-  {
     "title": "Git Tutorials and Training",
     "url": "https://www.atlassian.com/git/tutorials",
     "type": ["course", "collection"]
@@ -126,11 +121,6 @@
     "url": "https://dev.to/unseenwizzard/learn-git-concepts-not-commands-4gjc",
     "type": ["guide"],
     "source": "dev.to/unseenwizzard"
-  },
-  {
-    "title": "Using Git",
-    "url": "https://docs.github.com/en/get-started/using-git",
-    "type": ["guide", "collection"]
   },
   {
     "title": "Git Tutorial",
@@ -200,11 +190,6 @@
     "type": ["reference"]
   },
   {
-    "title": "Git SCM Wiki",
-    "url": "https://git.wiki.kernel.org/index.php/Main_Page",
-    "type": ["reference"]
-  },
-  {
     "title": "GitSheet",
     "url": "https://gitsheet.wtf",
     "type": ["reference"]
@@ -220,7 +205,7 @@
     "type": ["reference"]
   },
   {
-    "title": "Git for human beings - Google Groups",
+    "title": "Git for human beings",
     "url": "https://groups.google.com/g/git-users",
     "type": ["community"]
   },
@@ -288,12 +273,52 @@
   },
   {
     "title": "gitignore.io",
-    "url": "https://www.toptal.com/developers/gitignore",
+    "url": "https://www.toptal.com/developers/gitignore/",
     "type": ["generator"]
   },
   {
     "title": "Git Internals",
     "url": "https://www.integralist.co.uk/posts/git-internals/",
     "type": ["guide"]
+  },
+  {
+    "title": "Rithm School Git and GitHub",
+    "url": "https://www.rithmschool.com/courses/git",
+    "type": ["course"]
+  },
+  {
+    "title": "Git Time",
+    "url": "https://git.bradwoods.io/",
+    "type": ["exercise"]
+  },
+  {
+    "title": "Conventional Commits",
+    "url": "https://www.conventionalcommits.org/",
+    "type": ["guide", "reference"]
+  },
+  {
+    "title": "Git Notes: Git's Coolest, Most Unloved­ Feature",
+    "url": "https://ikiwiki.tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Common Git commands and configurations used in a day-to-day workflow",
+    "url": "https://zean.be/articles/git-commands/",
+    "type": ["example"]
+  },
+  {
+    "title": "Git Exercises",
+    "url": "https://gitexercises.fracz.com/",
+    "type": ["exercise"]
+  },
+  {
+    "title": "How to Improve Performance in Git: The Complete Guide",
+    "url": "https://www.git-tower.com/blog/git-performance/",
+    "type": ["guide"]
+  },
+  {
+    "title": "gitignore.io - Create Useful .gitignore Files For Your Project",
+    "url": "https://www.toptal.com/developers/gitignore/?ref=tiny-helpers",
+    "type": ["generator"]
   }
 ]
