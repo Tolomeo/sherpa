@@ -673,5 +673,295 @@
     "title": "awesome-flask",
     "url": "https://github.com/humiaozuzu/awesome-flask",
     "type": ["reference", "collection"]
+  },
+
+  {
+    "title": "Publishing Python Packages on PyPI: A Comprehensive Guide",
+    "url": "https://medium.com/@ewho.ruth2014/publishing-python-packages-on-pypi-a-comprehensive-guide-14f466aa84f0",
+    "type": ["guide"]
+  },
+  {
+    "title": "Ultimate Python Multithreading Guide",
+    "url": "https://programmingeeksclub.com/ultimate-python-multithreading-guide/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Django-Styleguide",
+    "url": "https://github.com/HackSoftware/Django-Styleguide",
+    "type": ["reference"]
+  },
+  {
+    "title": "The Essential Django Deployment Guide",
+    "url": "https://www.saaspegasus.com/guides/django-deployment/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Python Design Patterns¶",
+    "url": "https://python-patterns.guide/",
+    "type": ["example", "collection"]
+  },
+  {
+    "title": "College Algebra – Full Course with Python Code",
+    "url": "https://www.youtube.com/watch?v=i7vOAcUo5iA",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Talk Python To Me",
+    "url": "https://talkpython.fm/",
+    "type": ["reference", "community"]
+  },
+  {
+    "title": "Web Scraping with Python: A Complete Step-by-Step Guide + Code",
+    "url": "https://gologin.com/blog/web-scraping-with-python",
+    "type": ["guide"]
+  },
+  {
+    "title": "Scrapy Course",
+    "url": "https://www.youtube.com/watch?v=mBoX_JCKZTE",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Rithm School Intermediate Flask",
+    "url": "https://www.rithmschool.com/courses/intermediate-flask/",
+    "type": ["course"]
+  },
+  {
+    "title": "Boring Python: code quality",
+    "url": "https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/",
+    "type": ["guide"]
+  },
+  {
+    "title": "How to improve Python packaging, or why fourteen tools are at least twelve too many",
+    "url": "https://chriswarrick.com/blog/2023/01/15/how-to-improve-python-packaging/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Mastering Python Function Arguments: A Comprehensive Guide",
+    "url": "https://neuronize.dev/mastering-python-function-arguments-a-comprehensive-guide",
+    "type": ["guide"]
+  },
+  {
+    "title": "Scaling Python Applications",
+    "url": "https://betterstack.com/community/guides/scaling-python/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Learn Django by Building an Online Marketplace",
+    "url": "https://www.youtube.com/watch?v=ZxMB6Njs3ck",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Extending web applications with WebAssembly and Python",
+    "url": "https://wasmlabs.dev/articles/wasm-host-to-python/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "How to write tests that need a lot of data?",
+    "url": "https://gogognome.nl/how-to-write-tests-that-need-a-lot-of-data.html",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "GPT in 60 Lines of NumPy",
+    "url": "https://jaykmody.com/blog/gpt-from-scratch/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Web Scraping With Python",
+    "url": "https://serpdog.io/blog/web-scraping-with-python/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Building And Distributing A macOS Application Written in Python",
+    "url": "https://blog.glyph.im/2023/03/py-mac-app-for-real.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "Why Python keeps growing, explained | The GitHub Blog",
+    "url": "https://github.blog/2023-03-02-why-python-keeps-growing-explained/",
+    "type": ["community"]
+  },
+  {
+    "title": "Python Programming Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-",
+    "type": ["course"]
+  },
+  {
+    "title": "Python For Computer Vision",
+    "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1FDEQmmfzwSKOqFMEPLtz6_",
+    "type": ["course"],
+    "source": "youtube.com/@NeuralNine"
+  },
+  {
+    "title": "Build an AI Search Engine Using FastAPI, Qdrant, and ChatGPT",
+    "url": "https://dylancastillo.co/ai-search-engine-fastapi-qdrant-chatgpt/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Python adventures: Finding unused dependencies",
+    "url": "https://www.nathanfurnal.xyz/posts/py-find-unused-deps/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Python AI Projects",
+    "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1G9mmnBN3ZSY8hYgJ5kBOg-",
+    "type": ["guide"],
+    "source": "youtube.com/@NeuralNine"
+  },
+  {
+    "title": "Python Projects",
+    "url": "https://www.techarge.in/python-projects/",
+    "type": ["tutorial", "collection"]
+  },
+  {
+    "title": "Python Platformer Game Tutorial for Beginners",
+    "url": "https://www.youtube.com/watch?v=6gLeplbqtqg",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Python for Engineers",
+    "url": "https://new.pythonforengineers.com/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Learn Python with Jupyter",
+    "url": "https://www.learnpythonwithjupyter.com/",
+    "type": ["book"]
+  },
+  {
+    "title": "Django ChatGPT Clone Tutorial",
+    "url": "https://www.youtube.com/watch?v=qrZGfBBlXpk",
+    "type": ["course"]
+  },
+  {
+    "title": "Python For Networking",
+    "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1FwBSNR_tH7qVbNpYHL4IQs",
+    "type": ["guide"],
+    "source": "youtube.com/@NeuralNine"
+  },
+  {
+    "title": "Python Advanced Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1FuqLSjl5bgiQIEH25VEmIc",
+    "type": ["guide"],
+    "source": "youtube.com/@NeuralNine"
+  },
+  {
+    "title": "Django Project – Code a CRM App Tutorial",
+    "url": "https://www.youtube.com/watch?v=t10QcFx7d5k",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Web Development with Python Tutorial – Flask \u0026 Dynamic Database-Driven Web Apps",
+    "url": "https://www.youtube.com/watch?v=yBDHkveJUf4",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "190 Python Projects with Source Code",
+    "url": "https://amankharwal.medium.com/130-python-projects-with-source-code-61f498591bb",
+    "type": ["example", "collection"]
+  },
+  {
+    "title": "Streamline Your Django Settings With Type Hints: A Pydantic Tutorial",
+    "url": "https://www.toptal.com/django/streamline-your-django-settings-with-type-hints-pydantic-tutorial",
+    "type": ["guide"]
+  },
+  {
+    "title": "Python Tutorial For Beginners",
+    "url": "https://www.youtube.com/watch?v=dBjapc3xfhQ",
+    "type": ["course"],
+    "source": "youtube.com/@MyLesson007"
+  },
+  {
+    "title": "Using Python with Arduino",
+    "url": "https://toptechboy.com/using-python-with-arduino-lessons/",
+    "type": ["course"]
+  },
+  {
+    "title": "A Gentle Introduction to the Python Match Statement",
+    "url": "https://www.wrighters.io/intro-to-python-match-statement/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Django API Domains",
+    "url": "https://phalt.github.io/django-api-domains/",
+    "type": ["reference"]
+  },
+  {
+    "title": "PyPattyrn",
+    "url": "https://github.com/tylerlaberge/PyPattyrn",
+    "type": ["example", "collection"]
+  },
+  {
+    "title": "Python’s “Disappointing” Superpowers",
+    "url": "https://lukeplant.me.uk/blog/posts/pythons-disappointing-superpowers/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Python Software Foundation News",
+    "url": "https://pyfound.blogspot.com/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Python Packages: a Primer for Data People",
+    "url": "https://dagster.io/blog/python-packages-primer-1",
+    "type": ["guide"]
+  },
+  {
+    "title": "Python packaging for developers in a hurry",
+    "url": "https://giovannipcarvalho.github.io/2023/01/08/python-packaging-in-a-hurry.html",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "python-cheatsheet",
+    "url": "https://github.com/gto76/python-cheatsheet",
+    "type": ["reference"]
+  },
+  {
+    "title": "Rithm School Flask Fundamentals",
+    "url": "https://www.rithmschool.com/courses/flask-fundamentals/",
+    "type": ["course"]
+  },
+  {
+    "title": "30-Days-Of-Python",
+    "url": "https://github.com/Asabeneh/30-Days-Of-Python",
+    "type": ["course"]
+  },
+  {
+    "title": "Python for Web Development",
+    "url": "https://www.youtube.com/watch?v=WNvxR8RFzBg",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Python Monorepo: an Example",
+    "url": "https://www.tweag.io/blog/2023-04-04-python-monorepo-1/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Python Decorator: Enhance Your Code With Wrapping Wizardry",
+    "url": "https://hackthedeveloper.com/python-decorator/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Python Reinforcement Learning using Gymnasium",
+    "url": "https://www.youtube.com/watch?v=vufTSJbzKGU",
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
+  },
+  {
+    "title": "Pygame Tutorial From Scratch - 3.5 Hours of Building RPG Game",
+    "url": "https://www.youtube.com/watch?v=G_LXB5C-r20",
+    "type": ["course"],
+    "source": "youtube.com/@Pythondude"
+  },
+  {
+    "title": "Style guides for Google-originated open-source projects",
+    "url": "https://google.github.io/styleguide/pyguide.html",
+    "type": ["reference"]
   }
 ]
