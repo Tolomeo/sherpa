@@ -1,5 +1,10 @@
 [
   {
+    "title": "Learn tmux",
+    "url": "https://thoughtbot.com/upcase/tmux",
+    "type": ["course"]
+  },
+  {
     "title": "A Guide to the Terminal, Console, and Shell",
     "url": "https://thevaluable.dev/guide-terminal-shell-console/",
     "type": ["guide"]

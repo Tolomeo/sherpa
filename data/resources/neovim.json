@@ -30,11 +30,6 @@
     "type": ["reference", "collection"]
   },
   {
-    "title": "Learn Vim",
-    "url": "https://thoughtbot.com/upcase/vim",
-    "type": ["course"]
-  },
-  {
     "title": "Why I love Vim: It’s the lesser-known features that make it so amazing",
     "url": "https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85",
     "type": ["guide"]
@@ -75,11 +70,6 @@
     "type": ["guide"]
   },
   {
-    "title": "Learn tmux",
-    "url": "https://thoughtbot.com/upcase/tmux",
-    "type": ["course"]
-  },
-  {
     "title": "We can have nice things",
     "url": "https://www.youtube.com/watch?v=Bt-vmPC_-Ho",
     "type": ["community"],
@@ -91,23 +81,8 @@
     "type": ["reference"]
   },
   {
-    "title": "nvim-lua-guide",
-    "url": "https://github.com/nanotee/nvim-lua-guide",
-    "type": ["reference"]
-  },
-  {
     "title": "Learn X in Y Minutes",
     "url": "https://learnxinyminutes.com/docs/vim",
-    "type": ["reference"]
-  },
-  {
-    "title": "Vim cheatsheet",
-    "url": "https://devhints.io/vim",
-    "type": ["reference"]
-  },
-  {
-    "title": "Vim scripting cheatsheet",
-    "url": "https://devhints.io/vimscript",
     "type": ["reference"]
   },
   {
@@ -136,7 +111,7 @@
     "type": ["generator"]
   },
   {
-    "title": "Your configuration generator for NeoVim and Vim - Vim Bootstrap",
+    "title": "Vim Bootstrap",
     "url": "https://vim-bootstrap.com",
     "type": ["generator"]
   },
@@ -144,11 +119,6 @@
     "title": "awesome-vim-colorschemes",
     "url": "https://github.com/rafi/awesome-vim-colorschemes",
     "type": ["reference", "collection"]
-  },
-  {
-    "title": "vimrc",
-    "url": "https://github.com/amix/vimrc",
-    "type": ["example"]
   },
   {
     "title": "The Valuable Dev",
@@ -200,11 +170,6 @@
     "url": "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs",
     "type": ["tutorial"],
     "source": "youtube.com/c/ThoughtbotVideo"
-  },
-  {
-    "title": "Lua cheatsheet",
-    "url": "https://devhints.io/lua",
-    "type": ["reference"]
   },
   {
     "title": "vim-cheatsheet",
@@ -371,12 +336,6 @@
     "type": ["guide", "community"]
   },
   {
-    "title": "Vim Tutorial for Beginners",
-    "url": "https://www.youtube.com/watch?v=RZ4p-saaQkc",
-    "type": ["course"],
-    "source": "youtube.com/@freecodecamp"
-  },
-  {
     "title": "Full Neovim Setup",
     "url": "https://www.youtube.com/watch?v=M5tJ47JyUP8",
     "type": ["tutorial"],
@@ -522,7 +481,7 @@
   },
   {
     "title": "Lua-guide",
-    "url": "https://neovim.io/doc/user/lua-guide.html#lua-guide",
+    "url": "https://neovim.io/doc/user/lua-guide.html",
     "type": ["guide"]
   },
   {
