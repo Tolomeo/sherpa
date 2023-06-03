@@ -1,7 +1,6 @@
 {
   "title": "Lua",
   "main": [
-    "https://www.youtube.com/watch?v=jUuqBZwwkQw",
     "https://www.youtube.com/watch?v=1srFmjt1Ib0&list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU&index=18",
     "https://github.com/kikito/lua_missions",
     "https://github.com/LewisJEllis/awesome-lua"
@@ -10,6 +9,8 @@
     {
       "title": "There's more",
       "resources": [
+        "https://replit.com/talk/learn/Lua-Tutorial-All-the-Basics/126578",
+        "https://opensource.com/downloads/learn-lua",
         "https://www.youtube.com/playlist?list=PLxgtJR7f0RBKGid7F2dfv7qc-xWwSee2O",
         "https://en.m.wikibooks.org/wiki/Lua_Programming",
         "https://www.youtube.com/playlist?list=PL1A1gsSe2tMzpqi8hE5bCUCyQdAWwthuz",
@@ -51,6 +52,13 @@
       ]
     },
     {
+      "title": "Teal",
+      "main": [
+        "https://github.com/teal-language/tl/blob/master/docs/tutorial.md",
+        "https://github.com/teal-language/awesome-teal"
+      ]
+    },
+    {
       "title": "How do they do it?",
       "resources": [
         "https://leafo.net/guides/customizing-the-luarocks-tree.html",
@@ -60,6 +68,7 @@
     {
       "title": "Nice to know",
       "resources": [
+        "https://www.youtube.com/watch?v=jUuqBZwwkQw",
         "https://www.youtube.com/playlist?list=PLyQg3m0a5UivaAXEfVDngKYp9jyNSTIo_",
         "http://notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts",
         "https://luakit.github.io/"

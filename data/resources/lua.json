@@ -201,5 +201,26 @@
     "title": "luarocks Wiki",
     "url": "https://github.com/luarocks/luarocks/wiki/Documentation",
     "type": ["reference"]
+  },
+
+  {
+    "title": "tl_tutorial",
+    "url": "https://github.com/teal-language/tl/blob/master/docs/tutorial.md",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "awesome-teal",
+    "url": "https://github.com/teal-language/awesome-teal",
+    "type": ["collection", "reference"]
+  },
+  {
+    "title": "Lua Tutorial - All the Basics!",
+    "url": "https://replit.com/talk/learn/Lua-Tutorial-All-the-Basics/126578",
+    "type": ["guide"]
+  },
+  {
+    "title": "A guide to Lua",
+    "url": "https://opensource.com/downloads/learn-lua",
+    "type": ["book"]
   }
 ]
