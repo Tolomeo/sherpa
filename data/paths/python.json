@@ -3,28 +3,30 @@
   "next": ["docker"],
   "main": [
     "https://www.youtube.com/playlist?list=PLZPZq0r_RZOOkUQbat8LyQii36cJf2SWT",
-    "https://www.youtube.com/watch?v=pdy3nh1tn6I",
     "https://inventwithpython.com/beyond",
     "https://book.pythontips.com/en/latest",
     "https://learnbyexample.github.io/practice_python_projects",
-    "https://testdriven.io/guides/complete-python",
     "https://github.com/vinta/awesome-python"
   ],
   "extra": [
     {
       "title": "There's more",
       "resources": [
+        "https://www.freecodecamp.org/learn/scientific-computing-with-python/",
+        "https://github.com/Asabeneh/30-Days-Of-Python",
+        "https://www.learnpythonwithjupyter.com/",
+        "https://www.youtube.com/watch?v=dBjapc3xfhQ",
         "https://www.youtube.com/watch?v=EyEqWFvLDT8",
-        "https://testdriven.io/blog/pytest-for-beginners/",
+        "https://runestone.academy/ns/books/published/thinkcspy/index.html",
         "https://www.youtube.com/watch?v=jH85McHenvw",
         "https://www.youtube.com/playlist?list=PLto9KpJAqHMQNY3XP0JqLs7NyeU_dnNj0",
         "https://github.com/animator/learn-python",
         "https://www.youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+        "https://www.youtube.com/watch?v=pdy3nh1tn6I",
         "https://www.youtube.com/playlist?list=PL9YOvPKwvPULm7tjWCfhpFHBxy22KpVXx",
         "https://www.askpython.com/python-course-for-beginners",
         "https://www.youtube.com/watch?v=mDKM-JtUhhc",
         "https://inventwithpython.com/bigbookpython",
-        "https://runestone.academy/ns/books/published/thinkcspy/index.html",
         "https://app.learney.me/maps/PythonCurriculum",
         "https://www.learnpython.org/",
         "https://www.youtube.com/watch?v=7utwZYKweho",
@@ -42,6 +44,7 @@
         "https://learnpythontherightway.com",
         "https://automatetheboringstuff.com",
         "https://www.coursera.org/specializations/python",
+        "https://www.youtube.com/watch?v=-29x_deQQus",
         "https://learnbyexample.github.io/100_page_python_intro",
         "https://en.wikibooks.org/wiki/Python_Programming",
         "https://inventwithpython.com/invent4thed",
@@ -50,47 +53,71 @@
         "https://github.com/Akuli/python-tutorial",
         "https://github.com/huangsam/ultimate-python",
         "https://robertheaton.com/2018/12/08/programming-projects-for-advanced-beginners/",
-        "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
-        "https://realpython.com/python-testing"
+        "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU"
       ]
     },
     {
       "title": "Beyond basics",
       "resources": [
-        "https://www.youtube.com/watch?v=TyIE3py-rFQ",
-        "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1L5QpSapVEzoSfob-4CR8zM",
-        "https://www.youtube.com/watch?v=hmkF77F9TLw",
-        "https://superfastpython.com/python-concurrency-guides/",
-        "https://github.com/MoserMichael/python-obj-system",
-        "https://www.youtube.com/watch?v=Z1N9JzNax2k",
-        "https://www.youtube.com/playlist?list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv",
-        "https://www.youtube.com/playlist?list=PLWjMI9CAmVU4--SmpzgswTvxLkZqC9QWn",
         "http://python-notes.curiousefficiency.org",
-        "https://github.com/faif/python-patterns",
-        "https://www.thedigitalcatbooks.com/pycabook-introduction",
-        "https://cjolowicz.github.io/posts/hypermodern-python-01-setup",
-        "https://runestone.academy/ns/books/published/pythonds3/index.html",
-        "https://github.com/amontalenti/elements-of-python-style",
-        "https://www.cosmicpython.com",
-        "https://wyag.thb.lt/",
-        "https://python-gtk-3-tutorial.readthedocs.io/en/latest",
-        "https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript",
-        "https://www.youtube.com/watch?v=PXMJ6FS7llk",
-        "https://github.com/TheAlgorithms/Python",
+        "https://betterstack.com/community/guides/scaling-python/",
+        "https://github.com/MoserMichael/python-obj-system",
         "https://greenteapress.com/wp/data-structures-and-information-retrieval-in-python",
+        "https://www.youtube.com/playlist?list=PL7yh-TELLS1G9mmnBN3ZSY8hYgJ5kBOg-",
+        "https://testdriven.io/guides/complete-python",
+        "https://hackthedeveloper.com/python-decorator/",
+        "https://neuronize.dev/mastering-python-function-arguments-a-comprehensive-guide",
+        "https://www.fullstackpython.com",
+        "https://programmingeeksclub.com/ultimate-python-multithreading-guide/",
+        "https://python-gtk-3-tutorial.readthedocs.io/en/latest",
+        "http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/",
+        "https://realpython.com/python-virtual-environments-a-primer",
+        "https://superfastpython.com/python-concurrency-guides/",
+        "https://toptechboy.com/using-python-with-arduino-lessons/",
+        "https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript",
         "https://www.freecodecamp.org/learn/data-analysis-with-python",
         "https://www.freecodecamp.org/learn/machine-learning-with-python",
+        "https://www.tweag.io/blog/2023-04-04-python-monorepo-1/",
+        "https://www.wrighters.io/intro-to-python-match-statement/",
+        "https://www.youtube.com/playlist?list=PL7yh-TELLS1FDEQmmfzwSKOqFMEPLtz6_",
+        "https://www.youtube.com/playlist?list=PL7yh-TELLS1FuqLSjl5bgiQIEH25VEmIc",
+        "https://www.youtube.com/playlist?list=PL7yh-TELLS1FwBSNR_tH7qVbNpYHL4IQs",
+        "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1L5QpSapVEzoSfob-4CR8zM",
+        "https://www.youtube.com/playlist?list=PLWjMI9CAmVU4--SmpzgswTvxLkZqC9QWn",
+        "https://www.youtube.com/playlist?list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv",
+        "https://www.youtube.com/watch?v=PXMJ6FS7llk",
+        "https://www.youtube.com/watch?v=WNvxR8RFzBg",
+        "https://www.youtube.com/watch?v=Z1N9JzNax2k",
+        "https://www.youtube.com/watch?v=hmkF77F9TLw",
         "https://www.youtube.com/watch?v=oXlwWbU8l2o",
-        "https://realpython.com/python-virtual-environments-a-primer"
+        "https://www.youtube.com/watch?v=vufTSJbzKGU",
+        "https://wyag.thb.lt/"
+      ]
+    },
+    {
+      "title": "Testing",
+      "resources": [
+        "https://gogognome.nl/how-to-write-tests-that-need-a-lot-of-data.html",
+        "https://realpython.com/python-testing",
+        "https://testdriven.io/blog/pytest-for-beginners/"
+      ]
+    },
+    {
+      "title": "NumPy",
+      "resources": [
+        "https://jaykmody.com/blog/gpt-from-scratch/",
+        "https://www.youtube.com/watch?v=TyIE3py-rFQ"
       ]
     },
     {
       "title": "Flask",
       "main": [
-        "https://exploreflask.com",
+        "https://www.youtube.com/watch?v=yBDHkveJUf4",
         "https://github.com/humiaozuzu/awesome-flask"
       ],
       "extra": [
+        "https://www.rithmschool.com/courses/flask-fundamentals/",
+        "https://www.rithmschool.com/courses/intermediate-flask/",
         "https://www.digitalocean.com/community/tutorial_series/how-to-create-web-sites-with-flask",
         "https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/",
         "https://www.docdroid.net/0GOZUFr/ultimate-flask-tutorial-2022-reddit-pdf"
@@ -103,12 +130,35 @@
         "https://github.com/wsvincent/awesome-django"
       ],
       "extra": [
+        "https://www.youtube.com/watch?v=t10QcFx7d5k",
+        "https://www.youtube.com/watch?v=qrZGfBBlXpk",
+        "https://github.com/HackSoftware/Django-Styleguide",
+        "https://phalt.github.io/django-api-domains/",
+        "https://www.saaspegasus.com/guides/django-deployment/",
+        "https://www.youtube.com/watch?v=ZxMB6Njs3ck",
         "https://www.youtube.com/watch?v=Lx5-XtMGDsA",
         "https://www.youtube.com/watch?v=xSUm6iMtREA",
         "https://www.youtube.com/watch?v=sm1mokevMWk&list=PLi39COpmJvHMGkGFHoFM7ix45nqD7jeFk&index=29",
-        "https://data-flair.training/blogs/django-tutorials-home",
         "https://www.youtube.com/playlist?list=PLOLrQ9Pn6cawb13MugxL-p1M4w7ZfT-qR",
         "https://www.youtube.com/watch?v=tujhGdn1EMI"
+      ]
+    },
+    {
+      "title": "Packaging",
+      "resources": [
+        "https://chriswarrick.com/blog/2023/01/15/how-to-improve-python-packaging/",
+        "https://www.b-list.org/weblog/2022/may/13/boring-python-dependencies/",
+        "https://dagster.io/blog/python-packages-primer-1",
+        "https://giovannipcarvalho.github.io/2023/01/08/python-packaging-in-a-hurry.html",
+        "https://medium.com/@ewho.ruth2014/publishing-python-packages-on-pypi-a-comprehensive-guide-14f466aa84f0"
+      ]
+    },
+    {
+      "title": "Web scraping",
+      "resources": [
+        "https://www.youtube.com/watch?v=mBoX_JCKZTE",
+        "https://gologin.com/blog/web-scraping-with-python",
+        "https://serpdog.io/blog/web-scraping-with-python/"
       ]
     },
     {
@@ -118,7 +168,8 @@
         "https://www.youtube.com/watch?v=T4IX36sP_0c"
       ],
       "extra": [
-        "https://www.youtube.com/watch?v=FfWpgLFMI7w",
+        "https://www.youtube.com/watch?v=G_LXB5C-r20",
+        "https://www.youtube.com/watch?v=6gLeplbqtqg",
         "https://www.youtube.com/watch?v=F3J3PZj0zi0",
         "https://www.youtube.com/watch?v=QU1pPzEGrqw"
       ]
@@ -126,28 +177,40 @@
     {
       "title": "How do they do it?",
       "resources": [
+        "https://dylancastillo.co/ai-search-engine-fastapi-qdrant-chatgpt/",
+        "http://docs.quantifiedcode.com/python-anti-patterns",
+        "http://impracticalprogrammer.com/2021/12/14/python-for-leetcode.html",
+        "https://cjolowicz.github.io/posts/hypermodern-python-01-setup",
+        "https://github.com/amontalenti/elements-of-python-style",
+        "https://www.thedigitalcatbooks.com/pycabook-introduction",
+        "https://www.cosmicpython.com",
+        "https://amankharwal.medium.com/130-python-projects-with-source-code-61f498591bb",
+        "https://blog.glyph.im/2023/03/py-mac-app-for-real.html",
+        "https://github.com/faif/python-patterns",
+        "https://google.github.io/styleguide/pyguide.html",
+        "https://python-patterns.guide/",
+        "https://wasmlabs.dev/articles/wasm-host-to-python/",
+        "https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/",
+        "https://www.nathanfurnal.xyz/posts/py-find-unused-deps/",
+        "https://www.techarge.in/python-projects/",
         "https://blog.pamelafox.org/2022/09/how-i-setup-python-project.html",
         "https://monadical.com/posts/modular-arithmetic.html",
         "https://dagster.io/blog/adding-python-types",
         "https://switowski.com/blog/how-to-benchmark-python-code/",
-        "https://github.com/mx0c/super-mario-python",
-        "http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/",
-        "https://github.com/jorzel/opentable",
-        "https://github.com/ramzitannous/medium-graphql-backend"
+        "https://github.com/jorzel/opentable"
       ]
     },
     {
       "title": "Nice to know",
       "resources": [
+        "https://github.blog/2023-03-02-why-python-keeps-growing-explained/",
+        "https://lukeplant.me.uk/blog/posts/pythons-disappointing-superpowers/",
+        "https://www.youtube.com/watch?v=i7vOAcUo5iA",
         "https://docs.fedoraproject.org/en-US/defensive-coding/",
         "https://inference-review.com/article/the-origins-of-python",
-        "https://www.youtube.com/watch?v=-29x_deQQus",
         "https://eugeneyan.com/writing/uncommon-python",
         "https://diveintopython3.problemsolving.io",
-        "http://docs.quantifiedcode.com/python-anti-patterns",
         "https://jython.readthedocs.io/en/latest",
-        "http://impracticalprogrammer.com/2021/12/14/python-for-leetcode.html",
-        "https://lp.jetbrains.com/python-developers-survey-2021",
         "https://www.youtube.com/watch?v=qPowhg9nnS0",
         "https://github.com/mmicu/python-for-coding-interviews",
         "https://github.com/brennerm/PyTricks",
@@ -160,11 +223,11 @@
     {
       "title": "Great bookmarks",
       "resources": [
+        "https://the-algorithms.com/",
+        "https://github.com/gto76/python-cheatsheet",
         "https://www.py4e.com",
         "https://docs.python-guide.org/",
-        "https://www.fullstackpython.com",
         "https://pymotw.com/3",
-        "https://learnxinyminutes.com/docs/python",
         "https://github.com/sfermigier/awesome-functional-python",
         "https://github.com/typeddjango/awesome-python-typing",
         "https://learnbyexample.github.io/py_resources",
@@ -178,9 +241,11 @@
     {
       "title": "Stay in the loop",
       "resources": [
+        "https://pyfound.blogspot.com/",
+        "https://new.pythonforengineers.com/",
+        "https://talkpython.fm/",
         "https://pycoders.com",
         "https://realpython.com",
-        "https://www.python.org/blogs/",
         "https://python.libhunt.com/newsletter"
       ]
     }
