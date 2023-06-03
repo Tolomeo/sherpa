@@ -30,11 +30,6 @@
     "type": ["reference", "collection"]
   },
   {
-    "title": "Learn Vim",
-    "url": "https://thoughtbot.com/upcase/vim",
-    "type": ["course"]
-  },
-  {
     "title": "Why I love Vim: It’s the lesser-known features that make it so amazing",
     "url": "https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85",
     "type": ["guide"]
@@ -75,11 +70,6 @@
     "type": ["guide"]
   },
   {
-    "title": "Learn tmux",
-    "url": "https://thoughtbot.com/upcase/tmux",
-    "type": ["course"]
-  },
-  {
     "title": "We can have nice things",
     "url": "https://www.youtube.com/watch?v=Bt-vmPC_-Ho",
     "type": ["community"],
@@ -91,23 +81,8 @@
     "type": ["reference"]
   },
   {
-    "title": "nvim-lua-guide",
-    "url": "https://github.com/nanotee/nvim-lua-guide",
-    "type": ["reference"]
-  },
-  {
     "title": "Learn X in Y Minutes",
     "url": "https://learnxinyminutes.com/docs/vim",
-    "type": ["reference"]
-  },
-  {
-    "title": "Vim cheatsheet",
-    "url": "https://devhints.io/vim",
-    "type": ["reference"]
-  },
-  {
-    "title": "Vim scripting cheatsheet",
-    "url": "https://devhints.io/vimscript",
     "type": ["reference"]
   },
   {
@@ -136,7 +111,7 @@
     "type": ["generator"]
   },
   {
-    "title": "Your configuration generator for NeoVim and Vim - Vim Bootstrap",
+    "title": "Vim Bootstrap",
     "url": "https://vim-bootstrap.com",
     "type": ["generator"]
   },
@@ -144,11 +119,6 @@
     "title": "awesome-vim-colorschemes",
     "url": "https://github.com/rafi/awesome-vim-colorschemes",
     "type": ["reference", "collection"]
-  },
-  {
-    "title": "vimrc",
-    "url": "https://github.com/amix/vimrc",
-    "type": ["example"]
   },
   {
     "title": "The Valuable Dev",
@@ -200,11 +170,6 @@
     "url": "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs",
     "type": ["tutorial"],
     "source": "youtube.com/c/ThoughtbotVideo"
-  },
-  {
-    "title": "Lua cheatsheet",
-    "url": "https://devhints.io/lua",
-    "type": ["reference"]
   },
   {
     "title": "vim-cheatsheet",
@@ -371,12 +336,6 @@
     "type": ["guide", "community"]
   },
   {
-    "title": "Vim Tutorial for Beginners",
-    "url": "https://www.youtube.com/watch?v=RZ4p-saaQkc",
-    "type": ["course"],
-    "source": "youtube.com/@freecodecamp"
-  },
-  {
     "title": "Full Neovim Setup",
     "url": "https://www.youtube.com/watch?v=M5tJ47JyUP8",
     "type": ["tutorial"],
@@ -429,5 +388,146 @@
     "title": "Advanced Vim topics, tips and tricks",
     "url": "https://www.integralist.co.uk/posts/vim/",
     "type": ["tutorial"]
+  },
+
+  {
+    "title": "Custom Neovim Statusline",
+    "url": "https://nuxsh.is-a.dev/blog/custom-nvim-statusline.html",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Problem Solving with Vim",
+    "url": "https://www.youtube.com/playlist?list=PL6XBsLhMC_hmw8eKhlrC8k7FfmNzDLw80",
+    "type": ["tutorial", "collection"],
+    "source": "youtube.com/@denvaar"
+  },
+  {
+    "title": "web-dev.nvim",
+    "url": "https://github.com/jonathandion/web-dev.nvim",
+    "type": ["reference"]
+  },
+  {
+    "title": "Neovim \u0026 Vim 8 Online Video Tutorial",
+    "url": "https://thoughtbot.com/upcase/dive-into-neovim",
+    "type": ["course"]
+  },
+  {
+    "title": "Setup nvim-lspconfig + nvim-cmp",
+    "url": "https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "A Neovim Task Runner in 30 lines of Lua",
+    "url": "https://www.hillelwayne.com/post/task-runner-neovim/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Filtering Neovim Diagnostics",
+    "url": "https://blob42.xyz/blog/neovim-diagnostic-filtering/",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "0 to LSP : Neovim RC From Scratch",
+    "url": "https://www.youtube.com/watch?v=w7i4amO_zaE",
+    "type": ["guide"],
+    "source": "youtube.com/@ThePrimeagen"
+  },
+  {
+    "title": "Supercharged LaTeX using Vim_Neovim, VimTeX, and snippets",
+    "url": "https://www.ejmastnak.com/tutorials/vim-latex/intro/",
+    "type": ["course"]
+  },
+  {
+    "title": "Dot-Repeat in Vim and Neovim",
+    "url": "https://www.vikasraj.dev/blog/vim-dot-repeat",
+    "type": ["guide"]
+  },
+  {
+    "title": "do-nothing.vim",
+    "url": "https://github.com/michaelb/do-nothing.vim",
+    "type": ["reference"]
+  },
+  {
+    "title": "Neovim and Tree-sitter: An Overview with Examples",
+    "url": "https://thevaluable.dev/tree-sitter-neovim-overview/",
+    "type": ["guide"]
+  },
+  {
+    "title": "How to set up Neovim for coding React, TypeScript, Tailwind CSS, etc on a new M2 MacBook Air",
+    "url": "https://www.youtube.com/watch?v=ajmK0ZNcM4Q",
+    "type": ["tutorial"],
+    "source": "youtube.com/@devaslife"
+  },
+  {
+    "title": "Neovim in 100 Seconds",
+    "url": "https://www.youtube.com/watch?v=c4OyfL5o7DU",
+    "type": ["guide"],
+    "source": "youtube.com/@Fireship"
+  },
+  {
+    "title": "Using LibUV in Neovim",
+    "url": "https://teukka.tech/posts/2020-01-07-vimloop/",
+    "type": ["guide"]
+  },
+  {
+    "title": "How to install and set up Neovim on Windows",
+    "url": "https://blog.nikfp.com/how-to-install-and-set-up-neovim-on-windows",
+    "type": ["tutorial"]
+  },
+  {
+    "title": "Neovim lua plugins",
+    "url": "https://nvimluau.dev/",
+    "type": ["reference"]
+  },
+  {
+    "title": "Lua-guide",
+    "url": "https://neovim.io/doc/user/lua-guide.html",
+    "type": ["guide"]
+  },
+  {
+    "title": "skel-nvim",
+    "url": "https://github.com/motosir/skel-nvim",
+    "type": ["example", "reference"]
+  },
+  {
+    "title": "Learn How To Use NeoVim As an IDE",
+    "url": "https://programmingpercy.tech/blog/learn-how-to-use-neovim-as-ide/",
+    "type": ["guide"]
+  },
+  {
+    "title": "Neovim - Tips, Distros, Configuration and Demo",
+    "url": "https://www.youtube.com/watch?v=8SVPOKZVaMU",
+    "type": ["guide"],
+    "source": "youtube.com/@adibhanna"
+  },
+  {
+    "title": "Why Vim Is More than Just an Editor – Vim Language, Motions, and Modes Explained",
+    "url": "https://ssp.sh/blog/why-using-neovim-data-engineer-and-writer-2023/",
+    "type": ["guide"]
+  },
+  {
+    "title": "neovim-plugin-boilerplate",
+    "url": "https://github.com/shortcuts/neovim-plugin-boilerplate",
+    "type": ["example", "reference"]
+  },
+  {
+    "title": "nvim-basic-ide",
+    "url": "https://github.com/LunarVim/nvim-basic-ide",
+    "type": ["example", "reference"]
+  },
+  {
+    "title": "Managing Local and Remote Filesystems with Vim and netrw",
+    "url": "https://dev.to/phantas0s/managing-local-and-remote-filesystems-with-vim-and-netrw-577i",
+    "type": ["guide"]
+  },
+  {
+    "title": "nvim-from-scratch",
+    "url": "https://github.com/ngscheurich/nvim-from-scratch",
+    "type": ["example", "reference"]
+  },
+  {
+    "title": "dope",
+    "url": "https://github.com/nvimdev/dope",
+    "type": ["example", "reference"]
   }
 ]
