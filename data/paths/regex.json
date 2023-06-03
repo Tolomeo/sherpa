@@ -1,8 +1,8 @@
 {
   "title": "Regular expressions",
   "main": [
+    "https://regex.guide",
     "https://github.com/ziishaned/learn-regex",
-    "https://regexcrossword.com",
     "https://github.com/aloisdg/awesome-regex"
   ],
   "extra": [
@@ -10,6 +10,7 @@
       "title": "There's more",
       "resources": [
         "https://wanago.io/courses/regex-course",
+        "https://regexcrossword.com",
         "https://regexone.com",
         "https://flaviocopes.com/javascript-regular-expressions",
         "https://regexlearn.com",
@@ -32,16 +33,21 @@
       ]
     },
     {
-      "title": "Nice to know",
+      "title": "How do they do it",
       "resources": ["https://dassur.ma/things/regexp-quote"]
+    },
+    {
+      "title": "Work smarter, not harder",
+      "resources": [
+        "https://regex.ai/",
+        "https://regexgpt.app/",
+        "https://regex101.com"
+      ]
     },
     {
       "title": "Great bookmarks",
       "resources": [
-        "https://regexcrossword.com",
-        "https://regex.guide",
         "https://ihateregex.io",
-        "https://regex101.com",
         "https://regexr.com",
         "https://regexlib.com",
         "https://www.asciitable.com",
