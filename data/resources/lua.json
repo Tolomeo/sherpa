@@ -1,5 +1,10 @@
 [
   {
+    "title": "Lua cheatsheet",
+    "url": "https://devhints.io/lua",
+    "type": ["reference"]
+  },
+  {
     "title": "Lua Tutorial",
     "url": "https://www.tutorialspoint.com/lua/index.htm",
     "type": ["course"]
