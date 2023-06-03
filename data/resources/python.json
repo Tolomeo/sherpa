@@ -64,12 +64,6 @@
     "source": "youtube.com/@cyrillgossi"
   },
   {
-    "title": "Pygame Tutorial for Beginners",
-    "url": "https://www.youtube.com/watch?v=FfWpgLFMI7w",
-    "type": ["course"],
-    "source": "youtube.com/@freecodecamp"
-  },
-  {
     "title": "Drum Machine with Python and Pygame",
     "url": "https://www.youtube.com/watch?v=F3J3PZj0zi0",
     "type": ["course"],
@@ -276,8 +270,8 @@
     "type": ["guide"]
   },
   {
-    "title": "Python",
-    "url": "https://github.com/TheAlgorithms/Python",
+    "title": "The Algorithms",
+    "url": "https://the-algorithms.com/",
     "type": ["example", "reference"]
   },
   {
@@ -293,6 +287,11 @@
   {
     "title": "Machine Learning with Python Certification",
     "url": "https://www.freecodecamp.org/learn/machine-learning-with-python",
+    "type": ["course"]
+  },
+  {
+    "title": "Scientific Computing with Python Certification",
+    "url": "https://www.freecodecamp.org/learn/scientific-computing-with-python/",
     "type": ["course"]
   },
   {
@@ -331,29 +330,14 @@
     "type": ["course"]
   },
   {
-    "title": "Learn Django",
-    "url": "https://data-flair.training/blogs/django-tutorials-home",
-    "type": ["guide", "collection"]
-  },
-  {
     "title": "awesome-django",
     "url": "https://github.com/wsvincent/awesome-django",
     "type": ["collection"]
   },
   {
-    "title": "super-mario-python",
-    "url": "https://github.com/mx0c/super-mario-python",
-    "type": ["example"]
-  },
-  {
     "title": "opentable",
     "url": "https://github.com/jorzel/opentable",
     "type": ["example", "reference"]
-  },
-  {
-    "title": "medium-graphql-backend",
-    "url": "https://github.com/ramzitannous/medium-graphql-backend",
-    "type": ["example"]
   },
   {
     "title": "Dive Into Python 3",
@@ -374,11 +358,6 @@
     "title": "Python tips and tricks for concise Leetcode",
     "url": "http://impracticalprogrammer.com/2021/12/14/python-for-leetcode.html",
     "type": ["reference", "example"]
-  },
-  {
-    "title": "Python Developers Survey 2021 Results",
-    "url": "https://lp.jetbrains.com/python-developers-survey-2021",
-    "type": ["reference", "community"]
   },
   {
     "title": "Introducing Python ",
@@ -440,11 +419,6 @@
     "type": ["guide", "collection"]
   },
   {
-    "title": "Learn Python in Y Minutes",
-    "url": "https://learnxinyminutes.com/docs/python",
-    "type": ["reference"]
-  },
-  {
     "title": "awesome-functional-python",
     "url": "https://github.com/sfermigier/awesome-functional-python",
     "type": ["collection"]
@@ -487,11 +461,6 @@
   {
     "title": "PyCoder’s Weekly",
     "url": "https://pycoders.com",
-    "type": ["reference"]
-  },
-  {
-    "title": "Python.org",
-    "url": "https://www.python.org/blogs/",
     "type": ["reference"]
   },
   {
@@ -650,11 +619,6 @@
     "source": "youtube.com/@KiteHQ"
   },
   {
-    "title": "Explore Flask",
-    "url": "https://exploreflask.com",
-    "type": ["book"]
-  },
-  {
     "title": "How To Build Web Applications with Flask",
     "url": "https://www.digitalocean.com/community/tutorial_series/how-to-create-web-sites-with-flask",
     "type": ["guide", "collection"]
@@ -696,7 +660,7 @@
     "type": ["guide"]
   },
   {
-    "title": "Python Design Patterns¶",
+    "title": "Python Design Patterns",
     "url": "https://python-patterns.guide/",
     "type": ["example", "collection"]
   },
@@ -779,14 +743,9 @@
     "type": ["guide"]
   },
   {
-    "title": "Why Python keeps growing, explained | The GitHub Blog",
+    "title": "Why Python keeps growing, explained",
     "url": "https://github.blog/2023-03-02-why-python-keeps-growing-explained/",
     "type": ["community"]
-  },
-  {
-    "title": "Python Programming Tutorials",
-    "url": "https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-",
-    "type": ["course"]
   },
   {
     "title": "Python For Computer Vision",
@@ -834,7 +793,8 @@
   {
     "title": "Django ChatGPT Clone Tutorial",
     "url": "https://www.youtube.com/watch?v=qrZGfBBlXpk",
-    "type": ["course"]
+    "type": ["course"],
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Python For Networking",
@@ -866,11 +826,6 @@
     "type": ["example", "collection"]
   },
   {
-    "title": "Streamline Your Django Settings With Type Hints: A Pydantic Tutorial",
-    "url": "https://www.toptal.com/django/streamline-your-django-settings-with-type-hints-pydantic-tutorial",
-    "type": ["guide"]
-  },
-  {
     "title": "Python Tutorial For Beginners",
     "url": "https://www.youtube.com/watch?v=dBjapc3xfhQ",
     "type": ["course"],
@@ -890,11 +845,6 @@
     "title": "Django API Domains",
     "url": "https://phalt.github.io/django-api-domains/",
     "type": ["reference"]
-  },
-  {
-    "title": "PyPattyrn",
-    "url": "https://github.com/tylerlaberge/PyPattyrn",
-    "type": ["example", "collection"]
   },
   {
     "title": "Python’s “Disappointing” Superpowers",
@@ -963,5 +913,10 @@
     "title": "Style guides for Google-originated open-source projects",
     "url": "https://google.github.io/styleguide/pyguide.html",
     "type": ["reference"]
+  },
+  {
+    "title": "Boring Python: dependency management",
+    "url": "https://www.b-list.org/weblog/2022/may/13/boring-python-dependencies/",
+    "type": ["guide"]
   }
 ]
