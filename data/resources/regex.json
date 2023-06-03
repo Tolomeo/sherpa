@@ -16,7 +16,7 @@
   },
 
   {
-    "title": "Regex course Archives",
+    "title": "Regex course",
     "url": "https://wanago.io/courses/regex-course",
     "type": ["guide", "collection"]
   },
@@ -94,7 +94,7 @@
     "type": ["guide"]
   },
   {
-    "title": "RegexGuide: Online Tool for Future Regex Users.",
+    "title": "RegexGuide",
     "url": "https://regex.guide",
     "type": ["generator"]
   },
@@ -132,5 +132,15 @@
     "title": "Implementing a Regular Expression Engine",
     "url": "https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine",
     "type": ["guide"]
+  },
+  {
+    "title": "Artificial Intelligence Regular Expression Generator",
+    "url": "https://regex.ai/",
+    "type": ["generator"]
+  },
+  {
+    "title": "RegExGPT",
+    "url": "https://regexgpt.app/",
+    "type": ["generator"]
   }
 ]
