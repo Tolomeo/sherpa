@@ -25,8 +25,15 @@
         "https://www.youtube.com/playlist?list=PLLwK93hM93Z3nhfJyRRWGRXHaXgNX0Itk",
         "https://www.youtube.com/playlist?list=PLWKjhJtqVAbluXJKKbCIb4xd7fcRkpzoz",
         "https://lua.msys.ch/lua-integration-guide.html",
-        "https://milindsweb.amved.com/LuaRocks_.html",
         "https://leafo.net/guides/dsl-in-lua.html"
+      ]
+    },
+    {
+      "title": "LuaRocks",
+      "resources": [
+        "https://github.com/luarocks/luarocks/wiki/Documentation",
+        "https://milindsweb.amved.com/LuaRocks_.html",
+        "https://leafo.net/guides/customizing-the-luarocks-tree.html"
       ]
     },
     {
@@ -52,16 +59,8 @@
       ]
     },
     {
-      "title": "Teal",
-      "main": [
-        "https://github.com/teal-language/tl/blob/master/docs/tutorial.md",
-        "https://github.com/teal-language/awesome-teal"
-      ]
-    },
-    {
       "title": "How do they do it?",
       "resources": [
-        "https://leafo.net/guides/customizing-the-luarocks-tree.html",
         "https://leafo.net/guides/testing-lua-modules-with-github-actions.html"
       ]
     },
@@ -70,27 +69,23 @@
       "resources": [
         "https://www.youtube.com/watch?v=jUuqBZwwkQw",
         "https://www.youtube.com/playlist?list=PLyQg3m0a5UivaAXEfVDngKYp9jyNSTIo_",
-        "http://notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts",
-        "https://luakit.github.io/"
+        "http://notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts"
       ]
     },
     {
       "title": "Great bookmarks",
       "resources": [
+        "https://luakit.github.io/",
         "http://lua-users.org/wiki",
         "https://www.luafaq.org",
         "https://www.lua.org/manual",
         "https://learnxinyminutes.com/docs/lua",
-        "https://devhints.io/lua",
-        "https://github.com/luarocks/luarocks/wiki/Documentation"
+        "https://devhints.io/lua"
       ]
     },
     {
       "title": "Stay in the loop",
-      "resources": [
-        "https://www.lua.org/lua-l.html",
-        "https://www.reddit.com/r/lua"
-      ]
+      "resources": ["https://leafo.net/", "https://www.lua.org/lua-l.html"]
     }
   ]
 }
