@@ -144,11 +144,6 @@
     "type": ["community"]
   },
   {
-    "title": "lua",
-    "url": "https://www.reddit.com/r/lua",
-    "type": ["community"]
-  },
-  {
     "title": "Full Lua Programming Crash Course",
     "url": "https://www.youtube.com/watch?v=1srFmjt1Ib0&list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU&index=18",
     "type": ["course"],
@@ -205,6 +200,21 @@
   {
     "title": "luarocks Wiki",
     "url": "https://github.com/luarocks/luarocks/wiki/Documentation",
+    "type": ["reference"]
+  },
+  {
+    "title": "Lua Tutorial - All the Basics!",
+    "url": "https://replit.com/talk/learn/Lua-Tutorial-All-the-Basics/126578",
+    "type": ["guide"]
+  },
+  {
+    "title": "A guide to Lua",
+    "url": "https://opensource.com/downloads/learn-lua",
+    "type": ["book"]
+  },
+  {
+    "title": "leafo.net",
+    "url": "https://leafo.net/",
     "type": ["reference"]
   }
 ]
