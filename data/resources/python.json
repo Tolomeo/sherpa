@@ -593,7 +593,7 @@
     "type": ["guide"]
   },
   {
-    "title": "Adding types to a large Python codebase",
+    "title": "Adding Types to a Large Python Codebase",
     "url": "https://dagster.io/blog/adding-python-types",
     "type": ["tutorial"]
   },

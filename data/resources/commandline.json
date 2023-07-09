@@ -225,7 +225,7 @@
     "type": ["book"]
   },
   {
-    "title": "GNU GREP and RIPGREP",
+    "title": "CLI text processing with GNU grep and ripgrep",
     "url": "https://learnbyexample.github.io/learn_gnugrep_ripgrep/",
     "type": ["book"]
   },

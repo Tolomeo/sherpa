@@ -527,7 +527,7 @@
     "type": ["reference"]
   },
   {
-    "title": "Web Design Museum 1991 – 2006",
+    "title": "Web Design Museum",
     "url": "https://www.webdesignmuseum.org",
     "type": ["example", "collection"]
   },
@@ -721,7 +721,7 @@
     "type": ["guide", "community"]
   },
   {
-    "title": "UX glossary",
+    "title": "The UX psychology glossary",
     "url": "https://builtformars.com/ux-glossary",
     "type": ["reference", "guide"]
   },
@@ -819,7 +819,7 @@
     "type": ["reference"]
   },
   {
-    "title": "Webdesigner Depot",
+    "title": "Web Designer Depot",
     "url": "https://www.webdesignerdepot.com/",
     "type": ["reference"]
   },
@@ -877,7 +877,7 @@
     "type": ["guide"]
   },
   {
-    "title": "Iconhunt",
+    "title": "IconHunt",
     "url": "https://www.iconhunt.site/",
     "type": ["generator"]
   }
