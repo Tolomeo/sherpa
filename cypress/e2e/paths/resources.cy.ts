@@ -17,6 +17,11 @@ const checkResourceHealth = (resource: Resource) => {
         domain: '.youtube.com',
       })
       return cy.checkHealthByUrlRequest(resource)
+    case 'programmingpercy.tech':
+    case 'gogognome.nl':
+      return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h1' })
+    case 'blob42.xyz':
+      return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h3' })
     case 'thevaluable.dev':
     case 'usehooks-ts.com':
     case 'developer.ibm.com':

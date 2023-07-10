@@ -1,18 +1,29 @@
 /// <reference types="cypress" />
 import { Resource } from '../../data'
 
+type CheckHealthOptions = {
+  titleSelector?: string
+}
+
 declare global {
   namespace Cypress {
     interface Chainable {
-      checkHealthByVisit(value: Resource): void
+      checkHealthByVisit(value: Resource, options?: CheckHealthOptions): void
 
-      checkHealthByUrlRequest(value: Resource): void
+      checkHealthByUrlRequest(
+        value: Resource,
+        options?: CheckHealthOptions,
+      ): void
 
       checkHealthByBinaryRequest(value: Resource): void
 
       checkHealthByScraperRequest(
         value: Resource,
-        options: { apikey: string; render?: boolean; premium?: boolean },
+        options: CheckHealthOptions & {
+          apikey: string
+          render?: boolean
+          premium?: boolean
+        },
       ): void
     }
   }
@@ -39,28 +50,35 @@ const cleanTitleString = (str: string) =>
     })
     .join('')
 
-const checkHealthByVisit = (resource: Resource) => {
-  cy.visit(resource.url, { headers: { Referer: resource.url } })
-  cy.get('title').should(($title) => {
-    const titleText = cleanTitleString($title.text())
-    return expect(titleText).to.contain(resource.title)
-  })
-}
-
-const checkHealthByUrlRequest = (resource: Resource) => {
+const checkHealthByUrlRequest = (
+  resource: Resource,
+  { titleSelector = 'title' }: CheckHealthOptions = {},
+) => {
   cy.request(resource.url).then((response) => {
     const document = new DOMParser().parseFromString(response.body, 'text/html')
+    const titleElement = document.querySelector(titleSelector)
+    const titleElementText = cleanTitleString(titleElement?.textContent || '')
 
     // if we received the document title in the response we validate against that
-    if (document.title) {
-      const titleText = cleanTitleString(document.title)
-      return expect(titleText).to.contain(resource.title)
+    if (titleElementText) {
+      return expect(titleElementText).to.contain(resource.title)
     }
 
     // if we didn't receive the title in the response body
     // maybe it's a SPA and the title gets filled after the first render
     // so we visit the url and try
-    return checkHealthByVisit(resource)
+    return checkHealthByVisit(resource, { titleSelector })
+  })
+}
+
+const checkHealthByVisit = (
+  resource: Resource,
+  { titleSelector = 'title' }: CheckHealthOptions = {},
+) => {
+  cy.visit(resource.url, { headers: { Referer: resource.url } })
+  cy.get(titleSelector).should(($title) => {
+    const titleText = cleanTitleString($title.text())
+    return expect(titleText).to.contain(resource.title)
   })
 }
 
@@ -74,10 +92,15 @@ const checkHealthByBinaryRequest = (resource: Resource) => {
 const checkHealthByScraperRequest = (
   resource: Resource,
   {
+    titleSelector = 'title',
     apikey,
     render = false,
     premium = false,
-  }: { apikey: string; render?: boolean; premium?: boolean },
+  }: CheckHealthOptions & {
+    apikey: string
+    render?: boolean
+    premium?: boolean
+  },
 ) => {
   let url = `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
     resource.url,
@@ -105,8 +128,10 @@ const checkHealthByScraperRequest = (
     timeout: 60000,
   }).then((response) => {
     const document = new DOMParser().parseFromString(response.body, 'text/html')
+    const titleElement = document.querySelector(titleSelector)
+    const titleElementText = cleanTitleString(titleElement?.textContent || '')
 
-    return expect(cleanTitleString(document.title)).to.contain(resource.title)
+    return expect(titleElementText).to.contain(resource.title)
   })
 }
 
