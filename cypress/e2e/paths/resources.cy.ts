@@ -17,6 +17,11 @@ const checkResourceHealth = (resource: Resource) => {
         domain: '.youtube.com',
       })
       return cy.checkHealthByUrlRequest(resource)
+    case 'programmingpercy.tech':
+    case 'gogognome.nl':
+      return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h1' })
+    case 'blob42.xyz':
+      return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h3' })
     case 'thevaluable.dev':
     case 'usehooks-ts.com':
     case 'developer.ibm.com':
@@ -28,6 +33,12 @@ const checkResourceHealth = (resource: Resource) => {
     case 'app.codecrafters.io':
     case 'animatedbackgrounds.me':
     case 'git.herrbischoff.com':
+    case 'linux.org':
+    case 'bash.cyberciti.biz':
+    case 'replit.com':
+    case 'conventionalcommits.org':
+    case 'git.herrbischoff.com':
+    case 'harrisoncramer.me':
     case 'linux.org':
     case 'bash.cyberciti.biz':
       return cy.checkHealthByVisit(resource)

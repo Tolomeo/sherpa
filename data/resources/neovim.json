@@ -285,7 +285,7 @@
     "type": ["collection"]
   },
   {
-    "title": "vim out of the box",
+    "title": "Neovim",
     "url": "https://www.reddit.com/r/neovim",
     "type": ["community"]
   },
@@ -433,7 +433,7 @@
     "source": "youtube.com/@ThePrimeagen"
   },
   {
-    "title": "Supercharged LaTeX using Vim_Neovim, VimTeX, and snippets",
+    "title": "Supercharged LaTeX using Vim/Neovim, VimTeX, and snippets",
     "url": "https://www.ejmastnak.com/tutorials/vim-latex/intro/",
     "type": ["course"]
   },
@@ -490,7 +490,7 @@
     "type": ["example", "reference"]
   },
   {
-    "title": "Learn How To Use NeoVim As an IDE",
+    "title": "Learn How To Use NeoVim As an IDE",
     "url": "https://programmingpercy.tech/blog/learn-how-to-use-neovim-as-ide/",
     "type": ["guide"]
   },

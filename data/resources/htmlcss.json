@@ -152,12 +152,6 @@
     "type": ["course"]
   },
   {
-    "title": "Frontend Mentor Challenges",
-    "url": "https://www.youtube.com/playlist?list=PLgBH1CvjOA63Xvt0BaeQ7zL4KXX96Wbgp",
-    "type": ["tutorial", "collection"],
-    "source": "youtube.com/c/FlorinPop"
-  },
-  {
     "title": "CSS Challenges",
     "url": "https://css-challenges.com",
     "type": ["exercise", "collection"]
@@ -591,7 +585,7 @@
     "type": ["guide"]
   },
   {
-    "title": "Learn CSS the easy way",
+    "title": "CSS Tip",
     "url": "https://css-tip.com/",
     "type": ["tutorial", "collection"]
   },

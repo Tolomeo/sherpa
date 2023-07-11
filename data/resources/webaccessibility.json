@@ -282,7 +282,7 @@
     "type": ["reference"]
   },
   {
-    "title": "WAI-ARIA 1.1 Cheat Sheet",
+    "title": "WAI-ARIA 1.2 Cheat Sheet",
     "url": "https://www.digitala11y.com/wai-aria-1-1-cheat-sheet",
     "type": ["reference"]
   },
@@ -399,7 +399,7 @@
     "type": ["reference"]
   },
   {
-    "title": "A beginner’s guide to manual accessibility testing",
+    "title": "A beginner's guide to manual accessibility testing",
     "url": "https://blog.pope.tech/2023/03/01/a-beginners-guide-to-manual-accessibility-testing/",
     "type": ["guide"]
   },
@@ -419,7 +419,7 @@
     "type": ["reference"]
   },
   {
-    "title": "Integrating Accessibility into the Design and Development Process: A Shift Left Approach",
+    "title": "Shift Left Accessibility in Design, Development and Testing",
     "url": "https://www.digitala11y.com/connecting-dots-of-an-accessibility-audit/",
     "type": ["guide"]
   },

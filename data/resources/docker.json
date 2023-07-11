@@ -434,11 +434,6 @@
     "type": ["reference"]
   },
   {
-    "title": "Docker Developer Newsletter",
-    "url": "https://www.docker.com/newsletter-subscription",
-    "type": ["community"]
-  },
-  {
     "title": "wasm-docker-better-together",
     "url": "https://github.com/collabnix/wasm-docker-better-together",
     "type": ["reference", "collection"]
@@ -498,7 +493,7 @@
     "type": ["guide"]
   },
   {
-    "title": "What’s the Difference Between Docker and Kubernetes?",
+    "title": "What's the Difference Between Docker and Kubernetes?",
     "url": "https://cloudnativenow.com/features/whats-the-difference-between-docker-and-kubernetes/",
     "type": ["guide"]
   },

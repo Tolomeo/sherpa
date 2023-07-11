@@ -326,7 +326,7 @@
     "type": ["guide", "opinion"]
   },
   {
-    "title": "useHooks - Easy to understand React Hook recipes",
+    "title": "useHooks",
     "url": "https://usehooks.com",
     "type": ["example", "collection", "reference"]
   },
@@ -476,13 +476,13 @@
     "type": ["course"]
   },
   {
-    "title": "React.js: The Documentary",
+    "title": "Origin Story: How A Small Team of Developers Created React.js at Facebook",
     "url": "https://www.youtube.com/watch?v=8pDqJVdNa44",
     "type": ["guide"],
     "source": "youtube.com/@Honeypotio"
   },
   {
-    "title": "Data Binding in React",
+    "title": "Data binding in React",
     "url": "https://www.joshwcomeau.com/react/data-binding/",
     "type": ["guide"]
   },

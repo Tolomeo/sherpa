@@ -3,7 +3,7 @@ name: Resources health-check
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 */10 * *' # runs tests at 12:00 AM, every 10 days
+    - cron: '0 0 15 * *' # At 12:00 AM, on day 15 of the month
 
 jobs:
   Health-check:
