@@ -1,622 +1,502 @@
 [
   {
     "title": "The Beginner's Guide to React",
-    "url": "https://egghead.io/courses/the-beginner-s-guide-to-react",
-    "type": ["course"]
+    "url": "https://egghead.io/courses/the-beginner-s-guide-to-react"
   },
   {
     "title": "How To Code in React.js",
     "url": "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-react-js",
-    "type": ["guide", "collection"],
     "source": "digitalocean.com/community"
   },
   {
     "title": "Fundamentals of Redux Course from Dan Abramov",
-    "url": "https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867",
-    "type": ["course"]
+    "url": "https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867"
   },
   {
     "title": "Building React Applications with Idiomatic Redux",
-    "url": "https://egghead.io/courses/building-react-applications-with-idiomatic-redux",
-    "type": ["course"]
+    "url": "https://egghead.io/courses/building-react-applications-with-idiomatic-redux"
   },
   {
     "title": "Apply Redux to a Modern React Hooks Application",
-    "url": "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37",
-    "type": ["course"]
+    "url": "https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37"
   },
   {
     "title": "Component-driven development in React",
-    "url": "https://egghead.io/courses/component-driven-development-in-react-e0bf",
-    "type": ["course"]
+    "url": "https://egghead.io/courses/component-driven-development-in-react-e0bf"
   },
   {
     "title": "Build Advanced Components with React Hooks",
-    "url": "https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc",
-    "type": ["course"]
+    "url": "https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc"
   },
   {
     "title": "Learn TDD in React",
-    "url": "https://learntdd.in/react",
-    "type": ["guide"]
+    "url": "https://learntdd.in/react"
   },
   {
     "title": "React Testing Library Tutorial",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ",
-    "type": ["course"],
     "source": "youtube.com/@NetNinja"
   },
   {
     "title": "Develop Accessible Web Apps with React",
-    "url": "https://egghead.io/courses/develop-accessible-web-apps-with-react",
-    "type": ["tutorial", "collection"]
+    "url": "https://egghead.io/courses/develop-accessible-web-apps-with-react"
   },
   {
     "title": "awesome-react",
-    "url": "https://github.com/enaqx/awesome-react",
-    "type": ["collection"]
+    "url": "https://github.com/enaqx/awesome-react"
   },
   {
     "title": "awesome-redux",
-    "url": "https://github.com/xgrommx/awesome-redux",
-    "type": ["collection"]
+    "url": "https://github.com/xgrommx/awesome-redux"
   },
   {
     "title": "6 Fun React Project Ideas",
-    "url": "https://daveceddia.com/react-practice-projects",
-    "type": ["guide"]
+    "url": "https://daveceddia.com/react-practice-projects"
   },
   {
     "title": "React Tutorial: Learn React JS",
-    "url": "https://scrimba.com/learn/learnreact",
-    "type": ["course"]
+    "url": "https://scrimba.com/learn/learnreact"
   },
   {
     "title": "The React Handbook",
-    "url": "https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795",
-    "type": ["reference", "guide"]
+    "url": "https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795"
   },
   {
     "title": "React JS Frontend Web Development for Beginners",
-    "url": "https://www.udemy.com/course/react-tutorial",
-    "type": ["course"]
+    "url": "https://www.udemy.com/course/react-tutorial"
   },
   {
     "title": "React with Redux, React-Router, Hooks and Auth0",
-    "url": "https://www.udemy.com/course/modern-react",
-    "type": ["course"]
+    "url": "https://www.udemy.com/course/modern-react"
   },
   {
     "title": "Build Advanced Components with React Hooks",
-    "url": "https://egghead.io/courses/build-advanced-component-with-react-hooks-cd6a",
-    "type": ["course"]
+    "url": "https://egghead.io/courses/build-advanced-component-with-react-hooks-cd6a"
   },
   {
     "title": "Design Systems with React and Typescript in Storybook",
-    "url": "https://egghead.io/courses/design-systems-with-react-and-typescript-in-storybook",
-    "type": ["course"]
+    "url": "https://egghead.io/courses/design-systems-with-react-and-typescript-in-storybook"
   },
   {
     "title": "JavaScript testing tutorial Archives",
-    "url": "https://wanago.io/courses/javascript-testing-tutorial",
-    "type": ["guide", "collection"]
+    "url": "https://wanago.io/courses/javascript-testing-tutorial"
   },
   {
     "title": "React by Example",
-    "url": "https://reactbyexample.github.io",
-    "type": ["reference"]
+    "url": "https://reactbyexample.github.io"
   },
   {
     "title": "React Express",
-    "url": "http://www.react.express",
-    "type": ["reference"]
+    "url": "http://www.react.express"
   },
   {
     "title": "learn-react-app",
-    "url": "https://github.com/tyroprogrammer/learn-react-app",
-    "type": ["course"]
+    "url": "https://github.com/tyroprogrammer/learn-react-app"
   },
   {
     "title": "Redux Tutorial: An Overview and Walkthrough",
-    "url": "https://www.taniarascia.com/redux-react-guide",
-    "type": ["guide"]
+    "url": "https://www.taniarascia.com/redux-react-guide"
   },
   {
     "title": "Mithi's Epic React Exercises",
-    "url": "https://epic-react-exercises.vercel.app",
-    "type": ["exercise", "collection"]
+    "url": "https://epic-react-exercises.vercel.app"
   },
   {
     "title": "Thinking in React Hooks",
-    "url": "https://wattenberger.com/blog/react-hooks",
-    "type": ["guide"]
+    "url": "https://wattenberger.com/blog/react-hooks"
   },
   {
     "title": "30-Days-Of-React",
-    "url": "https://github.com/Asabeneh/30-Days-Of-React",
-    "type": ["course"]
+    "url": "https://github.com/Asabeneh/30-Days-Of-React"
   },
   {
     "title": "A Complete Guide to React Router: Everything You Need to Know",
-    "url": "https://ui.dev/react-router-tutorial",
-    "type": ["guide"]
+    "url": "https://ui.dev/react-router-tutorial"
   },
   {
     "title": "A visual guide to React Mental models",
-    "url": "https://obedparla.com/code/a-visual-guide-to-react-mental-models",
-    "type": ["guide"]
+    "url": "https://obedparla.com/code/a-visual-guide-to-react-mental-models"
   },
   {
     "title": "React as a UI Runtime",
-    "url": "https://overreacted.io/react-as-a-ui-runtime",
-    "type": ["guide"]
+    "url": "https://overreacted.io/react-as-a-ui-runtime"
   },
   {
     "title": "Creating Our Own React From Scratch",
-    "url": "https://itnext.io/creating-our-own-react-from-scratch-82dd6356676d",
-    "type": ["guide"]
+    "url": "https://itnext.io/creating-our-own-react-from-scratch-82dd6356676d"
   },
   {
     "title": "bulletproof-react",
-    "url": "https://github.com/alan2207/bulletproof-react",
-    "type": ["reference", "collection"]
+    "url": "https://github.com/alan2207/bulletproof-react"
   },
   {
     "title": "Build your own React",
-    "url": "https://pomb.us/build-your-own-react",
-    "type": ["guide"]
+    "url": "https://pomb.us/build-your-own-react"
   },
   {
     "title": "A Complete Guide to useEffect",
-    "url": "https://overreacted.io/a-complete-guide-to-useeffect",
-    "type": ["guide"]
+    "url": "https://overreacted.io/a-complete-guide-to-useeffect"
   },
   {
     "title": "Modernizing a Legacy Redux Application with React Hooks",
-    "url": "https://egghead.io/courses/modernizing-a-legacy-redux-application-with-react-hooks-c528",
-    "type": ["course"]
+    "url": "https://egghead.io/courses/modernizing-a-legacy-redux-application-with-react-hooks-c528"
   },
   {
     "title": "A (Mostly) Complete Guide to React Rendering Behavior",
-    "url": "https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior",
-    "type": ["guide"]
+    "url": "https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior"
   },
   {
     "title": "Storybook Tutorials",
-    "url": "https://storybook.js.org/tutorials",
-    "type": ["tutorial", "collection"]
+    "url": "https://storybook.js.org/tutorials"
   },
   {
     "title": "SPA SEO: Optimize Your Single-Page App for Google",
-    "url": "https://snipcart.com/blog/spa-seo",
-    "type": ["guide"]
+    "url": "https://snipcart.com/blog/spa-seo"
   },
   {
     "title": "Build your own React Router",
-    "url": "https://ui.dev/build-your-own-react-router",
-    "type": ["guide"]
+    "url": "https://ui.dev/build-your-own-react-router"
   },
   {
     "title": "8 React.js Project Ideas to Help You Start Learning by Doing",
-    "url": "https://www.freecodecamp.org/news/8-reactjs-project-ideas-to-start-learning-by-doing",
-    "type": ["exercise", "collection"]
+    "url": "https://www.freecodecamp.org/news/8-reactjs-project-ideas-to-start-learning-by-doing"
   },
   {
     "title": "reactjs-interview-questions",
-    "url": "https://github.com/sudheerj/reactjs-interview-questions",
-    "type": ["reference"]
+    "url": "https://github.com/sudheerj/reactjs-interview-questions"
   },
   {
     "title": "Why React Hooks?",
-    "url": "https://ui.dev/why-react-hooks",
-    "type": ["guide"]
+    "url": "https://ui.dev/why-react-hooks"
   },
   {
     "title": "CSS-in-JS or CSS-and-JS",
-    "url": "https://johnpolacek.github.io/css-in-js-or-css-and-js",
-    "type": ["reference"]
+    "url": "https://johnpolacek.github.io/css-in-js-or-css-and-js"
   },
   {
     "title": "What Web Frameworks Solve And How To Do Without Them",
-    "url": "https://www.smashingmagazine.com/2022/01/web-frameworks-guide-part1",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2022/01/web-frameworks-guide-part1"
   },
   {
     "title": "Building a Custom React Renderer",
     "url": "https://www.youtube.com/watch?v=CGpMlWVcHok",
-    "type": ["guide", "community"],
     "source": "youtube.com/@reactconf8476"
   },
   {
     "title": "React for Vue developers",
-    "url": "https://sebastiandedeyne.com/react-for-vue-developers",
-    "type": ["guide"]
+    "url": "https://sebastiandedeyne.com/react-for-vue-developers"
   },
   {
     "title": "The Story of React",
     "url": "https://www.youtube.com/watch?v=Wm_xI7KntDs",
-    "type": ["guide"],
     "source": "youtube.com/@uidotdev"
   },
   {
     "title": "React.js cheatsheet",
-    "url": "https://devhints.io/react",
-    "type": ["reference"]
+    "url": "https://devhints.io/react"
   },
   {
     "title": "SVGR Playground",
-    "url": "https://react-svgr.com/playground",
-    "type": ["generator"]
+    "url": "https://react-svgr.com/playground"
   },
   {
     "title": "Collection of React Hooks",
-    "url": "https://nikgraf.github.io/react-hooks",
-    "type": ["reference"]
+    "url": "https://nikgraf.github.io/react-hooks"
   },
   {
     "title": "Hooks Cheatsheet",
-    "url": "https://react-hooks-cheatsheet.com",
-    "type": ["reference"]
+    "url": "https://react-hooks-cheatsheet.com"
   },
   {
     "title": "beautiful-react-hooks",
-    "url": "https://antonioru.github.io/beautiful-react-hooks",
-    "type": ["reference"]
+    "url": "https://antonioru.github.io/beautiful-react-hooks"
   },
   {
     "title": "JavaScript, React, TypeScript, and other Web Tech Articles and Tutorials - ui.dev",
-    "url": "https://ui.dev/blog/",
-    "type": ["reference"]
+    "url": "https://ui.dev/blog/"
   },
   {
     "title": "React Digest",
-    "url": "https://reactdigest.net",
-    "type": ["community"]
+    "url": "https://reactdigest.net"
   },
   {
     "title": "Building a Simple Virtual DOM from Scratch",
-    "url": "https://dev.to/ycmjason/building-a-simple-virtual-dom-from-scratch-3d05",
-    "type": ["tutorial"]
+    "url": "https://dev.to/ycmjason/building-a-simple-virtual-dom-from-scratch-3d05"
   },
   {
     "title": "awesome-react-components",
-    "url": "https://github.com/brillout/awesome-react-components",
-    "type": ["reference", "collection"]
+    "url": "https://github.com/brillout/awesome-react-components"
   },
   {
     "title": "50 Projects for React & the Static Web",
-    "url": "https://50reactprojects.com",
-    "type": ["exercise", "book"]
+    "url": "https://50reactprojects.com"
   },
   {
     "title": "Practical React Query",
-    "url": "https://tkdodo.eu/blog/practical-react-query",
-    "type": ["course"]
+    "url": "https://tkdodo.eu/blog/practical-react-query"
   },
   {
     "title": "React Storybook Tutorial",
     "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwhC-j3x3t9la8-GQJGViDQk",
-    "type": ["course"],
     "source": "youtube.com/c/Codevolution"
   },
   {
     "title": "Internationalization in React",
-    "url": "https://arsfutura.com/magazine/internationalization-in-react",
-    "type": ["guide"]
+    "url": "https://arsfutura.com/magazine/internationalization-in-react"
   },
   {
     "title": "Build Yourself a Redux",
-    "url": "https://zapier.com/engineering/how-to-build-redux/",
-    "type": ["tutorial"]
+    "url": "https://zapier.com/engineering/how-to-build-redux/"
   },
   {
     "title": "Retrofit a Test Suite in an Existing React Apps",
-    "url": "https://www.javascripttutorials.net/retrofit-a-test-suite-in-an-existing-react-apps",
-    "type": ["guide"]
+    "url": "https://www.javascripttutorials.net/retrofit-a-test-suite-in-an-existing-react-apps"
   },
   {
     "title": "React Testing Course for Beginners – Code and Test 3 Apps",
     "url": "https://www.youtube.com/watch?v=8vfQ6SWBZ-U",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "React Forms - Formik vs. Hook-Form vs. Final-Form",
-    "url": "https://blog.appseed.us/react-forms-formik-vs-hookform-vs-finalform",
-    "type": ["guide", "opinion"]
+    "url": "https://blog.appseed.us/react-forms-formik-vs-hookform-vs-finalform"
   },
   {
     "title": "useHooks",
-    "url": "https://usehooks.com",
-    "type": ["example", "collection", "reference"]
+    "url": "https://usehooks.com"
   },
   {
     "title": "Examples of large production-grade, open-source React apps",
-    "url": "https://maxrozen.com/examples-of-large-production-grade-open-source-react-apps",
-    "type": ["example", "collection"]
+    "url": "https://maxrozen.com/examples-of-large-production-grade-open-source-react-apps"
   },
   {
     "title": "Advanced React component composition",
-    "url": "https://frontendmastery.com/posts/advanced-react-component-composition-guide",
-    "type": ["guide"]
+    "url": "https://frontendmastery.com/posts/advanced-react-component-composition-guide"
   },
   {
     "title": "React TypeScript Cheatsheets",
-    "url": "https://react-typescript-cheatsheet.netlify.app",
-    "type": ["guide", "reference"]
+    "url": "https://react-typescript-cheatsheet.netlify.app"
   },
   {
     "title": "React Typescript Course",
     "url": "https://www.youtube.com/playlist?list=PLG-Mk4wQm9_LyKE5EwoZz2_GGXR-zJ5Ml",
-    "type": ["course"],
     "source": "youtube.com/c/TechbaseDev"
   },
   {
     "title": "Modern Redux with Redux Toolkit (RTK) and TypeScript",
-    "url": "https://egghead.io/courses/modern-redux-with-redux-toolkit-rtk-and-typescript-64f243c8",
-    "type": ["course"]
+    "url": "https://egghead.io/courses/modern-redux-with-redux-toolkit-rtk-and-typescript-64f243c8"
   },
   {
     "title": "react-redux-typescript-guide",
-    "url": "https://github.com/piotrwitek/react-redux-typescript-guide",
-    "type": ["guide"]
+    "url": "https://github.com/piotrwitek/react-redux-typescript-guide"
   },
   {
     "title": "React Testing Library Crash Course",
     "url": "https://www.youtube.com/watch?v=GLSSRtnNY0g",
-    "type": ["course"],
     "source": "youtube.com/@laithacademy"
   },
   {
     "title": "React Redux with TypeScript Crash Course",
     "url": "https://www.youtube.com/watch?v=udr2rx_B99w",
-    "type": ["guide"],
     "source": "youtube.com/@laithacademy"
   },
   {
     "title": "Learn React 18: The Complete React Developer Course",
     "url": "https://www.youtube.com/watch?v=l4G2MVgXFkw",
-    "type": ["course"],
     "source": "youtube.com/@envatotuts"
   },
   {
     "title": "React State Management",
     "url": "https://www.youtube.com/watch?v=-bEzt5ISACA",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Improving React Interaction Times by 4x",
-    "url": "https://www.causal.app/blog/react-perf",
-    "type": ["guide"]
+    "url": "https://www.causal.app/blog/react-perf"
   },
   {
     "title": "How to use CSS variables with React",
-    "url": "https://www.joshwcomeau.com/css/css-variables-for-react-devs/",
-    "type": ["guide"]
+    "url": "https://www.joshwcomeau.com/css/css-variables-for-react-devs/"
   },
   {
     "title": "React Router in Depth",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9iVKmtNuCeIswnQ97in2GGf",
-    "type": ["guide"],
     "source": "youtube.com/@NetNinja"
   },
   {
     "title": "React Best Practices: How to Write Better React Apps",
-    "url": "https://www.rafaelquintanilha.com/react-best-practices-how-to-write-better-react-apps/",
-    "type": ["guide"]
+    "url": "https://www.rafaelquintanilha.com/react-best-practices-how-to-write-better-react-apps/"
   },
   {
     "title": "Building a Design System from scratch",
-    "url": "https://blog.maximeheckel.com/posts/building-a-design-system-from-scratch/",
-    "type": ["tutorial"]
+    "url": "https://blog.maximeheckel.com/posts/building-a-design-system-from-scratch/"
   },
   {
     "title": "The Beginner's Guide to React Testing",
-    "url": "https://maxrozen.com/beginners-guide-to-react-testing",
-    "type": ["guide"]
+    "url": "https://maxrozen.com/beginners-guide-to-react-testing"
   },
   {
     "title": "TypeScript and React",
-    "url": "https://fettblog.eu/typescript-react/",
-    "type": ["course"]
+    "url": "https://fettblog.eu/typescript-react/"
   },
   {
     "title": "system-design-react-code-examples",
-    "url": "https://github.com/madhu-sagar/system-design-react-code-examples",
-    "type": ["example"]
+    "url": "https://github.com/madhu-sagar/system-design-react-code-examples"
   },
   {
     "title": "Implementing 3D graphics in React",
-    "url": "https://blog.openreplay.com/implementing-3d-graphics-in-react",
-    "type": ["tutorial"]
+    "url": "https://blog.openreplay.com/implementing-3d-graphics-in-react"
   },
   {
     "title": "React I Love You, But You're Bringing Me Down",
-    "url": "https://marmelab.com/blog/2022/09/20/react-i-love-you.html",
-    "type": ["opinion"]
+    "url": "https://marmelab.com/blog/2022/09/20/react-i-love-you.html"
   },
   {
     "title": "The JavaScript Concepts You Should Know Before Learning React",
-    "url": "https://www.freecodecamp.org/news/javascript-concepts-you-should-know-before-learning-react",
-    "type": ["guide"]
+    "url": "https://www.freecodecamp.org/news/javascript-concepts-you-should-know-before-learning-react"
   },
   {
     "title": "Redux Toolkit Tutorial",
     "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3",
-    "type": ["course"],
     "source": "youtube.com/@Codevolution"
   },
-
   {
     "title": "ChatGPT Clone – OpenAI API and React Tutorial",
     "url": "https://www.youtube.com/watch?v=98bGwOYoEGg",
-    "type": ["tutorial"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "A Historical Reference of React Criticism",
-    "url": "https://www.zachleat.com/web/react-criticism/",
-    "type": ["guide"]
+    "url": "https://www.zachleat.com/web/react-criticism/"
   },
   {
     "title": "Awesome Web Based React",
-    "url": "https://awesome-web-react.js.org/",
-    "type": ["collection", "reference"]
+    "url": "https://awesome-web-react.js.org/"
   },
   {
     "title": "React Query Tutorial for Beginners",
     "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwjTELCrPrcZlo6blLBUspd2",
-    "type": ["course"],
     "source": "youtube.com/@Codevolution"
   },
   {
     "title": "React with TypeScript Tutorial",
-    "url": "https://www.totaltypescript.com/tutorials/react-with-typescript",
-    "type": ["course"]
+    "url": "https://www.totaltypescript.com/tutorials/react-with-typescript"
   },
   {
     "title": "Origin Story: How A Small Team of Developers Created React.js at Facebook",
     "url": "https://www.youtube.com/watch?v=8pDqJVdNa44",
-    "type": ["guide"],
     "source": "youtube.com/@Honeypotio"
   },
   {
     "title": "Data binding in React",
-    "url": "https://www.joshwcomeau.com/react/data-binding/",
-    "type": ["guide"]
+    "url": "https://www.joshwcomeau.com/react/data-binding/"
   },
   {
     "title": "React Context: The Detailed Guide",
-    "url": "https://deadsimplechat.com/blog/react-context-tutorial/",
-    "type": ["guide"]
+    "url": "https://deadsimplechat.com/blog/react-context-tutorial/"
   },
   {
     "title": "React Testing Tutorial",
     "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd",
-    "type": ["course"],
     "source": "youtube.com/@Codevolution"
   },
   {
     "title": "React TypeScript Tutorial for Beginners",
     "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK",
-    "type": ["course"],
     "source": "youtube.com/@Codevolution"
   },
   {
     "title": "React treeview component",
-    "url": "https://www.joshuawootonn.com/react-treeview-component",
-    "type": ["tutorial"]
+    "url": "https://www.joshuawootonn.com/react-treeview-component"
   },
   {
     "title": "Learn React 18 with Redux Toolkit – Full Tutorial for Beginners",
     "url": "https://www.youtube.com/watch?v=2-crBg6wpp0",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "React Basics",
-    "url": "https://www.coursera.org/learn/react-basics",
-    "type": ["course"]
+    "url": "https://www.coursera.org/learn/react-basics"
   },
   {
     "title": "React Styled Components",
     "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwgu-G08-7ovbN9EyhF_cltM",
-    "type": ["course"],
     "source": "youtube.com/@Codevolution"
   },
   {
     "title": "React Libraries",
-    "url": "https://www.reactlibraries.com/",
-    "type": ["reference"]
+    "url": "https://www.reactlibraries.com/"
   },
   {
     "title": "Higher Order Components in React",
-    "url": "https://deadsimplechat.com/blog/higher-order-componets-in-react/",
-    "type": ["guide"]
+    "url": "https://deadsimplechat.com/blog/higher-order-componets-in-react/"
   },
   {
     "title": "How to handle errors in React: full guide",
-    "url": "https://www.developerway.com/posts/how-to-handle-errors-in-react",
-    "type": ["guide"]
+    "url": "https://www.developerway.com/posts/how-to-handle-errors-in-react"
   },
   {
     "title": "React Router 6 – Full Course",
     "url": "https://www.youtube.com/watch?v=nDGA3km5He4",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "React reconciliation: how it works and why should we care",
-    "url": "https://www.developerway.com/posts/reconciliation-in-react",
-    "type": ["guide"]
+    "url": "https://www.developerway.com/posts/reconciliation-in-react"
   },
   {
     "title": "The Key To Good Component Design Is Selfishness",
-    "url": "https://www.smashingmagazine.com/2023/01/key-good-component-design-selfishness/",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2023/01/key-good-component-design-selfishness/"
   },
   {
     "title": "Advanced React",
-    "url": "https://www.coursera.org/learn/advanced-react",
-    "type": ["course"]
+    "url": "https://www.coursera.org/learn/advanced-react"
   },
   {
     "title": "React Hook Form Tutorials",
     "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwjmgBr1327BA5bVXoQH-w5s",
-    "type": ["course"],
     "source": "youtube.com/@Codevolution"
   },
   {
     "title": "Using WebSockets in a Redux Application",
-    "url": "https://www.taniarascia.com/websockets-in-redux/",
-    "type": ["tutorial"]
+    "url": "https://www.taniarascia.com/websockets-in-redux/"
   },
   {
     "title": "How to Drag and Drop in React",
-    "url": "https://www.robinwieruch.de/react-drag-and-drop/",
-    "type": ["tutorial"]
+    "url": "https://www.robinwieruch.de/react-drag-and-drop/"
   },
   {
     "title": "Rethinking React best practices",
-    "url": "https://frontendmastery.com/posts/rethinking-react-best-practices/",
-    "type": ["guide"]
+    "url": "https://frontendmastery.com/posts/rethinking-react-best-practices/"
   },
   {
     "title": "The Interactive Guide to Rendering in React",
-    "url": "https://ui.dev/why-react-renders",
-    "type": ["guide"]
+    "url": "https://ui.dev/why-react-renders"
   },
   {
     "title": "Zustand React State Management Course",
     "url": "https://www.youtube.com/watch?v=fZPgBnL2x-Q",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "A Guide To Redux Toolkit With TypeScript",
-    "url": "https://www.smashingmagazine.com/2023/05/guide-redux-toolkit-typescript/",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2023/05/guide-redux-toolkit-typescript/"
   },
   {
     "title": "Say no to \"flickering\" UI: useLayoutEffect, painting and browsers story",
-    "url": "https://www.developerway.com/posts/no-more-flickering-ui",
-    "type": ["guide"]
+    "url": "https://www.developerway.com/posts/no-more-flickering-ui"
   },
   {
     "title": "Demystifying Debugging With React Developer Tools",
-    "url": "https://www.toptal.com/react/debugging-react-developer-tools",
-    "type": ["guide"]
+    "url": "https://www.toptal.com/react/debugging-react-developer-tools"
   },
   {
     "title": "Dan Abramov explores React Server Components",
     "url": "https://www.youtube.com/watch?v=Fctw7WjmxpU",
-    "type": ["guide", "community"],
     "source": "youtube.com/@bholmesdev"
   },
   {
     "title": "React Blog",
-    "url": "https://react.dev/blog",
-    "type": ["reference"]
+    "url": "https://react.dev/blog"
   }
 ]

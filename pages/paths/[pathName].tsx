@@ -8,8 +8,6 @@ import {
   hasPrevPaths,
   hasNextPaths,
   hasExtraResources,
-  resourceTypes,
-  ResourceTypes,
   isSubPath,
   isSubTopic,
   hasSubPathExtraResources,
@@ -31,7 +29,6 @@ import { List as PathsList } from '../../src/paths'
 import {
   HelpDrawer,
   HelpDrawerToggle,
-  Resources as ResourcesHelp,
   Paths as PathsHelp,
 } from '../../src/help'
 import {
@@ -46,7 +43,6 @@ interface Params extends ParsedUrlQuery {
 interface StaticProps {
   paths: Paths
   path: Path
-  resourceTypes: ResourceTypes
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -66,7 +62,6 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
     props: {
       paths,
       path,
-      resourceTypes,
     },
   }
 }
@@ -104,7 +99,7 @@ const PageHead = ({ path }: Pick<Props, 'path'>) => (
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
 
-export default function PathPage({ path, paths, resourceTypes }: Props) {
+export default function PathPage({ path, paths }: Props) {
   return (
     <>
       <PageHead path={path} />
@@ -197,12 +192,6 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
               </Typography>
               <Box pb={3}>
                 <PathsHelp />
-              </Box>
-              <Typography variant="h5" component="p">
-                About resources
-              </Typography>
-              <Box>
-                <ResourcesHelp resourceTypes={resourceTypes} />
               </Box>
             </Stack>
           </HelpDrawer>

@@ -9,10 +9,7 @@ import {
   TimelineConnector,
   TimelineContent,
   TimelineDot,
-  Box,
-  Stack,
 } from '../theme'
-import { ResourceTypeLabel } from '../resourceTypes'
 
 type Props = {
   resources: Resource[]
@@ -23,7 +20,6 @@ const timelineItemTestId = 'resources.timeline.item'
 const timelineItemLinkTestId = 'resources.timeline.item.link'
 const timelineItemTitleTestId = 'resources.timeline.item.title'
 const timelineItemSourceTestId = 'resources.timeline.item.source'
-const timelineItemTypeTestId = 'resources.timeline.item.type'
 
 const ResourcesTimeline = ({ resources }: Props) => {
   return (
@@ -70,15 +66,6 @@ const ResourcesTimeline = ({ resources }: Props) => {
               >
                 {resource.title}
               </Typography>
-              <Stack direction="row" spacing={1.5} component="span">
-                {resource.type.map((type) => (
-                  <ResourceTypeLabel
-                    resourceType={type}
-                    data-testid={timelineItemTypeTestId}
-                    key={type}
-                  />
-                ))}
-              </Stack>
             </Link>
           </TimelineContent>
         </TimelineItem>

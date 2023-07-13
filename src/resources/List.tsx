@@ -1,7 +1,6 @@
 import React from 'react'
 import { Resource } from '../../data'
-import { Link, Typography, List, Box, Stack } from '../theme'
-import { ResourceTypeLabel } from '../resourceTypes'
+import { Link, Typography, List, Box } from '../theme'
 
 type Props = {
   resources: Array<Resource>
@@ -12,7 +11,6 @@ const resourcesListItemTestId = 'resources.list.item'
 const resourcesListItemLinkTestId = 'resources.list.item.link'
 const resourcesListItemTitleTestId = 'resources.list.item.title'
 const resourcesListItemSourceTestId = 'resources.list.item.source'
-const resourcesListItemTypeTestId = 'resources.list.item.type'
 
 const ResourcesList = ({ resources }: Props) => {
   return (
@@ -42,15 +40,6 @@ const ResourcesList = ({ resources }: Props) => {
               >
                 {resource.title}
               </Typography>
-              <Stack direction="row" spacing={1.5} component="span">
-                {resource.type.map((type) => (
-                  <ResourceTypeLabel
-                    resourceType={type}
-                    key={type}
-                    data-testid={resourcesListItemTypeTestId}
-                  />
-                ))}
-              </Stack>
             </Link>
           </Box>
         ))}
