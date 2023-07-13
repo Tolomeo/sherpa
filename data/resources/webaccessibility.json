@@ -1,451 +1,365 @@
 [
   {
     "title": "Accessibility",
-    "url": "https://learn-the-web.algonquindesign.ca/topics/accessibility",
-    "type": ["guide"]
+    "url": "https://learn-the-web.algonquindesign.ca/topics/accessibility"
   },
   {
     "title": "Content accessibility",
-    "url": "https://learn-the-web.algonquindesign.ca/topics/content-accessibility",
-    "type": ["guide"]
+    "url": "https://learn-the-web.algonquindesign.ca/topics/content-accessibility"
   },
   {
     "title": "Accessibility for design",
-    "url": "https://learn-the-web.algonquindesign.ca/topics/accessibility-for-design",
-    "type": ["guide"]
+    "url": "https://learn-the-web.algonquindesign.ca/topics/accessibility-for-design"
   },
   {
     "title": "Introduction to Web Accessibility",
     "url": "https://www.edx.org/course/web-accessibility-introduction",
-    "type": ["course"],
     "source": "edx.org"
   },
   {
     "title": "Access Guide",
-    "url": "https://www.accessguide.io",
-    "type": ["guide", "collection"]
+    "url": "https://www.accessguide.io"
   },
   {
     "title": "A Complete Guide To Accessibility Tooling",
-    "url": "https://www.smashingmagazine.com/2021/06/complete-guide-accessibility-tooling",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2021/06/complete-guide-accessibility-tooling"
   },
   {
     "title": "A Complete Guide To Accessible Front-End Components",
-    "url": "https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components",
-    "type": ["guide", "reference", "collection"]
+    "url": "https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components"
   },
   {
     "title": "awesome-a11y",
-    "url": "https://github.com/brunopulis/awesome-a11y",
-    "type": ["reference", "collection"]
+    "url": "https://github.com/brunopulis/awesome-a11y"
   },
   {
     "title": "The A11Y Project",
-    "url": "https://www.a11yproject.com/posts",
-    "type": ["guide", "collection"]
+    "url": "https://www.a11yproject.com/posts"
   },
   {
     "title": "What is Web Accessibility?",
-    "url": "https://www.udacity.com/course/web-accessibility--ud891",
-    "type": ["course"]
+    "url": "https://www.udacity.com/course/web-accessibility--ud891"
   },
   {
     "title": "WebAIM: Articles",
-    "url": "https://webaim.org/articles",
-    "type": ["guide", "collection"]
+    "url": "https://webaim.org/articles"
   },
   {
     "title": "Accessible to all",
-    "url": "https://web.dev/accessible",
-    "type": ["guide", "collection"]
+    "url": "https://web.dev/accessible"
   },
   {
     "title": "The most useful accessibility testing tools and techniques",
-    "url": "https://blog.sapegin.me/all/accessibility-testing",
-    "type": ["reference", "collection"]
+    "url": "https://blog.sapegin.me/all/accessibility-testing"
   },
   {
     "title": "Testing Web Accessibility",
-    "url": "https://www.adrianbolonio.com/en/testing-web-accessibility-part-1",
-    "type": ["guide", "collection"]
+    "url": "https://www.adrianbolonio.com/en/testing-web-accessibility-part-1"
   },
   {
     "title": "How A Screen Reader User Accesses The Web",
-    "url": "https://www.smashingmagazine.com/2019/02/accessibility-webinar",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2019/02/accessibility-webinar"
   },
   {
     "title": "Inclusive Components",
-    "url": "https://inclusive-components.design",
-    "type": ["reference", "guide", "collection"]
+    "url": "https://inclusive-components.design"
   },
   {
     "title": "Web Accessibility: the Complete Learning Guide",
-    "url": "https://webdesign.tutsplus.com/series/web-accessibility-the-complete-learning-guide--cms-1301",
-    "type": ["guide", "collection"]
+    "url": "https://webdesign.tutsplus.com/series/web-accessibility-the-complete-learning-guide--cms-1301"
   },
   {
     "title": "Web Accessibility Guidebook for Developers",
-    "url": "https://www.telerik.com/blogs/web-accessibility-guidebook-for-developers",
-    "type": ["guide"]
+    "url": "https://www.telerik.com/blogs/web-accessibility-guidebook-for-developers"
   },
   {
     "title": "Accessibility Quick Guides",
-    "url": "https://www.pauljadam.com/guides.html",
-    "type": ["guide", "collection"]
+    "url": "https://www.pauljadam.com/guides.html"
   },
   {
     "title": "Resources for Developers | Web Accessibility Initiative (WAI)",
-    "url": "https://www.w3.org/WAI/roles/developers",
-    "type": ["guide", "collection"]
+    "url": "https://www.w3.org/WAI/roles/developers"
   },
   {
     "title": "Resources for Designers | Web Accessibility Initiative (WAI)",
-    "url": "https://www.w3.org/WAI/roles/designers",
-    "type": ["guide", "collection"]
+    "url": "https://www.w3.org/WAI/roles/designers"
   },
   {
     "title": "Resources for Content Writers | Web Accessibility Initiative (WAI)",
-    "url": "https://www.w3.org/WAI/roles/writers",
-    "type": ["guide", "collection"]
+    "url": "https://www.w3.org/WAI/roles/writers"
   },
   {
     "title": "Resources for Evaluators and Testers | Web Accessibility Initiative (WAI)",
-    "url": "https://www.w3.org/WAI/roles/testers",
-    "type": ["guide", "collection"]
+    "url": "https://www.w3.org/WAI/roles/testers"
   },
   {
     "title": "Resources for Managers | Web Accessibility Initiative (WAI)",
-    "url": "https://www.w3.org/WAI/roles/managers/",
-    "type": ["guide", "collection"]
+    "url": "https://www.w3.org/WAI/roles/managers/"
   },
   {
     "title": "Semantics to Screen Readers",
-    "url": "https://alistapart.com/article/semantics-to-screen-readers",
-    "type": ["guide"]
+    "url": "https://alistapart.com/article/semantics-to-screen-readers"
   },
   {
     "title": "The Importance Of Manual Accessibility Testing",
-    "url": "https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing"
   },
   {
     "title": "HTML test cases",
-    "url": "https://russmaxdesign.github.io/accessible-forms",
-    "type": ["reference"]
+    "url": "https://russmaxdesign.github.io/accessible-forms"
   },
   {
     "title": "Accessibility In Chrome DevTools",
-    "url": "https://www.smashingmagazine.com/2020/08/accessibility-chrome-devtools",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2020/08/accessibility-chrome-devtools"
   },
   {
     "title": "When CSS Isn’t Enough: JavaScript Requirements For Accessible Components",
-    "url": "https://www.smashingmagazine.com/2021/06/css-javascript-requirements-accessible-components",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2021/06/css-javascript-requirements-accessible-components"
   },
   {
     "title": "Writing HTML with accessibility in mind",
     "url": "https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412",
-    "type": ["guide"],
     "source": "medium.com/alistapart"
   },
   {
     "title": "Building the most inaccessible site possible with a perfect Lighthouse score",
-    "url": "https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score",
-    "type": ["guide"]
+    "url": "https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score"
   },
   {
     "title": "Alt Text as Poetry",
-    "url": "https://alt-text-as-poetry.net",
-    "type": ["reference"]
+    "url": "https://alt-text-as-poetry.net"
   },
   {
     "title": "Game accessibility guidelines",
-    "url": "http://gameaccessibilityguidelines.com",
-    "type": ["reference"]
+    "url": "http://gameaccessibilityguidelines.com"
   },
   {
     "title": "Good, Better, Best: Untangling The Complex World Of Accessible Patterns",
-    "url": "https://www.smashingmagazine.com/2021/03/good-better-best-untangling-complex-world-accessible-patterns",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2021/03/good-better-best-untangling-complex-world-accessible-patterns"
   },
   {
     "title": "Overlay Fact Sheet",
-    "url": "https://overlayfactsheet.com",
-    "type": ["reference"]
+    "url": "https://overlayfactsheet.com"
   },
   {
     "title": "The Business Case for Digital Accessibility",
-    "url": "https://www.w3.org/WAI/business-case",
-    "type": ["guide"]
+    "url": "https://www.w3.org/WAI/business-case"
   },
   {
     "title": "Accessibility for teams",
-    "url": "https://accessibility-for-teams.com",
-    "type": ["guide", "collection"]
+    "url": "https://accessibility-for-teams.com"
   },
   {
     "title": "Accessibility Myths",
-    "url": "https://a11ymyths.com",
-    "type": ["guide"]
+    "url": "https://a11ymyths.com"
   },
   {
     "title": "Disability Statistics",
-    "url": "https://dequeuniversity.com/resources/disability-statistics",
-    "type": ["reference"]
+    "url": "https://dequeuniversity.com/resources/disability-statistics"
   },
   {
     "title": "The world’s most accessible websites",
-    "url": "https://www.tooltester.com/en/blog/accessible-websites",
-    "type": ["guide"]
+    "url": "https://www.tooltester.com/en/blog/accessible-websites"
   },
   {
     "title": "Web Accessibility Evaluation Tools List",
-    "url": "https://www.w3.org/WAI/ER/tools",
-    "type": ["reference", "collection"]
+    "url": "https://www.w3.org/WAI/ER/tools"
   },
   {
     "title": "Checklist - The A11Y Project",
-    "url": "https://www.a11yproject.com/checklist",
-    "type": ["reference", "collection"]
+    "url": "https://www.a11yproject.com/checklist"
   },
   {
     "title": "WhoCanUse",
-    "url": "https://whocanuse.com",
-    "type": ["generator", "reference"]
+    "url": "https://whocanuse.com"
   },
   {
     "title": "accessibility-guide",
-    "url": "https://github.com/fejes713/accessibility-guide",
-    "type": ["reference"]
+    "url": "https://github.com/fejes713/accessibility-guide"
   },
   {
     "title": "Resources - Paul J. Adam",
-    "url": "https://www.pauljadam.com/resources.html",
-    "type": ["reference", "collection"]
+    "url": "https://www.pauljadam.com/resources.html"
   },
   {
     "title": "Screen Reader Keyboard Shortcuts and Gestures",
-    "url": "https://dequeuniversity.com/screenreaders",
-    "type": ["reference"]
+    "url": "https://dequeuniversity.com/screenreaders"
   },
   {
     "title": "A11Y Style Guide",
-    "url": "https://a11y-style-guide.com/style-guide",
-    "type": ["reference"]
+    "url": "https://a11y-style-guide.com/style-guide"
   },
   {
     "title": "Accessibility Cheatsheet",
-    "url": "https://moritzgiessmann.de/accessibility-cheatsheet",
-    "type": ["reference"]
+    "url": "https://moritzgiessmann.de/accessibility-cheatsheet"
   },
   {
     "title": "Web Content Accessibility Guidelines (WCAG) 2.1",
-    "url": "https://www.w3.org/TR/WCAG21",
-    "type": ["guide", "reference"]
+    "url": "https://www.w3.org/TR/WCAG21"
   },
   {
     "title": "hidde.blog",
-    "url": "https://hiddedevries.nl/en/blog",
-    "type": ["reference"]
+    "url": "https://hiddedevries.nl/en/blog"
   },
   {
     "title": "WebAIM",
-    "url": "https://webaim.org",
-    "type": ["reference"]
+    "url": "https://webaim.org"
   },
   {
     "title": "Adrian Roselli",
-    "url": "https://adrianroselli.com/posts",
-    "type": ["reference"]
+    "url": "https://adrianroselli.com/posts"
   },
   {
     "title": "Sara Soueidan",
-    "url": "https://www.sarasoueidan.com/blog",
-    "type": ["reference"]
+    "url": "https://www.sarasoueidan.com/blog"
   },
   {
     "title": "Web Accessibility Initiative (WAI)",
-    "url": "https://www.w3.org/WAI",
-    "type": ["reference"]
+    "url": "https://www.w3.org/WAI"
   },
   {
     "title": "The Surprising Truth About Pixels and Accessibility: should I use pixels or rems?",
-    "url": "https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility",
-    "type": ["guide"]
+    "url": "https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility"
   },
   {
     "title": "The WebAIM Million",
-    "url": "https://webaim.org/projects/million",
-    "type": ["reference"]
+    "url": "https://webaim.org/projects/million"
   },
   {
     "title": "WAI-ARIA 1.2 Cheat Sheet",
-    "url": "https://www.digitala11y.com/wai-aria-1-1-cheat-sheet",
-    "type": ["reference"]
+    "url": "https://www.digitala11y.com/wai-aria-1-1-cheat-sheet"
   },
   {
     "title": "Understanding WCAG Success Criterion",
-    "url": "https://www.digitala11y.com/wcag2-0",
-    "type": ["guide", "collection"]
+    "url": "https://www.digitala11y.com/wcag2-0"
   },
   {
     "title": "DigitalA11Y",
-    "url": "https://www.digitala11y.com",
-    "type": ["reference"]
+    "url": "https://www.digitala11y.com"
   },
   {
     "title": "EightShapes Contrast Grid",
-    "url": "https://contrast-grid.eightshapes.com",
-    "type": ["generator"]
+    "url": "https://contrast-grid.eightshapes.com"
   },
   {
     "title": "Introduction to Accessibility",
-    "url": "https://a11y-101.com/",
-    "type": ["course"]
+    "url": "https://a11y-101.com/"
   },
   {
     "title": "Learn Accessibility",
-    "url": "https://web.dev/learn/accessibility/",
-    "type": ["course"]
+    "url": "https://web.dev/learn/accessibility/"
   },
-  { "title": "a11yphant", "url": "https://a11yphant.com/", "type": ["course"] },
+  {
+    "title": "a11yphant",
+    "url": "https://a11yphant.com/"
+  },
   {
     "title": "A Guide To Keyboard Accessibility: HTML And CSS (Part 1)",
-    "url": "https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-html-css-part1/",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-html-css-part1/"
   },
   {
     "title": "A Guide To Keyboard Accessibility: JavaScript (Part 2)",
-    "url": "https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-javascript-part2/",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-javascript-part2/"
   },
   {
     "title": "Accessible Front-End Patterns For Responsive Tables (Part 1)",
-    "url": "https://www.smashingmagazine.com/2022/12/accessible-front-end-patterns-responsive-tables-part1/",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2022/12/accessible-front-end-patterns-responsive-tables-part1/"
   },
   {
     "title": "Accessible Front-End Patterns For Responsive Tables (Part 2)",
-    "url": "https://www.smashingmagazine.com/2022/12/accessible-front-end-patterns-responsive-tables-part2/",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2022/12/accessible-front-end-patterns-responsive-tables-part2/"
   },
   {
     "title": "Making Sense Of WAI-ARIA: A Comprehensive Guide",
-    "url": "https://www.smashingmagazine.com/2022/09/wai-aria-guide/",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2022/09/wai-aria-guide/"
   },
   {
     "title": "The Realities And Myths Of Contrast And Color",
-    "url": "https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/"
   },
   {
     "title": "Writing CSS with Accessibility in Mind",
     "url": "https://www.youtube.com/watch?v=EOiC2M47GBY",
-    "type": ["guide"],
     "source": "youtube.com/@jsconf_"
   },
   {
     "title": "Setting up a screen reader testing environment on your computer",
-    "url": "https://www.sarasoueidan.com/blog/testing-environment-setup/",
-    "type": ["tutorial"]
+    "url": "https://www.sarasoueidan.com/blog/testing-environment-setup/"
   },
   {
     "title": "Curricula on Web Accessibility: A Framework to Build Your Own Courses",
-    "url": "https://www.w3.org/WAI/curricula/",
-    "type": ["reference"]
+    "url": "https://www.w3.org/WAI/curricula/"
   },
   {
     "title": "A Guide To Accessible Form Validation",
-    "url": "https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/"
   },
   {
     "title": "Understanding WCAG 2.0",
-    "url": "https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html",
-    "type": ["guide"]
+    "url": "https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html"
   },
   {
     "title": "Comparing Manual and Free Automated WCAG Reviews",
-    "url": "https://adrianroselli.com/2023/01/comparing-manual-and-free-automated-wcag-reviews.html",
-    "type": ["guide"]
+    "url": "https://adrianroselli.com/2023/01/comparing-manual-and-free-automated-wcag-reviews.html"
   },
   {
     "title": "Web Accessibility: A Reference to Creating Inclusive Websites",
-    "url": "https://stackdiary.com/web-accessibility/",
-    "type": ["guide"]
+    "url": "https://stackdiary.com/web-accessibility/"
   },
   {
     "title": "My ideal accessible components resource is holistic, well tested and easy to use",
-    "url": "https://hidde.blog/ideal-a11y-guidance/",
-    "type": ["opinion"]
+    "url": "https://hidde.blog/ideal-a11y-guidance/"
   },
   {
     "title": "Accessibility Checker",
-    "url": "https://www.accessibilitychecker.org/",
-    "type": ["generator"]
+    "url": "https://www.accessibilitychecker.org/"
   },
   {
     "title": "Accessible Target Sizes Cheatsheet",
-    "url": "https://www.smashingmagazine.com/2023/04/accessible-tap-target-sizes-rage-taps-clicks/",
-    "type": ["reference"]
+    "url": "https://www.smashingmagazine.com/2023/04/accessible-tap-target-sizes-rage-taps-clicks/"
   },
   {
     "title": "Web Axe",
-    "url": "https://www.webaxe.org/",
-    "type": ["reference"]
+    "url": "https://www.webaxe.org/"
   },
   {
     "title": "A beginner's guide to manual accessibility testing",
-    "url": "https://blog.pope.tech/2023/03/01/a-beginners-guide-to-manual-accessibility-testing/",
-    "type": ["guide"]
+    "url": "https://blog.pope.tech/2023/03/01/a-beginners-guide-to-manual-accessibility-testing/"
   },
   {
     "title": "A Definitive Guide On How To Do An Accessibility Audit",
-    "url": "https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/",
-    "type": ["guide"]
+    "url": "https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/"
   },
   {
     "title": "Keys To An Accessibility Mindset",
-    "url": "https://www.smashingmagazine.com/2023/02/keys-accessibility-mindset/",
-    "type": ["guide"]
+    "url": "https://www.smashingmagazine.com/2023/02/keys-accessibility-mindset/"
   },
   {
     "title": "ACT-Rules Community",
-    "url": "https://act-rules.github.io/pages/about",
-    "type": ["reference"]
+    "url": "https://act-rules.github.io/pages/about"
   },
   {
     "title": "Shift Left Accessibility in Design, Development and Testing",
-    "url": "https://www.digitala11y.com/connecting-dots-of-an-accessibility-audit/",
-    "type": ["guide"]
+    "url": "https://www.digitala11y.com/connecting-dots-of-an-accessibility-audit/"
   },
   {
     "title": "Making Calendars With Accessibility and Internationalization in Mind",
-    "url": "https://css-tricks.com/making-calendars-with-accessibility-and-internationalization-in-mind/",
-    "type": ["tutorial"]
+    "url": "https://css-tricks.com/making-calendars-with-accessibility-and-internationalization-in-mind/"
   },
   {
     "title": "ARIA Authoring Practices Guide",
-    "url": "https://www.w3.org/WAI/ARIA/apg/",
-    "type": ["guide"]
+    "url": "https://www.w3.org/WAI/ARIA/apg/"
   },
   {
     "title": "Accessibility Fundamentals",
-    "url": "https://www.w3.org/WAI/fundamentals/",
-    "type": ["course"]
+    "url": "https://www.w3.org/WAI/fundamentals/"
   },
   {
     "title": "Making microservices accessible",
-    "url": "https://www.craigabbott.co.uk/blog/making-microservices-accessible/",
-    "type": ["guide"]
+    "url": "https://www.craigabbott.co.uk/blog/making-microservices-accessible/"
   },
   {
     "title": "The Contrast Triangle",
-    "url": "https://contrast-triangle.com/",
-    "type": ["generator"]
+    "url": "https://contrast-triangle.com/"
   }
 ]

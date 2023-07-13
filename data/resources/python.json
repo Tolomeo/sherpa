@@ -1,922 +1,746 @@
 [
   {
     "title": "How to Think like a Computer Scientist",
-    "url": "https://runestone.academy/ns/books/published/thinkcspy/index.html",
-    "type": ["course"]
+    "url": "https://runestone.academy/ns/books/published/thinkcspy/index.html"
   },
   {
     "title": "The Big Book of Small Python Projects",
-    "url": "https://inventwithpython.com/bigbookpython",
-    "type": ["example", "exercise", "book"]
+    "url": "https://inventwithpython.com/bigbookpython"
   },
   {
     "title": "Beyond the Basic Stuff with Python",
-    "url": "https://inventwithpython.com/beyond",
-    "type": ["book"]
+    "url": "https://inventwithpython.com/beyond"
   },
   {
     "title": "Intermediate Python",
-    "url": "https://book.pythontips.com/en/latest",
-    "type": ["guide", "collection"]
+    "url": "https://book.pythontips.com/en/latest"
   },
   {
     "title": "Practice Python Projects",
-    "url": "https://learnbyexample.github.io/practice_python_projects",
-    "type": ["exercise", "book"]
+    "url": "https://learnbyexample.github.io/practice_python_projects"
   },
   {
     "title": "The Complete Python Development Guide",
-    "url": "https://testdriven.io/guides/complete-python",
-    "type": ["guide", "collection"]
+    "url": "https://testdriven.io/guides/complete-python"
   },
   {
     "title": "awesome-python",
-    "url": "https://github.com/vinta/awesome-python",
-    "type": ["collection"]
+    "url": "https://github.com/vinta/awesome-python"
   },
-
   {
     "title": "Learn Python",
-    "url": "https://www.learnpython.org/",
-    "type": ["course"]
+    "url": "https://www.learnpython.org/"
   },
   {
     "title": "Python for Beginners",
     "url": "https://www.youtube.com/watch?v=7utwZYKweho",
-    "source": "youtube.com/@TCMSecurityAcademy",
-    "type": ["course"]
+    "source": "youtube.com/@TCMSecurityAcademy"
   },
   {
     "title": "Python tutorial for beginners",
     "url": "https://www.youtube.com/playlist?list=PLZPZq0r_RZOOkUQbat8LyQii36cJf2SWT",
-    "source": "youtube.com/c/BroCodez",
-    "type": ["course"]
+    "source": "youtube.com/c/BroCodez"
   },
   {
     "title": "Nick Coghlan’s Python Notes",
-    "url": "http://python-notes.curiousefficiency.org",
-    "type": ["reference"]
+    "url": "http://python-notes.curiousefficiency.org"
   },
   {
     "title": "Fundamental Cryptography in Theory and Python",
     "url": "https://www.youtube.com/playlist?list=PLWjMI9CAmVU4--SmpzgswTvxLkZqC9QWn",
-    "type": ["course"],
     "source": "youtube.com/@cyrillgossi"
   },
   {
     "title": "Drum Machine with Python and Pygame",
     "url": "https://www.youtube.com/watch?v=F3J3PZj0zi0",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "20 Beginner Python Projects",
     "url": "https://www.youtube.com/watch?v=pdy3nh1tn6I",
-    "type": ["example", "exercise"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Uncommon Uses of Python in Commonly Used Libraries",
-    "url": "https://eugeneyan.com/writing/uncommon-python",
-    "type": ["guide"]
+    "url": "https://eugeneyan.com/writing/uncommon-python"
   },
   {
     "title": "Tiny Python Projects",
-    "url": "https://tinypythonprojects.com",
-    "type": ["exercise", "book"]
+    "url": "https://tinypythonprojects.com"
   },
   {
     "title": "100_plus_Python_Projects_Challenge",
-    "url": "https://github.com/zhiwehu/100_plus_Python_Projects_Challenge",
-    "type": ["exercise"]
+    "url": "https://github.com/zhiwehu/100_plus_Python_Projects_Challenge"
   },
   {
     "title": "Arcade Academy - Learn Python",
-    "url": "https://learn.arcade.academy/en/latest/index.html",
-    "type": ["course"]
+    "url": "https://learn.arcade.academy/en/latest/index.html"
   },
   {
     "title": "Python for you and me",
-    "url": "https://pymbook.readthedocs.io/en/py3",
-    "type": ["course"]
+    "url": "https://pymbook.readthedocs.io/en/py3"
   },
   {
     "title": "python_koans",
-    "url": "https://github.com/gregmalcolm/python_koans",
-    "type": ["exercise"]
+    "url": "https://github.com/gregmalcolm/python_koans"
   },
   {
     "title": "Free Python Programming Book",
-    "url": "https://goalkicker.com/PythonBook/",
-    "type": ["book"]
+    "url": "https://goalkicker.com/PythonBook/"
   },
   {
     "title": "Python Tutorial",
-    "url": "https://www.tutorialspoint.com/python/",
-    "type": ["course"]
+    "url": "https://www.tutorialspoint.com/python/"
   },
   {
     "title": "Python Programming And Numerical Methods: A Guide For Engineers And Scientists",
-    "url": "https://pythonnumericalmethods.berkeley.edu/notebooks/Index.html",
-    "type": ["book"]
+    "url": "https://pythonnumericalmethods.berkeley.edu/notebooks/Index.html"
   },
   {
     "title": "Python Tutorial",
-    "url": "https://www.scaler.com/topics/python/",
-    "type": ["course"]
+    "url": "https://www.scaler.com/topics/python/"
   },
   {
     "title": "How To Code in Python",
-    "url": "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-python-3",
-    "type": ["course"]
+    "url": "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-python-3"
   },
   {
     "title": "futurecoder: learn python from scratch",
-    "url": "https://futurecoder.io",
-    "type": ["course"]
+    "url": "https://futurecoder.io"
   },
   {
     "title": "Learn Python the Right Way",
-    "url": "https://learnpythontherightway.com",
-    "type": ["book"]
+    "url": "https://learnpythontherightway.com"
   },
   {
     "title": "Automate the Boring Stuff with Python",
-    "url": "https://automatetheboringstuff.com",
-    "type": ["book"]
+    "url": "https://automatetheboringstuff.com"
   },
   {
     "title": "Python for Everybody",
-    "url": "https://www.coursera.org/specializations/python",
-    "type": ["course"]
+    "url": "https://www.coursera.org/specializations/python"
   },
   {
     "title": "100 Page Python Intro",
-    "url": "https://learnbyexample.github.io/100_page_python_intro",
-    "type": ["book"]
+    "url": "https://learnbyexample.github.io/100_page_python_intro"
   },
   {
     "title": "Python Programming",
-    "url": "https://en.wikibooks.org/wiki/Python_Programming",
-    "type": ["book"]
+    "url": "https://en.wikibooks.org/wiki/Python_Programming"
   },
   {
     "title": "Invent with Python",
-    "url": "https://inventwithpython.com/invent4thed",
-    "type": ["book"]
+    "url": "https://inventwithpython.com/invent4thed"
   },
   {
     "title": "Cracking Codes with Python",
-    "url": "https://inventwithpython.com/cracking",
-    "type": ["book"]
+    "url": "https://inventwithpython.com/cracking"
   },
   {
     "title": "Python Practice Book",
-    "url": "https://anandology.com/python-practice-book/index.html",
-    "type": ["exercise", "book"]
+    "url": "https://anandology.com/python-practice-book/index.html"
   },
   {
     "title": "python-tutorial",
-    "url": "https://github.com/Akuli/python-tutorial",
-    "type": ["course"]
+    "url": "https://github.com/Akuli/python-tutorial"
   },
   {
     "title": "ultimate-python",
-    "url": "https://github.com/huangsam/ultimate-python",
-    "type": ["course"]
+    "url": "https://github.com/huangsam/ultimate-python"
   },
   {
     "title": "Programming Projects for Advanced Beginners",
-    "url": "https://robertheaton.com/2018/12/08/programming-projects-for-advanced-beginners/",
-    "type": ["exercise"]
+    "url": "https://robertheaton.com/2018/12/08/programming-projects-for-advanced-beginners/"
   },
   {
     "title": "Python Tutorials",
     "url": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
-    "type": ["course"],
     "source": "youtube.com/c/Coreyms"
   },
   {
     "title": "Getting Started With Testing in Python",
-    "url": "https://realpython.com/python-testing",
-    "type": ["guide"]
+    "url": "https://realpython.com/python-testing"
   },
   {
     "title": "python-patterns",
-    "url": "https://github.com/faif/python-patterns",
-    "type": ["guide"]
+    "url": "https://github.com/faif/python-patterns"
   },
   {
     "title": "The complete guide to Python",
     "url": "https://www.youtube.com/watch?v=mDKM-JtUhhc",
-    "type": ["course"],
     "source": "youtube.com/c/ClearCode"
   },
   {
     "title": "Clean Architectures in Python",
-    "url": "https://www.thedigitalcatbooks.com/pycabook-introduction",
-    "type": ["book"]
+    "url": "https://www.thedigitalcatbooks.com/pycabook-introduction"
   },
   {
     "title": "Creating a Zelda style game in Python",
     "url": "https://www.youtube.com/watch?v=QU1pPzEGrqw",
-    "type": ["tutorial"],
     "source": "youtube.com/@ClearCode"
   },
   {
     "title": "Hypermodern Python",
-    "url": "https://cjolowicz.github.io/posts/hypermodern-python-01-setup",
-    "type": ["guide"]
+    "url": "https://cjolowicz.github.io/posts/hypermodern-python-01-setup"
   },
   {
     "title": "Problem Solving with Algorithms and Data Structures using Python",
-    "url": "https://runestone.academy/ns/books/published/pythonds3/index.html",
-    "type": ["book"]
+    "url": "https://runestone.academy/ns/books/published/pythonds3/index.html"
   },
   {
     "title": "elements-of-python-style",
-    "url": "https://github.com/amontalenti/elements-of-python-style",
-    "type": ["guide"]
+    "url": "https://github.com/amontalenti/elements-of-python-style"
   },
   {
     "title": "cosmic_python",
-    "url": "https://www.cosmicpython.com",
-    "type": ["book"]
+    "url": "https://www.cosmicpython.com"
   },
   {
     "title": "Write yourself a Git!",
-    "url": "https://wyag.thb.lt/",
-    "type": ["tutorial"]
+    "url": "https://wyag.thb.lt/"
   },
   {
     "title": "A Practical Introduction to Blockchain with Python",
-    "url": "http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/",
-    "type": ["guide"]
+    "url": "http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/"
   },
   {
     "title": "The Python GTK+ 3 Tutorial",
-    "url": "https://python-gtk-3-tutorial.readthedocs.io/en/latest",
-    "type": ["guide"]
+    "url": "https://python-gtk-3-tutorial.readthedocs.io/en/latest"
   },
   {
     "title": "CS50's Web Programming with Python and JavaScript",
-    "url": "https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript",
-    "type": ["course"]
+    "url": "https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript"
   },
   {
     "title": "Automate with Python",
     "url": "https://www.youtube.com/watch?v=PXMJ6FS7llk",
-    "source": "youtube.com/@freecodecamp",
-    "type": ["guide"]
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "The Algorithms",
-    "url": "https://the-algorithms.com/",
-    "type": ["example", "reference"]
+    "url": "https://the-algorithms.com/"
   },
   {
     "title": "Data Structures and Information Retrieval in Python",
-    "url": "https://greenteapress.com/wp/data-structures-and-information-retrieval-in-python",
-    "type": ["guide"]
+    "url": "https://greenteapress.com/wp/data-structures-and-information-retrieval-in-python"
   },
   {
     "title": "Data Analysis with Python Certification",
-    "url": "https://www.freecodecamp.org/learn/data-analysis-with-python",
-    "type": ["course"]
+    "url": "https://www.freecodecamp.org/learn/data-analysis-with-python"
   },
   {
     "title": "Machine Learning with Python Certification",
-    "url": "https://www.freecodecamp.org/learn/machine-learning-with-python",
-    "type": ["course"]
+    "url": "https://www.freecodecamp.org/learn/machine-learning-with-python"
   },
   {
     "title": "Scientific Computing with Python Certification",
-    "url": "https://www.freecodecamp.org/learn/scientific-computing-with-python/",
-    "type": ["course"]
+    "url": "https://www.freecodecamp.org/learn/scientific-computing-with-python/"
   },
   {
     "title": "OpenCV Course",
     "url": "https://www.youtube.com/watch?v=oXlwWbU8l2o",
-    "source": "youtube.com/@freecodecamp",
-    "type": ["course"]
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Python Virtual Environments: A Primer",
-    "url": "https://realpython.com/python-virtual-environments-a-primer",
-    "type": ["guide"]
+    "url": "https://realpython.com/python-virtual-environments-a-primer"
   },
   {
     "title": "Python Backend Web Development Course",
     "url": "https://www.youtube.com/watch?v=jBzwzrDvZ18",
-    "source": "youtube.com/@freecodecamp",
-    "type": ["course"]
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Django 4.0 Crash Course",
     "url": "https://www.youtube.com/watch?v=Lx5-XtMGDsA",
-    "source": "youtube.com/c/JustDjango",
-    "type": ["course"]
+    "source": "youtube.com/c/JustDjango"
   },
   {
     "title": "Build a Social Media App with Django",
     "url": "https://www.youtube.com/watch?v=xSUm6iMtREA",
-    "source": "youtube.com/@freecodecamp",
-    "type": ["tutorial"]
+    "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Django For Beginners",
     "url": "https://www.youtube.com/watch?v=sm1mokevMWk&list=PLi39COpmJvHMGkGFHoFM7ix45nqD7jeFk&index=29",
-    "source": "youtube.com/c/TechWithTim",
-    "type": ["course"]
+    "source": "youtube.com/c/TechWithTim"
   },
   {
     "title": "awesome-django",
-    "url": "https://github.com/wsvincent/awesome-django",
-    "type": ["collection"]
+    "url": "https://github.com/wsvincent/awesome-django"
   },
   {
     "title": "opentable",
-    "url": "https://github.com/jorzel/opentable",
-    "type": ["example", "reference"]
+    "url": "https://github.com/jorzel/opentable"
   },
   {
     "title": "Dive Into Python 3",
-    "url": "https://diveintopython3.problemsolving.io",
-    "type": ["guide"]
+    "url": "https://diveintopython3.problemsolving.io"
   },
   {
     "title": "The Little Book of Python Anti-Patterns",
-    "url": "http://docs.quantifiedcode.com/python-anti-patterns",
-    "type": ["guide"]
+    "url": "http://docs.quantifiedcode.com/python-anti-patterns"
   },
   {
     "title": "The Definitive Guide to Jython",
-    "url": "https://jython.readthedocs.io/en/latest",
-    "type": ["course"]
+    "url": "https://jython.readthedocs.io/en/latest"
   },
   {
     "title": "Python tips and tricks for concise Leetcode",
-    "url": "http://impracticalprogrammer.com/2021/12/14/python-for-leetcode.html",
-    "type": ["reference", "example"]
+    "url": "http://impracticalprogrammer.com/2021/12/14/python-for-leetcode.html"
   },
   {
     "title": "Introducing Python ",
     "url": "https://www.youtube.com/watch?v=qPowhg9nnS0",
-    "type": ["community"],
     "source": "youtube.com/c/RichWareham"
   },
   {
     "title": "python-for-coding-interviews",
-    "url": "https://github.com/mmicu/python-for-coding-interviews",
-    "type": ["guide", "reference"]
+    "url": "https://github.com/mmicu/python-for-coding-interviews"
   },
   {
     "title": "PyTricks",
-    "url": "https://github.com/brennerm/PyTricks",
-    "type": ["guide", "example"]
+    "url": "https://github.com/brennerm/PyTricks"
   },
   {
     "title": "satwikkansal/wtfpython",
-    "url": "https://github.com/satwikkansal/wtfpython",
-    "type": ["guide"]
+    "url": "https://github.com/satwikkansal/wtfpython"
   },
   {
     "title": "Interview with a Senior Python Developer - Part1",
     "url": "https://www.youtube.com/watch?v=BgxklT94W0I",
-    "type": ["community"],
     "source": "youtube.com/@programmersarealsohuman5909"
   },
   {
     "title": "Interview with a Senior Python Developer - Part2",
     "url": "https://www.youtube.com/watch?v=xyrgkui0uCA",
-    "type": ["community"],
     "source": "youtube.com/@programmersarealsohuman5909"
   },
   {
     "title": "Interview with a Postdoc, Junior Python Developer",
     "url": "https://www.youtube.com/watch?v=YnL9vAFphmE",
-    "type": ["community"],
     "source": "youtube.com/@programmersarealsohuman5909"
   },
   {
     "title": "PY4E - Python for Everybody",
-    "url": "https://www.py4e.com",
-    "type": ["reference"]
+    "url": "https://www.py4e.com"
   },
   {
     "title": "The Hitchhiker’s Guide to Python!",
-    "url": "https://docs.python-guide.org/",
-    "type": ["reference", "guide", "collection"]
+    "url": "https://docs.python-guide.org/"
   },
   {
     "title": "Full Stack Python",
-    "url": "https://www.fullstackpython.com",
-    "type": ["reference", "collection"]
+    "url": "https://www.fullstackpython.com"
   },
   {
     "title": "Python 3 Module of the Week",
-    "url": "https://pymotw.com/3",
-    "type": ["guide", "collection"]
+    "url": "https://pymotw.com/3"
   },
   {
     "title": "awesome-functional-python",
-    "url": "https://github.com/sfermigier/awesome-functional-python",
-    "type": ["collection"]
+    "url": "https://github.com/sfermigier/awesome-functional-python"
   },
   {
     "title": "awesome-python-typing",
-    "url": "https://github.com/typeddjango/awesome-python-typing",
-    "type": ["collection"]
+    "url": "https://github.com/typeddjango/awesome-python-typing"
   },
   {
     "title": "Python Resources for Everybody",
-    "url": "https://learnbyexample.github.io/py_resources",
-    "type": ["reference", "collection"]
+    "url": "https://learnbyexample.github.io/py_resources"
   },
   {
     "title": "Python Cheatsheet",
-    "url": "https://www.pythoncheatsheet.org",
-    "type": ["reference"]
+    "url": "https://www.pythoncheatsheet.org"
   },
   {
     "title": "Real Python",
-    "url": "https://realpython.com",
-    "type": ["reference"]
+    "url": "https://realpython.com"
   },
   {
     "title": "best-of-python",
-    "url": "https://github.com/ml-tooling/best-of-python",
-    "type": ["collection"]
+    "url": "https://github.com/ml-tooling/best-of-python"
   },
   {
     "title": "pysheeet",
-    "url": "https://github.com/crazyguitar/pysheeet",
-    "type": ["reference"]
+    "url": "https://github.com/crazyguitar/pysheeet"
   },
   {
     "title": "Code. Simply. Clearly. Calmly.",
-    "url": "https://calmcode.io/",
-    "type": ["guide", "collection"]
+    "url": "https://calmcode.io/"
   },
   {
     "title": "PyCoder’s Weekly",
-    "url": "https://pycoders.com",
-    "type": ["reference"]
+    "url": "https://pycoders.com"
   },
   {
     "title": "Learney",
-    "url": "https://app.learney.me/maps/PythonCurriculum",
-    "type": ["course"]
+    "url": "https://app.learney.me/maps/PythonCurriculum"
   },
   {
     "title": "Awesome Python Weekly",
-    "url": "https://python.libhunt.com/newsletter",
-    "type": ["reference"]
+    "url": "https://python.libhunt.com/newsletter"
   },
   {
     "title": "Python Tutorial For Beginners (With Notes)",
     "url": "https://www.youtube.com/watch?v=EyEqWFvLDT8",
-    "type": ["course"],
     "source": "youtube.com/@ProgrammingWithHarry"
   },
   {
     "title": "Pytest for Beginners",
-    "url": "https://testdriven.io/blog/pytest-for-beginners/",
-    "type": ["guide"]
+    "url": "https://testdriven.io/blog/pytest-for-beginners/"
   },
   {
     "title": "Learn Python by Thinking in Types",
     "url": "https://www.youtube.com/watch?v=jH85McHenvw",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "100 Days of Code - Learn Python",
     "url": "https://www.youtube.com/playlist?list=PLto9KpJAqHMQNY3XP0JqLs7NyeU_dnNj0",
-    "type": ["course"],
     "source": "youtube.com/@replit"
   },
   {
     "title": "learn-python",
-    "url": "https://github.com/animator/learn-python",
-    "type": ["book"]
+    "url": "https://github.com/animator/learn-python"
   },
   {
     "title": "CS50's Introduction to Programming with Python",
     "url": "https://www.youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
-    "type": ["course"],
     "source": "youtube.com/@cs50"
   },
   {
     "title": "Learn Python (either on its own or for AP CSP)",
     "url": "https://www.youtube.com/playlist?list=PL9YOvPKwvPULm7tjWCfhpFHBxy22KpVXx",
-    "type": ["course"],
     "source": "youtube.com/@dr_wu3964"
   },
   {
     "title": "Python Course for Beginners",
-    "url": "https://www.askpython.com/python-course-for-beginners",
-    "type": ["course"]
+    "url": "https://www.askpython.com/python-course-for-beginners"
   },
   {
     "title": "The NumPy Tutorial",
     "url": "https://www.youtube.com/watch?v=TyIE3py-rFQ",
-    "type": ["course"],
     "source": "youtube.com/@laithacademy"
   },
   {
     "title": "Python FastAPI Playlist + testing + deployment + CI/CD",
     "url": "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1L5QpSapVEzoSfob-4CR8zM",
-    "type": ["course"],
     "source": "youtube.com/@SanjeevThiyagarajan"
   },
   {
     "title": "Microservice Architecture and System Design with Python & Kubernetes",
     "url": "https://www.youtube.com/watch?v=hmkF77F9TLw",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Python Concurrency Guides",
-    "url": "https://superfastpython.com/python-concurrency-guides/",
-    "type": ["guide", "collection"]
+    "url": "https://superfastpython.com/python-concurrency-guides/"
   },
   {
     "title": "python-obj-system",
-    "url": "https://github.com/MoserMichael/python-obj-system",
-    "type": ["guide", "collection"]
+    "url": "https://github.com/MoserMichael/python-obj-system"
   },
   {
     "title": "Learn Python GUI Development for Desktop – PySide6 and Qt Tutorial",
     "url": "https://www.youtube.com/watch?v=Z1N9JzNax2k",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "CS50's Introduction to Artificial Intelligence with Python",
     "url": "https://www.youtube.com/playlist?list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv",
-    "type": ["course"],
     "source": "youtube.com/@cs50"
   },
   {
     "title": "Python Programming Fundamentals Towards Django Development",
     "url": "https://www.youtube.com/playlist?list=PLOLrQ9Pn6cawb13MugxL-p1M4w7ZfT-qR",
-    "type": ["course"],
     "source": "youtube.com/@veryacademy"
   },
   {
     "title": "Django REST Framework Course",
     "url": "https://www.youtube.com/watch?v=tujhGdn1EMI",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Creating a Stardew Valley inspired game in Python",
     "url": "https://www.youtube.com/watch?v=T4IX36sP_0c",
-    "type": ["course"],
     "source": "youtube.com/@ClearCode"
   },
   {
     "title": "The ultimate introduction to Pygame",
     "url": "https://www.youtube.com/watch?v=AY9MnQ4x3zk",
-    "type": ["course"],
     "source": "youtube.com/@ClearCode"
   },
   {
     "title": "How I setup a Python project",
-    "url": "https://blog.pamelafox.org/2022/09/how-i-setup-python-project.html",
-    "type": ["tutorial"]
+    "url": "https://blog.pamelafox.org/2022/09/how-i-setup-python-project.html"
   },
   {
     "title": "How to build a modular arithmetic library in Python",
-    "url": "https://monadical.com/posts/modular-arithmetic.html",
-    "type": ["guide"]
+    "url": "https://monadical.com/posts/modular-arithmetic.html"
   },
   {
     "title": "Adding Types to a Large Python Codebase",
-    "url": "https://dagster.io/blog/adding-python-types",
-    "type": ["tutorial"]
+    "url": "https://dagster.io/blog/adding-python-types"
   },
   {
     "title": "How to Benchmark (Python) Code",
-    "url": "https://switowski.com/blog/how-to-benchmark-python-code/",
-    "type": ["tutorial"]
+    "url": "https://switowski.com/blog/how-to-benchmark-python-code/"
   },
   {
     "title": "Defensive coding guide",
-    "url": "https://docs.fedoraproject.org/en-US/defensive-coding/",
-    "type": ["guide", "reference"]
+    "url": "https://docs.fedoraproject.org/en-US/defensive-coding/"
   },
   {
     "title": "The Origins of Python | Lambert Meertens",
-    "url": "https://inference-review.com/article/the-origins-of-python",
-    "type": ["guide"]
+    "url": "https://inference-review.com/article/the-origins-of-python"
   },
   {
     "title": "All Top 40 Python Libraries EXPLAINED in 20 minutes",
     "url": "https://www.youtube.com/watch?v=-29x_deQQus",
-    "type": ["guide"],
     "source": "youtube.com/@KiteHQ"
   },
   {
     "title": "How To Build Web Applications with Flask",
-    "url": "https://www.digitalocean.com/community/tutorial_series/how-to-create-web-sites-with-flask",
-    "type": ["guide", "collection"]
+    "url": "https://www.digitalocean.com/community/tutorial_series/how-to-create-web-sites-with-flask"
   },
   {
     "title": "How to Dockerize a Flask Application",
-    "url": "https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/",
-    "type": ["tutorial"]
+    "url": "https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/"
   },
   {
     "title": "Ultimate Flask Tutorial 2022",
-    "url": "https://www.docdroid.net/0GOZUFr/ultimate-flask-tutorial-2022-reddit-pdf",
-    "type": ["book"]
+    "url": "https://www.docdroid.net/0GOZUFr/ultimate-flask-tutorial-2022-reddit-pdf"
   },
   {
     "title": "awesome-flask",
-    "url": "https://github.com/humiaozuzu/awesome-flask",
-    "type": ["reference", "collection"]
+    "url": "https://github.com/humiaozuzu/awesome-flask"
   },
-
   {
     "title": "Publishing Python Packages on PyPI: A Comprehensive Guide",
-    "url": "https://medium.com/@ewho.ruth2014/publishing-python-packages-on-pypi-a-comprehensive-guide-14f466aa84f0",
-    "type": ["guide"]
+    "url": "https://medium.com/@ewho.ruth2014/publishing-python-packages-on-pypi-a-comprehensive-guide-14f466aa84f0"
   },
   {
     "title": "Ultimate Python Multithreading Guide",
-    "url": "https://programmingeeksclub.com/ultimate-python-multithreading-guide/",
-    "type": ["guide"]
+    "url": "https://programmingeeksclub.com/ultimate-python-multithreading-guide/"
   },
   {
     "title": "Django-Styleguide",
-    "url": "https://github.com/HackSoftware/Django-Styleguide",
-    "type": ["reference"]
+    "url": "https://github.com/HackSoftware/Django-Styleguide"
   },
   {
     "title": "The Essential Django Deployment Guide",
-    "url": "https://www.saaspegasus.com/guides/django-deployment/",
-    "type": ["guide"]
+    "url": "https://www.saaspegasus.com/guides/django-deployment/"
   },
   {
     "title": "Python Design Patterns",
-    "url": "https://python-patterns.guide/",
-    "type": ["example", "collection"]
+    "url": "https://python-patterns.guide/"
   },
   {
     "title": "College Algebra – Full Course with Python Code",
     "url": "https://www.youtube.com/watch?v=i7vOAcUo5iA",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Talk Python To Me",
-    "url": "https://talkpython.fm/",
-    "type": ["reference", "community"]
+    "url": "https://talkpython.fm/"
   },
   {
     "title": "Web Scraping with Python: A Complete Step-by-Step Guide + Code",
-    "url": "https://gologin.com/blog/web-scraping-with-python",
-    "type": ["guide"]
+    "url": "https://gologin.com/blog/web-scraping-with-python"
   },
   {
     "title": "Scrapy Course",
     "url": "https://www.youtube.com/watch?v=mBoX_JCKZTE",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Rithm School Intermediate Flask",
-    "url": "https://www.rithmschool.com/courses/intermediate-flask/",
-    "type": ["course"]
+    "url": "https://www.rithmschool.com/courses/intermediate-flask/"
   },
   {
     "title": "Boring Python: code quality",
-    "url": "https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/",
-    "type": ["guide"]
+    "url": "https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/"
   },
   {
     "title": "How to improve Python packaging, or why fourteen tools are at least twelve too many",
-    "url": "https://chriswarrick.com/blog/2023/01/15/how-to-improve-python-packaging/",
-    "type": ["guide"]
+    "url": "https://chriswarrick.com/blog/2023/01/15/how-to-improve-python-packaging/"
   },
   {
     "title": "Mastering Python Function Arguments: A Comprehensive Guide",
-    "url": "https://neuronize.dev/mastering-python-function-arguments-a-comprehensive-guide",
-    "type": ["guide"]
+    "url": "https://neuronize.dev/mastering-python-function-arguments-a-comprehensive-guide"
   },
   {
     "title": "Scaling Python Applications",
-    "url": "https://betterstack.com/community/guides/scaling-python/",
-    "type": ["guide"]
+    "url": "https://betterstack.com/community/guides/scaling-python/"
   },
   {
     "title": "Learn Django by Building an Online Marketplace",
     "url": "https://www.youtube.com/watch?v=ZxMB6Njs3ck",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Extending web applications with WebAssembly and Python",
-    "url": "https://wasmlabs.dev/articles/wasm-host-to-python/",
-    "type": ["tutorial"]
+    "url": "https://wasmlabs.dev/articles/wasm-host-to-python/"
   },
   {
     "title": "How to write tests that need a lot of data?",
-    "url": "https://gogognome.nl/how-to-write-tests-that-need-a-lot-of-data.html",
-    "type": ["tutorial"]
+    "url": "https://gogognome.nl/how-to-write-tests-that-need-a-lot-of-data.html"
   },
   {
     "title": "GPT in 60 Lines of NumPy",
-    "url": "https://jaykmody.com/blog/gpt-from-scratch/",
-    "type": ["tutorial"]
+    "url": "https://jaykmody.com/blog/gpt-from-scratch/"
   },
   {
     "title": "Web Scraping With Python",
-    "url": "https://serpdog.io/blog/web-scraping-with-python/",
-    "type": ["guide"]
+    "url": "https://serpdog.io/blog/web-scraping-with-python/"
   },
   {
     "title": "Building And Distributing A macOS Application Written in Python",
-    "url": "https://blog.glyph.im/2023/03/py-mac-app-for-real.html",
-    "type": ["guide"]
+    "url": "https://blog.glyph.im/2023/03/py-mac-app-for-real.html"
   },
   {
     "title": "Why Python keeps growing, explained",
-    "url": "https://github.blog/2023-03-02-why-python-keeps-growing-explained/",
-    "type": ["community"]
+    "url": "https://github.blog/2023-03-02-why-python-keeps-growing-explained/"
   },
   {
     "title": "Python For Computer Vision",
     "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1FDEQmmfzwSKOqFMEPLtz6_",
-    "type": ["course"],
     "source": "youtube.com/@NeuralNine"
   },
   {
     "title": "Build an AI Search Engine Using FastAPI, Qdrant, and ChatGPT",
-    "url": "https://dylancastillo.co/ai-search-engine-fastapi-qdrant-chatgpt/",
-    "type": ["tutorial"]
+    "url": "https://dylancastillo.co/ai-search-engine-fastapi-qdrant-chatgpt/"
   },
   {
     "title": "Python adventures: Finding unused dependencies",
-    "url": "https://www.nathanfurnal.xyz/posts/py-find-unused-deps/",
-    "type": ["guide"]
+    "url": "https://www.nathanfurnal.xyz/posts/py-find-unused-deps/"
   },
   {
     "title": "Python AI Projects",
     "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1G9mmnBN3ZSY8hYgJ5kBOg-",
-    "type": ["guide"],
     "source": "youtube.com/@NeuralNine"
   },
   {
     "title": "Python Projects",
-    "url": "https://www.techarge.in/python-projects/",
-    "type": ["tutorial", "collection"]
+    "url": "https://www.techarge.in/python-projects/"
   },
   {
     "title": "Python Platformer Game Tutorial for Beginners",
     "url": "https://www.youtube.com/watch?v=6gLeplbqtqg",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Python for Engineers",
-    "url": "https://new.pythonforengineers.com/",
-    "type": ["reference"]
+    "url": "https://new.pythonforengineers.com/"
   },
   {
     "title": "Learn Python with Jupyter",
-    "url": "https://www.learnpythonwithjupyter.com/",
-    "type": ["book"]
+    "url": "https://www.learnpythonwithjupyter.com/"
   },
   {
     "title": "Django ChatGPT Clone Tutorial",
     "url": "https://www.youtube.com/watch?v=qrZGfBBlXpk",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Python For Networking",
     "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1FwBSNR_tH7qVbNpYHL4IQs",
-    "type": ["guide"],
     "source": "youtube.com/@NeuralNine"
   },
   {
     "title": "Python Advanced Tutorials",
     "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1FuqLSjl5bgiQIEH25VEmIc",
-    "type": ["guide"],
     "source": "youtube.com/@NeuralNine"
   },
   {
     "title": "Django Project – Code a CRM App Tutorial",
     "url": "https://www.youtube.com/watch?v=t10QcFx7d5k",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
-    "title": "Web Development with Python Tutorial – Flask \u0026 Dynamic Database-Driven Web Apps",
+    "title": "Web Development with Python Tutorial – Flask & Dynamic Database-Driven Web Apps",
     "url": "https://www.youtube.com/watch?v=yBDHkveJUf4",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "190 Python Projects with Source Code",
-    "url": "https://amankharwal.medium.com/130-python-projects-with-source-code-61f498591bb",
-    "type": ["example", "collection"]
+    "url": "https://amankharwal.medium.com/130-python-projects-with-source-code-61f498591bb"
   },
   {
     "title": "Python Tutorial For Beginners",
     "url": "https://www.youtube.com/watch?v=dBjapc3xfhQ",
-    "type": ["course"],
     "source": "youtube.com/@MyLesson007"
   },
   {
     "title": "Using Python with Arduino",
-    "url": "https://toptechboy.com/using-python-with-arduino-lessons/",
-    "type": ["course"]
+    "url": "https://toptechboy.com/using-python-with-arduino-lessons/"
   },
   {
     "title": "A Gentle Introduction to the Python Match Statement",
-    "url": "https://www.wrighters.io/intro-to-python-match-statement/",
-    "type": ["guide"]
+    "url": "https://www.wrighters.io/intro-to-python-match-statement/"
   },
   {
     "title": "Django API Domains",
-    "url": "https://phalt.github.io/django-api-domains/",
-    "type": ["reference"]
+    "url": "https://phalt.github.io/django-api-domains/"
   },
   {
     "title": "Python’s “Disappointing” Superpowers",
-    "url": "https://lukeplant.me.uk/blog/posts/pythons-disappointing-superpowers/",
-    "type": ["guide"]
+    "url": "https://lukeplant.me.uk/blog/posts/pythons-disappointing-superpowers/"
   },
   {
     "title": "Python Software Foundation News",
-    "url": "https://pyfound.blogspot.com/",
-    "type": ["reference"]
+    "url": "https://pyfound.blogspot.com/"
   },
   {
     "title": "Python Packages: a Primer for Data People",
-    "url": "https://dagster.io/blog/python-packages-primer-1",
-    "type": ["guide"]
+    "url": "https://dagster.io/blog/python-packages-primer-1"
   },
   {
     "title": "Python packaging for developers in a hurry",
-    "url": "https://giovannipcarvalho.github.io/2023/01/08/python-packaging-in-a-hurry.html",
-    "type": ["tutorial"]
+    "url": "https://giovannipcarvalho.github.io/2023/01/08/python-packaging-in-a-hurry.html"
   },
   {
     "title": "python-cheatsheet",
-    "url": "https://github.com/gto76/python-cheatsheet",
-    "type": ["reference"]
+    "url": "https://github.com/gto76/python-cheatsheet"
   },
   {
     "title": "Rithm School Flask Fundamentals",
-    "url": "https://www.rithmschool.com/courses/flask-fundamentals/",
-    "type": ["course"]
+    "url": "https://www.rithmschool.com/courses/flask-fundamentals/"
   },
   {
     "title": "30-Days-Of-Python",
-    "url": "https://github.com/Asabeneh/30-Days-Of-Python",
-    "type": ["course"]
+    "url": "https://github.com/Asabeneh/30-Days-Of-Python"
   },
   {
     "title": "Python for Web Development",
     "url": "https://www.youtube.com/watch?v=WNvxR8RFzBg",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Python Monorepo: an Example",
-    "url": "https://www.tweag.io/blog/2023-04-04-python-monorepo-1/",
-    "type": ["guide"]
+    "url": "https://www.tweag.io/blog/2023-04-04-python-monorepo-1/"
   },
   {
     "title": "Python Decorator: Enhance Your Code With Wrapping Wizardry",
-    "url": "https://hackthedeveloper.com/python-decorator/",
-    "type": ["guide"]
+    "url": "https://hackthedeveloper.com/python-decorator/"
   },
   {
     "title": "Python Reinforcement Learning using Gymnasium",
     "url": "https://www.youtube.com/watch?v=vufTSJbzKGU",
-    "type": ["course"],
     "source": "youtube.com/@freecodecamp"
   },
   {
     "title": "Pygame Tutorial From Scratch - 3.5 Hours of Building RPG Game",
     "url": "https://www.youtube.com/watch?v=G_LXB5C-r20",
-    "type": ["course"],
     "source": "youtube.com/@Pythondude"
   },
   {
     "title": "Style guides for Google-originated open-source projects",
-    "url": "https://google.github.io/styleguide/pyguide.html",
-    "type": ["reference"]
+    "url": "https://google.github.io/styleguide/pyguide.html"
   },
   {
     "title": "Boring Python: dependency management",
-    "url": "https://www.b-list.org/weblog/2022/may/13/boring-python-dependencies/",
-    "type": ["guide"]
+    "url": "https://www.b-list.org/weblog/2022/may/13/boring-python-dependencies/"
   }
 ]

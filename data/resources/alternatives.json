@@ -1,62 +1,50 @@
 [
   {
     "title": "Your Career in Web Development Starts Here | The Odin Project",
-    "url": "https://www.theodinproject.com",
-    "type": ["course", "collection"]
+    "url": "https://www.theodinproject.com"
   },
   {
     "title": "Bento - Learn to code and be a self-taught expert developer",
-    "url": "https://bento.io",
-    "type": ["course", "collection"]
+    "url": "https://bento.io"
   },
   {
     "title": "Developer Roadmaps",
-    "url": "https://roadmap.sh",
-    "type": ["course", "collection"]
+    "url": "https://roadmap.sh"
   },
   {
     "title": "Learn to Code — For Free — Coding Courses for Busy People",
-    "url": "https://www.freecodecamp.org",
-    "type": ["course", "collection"]
+    "url": "https://www.freecodecamp.org"
   },
   {
     "title": "Learn Anything",
-    "url": "https://learn-anything.xyz",
-    "type": ["course", "collection"]
+    "url": "https://learn-anything.xyz"
   },
   {
     "title": "build-your-own-x: 🤓 Build your own (insert technology here)",
-    "url": "https://github.com/danistefanovic/build-your-own-x",
-    "type": ["course", "collection"]
+    "url": "https://github.com/danistefanovic/build-your-own-x"
   },
   {
     "title": "free-programming-books: Freely available programming books",
-    "url": "https://github.com/EbookFoundation/free-programming-books",
-    "type": ["course", "collection"]
+    "url": "https://github.com/EbookFoundation/free-programming-books"
   },
   {
     "title": "project-based-learning: Curated list of project-based tutorials",
-    "url": "https://github.com/practical-tutorials/project-based-learning",
-    "type": ["course", "collection"]
+    "url": "https://github.com/practical-tutorials/project-based-learning"
   },
   {
     "title": "learn-to-program: Educational resources to learn to program (Foundation in Web Development)",
-    "url": "https://github.com/karlhorky/learn-to-program",
-    "type": ["course", "collection"]
+    "url": "https://github.com/karlhorky/learn-to-program"
   },
   {
     "title": "Class Central • Find the best courses, wherever they exist.",
-    "url": "https://www.classcentral.com",
-    "type": ["course", "collection"]
+    "url": "https://www.classcentral.com"
   },
   {
     "title": "Find the best online Programming courses and Tutorials - Hackr.io",
-    "url": "https://hackr.io",
-    "type": ["course", "collection"]
+    "url": "https://hackr.io"
   },
   {
     "title": "Best-websites-a-programmer-should-visit: Some useful websites for programmers.",
-    "url": "https://github.com/sdmg15/Best-websites-a-programmer-should-visit",
-    "type": ["collection"]
+    "url": "https://github.com/sdmg15/Best-websites-a-programmer-should-visit"
   }
 ]

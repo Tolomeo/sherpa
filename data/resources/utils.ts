@@ -1,5 +1,4 @@
 import Ajv, { JSONSchemaType } from 'ajv'
-import resourceTypes from '../resourceTypes'
 import {
   SerializedResources,
   SerializedResource,
@@ -13,18 +12,10 @@ const serializedResourceSchema: JSONSchemaType<SerializedResource> = {
   type: 'object',
   properties: {
     url: { type: 'string', pattern: '^https?://' },
-    type: {
-      type: 'array',
-      items: {
-        type: 'string',
-        enum: Object.keys(resourceTypes),
-      },
-      minItems: 1,
-    },
     title: { type: 'string', minLength: 2 },
     source: { type: 'string', minLength: 2, nullable: true },
   },
-  required: ['url', 'type', 'title'],
+  required: ['url', 'title'],
   additionalProperties: false,
 }
 
@@ -46,10 +37,6 @@ const parseResource = (serializedResource: SerializedResource) => {
         parsedResource.source = resourceUrl.hostname.replace(/^www./, '')
     }
   }
-
-  parsedResource.type = parsedResource.type.map(
-    (type) => resourceTypes[type].title,
-  )
 
   return parsedResource
 }
