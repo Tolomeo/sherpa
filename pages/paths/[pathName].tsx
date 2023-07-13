@@ -8,8 +8,6 @@ import {
   hasPrevPaths,
   hasNextPaths,
   hasExtraResources,
-  resourceTypes,
-  ResourceTypes,
   isSubPath,
   isSubTopic,
   hasSubPathExtraResources,
@@ -45,7 +43,6 @@ interface Params extends ParsedUrlQuery {
 interface StaticProps {
   paths: Paths
   path: Path
-  resourceTypes: ResourceTypes
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -65,7 +62,6 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
     props: {
       paths,
       path,
-      resourceTypes,
     },
   }
 }
@@ -103,7 +99,7 @@ const PageHead = ({ path }: Pick<Props, 'path'>) => (
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
 
-export default function PathPage({ path, paths, resourceTypes }: Props) {
+export default function PathPage({ path, paths }: Props) {
   return (
     <>
       <PageHead path={path} />
