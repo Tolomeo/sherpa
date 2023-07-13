@@ -42,15 +42,6 @@ const ResourcesList = ({ resources }: Props) => {
               >
                 {resource.title}
               </Typography>
-              <Stack direction="row" spacing={1.5} component="span">
-                {resource.type.map((type) => (
-                  <ResourceTypeLabel
-                    resourceType={type}
-                    key={type}
-                    data-testid={resourcesListItemTypeTestId}
-                  />
-                ))}
-              </Stack>
             </Link>
           </Box>
         ))}
