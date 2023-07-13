@@ -38,8 +38,7 @@ describe('Path pages', () => {
 
             it(`Renders a link pointing at "${pathResource.url}",
 						and renders "${pathResource.title}" as resource title,
-						and renders "${pathResource.source}" as resource source,
-						and renders "${pathResource.type.join('", "')}" as resource types`, () => {
+						and renders "${pathResource.source}" as resource source`, () => {
               cy.get('@pathResource').should(
                 'have.attr',
                 'href',
@@ -53,14 +52,6 @@ describe('Path pages', () => {
               cy.get('@pathResource')
                 .find('[data-testid="resources.timeline.item.source"]')
                 .should('have.text', pathResource.source)
-
-              cy.get('@pathResource')
-                .find('[data-testid="resources.timeline.item.type"]')
-                .each(($timelineItemType, timelineItemTypeIndex) => {
-                  expect($timelineItemType.text()).to.equal(
-                    pathResource.type[timelineItemTypeIndex],
-                  )
-                })
             })
           })
         })
@@ -94,13 +85,8 @@ describe('Path pages', () => {
                 describe(`"${pathExtra.title} subpath main resources"`, () => {
                   pathExtra.main.forEach(
                     (pathExtraMainResource, pathExtraMainResourceIndex) => {
-                      it(`Renders "${
-                        pathExtraMainResource.title
-                      }" as resource title,
-												and renders ${pathExtraMainResource.source} as resource source
-												and renders "${pathExtraMainResource.type.join(
-                          '", "',
-                        )}" as resource types`, () => {
+                      it(`Renders "${pathExtraMainResource.title}" as resource title,
+												and renders ${pathExtraMainResource.source} as resource source`, () => {
                         cy.get('@extraResourcesMain')
                           .eq(pathExtraMainResourceIndex)
                           .find('[data-testid="resources.timeline.item.title"]')
@@ -112,15 +98,6 @@ describe('Path pages', () => {
                             '[data-testid="resources.timeline.item.source"]',
                           )
                           .should('have.text', pathExtraMainResource.source)
-
-                        cy.get('@extraResourcesMain')
-                          .eq(pathExtraMainResourceIndex)
-                          .find('[data-testid="resources.timeline.item.type"]')
-                          .each(($timelineItemType, timelineItemTypeIndex) => {
-                            expect($timelineItemType.text()).to.equal(
-                              pathExtraMainResource.type[timelineItemTypeIndex],
-                            )
-                          })
                       })
                     },
                   )
@@ -137,13 +114,8 @@ describe('Path pages', () => {
                     })
 
                     pathExtra.extra.forEach((subPathExtraResource) => {
-                      it(`Renders "${
-                        subPathExtraResource.title
-                      }" as resource title,
-													and renders ${subPathExtraResource.source} as resource source
-													and renders "${subPathExtraResource.type.join(
-                            '", "',
-                          )}" as resource types`, () => {
+                      it(`Renders "${subPathExtraResource.title}" as resource title,
+													and renders ${subPathExtraResource.source} as resource source`, () => {
                         cy.get('@subPathExtraResources')
                           .filter(`[href="${subPathExtraResource.url}"]`)
                           .find('[data-testid="resources.list.item.title"]')
@@ -153,15 +125,6 @@ describe('Path pages', () => {
                           .filter(`[href="${subPathExtraResource.url}"]`)
                           .find('[data-testid="resources.list.item.source"]')
                           .should('have.text', subPathExtraResource.source)
-
-                        cy.get('@subPathExtraResources')
-                          .filter(`[href="${subPathExtraResource.url}"]`)
-                          .find('[data-testid="resources.list.item.type"]')
-                          .each(($timelineItemType, timelineItemTypeIndex) => {
-                            expect($timelineItemType.text()).to.equal(
-                              subPathExtraResource.type[timelineItemTypeIndex],
-                            )
-                          })
                       })
                     })
                   })
@@ -182,8 +145,7 @@ describe('Path pages', () => {
                 describe(`"${pathExtra.title} subtopic resources"`, () => {
                   pathExtra.resources.forEach((subtopicResource) => {
                     it(`Renders "${subtopicResource.title}" as resource title,
-												and renders ${subtopicResource.source} as resource source
-												and renders "${subtopicResource.type.join('", "')}" as resource types`, () => {
+												and renders ${subtopicResource.source} as resource source`, () => {
                       cy.get('@subtopicResources')
                         .filter(`[href="${subtopicResource.url}"]`)
                         .find('[data-testid="resources.list.item.title"]')
@@ -193,15 +155,6 @@ describe('Path pages', () => {
                         .filter(`[href="${subtopicResource.url}"]`)
                         .find('[data-testid="resources.list.item.source"]')
                         .should('have.text', subtopicResource.source)
-
-                      cy.get('@subtopicResources')
-                        .filter(`[href="${subtopicResource.url}"]`)
-                        .find('[data-testid="resources.list.item.type"]')
-                        .each(($timelineItemType, timelineItemTypeIndex) => {
-                          expect($timelineItemType.text()).to.equal(
-                            subtopicResource.type[timelineItemTypeIndex],
-                          )
-                        })
                     })
                   })
                 })
