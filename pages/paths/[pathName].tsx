@@ -31,7 +31,6 @@ import { List as PathsList } from '../../src/paths'
 import {
   HelpDrawer,
   HelpDrawerToggle,
-  Resources as ResourcesHelp,
   Paths as PathsHelp,
 } from '../../src/help'
 import {
@@ -197,12 +196,6 @@ export default function PathPage({ path, paths, resourceTypes }: Props) {
               </Typography>
               <Box pb={3}>
                 <PathsHelp />
-              </Box>
-              <Typography variant="h5" component="p">
-                About resources
-              </Typography>
-              <Box>
-                <ResourcesHelp resourceTypes={resourceTypes} />
               </Box>
             </Stack>
           </HelpDrawer>
