@@ -41,6 +41,9 @@ const checkResourceHealth = (resource: Resource) => {
     case 'harrisoncramer.me':
     case 'linux.org':
     case 'bash.cyberciti.biz':
+		case 'tldp.org':
+		case 'codementor.io':
+		case 'snipcart.com':
       return cy.checkHealthByVisit(resource)
     case 'reactdigest.net':
     case 'data-flair.training':
