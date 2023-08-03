@@ -19,6 +19,7 @@ const checkResourceHealth = (resource: Resource) => {
       return cy.checkHealthByUrlRequest(resource)
     case 'programmingpercy.tech':
     case 'gogognome.nl':
+		case 'superfastpython.com':
       return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h1' })
     case 'blob42.xyz':
       return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h3' })
