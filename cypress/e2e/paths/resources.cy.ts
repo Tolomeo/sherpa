@@ -44,7 +44,6 @@ const checkResourceHealth = (resource: Resource) => {
       return cy.checkHealthByVisit(resource)
     case 'reactdigest.net':
     case 'data-flair.training':
-    case 'regexr.com':
     case 'codepen.io':
     case 'replit.com':
     case 'git.herrbischoff.com':
@@ -54,6 +53,7 @@ const checkResourceHealth = (resource: Resource) => {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
       })
     case 'tooltester.com':
+    case 'regexr.com':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
         render: true,
