@@ -19,6 +19,7 @@ const checkResourceHealth = (resource: Resource) => {
       return cy.checkHealthByUrlRequest(resource)
     case 'programmingpercy.tech':
     case 'gogognome.nl':
+		case 'superfastpython.com':
       return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h1' })
     case 'blob42.xyz':
       return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h3' })
@@ -34,22 +35,25 @@ const checkResourceHealth = (resource: Resource) => {
     case 'animatedbackgrounds.me':
     case 'git.herrbischoff.com':
     case 'linux.org':
-    case 'bash.cyberciti.biz':
-    case 'replit.com':
     case 'conventionalcommits.org':
-    case 'git.herrbischoff.com':
     case 'harrisoncramer.me':
-    case 'linux.org':
     case 'bash.cyberciti.biz':
+		case 'tldp.org':
+		case 'codementor.io':
+		case 'snipcart.com':
       return cy.checkHealthByVisit(resource)
     case 'reactdigest.net':
     case 'data-flair.training':
-    case 'regexr.com':
     case 'codepen.io':
+    case 'replit.com':
+    case 'git.herrbischoff.com':
+    case 'linux.org':
+    case 'bash.cyberciti.biz':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
       })
     case 'tooltester.com':
+    case 'regexr.com':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
         render: true,
