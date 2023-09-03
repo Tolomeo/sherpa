@@ -99,7 +99,7 @@ export default function Home({ paths, alternateSources }: Props) {
             </Box>
           </LayoutContainer>
 
-          <Box pt={6}>
+          <Box py={6}>
             <LayoutVillain>
               <Box py={2}>
                 <Typography variant="h2">

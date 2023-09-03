@@ -167,7 +167,7 @@ export default function PathPage({ path, paths }: Props) {
           )}
 
           {hasNextPaths(path) && (
-            <Box py={4}>
+            <Box pt={4} pb={6}>
               <LayoutVillain>
                 <aside>
                   <Typography variant="h3" component="h2" gutterBottom>
