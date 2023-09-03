@@ -12,9 +12,9 @@ jobs:
     timeout-minutes: 10 # to prevent a hanging process from using all CI minutes
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/checkout@v3
+      - name: Setup Node 18
+        uses: actions/setup-node@v3
         with:
           node-version: '18.x'
       - name: Deploy
@@ -37,7 +37,7 @@ jobs:
     timeout-minutes: 30 # to prevent a hanging process from using all CI minutes
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Cypress
         uses: cypress-io/github-action@v4
         env:
