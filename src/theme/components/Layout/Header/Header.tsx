@@ -14,10 +14,8 @@ const Header: React.FC = ({ children }) => {
       <Container maxWidth={false}>
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1 }}>
-            <Link href="/" passHref>
-              <a>
-                <Logo />
-              </a>
+            <Link href="/">
+              <Logo />
             </Link>
           </Box>
 
