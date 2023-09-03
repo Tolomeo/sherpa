@@ -179,7 +179,7 @@ export default function PathPage({ path, paths }: Props) {
             </Box>
           )}
 
-          <HelpDrawer>
+          {/* <HelpDrawer>
             <Stack spacing={4}>
               <Typography variant="h5" component="p">
                 Need a compass?
@@ -194,7 +194,7 @@ export default function PathPage({ path, paths }: Props) {
                 <PathsHelp />
               </Box>
             </Stack>
-          </HelpDrawer>
+          </HelpDrawer> */}
         </main>
       </Layout>
     </>
