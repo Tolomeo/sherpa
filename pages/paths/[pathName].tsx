@@ -166,18 +166,18 @@ export default function PathPage({ path, paths }: Props) {
             </LayoutContainer>
           )}
 
-          <LayoutVillain>
-            {hasNextPaths(path) && (
-              <Box py={4}>
+          {hasNextPaths(path) && (
+            <Box py={4}>
+              <LayoutVillain>
                 <aside>
                   <Typography variant="h3" component="h2" gutterBottom>
                     You could continue with
                   </Typography>
                   <PathsList paths={path.next} />
                 </aside>
-              </Box>
-            )}
-          </LayoutVillain>
+              </LayoutVillain>
+            </Box>
+          )}
 
           <HelpDrawer>
             <Stack spacing={4}>
