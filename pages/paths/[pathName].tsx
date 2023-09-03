@@ -70,7 +70,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 const PageHead = ({ path }: Pick<Props, 'path'>) => (
   <Head>
-    <title>Sherpa: the {path.title} path</title>
+    <title>{`Sherpa: the ${path.title} path`}</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
