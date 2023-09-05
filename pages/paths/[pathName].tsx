@@ -18,6 +18,8 @@ import {
   LayoutHero,
   LayoutVillain,
   LayoutContainer,
+  LayoutDrawer,
+  LayoutDrawerToggle,
   Box,
   Typography,
   Grid,
@@ -26,11 +28,7 @@ import {
   Underline,
 } from '../../src/theme'
 import { List as PathsList } from '../../src/paths'
-import {
-  HelpDrawer,
-  HelpDrawerToggle,
-  Paths as PathsHelp,
-} from '../../src/help'
+import { Paths as PathsHelp } from '../../src/help'
 import {
   Timeline as ResourcesTimeline,
   List as ResourcesList,
@@ -66,6 +64,9 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   }
 }
 
+const drawerTestId = 'help-drawer'
+const toggleTestId = 'help-drawer-toggle'
+
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 const PageHead = ({ path }: Pick<Props, 'path'>) => (
@@ -99,13 +100,15 @@ const PageHead = ({ path }: Pick<Props, 'path'>) => (
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
 
+console.log(LayoutDrawerToggle)
+
 export default function PathPage({ path, paths }: Props) {
   return (
     <>
       <PageHead path={path} />
       <Layout>
         <LayoutHeader>
-          <HelpDrawerToggle />
+          <LayoutDrawerToggle data-testid={toggleTestId} />
         </LayoutHeader>
 
         <main>
@@ -179,7 +182,7 @@ export default function PathPage({ path, paths }: Props) {
             </Box>
           )}
 
-          {/* <HelpDrawer>
+          <LayoutDrawer data-testid={drawerTestId}>
             <Stack spacing={4}>
               <Typography variant="h5" component="p">
                 Need a compass?
@@ -194,7 +197,7 @@ export default function PathPage({ path, paths }: Props) {
                 <PathsHelp />
               </Box>
             </Stack>
-          </HelpDrawer> */}
+          </LayoutDrawer>
         </main>
       </Layout>
     </>

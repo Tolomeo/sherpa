@@ -38,5 +38,5 @@ export {
   LayoutVillain,
   LayoutContainer,
   LayoutDrawer,
-  useLayoutDrawer,
+  LayoutDrawerToggle,
 } from './Layout'

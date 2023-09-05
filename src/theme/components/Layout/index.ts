@@ -2,7 +2,7 @@ import LayoutHeader from './Header'
 import LayoutContainer from './Container'
 import LayoutHero from './Hero'
 import LayoutVillain from './Villain'
-import LayoutDrawer, { useLayoutDrawer } from './Drawer'
+import LayoutDrawer, { LayoutDrawerToggle } from './Drawer'
 
 export {
   LayoutHeader,
@@ -10,6 +10,6 @@ export {
   LayoutHero,
   LayoutVillain,
   LayoutDrawer,
-  useLayoutDrawer,
+  LayoutDrawerToggle,
 }
 export { default } from './Layout'

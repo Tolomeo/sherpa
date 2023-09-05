@@ -2,15 +2,11 @@ import React, { createContext, useContext, useState } from 'react'
 import { DrawerProps } from '@mui/material/Drawer'
 import Box from '@mui/material/Box'
 
-type LayoutDrawers = Record<string, DrawerProps>
-
 type LayoutContextValue = {
-  getDrawers: () => LayoutDrawers
-  setDrawers: React.Dispatch<React.SetStateAction<LayoutDrawers>>
-  registerDrawer: (name: string, drawer: DrawerProps) => void
-  unregisterDrawer: (name: string) => void
-  getDrawer: (name: string) => DrawerProps | void
-  setDrawer: (name: string, drawer: Partial<DrawerProps>) => void
+  drawerOpen: boolean
+  openDrawer: () => void
+  closeDrawer: () => void
+  toggleDrawer: () => void
 }
 
 const LayoutContext = createContext<LayoutContextValue | null>(null)
@@ -29,57 +25,23 @@ type Props = {
 }
 
 const LayoutContextProvider = ({ children }: Props) => {
-  const [drawers, setDrawers] = useState<Record<string, DrawerProps>>({})
-  const getDrawers = () => drawers
-  const registerDrawer = (name: string, drawerChildren: React.ReactNode) => {
-    if (drawers[name]) return
+  const [drawerOpen, setDrawerOpen] = useState(false)
 
-    setDrawers((currentDrawers) => ({
-      ...currentDrawers,
-      [name]: { children: drawerChildren, open: false },
-    }))
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen)
   }
-  const unregisterDrawer = (name: string) => {
-    if (!drawers[name]) return
-
-    setDrawers((currentDrawers) => {
-      const newDrawers = { ...currentDrawers }
-      delete newDrawers[name]
-      return newDrawers
-    })
+  const openDrawer = () => {
+    setDrawerOpen(true)
   }
-  const getDrawer = (name: string) => {
-    if (!drawers[name]) return
-
-    return drawers[name]
-  }
-  const setDrawer = (name: string, drawer: Partial<DrawerProps>) => {
-    if (!drawers[name]) return
-
-    setDrawers((currentDrawers) => {
-      const newDrawers = Object.keys(currentDrawers).reduce(
-        (_newDrawers, drawerName) => {
-          _newDrawers[drawerName] = {
-            ...drawers[drawerName],
-            open: false,
-          }
-          return _newDrawers
-        },
-        {} as LayoutDrawers,
-      )
-      newDrawers[name] = { ...currentDrawers[name], ...drawer }
-
-      return newDrawers
-    })
+  const closeDrawer = () => {
+    setDrawerOpen(false)
   }
 
   const context = {
-    getDrawers,
-    setDrawers,
-    registerDrawer,
-    unregisterDrawer,
-    getDrawer,
-    setDrawer,
+    drawerOpen,
+    openDrawer,
+    closeDrawer,
+    toggleDrawer,
   }
 
   return (

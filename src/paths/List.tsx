@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 import { Paths, SerializedPaths } from '../../data'
 import { List, Link, Typography, Box, Underline } from '../theme'
 
-type Props = React.ComponentProps<typeof List> & {
+type Props = Omit<React.ComponentProps<typeof List>, 'children'> & {
   paths: Paths | SerializedPaths
 }
 

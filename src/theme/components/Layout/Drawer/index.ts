@@ -1,2 +1,2 @@
-export { default as Drawers } from './Drawers'
-export { default, useLayoutDrawer } from './Drawer'
+export { default } from './Drawer'
+export { default as LayoutDrawerToggle } from './Toggle'
