@@ -33,6 +33,9 @@ import {
   Timeline as ResourcesTimeline,
   List as ResourcesList,
 } from '../../src/resources'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
+import { useLayoutContext } from '../../src/theme/components/Layout/Context'
 
 interface Params extends ParsedUrlQuery {
   pathName: string
@@ -64,9 +67,6 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   }
 }
 
-const drawerTestId = 'help-drawer'
-const toggleTestId = 'help-drawer-toggle'
-
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 const PageHead = ({ path }: Pick<Props, 'path'>) => (
@@ -97,10 +97,25 @@ const PageHead = ({ path }: Pick<Props, 'path'>) => (
   </Head>
 )
 
+const CloseLayoutDrawerOnRouteChange = () => {
+  const router = useRouter()
+  const layout = useLayoutContext()
+
+  useEffect(() => {
+    router.events.on('routeChangeComplete', layout.closeDrawer)
+
+    return () => {
+      router.events.off('routeChangeComplete', layout.closeDrawer)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  return null
+}
+
+const drawerTestId = 'help-drawer'
+const toggleDrawerTestId = 'help-drawer-toggle'
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
-
-console.log(LayoutDrawerToggle)
 
 export default function PathPage({ path, paths }: Props) {
   return (
@@ -108,7 +123,7 @@ export default function PathPage({ path, paths }: Props) {
       <PageHead path={path} />
       <Layout>
         <LayoutHeader>
-          <LayoutDrawerToggle data-testid={toggleTestId} />
+          <LayoutDrawerToggle data-testid={toggleDrawerTestId} />
         </LayoutHeader>
 
         <main>
@@ -197,6 +212,7 @@ export default function PathPage({ path, paths }: Props) {
                 <PathsHelp />
               </Box>
             </Stack>
+            <CloseLayoutDrawerOnRouteChange />
           </LayoutDrawer>
         </main>
       </Layout>
