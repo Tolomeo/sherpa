@@ -17,6 +17,30 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
   type: 'object',
   properties: {
     title: { type: 'string', minLength: 2 },
+    brand: {
+      type: 'object',
+      properties: {
+        logoSvg: {
+          type: 'string',
+          // TODO: SVG pattern
+        },
+        textColor: {
+          type: 'string',
+          // TODO: HEX pattern
+        },
+        backgroundGradient: {
+          type: 'array',
+          items: {
+            type: 'string',
+            // TODO: HEX pattern
+          },
+          minItems: 2,
+          maxItems: 2,
+        },
+      },
+      nullable: true,
+      required: ['logoSvg', 'textColor', 'backgroundGradient'],
+    },
     main: {
       type: 'array',
       items: { type: 'string', pattern: '^https?://' },
@@ -114,6 +138,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
 
       paths[pathName] = {
         ...serializedPath,
+        brand: serializedPath.brand || null,
         // populating resources data
         main: serializedPath.main.map((resourceId) => {
           const resource = resources[resourceId]
