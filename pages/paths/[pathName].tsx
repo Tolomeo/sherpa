@@ -1,5 +1,7 @@
+import { useEffect } from 'react'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { ParsedUrlQuery } from 'querystring'
 import {
   paths,
@@ -25,6 +27,7 @@ import {
   Grid,
   Stack,
   Masonry,
+  SvgImage,
   Underline,
 } from '../../src/theme'
 import { List as PathsList } from '../../src/paths'
@@ -32,8 +35,7 @@ import {
   Timeline as ResourcesTimeline,
   List as ResourcesList,
 } from '../../src/resources'
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+// TODO: Export from theme
 import { useLayoutContext } from '../../src/theme/components/Layout/Context'
 
 interface Params extends ParsedUrlQuery {
@@ -126,8 +128,12 @@ export default function PathPage({ path, paths }: Props) {
         </LayoutHeader>
 
         <main>
-          <LayoutHero>
-            <Typography variant="h1" color="primary.contrastText">
+          <LayoutHero
+            backgroundGradient={path.brand?.backgroundGradient}
+            textColor={path.brand?.textColor}
+          >
+            {path.brand && <SvgImage svg={path.brand.logoSvg} />}
+            <Typography variant="h1">
               The <Underline>{path.title}</Underline> path
             </Typography>
           </LayoutHero>
