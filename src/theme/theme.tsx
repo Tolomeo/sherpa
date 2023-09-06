@@ -66,6 +66,7 @@ export const createTheme = (mode: ThemeMode) => {
         styleOverrides: {
           root: {
             backgroundColor: themeTokens.palette.background.default,
+            backgroundImage: 'none',
             color: themeTokens.palette.text.primary,
             zIndex: 1400,
           },
