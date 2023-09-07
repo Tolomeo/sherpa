@@ -20,7 +20,7 @@ const Backdrop = styled(Box)(
 
 const Content = styled(Box)(
   ({ theme }) => `
-	margin-block-end: ${theme.spacing(2)};
+	margin-block-end: ${theme.spacing(6)};
 
 	${theme.breakpoints.up('md')} {
 		margin-block-end: 0;
@@ -50,7 +50,7 @@ const Hero = ({ children, backgroundGradient, textColor }: Props) => {
       <Content sx={{ color }}>
         <Container>
           <Grid container>
-            <Grid item md={9}>
+            <Grid item xs={12} md={9}>
               <Stack
                 component="span"
                 direction={{ xs: 'column', sm: 'row' }}
