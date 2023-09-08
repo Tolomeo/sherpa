@@ -35,7 +35,6 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
             // TODO: HEX pattern
           },
           minItems: 2,
-          maxItems: 2,
         },
       },
       nullable: true,

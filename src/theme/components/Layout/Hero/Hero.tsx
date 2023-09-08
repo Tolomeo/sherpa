@@ -36,13 +36,25 @@ const Content = styled(Box)(
 `,
 )
 
+const createGradient = (colors: string[]) =>
+  `linear-gradient(360deg, ${colors.reduce((colorStops, color, colorIndex) => {
+    if (colorIndex === 0) return `${color} 0%,`
+
+    if (colorIndex === colors.length - 1) return `${colorStops} ${color} 100%`
+
+    return `${colorStops} ${color} ${
+      ((colorIndex + 1) / colors.length) * 100
+    }%,`
+  }, '')})`
+
 const Hero = ({ children, backgroundGradient, textColor }: Props) => {
   const theme = useTheme()
   const gradient = backgroundGradient || [
     theme.palette.primary.dark,
     theme.palette.primary.main,
   ]
-  const background = `linear-gradient(360deg, ${gradient[0]} 0%, ${gradient[1]} 100%)`
+  const background =
+    gradient.length === 1 ? gradient[0] : createGradient(gradient)
   const color = textColor || theme.palette.primary.contrastText
 
   return (
