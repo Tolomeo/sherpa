@@ -13,15 +13,15 @@ export interface SerializedSubPath extends SerializedPathExtra {
   extra?: Array<keyof Resources>
 }
 
-export interface PathBrand {
-  textColor: string
-  backgroundGradient: string[] //TODO: make tuple [string, string]
+export interface PathHero {
+  foreground: string
+  background: string[] //TODO: make tuple [string, string]
 }
 
 export interface SerializedPath<PathNames = string> {
   title: string
   logo?: string
-  brand?: PathBrand
+  hero?: PathHero
   main: Array<keyof Resources>
   extra?: Array<SerializedSubTopic | SerializedSubPath>
   next?: Array<PathNames>
@@ -49,7 +49,7 @@ export interface SubPath extends PathExtra {
 export interface Path<PathNames = string> {
   title: string
   logo: string | null
-  brand: PathBrand | null
+  hero: PathHero | null
   main: Resource[]
   extra: Array<SubTopic | SubPath>
   next: SerializedPaths<PathNames>

@@ -22,14 +22,14 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
       type: 'string',
       nullable: true,
     },
-    brand: {
+    hero: {
       type: 'object',
       properties: {
-        textColor: {
+        foreground: {
           type: 'string',
           // TODO: HEX pattern
         },
-        backgroundGradient: {
+        background: {
           type: 'array',
           items: {
             type: 'string',
@@ -39,7 +39,7 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
         },
       },
       nullable: true,
-      required: ['textColor', 'backgroundGradient'],
+      required: ['foreground', 'background'],
     },
     main: {
       type: 'array',
@@ -139,7 +139,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
       paths[pathName] = {
         ...serializedPath,
         logo: serializedPath.logo || null,
-        brand: serializedPath.brand || null,
+        hero: serializedPath.hero || null,
         // populating resources data
         main: serializedPath.main.map((resourceId) => {
           const resource = resources[resourceId]

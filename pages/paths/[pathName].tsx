@@ -129,8 +129,8 @@ export default function PathPage({ path, paths }: Props) {
 
         <main>
           <LayoutHero
-            backgroundGradient={path.brand?.backgroundGradient}
-            textColor={path.brand?.textColor}
+            foreground={path.hero?.foreground}
+            background={path.hero?.background}
           >
             {path.logo && <SvgImage svg={path.logo} />}
             <Typography variant="h1">

@@ -7,8 +7,8 @@ import Graphics from './Graphics'
 
 type Props = {
   children: React.ReactNode
-  backgroundGradient?: string[]
-  textColor?: string
+  foreground?: string
+  background?: string[]
 }
 
 const Backdrop = styled(Box)(
@@ -47,19 +47,18 @@ const createGradient = (colors: string[]) =>
     }%,`
   }, '')})`
 
-const Hero = ({ children, backgroundGradient, textColor }: Props) => {
+const Hero = ({ children, foreground, background }: Props) => {
   const theme = useTheme()
-  const gradient = backgroundGradient || [
+  const backgroundColors = background || [
     theme.palette.primary.dark,
     theme.palette.primary.main,
   ]
-  const background =
-    gradient.length === 1 ? gradient[0] : createGradient(gradient)
-  const color = textColor || theme.palette.primary.contrastText
+  const backgroundGradient = createGradient(backgroundColors)
+  const textColor = foreground || theme.palette.primary.contrastText
 
   return (
-    <Backdrop sx={{ background }}>
-      <Content sx={{ color }}>
+    <Backdrop sx={{ background: backgroundGradient }}>
+      <Content sx={{ color: textColor }}>
         <Container>
           <Grid container>
             <Grid item xs={12} md={9}>
