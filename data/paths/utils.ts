@@ -18,8 +18,9 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
   properties: {
     title: { type: 'string', minLength: 2 },
     logo: {
-      // TODO: SVG pattern
       type: 'string',
+      pattern: '^<svg.+/svg>$',
+      contentMediaType: 'image/svg+xml',
       nullable: true,
     },
     hero: {
@@ -27,13 +28,13 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
       properties: {
         foreground: {
           type: 'string',
-          // TODO: HEX pattern
+          pattern: '^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$',
         },
         background: {
           type: 'array',
           items: {
             type: 'string',
-            // TODO: HEX pattern
+            pattern: '^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$',
           },
           minItems: 2,
         },
