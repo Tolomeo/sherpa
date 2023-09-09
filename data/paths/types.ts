@@ -15,7 +15,7 @@ export interface SerializedSubPath extends SerializedPathExtra {
 
 export interface PathHero {
   foreground: string
-  background: string[] //TODO: make tuple [string, string]
+  background: string[]
 }
 
 export interface SerializedPath<PathNames = string> {

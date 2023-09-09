@@ -22,6 +22,7 @@ import {
   LayoutContainer,
   LayoutDrawer,
   LayoutDrawerToggle,
+  useLayoutContext,
   Box,
   Typography,
   Grid,
@@ -35,8 +36,6 @@ import {
   Timeline as ResourcesTimeline,
   List as ResourcesList,
 } from '../../src/resources'
-// TODO: Export from theme
-import { useLayoutContext } from '../../src/theme/components/Layout/Context'
 
 interface Params extends ParsedUrlQuery {
   pathName: string

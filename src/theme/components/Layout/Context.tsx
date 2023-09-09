@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState } from 'react'
-import { DrawerProps } from '@mui/material/Drawer'
 import Box from '@mui/material/Box'
 
 type LayoutContextValue = {

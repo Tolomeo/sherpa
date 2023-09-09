@@ -40,4 +40,5 @@ export {
   LayoutContainer,
   LayoutDrawer,
   LayoutDrawerToggle,
+  useLayoutContext,
 } from './Layout'
