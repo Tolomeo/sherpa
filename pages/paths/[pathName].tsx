@@ -132,7 +132,7 @@ export default function PathPage({ path, paths }: Props) {
             backgroundGradient={path.brand?.backgroundGradient}
             textColor={path.brand?.textColor}
           >
-            {path.brand && <SvgImage svg={path.brand.logoSvg} />}
+            {path.logo && <SvgImage svg={path.logo} />}
             <Typography variant="h1">
               The <Underline>{path.title}</Underline> path
             </Typography>
