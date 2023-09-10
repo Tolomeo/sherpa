@@ -53,10 +53,18 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
       nullable: true,
       uniqueItems: true,
     },
+    resources: {
+      type: 'array',
+      items: { type: 'string', pattern: '^https?://' },
+      minItems: 1,
+      uniqueItems: true,
+      nullable: true,
+    },
     main: {
       type: 'array',
       items: { type: 'string', pattern: '^https?://' },
       minItems: 2,
+      nullable: true,
       uniqueItems: true,
     },
     next: {
@@ -116,7 +124,7 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
       nullable: true,
     },
   },
-  required: ['title', 'main'],
+  required: ['title'],
   additionalProperties: false,
 }
 
@@ -154,7 +162,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
         hero: serializedPath.hero || null,
         notes: serializedPath.notes || [],
         // populating resources data
-        main: serializedPath.main.map((resourceId) => {
+        main: (serializedPath.main || []).map((resourceId) => {
           const resource = resources[resourceId]
 
           if (!resource)
