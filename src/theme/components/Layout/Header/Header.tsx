@@ -8,13 +8,17 @@ import Logo from '../../Logo'
 import ThemeModeToggle from './ThemeModeToggle'
 import GitHubLink from './GitHubLink'
 
-const Header: React.FC = ({ children }) => {
+type Props = {
+  children?: React.ReactNode
+}
+
+const Header: React.FC<Props> = ({ children }) => {
   return (
     <AppBar position="sticky">
       <Container maxWidth={false}>
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1 }}>
-            <Link href="/" passHref>
+            <Link href="/" legacyBehavior>
               <a>
                 <Logo />
               </a>

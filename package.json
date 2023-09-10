@@ -12,29 +12,26 @@
     "test:ci": "cypress run"
   },
   "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "@mui/icons-material": "^5.3.0",
-    "@mui/lab": "^5.0.0-alpha.65",
-    "@mui/material": "^5.3.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.7",
+    "@mui/lab": "^5.0.0-alpha.142",
+    "@mui/material": "^5.14.7",
     "ajv": "^8.11.0",
-    "classnames": "^2.3.1",
-    "next": "11.0.1",
-    "normalize.css": "^8.0.1",
+    "next": "^13.4.19",
     "querystring": "^0.2.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@testing-library/cypress": "8.0.7",
-    "@types/react": "17.0.15",
+    "@types/react": "18.2.0",
     "cypress": "11.2.0",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.0.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.1",
-    "prettier": "^2.3.2",
-    "sass": "^1.37.5",
-    "typescript": "4.3.5"
+    "eslint": "^8.48.0",
+    "eslint-config-next": "^13.4.19",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3",
+    "typescript": "5.2.2"
   }
 }

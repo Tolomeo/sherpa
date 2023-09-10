@@ -14,6 +14,7 @@ const ThemeContext = createContext<ThemeContextValue>(null)
 
 type Props = {
   cache: EmotionCache
+  children: React.ReactNode
 }
 
 const ThemeProvider: React.FC<Props> = ({ children, cache }) => {

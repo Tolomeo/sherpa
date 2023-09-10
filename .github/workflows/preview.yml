@@ -11,8 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10 # to prevent a hanging process from using all CI minutes
     steps:
-      - uses: actions/checkout@v2
-      - uses: amondnet/vercel-action@v20
+      - name: Setup Node 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Deploy
+        uses: amondnet/vercel-action@v25
         id: vercel-deployment
         with:
           vercel-project-name: 'the-learning-path'
@@ -30,8 +36,10 @@ jobs:
     needs: Deploy
     timeout-minutes: 30 # to prevent a hanging process from using all CI minutes
     steps:
-      - uses: actions/checkout@v2
-      - uses: cypress-io/github-action@v4
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Cypress
+        uses: cypress-io/github-action@v4
         env:
           CYPRESS_BASE_URL: ${{ needs.Deploy.outputs.preview-url }}
         with:

@@ -23,6 +23,7 @@ const getThemeTokens = (mode: ThemeMode) =>
         fontSize: 'clamp(3rem, 2.0310rem + 4.1344vw, 6rem)',
         textTransform: 'uppercase',
         lineHeight: 1.1,
+        textWrap: 'balance',
       },
       h2: {
         fontSize: 'clamp(1.875rem, 1.2694rem + 2.5840vw, 3.75rem)',
@@ -66,6 +67,7 @@ export const createTheme = (mode: ThemeMode) => {
         styleOverrides: {
           root: {
             backgroundColor: themeTokens.palette.background.default,
+            backgroundImage: 'none',
             color: themeTokens.palette.text.primary,
             zIndex: 1400,
           },

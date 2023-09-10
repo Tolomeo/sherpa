@@ -1,5 +1,7 @@
+import { useEffect, Fragment } from 'react'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { ParsedUrlQuery } from 'querystring'
 import {
   paths,
@@ -11,26 +13,25 @@ import {
   isSubPath,
   isSubTopic,
   hasSubPathExtraResources,
+  hasNotes,
 } from '../../data'
 import {
   Layout,
   LayoutHeader,
   LayoutHero,
-  LayoutVillain,
   LayoutContainer,
+  LayoutDrawer,
+  LayoutDrawerToggle,
+  useLayoutContext,
   Box,
   Typography,
   Grid,
   Stack,
   Masonry,
+  SvgImage,
   Underline,
 } from '../../src/theme'
 import { List as PathsList } from '../../src/paths'
-import {
-  HelpDrawer,
-  HelpDrawerToggle,
-  Paths as PathsHelp,
-} from '../../src/help'
 import {
   Timeline as ResourcesTimeline,
   List as ResourcesList,
@@ -70,7 +71,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 const PageHead = ({ path }: Pick<Props, 'path'>) => (
   <Head>
-    <title>Sherpa: the {path.title} path</title>
+    <title>{`Sherpa: the ${path.title} path`}</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -96,6 +97,23 @@ const PageHead = ({ path }: Pick<Props, 'path'>) => (
   </Head>
 )
 
+const CloseLayoutDrawerOnRouteChange = () => {
+  const router = useRouter()
+  const layout = useLayoutContext()
+
+  useEffect(() => {
+    router.events.on('routeChangeComplete', layout.closeDrawer)
+
+    return () => {
+      router.events.off('routeChangeComplete', layout.closeDrawer)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  return null
+}
+
+const drawerTestId = 'help-drawer'
+const toggleDrawerTestId = 'help-drawer-toggle'
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
 
@@ -105,12 +123,16 @@ export default function PathPage({ path, paths }: Props) {
       <PageHead path={path} />
       <Layout>
         <LayoutHeader>
-          <HelpDrawerToggle />
+          <LayoutDrawerToggle data-testid={toggleDrawerTestId} />
         </LayoutHeader>
 
         <main>
-          <LayoutHero>
-            <Typography variant="h1" color="primary.contrastText">
+          <LayoutHero
+            foreground={path.hero?.foreground}
+            background={path.hero?.background}
+          >
+            {path.logo && <SvgImage svg={path.logo} />}
+            <Typography variant="h1">
               The <Underline>{path.title}</Underline> path
             </Typography>
           </LayoutHero>
@@ -166,20 +188,33 @@ export default function PathPage({ path, paths }: Props) {
             </LayoutContainer>
           )}
 
-          <LayoutVillain>
-            {hasNextPaths(path) && (
-              <Box py={4}>
-                <aside>
-                  <Typography variant="h3" component="h2" gutterBottom>
-                    You could continue with
-                  </Typography>
-                  <PathsList paths={path.next} />
-                </aside>
-              </Box>
-            )}
-          </LayoutVillain>
+          {hasNextPaths(path) && (
+            <LayoutContainer pt={4} pb={6}>
+              <aside>
+                <Typography variant="h3" component="h2" gutterBottom>
+                  You could continue with
+                </Typography>
+                <PathsList paths={path.next} />
+              </aside>
+            </LayoutContainer>
+          )}
 
-          <HelpDrawer>
+          {hasNotes(path) && (
+            <LayoutContainer pt={4} pb={6}>
+              <footer>
+                {path.notes.map((note, index) => (
+                  <Typography
+                    key={index}
+                    variant="body2"
+                    color="text.disabled"
+                    dangerouslySetInnerHTML={{ __html: note }}
+                  ></Typography>
+                ))}
+              </footer>
+            </LayoutContainer>
+          )}
+
+          <LayoutDrawer data-testid={drawerTestId}>
             <Stack spacing={4}>
               <Typography variant="h5" component="p">
                 Need a compass?
@@ -191,10 +226,63 @@ export default function PathPage({ path, paths }: Props) {
                 About paths
               </Typography>
               <Box pb={3}>
-                <PathsHelp />
+                <Stack spacing={1}>
+                  <Typography>
+                    Every path in Sherpa could vary slightly depending on the
+                    differences among subjects and on their resources being
+                    designed by different authors, in different times and with
+                    different objectives in mind.
+                    <br />
+                    There are some recurring patterns nonetheless.
+                  </Typography>
+                  <Typography>
+                    When possible, paths will start with a{' '}
+                    <b>You want to come from</b> section, listing preparatory
+                    paths.
+                  </Typography>
+                  <Typography>
+                    The path itself is a list of resources, ordered in such a
+                    way to cover all the essentials, from beginner to
+                    intermediate/advanced level.
+                  </Typography>
+                  <Typography>
+                    The number of additional sections coming straight after can
+                    vary, but one will generally be able to find:
+                  </Typography>
+                  <Typography>
+                    <b>There&apos;s more</b> with alternative resources to the
+                    ones in the path
+                  </Typography>
+                  <Typography>
+                    <b>Beyond basics</b> with advanced topics and in-depth
+                    analyses
+                  </Typography>
+                  <Typography>
+                    <b>How do they do it?</b> with example projects and
+                    practical tutorials
+                  </Typography>
+                  <Typography>
+                    <b>Nice to know</b> with curiosities and contextual
+                    information
+                  </Typography>
+                  <Typography>
+                    <b>Great bookmarks</b> with references, cheatsheets and
+                    utility tools
+                  </Typography>
+                  <Typography>
+                    <b>Stay in the loop</b> with blogs, newletters and feeds to
+                    stay up to date
+                  </Typography>
+                  <Typography>
+                    When possible, paths will conclude with a{' '}
+                    <b>You could continue with</b> section, recommending next
+                    steps.
+                  </Typography>
+                </Stack>
               </Box>
             </Stack>
-          </HelpDrawer>
+            <CloseLayoutDrawerOnRouteChange />
+          </LayoutDrawer>
         </main>
       </Layout>
     </>

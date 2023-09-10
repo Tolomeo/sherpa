@@ -1,5 +1,13 @@
 {
   "title": "Python",
+  "logo": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 600\"> <path fill=\"#387eb8\" d=\"M300 190H120s-50 0-50 110 50 110 50 110h50v-50c0-40 30-70 70-70h119.934c30.066 0 50.066-20 50.48-50.48C410.828 209.04 410 120 410 120s0-50-110-50-110 50-110 50v50h110z\"/> <path fill=\"#ffc331\" d=\"M300 410h180s50 0 50-110-50-110-50-110h-50v50c0 40-30 70-70 70H240c-30 0-50 20-50 50v120s0 50 110 50 110-50 110-50v-50H300Z\"/> <circle cx=\"240\" cy=\"120\" r=\"20\" fill=\"#fff\"/> <circle cx=\"360\" cy=\"480\" r=\"20\" fill=\"#fff\"/> </svg>",
+  "hero": {
+    "foreground": "#ffffff",
+    "background": ["#3574AC", "#629ccd"]
+  },
+  "notes": [
+    "Logo image: Dnu72 (https://commons.wikimedia.org/wiki/File:Python_logo_01.svg), „Python logo 01.svg“, distributed under the  GNU General Public License, Version 2 (https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) or any later version"
+  ],
   "next": ["docker"],
   "main": [
     "https://www.youtube.com/playlist?list=PLZPZq0r_RZOOkUQbat8LyQii36cJf2SWT",

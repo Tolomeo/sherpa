@@ -6,7 +6,6 @@ import {
   Layout,
   LayoutHeader,
   LayoutHero,
-  LayoutVillain,
   LayoutContainer,
   Typography,
   Box,
@@ -99,8 +98,8 @@ export default function Home({ paths, alternateSources }: Props) {
             </Box>
           </LayoutContainer>
 
-          <Box pt={6}>
-            <LayoutVillain>
+          <Box py={6}>
+            <LayoutContainer>
               <Box py={2}>
                 <Typography variant="h2">
                   There are many paths to the top of the mountain
@@ -121,7 +120,7 @@ export default function Home({ paths, alternateSources }: Props) {
                   online for what sparks one&apos;s interest.
                 </Typography>
               </Box>
-            </LayoutVillain>
+            </LayoutContainer>
           </Box>
         </main>
       </Layout>

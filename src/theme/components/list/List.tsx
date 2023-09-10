@@ -6,6 +6,7 @@ import ListItemText from '@mui/material/ListItemText'
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined'
 
 type Props = {
+  children: React.ReactNode
   bulleted?: boolean
   spaced?: boolean
 }

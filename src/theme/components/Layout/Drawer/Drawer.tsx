@@ -1,49 +1,39 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
+import MuiDrawer, { DrawerProps } from '@mui/material/Drawer'
+import Box from '@mui/material/Box'
+import Toolbar from '@mui/material/Toolbar'
 import { useLayoutContext } from '../Context'
-import { DrawerProps } from '@mui/material/Drawer'
 
-export const useLayoutDrawer = (name: string) => {
-  const { getDrawer, setDrawer } = useLayoutContext()
-  const isOpen = () => Boolean(getDrawer(name)?.open)
-  const open = () => setDrawer(name, { open: true })
-  const close = () => setDrawer(name, { open: false })
-  const toggle = () => setDrawer(name, { open: !getDrawer(name)?.open })
-
-  return {
-    isOpen,
-    open,
-    close,
-    toggle,
-  }
+type Props = Omit<DrawerProps, 'anchor' | 'elevation' | 'open' | 'onClose'> & {
+  children: React.ReactNode
 }
 
-type Props = DrawerProps & {
-  name: string
-}
+const Drawer: React.FC<Props> = ({ children, ...props }) => {
+  const { drawerOpen, closeDrawer } = useLayoutContext()
 
-const Drawer: React.FC<Props> = ({ name, ...props }) => {
-  const drawerName = useRef(name)
-  const { registerDrawer, unregisterDrawer, setDrawer } = useLayoutContext()
-
-  useEffect(() => {
-    unregisterDrawer(drawerName.current)
-    drawerName.current = name
-    registerDrawer(drawerName.current, props)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [name])
-
-  useEffect(() => {
-    setDrawer(drawerName.current, props)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props])
-
-  useEffect(() => {
-    const cleanupDrawerName = drawerName.current
-    return () => unregisterDrawer(cleanupDrawerName)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  return null
+  return (
+    <MuiDrawer
+      {...props}
+      anchor="right"
+      elevation={2}
+      open={drawerOpen}
+      onClose={closeDrawer}
+    >
+      <Box
+        sx={{
+          width: {
+            xs: 300,
+            md: 450,
+            lg: 600,
+            xl: 750,
+          },
+        }}
+      >
+        <Toolbar />
+        <Box padding={6}>{children}</Box>
+      </Box>
+    </MuiDrawer>
+  )
 }
 
 export default Drawer
