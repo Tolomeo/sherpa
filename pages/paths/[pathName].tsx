@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, Fragment } from 'react'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -13,6 +13,7 @@ import {
   isSubPath,
   isSubTopic,
   hasSubPathExtraResources,
+  hasNotes,
 } from '../../data'
 import {
   Layout,
@@ -198,6 +199,22 @@ export default function PathPage({ path, paths }: Props) {
                   <PathsList paths={path.next} />
                 </aside>
               </LayoutVillain>
+            </Box>
+          )}
+
+          {hasNotes(path) && (
+            <Box pt={4} pb={6}>
+              <LayoutContainer>
+                <footer>
+                  {path.notes.map((note, index) => (
+                    <Typography
+											key={index}
+                      variant="body2"
+                      dangerouslySetInnerHTML={{ __html: note }}
+                    ></Typography>
+                  ))}
+                </footer>
+              </LayoutContainer>
             </Box>
           )}
 

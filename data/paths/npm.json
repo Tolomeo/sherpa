@@ -5,6 +5,9 @@
     "foreground": "#ffffff",
     "background": ["#cb3837", "#fb3e44"]
   },
+  "notes": [
+    "Logo image: Jonathan E Cowperthwait (https://commons.wikimedia.org/wiki/File:Npm-logo_favicon.svg), „Npm-logo favicon“, marked as public domain"
+  ],
   "next": ["next", "node"],
   "main": [
     "https://www.youtube.com/watch?v=cjoTTSbOuG0",

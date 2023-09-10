@@ -5,6 +5,9 @@
     "foreground": "#394d54",
     "background": ["#018ab8", "#00acd3"]
   },
+  "notes": [
+    "Logo image: dotCloud, Inc. (Docker (container engine) logo (cropped).png), „Docker (container engine) logo (cropped).png“, distributed under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0)"
+  ],
   "main": [
     "https://www.digitalocean.com/community/conceptual_articles/introduction-to-containers",
     "https://devopedia.org/docker",

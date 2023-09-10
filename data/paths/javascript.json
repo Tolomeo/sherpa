@@ -5,6 +5,9 @@
     "foreground": "#000000",
     "background": ["#f0be25", "#FDD733"]
   },
+  "notes": [
+    "Logo image: Christopher Williams (https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.svg), „Unofficial JavaScript logo 2“, marked as public domain"
+  ],
   "prev": ["htmlcss"],
   "main": [
     "https://code.tutsplus.com/learn-modern-javascript-fundamentals-in-7-hours-free-course--ytc-24c",

@@ -5,6 +5,9 @@
     "foreground": "#ebebeb",
     "background": ["#264de4", "#2965F1"]
   },
+  "notes": [
+    "Logo image: W3C (https://commons.wikimedia.org/wiki/File:HTML5_logo_and_wordmark.svg), „HTML5 logo and wordmark“, https://creativecommons.org/licenses/by/3.0/legalcode"
+  ],
   "main": [
     "https://internetingishard.netlify.app",
     "https://www.freecodecamp.org/learn/2022/responsive-web-design/",

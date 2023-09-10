@@ -5,6 +5,9 @@
     "foreground": "#5fb950",
     "background": ["#0b151b", "#29332f"]
   },
+  "notes": [
+    "Logo image: Jason Long, neovim (https://commons.wikimedia.org/wiki/File:Neovim-mark.svg), „Neovim-mark“, https://creativecommons.org/licenses/by/3.0/legalcode"
+  ],
   "main": [
     "https://danielmiessler.com/study/vim",
     "https://thevaluable.dev/vim-beginner",

@@ -41,6 +41,17 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
       },
       nullable: true,
       required: ['foreground', 'background'],
+      additionalProperties: false,
+    },
+    notes: {
+      type: 'array',
+      items: {
+        type: 'string',
+        minLength: 3,
+      },
+      minItems: 1,
+      nullable: true,
+      uniqueItems: true,
     },
     main: {
       type: 'array',
@@ -141,6 +152,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
         ...serializedPath,
         logo: serializedPath.logo || null,
         hero: serializedPath.hero || null,
+        notes: serializedPath.notes || [],
         // populating resources data
         main: serializedPath.main.map((resourceId) => {
           const resource = resources[resourceId]
@@ -267,6 +279,10 @@ export const hasPrevPaths = <T extends Path>(path: T) => {
 
 export const hasExtraResources = <T extends Path>(path: T) => {
   return Boolean(path.extra.length)
+}
+
+export const hasNotes = <T extends Path>(path: T) => {
+  return Boolean(path.notes.length)
 }
 
 export const hasSubPathExtraResources = <T extends SubPath>(subpath: T) => {

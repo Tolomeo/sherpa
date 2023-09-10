@@ -5,6 +5,9 @@
     "foreground": "#282b2d",
     "background": ["#D5D8D1", "#E6E8E4"]
   },
+  "notes": [
+    "Logo image: Pyfisch (https://commons.wikimedia.org/wiki/File:Pictogram_voting_regex.svg), „Pictogram voting regex“, https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+  ],
   "main": [
     "https://regex.guide",
     "https://github.com/ziishaned/learn-regex",

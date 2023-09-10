@@ -5,6 +5,9 @@
     "foreground": "#ffffff",
     "background": ["#000080", "#2722E1"]
   },
+  "notes": [
+    "Logo image: Alexandre Nakonechnyj (Graphic design) and Lua team (PostScript code) (https://commons.wikimedia.org/wiki/File:Lua-Logo.svg), „Lua-Logo“, marked as public domain"
+  ],
   "main": [
     "https://www.youtube.com/watch?v=1srFmjt1Ib0&list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU&index=18",
     "https://github.com/kikito/lua_missions",

@@ -5,6 +5,9 @@
     "foreground": "#ffffff",
     "background": ["#f03c2e", "#f05133"]
   },
+  "notes": [
+    "Logo image: Jason Long (https://commons.wikimedia.org/wiki/File:Git-icon-white.svg), „Git-icon-white“, https://creativecommons.org/licenses/by/3.0/legalcode"
+  ],
   "main": [
     "https://www.coursera.org/learn/introduction-git-github",
     "https://learngitbranching.js.org",

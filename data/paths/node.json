@@ -5,6 +5,9 @@
     "foreground": "#333333",
     "background": ["#367B3C", "#30A034"]
   },
+  "notes": [
+    "Logo image: node.js authors (https://commons.wikimedia.org/wiki/File:Node.js_logo.svg), „Node.js logo“, Cropped, marked as public domain"
+  ],
   "prev": ["javascript", "typescript", "npm"],
   "next": ["docker"],
   "main": [

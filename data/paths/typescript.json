@@ -5,6 +5,9 @@
     "foreground": "#ffffff",
     "background": ["#245189", "#316FBB"]
   },
+  "notes": [
+    "Logo image: ™/®Microsoft (https://commons.wikimedia.org/wiki/File:Typescript_logo_2020.svg), „Typescript logo 2020“, marked as public domain"
+  ],
   "prev": ["javascript"],
   "main": [
     "https://www.toptal.com/typescript/typescript-vs-javascript-guide",
