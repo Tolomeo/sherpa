@@ -36,7 +36,6 @@ export {
   default as Layout,
   LayoutHeader,
   LayoutHero,
-  LayoutVillain,
   LayoutContainer,
   LayoutDrawer,
   LayoutDrawerToggle,

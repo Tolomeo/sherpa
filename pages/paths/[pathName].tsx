@@ -19,7 +19,6 @@ import {
   Layout,
   LayoutHeader,
   LayoutHero,
-  LayoutVillain,
   LayoutContainer,
   LayoutDrawer,
   LayoutDrawerToggle,
@@ -190,32 +189,29 @@ export default function PathPage({ path, paths }: Props) {
           )}
 
           {hasNextPaths(path) && (
-            <Box pt={4} pb={6}>
-              <LayoutVillain>
-                <aside>
-                  <Typography variant="h3" component="h2" gutterBottom>
-                    You could continue with
-                  </Typography>
-                  <PathsList paths={path.next} />
-                </aside>
-              </LayoutVillain>
-            </Box>
+            <LayoutContainer pt={4} pb={6}>
+              <aside>
+                <Typography variant="h3" component="h2" gutterBottom>
+                  You could continue with
+                </Typography>
+                <PathsList paths={path.next} />
+              </aside>
+            </LayoutContainer>
           )}
 
           {hasNotes(path) && (
-            <Box pt={4} pb={6}>
-              <LayoutContainer>
-                <footer>
-                  {path.notes.map((note, index) => (
-                    <Typography
-											key={index}
-                      variant="body2"
-                      dangerouslySetInnerHTML={{ __html: note }}
-                    ></Typography>
-                  ))}
-                </footer>
-              </LayoutContainer>
-            </Box>
+            <LayoutContainer pt={4} pb={6}>
+              <footer>
+                {path.notes.map((note, index) => (
+                  <Typography
+                    key={index}
+                    variant="body2"
+                    color="text.disabled"
+                    dangerouslySetInnerHTML={{ __html: note }}
+                  ></Typography>
+                ))}
+              </footer>
+            </LayoutContainer>
           )}
 
           <LayoutDrawer data-testid={drawerTestId}>
