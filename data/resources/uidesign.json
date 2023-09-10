@@ -37,145 +37,180 @@
   },
   {
     "title": "The Encyclopedia of Human-Computer Interaction",
-    "url": "https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed"
+    "url": "https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed",
+    "type": "basics"
   },
   {
     "title": "Psychology of Design",
-    "url": "https://growth.design/psychology"
+    "url": "https://growth.design/psychology",
+    "type": "basics"
   },
   {
     "title": "A Beginner’s Guide to UX Design",
-    "url": "https://webdesign.tutsplus.com/series/a-beginners-guide-to-ux-design--cms-1168"
+    "url": "https://webdesign.tutsplus.com/series/a-beginners-guide-to-ux-design--cms-1168",
+    "type": "basics"
   },
   {
     "title": "The Ultimate Guide to Mobile App Design Principles",
-    "url": "https://www.moveoapps.com/ultimate-guide-to-mobile-app-design-principles"
+    "url": "https://www.moveoapps.com/ultimate-guide-to-mobile-app-design-principles",
+    "type": "basics"
   },
   {
     "title": "A List of UX Best Practices",
-    "url": "https://www.nickkolenda.com/user-experience"
+    "url": "https://www.nickkolenda.com/user-experience",
+    "type": "basics"
   },
   {
     "title": "Web Design for Beginners",
     "url": "https://www.youtube.com/watch?v=B-ytMSuwbf8&list=PLgGbWId6zgaXQi_U88w9ywdBTXCaJMvmB&index=2&t=1s",
-    "source": "youtube.com/c/tutsplus"
+    "source": "youtube.com/c/tutsplus",
+    "type": "basics"
   },
   {
     "title": "Introduction to User Experience Design",
-    "url": "https://www.coursera.org/learn/user-experience-design"
+    "url": "https://www.coursera.org/learn/user-experience-design",
+    "type": "basics"
   },
   {
     "title": "User Interface (UI) Personalization",
-    "url": "https://www.edx.org/course/user-interface-ui-personalization"
+    "url": "https://www.edx.org/course/user-interface-ui-personalization",
+    "type": "basics"
   },
   {
     "title": "Intro to the Design of Everyday Things",
-    "url": "https://www.udacity.com/course/intro-to-the-design-of-everyday-things--design101"
+    "url": "https://www.udacity.com/course/intro-to-the-design-of-everyday-things--design101",
+    "type": "basics"
   },
   {
     "title": "UI / UX Design",
-    "url": "https://www.coursera.org/specializations/ui-ux-design"
+    "url": "https://www.coursera.org/specializations/ui-ux-design",
+    "type": "basics"
   },
   {
     "title": "Principles of UX/UI Design",
-    "url": "https://www.coursera.org/learn/principles-of-ux-ui-design"
+    "url": "https://www.coursera.org/learn/principles-of-ux-ui-design",
+    "type": "basics"
   },
   {
     "title": "User Experience Research and Design",
-    "url": "https://www.coursera.org/specializations/michiganux"
+    "url": "https://www.coursera.org/specializations/michiganux",
+    "type": "basics"
   },
   {
     "title": "Google UX Design Professional Certificate",
-    "url": "https://www.coursera.org/professional-certificates/google-ux-design"
+    "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+    "type": "basics"
   },
   {
     "title": "Interaction Design",
-    "url": "https://www.coursera.org/specializations/interaction-design"
+    "url": "https://www.coursera.org/specializations/interaction-design",
+    "type": "basics"
   },
   {
     "title": "Prototyping for Digital Products and Websites",
-    "url": "https://thegymnasium.com/courses/course-v1:GYM+015+0/about"
+    "url": "https://thegymnasium.com/courses/course-v1:GYM+015+0/about",
+    "type": "basics"
   },
   {
     "title": "Designing for Web Accessibility",
-    "url": "https://www.w3.org/WAI/tips/designing"
+    "url": "https://www.w3.org/WAI/tips/designing",
+    "type": "basics"
   },
   {
     "title": "What Is Inclusive Design?",
-    "url": "https://xd.adobe.com/ideas/principles/design-systems/what-is-inclusive-design-principles-and-examples"
+    "url": "https://xd.adobe.com/ideas/principles/design-systems/what-is-inclusive-design-principles-and-examples",
+    "type": "basics"
   },
   {
     "title": "The Art of Design Spec'ing",
-    "url": "https://mahdif.com/blog/the-art-of-design-specing"
+    "url": "https://mahdif.com/blog/the-art-of-design-specing",
+    "type": "advanced"
   },
   {
     "title": "DesignOps Handbook",
-    "url": "https://www.designbetter.co/designops-handbook"
+    "url": "https://www.designbetter.co/designops-handbook",
+    "type": "advanced"
   },
   {
     "title": "Enterprise Design Sprints",
-    "url": "https://www.designbetter.co/enterprise-design-sprints"
+    "url": "https://www.designbetter.co/enterprise-design-sprints",
+    "type": "advanced"
   },
   {
     "title": "Design Leadership Handbook, your guide to becoming a strong design leader",
-    "url": "https://www.designbetter.co/design-leadership-handbook"
+    "url": "https://www.designbetter.co/design-leadership-handbook",
+    "type": "advanced"
   },
   {
     "title": "Design Engineering Handbook",
-    "url": "https://www.designbetter.co/design-engineering-handbook"
+    "url": "https://www.designbetter.co/design-engineering-handbook",
+    "type": "advanced"
   },
   {
     "title": "Business Thinking for Designers",
-    "url": "https://www.designbetter.co/business-thinking-for-designers"
+    "url": "https://www.designbetter.co/business-thinking-for-designers",
+    "type": "advanced"
   },
   {
     "title": "Design Thinking Process and Its Phases",
-    "url": "https://xd.adobe.com/ideas/principles/design-systems/design-thinking-process"
+    "url": "https://xd.adobe.com/ideas/principles/design-systems/design-thinking-process",
+    "type": "advanced"
   },
   {
     "title": "Best Practices for Incorporating VR in Design",
-    "url": "https://xd.adobe.com/ideas/principles/emerging-technology/best-practices-vr-web-design"
+    "url": "https://xd.adobe.com/ideas/principles/emerging-technology/best-practices-vr-web-design",
+    "type": "advanced"
   },
   {
     "title": "Can You Hear Me Now? Best Practices in Voice User Interface (VUI) Design",
-    "url": "https://xd.adobe.com/ideas/principles/emerging-technology/voice-user-interface-vui-design/"
+    "url": "https://xd.adobe.com/ideas/principles/emerging-technology/voice-user-interface-vui-design/",
+    "type": "advanced"
   },
   {
     "title": "Shape Up: Stop Running in Circles and Ship Work that Matters",
-    "url": "https://basecamp.com/shapeup"
+    "url": "https://basecamp.com/shapeup",
+    "type": "advanced"
   },
   {
     "title": "Law By Design",
-    "url": "https://lawbydesign.co"
+    "url": "https://lawbydesign.co",
+    "type": "advanced"
   },
   {
     "title": "A brief guide to design feedback",
-    "url": "https://matthewstrom.com/writing/critique-vs-review"
+    "url": "https://matthewstrom.com/writing/critique-vs-review",
+    "type": "advanced"
   },
   {
     "title": "Cognitive Bias and the Design Process, Part 1",
-    "url": "https://jonyablonski.com/articles/2021/cognitive-bias-and-the-design-process-part-1"
+    "url": "https://jonyablonski.com/articles/2021/cognitive-bias-and-the-design-process-part-1",
+    "type": "advanced"
   },
   {
     "title": "Cognitive Bias and the Design Process, Part 2",
-    "url": "https://jonyablonski.com/articles/2021/cognitive-bias-and-the-design-process-part-2"
+    "url": "https://jonyablonski.com/articles/2021/cognitive-bias-and-the-design-process-part-2",
+    "type": "advanced"
   },
   {
     "title": "The User Experience of Virtual Reality",
-    "url": "https://www.uxofvr.com"
+    "url": "https://www.uxofvr.com",
+    "type": "advanced"
   },
   {
     "title": "Leading the Modern Day Business",
-    "url": "https://www.coursera.org/specializations/leading-modern-day-business"
+    "url": "https://www.coursera.org/specializations/leading-modern-day-business",
+    "type": "advanced"
   },
   {
     "title": "Stanford CS547 - Human-Computer Interaction Seminar Series",
     "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMyupDF2O00r19JsmolyXdD",
-    "source": "youtube.com/@stanfordonline"
+    "source": "youtube.com/@stanfordonline",
+    "type": "advanced"
   },
   {
     "title": "Embedded Interface Design",
-    "url": "https://www.coursera.org/specializations/embedded-interface-design"
+    "url": "https://www.coursera.org/specializations/embedded-interface-design",
+    "type": "advanced"
   },
   {
     "title": "Principles of Product Design",
@@ -328,7 +363,8 @@
   },
   {
     "title": "Design Systems Repo",
-    "url": "https://designsystemsrepo.com"
+    "url": "https://designsystemsrepo.com",
+    "type": "how-to"
   },
   {
     "title": "Atomic Design by Brad Frost",
@@ -372,67 +408,83 @@
   },
   {
     "title": "Human Interface Guidelines",
-    "url": "https://developer.apple.com/design/human-interface-guidelines/guidelines/overview"
+    "url": "https://developer.apple.com/design/human-interface-guidelines/guidelines/overview",
+    "type": "reference"
   },
   {
     "title": "Material Design",
-    "url": "https://m3.material.io"
+    "url": "https://m3.material.io",
+    "type": "reference"
   },
   {
     "title": "User Inyerface - A worst-practice UI experiment",
-    "url": "https://userinyerface.com"
+    "url": "https://userinyerface.com",
+    "type": "curiosity"
   },
   {
     "title": "Can't Unsee",
-    "url": "https://cantunsee.space"
+    "url": "https://cantunsee.space",
+    "type": "curiosity"
   },
   {
     "title": "PatternLanguage",
-    "url": "http://www.patternlanguage.com"
+    "url": "http://www.patternlanguage.com",
+    "type": "curiosity"
   },
   {
     "title": "Design for Developers",
-    "url": "https://thoughtbot.com/upcase/design-for-developers"
+    "url": "https://thoughtbot.com/upcase/design-for-developers",
+    "type": "basics"
   },
   {
     "title": "Graphical User Interface Gallery",
-    "url": "http://toastytech.com/guis/index.html"
+    "url": "http://toastytech.com/guis/index.html",
+    "type": "curiosity"
   },
   {
     "title": "The History of User Interfaces",
-    "url": "https://history.user-interface.io"
+    "url": "https://history.user-interface.io",
+    "type": "basics"
   },
   {
     "title": "I Regret My $46k Website Redesign",
-    "url": "https://mtlynch.io/tinypilot-redesign"
+    "url": "https://mtlynch.io/tinypilot-redesign",
+    "type": "curiosity"
   },
   {
     "title": "Dark UIs. The Good and the Bad. Dos and Don’ts.",
-    "url": "https://www.toptal.com/designers/ui/dark-ui"
+    "url": "https://www.toptal.com/designers/ui/dark-ui",
+    "type": "basics"
   },
   {
     "title": "Copying is the way design works",
-    "url": "https://matthewstrom.com/writing/copying"
+    "url": "https://matthewstrom.com/writing/copying",
+    "type": "curiosity"
   },
   {
     "title": "Web Design Across the World",
-    "url": "https://webdesign.tutsplus.com/series/web-design-across-the-world--cms-1038"
+    "url": "https://webdesign.tutsplus.com/series/web-design-across-the-world--cms-1038",
+    "type": "curiosity"
   },
   {
     "title": "Deceptive Patterns",
-    "url": "https://www.deceptive.design"
+    "url": "https://www.deceptive.design",
+    "type": "curiosity"
   },
   {
     "title": "Web Design Museum",
-    "url": "https://www.webdesignmuseum.org"
+    "url": "https://www.webdesignmuseum.org",
+    "type": "curiosity"
   },
   {
     "title": "Biased by Design",
-    "url": "https://biasedbydesign.com"
+    "url": "https://biasedbydesign.com",
+    "type": "reference"
   },
   {
     "title": "Nielsen Norman Group",
-    "url": "https://www.nngroup.com"
+    "url": "https://www.nngroup.com",
+    "type": "reference"
   },
   {
     "title": "Design Principles",
@@ -440,119 +492,148 @@
   },
   {
     "title": "UX Checklists For Interface Designers",
-    "url": "https://www.smashingmagazine.com/2022/09/ux-checklists-for-interface-designers"
+    "url": "https://www.smashingmagazine.com/2022/09/ux-checklists-for-interface-designers",
+    "type": "reference"
   },
   {
     "title": "Undesign",
-    "url": "https://undesign.learn.uno"
+    "url": "https://undesign.learn.uno",
+    "type": "tool"
   },
   {
     "title": "The Component Gallery",
-    "url": "https://component.gallery"
+    "url": "https://component.gallery",
+    "type": "reference"
   },
   {
     "title": "126 Websites to Show Off your Design",
-    "url": "https://lemon.io/127-design-websites"
+    "url": "https://lemon.io/127-design-websites",
+    "type": "reference"
   },
   {
     "title": "Open UI",
-    "url": "https://open-ui.org"
+    "url": "https://open-ui.org",
+    "type": "reference"
   },
   {
     "title": "Free SVG generators, color tools & web design tools",
-    "url": "https://fffuel.co"
+    "url": "https://fffuel.co",
+    "type": "reference"
   },
   {
     "title": "Page Flows ",
-    "url": "https://pageflows.com/"
+    "url": "https://pageflows.com/",
+    "type": "how-to"
   },
   {
     "title": "Nicely done",
-    "url": "https://nicelydone.club"
+    "url": "https://nicelydone.club",
+    "type": "how-to"
   },
   {
     "title": "Google Fonts",
-    "url": "https://fonts.google.com/"
+    "url": "https://fonts.google.com/",
+    "type": "tool"
   },
   {
     "title": "Fontshare",
-    "url": "https://www.fontshare.com/"
+    "url": "https://www.fontshare.com/",
+    "type": "tool"
   },
   {
     "title": "Font Squirrel",
-    "url": "https://www.fontsquirrel.com/"
+    "url": "https://www.fontsquirrel.com/",
+    "type": "tool"
   },
   {
     "title": "Unsplash",
-    "url": "https://unsplash.com/"
+    "url": "https://unsplash.com/",
+    "type": "tool"
   },
   {
     "title": "Pexels",
-    "url": "https://www.pexels.com/"
+    "url": "https://www.pexels.com/",
+    "type": "tool"
   },
   {
     "title": "Free Icons, Clipart Illustrations, Photos, and Music",
-    "url": "https://icons8.com"
+    "url": "https://icons8.com",
+    "type": "tool"
   },
   {
     "title": "unDraw",
-    "url": "https://undraw.co/"
+    "url": "https://undraw.co/",
+    "type": "tool"
   },
   {
     "title": "iconmonstr",
-    "url": "https://iconmonstr.com/"
+    "url": "https://iconmonstr.com/",
+    "type": "tool"
   },
   {
     "title": "Dribbble",
-    "url": "https://dribbble.com/"
+    "url": "https://dribbble.com/",
+    "type": "how-to"
   },
   {
     "title": "Awwwards",
-    "url": "https://www.awwwards.com/"
+    "url": "https://www.awwwards.com/",
+    "type": "how-to"
   },
   {
     "title": "Behance",
-    "url": "https://www.behance.net/"
+    "url": "https://www.behance.net/",
+    "type": "how-to"
   },
   {
     "title": "Website Style Guide Resources",
-    "url": "http://styleguides.io"
+    "url": "http://styleguides.io",
+    "type": "how-to"
   },
   {
     "title": "UX Movement",
-    "url": "https://uxmovement.com"
+    "url": "https://uxmovement.com",
+    "type": "feed"
   },
   {
     "title": "Calltoidea",
-    "url": "https://www.calltoidea.com"
+    "url": "https://www.calltoidea.com",
+    "type": "how-to"
   },
   {
     "title": "UX Project Checklist",
-    "url": "https://uxchecklist.github.io"
+    "url": "https://uxchecklist.github.io",
+    "type": "reference"
   },
   {
     "title": "Adobe XD Ideas",
-    "url": "https://xd.adobe.com/ideas"
+    "url": "https://xd.adobe.com/ideas",
+    "type": "feed"
   },
   {
     "title": "Google Design",
-    "url": "https://design.google"
+    "url": "https://design.google",
+    "type": "feed"
   },
   {
     "title": "UX Magazine",
-    "url": "https://uxmag.com"
+    "url": "https://uxmag.com",
+    "type": "feed"
   },
   {
     "title": "HeyDesigner",
-    "url": "https://heydesigner.com"
+    "url": "https://heydesigner.com",
+    "type": "feed"
   },
   {
     "title": "Sidebar",
-    "url": "https://sidebar.io"
+    "url": "https://sidebar.io",
+    "type": "feed"
   },
   {
     "title": "A List Apart",
-    "url": "https://alistapart.com"
+    "url": "https://alistapart.com",
+    "type": "feed"
   },
   {
     "title": "Colorful",
@@ -564,7 +645,8 @@
   },
   {
     "title": "Color Realism and Color Science",
-    "url": "http://web.mit.edu/abyrne/www/ColorRealism.html"
+    "url": "http://web.mit.edu/abyrne/www/ColorRealism.html",
+    "type": "curiosity"
   },
   {
     "title": "typography",
@@ -592,11 +674,13 @@
   },
   {
     "title": "The UX psychology glossary",
-    "url": "https://builtformars.com/ux-glossary"
+    "url": "https://builtformars.com/ux-glossary",
+    "type": "basics"
   },
   {
     "title": "Patterns",
-    "url": "https://maggieappleton.com/patterns"
+    "url": "https://maggieappleton.com/patterns",
+    "type": "advanced"
   },
   {
     "title": "A complete guide to iconography",
@@ -620,65 +704,80 @@
   },
   {
     "title": "Design Threads",
-    "url": "https://designthreads.report/"
+    "url": "https://designthreads.report/",
+    "type": "curiosity"
   },
   {
     "title": "Type Scale",
-    "url": "https://type-scale.com/"
+    "url": "https://type-scale.com/",
+    "type": "tool"
   },
   {
     "title": "Utopia",
-    "url": "https://utopia.fyi/"
+    "url": "https://utopia.fyi/",
+    "type": "tool"
   },
   {
     "title": "The UX Bookmark",
-    "url": "https://theuxbookmark.conetrees.com/"
+    "url": "https://theuxbookmark.conetrees.com/",
+    "type": "feed"
   },
   {
     "title": "Built For Mars",
-    "url": "https://builtformars.com/"
+    "url": "https://builtformars.com/",
+    "type": "feed"
   },
   {
     "title": "Visual design rules you can safely follow every time",
-    "url": "https://anthonyhobday.com/sideprojects/saferules/"
+    "url": "https://anthonyhobday.com/sideprojects/saferules/",
+    "type": "how-to"
   },
   {
     "title": "How Should Designers Learn To Code? Git, HTML/CSS, Engineering Principles (Part 2) — Smashing Magazine",
-    "url": "https://www.smashingmagazine.com/2020/03/designers-code-git-hmtl-css-engineering-principles/"
+    "url": "https://www.smashingmagazine.com/2020/03/designers-code-git-hmtl-css-engineering-principles/",
+    "type": "curiosity"
   },
   {
     "title": "Randoma11y",
-    "url": "https://randoma11y.com/"
+    "url": "https://randoma11y.com/",
+    "type": "tool"
   },
   {
     "title": "Reading Design",
-    "url": "https://www.readingdesign.org/"
+    "url": "https://www.readingdesign.org/",
+    "type": "reference"
   },
   {
     "title": "Google UX Design Professional Certificate Courses",
     "url": "https://www.youtube.com/playlist?list=PLtS8Ubq2bIlUWixdH_1Q2yzZh8QJSBVmT",
-    "source": "youtube.com/@MyLesson007"
+    "source": "youtube.com/@MyLesson007",
+    "type": "basics"
   },
   {
     "title": "Accessibility for designer: where do I start?",
-    "url": "https://stephaniewalter.design/blog/accessibility-resources-tools-articles-books-for-designer/"
+    "url": "https://stephaniewalter.design/blog/accessibility-resources-tools-articles-books-for-designer/",
+    "type": "reference"
   },
   {
     "title": "GoodUI ideas and A/B tested patterns for higher conversion rates and growth",
-    "url": "https://goodui.org/"
+    "url": "https://goodui.org/",
+    "type": "feed"
   },
   {
     "title": "Web Designer Depot",
-    "url": "https://www.webdesignerdepot.com/"
+    "url": "https://www.webdesignerdepot.com/",
+    "type": "feed"
   },
   {
     "title": "The UI/UX Crash Course for 2023",
     "url": "https://www.youtube.com/watch?v=QwSN4n2sjR8",
-    "source": "youtube.com/@DesignCourse"
+    "source": "youtube.com/@DesignCourse",
+    "type": "basics"
   },
   {
     "title": "UX Strategy: Study Guide",
-    "url": "https://www.nngroup.com/articles/strategy-study-guide"
+    "url": "https://www.nngroup.com/articles/strategy-study-guide",
+    "type": "advanced"
   },
   {
     "title": "Type Design Resources",
@@ -686,24 +785,29 @@
   },
   {
     "title": "A Comprehensive Checklist For Running Design Workshops",
-    "url": "https://www.smashingmagazine.com/2023/03/organizing-design-workshops-checklist/"
+    "url": "https://www.smashingmagazine.com/2023/03/organizing-design-workshops-checklist/",
+    "type": "how-to"
   },
   {
     "title": "UI Goodies",
-    "url": "https://uigoodies.com/"
+    "url": "https://uigoodies.com/",
+    "type": "tool"
   },
   {
     "title": "Maggie Appleton",
-    "url": "https://maggieappleton.com/"
+    "url": "https://maggieappleton.com/",
+    "type": "feed"
   },
   {
     "title": "UX Basics: Study Guide",
-    "url": "https://www.nngroup.com/articles/ux-basics-study-guide/"
+    "url": "https://www.nngroup.com/articles/ux-basics-study-guide/",
+    "type": "basics"
   },
   {
     "title": "UI Design Tutorial For Beginners - (Full Course)",
     "url": "https://www.youtube.com/watch?v=OSSn2xW2ANs",
-    "source": "youtube.com/@MyLesson007"
+    "source": "youtube.com/@MyLesson007",
+    "type": "basics"
   },
   {
     "title": "Learn About Fonts",
@@ -712,10 +816,12 @@
   },
   {
     "title": "How Should Designers Learn To Code? The Terminal And Text Editors (Part 1)",
-    "url": "https://www.smashingmagazine.com/2020/03/designers-code-terminal-text-editors-part-1/"
+    "url": "https://www.smashingmagazine.com/2020/03/designers-code-terminal-text-editors-part-1/",
+    "type": "curiosity"
   },
   {
     "title": "IconHunt",
-    "url": "https://www.iconhunt.site/"
+    "url": "https://www.iconhunt.site/",
+    "type": "tool"
   }
 ]
