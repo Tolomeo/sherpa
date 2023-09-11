@@ -16,6 +16,7 @@ import {
   hasNotes,
   hasResources,
 } from '../../data'
+import { getPath } from '../../data/path'
 import {
   Layout,
   LayoutHeader,
@@ -57,7 +58,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
-  const path = paths[params!.pathName]
+  const path = getPath(params!.pathName)
 
   return {
     props: {
