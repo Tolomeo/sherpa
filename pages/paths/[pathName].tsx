@@ -43,7 +43,6 @@ interface Params extends ParsedUrlQuery {
 }
 
 interface StaticProps {
-  paths: Paths
   path: Path
 }
 
@@ -62,7 +61,6 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
 
   return {
     props: {
-      paths,
       path,
     },
   }
@@ -118,7 +116,7 @@ const toggleDrawerTestId = 'help-drawer-toggle'
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
 
-export default function PathPage({ path, paths }: Props) {
+export default function PathPage({ path }: Props) {
   return (
     <>
       <PageHead path={path} />
@@ -137,6 +135,8 @@ export default function PathPage({ path, paths }: Props) {
               The <Underline>{path.title}</Underline> path
             </Typography>
           </LayoutHero>
+
+          <pre>{JSON.stringify(path, null, 2)}</pre>
 
           {hasPrevPaths(path) && (
             <LayoutContainer pb={8}>

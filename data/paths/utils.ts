@@ -81,6 +81,15 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
       nullable: true,
       uniqueItems: true,
     },
+    extras: {
+      type: 'array',
+      items: {
+        type: 'string',
+      },
+      minItems: 1,
+      uniqueItems: true,
+      nullable: true,
+    },
     extra: {
       type: 'array',
       items: {
@@ -226,6 +235,152 @@ const sortPathResources = (pathResources: Path['resources']) =>
       return pathTopic
     })
 
+const parseSerializedPathLogo = (serializedPathLogo: SerializedPath['logo']) =>
+  serializedPathLogo || null
+
+const parseSerializedPathHero = (serializedPathHero: SerializedPath['hero']) =>
+  serializedPathHero || null
+
+const parseSerializedPathNotes = (
+  serializedPathNotes: SerializedPath['notes'],
+) => serializedPathNotes || []
+
+const parseSerializedPathMain = (serializedPathMain: SerializedPath['main']) =>
+  (serializedPathMain || []).map((resourceId) => {
+    const resource = resources[resourceId]
+
+    /* if (!resource)
+            throw new Error(
+              `${pathName} path error: resource not found error[ ${resourceId} ]`,
+            ) */
+
+    return resource
+  })
+
+const parseSerializedPathExtras = (
+  serializedPathExtras: SerializedPath['extras'],
+) => serializedPathExtras || []
+
+// TODO remove
+const parseSerializedPathExtra = (
+  serializedPathExtra: SerializedPath['extra'],
+) =>
+  (serializedPathExtra || []).map((extra) => {
+    if (isSerializedSubPath(extra)) {
+      return {
+        ...extra,
+        main: (extra.main || []).map((extraResourceId) => {
+          const extraResource = resources[extraResourceId]
+
+          /* if (!extraResource)
+                  throw new Error(
+                    `${pathName} path error: '${extra.title}' resource not found error[ ${extraResourceId} ]`,
+                  ) */
+
+          return extraResource
+        }),
+        extra: (extra.extra || [])
+          .map((extraResourceId) => {
+            const extraResource = resources[extraResourceId]
+
+            /* if (!extraResource)
+                    throw new Error(
+                      `${pathName} path error: '${extra.title}' resource not found error[ ${extraResourceId} ]`,
+                    ) */
+
+            return extraResource
+          })
+          // sorting alphabetically by resource title
+          .sort((resourceA, resourceB) => {
+            const titleA = resourceA.title.toUpperCase()
+            const titleB = resourceB.title.toUpperCase()
+
+            if (titleA > titleB) return 1
+            else if (titleA < titleB) return -1
+
+            return 0
+          }),
+      }
+    }
+
+    // if (isSerializedSubTopic(extra)) {
+    return {
+      ...extra,
+      resources: extra.resources
+        .map((extraResourceId) => {
+          const extraResource = resources[extraResourceId]
+
+          /* if (!extraResource)
+                    throw new Error(
+                      `${pathName} path error: '${extra.title}' resource not found error[ ${extraResourceId} ]`,
+                    ) */
+
+          return extraResource
+        })
+        // sorting alphabetically by resource title
+        .sort((resourceA, resourceB) => {
+          const titleA = resourceA.title.toUpperCase()
+          const titleB = resourceB.title.toUpperCase()
+
+          if (titleA > titleB) return 1
+          else if (titleA < titleB) return -1
+
+          return 0
+        }),
+    }
+    // }
+
+    /* throw new Error(
+            `${pathName} path error: '${
+              extra.title
+            }' uknown type error[ ${JSON.stringify(extra, null, 4)} ]`,
+          ) */
+  })
+
+export const parseSerializedPath = <T extends SerializedPaths>(
+  serializedPath: SerializedPath,
+  serializedPaths: T,
+) => ({
+  ...serializedPath,
+  logo: parseSerializedPathLogo(serializedPath.logo),
+  hero: parseSerializedPathHero(serializedPath.hero),
+  notes: parseSerializedPathNotes(serializedPath.notes),
+  resources: sortPathResources(
+    parseSerializedPathResources(serializedPath.resources),
+  ),
+  // populating resources data
+  main: parseSerializedPathMain(serializedPath.main),
+  extras: parseSerializedPathExtras(serializedPath.extras),
+  // populating extra resources, those are optional
+  extra: parseSerializedPathExtra(serializedPath.extra),
+  // populating next paths, those are optional
+  next: (serializedPath.next || []).reduce((nextPaths, nextPathId) => {
+    const nextPath = serializedPaths[nextPathId]
+
+    /* if (!nextPath)
+		throw new Error(
+			`${pathName} path error: next path not found error[ ${nextPathId} ]`,
+		) */
+
+    nextPaths[nextPathId] = nextPath
+
+    return nextPaths
+  }, {} as SerializedPaths<keyof T>),
+  // populating prev paths, those are optional
+  prev: (serializedPath.prev || []).reduce((prevPaths, prevPathId) => {
+    const prevPath = serializedPaths[prevPathId]
+
+    /* if (!prevPath)
+		throw new Error(
+			`${pathName} path error: prev path not found error[ ${prevPathId} ]`,
+		) */
+
+    prevPaths[prevPathId] = prevPath
+
+    return prevPaths
+  }, {} as SerializedPaths<keyof T>),
+})
+
 export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
   Object.entries(serializedPaths).reduce(
     (paths, [pathName, serializedPath]) => {
@@ -240,124 +395,7 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
         )
       }
 
-      paths[pathName] = {
-        ...serializedPath,
-        logo: serializedPath.logo || null,
-        hero: serializedPath.hero || null,
-        notes: serializedPath.notes || [],
-        resources: sortPathResources(
-          parseSerializedPathResources(serializedPath.resources),
-        ),
-        // populating resources data
-        main: (serializedPath.main || []).map((resourceId) => {
-          const resource = resources[resourceId]
-
-          if (!resource)
-            throw new Error(
-              `${pathName} path error: resource not found error[ ${resourceId} ]`,
-            )
-
-          return resource
-        }),
-        // populating extra resources, those are optional
-        extra: (serializedPath.extra || []).map((extra) => {
-          if (isSerializedSubPath(extra)) {
-            return {
-              ...extra,
-              main: (extra.main || []).map((extraResourceId) => {
-                const extraResource = resources[extraResourceId]
-
-                if (!extraResource)
-                  throw new Error(
-                    `${pathName} path error: '${extra.title}' resource not found error[ ${extraResourceId} ]`,
-                  )
-
-                return extraResource
-              }),
-              extra: (extra.extra || [])
-                .map((extraResourceId) => {
-                  const extraResource = resources[extraResourceId]
-
-                  if (!extraResource)
-                    throw new Error(
-                      `${pathName} path error: '${extra.title}' resource not found error[ ${extraResourceId} ]`,
-                    )
-
-                  return extraResource
-                })
-                // sorting alphabetically by resource title
-                .sort((resourceA, resourceB) => {
-                  const titleA = resourceA.title.toUpperCase()
-                  const titleB = resourceB.title.toUpperCase()
-
-                  if (titleA > titleB) return 1
-                  else if (titleA < titleB) return -1
-
-                  return 0
-                }),
-            }
-          }
-
-          if (isSerializedSubTopic(extra)) {
-            return {
-              ...extra,
-              resources: extra.resources
-                .map((extraResourceId) => {
-                  const extraResource = resources[extraResourceId]
-
-                  if (!extraResource)
-                    throw new Error(
-                      `${pathName} path error: '${extra.title}' resource not found error[ ${extraResourceId} ]`,
-                    )
-
-                  return extraResource
-                })
-                // sorting alphabetically by resource title
-                .sort((resourceA, resourceB) => {
-                  const titleA = resourceA.title.toUpperCase()
-                  const titleB = resourceB.title.toUpperCase()
-
-                  if (titleA > titleB) return 1
-                  else if (titleA < titleB) return -1
-
-                  return 0
-                }),
-            }
-          }
-
-          throw new Error(
-            `${pathName} path error: '${
-              extra.title
-            }' uknown type error[ ${JSON.stringify(extra, null, 4)} ]`,
-          )
-        }),
-        // populating next paths, those are optional
-        next: (serializedPath.next || []).reduce((nextPaths, nextPathId) => {
-          const nextPath = serializedPaths[nextPathId]
-
-          if (!nextPath)
-            throw new Error(
-              `${pathName} path error: next path not found error[ ${nextPathId} ]`,
-            )
-
-          nextPaths[nextPathId] = nextPath
-
-          return nextPaths
-        }, {} as SerializedPaths<keyof T>),
-        // populating prev paths, those are optional
-        prev: (serializedPath.prev || []).reduce((prevPaths, prevPathId) => {
-          const prevPath = serializedPaths[prevPathId]
-
-          if (!prevPath)
-            throw new Error(
-              `${pathName} path error: prev path not found error[ ${prevPathId} ]`,
-            )
-
-          prevPaths[prevPathId] = prevPath
-
-          return prevPaths
-        }, {} as SerializedPaths<keyof T>),
-      }
+      paths[pathName] = parseSerializedPath(serializedPath, serializedPaths)
 
       return paths
     },

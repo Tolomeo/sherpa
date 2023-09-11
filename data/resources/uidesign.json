@@ -1,5 +1,10 @@
 [
   {
+    "title": "Graphical User Interface Gallery",
+    "url": "http://toastytech.com/guis/index.html",
+    "type": "curiosity"
+  },
+  {
     "title": "Why Do We Interface?",
     "url": "https://whydoweinterface.com"
   },
@@ -435,11 +440,6 @@
     "title": "Design for Developers",
     "url": "https://thoughtbot.com/upcase/design-for-developers",
     "type": "basics"
-  },
-  {
-    "title": "Graphical User Interface Gallery",
-    "url": "http://toastytech.com/guis/index.html",
-    "type": "curiosity"
   },
   {
     "title": "The History of User Interfaces",
