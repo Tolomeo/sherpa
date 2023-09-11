@@ -190,51 +190,56 @@ export const isSerializedSubPath = (
 
 const parseSerializedPathResources = (
   serializedPathResources?: SerializedPath['resources'],
-) =>
-  Object.values(
-    (serializedPathResources || []).reduce((pathResources, resourceId) => {
-      const resource = resources[resourceId]
+) => {
+  if (!serializedPathResources) return null
 
-      /* if (!resource)
+  return sortPathResources(
+    Object.values(
+      serializedPathResources.reduce((pathResources, resourceId) => {
+        const resource = resources[resourceId]
+
+        /* if (!resource)
         throw new Error(
           `${pathName} path error: resource not found error[ ${resourceId} ]`,
         ) */
 
-      const { type } = resource
+        const { type } = resource
 
-      // TODO remove this
-      if (!type) return pathResources
+        // TODO remove this
+        if (!type) return pathResources
 
-      const resourceTypeToTopicTitle: Record<
-        NonNullable<Resource['type']>,
-        SubTopic['title']
-      > = {
-        // TODO: move to separate module
-        basics: "There's more",
-        advanced: 'Beyond basics',
-        'how-to': 'How do they do it',
-        curiosity: 'Nice to know',
-        tool: 'Work smarter, not harder',
-        reference: 'Great bookmarks',
-        feed: 'Stay in the loop',
-      }
-
-      const topicTitle = resourceTypeToTopicTitle[type]
-
-      if (!pathResources[topicTitle]) {
-        pathResources[topicTitle] = {
-          title: topicTitle,
-          resources: [],
+        const resourceTypeToTopicTitle: Record<
+          NonNullable<Resource['type']>,
+          SubTopic['title']
+        > = {
+          // TODO: move to separate module
+          basics: "There's more",
+          advanced: 'Beyond basics',
+          'how-to': 'How do they do it',
+          curiosity: 'Nice to know',
+          tool: 'Work smarter, not harder',
+          reference: 'Great bookmarks',
+          feed: 'Stay in the loop',
         }
-      }
 
-      pathResources[topicTitle].resources.push(resource)
+        const topicTitle = resourceTypeToTopicTitle[type]
 
-      return pathResources
-    }, {} as Record<SubTopic['title'], SubTopic>),
+        if (!pathResources[topicTitle]) {
+          pathResources[topicTitle] = {
+            title: topicTitle,
+            resources: [],
+          }
+        }
+
+        pathResources[topicTitle].resources.push(resource)
+
+        return pathResources
+      }, {} as Record<SubTopic['title'], SubTopic>),
+    ),
   )
+}
 
-const sortPathResources = (pathResources: Path['resources']) =>
+const sortPathResources = (pathResources: NonNullable<Path['resources']>) =>
   pathResources
     //TODO: refactor this
     .sort((pathTopicA, pathTopicB) => {
@@ -280,10 +285,14 @@ const parseSerializedPathHero = (serializedPathHero: SerializedPath['hero']) =>
 
 const parseSerializedPathNotes = (
   serializedPathNotes: SerializedPath['notes'],
-) => serializedPathNotes || []
+) => serializedPathNotes || null
 
-const parseSerializedPathMain = (serializedPathMain: SerializedPath['main']) =>
-  (serializedPathMain || []).map((resourceId) => {
+const parseSerializedPathMain = (
+  serializedPathMain: SerializedPath['main'],
+) => {
+  if (!serializedPathMain) return null
+
+  return serializedPathMain.map((resourceId) => {
     const resource = resources[resourceId]
 
     /* if (!resource)
@@ -293,6 +302,7 @@ const parseSerializedPathMain = (serializedPathMain: SerializedPath['main']) =>
 
     return resource
   })
+}
 
 const parseSerializedPathExtras = (
   serializedPathExtras: SerializedPath['extras'],
@@ -379,9 +389,7 @@ export const parseSerializedPath = (serializedPath: SerializedPath): Path => ({
   logo: parseSerializedPathLogo(serializedPath.logo),
   hero: parseSerializedPathHero(serializedPath.hero),
   notes: parseSerializedPathNotes(serializedPath.notes),
-  resources: sortPathResources(
-    parseSerializedPathResources(serializedPath.resources),
-  ),
+  resources: parseSerializedPathResources(serializedPath.resources),
   // populating resources data
   main: parseSerializedPathMain(serializedPath.main),
   // TODO: remove
@@ -391,15 +399,23 @@ export const parseSerializedPath = (serializedPath: SerializedPath): Path => ({
     return getPath(extra)
   }),
   // populating next paths, those are optional
-  next: (serializedPath.next || []).reduce((nextPaths, nextPathId) => {
-    nextPaths[nextPathId] = getSerializedPath(nextPathId)
-    return nextPaths
-  }, {} as SerializedPaths),
+  next: (() => {
+    if (!serializedPath.next) return null
+
+    return serializedPath.next.reduce((nextPaths, nextPathId) => {
+      nextPaths[nextPathId] = getSerializedPath(nextPathId)
+      return nextPaths
+    }, {} as SerializedPaths)
+  })(),
   // populating prev paths, those are optional
-  prev: (serializedPath.prev || []).reduce((prevPaths, prevPathId) => {
-    prevPaths[prevPathId] = getSerializedPath(prevPathId)
-    return prevPaths
-  }, {} as SerializedPaths),
+  prev: (() => {
+    if (!serializedPath.prev) return null
+
+    return serializedPath.prev.reduce((prevPaths, prevPathId) => {
+      prevPaths[prevPathId] = getSerializedPath(prevPathId)
+      return prevPaths
+    }, {} as SerializedPaths)
+  })(),
 })
 
 export const getSerializedPath = (pathName: string) => {
@@ -433,24 +449,8 @@ export const parsePaths = () =>
     {} as Paths,
   )
 
-export const hasNextPaths = <T extends Path>(path: T) => {
-  return Boolean(Object.keys(path.next).length)
-}
-
-export const hasPrevPaths = <T extends Path>(path: T) => {
-  return Boolean(Object.keys(path.prev).length)
-}
-
 export const hasExtraResources = <T extends Path>(path: T) => {
   return Boolean(path.extra.length)
-}
-
-export const hasResources = <T extends Path>(path: T) => {
-  return Boolean(path.resources.length)
-}
-
-export const hasNotes = <T extends Path>(path: T) => {
-  return Boolean(path.notes.length)
 }
 
 export const hasSubPathExtraResources = <T extends SubPath>(subpath: T) => {

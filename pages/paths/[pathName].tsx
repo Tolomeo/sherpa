@@ -3,14 +3,7 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ParsedUrlQuery } from 'querystring'
-import {
-  paths,
-  Path,
-  hasPrevPaths,
-  hasNextPaths,
-  hasNotes,
-  hasResources,
-} from '../../data'
+import { paths, Path } from '../../data'
 import { getPath } from '../../data/path'
 import {
   Layout,
@@ -134,7 +127,7 @@ export default function PathPage({ path }: Props) {
 
           <pre>{JSON.stringify(path, null, 2)}</pre>
 
-          {hasPrevPaths(path) && (
+          {path.prev && (
             <LayoutContainer pb={8}>
               <aside>
                 <Typography variant="h3" component="h2" gutterBottom>
@@ -145,18 +138,20 @@ export default function PathPage({ path }: Props) {
             </LayoutContainer>
           )}
 
-          <LayoutContainer pb={8} data-testid={pathResourcesTestId}>
-            <Typography component="h2" variant="h5" gutterBottom>
-              The path
-            </Typography>
-            <Grid container>
-              <Grid item xs={12} md={8} xl={6}>
-                <ResourcesTimeline resources={path.main} />
+          {path.main && (
+            <LayoutContainer pb={8} data-testid={pathResourcesTestId}>
+              <Typography component="h2" variant="h5" gutterBottom>
+                The path
+              </Typography>
+              <Grid container>
+                <Grid item xs={12} md={8} xl={6}>
+                  <ResourcesTimeline resources={path.main} />
+                </Grid>
               </Grid>
-            </Grid>
-          </LayoutContainer>
+            </LayoutContainer>
+          )}
 
-          {hasResources(path) && (
+          {path.resources && (
             <LayoutContainer pb={4}>
               <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
                 {path.resources.map((topic, index) => (
@@ -173,7 +168,7 @@ export default function PathPage({ path }: Props) {
             </LayoutContainer>
           )}
 
-          {hasNextPaths(path) && (
+          {path.next && (
             <LayoutContainer pt={4} pb={6}>
               <aside>
                 <Typography variant="h3" component="h2" gutterBottom>
@@ -184,7 +179,7 @@ export default function PathPage({ path }: Props) {
             </LayoutContainer>
           )}
 
-          {hasNotes(path) && (
+          {path.notes && (
             <LayoutContainer pt={4} pb={6}>
               <footer>
                 {path.notes.map((note, index) => (

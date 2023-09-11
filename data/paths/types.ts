@@ -55,13 +55,13 @@ export interface Path<PathNames = string> {
   title: string
   logo: string | null
   hero: PathHero | null
-  notes: PathNotes
-  resources: Array<SubTopic>
-  main: Resource[]
-  extras: Array<Path>
+  notes: PathNotes | null
+  resources: Array<SubTopic> | null
+  main: Array<Resource> | null
+  extras: Array<Path> | null
   extra: Array<SubTopic | SubPath>
-  next: SerializedPaths<PathNames>
-  prev: SerializedPaths<PathNames>
+  next: SerializedPaths<PathNames> | null
+  prev: SerializedPaths<PathNames> | null
 }
 
 export type Paths<PathNames = string> = Record<string, Path<PathNames>>
