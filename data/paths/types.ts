@@ -51,7 +51,7 @@ export interface SubPath extends PathExtra {
   extra: Resource[]
 }
 
-export interface Path<PathNames = string> {
+export interface Path {
   title: string
   logo: string | null
   hero: PathHero | null
@@ -66,5 +66,3 @@ export interface Path<PathNames = string> {
 }
 
 export type PathsList = Record<string, Pick<Path, 'title'>>
-
-export type Paths<PathNames = string> = Record<string, Path<PathNames>>

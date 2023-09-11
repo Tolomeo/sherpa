@@ -1,10 +1,10 @@
-import { useEffect, Fragment } from 'react'
+import { useEffect } from 'react'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ParsedUrlQuery } from 'querystring'
-import { Path, PathsList as TPathsList } from '../../data'
-import { getPath, getPathsList } from '../../data/path'
+import { Path, PathsList as TPathsList } from '../../data/paths'
+import { getPath, getPathsList } from '../../data/paths/data'
 import {
   Layout,
   LayoutHeader,
