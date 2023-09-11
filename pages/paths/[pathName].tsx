@@ -6,13 +6,8 @@ import { ParsedUrlQuery } from 'querystring'
 import {
   paths,
   Path,
-  Paths,
   hasPrevPaths,
   hasNextPaths,
-  hasExtraResources,
-  isSubPath,
-  isSubTopic,
-  hasSubPathExtraResources,
   hasNotes,
   hasResources,
 } from '../../data'

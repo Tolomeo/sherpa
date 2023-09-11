@@ -374,7 +374,7 @@ const parseSerializedPathExtra = (
           ) */
   })
 
-export const parseSerializedPath = (serializedPath: SerializedPath) => ({
+export const parseSerializedPath = (serializedPath: SerializedPath): Path => ({
   ...serializedPath,
   logo: parseSerializedPathLogo(serializedPath.logo),
   hero: parseSerializedPathHero(serializedPath.hero),
@@ -384,41 +384,32 @@ export const parseSerializedPath = (serializedPath: SerializedPath) => ({
   ),
   // populating resources data
   main: parseSerializedPathMain(serializedPath.main),
-  extras: parseSerializedPathExtras(serializedPath.extras),
-  // populating extra resources, those are optional
+  // TODO: remove
   extra: parseSerializedPathExtra(serializedPath.extra),
+  //
+  extras: (serializedPath.extras || []).map((extra) => {
+    return getPath(extra)
+  }),
   // populating next paths, those are optional
   next: (serializedPath.next || []).reduce((nextPaths, nextPathId) => {
-    const nextPath = serializedPaths[nextPathId as keyof typeof serializedPaths]
-
-    /* if (!nextPath)
-		throw new Error(
-			`${pathName} path error: next path not found error[ ${nextPathId} ]`,
-		) */
-
-    nextPaths[nextPathId] = nextPath
-
+    nextPaths[nextPathId] = getSerializedPath(nextPathId)
     return nextPaths
   }, {} as SerializedPaths),
   // populating prev paths, those are optional
   prev: (serializedPath.prev || []).reduce((prevPaths, prevPathId) => {
-    const prevPath = serializedPaths[prevPathId as keyof typeof serializedPaths]
-
-    /* if (!prevPath)
-		throw new Error(
-			`${pathName} path error: prev path not found error[ ${prevPathId} ]`,
-		) */
-
-    prevPaths[prevPathId] = prevPath
-
+    prevPaths[prevPathId] = getSerializedPath(prevPathId)
     return prevPaths
   }, {} as SerializedPaths),
 })
 
-export const getPath = (pathName: string) => {
+export const getSerializedPath = (pathName: string) => {
   const pathFilepath = path.join(process.cwd(), `data/paths/${pathName}.json`)
   const pathData = JSON.parse(fs.readFileSync(pathFilepath, 'utf-8'))
-  return parseSerializedPath(pathData as SerializedPath)
+  return pathData as SerializedPath
+}
+
+export const getPath = (pathName: string) => {
+  return parseSerializedPath(getSerializedPath(pathName))
 }
 
 export const parsePaths = () =>

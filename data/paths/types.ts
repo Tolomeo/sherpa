@@ -58,7 +58,7 @@ export interface Path<PathNames = string> {
   notes: PathNotes
   resources: Array<SubTopic>
   main: Resource[]
-  extras: Array<string>
+  extras: Array<Path>
   extra: Array<SubTopic | SubPath>
   next: SerializedPaths<PathNames>
   prev: SerializedPaths<PathNames>
