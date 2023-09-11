@@ -10,6 +10,41 @@ import {
   SubPath,
   SubTopic,
 } from './types'
+import uidesign from './uidesign.json'
+import htmlcss from './htmlcss.json'
+import webaccessibility from './webaccessibility.json'
+import javascript from './javascript.json'
+import npm from './npm.json'
+import typescript from './typescript.json'
+import react from './react.json'
+import next from './next.json'
+import node from './node.json'
+import commandline from './commandline.json'
+import docker from './docker.json'
+import git from './git.json'
+import python from './python.json'
+import regex from './regex.json'
+import neovim from './neovim.json'
+import lua from './lua.json'
+
+const serializedPaths = {
+  uidesign,
+  htmlcss,
+  webaccessibility,
+  javascript,
+  typescript,
+  react,
+  next,
+  npm,
+  node,
+  commandline,
+  docker,
+  git,
+  python,
+  regex,
+  neovim,
+  lua,
+}
 
 const ajv = new Ajv()
 
@@ -337,10 +372,7 @@ const parseSerializedPathExtra = (
           ) */
   })
 
-export const parseSerializedPath = <T extends SerializedPaths>(
-  serializedPath: SerializedPath,
-  serializedPaths: T,
-) => ({
+export const parseSerializedPath = (serializedPath: SerializedPath) => ({
   ...serializedPath,
   logo: parseSerializedPathLogo(serializedPath.logo),
   hero: parseSerializedPathHero(serializedPath.hero),
@@ -355,7 +387,7 @@ export const parseSerializedPath = <T extends SerializedPaths>(
   extra: parseSerializedPathExtra(serializedPath.extra),
   // populating next paths, those are optional
   next: (serializedPath.next || []).reduce((nextPaths, nextPathId) => {
-    const nextPath = serializedPaths[nextPathId]
+    const nextPath = serializedPaths[nextPathId as keyof typeof serializedPaths]
 
     /* if (!nextPath)
 		throw new Error(
@@ -365,10 +397,10 @@ export const parseSerializedPath = <T extends SerializedPaths>(
     nextPaths[nextPathId] = nextPath
 
     return nextPaths
-  }, {} as SerializedPaths<keyof T>),
+  }, {} as SerializedPaths),
   // populating prev paths, those are optional
   prev: (serializedPath.prev || []).reduce((prevPaths, prevPathId) => {
-    const prevPath = serializedPaths[prevPathId]
+    const prevPath = serializedPaths[prevPathId as keyof typeof serializedPaths]
 
     /* if (!prevPath)
 		throw new Error(
@@ -378,10 +410,10 @@ export const parseSerializedPath = <T extends SerializedPaths>(
     prevPaths[prevPathId] = prevPath
 
     return prevPaths
-  }, {} as SerializedPaths<keyof T>),
+  }, {} as SerializedPaths),
 })
 
-export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
+export const parsePaths = () =>
   Object.entries(serializedPaths).reduce(
     (paths, [pathName, serializedPath]) => {
       if (!validateSerializedPath(serializedPath)) {
@@ -395,11 +427,11 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
         )
       }
 
-      paths[pathName] = parseSerializedPath(serializedPath, serializedPaths)
+      paths[pathName] = parseSerializedPath(serializedPath)
 
       return paths
     },
-    {} as Paths<keyof T>,
+    {} as Paths,
   )
 
 export const hasNextPaths = <T extends Path>(path: T) => {
