@@ -59,9 +59,12 @@ export interface Path<PathNames = string> {
   resources: Array<SubTopic> | null
   main: Array<Resource> | null
   extras: Array<Path> | null
+  // TODO remove
   extra: Array<SubTopic | SubPath>
-  next: SerializedPaths<PathNames> | null
-  prev: SerializedPaths<PathNames> | null
+  next: PathsList | null
+  prev: PathsList | null
 }
+
+export type PathsList = Record<string, Pick<Path, 'title'>>
 
 export type Paths<PathNames = string> = Record<string, Path<PathNames>>

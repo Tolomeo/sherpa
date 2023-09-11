@@ -3,8 +3,8 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ParsedUrlQuery } from 'querystring'
-import { paths, Path } from '../../data'
-import { getPath } from '../../data/path'
+import { Path, PathsList as TPathsList } from '../../data'
+import { getPath, getPathsList } from '../../data/path'
 import {
   Layout,
   LayoutHeader,
@@ -27,16 +27,36 @@ import {
   List as ResourcesList,
 } from '../../src/resources'
 
+const pathPages = [
+  'uidesign',
+  'htmlcss',
+  'webaccessibility',
+  'javascript',
+  'typescript',
+  'react',
+  'next',
+  'npm',
+  'node',
+  'commandline',
+  'docker',
+  'git',
+  'python',
+  'regex',
+  'neovim',
+  'lua',
+]
+
 interface Params extends ParsedUrlQuery {
   pathName: string
 }
 
 interface StaticProps {
   path: Path
+  paths: TPathsList
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const staticPaths = Object.keys(paths).map((pathName) => ({
+  const staticPaths = pathPages.map((pathName) => ({
     params: { pathName },
   }))
 
@@ -47,10 +67,12 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
   const path = getPath(params!.pathName)
+  const paths = getPathsList(pathPages)
 
   return {
     props: {
       path,
+      paths,
     },
   }
 }
@@ -105,7 +127,7 @@ const toggleDrawerTestId = 'help-drawer-toggle'
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
 
-export default function PathPage({ path }: Props) {
+export default function PathPage({ path, paths }: Props) {
   return (
     <>
       <PageHead path={path} />
@@ -193,6 +215,8 @@ export default function PathPage({ path }: Props) {
               </footer>
             </LayoutContainer>
           )}
+
+          <pre>{JSON.stringify(paths, null, 2)}</pre>
 
           <LayoutDrawer data-testid={drawerTestId}>
             <Stack spacing={4}>

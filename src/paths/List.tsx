@@ -1,10 +1,10 @@
 import React from 'react'
 import NextLink from 'next/link'
-import { Paths, SerializedPaths } from '../../data'
+import { PathsList as TPathsList } from '../../data'
 import { List, Link, Typography, Box, Underline } from '../theme'
 
 type Props = Omit<React.ComponentProps<typeof List>, 'children'> & {
-  paths: Paths | SerializedPaths
+  paths: TPathsList
 }
 
 const pathsListTestId = 'paths.list'

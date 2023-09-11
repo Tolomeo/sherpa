@@ -5,48 +5,12 @@ import resources, { Resource } from './resources'
 import {
   SerializedSubPath,
   SerializedSubTopic,
-  SerializedPaths,
   SerializedPath,
-  Paths,
   Path,
   SubPath,
   SubTopic,
+  PathsList,
 } from './paths/types'
-import uidesign from './paths/uidesign.json'
-import htmlcss from './paths/htmlcss.json'
-import webaccessibility from './paths/webaccessibility.json'
-import javascript from './paths/javascript.json'
-import npm from './paths/npm.json'
-import typescript from './paths/typescript.json'
-import react from './paths/react.json'
-import next from './paths/next.json'
-import node from './paths/node.json'
-import commandline from './paths/commandline.json'
-import docker from './paths/docker.json'
-import git from './paths/git.json'
-import python from './paths/python.json'
-import regex from './paths/regex.json'
-import neovim from './paths/neovim.json'
-import lua from './paths/lua.json'
-
-const serializedPaths = {
-  uidesign,
-  htmlcss,
-  webaccessibility,
-  javascript,
-  typescript,
-  react,
-  next,
-  npm,
-  node,
-  commandline,
-  docker,
-  git,
-  python,
-  regex,
-  neovim,
-  lua,
-}
 
 const ajv = new Ajv()
 
@@ -401,26 +365,30 @@ export const parseSerializedPath = (serializedPath: SerializedPath): Path => ({
   // populating next paths, those are optional
   next: (() => {
     if (!serializedPath.next) return null
-
-    return serializedPath.next.reduce((nextPaths, nextPathId) => {
-      nextPaths[nextPathId] = getSerializedPath(nextPathId)
-      return nextPaths
-    }, {} as SerializedPaths)
+    return getPathsList(serializedPath.next)
   })(),
   // populating prev paths, those are optional
   prev: (() => {
     if (!serializedPath.prev) return null
-
-    return serializedPath.prev.reduce((prevPaths, prevPathId) => {
-      prevPaths[prevPathId] = getSerializedPath(prevPathId)
-      return prevPaths
-    }, {} as SerializedPaths)
+    return getPathsList(serializedPath.prev)
   })(),
 })
 
 export const getSerializedPath = (pathName: string) => {
   const pathFilepath = path.join(process.cwd(), `data/paths/${pathName}.json`)
   const pathData = JSON.parse(fs.readFileSync(pathFilepath, 'utf-8'))
+
+  if (!validateSerializedPath(pathData)) {
+    throw new Error(
+      `${pathName} path error: schema error[ ${JSON.stringify(
+        pathName,
+        null,
+        4,
+      )} ]:
+				${JSON.stringify(validateSerializedPath.errors, null, 4)}`,
+    )
+  }
+
   return pathData as SerializedPath
 }
 
@@ -428,26 +396,14 @@ export const getPath = (pathName: string) => {
   return parseSerializedPath(getSerializedPath(pathName))
 }
 
-export const parsePaths = () =>
-  Object.entries(serializedPaths).reduce(
-    (paths, [pathName, serializedPath]) => {
-      if (!validateSerializedPath(serializedPath)) {
-        throw new Error(
-          `${pathName} path error: schema error[ ${JSON.stringify(
-            serializedPath,
-            null,
-            4,
-          )} ]:
-				${JSON.stringify(validateSerializedPath.errors, null, 4)}`,
-        )
-      }
+export const getPathsList = (pathNames: Array<string>) =>
+  pathNames.reduce((pathsList, pathName) => {
+    const serializedPath = getSerializedPath(pathName)
 
-      paths[pathName] = parseSerializedPath(serializedPath)
+    pathsList[pathName] = { title: serializedPath.title }
 
-      return paths
-    },
-    {} as Paths,
-  )
+    return pathsList
+  }, {} as PathsList)
 
 export const hasExtraResources = <T extends Path>(path: T) => {
   return Boolean(path.extra.length)
