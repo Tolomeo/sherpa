@@ -14,6 +14,7 @@ import {
   isSubTopic,
   hasSubPathExtraResources,
   hasNotes,
+  hasResources,
 } from '../../data'
 import {
   Layout,
@@ -159,28 +160,16 @@ export default function PathPage({ path, paths }: Props) {
             </Grid>
           </LayoutContainer>
 
-          {hasExtraResources(path) && (
+          {hasResources(path) && (
             <LayoutContainer pb={4}>
               <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
-                {path.extra.map((extra, index) => (
+                {path.resources.map((topic, index) => (
                   <Box data-testid={pathExtrasTestId} key={index}>
                     <aside>
                       <Typography component="h2" variant="h5" gutterBottom>
-                        {extra.title}
+                        {topic.title}
                       </Typography>
-
-                      {isSubTopic(extra) && (
-                        <ResourcesList resources={extra.resources} />
-                      )}
-
-                      {isSubPath(extra) && (
-                        <>
-                          <ResourcesTimeline resources={extra.main} />
-                          {hasSubPathExtraResources(extra) && (
-                            <ResourcesList resources={extra.extra} />
-                          )}
-                        </>
-                      )}
+                      <ResourcesList resources={topic.resources} />
                     </aside>
                   </Box>
                 ))}

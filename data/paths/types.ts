@@ -25,6 +25,7 @@ export interface SerializedPath<PathNames = string> {
   logo?: string
   hero?: PathHero
   notes?: PathNotes
+  resources?: Array<keyof Resources>
   main?: Array<keyof Resources>
   extra?: Array<SerializedSubTopic | SerializedSubPath>
   next?: Array<PathNames>
@@ -54,6 +55,7 @@ export interface Path<PathNames = string> {
   logo: string | null
   hero: PathHero | null
   notes: PathNotes
+  resources: Array<SubTopic>
   main: Resource[]
   extra: Array<SubTopic | SubPath>
   next: SerializedPaths<PathNames>

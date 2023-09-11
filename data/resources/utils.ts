@@ -14,6 +14,8 @@ const serializedResourceSchema: JSONSchemaType<SerializedResource> = {
     url: { type: 'string', pattern: '^https?://' },
     title: { type: 'string', minLength: 2 },
     source: { type: 'string', minLength: 2, nullable: true },
+    //TODO: enum and not nullable
+    type: { type: 'string', nullable: true },
   },
   required: ['url', 'title'],
   additionalProperties: false,

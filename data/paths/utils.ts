@@ -1,5 +1,5 @@
 import Ajv, { JSONSchemaType } from 'ajv'
-import resources from '../resources'
+import resources, { Resource } from '../resources'
 import {
   SerializedSubPath,
   SerializedSubTopic,
@@ -142,6 +142,90 @@ export const isSerializedSubPath = (
   return 'main' in pathExtra
 }
 
+const parseSerializedPathResources = (
+  serializedPathResources?: SerializedPath['resources'],
+) =>
+  Object.values(
+    (serializedPathResources || []).reduce((pathResources, resourceId) => {
+      const resource = resources[resourceId]
+
+      /* if (!resource)
+        throw new Error(
+          `${pathName} path error: resource not found error[ ${resourceId} ]`,
+        ) */
+
+      const { type } = resource
+
+      // TODO remove this
+      if (!type) return pathResources
+
+      const resourceTypeToTopicTitle: Record<
+        NonNullable<Resource['type']>,
+        SubTopic['title']
+      > = {
+        // TODO: move to separate module
+        basics: "There's more",
+        advanced: 'Beyond basics',
+        'how-to': 'How do they do it',
+        curiosity: 'Nice to know',
+        tool: 'Work smarter, not harder',
+        reference: 'Great bookmarks',
+        feed: 'Stay in the loop',
+      }
+
+      const topicTitle = resourceTypeToTopicTitle[type]
+
+      if (!pathResources[topicTitle]) {
+        pathResources[topicTitle] = {
+          title: topicTitle,
+          resources: [],
+        }
+      }
+
+      pathResources[topicTitle].resources.push(resource)
+
+      return pathResources
+    }, {} as Record<SubTopic['title'], SubTopic>),
+  )
+
+const sortPathResources = (pathResources: Path['resources']) =>
+  pathResources
+    //TODO: refactor this
+    .sort((pathTopicA, pathTopicB) => {
+      // TODO: move to separate module
+      const topicsOrder: Array<SubTopic['title']> = [
+        "There's more",
+        'Beyond basics',
+        'How do they do it',
+        'Nice to know',
+        'Work smarter, not harder',
+        'Great bookmarks',
+        'Stay in the loop',
+      ]
+
+      return (
+        topicsOrder.findIndex(
+          (orderedTopicTitle) => orderedTopicTitle === pathTopicA.title,
+        ) -
+        topicsOrder.findIndex(
+          (orderedTopicTitle) => orderedTopicTitle === pathTopicB.title,
+        )
+      )
+    })
+    .map((pathTopic) => {
+      pathTopic.resources.sort((resourceA, resourceB) => {
+        const titleA = resourceA.title.toUpperCase()
+        const titleB = resourceB.title.toUpperCase()
+
+        if (titleA > titleB) return 1
+        else if (titleA < titleB) return -1
+
+        return 0
+      })
+
+      return pathTopic
+    })
+
 export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
   Object.entries(serializedPaths).reduce(
     (paths, [pathName, serializedPath]) => {
@@ -161,6 +245,9 @@ export const parsePaths = <T extends SerializedPaths>(serializedPaths: T) =>
         logo: serializedPath.logo || null,
         hero: serializedPath.hero || null,
         notes: serializedPath.notes || [],
+        resources: sortPathResources(
+          parseSerializedPathResources(serializedPath.resources),
+        ),
         // populating resources data
         main: (serializedPath.main || []).map((resourceId) => {
           const resource = resources[resourceId]
@@ -287,6 +374,10 @@ export const hasPrevPaths = <T extends Path>(path: T) => {
 
 export const hasExtraResources = <T extends Path>(path: T) => {
   return Boolean(path.extra.length)
+}
+
+export const hasResources = <T extends Path>(path: T) => {
+  return Boolean(path.resources.length)
 }
 
 export const hasNotes = <T extends Path>(path: T) => {
