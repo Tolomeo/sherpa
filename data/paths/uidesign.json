@@ -122,5 +122,13 @@
     "https://theuxbookmark.conetrees.com/",
     "https://builtformars.com/"
   ],
-  "extras": ["uidesign.colortheory"]
+  "extras": [
+    "uidesign.designprinciples",
+    "uidesign.colortheory",
+    "uidesign.typography",
+    "uidesign.iconography",
+    "uidesign.layout",
+    "uidesign.designtools",
+    "uidesign.designsystems"
+  ]
 }

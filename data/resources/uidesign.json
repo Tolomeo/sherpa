@@ -6,39 +6,48 @@
   },
   {
     "title": "Why Do We Interface?",
-    "url": "https://whydoweinterface.com"
+    "url": "https://whydoweinterface.com",
+    "type": "basics"
   },
   {
     "title": "Human-Computer Interaction",
-    "url": "https://www.udacity.com/course/human-computer-interaction--ud400"
+    "url": "https://www.udacity.com/course/human-computer-interaction--ud400",
+    "type": "basics"
   },
   {
     "title": "UX Fundamentals",
-    "url": "https://thegymnasium.com/courses/GYM/103/0/about"
+    "url": "https://thegymnasium.com/courses/GYM/103/0/about",
+    "type": "basics"
   },
   {
     "title": "UX Design Challenges",
-    "url": "https://uxtools.co/challenges"
+    "url": "https://uxtools.co/challenges",
+    "type": "basics"
   },
   {
     "title": "User Interface Design",
-    "url": "https://www.coursera.org/specializations/user-interface-design"
+    "url": "https://www.coursera.org/specializations/user-interface-design",
+    "type": "basics"
   },
   {
     "title": "DESIGNERCIZE",
-    "url": "https://designercize.com"
+    "url": "https://designercize.com",
+    "type": "basics"
   },
   {
     "title": "Laws of UX",
-    "url": "https://lawsofux.com"
+    "url": "https://lawsofux.com",
+    "type": "reference"
   },
   {
     "title": "Humane by Design",
-    "url": "https://humanebydesign.com"
+    "url": "https://humanebydesign.com",
+    "type": "reference"
   },
   {
     "title": "awesome-design",
-    "url": "https://github.com/gztchan/awesome-design"
+    "url": "https://github.com/gztchan/awesome-design",
+    "type": "reference"
   },
   {
     "title": "The Encyclopedia of Human-Computer Interaction",
@@ -219,152 +228,187 @@
   },
   {
     "title": "Principles of Product Design",
-    "url": "https://www.designbetter.co/principles-of-product-design"
+    "url": "https://www.designbetter.co/principles-of-product-design",
+    "type": "basics"
   },
   {
     "title": "Design Principles FTW",
-    "url": "https://www.designprinciplesftw.com/"
+    "url": "https://www.designprinciplesftw.com/",
+    "type": "reference"
   },
   {
     "title": "Design Principles",
-    "url": "https://principles.adactio.com"
+    "url": "https://principles.adactio.com",
+    "type": "reference"
   },
   {
     "title": "Principles of User Interface Design",
-    "url": "http://bokardo.com/principles-of-user-interface-design"
+    "url": "http://bokardo.com/principles-of-user-interface-design",
+    "type": "basics"
   },
   {
     "title": "awesome-design-principles",
-    "url": "https://github.com/robinstickel/awesome-design-principles"
+    "url": "https://github.com/robinstickel/awesome-design-principles",
+    "type": "reference"
   },
   {
     "title": "The Principles of Design",
     "url": "https://www.youtube.com/watch?v=9EPTM91TBDU&list=PLgGbWId6zgaXiWYDAcJbXzBNlAnYg7pgL",
-    "source": "youtube.com/c/tutsplus"
+    "source": "youtube.com/c/tutsplus",
+    "type": "basics"
   },
   {
     "title": "Color Theory for Designers",
-    "url": "https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color"
+    "url": "https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color",
+    "type": "basics"
   },
   {
     "title": "What Does Each Color Mean? And Why?",
-    "url": "https://www.nickkolenda.com/color-psychology"
+    "url": "https://www.nickkolenda.com/color-psychology",
+    "type": "basics"
   },
   {
     "title": "Color & Contrast",
-    "url": "https://colorandcontrast.com"
+    "url": "https://colorandcontrast.com",
+    "type": "basics"
   },
   {
     "title": "Typography Handbook",
-    "url": "https://typographyhandbook.com"
+    "url": "https://typographyhandbook.com",
+    "type": "basics"
   },
   {
     "title": "Fonts Knowledge",
-    "url": "https://fonts.google.com/knowledge"
+    "url": "https://fonts.google.com/knowledge",
+    "type": "reference"
   },
   {
     "title": "Typographic Hierarchies",
-    "url": "https://www.smashingmagazine.com/2022/10/typographic-hierarchies"
+    "url": "https://www.smashingmagazine.com/2022/10/typographic-hierarchies",
+    "type": "basics"
   },
   {
     "title": "The Ultimate Guide to Typography",
-    "url": "https://design.tutsplus.com/courses/the-ultimate-guide-to-typography"
+    "url": "https://design.tutsplus.com/courses/the-ultimate-guide-to-typography",
+    "type": "basics"
   },
   {
     "title": "What Does Each Font Mean? And Why?",
-    "url": "https://www.nickkolenda.com/font-psychology"
+    "url": "https://www.nickkolenda.com/font-psychology",
+    "type": "basics"
   },
   {
     "title": "Designing For User Interfaces: Icons As Visual Elements For Screen Design",
-    "url": "https://www.smashingmagazine.com/2018/02/user-interfaces-icons-visual-elements-screen-design"
+    "url": "https://www.smashingmagazine.com/2018/02/user-interfaces-icons-visual-elements-screen-design",
+    "type": "basics"
   },
   {
     "title": "Icon Design Course",
-    "url": "https://design.tutsplus.com/courses/icon-design"
+    "url": "https://design.tutsplus.com/courses/icon-design",
+    "type": "basics"
   },
   {
     "title": "awesome-icons",
-    "url": "https://github.com/notlmn/awesome-icons"
+    "url": "https://github.com/notlmn/awesome-icons",
+    "type": "reference"
   },
   {
     "title": "Free Icon Design Guide",
-    "url": "https://iconutopia.com/free-icon-design-guide"
+    "url": "https://iconutopia.com/free-icon-design-guide",
+    "type": "basics"
   },
   {
     "title": "The Icon Handbook",
-    "url": "https://hicks.design/shop/the-icon-handbook"
+    "url": "https://hicks.design/shop/the-icon-handbook",
+    "type": "advanced"
   },
   {
     "title": "Visual Perception: Icons vs Copy in UI",
-    "url": "https://blog.icons8.com/articles/visual-perception-icons-vs-copy-in-ui/"
+    "url": "https://blog.icons8.com/articles/visual-perception-icons-vs-copy-in-ui/",
+    "type": "basics"
   },
   {
     "title": "Small Elements, Big Impact: Types and Functions of UI Icons",
-    "url": "https://blog.tubikstudio.com/small-elements-big-impact-types-and-functions-of-ui-icons/"
+    "url": "https://blog.tubikstudio.com/small-elements-big-impact-types-and-functions-of-ui-icons/",
+    "type": "basics"
   },
   {
     "title": "Media Queries",
-    "url": "https://mediaqueri.es"
+    "url": "https://mediaqueri.es",
+    "type": "reference"
   },
   {
     "title": "Invisible Forces in Design",
-    "url": "https://webdesign.tutsplus.com/series/invisible-forces-in-design--cms-1060"
+    "url": "https://webdesign.tutsplus.com/series/invisible-forces-in-design--cms-1060",
+    "type": "basics"
   },
   {
     "title": "Building Better UI Designs With Layout Grids",
-    "url": "https://www.smashingmagazine.com/2017/12/building-better-ui-designs-layout-grids"
+    "url": "https://www.smashingmagazine.com/2017/12/building-better-ui-designs-layout-grids",
+    "type": "basics"
   },
   {
     "title": "Sketch for Beginners",
     "url": "https://www.youtube.com/watch?v=pvpRGUYvbCw&list=PLgGbWId6zgaXQi_U88w9ywdBTXCaJMvmB&index=5",
-    "source": "youtube.com/c/tutsplus"
+    "source": "youtube.com/c/tutsplus",
+    "type": "basics"
   },
   {
     "title": "Adobe XD for Beginners",
     "url": "https://www.youtube.com/watch?v=WEljsc2jorI&list=PLgGbWId6zgaXQi_U88w9ywdBTXCaJMvmB&index=7",
-    "source": "youtube.com/c/tutsplus"
+    "source": "youtube.com/c/tutsplus",
+    "type": "basics"
   },
   {
     "title": "Introduction To Figma",
     "url": "https://www.youtube.com/watch?v=g6rQFP9zCAM&list=PLgGbWId6zgaXQi_U88w9ywdBTXCaJMvmB&index=7",
-    "source": "youtube.com/c/tutsplus"
+    "source": "youtube.com/c/tutsplus",
+    "type": "basics"
   },
   {
     "title": "Responsive Web Design in Adobe XD",
-    "url": "https://www.coursera.org/learn/responsive-web-design-adobe-xd"
+    "url": "https://www.coursera.org/learn/responsive-web-design-adobe-xd",
+    "type": "basics"
   },
   {
     "title": "Learn Figma for UX/UI Design master course",
     "url": "https://www.youtube.com/playlist?list=PLFW6ct83_wC_N-IrrU60lH4G0dV6u1B4n",
-    "source": "youtube.com/@selfstudyspace774"
+    "source": "youtube.com/@selfstudyspace774",
+    "type": "basics"
   },
   {
     "title": "UI / UX Design Tutorial – Wireframe, Mockup & Design in Figma",
     "url": "https://www.youtube.com/watch?v=c9Wg6Cb_YlU",
-    "source": "youtube.com/@freecodecamp"
+    "source": "youtube.com/@freecodecamp",
+    "type": "basics"
   },
   {
     "title": "Figma Tutorials: The Ultimate Crash Course",
     "url": "https://www.youtube.com/playlist?list=PLvnhVb8yYRQ3TDOsSgN0pf0XqG6E56IYM",
-    "source": "youtube.com/c/Mizko"
+    "source": "youtube.com/c/Mizko",
+    "type": "basics"
   },
   {
     "title": "Exploring Sketch Plugins",
     "url": "https://www.youtube.com/playlist?list=PLLnpHn493BHHUZe9bihv37Z6CyXBTyb-9",
-    "source": "youtube.com/c/LevelUpTuts"
+    "source": "youtube.com/c/LevelUpTuts",
+    "type": "basics"
   },
   {
     "title": "Adobe XD 2022 Crash Course",
     "url": "https://www.youtube.com/watch?v=oo5EoelQ_DQ",
-    "source": "youtube.com/@DesignCourse"
+    "source": "youtube.com/@DesignCourse",
+    "type": "basics"
   },
   {
     "title": "awesome-design-systems",
-    "url": "https://github.com/alexpate/awesome-design-systems"
+    "url": "https://github.com/alexpate/awesome-design-systems",
+    "type": "reference"
   },
   {
     "title": "The Never-Ending Job of Selling Design Systems",
-    "url": "https://alistapart.com/article/selling-design-systems"
+    "url": "https://alistapart.com/article/selling-design-systems",
+    "type": "advanced"
   },
   {
     "title": "Design Systems Repo",
@@ -373,43 +417,53 @@
   },
   {
     "title": "Atomic Design by Brad Frost",
-    "url": "https://atomicdesign.bradfrost.com"
+    "url": "https://atomicdesign.bradfrost.com",
+    "type": "basics"
   },
   {
     "title": "Design System Checklist",
-    "url": "https://www.designsystemchecklist.com"
+    "url": "https://www.designsystemchecklist.com",
+    "type": "tool"
   },
   {
     "title": "A comprehensive guide to design systems",
-    "url": "https://www.invisionapp.com/inside-design/guide-to-design-systems"
+    "url": "https://www.invisionapp.com/inside-design/guide-to-design-systems",
+    "type": "basics"
   },
   {
     "title": "Design Systems Handbook",
-    "url": "https://www.designbetter.co/design-systems-handbook"
+    "url": "https://www.designbetter.co/design-systems-handbook",
+    "type": "basics"
   },
   {
     "title": "One Formula To Rule Them All: The ROI Of A Design System",
-    "url": "https://www.smashingmagazine.com/2022/09/formula-roi-design-system/"
+    "url": "https://www.smashingmagazine.com/2022/09/formula-roi-design-system/",
+    "type": "advanced"
   },
   {
     "title": "An Introduction to Constraint Based Design Systems",
-    "url": "https://www.colepeters.dev/posts/an-introduction-to-constraint-based-design-systems"
+    "url": "https://www.colepeters.dev/posts/an-introduction-to-constraint-based-design-systems",
+    "type": "basics"
   },
   {
     "title": "Getting Started with Design Systems",
-    "url": "https://marvelapp.com/ebook-design-systems"
+    "url": "https://marvelapp.com/ebook-design-systems",
+    "type": "basics"
   },
   {
     "title": "Integrating Animation in Design Systems",
-    "url": "https://xd.adobe.com/ideas/principles/design-systems/animation-in-design-system-ebook"
+    "url": "https://xd.adobe.com/ideas/principles/design-systems/animation-in-design-system-ebook",
+    "type": "advanced"
   },
   {
     "title": "Introduction to Design Systems",
-    "url": "https://webdesign.tutsplus.com/courses/introduction-to-design-systems"
+    "url": "https://webdesign.tutsplus.com/courses/introduction-to-design-systems",
+    "type": "basics"
   },
   {
     "title": "Design Systems",
-    "url": "https://thegymnasium.com/design-systems"
+    "url": "https://thegymnasium.com/design-systems",
+    "type": "basics"
   },
   {
     "title": "Human Interface Guidelines",
@@ -488,7 +542,8 @@
   },
   {
     "title": "Design Principles",
-    "url": "https://principles.design"
+    "url": "https://principles.design",
+    "type": "reference"
   },
   {
     "title": "UX Checklists For Interface Designers",
@@ -637,11 +692,13 @@
   },
   {
     "title": "Colorful",
-    "url": "https://github.com/Siddharth11/Colorful"
+    "url": "https://github.com/Siddharth11/Colorful",
+    "type": "reference"
   },
   {
     "title": "Build a Color Scheme: The Fundamentals",
-    "url": "https://tympanus.net/codrops/2012/09/17/build-a-color-scheme-the-fundamentals"
+    "url": "https://tympanus.net/codrops/2012/09/17/build-a-color-scheme-the-fundamentals",
+    "type": "basics"
   },
   {
     "title": "Color Realism and Color Science",
@@ -650,27 +707,33 @@
   },
   {
     "title": "typography",
-    "url": "https://github.com/deanhume/typography"
+    "url": "https://github.com/deanhume/typography",
+    "type": "reference"
   },
   {
     "title": "Combining Typefaces",
-    "url": "https://blog.typekit.com/2016/04/29/combining-typefaces-free-guide-to-great-typography"
+    "url": "https://blog.typekit.com/2016/04/29/combining-typefaces-free-guide-to-great-typography",
+    "type": "basics"
   },
   {
     "title": "The Elements of Typographic Style Applied to the Web",
-    "url": "http://webtypography.net"
+    "url": "http://webtypography.net",
+    "type": "basics"
   },
   {
     "title": "Typography for User Interfaces",
-    "url": "https://viljamis.com/2016/typography-for-user-interfaces"
+    "url": "https://viljamis.com/2016/typography-for-user-interfaces",
+    "type": "basics"
   },
   {
     "title": "Typewolf",
-    "url": "https://www.typewolf.com"
+    "url": "https://www.typewolf.com",
+    "type": "feed"
   },
   {
     "title": "Designing Grids",
-    "url": "https://vimeo.com/239782886"
+    "url": "https://vimeo.com/239782886",
+    "type": "basics"
   },
   {
     "title": "The UX psychology glossary",
@@ -684,23 +747,28 @@
   },
   {
     "title": "A complete guide to iconography",
-    "url": "https://www.designsystems.com/iconography-guide/"
+    "url": "https://www.designsystems.com/iconography-guide/",
+    "type": "basics"
   },
   {
     "title": "The Anatomy Of Themed Design System Components",
-    "url": "https://www.smashingmagazine.com/2022/12/anatomy-themed-design-system-components/"
+    "url": "https://www.smashingmagazine.com/2022/12/anatomy-themed-design-system-components/",
+    "type": "advanced"
   },
   {
     "title": "Design System Maturity Levels",
-    "url": "https://www.millisecond.co/blog/design-systems-maturity"
+    "url": "https://www.millisecond.co/blog/design-systems-maturity",
+    "type": "advanced"
   },
   {
     "title": "Adobe XD tutorials",
-    "url": "https://www.adobe.com/products/xd/learn/view-all-xd-tutorials.html"
+    "url": "https://www.adobe.com/products/xd/learn/view-all-xd-tutorials.html",
+    "type": "basics"
   },
   {
     "title": "Design Systems For Figma",
-    "url": "https://www.designsystemsforfigma.com/"
+    "url": "https://www.designsystemsforfigma.com/",
+    "type": "advanced"
   },
   {
     "title": "Design Threads",
@@ -781,7 +849,8 @@
   },
   {
     "title": "Type Design Resources",
-    "url": "https://typedesignresources.com/"
+    "url": "https://typedesignresources.com/",
+    "type": "reference"
   },
   {
     "title": "A Comprehensive Checklist For Running Design Workshops",
@@ -812,7 +881,8 @@
   {
     "title": "Learn About Fonts",
     "url": "https://www.youtube.com/playlist?list=PLgGbWId6zgaVDvP5IPMIIYeiqqHzj5quu",
-    "source": "youtube.com/@envatotuts"
+    "source": "youtube.com/@envatotuts",
+    "type": "basics"
   },
   {
     "title": "How Should Designers Learn To Code? The Terminal And Text Editors (Part 1)",
