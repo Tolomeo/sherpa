@@ -122,7 +122,7 @@
     "https://theuxbookmark.conetrees.com/",
     "https://builtformars.com/"
   ],
-  "extras": [
+  "children": [
     "uidesign.designprinciples",
     "uidesign.colortheory",
     "uidesign.typography",

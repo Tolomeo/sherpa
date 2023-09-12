@@ -68,10 +68,6 @@ const parseSerializedPathMain = (
   })
 }
 
-const parseSerializedPathExtras = (
-  serializedPathExtras: SerializedPath['extras'],
-) => serializedPathExtras || []
-
 // TODO remove
 const parseSerializedPathExtra = (
   serializedPathExtra: SerializedPath['extra'],
@@ -159,9 +155,10 @@ export const parseSerializedPath = (serializedPath: SerializedPath): Path => ({
   // TODO: remove
   extra: parseSerializedPathExtra(serializedPath.extra),
   //
-  extras: (serializedPath.extras || []).map((extra) => {
-    return getPath(extra)
-  }),
+  children: (() => {
+    if (!serializedPath.children) return null
+    return serializedPath.children.map((childPath) => getPath(childPath))
+  })(),
   // populating next paths, those are optional
   next: (() => {
     if (!serializedPath.next) return null

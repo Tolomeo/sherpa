@@ -26,6 +26,7 @@ import {
   Timeline as ResourcesTimeline,
   List as ResourcesList,
   groupResourcesByType,
+  sortResources,
 } from '../../src/resources'
 
 const pathPages = [
@@ -148,8 +149,6 @@ export default function PathPage({ path, paths }: Props) {
             </Typography>
           </LayoutHero>
 
-          <pre>{JSON.stringify(path, null, 2)}</pre>
-
           {path.prev && (
             <LayoutContainer pb={8}>
               <aside>
@@ -163,14 +162,16 @@ export default function PathPage({ path, paths }: Props) {
 
           {path.main && (
             <LayoutContainer pb={8} data-testid={pathResourcesTestId}>
-              <Typography component="h2" variant="h5" gutterBottom>
+              <Typography component="h2" variant="h4">
                 The path
               </Typography>
-              <Grid container>
-                <Grid item xs={12} md={8} xl={6}>
-                  <ResourcesTimeline resources={path.main} />
+              <Box pt={6}>
+                <Grid container>
+                  <Grid item xs={12} md={8} xl={6}>
+                    <ResourcesTimeline resources={path.main} />
+                  </Grid>
                 </Grid>
-              </Grid>
+              </Box>
             </LayoutContainer>
           )}
 
@@ -180,14 +181,43 @@ export default function PathPage({ path, paths }: Props) {
                 {groupResourcesByType(path.resources).map((group, index) => (
                   <Box data-testid={pathExtrasTestId} key={index}>
                     <aside>
-                      <Typography component="h2" variant="h5" gutterBottom>
+                      <Typography component="h3" variant="h5" gutterBottom>
                         {group.title}
                       </Typography>
-                      <ResourcesList resources={group.resources} />
+                      <ResourcesList
+                        resources={sortResources(group.resources)}
+                      />
                     </aside>
                   </Box>
                 ))}
               </Masonry>
+            </LayoutContainer>
+          )}
+
+          {path.children && (
+            <LayoutContainer py={4}>
+              <section>
+                <Typography variant="h4" component="h2" gutterBottom>
+                  Short hikes
+                </Typography>
+                <Box pt={6}>
+                  <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
+                    {path.children.map((pathChild, index) => (
+                      <Box key={index}>
+                        <Typography variant="h5" component="h3">
+                          {pathChild.title}
+                        </Typography>
+                        {/*TODO: here => pathChild path*/}
+                        {pathChild.resources && (
+                          <ResourcesList
+                            resources={sortResources(pathChild.resources)}
+                          />
+                        )}
+                      </Box>
+                    ))}
+                  </Masonry>
+                </Box>
+              </section>
             </LayoutContainer>
           )}
 
@@ -217,16 +247,16 @@ export default function PathPage({ path, paths }: Props) {
             </LayoutContainer>
           )}
 
-          <pre>{JSON.stringify(paths, null, 2)}</pre>
-
           <LayoutDrawer data-testid={drawerTestId}>
             <Stack spacing={4}>
-              <Typography variant="h5" component="p">
-                Need a compass?
-              </Typography>
-              <Box pb={3}>
-                <PathsList paths={paths} spaced={false} />
-              </Box>
+              <nav>
+                <Typography variant="h5" component="p">
+                  Need a compass?
+                </Typography>
+                <Box pb={3}>
+                  <PathsList paths={paths} spaced={false} />
+                </Box>
+              </nav>
               <Typography variant="h5" component="p">
                 About paths
               </Typography>

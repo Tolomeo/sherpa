@@ -1,6 +1,6 @@
 import { Resource } from '../../data/resources/types'
 
-const sortResources = (resources: Array<Resource>) =>
+export const sortResources = (resources: Array<Resource>) =>
   [...resources].sort((resourceA, resourceB) => {
     const titleA = resourceA.title.toUpperCase()
     const titleB = resourceB.title.toUpperCase()
@@ -30,13 +30,7 @@ const resourcesTypesGroupsOrder: Array<NonNullable<Resource['type']>> = [
 ]
 
 export const sortResourcesTypeGroups = (groups: ResourcesTypeGroups) =>
-  resourcesTypesGroupsOrder.map((groupType) => {
-    const group = groups[groupType]
-
-    group.resources = sortResources(group.resources)
-
-    return group
-  })
+  resourcesTypesGroupsOrder.map((groupType) => groups[groupType])
 
 const resourceTypeToGroupTitle: Record<
   NonNullable<Resource['type']>,

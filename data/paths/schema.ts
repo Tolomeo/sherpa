@@ -71,7 +71,7 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
       nullable: true,
       uniqueItems: true,
     },
-    extras: {
+    children: {
       type: 'array',
       items: {
         type: 'string',
