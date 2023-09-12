@@ -25,6 +25,7 @@ import { List as PathsList } from '../../src/paths'
 import {
   Timeline as ResourcesTimeline,
   List as ResourcesList,
+  groupResourcesByType,
 } from '../../src/resources'
 
 const pathPages = [
@@ -176,13 +177,13 @@ export default function PathPage({ path, paths }: Props) {
           {path.resources && (
             <LayoutContainer pb={4}>
               <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
-                {path.resources.map((topic, index) => (
+                {groupResourcesByType(path.resources).map((group, index) => (
                   <Box data-testid={pathExtrasTestId} key={index}>
                     <aside>
                       <Typography component="h2" variant="h5" gutterBottom>
-                        {topic.title}
+                        {group.title}
                       </Typography>
-                      <ResourcesList resources={topic.resources} />
+                      <ResourcesList resources={group.resources} />
                     </aside>
                   </Box>
                 ))}

@@ -29,89 +29,17 @@ const parseSerializedPathResources = (
 ) => {
   if (!serializedPathResources) return null
 
-  return sortPathResources(
-    Object.values(
-      serializedPathResources.reduce((pathResources, resourceId) => {
-        const resource = resources[resourceId]
+  return serializedPathResources.map((resourceId) => {
+    const resource = resources[resourceId]
 
-        /* if (!resource)
+    /* if (!resource)
         throw new Error(
           `${pathName} path error: resource not found error[ ${resourceId} ]`,
         ) */
 
-        const { type } = resource
-
-        // TODO remove this
-        if (!type) return pathResources
-
-        const resourceTypeToTopicTitle: Record<
-          NonNullable<Resource['type']>,
-          SubTopic['title']
-        > = {
-          // TODO: move to separate module
-          basics: "There's more",
-          advanced: 'Beyond basics',
-          'how-to': 'How do they do it',
-          curiosity: 'Nice to know',
-          tool: 'Work smarter, not harder',
-          reference: 'Great bookmarks',
-          feed: 'Stay in the loop',
-        }
-
-        const topicTitle = resourceTypeToTopicTitle[type]
-
-        if (!pathResources[topicTitle]) {
-          pathResources[topicTitle] = {
-            title: topicTitle,
-            resources: [],
-          }
-        }
-
-        pathResources[topicTitle].resources.push(resource)
-
-        return pathResources
-      }, {} as Record<SubTopic['title'], SubTopic>),
-    ),
-  )
+    return resource
+  })
 }
-
-const sortPathResources = (pathResources: NonNullable<Path['resources']>) =>
-  pathResources
-    //TODO: refactor this
-    .sort((pathTopicA, pathTopicB) => {
-      // TODO: move to separate module
-      const topicsOrder: Array<SubTopic['title']> = [
-        "There's more",
-        'Beyond basics',
-        'How do they do it',
-        'Nice to know',
-        'Work smarter, not harder',
-        'Great bookmarks',
-        'Stay in the loop',
-      ]
-
-      return (
-        topicsOrder.findIndex(
-          (orderedTopicTitle) => orderedTopicTitle === pathTopicA.title,
-        ) -
-        topicsOrder.findIndex(
-          (orderedTopicTitle) => orderedTopicTitle === pathTopicB.title,
-        )
-      )
-    })
-    .map((pathTopic) => {
-      pathTopic.resources.sort((resourceA, resourceB) => {
-        const titleA = resourceA.title.toUpperCase()
-        const titleB = resourceB.title.toUpperCase()
-
-        if (titleA > titleB) return 1
-        else if (titleA < titleB) return -1
-
-        return 0
-      })
-
-      return pathTopic
-    })
 
 const parseSerializedPathLogo = (serializedPathLogo: SerializedPath['logo']) =>
   serializedPathLogo || null
