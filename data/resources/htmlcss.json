@@ -1,21 +1,25 @@
 [
   {
     "title": "Interneting Is Hard",
-    "url": "https://internetingishard.netlify.app"
+    "url": "https://internetingishard.netlify.app",
+    "type": "basics"
   },
   {
     "title": "Responsive Web Design Certification",
-    "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+    "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
+    "type": "basics"
   },
   {
     "title": "Search engine optimization",
     "url": "https://learn-the-web.algonquindesign.ca/topics/search-engine-optimization",
-    "source": "learn-the-web.algonquindesign.ca"
+    "source": "learn-the-web.algonquindesign.ca",
+    "type": "basics"
   },
   {
     "title": "Information architecture",
     "url": "https://learn-the-web.algonquindesign.ca/topics/information-architecture",
-    "source": "learn-the-web.algonquindesign.ca"
+    "source": "learn-the-web.algonquindesign.ca",
+    "type": "basics"
   },
   {
     "title": "CSS Diner",
@@ -79,11 +83,13 @@
   },
   {
     "title": "awesome-html5",
-    "url": "https://github.com/diegocard/awesome-html5"
+    "url": "https://github.com/diegocard/awesome-html5",
+    "type": "reference"
   },
   {
     "title": "awesome-css",
-    "url": "https://github.com/awesome-css-group/awesome-css"
+    "url": "https://github.com/awesome-css-group/awesome-css",
+    "type": "reference"
   },
   {
     "title": "Learn to Code HTML & CSS",
@@ -172,7 +178,8 @@
   },
   {
     "title": "BEM by Example",
-    "url": "https://sparkbox.com/foundry/bem_by_example"
+    "url": "https://sparkbox.com/foundry/bem_by_example",
+    "type": "basics"
   },
   {
     "title": "HTML Standard",
@@ -534,7 +541,8 @@
   },
   {
     "title": "BEM 101",
-    "url": "https://css-tricks.com/bem-101/"
+    "url": "https://css-tricks.com/bem-101/",
+    "type": "basics"
   },
   {
     "title": "Layoutit Grid",
