@@ -3,120 +3,76 @@
   "logo": "<svg id=\"n\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\"><defs><style>.cls-1{fill:#c12127;}.cls-2{fill:#fff;}</style></defs><title>n</title><path class=\"cls-1\" d=\"M0,16V0H16V16ZM3,3V13H8V5h3v8h2V3Z\"/><path class=\"cls-2\" d=\"M3,3H13V13H11V5H8v8H3Z\"/></svg>",
   "hero": {
     "foreground": "#ffffff",
-    "background": ["#cb3837", "#fb3e44"]
+    "background": [
+      "#cb3837",
+      "#fb3e44"
+    ]
   },
   "notes": [
     "Logo image: Jonathan E Cowperthwait (https://commons.wikimedia.org/wiki/File:Npm-logo_favicon.svg), „Npm-logo favicon“, marked as public domain"
   ],
-  "next": ["next", "node"],
+  "next": [
+    "next",
+    "node"
+  ],
   "main": [
     "https://www.youtube.com/watch?v=cjoTTSbOuG0",
     "https://survivejs.com/maintenance",
     "https://github.com/sindresorhus/awesome-npm"
   ],
-  "extra": [
-    {
-      "title": "There's more",
-      "resources": [
-        "https://www.udemy.com/course/npm-for-beginners-fast-track",
-        "https://www.freecodecamp.org/news/javascript-package-manager-npm-and-yarn",
-        "https://github.com/workshopper/how-to-npm",
-        "https://css-tricks.com/a-complete-beginners-guide-to-npm",
-        "https://nodesource.com/blog/semver-a-primer",
-        "https://egghead.io/courses/execute-npm-package-binaries-with-the-npx-package-runner",
-        "https://lucasfcosta.com/2020/10/17/lockfile-guide.html",
-        "https://2ality.com/2022/01/esm-specifiers.html",
-        "https://devopedia.org/semantic-versioning",
-        "https://devopedia.org/dependency-manager",
-        "https://devopedia.org/package-manager"
-      ]
-    },
-    {
-      "title": "Beyond basics",
-      "resources": [
-        "https://marvinh.dev/blog/speeding-up-javascript-ecosystem/",
-        "https://www.youtube.com/watch?v=aKTSC4D1GL8",
-        "https://exploringjs.com/nodejs-shell-scripting/",
-        "https://yarnpkg.com/blog/2017/07/11/lets-dev-a-package-manager",
-        "https://github.com/g-plane/tiny-package-manager",
-        "https://cpojer.net/posts/dependency-managers-dont-manage-your-dependencies",
-        "https://www.robinwieruch.de/javascript-monorepos",
-        "https://css-tricks.com/why-npm-scripts",
-        "https://github.com/frehner/modern-guide-to-packaging-js-library"
-      ]
-    },
-    {
-      "title": "Webpack",
-      "main": [
-        "https://survivejs.com/webpack/",
-        "https://webpack.js.org/awesome-webpack/"
-      ],
-      "extra": [
-        "https://www.taniarascia.com/how-to-use-webpack/",
-        "https://lihautan.com/building-a-simplified-webpack-clone/",
-        "https://github.com/GoogleChromeLabs/webpack-libs-optimizations"
-      ]
-    },
-    {
-      "title": "Vite",
-      "main": [
-        "https://www.youtube.com/watch?v=VAeRhmpcWEQ",
-        "https://github.com/vitejs/awesome-vite"
-      ],
-      "extra": ["https://www.youtube.com/watch?v=89NJdbYTgJ8"]
-    },
-    {
-      "title": "How do they do it?",
-      "resources": [
-        "https://snyk.io/blog/best-practices-create-modern-npm-package/",
-        "https://www.robinwieruch.de/javascript-project-setup-tutorial/",
-        "https://jvns.ca/blog/2023/02/16/writing-javascript-without-a-build-system/",
-        "https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html",
-        "https://egghead.io/courses/publish-javascript-packages-on-npm",
-        "https://egghead.io/courses/how-to-write-an-open-source-javascript-library",
-        "https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool",
-        "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSS7aup_xvT9Q1-NQZINW8X",
-        "https://auth0.com/blog/developing-npm-packages",
-        "https://2ality.com/2021/07/simple-monorepos.html",
-        "https://www.strictmode.io/articles/build-test-and-publish-npm-package-2022"
-      ]
-    },
-    {
-      "title": "Nice to know",
-      "resources": [
-        "http://www.olioapps.com/blog/the-lost-art-of-the-makefile/",
-        "https://cpojer.net/posts/rethinking-javascript-infrastructure",
-        "https://bytearcher.com/articles/evaluating-packages-1-check-community",
-        "http://bytearcher.com/articles/evaluating-packages-2-review-repository",
-        "https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosaurs-f695e9747b70",
-        "https://medium.com/autodesk-tlv/lerna-has-gone-which-monorepo-is-right-for-a-node-js-backend-fc075cad51b0"
-      ]
-    },
-    {
-      "title": "Work smarter, not harder",
-      "resources": [
-        "https://semver.npmjs.com",
-        "https://npms.io",
-        "https://jubianchi.github.io/semver-check",
-        "https://www.runpkg.com"
-      ]
-    },
-    {
-      "title": "Great bookmarks",
-      "resources": [
-        "https://analysis-tools.dev/",
-        "http://jargon.js.org",
-        "https://docs.npmjs.com",
-        "https://monorepo.tools",
-        "https://semver.org",
-        "https://github.com/parro-it/awesome-micro-npm-packages",
-        "https://devhints.io/npm",
-        "https://www.digitalocean.com/community/tutorials/nodejs-npm-yarn-cheatsheet"
-      ]
-    },
-    {
-      "title": "Stay in the loop",
-      "resources": ["https://2ality.com"]
-    }
+  "children": [
+    "npm.webpack"
+  ],
+  "resources": [
+    "https://www.udemy.com/course/npm-for-beginners-fast-track",
+    "https://www.freecodecamp.org/news/javascript-package-manager-npm-and-yarn",
+    "https://github.com/workshopper/how-to-npm",
+    "https://css-tricks.com/a-complete-beginners-guide-to-npm",
+    "https://nodesource.com/blog/semver-a-primer",
+    "https://egghead.io/courses/execute-npm-package-binaries-with-the-npx-package-runner",
+    "https://lucasfcosta.com/2020/10/17/lockfile-guide.html",
+    "https://2ality.com/2022/01/esm-specifiers.html",
+    "https://devopedia.org/semantic-versioning",
+    "https://devopedia.org/dependency-manager",
+    "https://devopedia.org/package-manager",
+    "https://marvinh.dev/blog/speeding-up-javascript-ecosystem/",
+    "https://www.youtube.com/watch?v=aKTSC4D1GL8",
+    "https://exploringjs.com/nodejs-shell-scripting/",
+    "https://yarnpkg.com/blog/2017/07/11/lets-dev-a-package-manager",
+    "https://github.com/g-plane/tiny-package-manager",
+    "https://cpojer.net/posts/dependency-managers-dont-manage-your-dependencies",
+    "https://www.robinwieruch.de/javascript-monorepos",
+    "https://css-tricks.com/why-npm-scripts",
+    "https://github.com/frehner/modern-guide-to-packaging-js-library",
+    "https://snyk.io/blog/best-practices-create-modern-npm-package/",
+    "https://www.robinwieruch.de/javascript-project-setup-tutorial/",
+    "https://jvns.ca/blog/2023/02/16/writing-javascript-without-a-build-system/",
+    "https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html",
+    "https://egghead.io/courses/publish-javascript-packages-on-npm",
+    "https://egghead.io/courses/how-to-write-an-open-source-javascript-library",
+    "https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool",
+    "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSS7aup_xvT9Q1-NQZINW8X",
+    "https://auth0.com/blog/developing-npm-packages",
+    "https://2ality.com/2021/07/simple-monorepos.html",
+    "https://www.strictmode.io/articles/build-test-and-publish-npm-package-2022",
+    "http://www.olioapps.com/blog/the-lost-art-of-the-makefile/",
+    "https://cpojer.net/posts/rethinking-javascript-infrastructure",
+    "https://bytearcher.com/articles/evaluating-packages-1-check-community",
+    "http://bytearcher.com/articles/evaluating-packages-2-review-repository",
+    "https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosaurs-f695e9747b70",
+    "https://medium.com/autodesk-tlv/lerna-has-gone-which-monorepo-is-right-for-a-node-js-backend-fc075cad51b0",
+    "https://semver.npmjs.com",
+    "https://npms.io",
+    "https://jubianchi.github.io/semver-check",
+    "https://www.runpkg.com",
+    "https://analysis-tools.dev/",
+    "http://jargon.js.org",
+    "https://docs.npmjs.com",
+    "https://monorepo.tools",
+    "https://semver.org",
+    "https://github.com/parro-it/awesome-micro-npm-packages",
+    "https://devhints.io/npm",
+    "https://www.digitalocean.com/community/tutorials/nodejs-npm-yarn-cheatsheet",
+    "https://2ality.com"
   ]
 }
