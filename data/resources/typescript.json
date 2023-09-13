@@ -2,7 +2,8 @@
   {
     "title": "TypeScript Course for Beginners",
     "url": "https://www.youtube.com/watch?v=BwuLxPH8IDs",
-    "source": "youtube.com/c/Academind"
+    "source": "youtube.com/c/Academind",
+    "type": "basics"
   },
   {
     "title": "TypeScript Deep Dive",
@@ -16,7 +17,8 @@
   },
   {
     "title": "type-challenges",
-    "url": "https://github.com/type-challenges/type-challenges"
+    "url": "https://github.com/type-challenges/type-challenges",
+    "type": "basics"
   },
   {
     "title": "clean-code-typescript",
@@ -41,11 +43,13 @@
   },
   {
     "title": "TypeScript Evolution",
-    "url": "https://mariusschulz.com/blog/series/typescript-evolution"
+    "url": "https://mariusschulz.com/blog/series/typescript-evolution",
+    "type": "basics"
   },
   {
     "title": "awesome-typescript",
-    "url": "https://github.com/dzharii/awesome-typescript"
+    "url": "https://github.com/dzharii/awesome-typescript",
+		"type": "reference"
   },
   {
     "title": "How To Code in TypeScript",
@@ -171,12 +175,14 @@
   },
   {
     "title": "TypeScript vs. JavaScript: Your Go-to Guide",
-    "url": "https://www.toptal.com/typescript/typescript-vs-javascript-guide"
+    "url": "https://www.toptal.com/typescript/typescript-vs-javascript-guide",
+    "type": "curiosity"
   },
   {
     "title": "Exploring Advanced TypeScript Concepts",
     "url": "https://www.youtube.com/watch?v=eJ6R1knfsoc",
-    "source": "youtube.com/c/Headwayio"
+    "source": "youtube.com/c/Headwayio",
+    "type": "advanced"
   },
   {
     "title": "TypeScript Crash Course",
