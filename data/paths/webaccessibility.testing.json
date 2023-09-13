@@ -1,0 +1,12 @@
+{
+  "title": "Testing",
+  "resources": [
+    "https://blog.sapegin.me/all/accessibility-testing",
+    "https://adrianroselli.com/2023/01/comparing-manual-and-free-automated-wcag-reviews.html",
+    "https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing",
+    "https://www.adrianbolonio.com/en/testing-web-accessibility-part-1",
+    "https://blog.pope.tech/2023/03/01/a-beginners-guide-to-manual-accessibility-testing/",
+    "https://www.sarasoueidan.com/blog/testing-environment-setup/",
+    "https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/"
+  ]
+}
