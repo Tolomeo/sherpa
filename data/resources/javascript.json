@@ -11,11 +11,13 @@
   },
   {
     "title": "JavaScript 30",
-    "url": "https://javascript30.com"
+    "url": "https://javascript30.com",
+    "type": "basics"
   },
   {
     "title": "JavaScript Algorithms and Data Structures",
-    "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures"
+    "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures",
+    "type": "basics"
   },
   {
     "title": "The Modern JavaScript Tutorial",
@@ -24,7 +26,8 @@
   },
   {
     "title": "JavaScript Katas",
-    "url": "https://jskatas.org"
+    "url": "https://jskatas.org",
+    "type": "basics"
   },
   {
     "title": "Javascript Challenges",
@@ -53,7 +56,8 @@
   },
   {
     "title": "awesome-javascript",
-    "url": "https://github.com/sorrycc/awesome-javascript"
+    "url": "https://github.com/sorrycc/awesome-javascript",
+    "type": "reference"
   },
   {
     "title": "vanillawebprojects",
@@ -62,20 +66,24 @@
   },
   {
     "title": "33-js-concepts",
-    "url": "https://github.com/leonardomso/33-js-concepts"
+    "url": "https://github.com/leonardomso/33-js-concepts",
+    "type": "basics"
   },
   {
     "title": "JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests",
     "url": "https://www.youtube.com/watch?v=r9HdJ8P6GQI",
-    "source": "youtube.com/c/Academind"
+    "source": "youtube.com/c/Academind",
+    "type": "basics"
   },
   {
     "title": "Testing JavaScript with Jest",
-    "url": "https://flaviocopes.com/jest"
+    "url": "https://flaviocopes.com/jest",
+    "type": "basics"
   },
   {
     "title": "javascript-testing-best-practices",
-    "url": "https://github.com/goldbergyoni/javascript-testing-best-practices"
+    "url": "https://github.com/goldbergyoni/javascript-testing-best-practices",
+    "type": "how-to"
   },
   {
     "title": "modern-js-cheatsheet",
@@ -129,20 +137,24 @@
   },
   {
     "title": "JavaScript Testing",
-    "url": "https://www.udacity.com/course/javascript-testing--ud549"
+    "url": "https://www.udacity.com/course/javascript-testing--ud549",
+    "type": "basics"
   },
   {
     "title": "Jest JavaScript Testing Framework",
-    "url": "https://testautomationu.applitools.com/jest-testing-tutorial"
+    "url": "https://testautomationu.applitools.com/jest-testing-tutorial",
+    "type": "basics"
   },
   {
     "title": "Learn Modern JavaScript Fundamentals",
-    "url": "https://code.tutsplus.com/learn-modern-javascript-fundamentals-in-7-hours-free-course--ytc-24c"
+    "url": "https://code.tutsplus.com/learn-modern-javascript-fundamentals-in-7-hours-free-course--ytc-24c",
+    "type": "basics"
   },
   {
     "title": "Testing JavaScript Applications Workshop (at PayPal)",
     "url": "https://www.youtube.com/watch?v=DdqiXcYDv-8",
-    "source": "youtube.com/c/KentCDodds-vids"
+    "source": "youtube.com/c/KentCDodds-vids",
+    "type": "basics"
   },
   {
     "title": "JSRobot",
@@ -172,7 +184,8 @@
   {
     "title": "Intro To JavaScript Unit Testing & BDD",
     "url": "https://www.youtube.com/watch?v=u5cLK1UrFyQ",
-    "source": "youtube.com/c/TraversyMedia"
+    "source": "youtube.com/c/TraversyMedia",
+    "type": "basics"
   },
   {
     "title": "JavaScript Tutorial",
@@ -308,12 +321,13 @@
   },
   {
     "title": "awesome-jest",
-    "url": "https://github.com/jest-community/awesome-jest"
+    "url": "https://github.com/jest-community/awesome-jest",
+    "type": "reference"
   },
   {
     "title": "Jest cheat sheet",
     "url": "https://github.com/sapegin/jest-cheat-sheet",
-    "source": "github.com/sapegin"
+    "type": "reference"
   },
   {
     "title": "Vanilla JavaScript Code Snippets",
@@ -327,7 +341,8 @@
   },
   {
     "title": "Testing Playground",
-    "url": "https://testing-playground.com"
+    "url": "https://testing-playground.com",
+    "type": "tool"
   },
   {
     "title": "The Vanilla JavaScript Repository",
@@ -453,11 +468,13 @@
   {
     "title": "Jest Crash Course - Learn How to Test your JavaScript Application",
     "url": "https://www.youtube.com/watch?v=ajiAl5UNzBU",
-    "source": "youtube.com/@laithacademy"
+    "source": "youtube.com/@laithacademy",
+    "type": "basics"
   },
   {
     "title": "Building a JavaScript Testing Framework",
-    "url": "https://cpojer.net/posts/building-a-javascript-testing-framework"
+    "url": "https://cpojer.net/posts/building-a-javascript-testing-framework",
+    "type": "advanced"
   },
   {
     "title": "JavaScript AntiDebugging Tricks",
@@ -592,7 +609,8 @@
   },
   {
     "title": "Tests That Don’t Suck: Test Driven Development in JavaScript",
-    "url": "https://www.javascripttutorials.net/write-tests-that-dont-suck-test-driven-development-in-javascript/"
+    "url": "https://www.javascripttutorials.net/write-tests-that-dont-suck-test-driven-development-in-javascript/",
+    "type": "basics"
   },
   {
     "title": "you-dont-need/You-Dont-Need-Lodash-Underscore",

@@ -202,15 +202,19 @@ export default function PathPage({ path, paths }: Props) {
                 </Typography>
                 <Box pt={6}>
                   <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
-                    {path.children.map((pathChild, index) => (
+                    {path.children.map((childPath, index) => (
                       <Box key={index}>
                         <Typography variant="h5" component="h3">
-                          {pathChild.title}
+                          {childPath.title}
                         </Typography>
-                        {/*TODO: here => pathChild path*/}
-                        {pathChild.resources && (
+
+                        {childPath.main && (
+                          <ResourcesTimeline resources={childPath.main} />
+                        )}
+
+                        {childPath.resources && (
                           <ResourcesList
-                            resources={sortResources(pathChild.resources)}
+                            resources={sortResources(childPath.resources)}
                           />
                         )}
                       </Box>
