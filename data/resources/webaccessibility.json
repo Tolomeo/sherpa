@@ -1,20 +1,24 @@
 [
   {
     "title": "Accessibility",
-    "url": "https://learn-the-web.algonquindesign.ca/topics/accessibility"
+    "url": "https://learn-the-web.algonquindesign.ca/topics/accessibility",
+    "type": "basics"
   },
   {
     "title": "Content accessibility",
-    "url": "https://learn-the-web.algonquindesign.ca/topics/content-accessibility"
+    "url": "https://learn-the-web.algonquindesign.ca/topics/content-accessibility",
+    "type": "basics"
   },
   {
     "title": "Accessibility for design",
-    "url": "https://learn-the-web.algonquindesign.ca/topics/accessibility-for-design"
+    "url": "https://learn-the-web.algonquindesign.ca/topics/accessibility-for-design",
+    "type": "basics"
   },
   {
     "title": "Introduction to Web Accessibility",
     "url": "https://www.edx.org/course/web-accessibility-introduction",
-    "source": "edx.org"
+    "source": "edx.org",
+    "type": "basics"
   },
   {
     "title": "Access Guide",
@@ -23,19 +27,23 @@
   },
   {
     "title": "A Complete Guide To Accessibility Tooling",
-    "url": "https://www.smashingmagazine.com/2021/06/complete-guide-accessibility-tooling"
+    "url": "https://www.smashingmagazine.com/2021/06/complete-guide-accessibility-tooling",
+    "type": "basics"
   },
   {
     "title": "A Complete Guide To Accessible Front-End Components",
-    "url": "https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components"
+    "url": "https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components",
+    "type": "basics"
   },
   {
     "title": "awesome-a11y",
-    "url": "https://github.com/brunopulis/awesome-a11y"
+    "url": "https://github.com/brunopulis/awesome-a11y",
+    "type": "reference"
   },
   {
     "title": "The A11Y Project",
-    "url": "https://www.a11yproject.com/posts"
+    "url": "https://www.a11yproject.com/posts",
+    "type": "basics"
   },
   {
     "title": "What is Web Accessibility?",
@@ -54,11 +62,13 @@
   },
   {
     "title": "The most useful accessibility testing tools and techniques",
-    "url": "https://blog.sapegin.me/all/accessibility-testing"
+    "url": "https://blog.sapegin.me/all/accessibility-testing",
+    "type": "tool"
   },
   {
     "title": "Testing Web Accessibility",
-    "url": "https://www.adrianbolonio.com/en/testing-web-accessibility-part-1"
+    "url": "https://www.adrianbolonio.com/en/testing-web-accessibility-part-1",
+    "type": "basics"
   },
   {
     "title": "How A Screen Reader User Accesses The Web",
@@ -117,7 +127,8 @@
   },
   {
     "title": "The Importance Of Manual Accessibility Testing",
-    "url": "https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing"
+    "url": "https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing",
+    "type": "basics"
   },
   {
     "title": "HTML test cases",
@@ -343,7 +354,8 @@
   },
   {
     "title": "Setting up a screen reader testing environment on your computer",
-    "url": "https://www.sarasoueidan.com/blog/testing-environment-setup/"
+    "url": "https://www.sarasoueidan.com/blog/testing-environment-setup/",
+    "type": "basics"
   },
   {
     "title": "Curricula on Web Accessibility: A Framework to Build Your Own Courses",
@@ -362,7 +374,8 @@
   },
   {
     "title": "Comparing Manual and Free Automated WCAG Reviews",
-    "url": "https://adrianroselli.com/2023/01/comparing-manual-and-free-automated-wcag-reviews.html"
+    "url": "https://adrianroselli.com/2023/01/comparing-manual-and-free-automated-wcag-reviews.html",
+    "type": "curiosity"
   },
   {
     "title": "Web Accessibility: A Reference to Creating Inclusive Websites",
@@ -391,11 +404,13 @@
   },
   {
     "title": "A beginner's guide to manual accessibility testing",
-    "url": "https://blog.pope.tech/2023/03/01/a-beginners-guide-to-manual-accessibility-testing/"
+    "url": "https://blog.pope.tech/2023/03/01/a-beginners-guide-to-manual-accessibility-testing/",
+    "type": "basics"
   },
   {
     "title": "A Definitive Guide On How To Do An Accessibility Audit",
-    "url": "https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/"
+    "url": "https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/",
+    "type": "basics"
   },
   {
     "title": "Keys To An Accessibility Mindset",
