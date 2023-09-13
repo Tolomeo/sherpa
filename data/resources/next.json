@@ -2,12 +2,14 @@
   {
     "title": "The Hitchhiker’s Guide to Next.js",
     "url": "https://medium.com/swlh/the-hitchhikers-guide-to-next-js-fd7aa14ae8d0",
-    "source": "medium.com/swlh"
+    "source": "medium.com/swlh",
+    "type": "curiosity"
   },
   {
     "title": "Create a Next.js App",
     "url": "https://nextjs.org/learn/basics/create-nextjs-app",
-    "source": "nextjs.org"
+    "source": "nextjs.org",
+    "type": "basics"
   },
   {
     "title": "React 2025",
@@ -16,302 +18,369 @@
   },
   {
     "title": "React 2025",
-    "url": "https://docs.react2025.com"
+    "url": "https://docs.react2025.com",
+    "type": "how-to"
   },
   {
     "title": "Next.js Tutorial",
     "url": "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSQsrukurP09ksi49H9Yj40",
-    "source": "youtube.com/c/BrunoAntunesPT"
+    "source": "youtube.com/c/BrunoAntunesPT",
+    "type": "basics"
   },
   {
     "title": "Bulletproof Next",
     "url": "https://getstarted.sh/bulletproof-next",
-    "source": "getstarted.sh"
+    "source": "getstarted.sh",
+    "type": "basics"
   },
   {
     "title": "Next.js Tutorials",
     "url": "https://www.youtube.com/playlist?list=PLFsfg2xP7cbI1U7BZJwmJwTVs4D0pqX1F",
-    "source": "youtube.com/colbz"
+    "source": "youtube.com/colbz",
+    "type": "basics"
   },
   {
     "title": "Rebuilding A Large E-Commerce Website With Next.js (Case Study)",
     "url": "https://www.smashingmagazine.com/2021/09/lessons-learned-ecommerce-nextjs-case-study",
-    "source": "smashingmagazine.com"
+    "source": "smashingmagazine.com",
+    "type": "how-to"
   },
   {
     "title": "awesome-nextjs",
-    "url": "https://github.com/unicodeveloper/awesome-nextjs"
+    "url": "https://github.com/unicodeveloper/awesome-nextjs",
+    "type": "reference"
   },
   {
     "title": "Next.js Tutorial for Beginners",
     "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH",
-    "source": "youtube.com/c/Codevolution"
+    "source": "youtube.com/c/Codevolution",
+    "type": "basics"
   },
   {
     "title": "From Design to Development Crash Course - Full Stack Next.js Tutorial",
     "url": "https://www.youtube.com/watch?v=QjZIeA952jE&list=PLFsfg2xP7cbL6BB-LJb3BWvq9kHmGB5oo&index=4&t=120s",
-    "source": "youtube.com/colbz"
+    "source": "youtube.com/colbz",
+    "type": "advanced"
   },
   {
     "title": "Next.js from the Ground Up",
-    "url": "https://explorers.netlify.com/learn/nextjs"
+    "url": "https://explorers.netlify.com/learn/nextjs",
+    "type": "basics"
   },
   {
     "title": "Next.js for Beginners - Full Course",
     "url": "https://www.youtube.com/watch?v=1WmNXEVia8I",
-    "source": "youtube.com/@freecodecamp"
+    "source": "youtube.com/@freecodecamp",
+    "type": "basics"
   },
   {
     "title": "Next.js Crash Course for Beginners",
     "url": "https://www.youtube.com/watch?v=MFuwkrseXVE",
-    "source": "youtube.com/c/Academind"
+    "source": "youtube.com/c/Academind",
+    "type": "basics"
   },
   {
     "title": "Learn Next.js",
     "url": "https://www.youtube.com/playlist?list=PL6bwFJ82M6FXjyBTVi6WSCWin8q_g_8RR",
-    "source": "youtube.com/user/MaStaleee"
+    "source": "youtube.com/user/MaStaleee",
+    "type": "basics"
   },
   {
     "title": "Next JS with React Hooks - Building SSR React Applications",
-    "url": "https://www.udemy.com/course/next-js-react-hooks"
+    "url": "https://www.udemy.com/course/next-js-react-hooks",
+    "type": "basics"
   },
   {
     "title": "Next.js Tutorial for Beginners",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw",
-    "source": "youtube.com/c/TheNetNinja"
+    "source": "youtube.com/c/TheNetNinja",
+    "type": "basics"
   },
   {
     "title": "Next.js Crash Course",
     "url": "https://www.youtube.com/watch?v=mTz0GXj8NN0",
-    "source": "youtube.com/c/TraversyMedia"
+    "source": "youtube.com/c/TraversyMedia",
+    "type": "basics"
   },
   {
     "title": "Advanced Next.js Course",
     "url": "https://www.youtube.com/watch?v=EJVGzyWSCBE",
-    "source": "youtube.com/c/codedamn"
+    "source": "youtube.com/c/codedamn",
+    "type": "basics"
   },
   {
     "title": "Next.js Crash Course",
     "url": "https://www.youtube.com/watch?v=6HTs8HtZMt0",
-    "source": "youtube.com/@laithacademy"
+    "source": "youtube.com/@laithacademy",
+    "type": "basics"
   },
   {
     "title": "Create Contextual Video Analysis App with NextJS and Symbl.ai",
-    "url": "https://egghead.io/courses/create-contextual-video-analysis-app-with-nextjs-and-symbl-ai-4efb"
+    "url": "https://egghead.io/courses/create-contextual-video-analysis-app-with-nextjs-and-symbl-ai-4efb",
+    "type": "advanced"
   },
   {
     "title": "I built an AirBnB clone with structured content! Using Sanity.io and Next.js",
     "url": "https://www.youtube.com/watch?v=mx1dbMzd3tU",
-    "source": "youtube.com/c/AniaKubów"
+    "source": "youtube.com/c/AniaKubów",
+    "type": "advanced"
   },
   {
     "title": "Next.js & Netlify Identity (auth) Tutorial",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9ig-veuRaLI4QB0Ws8xMzjv",
-    "source": "youtube.com/c/TheNetNinja"
+    "source": "youtube.com/c/TheNetNinja",
+    "type": "advanced"
   },
   {
     "title": "Next.js & Contentful Tutorial",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1",
-    "source": "youtube.com/c/TheNetNinja"
+    "source": "youtube.com/c/TheNetNinja",
+    "type": "advanced"
   },
   {
     "title": "Next.js on Vercel",
-    "url": "https://vercel.com/docs/concepts/next.js/overview"
+    "url": "https://vercel.com/docs/concepts/next.js/overview",
+    "type": "advanced"
   },
   {
     "title": "TypeScript Next.js Cheat Sheet",
-    "url": "https://www.saltycrane.com/cheat-sheets/typescript/next.js/latest"
+    "url": "https://www.saltycrane.com/cheat-sheets/typescript/next.js/latest",
+    "type": "reference"
   },
   {
     "title": "Buildtime vs runtime environment variables with Next.js and Docker",
-    "url": "https://www.saltycrane.com/blog/2021/04/buildtime-vs-runtime-environment-variables-nextjs-docker"
+    "url": "https://www.saltycrane.com/blog/2021/04/buildtime-vs-runtime-environment-variables-nextjs-docker",
+    "type": "advanced"
   },
   {
     "title": "Next.js GitLab CI/CD Docker multi-stage example",
-    "url": "https://www.saltycrane.com/blog/2021/04/nextjs-gitlab-cicd-docker-multi-stage-example"
+    "url": "https://www.saltycrane.com/blog/2021/04/nextjs-gitlab-cicd-docker-multi-stage-example",
+    "type": "how-to"
   },
   {
     "title": "Example Next.js GitLab CI/CD Amazon ECR and ECS deploy pipeline",
-    "url": "https://www.saltycrane.com/blog/2021/03/example-nextjs-gitlab-cicd-amazon-ecr-and-ecs-deploy-pipeline"
+    "url": "https://www.saltycrane.com/blog/2021/03/example-nextjs-gitlab-cicd-amazon-ecr-and-ecs-deploy-pipeline",
+    "type": "how-to"
   },
   {
     "title": "minimum-viable-saas",
-    "url": "https://github.com/jaredpalmer/minimum-viable-saas"
+    "url": "https://github.com/jaredpalmer/minimum-viable-saas",
+    "type": "how-to"
   },
   {
     "title": "Building an effective Image Component",
-    "url": "https://web.dev/image-component"
+    "url": "https://web.dev/image-component",
+    "type": "curiosity"
   },
   {
     "title": "Next.js",
-    "url": "https://nextjs.org/blog"
+    "url": "https://nextjs.org/blog",
+    "type": "feed"
   },
   {
     "title": "The Next.js Handbook",
-    "url": "https://www.freecodecamp.org/news/the-next-js-handbook"
+    "url": "https://www.freecodecamp.org/news/the-next-js-handbook",
+    "type": "basics"
   },
   {
     "title": "Next.js Tutorials",
     "url": "https://www.youtube.com/playlist?list=PLYxzS__5yYQmpzsVeR7-KnX2li19KZhxE",
-    "source": "youtube.com/c/codedamn"
+    "source": "youtube.com/c/codedamn",
+    "type": "basics"
   },
   {
     "title": "Next JS Tutorial - 3 Hours | Learn Next.js From Scratch",
     "url": "https://www.youtube.com/watch?v=tt3PUvhOVzo",
-    "source": "youtube.com/c/codedamn"
+    "source": "youtube.com/c/codedamn",
+    "type": "basics"
   },
   {
     "title": "Comparing Styling Methods In Next.js — Smashing Magazine",
-    "url": "https://www.smashingmagazine.com/2020/09/comparison-styling-methods-next-js"
+    "url": "https://www.smashingmagazine.com/2020/09/comparison-styling-methods-next-js",
+    "type": "advanced"
   },
   {
     "title": "How to keep your Lighthouse score high in Next.js applications",
-    "url": "https://tsh.io/blog/how-to-keep-your-lighthouse-score-high-in-next-js-applications-a-checklist"
+    "url": "https://tsh.io/blog/how-to-keep-your-lighthouse-score-high-in-next-js-applications-a-checklist",
+    "type": "how-to"
   },
   {
     "title": "Building a Mini Next.js",
-    "url": "https://hire.jonasgalvez.com.br/2022/may/18/building-a-mini-next-js"
+    "url": "https://hire.jonasgalvez.com.br/2022/may/18/building-a-mini-next-js",
+    "type": "advanced"
   },
   {
     "title": "The Story of Next.js",
     "url": "https://www.youtube.com/watch?v=BILxV_vrZO0",
-    "source": "youtube.com/c/uidotdev"
+    "source": "youtube.com/c/uidotdev",
+    "type": "curiosity"
   },
   {
     "title": "JAMstacked",
-    "url": "https://jamstack.email/"
+    "url": "https://jamstack.email/",
+    "type": "feed"
   },
   {
     "title": "Jamstack",
-    "url": "https://jamstack.org"
+    "url": "https://jamstack.org",
+    "type": "reference"
   },
   {
     "title": "Build your own web framework",
-    "url": "https://vercel.com/blog/build-your-own-web-framework"
+    "url": "https://vercel.com/blog/build-your-own-web-framework",
+    "type": "advanced"
   },
   {
     "title": "State Management In Next.js",
-    "url": "https://www.smashingmagazine.com/2021/08/state-management-nextjs"
+    "url": "https://www.smashingmagazine.com/2021/08/state-management-nextjs",
+    "type": "advanced"
   },
   {
     "title": "Next.js React Framework Course ",
     "url": "https://www.youtube.com/watch?v=KjY94sAKLlw",
-    "source": "youtube.com/@freecodecamp"
+    "source": "youtube.com/@freecodecamp",
+    "type": "basics"
   },
   {
     "title": "Next.js Crash Course",
     "url": "https://www.youtube.com/watch?v=uU80SSxn9_c",
-    "source": "youtube.com/@ansonthedev"
+    "source": "youtube.com/@ansonthedev",
+    "type": "basics"
   },
   {
     "title": "Next.js 13 Crash Course, Projects, and Tutorials",
     "url": "https://www.youtube.com/playlist?list=PL6QREj8te1P7gixBDSU8JLvQndTEEX3c3",
-    "source": "youtube.com/@javascriptmastery"
+    "source": "youtube.com/@javascriptmastery",
+    "type": "basics"
   },
   {
     "title": "Using Web Components With Next (or Any SSR Framework)",
-    "url": "https://css-tricks.com/using-web-components-with-next-or-any-ssr-framework/"
+    "url": "https://css-tricks.com/using-web-components-with-next-or-any-ssr-framework/",
+    "type": "how-to"
   },
   {
     "title": "Your Next.js Bundle Will Thank You",
-    "url": "https://renatopozzi.me/articles/your-nextjs-bundle-will-thank-you"
+    "url": "https://renatopozzi.me/articles/your-nextjs-bundle-will-thank-you",
+    "type": "advanced"
   },
   {
     "title": "A Guide To Image Optimization On Jamstack Sites",
-    "url": "https://www.smashingmagazine.com/2022/11/guide-image-optimization-jamstack-sites/"
+    "url": "https://www.smashingmagazine.com/2022/11/guide-image-optimization-jamstack-sites/",
+    "type": "advanced"
   },
   {
     "title": "A Complete Guide to Next.js Authentication",
-    "url": "https://buttercms.com/blog/nextjs-authentication-tutorial/"
+    "url": "https://buttercms.com/blog/nextjs-authentication-tutorial/",
+    "type": "advanced"
   },
   {
     "title": "How to build a progress bar indicator in Next.js",
-    "url": "https://blog.logrocket.com/how-to-build-a-progress-bar-indicator-in-next-js"
+    "url": "https://blog.logrocket.com/how-to-build-a-progress-bar-indicator-in-next-js",
+    "type": "how-to"
   },
   {
     "title": "How I built a software agency website with Next.js + Tailwind CSS",
     "url": "https://www.youtube.com/watch?v=GznmPACXBlY",
-    "source": "youtube.com/@devaslife"
+    "source": "youtube.com/@devaslife",
+    "type": "how-to"
   },
   {
     "title": "How to build a portfolio website using Next.js, Chakra UI, Framer Motion, and Three.js",
     "url": "https://www.youtube.com/watch?v=bSMZgXzC9AA",
-    "source": "youtube.com/@devaslife"
+    "source": "youtube.com/@devaslife",
+    "type": "how-to"
   },
   {
     "title": "Comparing the Gatsby, Next, Nuxt, and Nest Open-source JavaScript Frameworks",
-    "url": "https://www.twilio.com/blog/comparing-nextjs-nestjs-nuxt-gatsby"
+    "url": "https://www.twilio.com/blog/comparing-nextjs-nestjs-nuxt-gatsby",
+    "type": "curiosity"
   },
   {
     "title": "Colby Fayock",
     "url": "https://www.youtube.com/@colbyfayock",
-    "source": "youtube.com/@colbyfayock"
+    "source": "youtube.com/@colbyfayock",
+    "type": "feed"
   },
   {
     "title": "Replit Learn - NextJS",
     "url": "https://www.youtube.com/playlist?list=PLto9KpJAqHMQJCMuP3-JjjffygOUJo86U",
-    "source": "youtube.com/@replit"
+    "source": "youtube.com/@replit",
+    "type": "basics"
   },
   {
     "title": "Personal Website Tutorial with Next.js 13, Sanity.io, TailwindCSS, and TypeScript",
     "url": "https://www.youtube.com/watch?v=OcTPaUfay5I",
-    "source": "youtube.com/@freecodecamp"
+    "source": "youtube.com/@freecodecamp",
+    "type": "advanced"
   },
   {
     "title": "Full-Stack Next.js, TypeScript, and AWS Course",
     "url": "https://www.youtube.com/watch?v=FRmCxj9K7II",
-    "source": "youtube.com/@freecodecamp"
+    "source": "youtube.com/@freecodecamp",
+    "type": "advanced"
   },
   {
     "title": "Global State in Next.js using XState",
-    "url": "https://garden.bradwoods.io/notes/javascript/state-management/xstate/global-state"
+    "url": "https://garden.bradwoods.io/notes/javascript/state-management/xstate/global-state",
+    "type": "how-to"
   },
   {
     "title": "Leveraging Server Context for Advanced Next.js Optimization Patterns",
-    "url": "https://prismic.io/blog/advanced-nextjs-server-context"
+    "url": "https://prismic.io/blog/advanced-nextjs-server-context",
+    "type": "advanced"
   },
   {
     "title": "Internationalization In Next.js 13 With React Server Components",
-    "url": "https://www.smashingmagazine.com/2023/03/internationalization-nextjs-13-react-server-components/"
+    "url": "https://www.smashingmagazine.com/2023/03/internationalization-nextjs-13-react-server-components/",
+    "type": "advanced"
   },
   {
     "title": "Build and Deploy a LeetCode Clone with React, Next JS, TypeScript, Tailwind CSS, Firebase",
     "url": "https://www.youtube.com/watch?v=GnodscC2p-A",
-    "source": "youtube.com/@freecodecamp"
+    "source": "youtube.com/@freecodecamp",
+    "type": "advanced"
   },
   {
     "title": "Best practices to increase the speed for Next.js apps",
-    "url": "https://stackoverflow.blog/2022/12/20/best-practices-to-increase-the-speed-for-next-js-apps/"
+    "url": "https://stackoverflow.blog/2022/12/20/best-practices-to-increase-the-speed-for-next-js-apps/",
+    "type": "how-to"
   },
   {
     "title": "Getting started with the Next.js serverless framework",
-    "url": "https://bejamas.io/blog/getting-started-with-the-next-js-serverless-framework/"
+    "url": "https://bejamas.io/blog/getting-started-with-the-next-js-serverless-framework/",
+    "type": "how-to"
   },
   {
     "title": "Using SWR for Efficient Data Fetching in Next.js Applications",
-    "url": "https://soshace.com/using-swr-for-efficient-data-fetching-in-next-js-applications/"
+    "url": "https://soshace.com/using-swr-for-efficient-data-fetching-in-next-js-applications/",
+    "type": "how-to"
   },
   {
     "title": "How To Choose A Headless CMS",
-    "url": "https://www.smashingmagazine.com/2021/07/how-to-choose-a-headless-cms/"
+    "url": "https://www.smashingmagazine.com/2021/07/how-to-choose-a-headless-cms/",
+    "type": "curiosity"
   },
   {
     "title": "Remix vs Next.js",
-    "url": "https://bejamas.io/blog/remix-vs-nextjs/"
+    "url": "https://bejamas.io/blog/remix-vs-nextjs/",
+    "type": "curiosity"
   },
   {
     "title": "Next.js 13 Crash Course",
     "url": "https://www.youtube.com/watch?v=Y6KDk5iyrYE",
-    "source": "youtube.com/@TraversyMedia"
+    "source": "youtube.com/@TraversyMedia",
+    "type": "basics"
   },
   {
     "title": "Code a Reddit Clone with React, Next.js, Firebase v9, Chakra UI",
     "url": "https://www.youtube.com/watch?v=rCm5RVYKWVg",
-    "source": "youtube.com/@freecodecamp"
+    "source": "youtube.com/@freecodecamp",
+    "type": "advanced"
   },
   {
     "title": "Lee Robinson",
     "url": "https://www.youtube.com/@leerob",
-    "source": "youtube.com/@leerob"
+    "source": "youtube.com/@leerob",
+    "type": "feed"
   }
 ]

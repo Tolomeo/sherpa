@@ -30,7 +30,9 @@ const resourcesTypesGroupsOrder: Array<NonNullable<Resource['type']>> = [
 ]
 
 export const sortResourcesTypeGroups = (groups: ResourcesTypeGroups) =>
-  resourcesTypesGroupsOrder.map((groupType) => groups[groupType])
+  resourcesTypesGroupsOrder
+    .filter((groupType) => !!groups[groupType])
+    .map((groupType) => groups[groupType])
 
 const resourceTypeToGroupTitle: Record<
   NonNullable<Resource['type']>,
