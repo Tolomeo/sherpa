@@ -1,0 +1,16 @@
+{
+  "title": "Testing",
+  "main": [
+    "https://maxrozen.com/beginners-guide-to-react-testing",
+    "https://wanago.io/courses/javascript-testing-tutorial",
+    "https://www.youtube.com/watch?v=8vfQ6SWBZ-U",
+    "https://github.com/jest-community/awesome-jest"
+  ],
+  "resources": [
+    "https://www.youtube.com/playlist?list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd",
+    "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ",
+    "https://www.youtube.com/watch?v=GLSSRtnNY0g",
+    "https://learntdd.in/react",
+    "https://www.javascripttutorials.net/retrofit-a-test-suite-in-an-existing-react-apps"
+  ]
+}

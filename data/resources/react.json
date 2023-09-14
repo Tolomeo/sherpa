@@ -37,12 +37,14 @@
   },
   {
     "title": "Learn TDD in React",
-    "url": "https://learntdd.in/react"
+    "url": "https://learntdd.in/react",
+    "type": "basics"
   },
   {
     "title": "React Testing Library Tutorial",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ",
-    "source": "youtube.com/@NetNinja"
+    "source": "youtube.com/@NetNinja",
+    "type": "basics"
   },
   {
     "title": "Develop Accessible Web Apps with React",
@@ -93,7 +95,8 @@
   },
   {
     "title": "JavaScript testing tutorial Archives",
-    "url": "https://wanago.io/courses/javascript-testing-tutorial"
+    "url": "https://wanago.io/courses/javascript-testing-tutorial",
+    "type": "basics"
   },
   {
     "title": "React by Example",
@@ -303,12 +306,14 @@
   },
   {
     "title": "Retrofit a Test Suite in an Existing React Apps",
-    "url": "https://www.javascripttutorials.net/retrofit-a-test-suite-in-an-existing-react-apps"
+    "url": "https://www.javascripttutorials.net/retrofit-a-test-suite-in-an-existing-react-apps",
+    "type": "advanced"
   },
   {
     "title": "React Testing Course for Beginners – Code and Test 3 Apps",
     "url": "https://www.youtube.com/watch?v=8vfQ6SWBZ-U",
-    "source": "youtube.com/@freecodecamp"
+    "source": "youtube.com/@freecodecamp",
+    "type": "basics"
   },
   {
     "title": "React Forms - Formik vs. Hook-Form vs. Final-Form",
@@ -354,7 +359,8 @@
   {
     "title": "React Testing Library Crash Course",
     "url": "https://www.youtube.com/watch?v=GLSSRtnNY0g",
-    "source": "youtube.com/@laithacademy"
+    "source": "youtube.com/@laithacademy",
+    "type": "basics"
   },
   {
     "title": "React Redux with TypeScript Crash Course",
@@ -402,7 +408,8 @@
   },
   {
     "title": "The Beginner's Guide to React Testing",
-    "url": "https://maxrozen.com/beginners-guide-to-react-testing"
+    "url": "https://maxrozen.com/beginners-guide-to-react-testing",
+    "type": "basics"
   },
   {
     "title": "TypeScript and React",
@@ -481,7 +488,8 @@
   {
     "title": "React Testing Tutorial",
     "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd",
-    "source": "youtube.com/@Codevolution"
+    "source": "youtube.com/@Codevolution",
+    "type": "basics"
   },
   {
     "title": "React TypeScript Tutorial for Beginners",
