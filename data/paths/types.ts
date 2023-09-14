@@ -28,7 +28,6 @@ export interface SerializedPath<PathNames = string> {
   resources?: Array<string>
   main?: Array<string>
   children?: Array<string>
-  extra?: Array<SerializedSubTopic | SerializedSubPath>
   next?: Array<PathNames>
   prev?: Array<PathNames>
 }
@@ -59,8 +58,6 @@ export interface Path {
   resources: Array<Resource> | null
   main: Array<Resource> | null
   children: Array<Path> | null
-  // TODO remove
-  extra: Array<SubTopic | SubPath>
   next: PathsList | null
   prev: PathsList | null
 }

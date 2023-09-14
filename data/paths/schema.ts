@@ -80,48 +80,6 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
       uniqueItems: true,
       nullable: true,
     },
-    extra: {
-      type: 'array',
-      items: {
-        anyOf: [
-          {
-            type: 'object',
-            properties: {
-              title: { type: 'string', minLength: 2 },
-              main: {
-                type: 'array',
-                items: { type: 'string', pattern: '^https?://' },
-                minItems: 2,
-                uniqueItems: true,
-              },
-              extra: {
-                type: 'array',
-                items: { type: 'string', pattern: '^https?://' },
-                minItems: 1,
-                uniqueItems: true,
-                nullable: true,
-              },
-            },
-            required: ['title', 'main'],
-          },
-          {
-            type: 'object',
-            properties: {
-              title: { type: 'string', minLength: 2 },
-              resources: {
-                type: 'array',
-                items: { type: 'string', pattern: '^https?://' },
-                minItems: 1,
-                uniqueItems: true,
-              },
-            },
-            required: ['title', 'resources'],
-          },
-        ],
-      },
-      minItems: 1,
-      nullable: true,
-    },
   },
   required: ['title'],
   additionalProperties: false,
