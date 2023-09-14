@@ -1,0 +1,15 @@
+{
+  "title": "With Kubernetes",
+  "resources": [
+    "https://cloudnativenow.com/features/whats-the-difference-between-docker-and-kubernetes/",
+    "https://www.youtube.com/watch?v=kTp5xUtcalw",
+    "https://www.digitalocean.com/community/tutorial_series/from-containers-to-kubernetes-with-node-js",
+    "https://www.youtube.com/watch?v=yOu1APg7jtA",
+    "https://github.com/semaphoreci/book-cicd-docker-kubernetes",
+    "https://github.com/ramitsurana/awesome-kubernetes",
+    "https://docker-k8s-lab.readthedocs.io",
+    "https://www.coursera.org/learn/ibm-containers-docker-kubernetes-openshift",
+    "https://www.youtube.com/playlist?list=PLlI3peB1V-roY_90v7XfHX19ATS4tP2e0",
+    "https://github.com/gravitational/workshop"
+  ]
+}
