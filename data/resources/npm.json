@@ -284,17 +284,20 @@
   },
   {
     "title": "vitejs/awesome-vite",
-    "url": "https://github.com/vitejs/awesome-vite"
+    "url": "https://github.com/vitejs/awesome-vite",
+    "type": "reference"
   },
   {
     "title": "Vite Crash Course",
     "url": "https://www.youtube.com/watch?v=89NJdbYTgJ8",
-    "source": "youtube.com/@TraversyMedia"
+    "source": "youtube.com/@TraversyMedia",
+    "type": "basics"
   },
   {
     "title": "Learn Vite – Frontend Build Tool Course",
     "url": "https://www.youtube.com/watch?v=VAeRhmpcWEQ",
-    "source": "youtube.com/@freecodecamp"
+    "source": "youtube.com/@freecodecamp",
+    "type": "basics"
   },
   {
     "title": "Awesome webpack",

@@ -21,7 +21,8 @@
     "https://github.com/sindresorhus/awesome-npm"
   ],
   "children": [
-    "npm.webpack"
+    "npm.webpack",
+    "npm.vite"
   ],
   "resources": [
     "https://www.udemy.com/course/npm-for-beginners-fast-track",
