@@ -1,0 +1,20 @@
+{
+  "title": "Dotfiles",
+  "main": [
+    "https://myme.no/posts/2022-04-11-a-dotfile-history.html",
+    "https://driesvints.com/blog/getting-started-with-dotfiles",
+    "https://github.com/webpro/awesome-dotfiles"
+  ],
+  "resources": [
+    "https://0x46.net/thoughts/2019/02/01/dotfile-madness/",
+    "https://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html",
+    "https://dotfiles.github.io/",
+    "https://github.com/Torbet/Dot-It-Up",
+    "https://github.com/daler/dotfiles",
+    "https://github.com/thoughtbot/dotfiles",
+    "https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html",
+    "https://wiki.archlinux.org/title/Dotfiles",
+    "https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/",
+    "https://www.youtube.com/watch?v=r_MpUP6aKiQ"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Zsh",
+  "main": [
+    "https://scriptingosx.com/2019/06/moving-to-zsh/",
+    "https://github.com/unixorn/awesome-zsh-plugins"
+  ],
+  "resources": [
+    "https://commandlinepoweruser.com/",
+    "https://thevaluable.dev/zsh-install-configure-mouseless/",
+    "https://zsh.sourceforge.io/Doc/",
+    "https://zsh.sourceforge.io/Guide/zshguide.html",
+    "https://github.com/Apress/from-bash-to-z-shell"
+  ]
+}
