@@ -18,7 +18,7 @@ const PathsList = ({ paths, ...props }: Props) => (
         <Box key={pathName} data-testid={pathsListItemTestId} component="span">
           <NextLink href={`/paths/${pathName}`} passHref legacyBehavior>
             <Link data-testid={pathsListItemLinkTestId}>
-              <Typography variant="h6">
+              <Typography variant="h6" component="span">
                 The <Underline>{path.title}</Underline> path
               </Typography>
             </Link>
