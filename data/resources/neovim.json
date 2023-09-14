@@ -1,15 +1,18 @@
 [
   {
     "title": "Learn Vim For the Last Time: A Tutorial and Primer",
-    "url": "https://danielmiessler.com/study/vim"
+    "url": "https://danielmiessler.com/study/vim",
+    "type": "basics"
   },
   {
     "title": "Interactive Vim tutorial",
-    "url": "https://www.openvim.com"
+    "url": "https://www.openvim.com",
+    "type": "basics"
   },
   {
     "title": "Vim Commands",
-    "url": "https://thevaluable.dev/vim-beginner"
+    "url": "https://thevaluable.dev/vim-beginner",
+    "type": "basics"
   },
   {
     "title": "Everything you need to know to configure neovim using lua",
@@ -17,11 +20,13 @@
   },
   {
     "title": "awesome-vim",
-    "url": "https://github.com/akrawchyk/awesome-vim"
+    "url": "https://github.com/akrawchyk/awesome-vim",
+    "type": "reference"
   },
   {
     "title": "awesome-neovim",
-    "url": "https://github.com/rockerBOO/awesome-neovim"
+    "url": "https://github.com/rockerBOO/awesome-neovim",
+    "type": "reference"
   },
   {
     "title": "Why I love Vim: It’s the lesser-known features that make it so amazing",
@@ -29,36 +34,44 @@
   },
   {
     "title": "Learn-Vim",
-    "url": "https://github.com/iggredible/Learn-Vim"
+    "url": "https://github.com/iggredible/Learn-Vim",
+    "type": "basics"
   },
   {
     "title": "vim-galore",
-    "url": "https://github.com/mhinz/vim-galore"
+    "url": "https://github.com/mhinz/vim-galore",
+    "type": "basics"
   },
   {
     "title": "Learn Neovim The Practical Way",
-    "url": "https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f"
+    "url": "https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f",
+    "type": "basics"
   },
   {
     "title": "VimGenius",
-    "url": "http://www.vimgenius.com/lessons"
+    "url": "http://www.vimgenius.com/lessons",
+    "type": "basics"
   },
   {
     "title": "Seven habits of effective text editing",
-    "url": "https://www.moolenaar.net/habits.html"
+    "url": "https://www.moolenaar.net/habits.html",
+    "type": "curiosity"
   },
   {
     "title": "We Are Typists First, Programmers Second",
-    "url": "https://blog.codinghorror.com/we-are-typists-first-programmers-second"
+    "url": "https://blog.codinghorror.com/we-are-typists-first-programmers-second",
+    "type": "curiosity"
   },
   {
     "title": "Coming Home to Vim",
-    "url": "https://stevelosh.com/blog/2010/09/coming-home-to-vim"
+    "url": "https://stevelosh.com/blog/2010/09/coming-home-to-vim",
+    "type": "curiosity"
   },
   {
     "title": "We can have nice things",
     "url": "https://www.youtube.com/watch?v=Bt-vmPC_-Ho",
-    "source": "youtube.com/c/Vim-jpOrg"
+    "source": "youtube.com/c/Vim-jpOrg",
+    "type": "curiosity"
   },
   {
     "title": "Vim: help.txt",
@@ -90,7 +103,8 @@
   },
   {
     "title": "Vim Bootstrap",
-    "url": "https://vim-bootstrap.com"
+    "url": "https://vim-bootstrap.com",
+    "type": "tool"
   },
   {
     "title": "awesome-vim-colorschemes",
@@ -98,7 +112,8 @@
   },
   {
     "title": "The Valuable Dev",
-    "url": "https://thevaluable.dev"
+    "url": "https://thevaluable.dev",
+    "type": "feed"
   },
   {
     "title": "Vim - DEV Community",
@@ -122,112 +137,137 @@
   },
   {
     "title": "Learn Vimscript the Hard Way",
-    "url": "https://learnvimscriptthehardway.stevelosh.com"
+    "url": "https://learnvimscriptthehardway.stevelosh.com",
+    "type": "advanced"
   },
   {
     "title": "Vim Regular Expressions 101",
-    "url": "http://vimregex.com"
+    "url": "http://vimregex.com",
+    "type": "advanced"
   },
   {
     "title": "Best of VIM Tips",
-    "url": "http://zzapper.co.uk/vimtips.html"
+    "url": "http://zzapper.co.uk/vimtips.html",
+    "type": "how-to"
   },
   {
     "title": "How to Do 90% of What Plugins Do (With Just Vim)",
     "url": "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs",
-    "source": "youtube.com/c/ThoughtbotVideo"
+    "source": "youtube.com/c/ThoughtbotVideo",
+    "type": "advanced"
   },
   {
     "title": "vim-cheatsheet",
-    "url": "https://github.com/ibhagwan/vim-cheatsheet"
+    "url": "https://github.com/ibhagwan/vim-cheatsheet",
+    "type": "reference"
   },
   {
     "title": "At least one Vim trick you might not know",
-    "url": "https://www.hillelwayne.com/post/intermediate-vim"
+    "url": "https://www.hillelwayne.com/post/intermediate-vim",
+    "type": "advanced"
   },
   {
     "title": "VimGolf - real Vim ninjas count every keystroke!",
-    "url": "https://www.vimgolf.com"
+    "url": "https://www.vimgolf.com",
+    "type": "reference"
   },
   {
     "title": "Neovim",
     "url": "https://www.youtube.com/playlist?list=PLu-ydI-PCl0OEG0ZEqLRRuCrMJGAAI0tW",
-    "source": "youtube.com/@devonduty"
+    "source": "youtube.com/@devonduty",
+    "type": "basics"
   },
   {
     "title": "Vim Tutorials",
     "url": "https://www.youtube.com/playlist?list=PLRjzjpJ02WDMJOTsrdByXynk8h0ScMK9R",
-    "source": "youtube.com/c/BrodieRobertson"
+    "source": "youtube.com/c/BrodieRobertson",
+    "type": "basics"
   },
   {
     "title": "Vim Un-Alphabet",
     "url": "https://www.youtube.com/playlist?list=PL46-cKSxMYYCMpzXo6p0Cof8hJInYgohU",
-    "source": "youtube.com/user/jbranchaud"
+    "source": "youtube.com/user/jbranchaud",
+    "type": "basics"
   },
   {
     "title": "VIM ALPHABET",
     "url": "https://www.youtube.com/playlist?list=PLnc_NxpmOxaNqdGvUg8RBi8ZTaZGPdqBD",
-    "source": "youtube.com/c/chantastic"
+    "source": "youtube.com/c/chantastic",
+    "type": "basics"
   },
   {
     "title": "How to Create Vim Text-Objects in Lua",
-    "url": "https://thevaluable.dev/vim-create-text-objects"
+    "url": "https://thevaluable.dev/vim-create-text-objects",
+    "type": "advanced"
   },
   {
     "title": "What's The Vim Runtime? A Guide With Examples",
-    "url": "https://thevaluable.dev/vim-runtime-guide-example"
+    "url": "https://thevaluable.dev/vim-runtime-guide-example",
+    "type": "advanced"
   },
   {
     "title": "Vim Search and Replace With Examples",
-    "url": "https://thevaluable.dev/vim-search-find-replace"
+    "url": "https://thevaluable.dev/vim-search-find-replace",
+    "type": "advanced"
   },
   {
     "title": "Bash2Basics",
     "url": "https://www.youtube.com/playlist?list=PLep05UYkc6wTWlugE_9Lj6JlLpvSBbkZ_",
-    "source": "youtube.com/c/TJDeVries"
+    "source": "youtube.com/c/TJDeVries",
+    "type": "advanced"
   },
   {
     "title": "NvChad",
-    "url": "https://github.com/NvChad/NvChad"
+    "url": "https://github.com/NvChad/NvChad",
+    "type": "tool"
   },
   {
     "title": "SpaceVim",
-    "url": "https://github.com/SpaceVim/SpaceVim"
+    "url": "https://github.com/SpaceVim/SpaceVim",
+    "type": "tool"
   },
   {
     "title": "History and effective use of Vim",
-    "url": "https://begriffs.com/posts/2019-07-19-history-use-vim.html"
+    "url": "https://begriffs.com/posts/2019-07-19-history-use-vim.html",
+    "type": "curiosity"
   },
   {
     "title": "Editor war",
-    "url": "https://en.wikipedia.org/wiki/Editor_war"
+    "url": "https://en.wikipedia.org/wiki/Editor_war",
+    "type": "curiosity"
   },
   {
     "title": "Vim: From hjkl to a platform for plugins",
     "url": "https://www.youtube.com/watch?v=ES1L2SPgIDI",
-    "source": "youtube.com/c/Vim-jpOrg"
+    "source": "youtube.com/c/Vim-jpOrg",
+    "type": "curiosity"
   },
   {
     "title": "Interview with a VIM Enthusiast",
     "url": "https://www.youtube.com/watch?v=9n1dtmzqnCU",
-    "source": "youtube.com/@programmersarealsohuman5909"
+    "source": "youtube.com/@programmersarealsohuman5909",
+    "type": "curiosity"
   },
   {
     "title": "Learn Vim in Less than 2 Minutes",
     "url": "https://youtu.be/E_8B_seg8AI",
-    "source": "youtube.com/c/ThePrimeagen"
+    "source": "youtube.com/c/ThePrimeagen",
+    "type": "curiosity"
   },
   {
     "title": "Vim-Katas",
-    "url": "https://github.com/adomokos/Vim-Katas"
+    "url": "https://github.com/adomokos/Vim-Katas",
+    "type": "basics"
   },
   {
     "title": "Vim Statusline Generator",
-    "url": "https://www.tdaly.co.uk/projects/vim-statusline-generator"
+    "url": "https://www.tdaly.co.uk/projects/vim-statusline-generator",
+    "type": "tool"
   },
   {
     "title": "neovimcraft",
-    "url": "https://neovimcraft.com"
+    "url": "https://neovimcraft.com",
+    "type": "reference"
   },
   {
     "title": "Neovim",
@@ -239,11 +279,13 @@
   },
   {
     "title": "Vim Newsletter",
-    "url": "https://vimtricks.com"
+    "url": "https://vimtricks.com",
+    "type": "feed"
   },
   {
     "title": "TJ DeVries",
-    "url": "https://www.youtube.com/c/TJDeVries"
+    "url": "https://www.youtube.com/c/TJDeVries",
+    "type": "feed"
   },
   {
     "title": "Code Smell",
@@ -251,176 +293,217 @@
   },
   {
     "title": "Nifty Little Nvim Techniques to Make My Life Easier",
-    "url": "https://jdhao.github.io/2019/03/28/nifty_nvim_techniques_s1"
+    "url": "https://jdhao.github.io/2019/03/28/nifty_nvim_techniques_s1",
+    "type": "how-to"
   },
   {
     "title": "Neovim from Scratch",
     "url": "https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ",
-    "source": "youtube.com/c/ChrisAtMachine"
+    "source": "youtube.com/c/ChrisAtMachine",
+    "type": "basics"
   },
   {
     "title": "chris@machine",
-    "url": "https://www.youtube.com/c/ChrisAtMachine"
+    "url": "https://www.youtube.com/c/ChrisAtMachine",
+    "type": "feed"
   },
   {
     "title": "how-to-exit-vim",
-    "url": "https://github.com/hakluke/how-to-exit-vim"
+    "url": "https://github.com/hakluke/how-to-exit-vim",
+    "type": "curiosity"
   },
   {
     "title": "Full Neovim Setup",
     "url": "https://www.youtube.com/watch?v=M5tJ47JyUP8",
-    "source": "youtube.com/@neilsabde2334"
+    "source": "youtube.com/@neilsabde2334",
+    "type": "basics"
   },
   {
     "title": "Neovim Lua From Scratch",
     "url": "https://www.youtube.com/playlist?list=PLPDVgSbOnt7LXQ8DTzu37UwCpA0elyD0V",
-    "source": "youtube.com/@neilsabde2334"
+    "source": "youtube.com/@neilsabde2334",
+    "type": "basics"
   },
   {
     "title": "Vim",
     "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1Eevqs4-XmlSfrFOKb5C97K",
-    "source": "youtube.com/@NeuralNine"
+    "source": "youtube.com/@NeuralNine",
+    "type": "basics"
   },
   {
     "title": "How I Setup Neovim On My Mac To Make It Amazing",
     "url": "https://www.youtube.com/watch?v=vdn_pKJUda8",
-    "source": "youtube.com/@joseanmartinez"
+    "source": "youtube.com/@joseanmartinez",
+    "type": "basics"
   },
   {
     "title": "Debugging in Neovim",
-    "url": "https://harrisoncramer.me/debugging-in-neovim/"
+    "url": "https://harrisoncramer.me/debugging-in-neovim/",
+    "type": "advanced"
   },
   {
     "title": "nvimdots",
-    "url": "https://github.com/ayamir/nvimdots"
+    "url": "https://github.com/ayamir/nvimdots",
+    "type": "tool"
   },
   {
     "title": "kickstart",
-    "url": "https://github.com/nvim-lua/kickstart.nvim"
+    "url": "https://github.com/nvim-lua/kickstart.nvim",
+    "type": "reference"
   },
   {
     "title": "vim-cheatsheet",
-    "url": "https://github.com/chloneda/vim-cheatsheet"
+    "url": "https://github.com/chloneda/vim-cheatsheet",
+    "type": "reference"
   },
   {
     "title": "AstroNvim",
-    "url": "https://github.com/AstroNvim/AstroNvim"
+    "url": "https://github.com/AstroNvim/AstroNvim",
+    "type": "tool"
   },
   {
     "title": "Advanced Vim topics, tips and tricks",
-    "url": "https://www.integralist.co.uk/posts/vim/"
+    "url": "https://www.integralist.co.uk/posts/vim/",
+    "type": "advanced"
   },
   {
     "title": "Custom Neovim Statusline",
-    "url": "https://nuxsh.is-a.dev/blog/custom-nvim-statusline.html"
+    "url": "https://nuxsh.is-a.dev/blog/custom-nvim-statusline.html",
+    "type": "advanced"
   },
   {
     "title": "Problem Solving with Vim",
     "url": "https://www.youtube.com/playlist?list=PL6XBsLhMC_hmw8eKhlrC8k7FfmNzDLw80",
-    "source": "youtube.com/@denvaar"
+    "source": "youtube.com/@denvaar",
+    "type": "advanced"
   },
   {
     "title": "web-dev.nvim",
-    "url": "https://github.com/jonathandion/web-dev.nvim"
+    "url": "https://github.com/jonathandion/web-dev.nvim",
+    "type": "reference"
   },
   {
     "title": "Neovim & Vim 8 Online Video Tutorial",
-    "url": "https://thoughtbot.com/upcase/dive-into-neovim"
+    "url": "https://thoughtbot.com/upcase/dive-into-neovim",
+    "type": "basics"
   },
   {
     "title": "Setup nvim-lspconfig + nvim-cmp",
-    "url": "https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/"
+    "url": "https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/",
+    "type": "how-to"
   },
   {
     "title": "A Neovim Task Runner in 30 lines of Lua",
-    "url": "https://www.hillelwayne.com/post/task-runner-neovim/"
+    "url": "https://www.hillelwayne.com/post/task-runner-neovim/",
+    "type": "how-to"
   },
   {
     "title": "Filtering Neovim Diagnostics",
-    "url": "https://blob42.xyz/blog/neovim-diagnostic-filtering/"
+    "url": "https://blob42.xyz/blog/neovim-diagnostic-filtering/",
+    "type": "how-to"
   },
   {
     "title": "0 to LSP : Neovim RC From Scratch",
     "url": "https://www.youtube.com/watch?v=w7i4amO_zaE",
-    "source": "youtube.com/@ThePrimeagen"
+    "source": "youtube.com/@ThePrimeagen",
+    "type": "basics"
   },
   {
     "title": "Supercharged LaTeX using Vim/Neovim, VimTeX, and snippets",
-    "url": "https://www.ejmastnak.com/tutorials/vim-latex/intro/"
+    "url": "https://www.ejmastnak.com/tutorials/vim-latex/intro/",
+    "type": "advanced"
   },
   {
     "title": "Dot-Repeat in Vim and Neovim",
-    "url": "https://www.vikasraj.dev/blog/vim-dot-repeat"
+    "url": "https://www.vikasraj.dev/blog/vim-dot-repeat",
+    "type": "advanced"
   },
   {
     "title": "do-nothing.vim",
-    "url": "https://github.com/michaelb/do-nothing.vim"
+    "url": "https://github.com/michaelb/do-nothing.vim",
+    "type": "curiosity"
   },
   {
     "title": "Neovim and Tree-sitter: An Overview with Examples",
-    "url": "https://thevaluable.dev/tree-sitter-neovim-overview/"
+    "url": "https://thevaluable.dev/tree-sitter-neovim-overview/",
+    "type": "advanced"
   },
   {
     "title": "How to set up Neovim for coding React, TypeScript, Tailwind CSS, etc on a new M2 MacBook Air",
     "url": "https://www.youtube.com/watch?v=ajmK0ZNcM4Q",
-    "source": "youtube.com/@devaslife"
+    "source": "youtube.com/@devaslife",
+    "type": "how-to"
   },
   {
     "title": "Neovim in 100 Seconds",
     "url": "https://www.youtube.com/watch?v=c4OyfL5o7DU",
-    "source": "youtube.com/@Fireship"
+    "source": "youtube.com/@Fireship",
+    "type": "curiosity"
   },
   {
     "title": "Using LibUV in Neovim",
-    "url": "https://teukka.tech/posts/2020-01-07-vimloop/"
+    "url": "https://teukka.tech/posts/2020-01-07-vimloop/",
+    "type": "advanced"
   },
   {
     "title": "How to install and set up Neovim on Windows",
-    "url": "https://blog.nikfp.com/how-to-install-and-set-up-neovim-on-windows"
+    "url": "https://blog.nikfp.com/how-to-install-and-set-up-neovim-on-windows",
+    "type": "how-to"
   },
   {
     "title": "Neovim lua plugins",
-    "url": "https://nvimluau.dev/"
+    "url": "https://nvimluau.dev/",
+    "type": "reference"
   },
   {
     "title": "Lua-guide",
-    "url": "https://neovim.io/doc/user/lua-guide.html"
+    "url": "https://neovim.io/doc/user/lua-guide.html",
+    "type": "basics"
   },
   {
     "title": "skel-nvim",
-    "url": "https://github.com/motosir/skel-nvim"
+    "url": "https://github.com/motosir/skel-nvim",
+    "type": "reference"
   },
   {
     "title": "Learn How To Use NeoVim As an IDE",
-    "url": "https://programmingpercy.tech/blog/learn-how-to-use-neovim-as-ide/"
+    "url": "https://programmingpercy.tech/blog/learn-how-to-use-neovim-as-ide/",
+    "type": "basics"
   },
   {
     "title": "Neovim - Tips, Distros, Configuration and Demo",
     "url": "https://www.youtube.com/watch?v=8SVPOKZVaMU",
-    "source": "youtube.com/@adibhanna"
+    "source": "youtube.com/@adibhanna",
+    "type": "how-to"
   },
   {
     "title": "Why Vim Is More than Just an Editor – Vim Language, Motions, and Modes Explained",
-    "url": "https://ssp.sh/blog/why-using-neovim-data-engineer-and-writer-2023/"
+    "url": "https://ssp.sh/blog/why-using-neovim-data-engineer-and-writer-2023/",
+    "type": "basics"
   },
   {
     "title": "neovim-plugin-boilerplate",
-    "url": "https://github.com/shortcuts/neovim-plugin-boilerplate"
+    "url": "https://github.com/shortcuts/neovim-plugin-boilerplate",
+    "type": "reference"
   },
   {
     "title": "nvim-basic-ide",
-    "url": "https://github.com/LunarVim/nvim-basic-ide"
+    "url": "https://github.com/LunarVim/nvim-basic-ide",
+    "type": "reference"
   },
   {
     "title": "Managing Local and Remote Filesystems with Vim and netrw",
-    "url": "https://dev.to/phantas0s/managing-local-and-remote-filesystems-with-vim-and-netrw-577i"
+    "url": "https://dev.to/phantas0s/managing-local-and-remote-filesystems-with-vim-and-netrw-577i",
+    "type": "advanced"
   },
   {
     "title": "nvim-from-scratch",
-    "url": "https://github.com/ngscheurich/nvim-from-scratch"
+    "url": "https://github.com/ngscheurich/nvim-from-scratch",
+    "type": "reference"
   },
   {
     "title": "dope",
-    "url": "https://github.com/nvimdev/dope"
+    "url": "https://github.com/nvimdev/dope",
+    "type": "reference"
   }
 ]
