@@ -13,97 +13,64 @@
     "https://learngitbranching.js.org",
     "https://github.com/dictcp/awesome-git"
   ],
-  "extra": [
-    {
-      "title": "There's more",
-      "resources": [
-        "http://rogerdudler.github.io/git-guide",
-        "http://think-like-a-git.net",
-        "http://www-cs-students.stanford.edu/~blynn/gitmagic",
-        "https://danielmiessler.com/study/git",
-        "https://dev.to/unseenwizzard/learn-git-concepts-not-commands-4gjc",
-        "https://egghead.io/courses/practical-git-for-everyday-professional-use",
-        "https://git.bradwoods.io/",
-        "https://gitexercises.fracz.com/",
-        "https://githowto.com",
-        "https://gitimmersion.com",
-        "https://launchschool.com/books/git",
-        "https://marklodato.github.io/visual-git-guide",
-        "https://pixelpioneers.co/blog/2017/git-basics-explained-by-designing-a-new-car",
-        "https://www.atlassian.com/git/tutorials",
-        "https://www.coursera.org/learn/version-control-with-git",
-        "https://www.educba.com/software-development/software-development-tutorials/git-tutorial",
-        "https://www.rithmschool.com/courses/git",
-        "https://www.udacity.com/course/version-control-with-git--ud123",
-        "https://www.w3docs.com/learn-git.html",
-        "https://www.youtube.com/playlist?list=PLyuRouwmQCjlxyO-45o53YCWjBCM-fA7L",
-        "https://www.youtube.com/playlist?list=PLyuRouwmQCjmYaG21ijCw0KrFiFEG0Oh9",
-        "https://www.youtube.com/watch?v=8aV5AxJrHDg&list=PLZMWkkQEwOPmGolqJPsAm_4fcBDDc2to_",
-        "https://www.youtube.com/watch?v=i76ts_0UryI"
-      ]
-    },
-    {
-      "title": "Beyond basics",
-      "resources": [
-        "https://ikiwiki.tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/",
-        "https://wanago.io/courses/getting-geeky-with-git",
-        "https://www.conventionalcommits.org/",
-        "https://www.git-tower.com/blog/git-performance/",
-        "https://maryrosecook.com/blog/post/git-from-the-inside-out",
-        "http://gitlet.maryrosecook.com",
-        "https://trunkbaseddevelopment.com",
-        "https://martinfowler.com/articles/branching-patterns.html",
-        "https://www.semasoftware.com/blog/code-reviews-101-the-basics",
-        "https://lucasfcosta.com/2018/01/20/Git-Bisect-Pure-Git-Wizardry.html",
-        "https://www.youtube.com/playlist?list=PLms-chRSi2s2RBSP1oZpBr_f6XA7iqIhm",
-        "https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store",
-        "https://www.integralist.co.uk/posts/git-internals/"
-      ]
-    },
-    {
-      "title": "How do they do it",
-      "resources": [
-        "https://zean.be/articles/git-commands/",
-        "https://dangitgit.com/en",
-        "https://github.com/RomuloOliveira/commit-messages-guide",
-        "https://softwaredoug.com/blog/2022/11/09/idiot-proof-git-aliases.html",
-        "https://martinheinz.dev/blog/43",
-        "https://techtldr.com/19-git-tips-for-everyday-use",
-        "https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git",
-        "https://blog.scottnonnenberg.com/better-git-configuration"
-      ]
-    },
-    {
-      "title": "Nice to know",
-      "resources": [
-        "https://dev.to/samuelfaure/how-to-learn-git-slowly-38fa",
-        "https://github.com/rzashakeri/beautify-github-profile"
-      ]
-    },
-    {
-      "title": "Work smarter, not harder",
-      "resources": [
-        "https://www.toptal.com/developers/gitignore/",
-        "https://gitexplorer.com/"
-      ]
-    },
-    {
-      "title": "Great bookmarks",
-      "resources": [
-        "http://ndpsoftware.com/git-cheatsheet.html",
-        "https://git-scm.com/book/en/v2",
-        "https://learnxinyminutes.com/docs/git",
-        "https://gitirc.eu/git.html",
-        "https://gitsheet.wtf",
-        "https://github.com/arslanbilal/git-cheat-sheet",
-        "https://github.com/k88hudson/git-flight-rules",
-        "https://github.com/joho/awesome-code-review",
-        "https://www.atlassian.com/git/glossary"
-      ]
-    },
-    {
-      "title": "Stay in the loop",
-      "resources": ["https://groups.google.com/g/git-users"]
-    }
+  "resources": [
+    "http://rogerdudler.github.io/git-guide",
+    "http://think-like-a-git.net",
+    "http://www-cs-students.stanford.edu/~blynn/gitmagic",
+    "https://danielmiessler.com/study/git",
+    "https://dev.to/unseenwizzard/learn-git-concepts-not-commands-4gjc",
+    "https://egghead.io/courses/practical-git-for-everyday-professional-use",
+    "https://git.bradwoods.io/",
+    "https://gitexercises.fracz.com/",
+    "https://githowto.com",
+    "https://gitimmersion.com",
+    "https://launchschool.com/books/git",
+    "https://marklodato.github.io/visual-git-guide",
+    "https://pixelpioneers.co/blog/2017/git-basics-explained-by-designing-a-new-car",
+    "https://www.atlassian.com/git/tutorials",
+    "https://www.coursera.org/learn/version-control-with-git",
+    "https://www.educba.com/software-development/software-development-tutorials/git-tutorial",
+    "https://www.rithmschool.com/courses/git",
+    "https://www.udacity.com/course/version-control-with-git--ud123",
+    "https://www.w3docs.com/learn-git.html",
+    "https://www.youtube.com/playlist?list=PLyuRouwmQCjlxyO-45o53YCWjBCM-fA7L",
+    "https://www.youtube.com/playlist?list=PLyuRouwmQCjmYaG21ijCw0KrFiFEG0Oh9",
+    "https://www.youtube.com/watch?v=8aV5AxJrHDg&list=PLZMWkkQEwOPmGolqJPsAm_4fcBDDc2to_",
+    "https://www.youtube.com/watch?v=i76ts_0UryI",
+    "https://ikiwiki.tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/",
+    "https://wanago.io/courses/getting-geeky-with-git",
+    "https://www.conventionalcommits.org/",
+    "https://www.git-tower.com/blog/git-performance/",
+    "https://maryrosecook.com/blog/post/git-from-the-inside-out",
+    "http://gitlet.maryrosecook.com",
+    "https://trunkbaseddevelopment.com",
+    "https://martinfowler.com/articles/branching-patterns.html",
+    "https://www.semasoftware.com/blog/code-reviews-101-the-basics",
+    "https://lucasfcosta.com/2018/01/20/Git-Bisect-Pure-Git-Wizardry.html",
+    "https://www.youtube.com/playlist?list=PLms-chRSi2s2RBSP1oZpBr_f6XA7iqIhm",
+    "https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store",
+    "https://www.integralist.co.uk/posts/git-internals/",
+    "https://zean.be/articles/git-commands/",
+    "https://dangitgit.com/en",
+    "https://github.com/RomuloOliveira/commit-messages-guide",
+    "https://softwaredoug.com/blog/2022/11/09/idiot-proof-git-aliases.html",
+    "https://martinheinz.dev/blog/43",
+    "https://techtldr.com/19-git-tips-for-everyday-use",
+    "https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git",
+    "https://blog.scottnonnenberg.com/better-git-configuration",
+    "https://dev.to/samuelfaure/how-to-learn-git-slowly-38fa",
+    "https://github.com/rzashakeri/beautify-github-profile",
+    "https://www.toptal.com/developers/gitignore/",
+    "https://gitexplorer.com/",
+    "http://ndpsoftware.com/git-cheatsheet.html",
+    "https://git-scm.com/book/en/v2",
+    "https://learnxinyminutes.com/docs/git",
+    "https://gitirc.eu/git.html",
+    "https://gitsheet.wtf",
+    "https://github.com/arslanbilal/git-cheat-sheet",
+    "https://github.com/k88hudson/git-flight-rules",
+    "https://github.com/joho/awesome-code-review",
+    "https://www.atlassian.com/git/glossary",
+    "https://groups.google.com/g/git-users"
   ]
 }

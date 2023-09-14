@@ -1,23 +1,28 @@
 [
   {
     "title": "Version Control with Git",
-    "url": "https://www.udacity.com/course/version-control-with-git--ud123"
+    "url": "https://www.udacity.com/course/version-control-with-git--ud123",
+    "type": "basics"
   },
   {
     "title": "Introduction to Git and GitHub",
-    "url": "https://www.coursera.org/learn/introduction-git-github"
+    "url": "https://www.coursera.org/learn/introduction-git-github",
+    "type": "basics"
   },
   {
     "title": "Practical Git for Everyday Professional Use",
-    "url": "https://egghead.io/courses/practical-git-for-everyday-professional-use"
+    "url": "https://egghead.io/courses/practical-git-for-everyday-professional-use",
+    "type": "basics"
   },
   {
     "title": "Learn Git Branching",
-    "url": "https://learngitbranching.js.org"
+    "url": "https://learngitbranching.js.org",
+    "type": "basics"
   },
   {
     "title": "Git How To",
-    "url": "https://githowto.com"
+    "url": "https://githowto.com",
+    "type": "basics"
   },
   {
     "title": "Oh Shit, Git!?!",
@@ -25,234 +30,290 @@
   },
   {
     "title": "Git Cheatsheet",
-    "url": "http://ndpsoftware.com/git-cheatsheet.html"
+    "url": "http://ndpsoftware.com/git-cheatsheet.html",
+    "type": "reference"
   },
   {
     "title": "Getting geeky with Git",
-    "url": "https://wanago.io/courses/getting-geeky-with-git"
+    "url": "https://wanago.io/courses/getting-geeky-with-git",
+    "type": "advanced"
   },
   {
     "title": "Git from the inside out",
-    "url": "https://maryrosecook.com/blog/post/git-from-the-inside-out"
+    "url": "https://maryrosecook.com/blog/post/git-from-the-inside-out",
+    "type": "advanced"
   },
   {
     "title": "Gitlet",
-    "url": "http://gitlet.maryrosecook.com"
+    "url": "http://gitlet.maryrosecook.com",
+    "type": "advanced"
   },
   {
     "title": "Git - Book",
-    "url": "https://git-scm.com/book/en/v2"
+    "url": "https://git-scm.com/book/en/v2",
+    "type": "reference"
   },
   {
     "title": "Patterns for Managing Source Code Branches",
-    "url": "https://martinfowler.com/articles/branching-patterns.html"
+    "url": "https://martinfowler.com/articles/branching-patterns.html",
+    "type": "advanced"
   },
   {
     "title": "A Visual Git Reference",
-    "url": "https://marklodato.github.io/visual-git-guide"
+    "url": "https://marklodato.github.io/visual-git-guide",
+    "type": "basics"
   },
   {
     "title": "awesome-git",
-    "url": "https://github.com/dictcp/awesome-git"
+    "url": "https://github.com/dictcp/awesome-git",
+    "type": "reference"
   },
   {
     "title": "Version Control with Git",
-    "url": "https://www.coursera.org/learn/version-control-with-git"
+    "url": "https://www.coursera.org/learn/version-control-with-git",
+    "type": "basics"
   },
   {
     "title": "Git Tutorials and Training",
-    "url": "https://www.atlassian.com/git/tutorials"
+    "url": "https://www.atlassian.com/git/tutorials",
+    "type": "basics"
   },
   {
     "title": "git - the simple guide",
-    "url": "http://rogerdudler.github.io/git-guide"
+    "url": "http://rogerdudler.github.io/git-guide",
+    "type": "basics"
   },
   {
     "title": "Think Like (a) Git",
-    "url": "http://think-like-a-git.net"
+    "url": "http://think-like-a-git.net",
+    "type": "basics"
   },
   {
     "title": "Git Immersion",
-    "url": "https://gitimmersion.com"
+    "url": "https://gitimmersion.com",
+    "type": "basics"
   },
   {
     "title": "Git Magic",
-    "url": "http://www-cs-students.stanford.edu/~blynn/gitmagic"
+    "url": "http://www-cs-students.stanford.edu/~blynn/gitmagic",
+    "type": "basics"
   },
   {
     "title": "Learning Git",
     "url": "https://www.youtube.com/playlist?list=PLyuRouwmQCjmYaG21ijCw0KrFiFEG0Oh9",
-    "source": "youtube.com/@SteveGriffith-Prof3ssorSt3v3"
+    "source": "youtube.com/@SteveGriffith-Prof3ssorSt3v3",
+    "type": "basics"
   },
   {
     "title": "Learning GitHub",
     "url": "https://www.youtube.com/playlist?list=PLyuRouwmQCjlxyO-45o53YCWjBCM-fA7L",
-    "source": "youtube.com/@SteveGriffith-Prof3ssorSt3v3"
+    "source": "youtube.com/@SteveGriffith-Prof3ssorSt3v3",
+    "type": "basics"
   },
   {
     "title": "Learn Git",
-    "url": "https://www.w3docs.com/learn-git.html"
+    "url": "https://www.w3docs.com/learn-git.html",
+    "type": "basics"
   },
   {
     "title": "Learn git concepts, not commands",
     "url": "https://dev.to/unseenwizzard/learn-git-concepts-not-commands-4gjc",
-    "source": "dev.to/unseenwizzard"
+    "source": "dev.to/unseenwizzard",
+    "type": "basics"
   },
   {
     "title": "Git Tutorial",
-    "url": "https://www.educba.com/software-development/software-development-tutorials/git-tutorial"
+    "url": "https://www.educba.com/software-development/software-development-tutorials/git-tutorial",
+    "type": "basics"
   },
   {
     "title": "19 Git Tips For Everyday Use",
-    "url": "https://techtldr.com/19-git-tips-for-everyday-use"
+    "url": "https://techtldr.com/19-git-tips-for-everyday-use",
+    "type": "how-to"
   },
   {
     "title": "A git Primer",
-    "url": "https://danielmiessler.com/study/git"
+    "url": "https://danielmiessler.com/study/git",
+    "type": "basics"
   },
   {
     "title": "The Ultimate Git & GitHub Crash Course - Learn to Version Control for Beginners",
     "url": "https://www.youtube.com/watch?v=i76ts_0UryI",
-    "source": "youtube.com/@laithacademy"
+    "source": "youtube.com/@laithacademy",
+    "type": "basics"
   },
   {
     "title": "Introduction",
-    "url": "https://trunkbaseddevelopment.com"
+    "url": "https://trunkbaseddevelopment.com",
+    "type": "advanced"
   },
   {
     "title": "Better Git configuration",
-    "url": "https://blog.scottnonnenberg.com/better-git-configuration"
+    "url": "https://blog.scottnonnenberg.com/better-git-configuration",
+    "type": "how-to"
   },
   {
     "title": "Little Things I Like to Do with Git",
-    "url": "https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git"
+    "url": "https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git",
+    "type": "how-to"
   },
   {
     "title": "awesome-code-review",
-    "url": "https://github.com/joho/awesome-code-review"
+    "url": "https://github.com/joho/awesome-code-review",
+    "type": "reference"
   },
   {
     "title": "How to learn Git slowly.",
     "url": "https://dev.to/samuelfaure/how-to-learn-git-slowly-38fa",
-    "source": "dev.to/samuelfaure"
+    "source": "dev.to/samuelfaure",
+    "type": "curiosity"
   },
   {
     "title": "commit-messages-guide",
-    "url": "https://github.com/RomuloOliveira/commit-messages-guide"
+    "url": "https://github.com/RomuloOliveira/commit-messages-guide",
+    "type": "how-to"
   },
   {
     "title": "Dangit, Git!?!",
-    "url": "https://dangitgit.com/en"
+    "url": "https://dangitgit.com/en",
+    "type": "how-to"
   },
   {
     "title": "Learn X in Y Minutes",
-    "url": "https://learnxinyminutes.com/docs/git"
+    "url": "https://learnxinyminutes.com/docs/git",
+    "type": "reference"
   },
   {
     "title": "git(1)",
-    "url": "https://gitirc.eu/git.html"
+    "url": "https://gitirc.eu/git.html",
+    "type": "reference"
   },
   {
     "title": "GitSheet",
-    "url": "https://gitsheet.wtf"
+    "url": "https://gitsheet.wtf",
+    "type": "reference"
   },
   {
     "title": "git-cheat-sheet",
-    "url": "https://github.com/arslanbilal/git-cheat-sheet"
+    "url": "https://github.com/arslanbilal/git-cheat-sheet",
+    "type": "reference"
   },
   {
     "title": "git-flight-rules",
-    "url": "https://github.com/k88hudson/git-flight-rules"
+    "url": "https://github.com/k88hudson/git-flight-rules",
+    "type": "reference"
   },
   {
     "title": "Git for human beings",
-    "url": "https://groups.google.com/g/git-users"
+    "url": "https://groups.google.com/g/git-users",
+    "type": "feed"
   },
   {
     "title": "Learn GitLab in 3 Hours | GitLab Complete Tutorial For Beginners",
     "url": "https://www.youtube.com/watch?v=8aV5AxJrHDg&list=PLZMWkkQEwOPmGolqJPsAm_4fcBDDc2to_",
-    "source": "youtube.com/c/LambdaTest"
+    "source": "youtube.com/c/LambdaTest",
+    "type": "basics"
   },
   {
     "title": "A Guide to Git and Github",
-    "url": "https://launchschool.com/books/git"
+    "url": "https://launchschool.com/books/git",
+    "type": "basics"
   },
   {
     "title": "Git Bisect A.K.A. Pure Git Wizardry",
-    "url": "https://lucasfcosta.com/2018/01/20/Git-Bisect-Pure-Git-Wizardry.html"
+    "url": "https://lucasfcosta.com/2018/01/20/Git-Bisect-Pure-Git-Wizardry.html",
+    "type": "advanced"
   },
   {
     "title": "Basic Git Commands",
-    "url": "https://www.atlassian.com/git/glossary"
+    "url": "https://www.atlassian.com/git/glossary",
+    "type": "reference"
   },
   {
     "title": "beautify-github-profile",
-    "url": "https://github.com/rzashakeri/beautify-github-profile"
+    "url": "https://github.com/rzashakeri/beautify-github-profile",
+    "type": "curiosity"
   },
   {
     "title": "GitOps",
     "url": "https://www.youtube.com/playlist?list=PLms-chRSi2s2RBSP1oZpBr_f6XA7iqIhm",
-    "source": "youtube.com/c/VSHNDevOps"
+    "source": "youtube.com/c/VSHNDevOps",
+    "type": "advanced"
   },
   {
     "title": "Code Reviews 101",
-    "url": "https://www.semasoftware.com/blog/code-reviews-101-the-basics"
+    "url": "https://www.semasoftware.com/blog/code-reviews-101-the-basics",
+    "type": "advanced"
   },
   {
     "title": "Git's database internals",
-    "url": "https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store"
+    "url": "https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store",
+    "type": "advanced"
   },
   {
     "title": "The Basics of Version Control System Git Explained by Designing A New Car",
-    "url": "https://pixelpioneers.co/blog/2017/git-basics-explained-by-designing-a-new-car"
+    "url": "https://pixelpioneers.co/blog/2017/git-basics-explained-by-designing-a-new-car",
+    "type": "basics"
   },
   {
     "title": "Advanced Git Features You Didn’t Know You Needed",
-    "url": "https://martinheinz.dev/blog/43"
+    "url": "https://martinheinz.dev/blog/43",
+    "type": "how-to"
   },
   {
     "title": "Idiot proof git",
-    "url": "https://softwaredoug.com/blog/2022/11/09/idiot-proof-git-aliases.html"
+    "url": "https://softwaredoug.com/blog/2022/11/09/idiot-proof-git-aliases.html",
+    "type": "how-to"
   },
   {
     "title": "Git Explorer",
-    "url": "https://gitexplorer.com/"
+    "url": "https://gitexplorer.com/",
+    "type": "tool"
   },
   {
     "title": "gitignore.io",
-    "url": "https://www.toptal.com/developers/gitignore/"
+    "url": "https://www.toptal.com/developers/gitignore/",
+    "type": "tool"
   },
   {
     "title": "Git Internals",
-    "url": "https://www.integralist.co.uk/posts/git-internals/"
+    "url": "https://www.integralist.co.uk/posts/git-internals/",
+    "type": "advanced"
   },
   {
     "title": "Rithm School Git and GitHub",
-    "url": "https://www.rithmschool.com/courses/git"
+    "url": "https://www.rithmschool.com/courses/git",
+    "type": "basics"
   },
   {
     "title": "Git Time",
-    "url": "https://git.bradwoods.io/"
+    "url": "https://git.bradwoods.io/",
+    "type": "basics"
   },
   {
     "title": "Conventional Commits",
-    "url": "https://www.conventionalcommits.org/"
+    "url": "https://www.conventionalcommits.org/",
+    "type": "advanced"
   },
   {
     "title": "Git Notes: git's coolest, most unloved­ feature",
-    "url": "https://ikiwiki.tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/"
+    "url": "https://ikiwiki.tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/",
+    "type": "advanced"
   },
   {
     "title": "Common Git commands and configurations used in a day-to-day workflow",
-    "url": "https://zean.be/articles/git-commands/"
+    "url": "https://zean.be/articles/git-commands/",
+    "type": "how-to"
   },
   {
     "title": "Git Exercises",
-    "url": "https://gitexercises.fracz.com/"
+    "url": "https://gitexercises.fracz.com/",
+    "type": "basics"
   },
   {
     "title": "How to Improve Performance in Git: The Complete Guide",
-    "url": "https://www.git-tower.com/blog/git-performance/"
+    "url": "https://www.git-tower.com/blog/git-performance/",
+    "type": "advanced"
   },
   {
     "title": "gitignore.io - Create Useful .gitignore Files For Your Project",
