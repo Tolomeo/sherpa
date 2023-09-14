@@ -1,0 +1,8 @@
+{
+  "title": "Testing",
+  "resources": [
+    "https://github.com/goldbergyoni/javascript-testing-best-practices",
+    "https://github.com/testjavascript/nodejs-integration-tests-best-practices",
+    "https://lucasfcosta.com/2017/04/06/Testing-NodeJS-APIs.html"
+  ]
+}
