@@ -1,0 +1,14 @@
+{
+  "title": "Flask",
+  "main": [
+    "https://www.youtube.com/watch?v=yBDHkveJUf4",
+    "https://github.com/humiaozuzu/awesome-flask"
+  ],
+  "resources": [
+    "https://www.rithmschool.com/courses/flask-fundamentals/",
+    "https://www.rithmschool.com/courses/intermediate-flask/",
+    "https://www.digitalocean.com/community/tutorial_series/how-to-create-web-sites-with-flask",
+    "https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/",
+    "https://www.docdroid.net/0GOZUFr/ultimate-flask-tutorial-2022-reddit-pdf"
+  ]
+}
