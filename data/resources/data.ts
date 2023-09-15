@@ -6,7 +6,7 @@ import {
   Resource,
   Resources,
 } from './types'
-import { validateSerializedResource } from './schema'
+import { validateSerializedResources } from './schema'
 
 const parseSerializedResource = (serializedResource: SerializedResource) => {
   const parsedResource = { ...serializedResource } as Resource
@@ -30,17 +30,6 @@ const parseSerializedResource = (serializedResource: SerializedResource) => {
 
 const parseSerializedResources = (serializedResources: SerializedResources) =>
   serializedResources.reduce((resourcesMap, serializedResource) => {
-    if (!validateSerializedResource(serializedResource)) {
-      throw new Error(
-        `SerializedResource schema error[ ${JSON.stringify(
-          serializedResource,
-          null,
-          4,
-        )} ]:
-				${JSON.stringify(validateSerializedResource.errors, null, 4)}`,
-      )
-    }
-
     if (resourcesMap[serializedResource.url]) {
       throw new Error(
         `SerializedResource duplication error[ ${serializedResource.url} ]:
@@ -60,8 +49,18 @@ const getSerializedResources = (topicName: string) => {
     process.cwd(),
     `data/resources/${topicName}.json`,
   )
-
   const resourcesData = JSON.parse(fs.readFileSync(pathFilepath, 'utf-8'))
+  const resourcesDataSchemaErrors = validateSerializedResources(resourcesData)
+
+  if (resourcesDataSchemaErrors) {
+    throw new Error(
+      `Serialized resources schema error[ ${JSON.stringify(
+        resourcesDataSchemaErrors,
+        null,
+        2,
+      )} ]`,
+    )
+  }
 
   return resourcesData as SerializedResources
 }

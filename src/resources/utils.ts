@@ -1,4 +1,4 @@
-import { Resource } from '../../data/resources/types'
+import { Resource, ResourceType } from '../../data/resources/types'
 
 export const sortResources = (resources: Array<Resource>) =>
   [...resources].sort((resourceA, resourceB) => {
@@ -20,13 +20,13 @@ export type ResourcesTypeGroups = Record<
 >
 
 const resourcesTypesGroupsOrder: Array<NonNullable<Resource['type']>> = [
-  'basics',
-  'advanced',
-  'how-to',
-  'curiosity',
-  'tool',
-  'reference',
-  'feed',
+  ResourceType.basics,
+  ResourceType.advanced,
+  ResourceType['how-to'],
+  ResourceType.curiosity,
+  ResourceType.tool,
+  ResourceType.reference,
+  ResourceType.feed,
 ]
 
 export const sortResourcesTypeGroups = (groups: ResourcesTypeGroups) =>
