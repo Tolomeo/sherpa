@@ -676,5 +676,15 @@
     "url": "https://www.youtube.com/watch?v=mU6anWqZJcc",
     "source": "youtube.com/@freecodecamp",
     "type": "basics"
+  },
+  {
+    "title": "Utopia",
+    "url": "https://utopia.fyi/",
+    "type": "tool"
+  },
+  {
+    "title": "Type Scale",
+    "url": "https://type-scale.com/",
+    "type": "tool"
   }
 ]

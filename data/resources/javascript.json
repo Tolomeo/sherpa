@@ -616,5 +616,15 @@
     "title": "you-dont-need/You-Dont-Need-Lodash-Underscore",
     "url": "https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore",
     "type": "how-to"
+  },
+  {
+    "title": "Web Almanac",
+    "url": "https://almanac.httparchive.org",
+    "type": "curiosity"
+  },
+  {
+    "title": "You-Dont-Need-JavaScript",
+    "url": "https://github.com/you-dont-need/You-Dont-Need-JavaScript",
+    "type": "how-to"
   }
 ]

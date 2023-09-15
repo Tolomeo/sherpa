@@ -382,5 +382,10 @@
     "url": "https://www.youtube.com/@leerob",
     "source": "youtube.com/@leerob",
     "type": "feed"
+  },
+  {
+    "title": "Modern Web App Design Patterns",
+    "url": "https://www.patterns.dev",
+    "type": "reference"
   }
 ]

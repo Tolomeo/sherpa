@@ -612,5 +612,20 @@
     "title": "React Blog",
     "url": "https://react.dev/blog",
     "type": "feed"
+  },
+  {
+    "title": "Modern Web App Design Patterns",
+    "url": "https://www.patterns.dev",
+    "type": "reference"
+  },
+  {
+    "title": "Josh W Comeau",
+    "url": "https://www.joshwcomeau.com",
+    "type": "feed"
+  },
+  {
+    "title": "awesome-jest",
+    "url": "https://github.com/jest-community/awesome-jest",
+    "type": "reference"
   }
 ]

@@ -303,5 +303,10 @@
     "title": "Awesome webpack",
     "url": "https://webpack.js.org/awesome-webpack/",
     "type": "reference"
+  },
+  {
+    "title": "Simplified JavaScript Jargon",
+    "url": "http://jargon.js.org",
+    "type": "reference"
   }
 ]

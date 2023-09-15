@@ -1,43 +1,14 @@
 import fs from 'fs'
 import path from 'path'
-import { getResources } from '../resources/data'
-import resources, { Resources } from '../resources'
-import {
-  SerializedSubPath,
-  SerializedSubTopic,
-  SerializedPath,
-  Path,
-  SubPath,
-  SubTopic,
-  PathsList,
-} from './types'
+import { Resources } from '../resources'
+import { SerializedPath, Path, SubPath, SubTopic, PathsList } from './types'
 import { validateSerializedPath } from './schema'
+import { getResources } from '../resources/data'
 
-//TODO: REMOVE
-export const isSerializedSubTopic = (
-  pathExtra: SerializedSubPath | SerializedSubTopic,
-): pathExtra is SerializedSubPath => {
-  return 'resources' in pathExtra
-}
-
-//TODO: REMOVE
-export const isSerializedSubPath = (
-  pathExtra: SerializedSubPath | SerializedSubTopic,
-): pathExtra is SerializedSubPath => {
-  return 'main' in pathExtra
-}
-
-const parseSerializedPathLogo = (serializedPathLogo: SerializedPath['logo']) =>
-  serializedPathLogo || null
-
-const parseSerializedPathHero = (serializedPathHero: SerializedPath['hero']) =>
-  serializedPathHero || null
-
-const parseSerializedPathNotes = (
-  serializedPathNotes: SerializedPath['notes'],
-) => serializedPathNotes || null
-
-export const parseSerializedPath = (serializedPath: SerializedPath): Path => ({
+export const parseSerializedPath = (
+  serializedPath: SerializedPath,
+  resources: Resources,
+): Path => ({
   ...serializedPath,
   logo: serializedPath.logo || null,
   hero: serializedPath.hero || null,
@@ -48,10 +19,8 @@ export const parseSerializedPath = (serializedPath: SerializedPath): Path => ({
     return serializedPath.resources.map((resourceId) => {
       const resource = resources[resourceId]
 
-      /* if (!resource)
-        throw new Error(
-          `${pathName} path error: resource not found error[ ${resourceId} ]`,
-        ) */
+      if (!resource)
+        throw new Error(`resource not found error [ ${resourceId} ]`)
 
       return resource
     })
@@ -63,10 +32,8 @@ export const parseSerializedPath = (serializedPath: SerializedPath): Path => ({
     return serializedPath.main.map((resourceId) => {
       const resource = resources[resourceId]
 
-      /* if (!resource)
-        throw new Error(
-          `${pathName} path error: resource not found error[ ${resourceId} ]`,
-        ) */
+      if (!resource)
+        throw new Error(`resource not found error [ ${resourceId} ]`)
 
       return resource
     })
@@ -75,16 +42,20 @@ export const parseSerializedPath = (serializedPath: SerializedPath): Path => ({
   children: (() => {
     if (!serializedPath.children) return null
 
-    return serializedPath.children.map((childPath) => getPath(childPath))
+    return serializedPath.children.map((childPath) =>
+      getPath(childPath, resources),
+    )
   })(),
   // populating next paths, those are optional
   next: (() => {
     if (!serializedPath.next) return null
+
     return getPathsList(serializedPath.next)
   })(),
   // populating prev paths, those are optional
   prev: (() => {
     if (!serializedPath.prev) return null
+
     return getPathsList(serializedPath.prev)
   })(),
 })
@@ -92,23 +63,33 @@ export const parseSerializedPath = (serializedPath: SerializedPath): Path => ({
 export const getSerializedPath = (pathName: string) => {
   const pathFilepath = path.join(process.cwd(), `data/paths/${pathName}.json`)
   const pathData = JSON.parse(fs.readFileSync(pathFilepath, 'utf-8'))
+  const pathDataValidationErrors = validateSerializedPath(pathData)
 
-  if (!validateSerializedPath(pathData)) {
+  if (pathDataValidationErrors) {
     throw new Error(
-      `${pathName} path error: schema error[ ${JSON.stringify(
+      `'${pathName}' serialized data schema error[ ${JSON.stringify(
         pathName,
         null,
-        4,
+        2,
       )} ]:
-				${JSON.stringify(validateSerializedPath.errors, null, 4)}`,
+				${JSON.stringify(pathDataValidationErrors, null, 4)}`,
     )
   }
 
   return pathData as SerializedPath
 }
 
-export const getPath = (pathName: string) => {
-  return parseSerializedPath(getSerializedPath(pathName))
+export const getPath = (topicName: string, resources?: Resources) => {
+  try {
+    const topicResources = resources || getResources(topicName)
+    const path = parseSerializedPath(
+      getSerializedPath(topicName),
+      topicResources,
+    )
+    return path
+  } catch (err) {
+    throw new Error(`'${topicName}' topic data read error [ ${err} ]`)
+  }
 }
 
 export const getPathsList = (pathNames: Array<string>) =>

@@ -437,5 +437,26 @@
     "url": "https://www.youtube.com/@ErickWendelTraining",
     "source": "youtube.com/@ErickWendelTraining",
     "type": "feed"
+  },
+  {
+    "title": "Shell scripting with Node.js",
+    "url": "https://exploringjs.com/nodejs-shell-scripting/",
+    "type": "advanced"
+  },
+  {
+    "title": "Devops with Docker and Node.js",
+    "url": "https://www.youtube.com/playlist?list=PL8VzFQ8k4U1JEu7BLraz8MdKJILJir7oY",
+    "source": "youtube.com/c/SanjeevThiyagarajan",
+    "type": "advanced"
+  },
+  {
+    "title": "2ality",
+    "url": "https://2ality.com",
+    "type": "feed"
+  },
+  {
+    "title": "javascript-testing-best-practices",
+    "url": "https://github.com/goldbergyoni/javascript-testing-best-practices",
+    "type": "how-to"
   }
 ]

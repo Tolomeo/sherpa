@@ -963,5 +963,10 @@
     "title": "A Comprehensive Bash Scripting Tutorial for Beginners",
     "url": "https://www.codelivly.com/bash-scripting-tutorial/",
     "type": "basics"
+  },
+  {
+    "title": "How to create a real-world Node CLI app with Node",
+    "url": "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
+    "type": "how-to"
   }
 ]

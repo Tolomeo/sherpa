@@ -451,5 +451,25 @@
     "title": "The Contrast Triangle",
     "url": "https://contrast-triangle.com/",
     "type": "tool"
+  },
+  {
+    "title": "Smashing Magazine",
+    "url": "https://www.smashingmagazine.com",
+    "type": "feed"
+  },
+  {
+    "title": "Accessibility for designer: where do I start?",
+    "url": "https://stephaniewalter.design/blog/accessibility-resources-tools-articles-books-for-designer/",
+    "type": "reference"
+  },
+  {
+    "title": "Randoma11y",
+    "url": "https://randoma11y.com/",
+    "type": "tool"
+  },
+  {
+    "title": "Cheat sheets & checklists",
+    "url": "https://learn-the-web.algonquindesign.ca/topics/cheat-sheets-checklists",
+    "type": "reference"
   }
 ]

@@ -1,5 +1,10 @@
 [
   {
+    "title": "Smashing Magazine",
+    "url": "https://www.smashingmagazine.com",
+    "type": "feed"
+  },
+  {
     "title": "Graphical User Interface Gallery",
     "url": "http://toastytech.com/guis/index.html",
     "type": "curiosity"
@@ -893,5 +898,10 @@
     "title": "IconHunt",
     "url": "https://www.iconhunt.site/",
     "type": "tool"
+  },
+  {
+    "title": "Codrops",
+    "url": "https://tympanus.net/codrops",
+    "type": "feed"
   }
 ]
