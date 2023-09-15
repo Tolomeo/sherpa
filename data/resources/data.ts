@@ -61,7 +61,6 @@ const getSerializedResources = (topicName: string) => {
     `data/resources/${topicName}.json`,
   )
 
-  console.log(pathFilepath)
   const resourcesData = JSON.parse(fs.readFileSync(pathFilepath, 'utf-8'))
 
   return parseSerializedResources(resourcesData as SerializedResources)

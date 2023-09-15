@@ -1,16 +1,18 @@
-export type ResourceType =
-  | 'basics'
-  | 'advanced'
-  | 'how-to'
-  | 'curiosity'
-  | 'tool'
-  | 'reference'
-  | 'feed'
+export enum ResourceType {
+  basics = 'basics',
+  advanced = 'advanced',
+  'how-to' = 'how-to',
+  curiosity = 'curiosity',
+  tool = 'tool',
+  reference = 'reference',
+  feed = 'feed',
+}
 
 export interface SerializedResource {
   title: string
   url: string
   source?: string
+  type: ResourceType
 }
 
 export type SerializedResources = SerializedResource[]
@@ -19,8 +21,7 @@ export interface Resource {
   title: string
   url: string
   source: string
-  // TODO :  non optional
-  type?: ResourceType
+  type: ResourceType
 }
 
 export type Resources = {
