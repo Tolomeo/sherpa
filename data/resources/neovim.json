@@ -16,7 +16,8 @@
   },
   {
     "title": "Everything you need to know to configure neovim using lua",
-    "url": "https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua"
+    "url": "https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua",
+    "type": "basics"
   },
   {
     "title": "awesome-vim",
@@ -30,7 +31,8 @@
   },
   {
     "title": "Why I love Vim: It’s the lesser-known features that make it so amazing",
-    "url": "https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85"
+    "url": "https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85",
+    "type": "basics"
   },
   {
     "title": "Learn-Vim",
@@ -75,31 +77,38 @@
   },
   {
     "title": "Vim: help.txt",
-    "url": "https://vimhelp.org"
+    "url": "https://vimhelp.org",
+    "type": "reference"
   },
   {
     "title": "Learn X in Y Minutes",
-    "url": "https://learnxinyminutes.com/docs/vim"
+    "url": "https://learnxinyminutes.com/docs/vim",
+    "type": "reference"
   },
   {
     "title": "Vim Cheat Sheet",
-    "url": "https://vim.rtorr.com"
+    "url": "https://vim.rtorr.com",
+    "type": "reference"
   },
   {
     "title": "Vim - The Mighty Text Editor that lets you edit text at the speed of thought",
-    "url": "https://www.barbarianmeetscoding.com/wiki/vim"
+    "url": "https://www.barbarianmeetscoding.com/wiki/vim",
+    "type": "basics"
   },
   {
     "title": "Wiki: Vim Plugins - Enhancing Your Vim Editor with Awesome Plugins",
-    "url": "https://www.barbarianmeetscoding.com/wiki/vim-plugins"
+    "url": "https://www.barbarianmeetscoding.com/wiki/vim-plugins",
+    "type": "basics"
   },
   {
     "title": "Neovim - Using modern vim",
-    "url": "https://www.barbarianmeetscoding.com/wiki/neovim"
+    "url": "https://www.barbarianmeetscoding.com/wiki/neovim",
+    "type": "basics"
   },
   {
     "title": "VimConfig - Sane and simple Vim configuration",
-    "url": "https://vimconfig.com"
+    "url": "https://vimconfig.com",
+    "type": "tool"
   },
   {
     "title": "Vim Bootstrap",
@@ -108,7 +117,8 @@
   },
   {
     "title": "awesome-vim-colorschemes",
-    "url": "https://github.com/rafi/awesome-vim-colorschemes"
+    "url": "https://github.com/rafi/awesome-vim-colorschemes",
+    "type": "reference"
   },
   {
     "title": "The Valuable Dev",
@@ -117,23 +127,28 @@
   },
   {
     "title": "Vim - DEV Community",
-    "url": "https://dev.to/t/vim"
+    "url": "https://dev.to/t/vim",
+    "type": "feed"
   },
   {
     "title": "Neovim - DEV Community",
-    "url": "https://dev.to/t/neovim"
+    "url": "https://dev.to/t/neovim",
+    "type": "feed"
   },
   {
     "title": "Barbarian Meets Coding",
-    "url": "https://www.barbarianmeetscoding.com"
+    "url": "https://www.barbarianmeetscoding.com",
+    "type": "basics"
   },
   {
     "title": "Devlog",
-    "url": "http://vonheikemen.github.io/devlog"
+    "url": "http://vonheikemen.github.io/devlog",
+    "type": "feed"
   },
   {
     "title": "Vim Tips Wiki",
-    "url": "https://vim.fandom.com/wiki/Vim_Tips_Wiki"
+    "url": "https://vim.fandom.com/wiki/Vim_Tips_Wiki",
+    "type": "reference"
   },
   {
     "title": "Learn Vimscript the Hard Way",
@@ -271,11 +286,13 @@
   },
   {
     "title": "Neovim",
-    "url": "https://www.reddit.com/r/neovim"
+    "url": "https://www.reddit.com/r/neovim",
+    "type": "feed"
   },
   {
     "title": "VIM - Vi IMproved",
-    "url": "https://www.reddit.com/r/vim"
+    "url": "https://www.reddit.com/r/vim",
+    "type": "feed"
   },
   {
     "title": "Vim Newsletter",
@@ -289,7 +306,8 @@
   },
   {
     "title": "Code Smell",
-    "url": "https://www.youtube.com/c/CodeSmell"
+    "url": "https://www.youtube.com/c/CodeSmell",
+    "type": "feed"
   },
   {
     "title": "Nifty Little Nvim Techniques to Make My Life Easier",

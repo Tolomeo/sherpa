@@ -81,7 +81,8 @@
   },
   {
     "title": "Linux Basics",
-    "url": "https://miteshshah.github.io/linux/basics/"
+    "url": "https://miteshshah.github.io/linux/basics/",
+    "type": "basics"
   },
   {
     "title": "The Linux Command Handbook",
@@ -245,7 +246,8 @@
   },
   {
     "title": "Unix and Bash for Beginners",
-    "url": "https://www.coursera.org/specializations/unix-and-bash-for-beginners#courses"
+    "url": "https://www.coursera.org/specializations/unix-and-bash-for-beginners#courses",
+    "type": "basics"
   },
   {
     "title": "A Guide To Command-Line Data Manipulation",
@@ -603,91 +605,108 @@
   },
   {
     "title": "Introduction to Linux",
-    "url": "https://www.edx.org/course/introduction-to-linux"
+    "url": "https://www.edx.org/course/introduction-to-linux",
+    "type": "basics"
   },
   {
     "title": "Awesome-Linux-Software",
-    "url": "https://github.com/LewisVo/Awesome-Linux-Software"
+    "url": "https://github.com/LewisVo/Awesome-Linux-Software",
+    "type": "reference"
   },
   {
     "title": "Linux Survival",
-    "url": "https://linuxsurvival.com/"
+    "url": "https://linuxsurvival.com/",
+    "type": "basics"
   },
   {
     "title": "awesome-linux-resources",
-    "url": "https://github.com/itech001/awesome-linux-resources"
+    "url": "https://github.com/itech001/awesome-linux-resources",
+    "type": "reference"
   },
   {
     "title": "Linux Journey",
-    "url": "https://linuxjourney.com/"
+    "url": "https://linuxjourney.com/",
+    "type": "basics"
   },
   {
     "title": "Linux command line for you and me",
-    "url": "https://lym.readthedocs.io/en/latest/index.html"
+    "url": "https://lym.readthedocs.io/en/latest/index.html",
+    "type": "basics"
   },
   {
     "title": "Getting Started with Linux",
-    "url": "https://www.digitalocean.com/community/tutorial_series/getting-started-with-linux"
+    "url": "https://www.digitalocean.com/community/tutorial_series/getting-started-with-linux",
+    "type": "basics"
   },
   {
     "title": "DorianDotSlash - YouTube",
-    "url": "https://www.youtube.com/@Doriandotslash"
+    "url": "https://www.youtube.com/@Doriandotslash",
+    "type": "feed"
   },
   {
     "title": "Linux Server Course",
     "url": "https://www.youtube.com/watch?v=WMy3OzvBWc0",
-    "source": "youtube.com/@freecodecamp"
+    "source": "youtube.com/@freecodecamp",
+    "type": "advanced"
   },
   {
     "title": "Linux online course",
-    "url": "https://geek-university.com/linux-online-course/"
+    "url": "https://geek-university.com/linux-online-course/",
+    "type": "basics"
   },
   {
-    "title": "Before you continue to YouTube",
-    "url": "https://www.youtube.com/playlist?list=PLT98CRl2KxKFfumnJiR8FxBsbJepGgMoN"
+    "title": "Full Guides",
+    "url": "https://www.youtube.com/playlist?list=PLT98CRl2KxKFfumnJiR8FxBsbJepGgMoN",
+    "type": "basics",
+    "source": "youtube.com/@LearnLinuxTV"
   },
   {
     "title": "Interview with a GNU/Linux user - Partition 1",
     "url": "https://www.youtube.com/watch?v=lE4UXdJSJM4",
-    "source": "youtube.com/@programmersarealsohuman5909"
+    "source": "youtube.com/@programmersarealsohuman5909",
+    "type": "curiosity"
   },
   {
     "title": "Linux.org",
-    "url": "https://www.linux.org/"
+    "url": "https://www.linux.org/",
+    "type": "reference"
   },
   {
     "title": "Linux From Scratch!",
-    "url": "https://www.linuxfromscratch.org/"
+    "url": "https://www.linuxfromscratch.org/",
+    "type": "basics"
   },
   {
     "title": "Introduction to Linux",
     "url": "https://www.youtube.com/watch?v=sWbUDq4S6Y8",
-    "source": "youtube.com/@freecodecamp"
+    "source": "youtube.com/@freecodecamp",
+    "type": "basics"
   },
   {
     "title": "Mastering Linux: The Top Commands Every Server Administrator Should Know",
-    "url": "https://www.codelivly.com/mastering-linux-the-top-commands-every-server-administrator-should-know/"
+    "url": "https://www.codelivly.com/mastering-linux-the-top-commands-every-server-administrator-should-know/",
+    "type": "reference"
   },
   {
     "title": "awesome-linux",
-    "url": "https://github.com/inputsh/awesome-linux"
+    "url": "https://github.com/inputsh/awesome-linux",
+    "type": "reference"
   },
   {
     "title": "Ubuntu Linux Tutorials for Beginners",
     "url": "https://www.youtube.com/playlist?list=PLS1QulWo1RIaS1s08yM5FGzPkXXKStVTX",
-    "source": "youtube.com/@ProgrammingKnowledge"
+    "source": "youtube.com/@ProgrammingKnowledge",
+    "type": "basics"
   },
   {
     "title": "Linux Succinctly",
-    "url": "https://www.syncfusion.com/succinctly-free-ebooks/linux"
-  },
-  {
-    "title": "linux · GitHub Topics · GitHub",
-    "url": "https://github.com/topics/linux"
+    "url": "https://www.syncfusion.com/succinctly-free-ebooks/linux",
+    "type": "basics"
   },
   {
     "title": "GitHub - mikeroyal/Perfect-Ubuntu-Guide: Ubuntu Guide. Learn about getting your Ubuntu Desktop/Server ready for development. Including Ubuntu Security, Graphics (AMD/NVIDIA/Intel ARC), and Software Apps.",
-    "url": "https://github.com/mikeroyal/Perfect-Ubuntu-Guide"
+    "url": "https://github.com/mikeroyal/Perfect-Ubuntu-Guide",
+    "type": "advanced"
   },
   {
     "title": "Gentle Guide to Get Started With tmux",
@@ -702,7 +721,8 @@
   },
   {
     "title": "Learn X in Y Minutes",
-    "url": "https://learnxinyminutes.com/docs/tmux/"
+    "url": "https://learnxinyminutes.com/docs/tmux/",
+    "type": "reference"
   },
   {
     "title": "Terminal User Interface Programs",
@@ -712,7 +732,8 @@
   },
   {
     "title": "awesome-tuis",
-    "url": "https://github.com/rothgar/awesome-tuis"
+    "url": "https://github.com/rothgar/awesome-tuis",
+    "type": "reference"
   },
   {
     "title": "How I'm still not using GUIs: A guide to the terminal",

@@ -62,10 +62,6 @@
     "type": "reference"
   },
   {
-    "title": "6 Fun React Project Ideas",
-    "url": "https://daveceddia.com/react-practice-projects"
-  },
-  {
     "title": "React Tutorial: Learn React JS",
     "url": "https://scrimba.com/learn/learnreact",
     "type": "basics"
@@ -87,11 +83,8 @@
   },
   {
     "title": "Build Advanced Components with React Hooks",
-    "url": "https://egghead.io/courses/build-advanced-component-with-react-hooks-cd6a"
-  },
-  {
-    "title": "Design Systems with React and Typescript in Storybook",
-    "url": "https://egghead.io/courses/design-systems-with-react-and-typescript-in-storybook"
+    "url": "https://egghead.io/courses/build-advanced-component-with-react-hooks-cd6a",
+    "type": "basics"
   },
   {
     "title": "JavaScript testing tutorial Archives",
@@ -180,7 +173,8 @@
   },
   {
     "title": "Storybook Tutorials",
-    "url": "https://storybook.js.org/tutorials"
+    "url": "https://storybook.js.org/tutorials",
+    "type": "basics"
   },
   {
     "title": "SPA SEO: Optimize Your Single-Page App for Google",
@@ -194,7 +188,8 @@
   },
   {
     "title": "8 React.js Project Ideas to Help You Start Learning by Doing",
-    "url": "https://www.freecodecamp.org/news/8-reactjs-project-ideas-to-start-learning-by-doing"
+    "url": "https://www.freecodecamp.org/news/8-reactjs-project-ideas-to-start-learning-by-doing",
+    "type": "basics"
   },
   {
     "title": "reactjs-interview-questions",

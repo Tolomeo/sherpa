@@ -229,7 +229,8 @@
   },
   {
     "title": "Problem Solving with Algorithms and Data Structures using Python",
-    "url": "https://runestone.academy/ns/books/published/pythonds3/index.html"
+    "url": "https://runestone.academy/ns/books/published/pythonds3/index.html",
+    "type": "basics"
   },
   {
     "title": "elements-of-python-style",
@@ -732,7 +733,7 @@
   {
     "title": "Web Scraping With Python",
     "url": "https://serpdog.io/blog/web-scraping-with-python/",
-		"type": "basics"
+    "type": "basics"
   },
   {
     "title": "Building And Distributing A macOS Application Written in Python",

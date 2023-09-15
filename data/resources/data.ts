@@ -32,18 +32,18 @@ const parseSerializedResources = (serializedResources: SerializedResources) =>
   serializedResources.reduce((resourcesMap, serializedResource) => {
     if (!validateSerializedResource(serializedResource)) {
       throw new Error(
-        `SerializedResource schema error[${JSON.stringify(
+        `SerializedResource schema error[ ${JSON.stringify(
           serializedResource,
           null,
           4,
-        )}]:
+        )} ]:
 				${JSON.stringify(validateSerializedResource.errors, null, 4)}`,
       )
     }
 
     if (resourcesMap[serializedResource.url]) {
       throw new Error(
-        `SerializedResource duplication error[${serializedResource.url}]:
+        `SerializedResource duplication error[ ${serializedResource.url} ]:
 				1: ${JSON.stringify(resourcesMap[serializedResource.url], null, 4)}
 				2: ${JSON.stringify(serializedResource, null, 4)}`,
       )
@@ -63,9 +63,9 @@ const getSerializedResources = (topicName: string) => {
 
   const resourcesData = JSON.parse(fs.readFileSync(pathFilepath, 'utf-8'))
 
-  return parseSerializedResources(resourcesData as SerializedResources)
+  return resourcesData as SerializedResources
 }
 
 export const getResources = (topicName: string) => {
-  return getSerializedResources(topicName)
+  return parseSerializedResources(getSerializedResources(topicName))
 }

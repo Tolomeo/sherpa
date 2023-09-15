@@ -11,7 +11,7 @@ export const serializedResourceSchema: JSONSchemaType<SerializedResource> = {
     source: { type: 'string', minLength: 2, nullable: true },
     type: { type: 'string', enum: Object.values(ResourceType) },
   },
-  required: ['url', 'title'],
+  required: ['url', 'title', 'type'],
   additionalProperties: false,
 }
 

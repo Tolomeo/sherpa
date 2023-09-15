@@ -18,11 +18,6 @@
     "type": "basics"
   },
   {
-    "title": "Back End Development and APIs",
-    "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis/#back-end-development-and-apis-projects",
-    "source": "freecodecamp.org"
-  },
-  {
     "title": "Node.js and Express.js - Full Course",
     "url": "https://www.youtube.com/watch?v=Oe421EPjeBE",
     "source": "youtube.com/@freecodecamp",
@@ -41,7 +36,8 @@
   {
     "title": "Bulletproof node.js project architecture",
     "url": "https://softwareontheroad.com/ideal-nodejs-project-structure",
-    "source": "softwareontheroad.com"
+    "source": "softwareontheroad.com",
+    "type": "how-to"
   },
   {
     "title": "Real-world-Design-Patterns-Node-JS",
@@ -107,7 +103,8 @@
   },
   {
     "title": "REST API: Sorting, Filtering, and Pagination",
-    "url": "https://www.taniarascia.com/rest-api-sorting-filtering-pagination"
+    "url": "https://www.taniarascia.com/rest-api-sorting-filtering-pagination",
+    "type": "how-to"
   },
   {
     "title": "Keeping Node.js Fast: Tools, Techniques, And Tips For Making High-Performance Node.js Servers",
@@ -199,7 +196,8 @@
   {
     "title": "Build a Real-Time Markdown Editor with Node.js",
     "url": "https://www.digitalocean.com/community/tutorials/building-a-real-time-markdown-viewer",
-    "source": "digitalocean.com/community"
+    "source": "digitalocean.com/community",
+    "type": "advanced"
   },
   {
     "title": "10 Things I Regret About Node.js",
@@ -280,7 +278,8 @@
   {
     "title": "Node.js Tutorial",
     "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwh8shCMHFA5kWxD9PaPwxaY",
-    "source": "youtube.com/@Codevolution"
+    "source": "youtube.com/@Codevolution",
+    "type": "basics"
   },
   {
     "title": "Create Your Own JavaScript Runtime with V8, Libuv & More",
@@ -332,7 +331,8 @@
   },
   {
     "title": "awesome-nestjs",
-    "url": "https://github.com/nestjs/awesome-nestjs"
+    "url": "https://github.com/nestjs/awesome-nestjs",
+    "type": "reference"
   },
   {
     "title": "NestJS Crash Course",

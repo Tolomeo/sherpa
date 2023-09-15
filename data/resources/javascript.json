@@ -7,7 +7,8 @@
   {
     "title": "Asynchronous JavaScript",
     "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu",
-    "source": "youtube.com/c/TheNetNinja"
+    "source": "youtube.com/c/TheNetNinja",
+    "type": "basics"
   },
   {
     "title": "JavaScript 30",
@@ -114,7 +115,8 @@
   },
   {
     "title": "JavaScript (ES2015+) Enlightenment",
-    "url": "https://frontendmasters.com/guides/javascript-enlightenment"
+    "url": "https://frontendmasters.com/guides/javascript-enlightenment",
+    "type": "basics"
   },
   {
     "title": "Learn JavaScript - Free Interactive JavaScript Tutorial",
@@ -133,7 +135,8 @@
   },
   {
     "title": "Exploring ES2016 and ES2017",
-    "url": "https://exploringjs.com/es2016-es2017/index.html"
+    "url": "https://exploringjs.com/es2016-es2017/index.html",
+    "type": "basics"
   },
   {
     "title": "JavaScript Testing",
@@ -169,7 +172,8 @@
   {
     "title": "Learning Modern JavaScript with Tetris",
     "url": "https://medium.com/@michael.karen/learning-modern-javascript-with-tetris-92d532bcd057",
-    "source": "medium.com/@michael.karen"
+    "source": "medium.com/@michael.karen",
+    "type": "basics"
   },
   {
     "title": "The Complete Guide to JavaScript Classes",
@@ -248,7 +252,8 @@
   },
   {
     "title": "Learning functional programming: A roadmap",
-    "url": "https://vonheikemen.github.io/devlog/web-development/learn-fp/roadmap"
+    "url": "https://vonheikemen.github.io/devlog/web-development/learn-fp/roadmap",
+    "type": "basics"
   },
   {
     "title": "Modern Web App Design Patterns",
@@ -288,7 +293,8 @@
   {
     "title": "You-Dont-Need",
     "url": "https://github.com/you-dont-need/You-Dont-Need",
-    "source": "github.com/you-dont-need"
+    "source": "github.com/you-dont-need",
+    "type": "reference"
   },
   {
     "title": "Modern Javascript: Everything you missed over the last 10 years",
@@ -307,7 +313,8 @@
   },
   {
     "title": "HTML/JS: Making webpages interactive with jQuery",
-    "url": "https://www.khanacademy.org/computing/computer-programming/html-js-jquery"
+    "url": "https://www.khanacademy.org/computing/computer-programming/html-js-jquery",
+    "type": "basics"
   },
   {
     "title": "JavaScript Snippets",
@@ -371,7 +378,8 @@
   },
   {
     "title": "SitePoint",
-    "url": "https://www.sitepoint.com"
+    "url": "https://www.sitepoint.com",
+    "type": "reference"
   },
   {
     "title": "Tania Rascia",
@@ -385,7 +393,8 @@
   },
   {
     "title": "Human Who Codes",
-    "url": "https://humanwhocodes.com"
+    "url": "https://humanwhocodes.com",
+    "type": "feed"
   },
   {
     "title": "David Walsh Blog",

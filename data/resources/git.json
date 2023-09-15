@@ -26,7 +26,8 @@
   },
   {
     "title": "Oh Shit, Git!?!",
-    "url": "https://ohshitgit.com"
+    "url": "https://ohshitgit.com",
+    "type": "reference"
   },
   {
     "title": "Git Cheatsheet",
@@ -314,9 +315,5 @@
     "title": "How to Improve Performance in Git: The Complete Guide",
     "url": "https://www.git-tower.com/blog/git-performance/",
     "type": "advanced"
-  },
-  {
-    "title": "gitignore.io - Create Useful .gitignore Files For Your Project",
-    "url": "https://www.toptal.com/developers/gitignore/?ref=tiny-helpers"
   }
 ]
