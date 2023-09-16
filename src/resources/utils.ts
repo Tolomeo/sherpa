@@ -38,7 +38,7 @@ const resourceTypeToGroupTitle: Record<
   NonNullable<Resource['type']>,
   string
 > = {
-  basics: "There's more",
+  basics: "Fundamentals",
   advanced: 'Beyond basics',
   'how-to': 'How do they do it',
   curiosity: 'Nice to know',

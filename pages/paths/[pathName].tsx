@@ -306,7 +306,7 @@ export default function PathPage({ path, paths }: Props) {
                     paths.
                   </Typography>
                   <Typography>
-                    The path itself is a list of resources, ordered in such a
+                    <b>The path</b> is a list of resources, ordered in such a
                     way to cover all the essentials, from beginner to
                     intermediate/advanced level.
                   </Typography>
@@ -315,7 +315,7 @@ export default function PathPage({ path, paths }: Props) {
                     vary, but one will generally be able to find:
                   </Typography>
                   <Typography>
-                    <b>There&apos;s more</b> with alternative resources to the
+                    <b>Fundamentals</b> with alternative resources to the
                     ones in the path
                   </Typography>
                   <Typography>
@@ -331,17 +331,25 @@ export default function PathPage({ path, paths }: Props) {
                     information
                   </Typography>
                   <Typography>
-                    <b>Great bookmarks</b> with references, cheatsheets and
-                    utility tools
+                    <b>Work smarter, not harder</b> with helpers and utility
+                    tools
+                  </Typography>
+                  <Typography>
+                    <b>Great bookmarks</b> with useful references and
+                    cheatsheets
                   </Typography>
                   <Typography>
                     <b>Stay in the loop</b> with blogs, newletters and feeds to
                     stay up to date
                   </Typography>
                   <Typography>
-                    When possible, paths will conclude with a{' '}
-                    <b>You could continue with</b> section, recommending next
-                    steps.
+                    When available, additional sub-paths will appear in a
+                    following <b>Short hikes</b> section
+                  </Typography>
+                  <Typography>
+                    Finally, paths will conclude with a{' '}
+                    <b>You could continue with</b> section, recommending paths
+                    to tackle next, when applicable
                   </Typography>
                 </Stack>
               </Stack>
