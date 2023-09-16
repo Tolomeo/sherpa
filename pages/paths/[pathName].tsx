@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ParsedUrlQuery } from 'querystring'
 import { Path, PathsList as TPathsList } from '../../data/paths'
-import { getPath, getPathsList } from '../../data/paths/data'
+import { getPath, getPathsList } from '../../data/paths/utils'
 import {
   Layout,
   LayoutHeader,

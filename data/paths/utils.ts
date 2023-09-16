@@ -3,7 +3,7 @@ import path from 'path'
 import { Resources } from '../resources'
 import { SerializedPath, Path, SubPath, SubTopic, PathsList } from './types'
 import { validateSerializedPath } from './schema'
-import { getResources } from '../resources/data'
+import { getResources } from '../resources/utils'
 
 export const parseSerializedPath = (
   serializedPath: SerializedPath,
@@ -25,7 +25,6 @@ export const parseSerializedPath = (
       return resource
     })
   })(),
-  // populating resources data
   main: (() => {
     if (!serializedPath.main) return null
 
@@ -38,7 +37,6 @@ export const parseSerializedPath = (
       return resource
     })
   })(),
-  //
   children: (() => {
     if (!serializedPath.children) return null
 
@@ -46,13 +44,11 @@ export const parseSerializedPath = (
       getPath(childPath, resources),
     )
   })(),
-  // populating next paths, those are optional
   next: (() => {
     if (!serializedPath.next) return null
 
     return getPathsList(serializedPath.next)
   })(),
-  // populating prev paths, those are optional
   prev: (() => {
     if (!serializedPath.prev) return null
 
@@ -60,41 +56,41 @@ export const parseSerializedPath = (
   })(),
 })
 
-export const getSerializedPath = (pathName: string) => {
-  const pathFilepath = path.join(process.cwd(), `data/paths/${pathName}.json`)
-  const pathData = JSON.parse(fs.readFileSync(pathFilepath, 'utf-8'))
-  const pathDataValidationErrors = validateSerializedPath(pathData)
+export const readSerializedPath = (pathName: string) => {
+  const filepath = path.join(process.cwd(), `data/paths/json/${pathName}.json`)
+  const data = JSON.parse(fs.readFileSync(filepath, 'utf-8'))
+  const dataValidationErrors = validateSerializedPath(data)
 
-  if (pathDataValidationErrors) {
+  if (dataValidationErrors) {
     throw new Error(
       `'${pathName}' serialized data schema error[ ${JSON.stringify(
         pathName,
         null,
         2,
       )} ]:
-				${JSON.stringify(pathDataValidationErrors, null, 4)}`,
+				${JSON.stringify(dataValidationErrors, null, 4)}`,
     )
   }
 
-  return pathData as SerializedPath
+  return data as SerializedPath
 }
 
 export const getPath = (topicName: string, resources?: Resources) => {
   try {
     const topicResources = resources || getResources(topicName)
     const path = parseSerializedPath(
-      getSerializedPath(topicName),
+      readSerializedPath(topicName),
       topicResources,
     )
     return path
   } catch (err) {
-    throw new Error(`'${topicName}' topic data read error [ ${err} ]`)
+    throw new Error(`'${topicName}' topic data error [ ${err} ]`)
   }
 }
 
-export const getPathsList = (pathNames: Array<string>) =>
-  pathNames.reduce((pathsList, pathName) => {
-    const serializedPath = getSerializedPath(pathName)
+export const getPathsList = (topicNames: Array<string>) =>
+  topicNames.reduce((pathsList, pathName) => {
+    const serializedPath = readSerializedPath(pathName)
 
     pathsList[pathName] = { title: serializedPath.title }
 
