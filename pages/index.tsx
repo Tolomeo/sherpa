@@ -19,25 +19,7 @@ import {
 } from '../src/theme'
 import { AlternateSourcesList } from '../src/resources'
 import { List as PathsList } from '../src/paths'
-
-const pathPages = [
-  'uidesign',
-  'htmlcss',
-  'webaccessibility',
-  'javascript',
-  'typescript',
-  'react',
-  'next',
-  'npm',
-  'node',
-  'commandline',
-  'docker',
-  'git',
-  'python',
-  'regex',
-  'neovim',
-  'lua',
-]
+import config from '../src/config'
 
 interface StaticProps {
   paths: TPathsList
@@ -47,7 +29,7 @@ interface StaticProps {
 export const getStaticProps: GetStaticProps<StaticProps> = async (
   _: GetStaticPropsContext,
 ) => {
-  const paths = getPathsList(pathPages)
+  const paths = getPathsList(config.topics)
   const alternateSources = getResources('alternatives')
 
   return {

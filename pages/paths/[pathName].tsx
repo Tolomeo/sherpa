@@ -28,25 +28,7 @@ import {
   groupResourcesByType,
   sortResources,
 } from '../../src/resources'
-
-const pathPages = [
-  'uidesign',
-  'htmlcss',
-  'webaccessibility',
-  'javascript',
-  'typescript',
-  'react',
-  'next',
-  'npm',
-  'node',
-  'commandline',
-  'docker',
-  'git',
-  'python',
-  'regex',
-  'neovim',
-  'lua',
-]
+import config from '../../src/config'
 
 interface Params extends ParsedUrlQuery {
   pathName: string
@@ -58,7 +40,7 @@ interface StaticProps {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const staticPaths = pathPages.map((pathName) => ({
+  const staticPaths = config.topics.map((pathName) => ({
     params: { pathName },
   }))
 
@@ -69,7 +51,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
   const path = getPath(params!.pathName)
-  const paths = getPathsList(pathPages)
+  const paths = getPathsList(config.topics)
 
   return {
     props: {
@@ -128,6 +110,7 @@ const drawerTestId = 'help-drawer'
 const toggleDrawerTestId = 'help-drawer-toggle'
 const pathResourcesTestId = 'path.resources'
 const pathExtrasTestId = 'path.extras'
+const pathLogo = 'path.logo'
 
 export default function PathPage({ path, paths }: Props) {
   return (
@@ -143,7 +126,7 @@ export default function PathPage({ path, paths }: Props) {
             foreground={path.hero?.foreground}
             background={path.hero?.background}
           >
-            {path.logo && <SvgImage svg={path.logo} />}
+            {path.logo && <SvgImage svg={path.logo} data-testid={pathLogo} />}
             <Typography variant="h1">
               The <Underline>{path.title}</Underline> path
             </Typography>
@@ -315,8 +298,8 @@ export default function PathPage({ path, paths }: Props) {
                     vary, but one will generally be able to find:
                   </Typography>
                   <Typography>
-                    <b>Fundamentals</b> with alternative resources to the
-                    ones in the path
+                    <b>Fundamentals</b> with alternative resources to the ones
+                    in the path
                   </Typography>
                   <Typography>
                     <b>Beyond basics</b> with advanced topics and in-depth
