@@ -69,11 +69,6 @@
     "type": "basics"
   },
   {
-    "title": "TypeScript Design Patterns",
-    "url": "https://www.udemy.com/course/typescript-design-patterns",
-    "type": "basics"
-  },
-  {
     "title": "TypeScript Tutorial",
     "url": "https://www.typescripttutorial.net",
     "type": "basics"
@@ -105,11 +100,6 @@
     "type": "basics"
   },
   {
-    "title": "Maintainable CSS using TypeStyle",
-    "url": "https://egghead.io/courses/maintainable-css-using-typestyle",
-    "type": "basics"
-  },
-  {
     "title": "TypeScript Cheatsheet, Common Errors, and More",
     "url": "https://docs.joshuatz.com/cheatsheets/typescript",
     "type": "basics"
@@ -133,11 +123,6 @@
     "title": "Build your own WebAssembly Compiler",
     "url": "https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html",
     "type": "how-to"
-  },
-  {
-    "title": "TypeScript: Documentation - Migrating from JavaScript",
-    "url": "https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html",
-    "type": "basics"
   },
   {
     "title": "The Deno Handbook: a concise introduction to Deno",

@@ -44,7 +44,7 @@ const parseSerializedResources = (serializedResources: SerializedResources) =>
     return resourcesMap
   }, {} as Resources)
 
-const getSerializedResources = (topicName: string) => {
+export const getSerializedResources = (topicName: string) => {
   const pathFilepath = path.join(
     process.cwd(),
     `data/resources/json/${topicName}.json`,

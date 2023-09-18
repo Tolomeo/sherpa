@@ -361,11 +361,6 @@
     "type": "curiosity"
   },
   {
-    "title": "NCC_Group_Understanding_Hardening_Linux_Containers",
-    "url": "https://www.nccgroup.com/globalassets/our-research/us/whitepapers/2016/april/ncc_group_understanding_hardening_linux_containers-1-1.pdf",
-    "type": "advanced"
-  },
-  {
     "title": "Docker One-Liners to Make Complex Tasks Simple",
     "url": "https://www.manuel-strehl.de/quick_docker_commands",
     "type": "how-to"

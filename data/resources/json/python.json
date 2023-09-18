@@ -228,11 +228,6 @@
     "type": "how-to"
   },
   {
-    "title": "Problem Solving with Algorithms and Data Structures using Python",
-    "url": "https://runestone.academy/ns/books/published/pythonds3/index.html",
-    "type": "basics"
-  },
-  {
     "title": "elements-of-python-style",
     "url": "https://github.com/amontalenti/elements-of-python-style",
     "type": "how-to"

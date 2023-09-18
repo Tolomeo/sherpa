@@ -34,12 +34,6 @@
     "type": "basics"
   },
   {
-    "title": "Bulletproof node.js project architecture",
-    "url": "https://softwareontheroad.com/ideal-nodejs-project-structure",
-    "source": "softwareontheroad.com",
-    "type": "how-to"
-  },
-  {
     "title": "Real-world-Design-Patterns-Node-JS",
     "url": "https://github.com/nimit95/Real-world-Design-Patterns-Node-JS",
     "type": "how-to"
@@ -100,11 +94,6 @@
     "title": "The definitive Node.js handbook",
     "url": "https://www.freecodecamp.org/news/the-definitive-node-js-handbook-6912378afc6e",
     "type": "basics"
-  },
-  {
-    "title": "REST API: Sorting, Filtering, and Pagination",
-    "url": "https://www.taniarascia.com/rest-api-sorting-filtering-pagination",
-    "type": "how-to"
   },
   {
     "title": "Keeping Node.js Fast: Tools, Techniques, And Tips For Making High-Performance Node.js Servers",
@@ -192,12 +181,6 @@
     "title": "How to create a real-world Node CLI app with Node",
     "url": "https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
     "type": "how-to"
-  },
-  {
-    "title": "Build a Real-Time Markdown Editor with Node.js",
-    "url": "https://www.digitalocean.com/community/tutorials/building-a-real-time-markdown-viewer",
-    "source": "digitalocean.com/community",
-    "type": "advanced"
   },
   {
     "title": "10 Things I Regret About Node.js",

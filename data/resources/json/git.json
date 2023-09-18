@@ -25,11 +25,6 @@
     "type": "basics"
   },
   {
-    "title": "Oh Shit, Git!?!",
-    "url": "https://ohshitgit.com",
-    "type": "reference"
-  },
-  {
     "title": "Git Cheatsheet",
     "url": "http://ndpsoftware.com/git-cheatsheet.html",
     "type": "reference"

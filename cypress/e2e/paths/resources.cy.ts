@@ -1,4 +1,4 @@
-import { Resource, SerializedResource } from '../../../data'
+import { SerializedResource } from '../../../data'
 import config from '../../../src/config'
 
 const topicsResources: Array<[string, SerializedResource[]]> =

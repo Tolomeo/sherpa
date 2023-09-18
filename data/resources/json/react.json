@@ -82,11 +82,6 @@
     "type": "advanced"
   },
   {
-    "title": "Build Advanced Components with React Hooks",
-    "url": "https://egghead.io/courses/build-advanced-component-with-react-hooks-cd6a",
-    "type": "basics"
-  },
-  {
     "title": "JavaScript testing tutorial Archives",
     "url": "https://wanago.io/courses/javascript-testing-tutorial",
     "type": "basics"
@@ -172,11 +167,6 @@
     "type": "advanced"
   },
   {
-    "title": "Storybook Tutorials",
-    "url": "https://storybook.js.org/tutorials",
-    "type": "basics"
-  },
-  {
     "title": "SPA SEO: Optimize Your Single-Page App for Google",
     "url": "https://snipcart.com/blog/spa-seo",
     "type": "advanced"
@@ -185,11 +175,6 @@
     "title": "Build your own React Router",
     "url": "https://ui.dev/build-your-own-react-router",
     "type": "advanced"
-  },
-  {
-    "title": "8 React.js Project Ideas to Help You Start Learning by Doing",
-    "url": "https://www.freecodecamp.org/news/8-reactjs-project-ideas-to-start-learning-by-doing",
-    "type": "basics"
   },
   {
     "title": "reactjs-interview-questions",
