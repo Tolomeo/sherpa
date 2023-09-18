@@ -7,7 +7,7 @@ const topicsResources: Array<[string, SerializedResource[]]> =
     require(`../../../data/resources/json/${topicName}.json`),
   ])
 
-const checkResourceHealth = (resource: Resource) => {
+const checkResourceHealth = (resource: SerializedResource) => {
   // checking if it is a downloadable resource
   // so far only PDFs
   if (resource.url.match(/\.pdf$/)) {
