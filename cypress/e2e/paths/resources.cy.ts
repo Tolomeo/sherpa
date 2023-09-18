@@ -1,4 +1,11 @@
-import { Resource, resources } from '../../../data'
+import { Resource, SerializedResource } from '../../../data'
+import config from '../../../src/config'
+
+const topicsResources: Array<[string, SerializedResource[]]> =
+  config.topics.map((topicName) => [
+    topicName,
+    require(`../../../data/resources/json/${topicName}.json`),
+  ])
 
 const checkResourceHealth = (resource: Resource) => {
   // checking if it is a downloadable resource
@@ -19,7 +26,7 @@ const checkResourceHealth = (resource: Resource) => {
       return cy.checkHealthByUrlRequest(resource)
     case 'programmingpercy.tech':
     case 'gogognome.nl':
-		case 'superfastpython.com':
+    case 'superfastpython.com':
       return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h1' })
     case 'blob42.xyz':
       return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h3' })
@@ -38,9 +45,9 @@ const checkResourceHealth = (resource: Resource) => {
     case 'conventionalcommits.org':
     case 'harrisoncramer.me':
     case 'bash.cyberciti.biz':
-		case 'tldp.org':
-		case 'codementor.io':
-		case 'snipcart.com':
+    case 'tldp.org':
+    case 'codementor.io':
+    case 'snipcart.com':
       return cy.checkHealthByVisit(resource)
     case 'reactdigest.net':
     case 'data-flair.training':
@@ -73,14 +80,18 @@ const checkResourceHealth = (resource: Resource) => {
 }
 
 describe('Resources', () => {
-  Object.values(resources).forEach((resource) => {
-    it(`"${resource.title}" [ ${resource.url} ]`, () => {
-      // this event will automatically be unbound when this test ends
-      // returning false here prevents Cypress from
-      // failing the test when an uncaught exception is thrown by the resource page
-      cy.on('uncaught:exception', () => false)
+  topicsResources.forEach(([topicName, topicsResources]) => {
+    describe(`${topicName} resources`, () => {
+      topicsResources.forEach((resource) => {
+        it(`"${resource.title}" [ ${resource.url} ]`, () => {
+          // this event will automatically be unbound when this test ends
+          // returning false here prevents Cypress from
+          // failing the test when an uncaught exception is thrown by the resource page
+          cy.on('uncaught:exception', () => false)
 
-      checkResourceHealth(resource)
+          checkResourceHealth(resource)
+        })
+      })
     })
   })
 })

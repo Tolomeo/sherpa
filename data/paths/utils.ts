@@ -88,6 +88,10 @@ export const getPath = (topicName: string, resources?: Resources) => {
   }
 }
 
+export const getPaths = (topicNames: string[]) => {
+  return topicNames.map((topicName) => getPath(topicName))
+}
+
 export const getPathsList = (topicNames: Array<string>) =>
   topicNames.reduce((pathsList, pathName) => {
     const serializedPath = readSerializedPath(pathName)

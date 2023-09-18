@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@testing-library/cypress": "8.0.7",
+    "@types/node": "^20.6.2",
     "@types/react": "18.2.0",
     "ajv-errors": "^3.0.0",
     "cypress": "13.2.0",
