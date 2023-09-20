@@ -1,0 +1,312 @@
+[
+  {
+    "title": "NPM Full Course For Beginners",
+    "url": "https://www.youtube.com/watch?v=cjoTTSbOuG0",
+    "source": "youtube.com/c/codedamn",
+    "type": "basics"
+  },
+  {
+    "title": "How to Use npm as a Build Tool",
+    "url": "https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool",
+    "type": "how-to"
+  },
+  {
+    "title": "Learn How to Develop and Publish an NPM Package",
+    "url": "https://auth0.com/blog/developing-npm-packages",
+    "type": "how-to"
+  },
+  {
+    "title": "awesome-npm",
+    "url": "https://github.com/sindresorhus/awesome-npm",
+    "type": "reference"
+  },
+  {
+    "title": "NPM for Beginners - Fast Track",
+    "url": "https://www.udemy.com/course/npm-for-beginners-fast-track",
+    "type": "basics"
+  },
+  {
+    "title": "JavaScript Package Manager – Complete Guide to NPM and Yarn",
+    "url": "https://www.freecodecamp.org/news/javascript-package-manager-npm-and-yarn",
+    "type": "basics"
+  },
+  {
+    "title": "how-to-npm",
+    "url": "https://github.com/workshopper/how-to-npm",
+    "type": "basics"
+  },
+  {
+    "title": "Publish JavaScript packages on npm",
+    "url": "https://egghead.io/courses/publish-javascript-packages-on-npm",
+    "type": "how-to"
+  },
+  {
+    "title": "How to Write an Open Source JavaScript Library",
+    "url": "https://egghead.io/courses/how-to-write-an-open-source-javascript-library",
+    "type": "how-to"
+  },
+  {
+    "title": "Create and Publish packages to NPM",
+    "url": "https://www.youtube.com/playlist?list=PLYSZyzpwBEWSS7aup_xvT9Q1-NQZINW8X",
+    "source": "youtube.com/c/BrunoAntunesPT",
+    "type": "how-to"
+  },
+  {
+    "title": "npm: A Free Guide for Beginners",
+    "url": "https://css-tricks.com/a-complete-beginners-guide-to-npm",
+    "type": "basics"
+  },
+  {
+    "title": "Semver: A Primer",
+    "url": "https://nodesource.com/blog/semver-a-primer",
+    "type": "basics"
+  },
+  {
+    "title": "SurviveJS - Maintenance",
+    "url": "https://survivejs.com/maintenance",
+    "type": "basics"
+  },
+  {
+    "title": "Execute npm Package Binaries with the npx Package Runner",
+    "url": "https://egghead.io/courses/execute-npm-package-binaries-with-the-npx-package-runner",
+    "type": "basics"
+  },
+  {
+    "title": "Why does package-lock.json exist, and how does it work?",
+    "url": "https://lucasfcosta.com/2020/10/17/lockfile-guide.html",
+    "type": "basics"
+  },
+  {
+    "title": "Why npm Scripts?",
+    "url": "https://css-tricks.com/why-npm-scripts",
+    "type": "advanced"
+  },
+  {
+    "title": "Let's Dev: A Package Manager",
+    "url": "https://yarnpkg.com/blog/2017/07/11/lets-dev-a-package-manager",
+    "type": "advanced"
+  },
+  {
+    "title": "tiny-package-manager",
+    "url": "https://github.com/g-plane/tiny-package-manager",
+    "type": "advanced"
+  },
+  {
+    "title": "How to Create a Hybrid NPM Module for ESM and CommonJS.",
+    "url": "https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html",
+    "type": "how-to"
+  },
+  {
+    "title": "Dependency Managers Don’t Manage Your Dependencies",
+    "url": "https://cpojer.net/posts/dependency-managers-dont-manage-your-dependencies",
+    "type": "advanced"
+  },
+  {
+    "title": "Semantic Versioning",
+    "url": "https://devopedia.org/semantic-versioning",
+    "type": "basics"
+  },
+  {
+    "title": "Dependency Manager",
+    "url": "https://devopedia.org/dependency-manager",
+    "type": "basics"
+  },
+  {
+    "title": "Package Manager",
+    "url": "https://devopedia.org/package-manager",
+    "type": "basics"
+  },
+  {
+    "title": "Monorepo Explained",
+    "url": "https://monorepo.tools",
+    "type": "reference"
+  },
+  {
+    "title": "Rethinking JavaScript Infrastructure",
+    "url": "https://cpojer.net/posts/rethinking-javascript-infrastructure",
+    "type": "curiosity"
+  },
+  {
+    "title": "Evaluating Packages Part 1 - Turn to community",
+    "url": "https://bytearcher.com/articles/evaluating-packages-1-check-community",
+    "type": "curiosity"
+  },
+  {
+    "title": "Evaluating Packages Part 2 - Review repository",
+    "url": "http://bytearcher.com/articles/evaluating-packages-2-review-repository",
+    "type": "curiosity"
+  },
+  {
+    "title": "Modern JavaScript Explained For Dinosaurs",
+    "url": "https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosaurs-f695e9747b70",
+    "type": "curiosity"
+  },
+  {
+    "title": "Which Monorepo is right for a Node.js BACKEND now",
+    "url": "https://medium.com/autodesk-tlv/lerna-has-gone-which-monorepo-is-right-for-a-node-js-backend-fc075cad51b0",
+    "type": "curiosity"
+  },
+  {
+    "title": "npm Docs",
+    "url": "https://docs.npmjs.com",
+    "type": "reference"
+  },
+  {
+    "title": "runpkg | the package explorer",
+    "url": "https://www.runpkg.com",
+    "type": "tool"
+  },
+  {
+    "title": "Semantic Versioning 2.0.0",
+    "url": "https://semver.org",
+    "type": "reference"
+  },
+  {
+    "title": "awesome-micro-npm-packages",
+    "url": "https://github.com/parro-it/awesome-micro-npm-packages",
+    "type": "reference"
+  },
+  {
+    "title": "npms",
+    "url": "https://npms.io",
+    "type": "tool"
+  },
+  {
+    "title": "npm cheatsheet",
+    "url": "https://devhints.io/npm",
+    "type": "reference"
+  },
+  {
+    "title": "Cheat Sheet: npm vs Yarn Commands",
+    "url": "https://www.digitalocean.com/community/tutorials/nodejs-npm-yarn-cheatsheet",
+    "type": "reference"
+  },
+  {
+    "title": "npm semantic version calculator",
+    "url": "https://semver.npmjs.com",
+    "type": "tool"
+  },
+  {
+    "title": "Online Semver checker",
+    "url": "https://jubianchi.github.io/semver-check",
+    "type": "tool"
+  },
+  {
+    "title": "Simple monorepos via npm workspaces and TypeScript project references",
+    "url": "https://2ality.com/2021/07/simple-monorepos.html",
+    "type": "how-to"
+  },
+  {
+    "title": "Publishing and consuming ECMAScript modules via packages",
+    "url": "https://2ality.com/2022/01/esm-specifiers.html",
+    "type": "basics"
+  },
+  {
+    "title": "modern-guide-to-packaging-js-library",
+    "url": "https://github.com/frehner/modern-guide-to-packaging-js-library",
+    "type": "advanced"
+  },
+  {
+    "title": "2ality",
+    "url": "https://2ality.com",
+    "type": "feed"
+  },
+  {
+    "title": "Monorepos in JavaScript & TypeScript",
+    "url": "https://www.robinwieruch.de/javascript-monorepos",
+    "type": "advanced"
+  },
+  {
+    "title": "Best practices for creating a modern npm package",
+    "url": "https://snyk.io/blog/best-practices-create-modern-npm-package/",
+    "type": "how-to"
+  },
+  {
+    "title": "Shell scripting with Node.js",
+    "url": "https://exploringjs.com/nodejs-shell-scripting/",
+    "type": "advanced"
+  },
+  {
+    "title": "How to build, test, and publish a TypeScript npm package in 2022",
+    "url": "https://www.strictmode.io/articles/build-test-and-publish-npm-package-2022",
+    "type": "how-to"
+  },
+  {
+    "title": "Writing Javascript without a build system",
+    "url": "https://jvns.ca/blog/2023/02/16/writing-javascript-without-a-build-system/",
+    "type": "how-to"
+  },
+  {
+    "title": "How to JavaScript - Setup Tutorial",
+    "url": "https://www.robinwieruch.de/javascript-project-setup-tutorial/",
+    "type": "how-to"
+  },
+  {
+    "title": "Speeding up the JavaScript ecosystem",
+    "url": "https://marvinh.dev/blog/speeding-up-javascript-ecosystem/",
+    "type": "advanced"
+  },
+  {
+    "title": "Analysis Tools and Linters to Improve Code Quality and Avoid Bugs",
+    "url": "https://analysis-tools.dev/",
+    "type": "reference"
+  },
+  {
+    "title": "The NPM Library Speedrun - 90 minutes to build, CI, and publish",
+    "url": "https://www.youtube.com/watch?v=aKTSC4D1GL8",
+    "source": "youtube.com/@mattpocockuk",
+    "type": "advanced"
+  },
+  {
+    "title": "The Lost Art of the Makefile",
+    "url": "http://www.olioapps.com/blog/the-lost-art-of-the-makefile/",
+    "type": "curiosity"
+  },
+  {
+    "title": "SurviveJS – Webpack",
+    "url": "https://survivejs.com/webpack/",
+    "type": "basics"
+  },
+  {
+    "title": "GoogleChromeLabs/webpack-libs-optimizations",
+    "url": "https://github.com/GoogleChromeLabs/webpack-libs-optimizations",
+    "type": "how-to"
+  },
+  {
+    "title": "How to Set Up webpack 5 From Scratch",
+    "url": "https://www.taniarascia.com/how-to-use-webpack/",
+    "type": "basics"
+  },
+  {
+    "title": "Building a simplified webpack clone",
+    "url": "https://lihautan.com/building-a-simplified-webpack-clone/",
+    "type": "advanced"
+  },
+  {
+    "title": "vitejs/awesome-vite",
+    "url": "https://github.com/vitejs/awesome-vite",
+    "type": "reference"
+  },
+  {
+    "title": "Vite Crash Course",
+    "url": "https://www.youtube.com/watch?v=89NJdbYTgJ8",
+    "source": "youtube.com/@TraversyMedia",
+    "type": "basics"
+  },
+  {
+    "title": "Learn Vite – Frontend Build Tool Course",
+    "url": "https://www.youtube.com/watch?v=VAeRhmpcWEQ",
+    "source": "youtube.com/@freecodecamp",
+    "type": "basics"
+  },
+  {
+    "title": "Awesome webpack",
+    "url": "https://webpack.js.org/awesome-webpack/",
+    "type": "reference"
+  },
+  {
+    "title": "Simplified JavaScript Jargon",
+    "url": "http://jargon.js.org",
+    "type": "reference"
+  }
+]

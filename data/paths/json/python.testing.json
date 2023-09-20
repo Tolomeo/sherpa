@@ -1,0 +1,8 @@
+{
+  "title": "Testing",
+  "resources": [
+    "https://gogognome.nl/how-to-write-tests-that-need-a-lot-of-data.html",
+    "https://realpython.com/python-testing",
+    "https://testdriven.io/blog/pytest-for-beginners/"
+  ]
+}

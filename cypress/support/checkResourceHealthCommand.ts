@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { Resource } from '../../data'
+import { SerializedResource } from '../../data'
 
 type CheckHealthOptions = {
   titleSelector?: string
@@ -8,17 +8,17 @@ type CheckHealthOptions = {
 declare global {
   namespace Cypress {
     interface Chainable {
-      checkHealthByVisit(value: Resource, options?: CheckHealthOptions): void
+      checkHealthByVisit(value: SerializedResource, options?: CheckHealthOptions): void
 
       checkHealthByUrlRequest(
-        value: Resource,
+        value: SerializedResource,
         options?: CheckHealthOptions,
       ): void
 
-      checkHealthByBinaryRequest(value: Resource): void
+      checkHealthByBinaryRequest(value: SerializedResource): void
 
       checkHealthByScraperRequest(
-        value: Resource,
+        value: SerializedResource,
         options: CheckHealthOptions & {
           apikey: string
           render?: boolean
@@ -51,7 +51,7 @@ const cleanTitleString = (str: string) =>
     .join('')
 
 const checkHealthByUrlRequest = (
-  resource: Resource,
+  resource: SerializedResource,
   { titleSelector = 'title' }: CheckHealthOptions = {},
 ) => {
   cy.request(resource.url).then((response) => {
@@ -72,7 +72,7 @@ const checkHealthByUrlRequest = (
 }
 
 const checkHealthByVisit = (
-  resource: Resource,
+  resource: SerializedResource,
   { titleSelector = 'title' }: CheckHealthOptions = {},
 ) => {
   cy.visit(resource.url, { headers: { Referer: resource.url } })
@@ -82,7 +82,7 @@ const checkHealthByVisit = (
   })
 }
 
-const checkHealthByBinaryRequest = (resource: Resource) => {
+const checkHealthByBinaryRequest = (resource: SerializedResource) => {
   cy.request({
     url: resource.url,
     encoding: 'binary',
@@ -90,7 +90,7 @@ const checkHealthByBinaryRequest = (resource: Resource) => {
 }
 
 const checkHealthByScraperRequest = (
-  resource: Resource,
+  resource: SerializedResource,
   {
     titleSelector = 'title',
     apikey,

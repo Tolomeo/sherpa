@@ -1,0 +1,21 @@
+{
+  "title": "CLI apps",
+  "resources": [
+    "https://git.herrbischoff.com/awesome-command-line-apps/about/",
+    "https://github.com/chubin/awesome-console-services",
+    "https://github.com/toolleeo/cli-apps",
+    "http://www.compciv.org/unix-tools/",
+    "https://github.com/learn-anything/command-line-tools",
+    "https://git.herrbischoff.com/awesome-macos-command-line/about/",
+    "https://github.com/agarrharr/awesome-cli-apps",
+    "https://www.darraghoriordan.com/2022/01/28/developer-shell-modern-bat-fzf-antigen-zsh-wsl-mac/",
+    "https://www.wezm.net/technical/2019/10/useful-command-line-tools/",
+    "https://github.com/ibraheemdev/modern-unix",
+    "https://remysharp.com/2018/08/23/cli-improved",
+    "https://zaiste.net/posts/shell-commands-rust/",
+    "https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/",
+    "https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je",
+    "https://www.youtube.com/playlist?list=PL5--8gKSku160eJGeY2EsWQ9C5fEZw5WC",
+    "https://github.com/rothgar/awesome-tuis"
+  ]
+}

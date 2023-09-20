@@ -1,86 +1,63 @@
-import { Resource, resources } from '../../../data'
+import { SerializedResource, Path, SerializedPath } from '../../../data'
+import config from '../../../src/config'
 
-const checkResourceHealth = (resource: Resource) => {
-  // checking if it is a downloadable resource
-  // so far only PDFs
-  if (resource.url.match(/\.pdf$/)) {
-    return cy.checkHealthByBinaryRequest(resource)
-  }
+const flattenPathResources = (path: Path) => {
+  let pathResources = []
 
-  const host = new URL(resource.url).hostname.replace(/^www./, '')
+  const { main, resources, children } = path
 
-  switch (host) {
-    case 'youtube.com':
-      // skipping consent check page
-      // TODO: evaluate using youtube apis instead?
-      cy.setCookie('CONSENT', 'YES+cb.20220215-09-p0.en-GB+F+903', {
-        domain: '.youtube.com',
-      })
-      return cy.checkHealthByUrlRequest(resource)
-    case 'programmingpercy.tech':
-    case 'gogognome.nl':
-		case 'superfastpython.com':
-      return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h1' })
-    case 'blob42.xyz':
-      return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h3' })
-    case 'thevaluable.dev':
-    case 'usehooks-ts.com':
-    case 'developer.ibm.com':
-    case 'davrous.com':
-    case 'zzapper.co.uk':
-    case 'launchschool.com':
-    case 'wattenberger.com':
-    case 'gameaccessibilityguidelines.com':
-    case 'app.codecrafters.io':
-    case 'animatedbackgrounds.me':
-    case 'git.herrbischoff.com':
-    case 'linux.org':
-    case 'conventionalcommits.org':
-    case 'harrisoncramer.me':
-    case 'bash.cyberciti.biz':
-		case 'tldp.org':
-		case 'codementor.io':
-		case 'snipcart.com':
-      return cy.checkHealthByVisit(resource)
-    case 'reactdigest.net':
-    case 'data-flair.training':
-    case 'codepen.io':
-    case 'replit.com':
-    case 'git.herrbischoff.com':
-    case 'linux.org':
-    case 'bash.cyberciti.biz':
-      return cy.checkHealthByScraperRequest(resource, {
-        apikey: Cypress.env('ZENSCRAPE_API_KEY'),
-      })
-    case 'tooltester.com':
-    case 'regexr.com':
-      return cy.checkHealthByScraperRequest(resource, {
-        apikey: Cypress.env('ZENSCRAPE_API_KEY'),
-        render: true,
-      })
-    case 'adobe.com':
-    case 'ui.dev':
-    case 'developer.apple.com':
-    case 'udemy.com':
-    case 'pexels.com':
-      return cy.checkHealthByScraperRequest(resource, {
-        apikey: Cypress.env('ZENSCRAPE_API_KEY'),
-        premium: true,
-      })
-    default:
-      return cy.checkHealthByUrlRequest(resource)
-  }
+  main && pathResources.push(...main)
+
+  resources && pathResources.push(...resources)
+
+  if (!children) return pathResources
+
+  children.forEach((child) => {
+    child.main && pathResources.push(...child.main)
+    child.resources && pathResources.push(...child.resources)
+  })
+
+  return pathResources
 }
 
-describe('Resources', () => {
-  Object.values(resources).forEach((resource) => {
-    it(`"${resource.title}" [ ${resource.url} ]`, () => {
-      // this event will automatically be unbound when this test ends
-      // returning false here prevents Cypress from
-      // failing the test when an uncaught exception is thrown by the resource page
-      cy.on('uncaught:exception', () => false)
+// TODO: https://github.com/cypress-io/cypress-example-todomvc/compare/master...NicholasBoll:cypress-example-todomvc:feat/type-safe-alias
 
-      checkResourceHealth(resource)
+describe("Paths' resources", () => {
+  config.topics.forEach((topicName) => {
+    describe(topicName, () => {
+      it("Lists non overlapping urls in 'main' and 'resources'", () => {
+        cy.task<SerializedPath>('getSerializedPath', topicName).then(
+          ({ main, resources }) => {
+            if (main && resources) {
+              const overlappingUrls = main.filter((url) =>
+                resources.includes(url),
+              )
+              expect(overlappingUrls).to.be.empty
+            }
+          },
+        )
+      })
+
+      it("Uses all available topic's resources", () => {
+        cy.task<Path>('getPath', topicName).then((path) =>
+          cy
+            .task<SerializedResource[]>('getSerializedResources', topicName)
+            .then((pathSerializedResources) => {
+              const pathResources = flattenPathResources(path)
+              const unusedResources = pathSerializedResources.filter(
+                ({ url }) =>
+                  !pathResources.find(
+                    (pathResource) => pathResource.url === url,
+                  ),
+              )
+
+              expect(unusedResources).to.be.empty
+              expect(pathResources).to.have.lengthOf(
+                pathSerializedResources.length,
+              )
+            }),
+        )
+      })
     })
   })
 })

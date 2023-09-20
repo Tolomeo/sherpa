@@ -1,0 +1,591 @@
+[
+  {
+    "title": "Javascript Essentials",
+    "url": "https://www.udemy.com/course/javascript-essentials",
+    "type": "basics"
+  },
+  {
+    "title": "JavaScript 30",
+    "url": "https://javascript30.com",
+    "type": "basics"
+  },
+  {
+    "title": "JavaScript Algorithms and Data Structures",
+    "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures",
+    "type": "basics"
+  },
+  {
+    "title": "The Modern JavaScript Tutorial",
+    "url": "https://javascript.info",
+    "type": "basics"
+  },
+  {
+    "title": "JavaScript Katas",
+    "url": "https://jskatas.org",
+    "type": "basics"
+  },
+  {
+    "title": "Javascript Challenges",
+    "url": "http://tcorral.github.io/javascript-challenges-book",
+    "type": "basics"
+  },
+  {
+    "title": "clean-code-javascript",
+    "url": "https://github.com/ryanmcdermott/clean-code-javascript",
+    "type": "advanced"
+  },
+  {
+    "title": "Eloquent JavaScript",
+    "url": "https://eloquentjavascript.net",
+    "type": "basics"
+  },
+  {
+    "title": "Functional-Light-JS",
+    "url": "https://github.com/getify/Functional-Light-JS",
+    "type": "advanced"
+  },
+  {
+    "title": "event-driven-web-components-realworld-example-app",
+    "url": "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
+    "type": "how-to"
+  },
+  {
+    "title": "awesome-javascript",
+    "url": "https://github.com/sorrycc/awesome-javascript",
+    "type": "reference"
+  },
+  {
+    "title": "vanillawebprojects",
+    "url": "https://github.com/bradtraversy/vanillawebprojects",
+    "type": "how-to"
+  },
+  {
+    "title": "33-js-concepts",
+    "url": "https://github.com/leonardomso/33-js-concepts",
+    "type": "basics"
+  },
+  {
+    "title": "JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests",
+    "url": "https://www.youtube.com/watch?v=r9HdJ8P6GQI",
+    "source": "youtube.com/c/Academind",
+    "type": "basics"
+  },
+  {
+    "title": "Testing JavaScript with Jest",
+    "url": "https://flaviocopes.com/jest",
+    "type": "basics"
+  },
+  {
+    "title": "javascript-testing-best-practices",
+    "url": "https://github.com/goldbergyoni/javascript-testing-best-practices",
+    "type": "how-to"
+  },
+  {
+    "title": "modern-js-cheatsheet",
+    "url": "https://github.com/mbeaudru/modern-js-cheatsheet",
+    "type": "basics"
+  },
+  {
+    "title": "JavaScript Visualized",
+    "url": "https://dev.to/lydiahallie/series/3341",
+    "source": "dev.to/lydiahallie",
+    "type": "basics"
+  },
+  {
+    "title": "How To Code in JavaScript",
+    "url": "https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript",
+    "source": "digitalocean.com/community",
+    "type": "basics"
+  },
+  {
+    "title": "You-Dont-Know-JS",
+    "url": "https://github.com/getify/You-Dont-Know-JS",
+    "type": "basics"
+  },
+  {
+    "title": "javascript-questions",
+    "url": "https://github.com/lydiahallie/javascript-questions",
+    "type": "basics"
+  },
+  {
+    "title": "Learn JavaScript - Free Interactive JavaScript Tutorial",
+    "url": "https://www.learn-js.org",
+    "type": "basics"
+  },
+  {
+    "title": "awesome-javascript-learning",
+    "url": "https://github.com/micromata/awesome-javascript-learning",
+    "type": "reference"
+  },
+  {
+    "title": "javascripting",
+    "url": "https://github.com/workshopper/javascripting",
+    "type": "basics"
+  },
+  {
+    "title": "JavaScript Testing",
+    "url": "https://www.udacity.com/course/javascript-testing--ud549",
+    "type": "basics"
+  },
+  {
+    "title": "Jest JavaScript Testing Framework",
+    "url": "https://testautomationu.applitools.com/jest-testing-tutorial",
+    "type": "basics"
+  },
+  {
+    "title": "Learn Modern JavaScript Fundamentals",
+    "url": "https://code.tutsplus.com/learn-modern-javascript-fundamentals-in-7-hours-free-course--ytc-24c",
+    "type": "basics"
+  },
+  {
+    "title": "Testing JavaScript Applications Workshop (at PayPal)",
+    "url": "https://www.youtube.com/watch?v=DdqiXcYDv-8",
+    "source": "youtube.com/c/KentCDodds-vids",
+    "type": "basics"
+  },
+  {
+    "title": "JSRobot",
+    "url": "https://lab.reaal.me/jsrobot",
+    "type": "basics"
+  },
+  {
+    "title": "WarriorJS",
+    "url": "https://warriorjs.com",
+    "type": "basics"
+  },
+  {
+    "title": "The Complete Guide to JavaScript Classes",
+    "url": "https://dmitripavlutin.com/javascript-classes-complete-guide",
+    "type": "basics"
+  },
+  {
+    "title": "Beginner JavaScript Notes",
+    "url": "https://wesbos.com/javascript",
+    "type": "basics"
+  },
+  {
+    "title": "Intro To JavaScript Unit Testing & BDD",
+    "url": "https://www.youtube.com/watch?v=u5cLK1UrFyQ",
+    "source": "youtube.com/c/TraversyMedia",
+    "type": "basics"
+  },
+  {
+    "title": "JavaScript Tutorial",
+    "url": "https://www.w3schools.com/js",
+    "type": "basics"
+  },
+  {
+    "title": "Super Mario Bros in JavaScript",
+    "url": "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWWe8zXrViYbIM2Hhylx8DZx",
+    "source": "youtube.com/c/MethMethMethod",
+    "type": "how-to"
+  },
+  {
+    "title": "Creating a Tetris Online Multiplayer in Javascript",
+    "url": "https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX",
+    "source": "youtube.com/c/MethMethMethod",
+    "type": "how-to"
+  },
+  {
+    "title": "JavaScript Code Analysis",
+    "url": "https://www.javascripttutorials.net/javascript-code-analysis",
+    "type": "advanced"
+  },
+  {
+    "title": "Understanding the DOM — Document Object Model",
+    "url": "https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model",
+    "source": "digitalocean.com/community",
+    "type": "basics"
+  },
+  {
+    "title": "pretty-algorithms",
+    "url": "https://github.com/jiayihu/pretty-algorithms",
+    "type": "advanced"
+  },
+  {
+    "title": "Robust Client-Side JavaScript – A Developer’s Guide",
+    "url": "https://molily.de/robust-javascript/",
+    "type": "advanced"
+  },
+  {
+    "title": "javascript-algorithms",
+    "url": "https://github.com/trekhleb/javascript-algorithms",
+    "type": "advanced"
+  },
+  {
+    "title": "JavaScript SEO",
+    "url": "https://www.youtube.com/playlist?list=PLKoqnv2vTMUPOalM1zuWDP9OQl851WMM9",
+    "source": "youtube.com/c/GoogleSearchCentral",
+    "type": "advanced"
+  },
+  {
+    "title": "Deep JavaScript: Theory and techniques",
+    "url": "https://exploringjs.com/deep-js",
+    "type": "advanced"
+  },
+  {
+    "title": "Trigonometry in CSS and JavaScript",
+    "url": "https://tympanus.net/codrops/2021/06/01/trigonometry-in-css-and-javascript-introduction-to-trigonometry",
+    "type": "advanced"
+  },
+  {
+    "title": "Modern Web App Design Patterns",
+    "url": "https://www.patterns.dev",
+    "type": "reference"
+  },
+  {
+    "title": "Intro to JS: Drawing & Animation",
+    "url": "https://www.khanacademy.org/computing/computer-programming/programming",
+    "type": "basics"
+  },
+  {
+    "title": "Advanced JS: Games & Visualizations",
+    "url": "https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations",
+    "type": "advanced"
+  },
+  {
+    "title": "Advanced JS: Natural Simulations",
+    "url": "https://www.khanacademy.org/computing/computer-programming/programming-natural-simulations",
+    "type": "advanced"
+  },
+  {
+    "title": "Professor Frisby Introduces Composable Functional JavaScript",
+    "url": "https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript",
+    "type": "advanced"
+  },
+  {
+    "title": "wtfjs",
+    "url": "https://github.com/denysdovhan/wtfjs",
+    "type": "curiosity"
+  },
+  {
+    "title": "js13kGames - HTML5 and JavaScript Game Development Competition in just 13 kilobytes",
+    "url": "https://js13kgames.com",
+    "type": "curiosity"
+  },
+  {
+    "title": "Modern Javascript: Everything you missed over the last 10 years",
+    "url": "https://turriate.com/articles/modern-javascript-everything-you-missed-over-10-years",
+    "type": "curiosity"
+  },
+  {
+    "title": "Developer Tools secrets that shouldn’t be secrets",
+    "url": "https://christianheilmann.com/2021/11/01/developer-tools-secrets-that-shouldnt-be-secrets/",
+    "type": "curiosity"
+  },
+  {
+    "title": "Callback Hell",
+    "url": "http://callbackhell.com",
+    "type": "curiosity"
+  },
+  {
+    "title": "JavaScript Snippets",
+    "url": "https://www.30secondsofcode.org/js/p/1",
+    "type": "how-to"
+  },
+  {
+    "title": "Simplified JavaScript Jargon",
+    "url": "http://jargon.js.org",
+    "type": "reference"
+  },
+  {
+    "title": "awesome-jest",
+    "url": "https://github.com/jest-community/awesome-jest",
+    "type": "reference"
+  },
+  {
+    "title": "Jest cheat sheet",
+    "url": "https://github.com/sapegin/jest-cheat-sheet",
+    "type": "reference"
+  },
+  {
+    "title": "Vanilla JavaScript Code Snippets",
+    "url": "https://www.smashingmagazine.com/2021/04/vanilla-javascript-code-snippets/",
+    "type": "reference"
+  },
+  {
+    "title": "Operator Lookup",
+    "url": "https://joshwcomeau.com/operator-lookup",
+    "type": "reference"
+  },
+  {
+    "title": "Testing Playground",
+    "url": "https://testing-playground.com",
+    "type": "tool"
+  },
+  {
+    "title": "The Vanilla JavaScript Repository",
+    "url": "https://vanillalist.top",
+    "type": "reference"
+  },
+  {
+    "title": "Manage HTML DOM with vanilla JavaScript",
+    "url": "https://htmldom.dev",
+    "type": "reference"
+  },
+  {
+    "title": "ES2015+ cheatsheet",
+    "url": "https://devhints.io/es6",
+    "type": "reference"
+  },
+  {
+    "title": "JavaScript Weekly",
+    "url": "https://javascriptweekly.com",
+    "type": "feed"
+  },
+  {
+    "title": "Top End Devs",
+    "url": "https://javascriptjabber.com",
+    "type": "feed"
+  },
+  {
+    "title": "Tania Rascia",
+    "url": "https://www.taniarascia.com",
+    "type": "feed"
+  },
+  {
+    "title": "Trekhleb | Blog",
+    "url": "https://trekhleb.dev/blog",
+    "type": "feed"
+  },
+  {
+    "title": "David Walsh Blog",
+    "url": "https://davidwalsh.name",
+    "type": "feed"
+  },
+  {
+    "title": "Christian Heilmann",
+    "url": "https://christianheilmann.com",
+    "type": "feed"
+  },
+  {
+    "title": "JavaScript tutorial for beginners",
+    "url": "https://www.youtube.com/playlist?list=PLZPZq0r_RZOMRMjHB_IEBjOW_ufr00yG1",
+    "source": "youtube.com/c/BroCodez",
+    "type": "basics"
+  },
+  {
+    "title": "Learn JavaScript",
+    "url": "https://www.youtube.com/playlist?list=PLZld0zbNGbZRfjut6JI7ZLx8ZbTDa5zn-",
+    "source": "youtube.com/c/CodingAdventures",
+    "type": "basics"
+  },
+  {
+    "title": "Learn and use Composition in JavaScript and TypeScript",
+    "url": "https://softchris.github.io/pages/javascript-composition.html",
+    "type": "basics"
+  },
+  {
+    "title": "Regex in JS - how YOU can learn it and learn to like it",
+    "url": "https://softchris.github.io/pages/javascript-regex.html",
+    "type": "basics"
+  },
+  {
+    "title": "JavaScript tutorial - a step by step, in-depth introduction to JavaScript programming",
+    "url": "https://launchschool.com/books/javascript",
+    "type": "basics"
+  },
+  {
+    "title": "JavaScript Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V",
+    "source": "youtube.com/@freecodecamp",
+    "type": "basics"
+  },
+  {
+    "title": "How to implement a programming language",
+    "url": "https://lisperator.net/pltut/",
+    "type": "advanced"
+  },
+  {
+    "title": "Implementing a Regular Expression Engine",
+    "url": "https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/",
+    "type": "advanced"
+  },
+  {
+    "title": "JavaScript template engine in just 20 lines",
+    "url": "https://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line",
+    "type": "how-to"
+  },
+  {
+    "title": "Streams—The definitive guide",
+    "url": "https://web.dev/streams",
+    "type": "advanced"
+  },
+  {
+    "title": "JSDoc typings: all the benefits of TypeScript, with none of the drawbacks",
+    "url": "https://gils-blog.tayar.org/posts/jsdoc-typings-all-the-benefits-none-of-the-drawbacks",
+    "type": "advanced"
+  },
+  {
+    "title": "advanced-js-objects",
+    "url": "https://github.com/carltheperson/advanced-js-objects",
+    "type": "advanced"
+  },
+  {
+    "title": "Understand observables by building a toy library",
+    "url": "https://steveholgado.com/understanding-observables",
+    "type": "advanced"
+  },
+  {
+    "title": "Jest Crash Course - Learn How to Test your JavaScript Application",
+    "url": "https://www.youtube.com/watch?v=ajiAl5UNzBU",
+    "source": "youtube.com/@laithacademy",
+    "type": "basics"
+  },
+  {
+    "title": "Building a JavaScript Testing Framework",
+    "url": "https://cpojer.net/posts/building-a-javascript-testing-framework",
+    "type": "advanced"
+  },
+  {
+    "title": "JavaScript AntiDebugging Tricks",
+    "url": "https://x-c3ll.github.io/posts/javascript-antidebugging",
+    "type": "curiosity"
+  },
+  {
+    "title": "Interview with Senior JS Developer",
+    "url": "https://www.youtube.com/watch?v=Uo3cL4nrGOk&t=4s",
+    "source": "youtube.com/@programmersarealsohuman5909",
+    "type": "curiosity"
+  },
+  {
+    "title": "The Ultimate Guide to JavaScript Fatigue: Realities of our industry",
+    "url": "https://lucasfcosta.com/2017/07/17/The-Ultimate-Guide-to-JavaScript-Fatigue.html",
+    "type": "curiosity"
+  },
+  {
+    "title": "[Array Builder]",
+    "url": "https://www.arraybuilder.com",
+    "type": "tool"
+  },
+  {
+    "title": "State of JavaScript",
+    "url": "https://stateofjs.com",
+    "type": "feed"
+  },
+  {
+    "title": "JavaScript Security",
+    "url": "https://www.coursera.org/specializations/javascript-security",
+    "type": "advanced"
+  },
+  {
+    "title": "Will Javascript win?",
+    "url": "https://www.youtube.com/watch?v=rczu8kc8JZA",
+    "source": "youtube.com/c/LexClips",
+    "type": "curiosity"
+  },
+  {
+    "title": "learning-promises",
+    "url": "https://github.com/TimothyGu/learning-promises",
+    "type": "basics"
+  },
+  {
+    "title": "Code Golfing Tips & Tricks",
+    "url": "https://getbutterfly.com/code-golfing-tips-tricks-how-to-minify-your-javascript-code",
+    "type": "advanced"
+  },
+  {
+    "title": "Writing a TodoMVC App With Modern Vanilla JavaScript",
+    "url": "https://frontendmasters.com/blog/vanilla-javascript-todomvc/",
+    "type": "how-to"
+  },
+  {
+    "title": "Why would anyone need JavaScript generator functions?",
+    "url": "https://jrsinclair.com/articles/2022/why-would-anyone-need-javascript-generator-functions/",
+    "type": "basics"
+  },
+  {
+    "title": "javascript-basics",
+    "url": "https://github.com/learning-zone/javascript-basics",
+    "type": "curiosity"
+  },
+  {
+    "title": "Dear Console",
+    "url": "https://codepo8.github.io/dearconsole/",
+    "type": "tool"
+  },
+  {
+    "title": "UnJS",
+    "url": "https://unjs.io/",
+    "type": "reference"
+  },
+  {
+    "title": "Replit Learn - JavaScript",
+    "url": "https://www.youtube.com/playlist?list=PLto9KpJAqHMRMl4DHajWvIi0gGnwIKMX5",
+    "source": "youtube.com/@replit",
+    "type": "basics"
+  },
+  {
+    "title": "OpenJS Foundation",
+    "url": "https://openjsf.org/",
+    "type": "reference"
+  },
+  {
+    "title": "Code an Animated Physics Game",
+    "url": "https://www.youtube.com/watch?v=U34l-Xz5ynU",
+    "source": "youtube.com/@freecodecamp",
+    "type": "advanced"
+  },
+  {
+    "title": "sohamkamani/javascript-design-patterns-for-humans",
+    "url": "https://github.com/sohamkamani/javascript-design-patterns-for-humans",
+    "type": "advanced"
+  },
+  {
+    "title": "A Deep Dive Into the Node js Event Loop",
+    "url": "https://www.youtube.com/watch?v=KKM_4-uQpow",
+    "source": "youtube.com/@UtahJS",
+    "type": "advanced"
+  },
+  {
+    "title": "The JavaScript Way",
+    "url": "https://thejsway.net/",
+    "type": "basics"
+  },
+  {
+    "title": "Practical Guide To Not Blocking The Event Loop",
+    "url": "https://www.bbss.dev/posts/eventloop/",
+    "type": "how-to"
+  },
+  {
+    "title": "JavaScript Interview Prep: Functions, Closures, Currying",
+    "url": "https://www.youtube.com/watch?v=tbqVqP5ilzQ",
+    "source": "youtube.com/@freecodecamp",
+    "type": "curiosity"
+  },
+  {
+    "title": "Make Bookmarklets",
+    "url": "https://make-bookmarklets.com/",
+    "type": "tool"
+  },
+  {
+    "title": "JavaScript Equality Table Game",
+    "url": "https://eqeq.js.org/",
+    "type": "basics"
+  },
+  {
+    "title": "MDN Web Docs",
+    "url": "https://developer.mozilla.org/",
+    "type": "reference"
+  },
+  {
+    "title": "Tests That Don’t Suck: Test Driven Development in JavaScript",
+    "url": "https://www.javascripttutorials.net/write-tests-that-dont-suck-test-driven-development-in-javascript/",
+    "type": "basics"
+  },
+  {
+    "title": "you-dont-need/You-Dont-Need-Lodash-Underscore",
+    "url": "https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore",
+    "type": "how-to"
+  },
+  {
+    "title": "Web Almanac",
+    "url": "https://almanac.httparchive.org",
+    "type": "curiosity"
+  },
+  {
+    "title": "You-Dont-Need-JavaScript",
+    "url": "https://github.com/you-dont-need/You-Dont-Need-JavaScript",
+    "type": "how-to"
+  }
+]

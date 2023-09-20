@@ -1,7 +1,13 @@
-import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import {
+  GetStaticProps,
+  GetStaticPropsContext,
+  InferGetStaticPropsType,
+} from 'next'
 import Head from 'next/head'
-import paths from '../data/paths'
-import { alternateSources } from '../data/resources'
+import { PathsList as TPathsList } from '../data/paths'
+import { getPathsList } from '../data/paths/utils'
+import { Resources } from '../data/resources'
+import { getResources } from '../data/resources/utils'
 import {
   Layout,
   LayoutHeader,
@@ -13,8 +19,19 @@ import {
 } from '../src/theme'
 import { AlternateSourcesList } from '../src/resources'
 import { List as PathsList } from '../src/paths'
+import config from '../src/config'
 
-export const getStaticProps = async (_: GetStaticPropsContext) => {
+interface StaticProps {
+  paths: TPathsList
+  alternateSources: Resources
+}
+
+export const getStaticProps: GetStaticProps<StaticProps> = async (
+  _: GetStaticPropsContext,
+) => {
+  const paths = getPathsList(config.topics)
+  const alternateSources = getResources('alternatives')
+
   return {
     props: {
       paths,

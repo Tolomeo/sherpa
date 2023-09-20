@@ -1,0 +1,10 @@
+{
+  "title": "Packaging",
+  "resources": [
+    "https://chriswarrick.com/blog/2023/01/15/how-to-improve-python-packaging/",
+    "https://www.b-list.org/weblog/2022/may/13/boring-python-dependencies/",
+    "https://dagster.io/blog/python-packages-primer-1",
+    "https://giovannipcarvalho.github.io/2023/01/08/python-packaging-in-a-hurry.html",
+    "https://medium.com/@ewho.ruth2014/publishing-python-packages-on-pypi-a-comprehensive-guide-14f466aa84f0"
+  ]
+}

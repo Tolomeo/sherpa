@@ -1,0 +1,214 @@
+[
+  {
+    "title": "Lua cheatsheet",
+    "url": "https://devhints.io/lua",
+    "type": "reference"
+  },
+  {
+    "title": "Lua Tutorial",
+    "url": "https://www.tutorialspoint.com/lua/index.htm",
+    "type": "basics"
+  },
+  {
+    "title": "Lua Tutorial Series",
+    "url": "https://www.youtube.com/playlist?list=PL1A1gsSe2tMzpqi8hE5bCUCyQdAWwthuz",
+    "source": "youtube.com/c/DevJeeper",
+    "type": "basics"
+  },
+  {
+    "title": "lua_missions",
+    "url": "https://github.com/kikito/lua_missions",
+    "type": "basics"
+  },
+  {
+    "title": "awesome-lua",
+    "url": "https://github.com/LewisJEllis/awesome-lua",
+    "type": "reference"
+  },
+  {
+    "title": "Programming in Lua (first edition)",
+    "url": "https://www.lua.org/pil/contents.html",
+    "type": "basics"
+  },
+  {
+    "title": "lua-users wiki: Lua Tutorial",
+    "url": "http://lua-users.org/wiki/LuaTutorial",
+    "type": "basics"
+  },
+  {
+    "title": "Lua and Love2d programming and game development",
+    "url": "https://www.youtube.com/playlist?list=PL1P11yPQAo7q_BWMKFZvUlLBqLRUJLrJm",
+    "source": "youtube.com/@atibyte",
+    "type": "basics"
+  },
+  {
+    "title": "Lua Programming",
+    "url": "https://en.m.wikibooks.org/wiki/Lua_Programming",
+    "type": "basics"
+  },
+  {
+    "title": "CS50's Introduction to Game Development",
+    "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbluXJKKbCIb4xd7fcRkpzoz",
+    "source": "youtube.com/@freecodecamp",
+    "type": "advanced"
+  },
+  {
+    "title": "Embedding Lua in C++",
+    "url": "https://www.youtube.com/playlist?list=PLLwK93hM93Z3nhfJyRRWGRXHaXgNX0Itk",
+    "source": "youtube.com/c/DavePoo",
+    "type": "advanced"
+  },
+  {
+    "title": "OpenResty - Video Tutorials",
+    "url": "https://openresty.org/en/videos.html",
+    "type": "reference"
+  },
+  {
+    "title": "awesome-resty",
+    "url": "https://github.com/bungle/awesome-resty",
+    "type": "reference"
+  },
+  {
+    "title": "Love2D Basics",
+    "url": "https://www.youtube.com/playlist?list=PLqPLyUreLV8DrLcLvQQ64Uz_h_JGLgGg2",
+    "source": "youtube.com/c/Challacade",
+    "type": "basics"
+  },
+  {
+    "title": "How to LÖVE",
+    "url": "https://sheepolution.com/learn",
+    "type": "basics"
+  },
+  {
+    "title": "Recreating Zelda",
+    "url": "https://www.youtube.com/playlist?list=PLqPLyUreLV8D3Ckd_9UFNvEpg4xCvbL1a",
+    "source": "youtube.com/c/Challacade",
+    "type": "advanced"
+  },
+  {
+    "title": "Love2D Game Dev Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PLYBJzqz8zpWYip5ZkTMQiOkqya9Iiefm9",
+    "source": "youtube.com/c/Stevesteacher",
+    "type": "basics"
+  },
+  {
+    "title": "BYTEPATH",
+    "url": "https://github.com/a327ex/blog/issues/30",
+    "type": "advanced"
+  },
+  {
+    "title": "awesome-love2d",
+    "url": "https://github.com/love2d-community/awesome-love2d",
+    "type": "reference"
+  },
+  {
+    "title": "Garry's Mod Lua",
+    "url": "https://www.youtube.com/playlist?list=PLyQg3m0a5UivaAXEfVDngKYp9jyNSTIo_",
+    "source": "youtube.com/c/CodeBlue",
+    "type": "curiosity"
+  },
+  {
+    "title": "Lua: Good, bad, and ugly parts",
+    "url": "http://notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts",
+    "type": "curiosity"
+  },
+  {
+    "title": "lua-users wiki",
+    "url": "http://lua-users.org/wiki",
+    "type": "reference"
+  },
+  {
+    "title": "Lua Unofficial FAQ (uFAQ)",
+    "url": "https://www.luafaq.org",
+    "type": "reference"
+  },
+  {
+    "title": "Lua: reference manuals",
+    "url": "https://www.lua.org/manual",
+    "type": "reference"
+  },
+  {
+    "title": "Learn Lua in Y Minutes",
+    "url": "https://learnxinyminutes.com/docs/lua",
+    "type": "reference"
+  },
+  {
+    "title": "Lua: mailing list",
+    "url": "https://www.lua.org/lua-l.html",
+    "type": "feed"
+  },
+  {
+    "title": "Full Lua Programming Crash Course",
+    "url": "https://www.youtube.com/watch?v=1srFmjt1Ib0&list=PLYBJzqz8zpWavt37pA6NANJTGStIHpybU&index=18",
+    "source": "youtube.com/c/Stevesteacher",
+    "type": "basics"
+  },
+  {
+    "title": "The Lua Integration Guide",
+    "url": "https://lua.msys.ch/lua-integration-guide.html",
+    "type": "advanced"
+  },
+  {
+    "title": "Luakit Web Browser",
+    "url": "https://luakit.github.io/",
+    "type": "reference"
+  },
+  {
+    "title": "Lua in 100 Seconds",
+    "url": "https://www.youtube.com/watch?v=jUuqBZwwkQw",
+    "source": "youtube.com/@Fireship",
+    "type": "curiosity"
+  },
+  {
+    "title": "Learning Lua",
+    "url": "https://www.youtube.com/playlist?list=PLxgtJR7f0RBKGid7F2dfv7qc-xWwSee2O",
+    "source": "youtube.com/@ProfBurton",
+    "type": "basics"
+  },
+  {
+    "title": "LuaRocks!",
+    "url": "https://milindsweb.amved.com/LuaRocks_.html",
+    "type": "basics"
+  },
+  {
+    "title": "Writing a DSL in Lua",
+    "url": "https://leafo.net/guides/dsl-in-lua.html",
+    "type": "advanced"
+  },
+  {
+    "title": "Game Development with LÖVE 2D and Lua",
+    "url": "https://www.youtube.com/watch?v=I549C6SmUnk",
+    "source": "youtube.com/@freecodecamp",
+    "type": "basics"
+  },
+  {
+    "title": "Using LuaRocks to install packages in the current directory",
+    "url": "https://leafo.net/guides/customizing-the-luarocks-tree.html",
+    "type": "how-to"
+  },
+  {
+    "title": "Testing Lua projects with GitHub Actions",
+    "url": "https://leafo.net/guides/testing-lua-modules-with-github-actions.html",
+    "type": "how-to"
+  },
+  {
+    "title": "luarocks Wiki",
+    "url": "https://github.com/luarocks/luarocks/wiki/Documentation",
+    "type": "basics"
+  },
+  {
+    "title": "Lua Tutorial - All the Basics!",
+    "url": "https://replit.com/talk/learn/Lua-Tutorial-All-the-Basics/126578",
+    "type": "basics"
+  },
+  {
+    "title": "A guide to Lua",
+    "url": "https://opensource.com/downloads/learn-lua",
+    "type": "basics"
+  },
+  {
+    "title": "leafo.net",
+    "url": "https://leafo.net/",
+    "type": "feed"
+  }
+]
