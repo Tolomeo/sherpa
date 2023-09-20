@@ -87,48 +87,8 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
   additionalProperties: false,
 }
 
-const validateSerializedPathSchema = (data: SerializedPath) => {
+export const validateSerializedPath = (data: SerializedPath) => {
   ajv.validate(serializedPathSchema, data)
 
   return ajv.errors ? ajv.errors : null
-}
-
-const validateSeralizedPathSchemaResources = (data: SerializedPath) => {
-  if (!data.main || !data.resources) return null
-
-  ajv.validate(
-    {
-      type: 'object',
-      properties: {
-        main: {
-          type: 'array',
-          items: {
-            not: {
-              type: 'string',
-              enum: data.resources,
-            },
-          },
-        },
-      },
-      nullable: true,
-      errorMessage:
-        "urls contained in 'main' shouldn't be found duplicated in 'resources'",
-    },
-    data,
-  )
-
-  return ajv.errors ? ajv.errors : null
-}
-
-export const validateSerializedPath = function (data: SerializedPath) {
-  for (let validator of [
-    validateSerializedPathSchema,
-    validateSeralizedPathSchemaResources,
-  ]) {
-    const errors = validator(data)
-
-    if (errors) return errors
-  }
-
-  return null
 }

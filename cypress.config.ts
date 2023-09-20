@@ -1,5 +1,10 @@
 import { defineConfig } from 'cypress'
-import { getPath, getPaths, getPathsList } from './data/paths/utils'
+import {
+  getPath,
+  getPaths,
+  getSerializedPath,
+  getPathsList,
+} from './data/paths/utils'
 import { getSerializedResources, getResources } from './data/resources/utils'
 
 export default defineConfig({
@@ -13,6 +18,9 @@ export default defineConfig({
         },
         getPaths(topicNames: string[]) {
           return getPaths(topicNames)
+        },
+        getSerializedPath(topicName: string) {
+          return getSerializedPath(topicName)
         },
         getPathsList(topicNames: string[]) {
           return getPathsList(topicNames)

@@ -21,4 +21,4 @@ jobs:
           CYPRESS_ZENSCRAPE_API_KEY: ${{ secrets.ZENSCRAPE_API_KEY }}
         with:
           browser: chrome
-          spec: cypress/e2e/paths/resources.cy.ts # Running only resources tests
+          spec: cypress/e2e/paths/health-check.cy.ts # Running only resources tests

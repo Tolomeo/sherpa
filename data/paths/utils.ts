@@ -56,7 +56,7 @@ export const parseSerializedPath = (
   })(),
 })
 
-export const readSerializedPath = (pathName: string) => {
+export const getSerializedPath = (pathName: string) => {
   const filepath = path.join(process.cwd(), `data/paths/json/${pathName}.json`)
   const data = JSON.parse(fs.readFileSync(filepath, 'utf-8'))
   const dataValidationErrors = validateSerializedPath(data)
@@ -79,7 +79,7 @@ export const getPath = (topicName: string, resources?: Resources) => {
   try {
     const topicResources = resources || getResources(topicName)
     const path = parseSerializedPath(
-      readSerializedPath(topicName),
+      getSerializedPath(topicName),
       topicResources,
     )
     return path
@@ -93,7 +93,7 @@ export const getPaths = (topicNames: string[]) =>
 
 export const getPathsList = (topicNames: Array<string>) =>
   topicNames.reduce((pathsList, pathName) => {
-    const serializedPath = readSerializedPath(pathName)
+    const serializedPath = getSerializedPath(pathName)
 
     pathsList[pathName] = { title: serializedPath.title }
 
