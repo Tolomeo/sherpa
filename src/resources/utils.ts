@@ -38,7 +38,7 @@ const resourceTypeToGroupTitle: Record<
   NonNullable<Resource['type']>,
   string
 > = {
-  basics: "Fundamentals",
+  basics: 'Fundamentals',
   advanced: 'Beyond basics',
   'how-to': 'How do they do it',
   curiosity: 'Nice to know',
@@ -50,9 +50,6 @@ const resourceTypeToGroupTitle: Record<
 export const groupResourcesByType = (resources: Array<Resource>) => {
   const groups = resources.reduce((groupedResources, resource) => {
     const { type } = resource
-
-    // TODO remove this
-    if (!type) return groupedResources
 
     if (!groupedResources[type]) {
       groupedResources[type] = {
