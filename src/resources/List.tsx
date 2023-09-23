@@ -1,6 +1,6 @@
 import React from 'react'
 import { Resource } from '../../data'
-import { Link, Typography, List, Box } from '../theme'
+import { Link, Typography, Box, List, ListItem } from '../theme'
 
 type Props = {
   resources: Array<Resource>
@@ -17,31 +17,33 @@ const ResourcesList = ({ resources }: Props) => {
     <Box data-testid={resourcesListTestId}>
       <List>
         {resources.map((resource) => (
-          <Box data-testid={resourcesListItemTestId} key={resource.url}>
-            <Link
-              data-testid={resourcesListItemLinkTestId}
-              href={resource.url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Typography
-                data-testid={resourcesListItemSourceTestId}
-                variant="overline"
-                color="text.secondary"
+          <ListItem key={resource.url}>
+            <Box data-testid={resourcesListItemTestId}>
+              <Link
+                data-testid={resourcesListItemLinkTestId}
+                href={resource.url}
+                target="_blank"
+                rel="noreferrer"
               >
-                {resource.source}
-              </Typography>
-              <Typography
-                data-testid={resourcesListItemTitleTestId}
-                component="span"
-                variant="h6"
-                display="block"
-                gutterBottom
-              >
-                {resource.title}
-              </Typography>
-            </Link>
-          </Box>
+                <Typography
+                  data-testid={resourcesListItemSourceTestId}
+                  variant="overline"
+                  color="text.secondary"
+                >
+                  {resource.source}
+                </Typography>
+                <Typography
+                  data-testid={resourcesListItemTitleTestId}
+                  component="span"
+                  variant="h6"
+                  display="block"
+                  gutterBottom
+                >
+                  {resource.title}
+                </Typography>
+              </Link>
+            </Box>
+          </ListItem>
         ))}
       </List>
     </Box>

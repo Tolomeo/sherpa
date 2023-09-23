@@ -140,7 +140,7 @@ export default function PathPage({ path, paths }: Props) {
                     <Typography variant="h3" component="h2">
                       You want to come from
                     </Typography>
-                    <PathsList paths={path.prev} bulleted spaced />
+                    <PathsList paths={path.prev} />
                   </Stack>
                 </aside>
               </LayoutContainer>
@@ -233,7 +233,7 @@ export default function PathPage({ path, paths }: Props) {
                     <Typography variant="h3" component="h2">
                       You could continue with
                     </Typography>
-                    <PathsList paths={path.next} bulleted spaced />
+                    <PathsList paths={path.next} />
                   </Stack>
                 </aside>
               </LayoutContainer>
