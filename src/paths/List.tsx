@@ -15,7 +15,7 @@ const PathsList = ({ paths, ...props }: Props) => (
   <Box data-testid={pathsListTestId}>
     <List {...props}>
       {Object.entries(paths).map(([pathName, path]) => (
-        <ListItem key={pathName}>
+        <ListItem marker={<ListItem.Bullet />} key={pathName}>
           <Box data-testid={pathsListItemTestId} component="span">
             <NextLink href={`/paths/${pathName}`} passHref legacyBehavior>
               <Link data-testid={pathsListItemLinkTestId}>

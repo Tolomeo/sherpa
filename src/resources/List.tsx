@@ -17,7 +17,14 @@ const ResourcesList = ({ resources }: Props) => {
     <Box data-testid={resourcesListTestId}>
       <List>
         {resources.map((resource) => (
-          <ListItem key={resource.url}>
+          <ListItem
+            marker={
+              <ListItem.Checkbox
+                inputProps={{ 'aria-label': resource.title }}
+              />
+            }
+            key={resource.url}
+          >
             <Box data-testid={resourcesListItemTestId}>
               <Link
                 data-testid={resourcesListItemLinkTestId}
