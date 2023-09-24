@@ -172,6 +172,11 @@ export const createTheme = (mode: ThemeMode) => {
           disableFocusRipple: true,
         },
       },
+      MuiCheckbox: {
+        defaultProps: {
+          disableRipple: true,
+        },
+      },
     },
   })
 }
