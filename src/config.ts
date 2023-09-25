@@ -15,10 +15,10 @@ const topics = [
   'regex',
   'neovim',
   'lua',
-]
+] as const
 
 const config = {
   topics,
-}
+} as const
 
 export default config

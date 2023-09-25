@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState, type ChangeEvent } from 'react'
 import { Resource } from '../../data'
 import { Link, Typography, Box, List, ListItem } from '../theme'
 import { useResourceCompletion } from '../user'
@@ -14,10 +14,24 @@ const resourcesListItemTitleTestId = 'resources.list.item.title'
 const resourcesListItemSourceTestId = 'resources.list.item.source'
 
 const ResourcesList = ({ resources }: Props) => {
-  const { areCompleted } = useResourceCompletion()
+  const { areCompleted, setCompleted } = useResourceCompletion()
   const [resourcesCompletion, setResourcesCompletion] = useState<boolean[]>(
     resources.map(() => false),
   )
+
+  useEffect(() => {
+    syncResourcesCompletion()
+  }, [resources, areCompleted])
+
+  const syncResourcesCompletion = async () => {
+    const resourcesUrls = resources.map(({ url }) => url)
+    setResourcesCompletion(await areCompleted(resourcesUrls))
+  }
+
+  const setResourceCompleted = async (url: string) => {
+    await setCompleted(url, 'docker')
+    await syncResourcesCompletion()
+  }
 
   return (
     <Box data-testid={resourcesListTestId}>
@@ -26,6 +40,7 @@ const ResourcesList = ({ resources }: Props) => {
           <ListItem
             marker={
               <ListItem.Checkbox
+                onChange={(_, checked) => setResourceCompleted(resource.url)}
                 checked={resourcesCompletion[resourceIndex]}
                 value={resource.url}
                 inputProps={{ 'aria-label': resource.title }}

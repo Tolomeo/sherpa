@@ -1,6 +1,7 @@
 import { openDB, DBSchema, IDBPDatabase } from 'idb'
+import config from '../config'
 
-const config = {
+const dbConfig = {
   name: 'sherpa',
   version: 1,
   store: {
@@ -11,7 +12,7 @@ const config = {
 } as const
 
 interface Schema extends DBSchema {
-  'user.resource-completion': {
+  [dbConfig.store.resourceCompletion.name]: {
     key: string
     value: string[]
   }
@@ -23,9 +24,9 @@ const useDB = () => {
   if (typeof window === 'undefined') return
 
   if (!db) {
-    db = openDB<Schema>(config.name, config.version, {
+    db = openDB<Schema>(dbConfig.name, dbConfig.version, {
       upgrade(db) {
-        db.createObjectStore(config.store.resourceCompletion.name)
+        db.createObjectStore(dbConfig.store.resourceCompletion.name)
       },
     })
   }
@@ -39,11 +40,11 @@ export const useResourceCompletion = () => {
   const isCompleted = async (url: string) => {
     if (!db) return false
 
-    const result = await (
+    const completedUrl = await (
       await db
-    ).get(config.store.resourceCompletion.name, url)
+    ).get(dbConfig.store.resourceCompletion.name, url)
 
-    return result !== undefined
+    return completedUrl !== undefined
   }
 
   const areCompleted = async (urls: string[]) => {
@@ -51,15 +52,49 @@ export const useResourceCompletion = () => {
       return urls.map(() => false)
     }
 
-    const result = await (
+    const completedUrls = await (
       await db
-    ).getAllKeys(config.store.resourceCompletion.name)
+    ).getAllKeys(dbConfig.store.resourceCompletion.name)
 
-    return urls.map((url) => result.includes(url))
+    return urls.map((url) => completedUrls.includes(url))
+  }
+
+  const setCompleted = async (
+    url: string,
+    topic: (typeof config.topics)[number],
+  ) => {
+    if (!db) return true
+
+    try {
+      const transaction = (await db).transaction(
+        dbConfig.store.resourceCompletion.name,
+        'readwrite',
+      )
+
+      const completed = await transaction.store.get(url)
+
+      if (!completed) {
+        await transaction.store.add([topic], url)
+        await transaction.done
+        return true
+      }
+
+      if (completed.includes(topic)) {
+        await transaction.done
+        return true
+      }
+
+      await transaction.store.put([...completed, topic], url)
+      await transaction.done
+      return true
+    } catch (err) {
+      throw err
+    }
   }
 
   return {
     isCompleted,
     areCompleted,
+    setCompleted,
   }
 }
