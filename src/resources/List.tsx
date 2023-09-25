@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Resource } from '../../data'
 import { Link, Typography, Box, List, ListItem } from '../theme'
+import { useResourceCompletion } from '../user'
 
 type Props = {
   resources: Array<Resource>
@@ -13,13 +14,20 @@ const resourcesListItemTitleTestId = 'resources.list.item.title'
 const resourcesListItemSourceTestId = 'resources.list.item.source'
 
 const ResourcesList = ({ resources }: Props) => {
+  const { areCompleted } = useResourceCompletion()
+  const [resourcesCompletion, setResourcesCompletion] = useState<boolean[]>(
+    resources.map(() => false),
+  )
+
   return (
     <Box data-testid={resourcesListTestId}>
       <List>
-        {resources.map((resource) => (
+        {resources.map((resource, resourceIndex) => (
           <ListItem
             marker={
               <ListItem.Checkbox
+                checked={resourcesCompletion[resourceIndex]}
+                value={resource.url}
                 inputProps={{ 'aria-label': resource.title }}
               />
             }
