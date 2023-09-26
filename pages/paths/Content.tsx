@@ -11,13 +11,13 @@ import {
   Underline,
 } from '../../src/theme'
 import { List as PathsList } from '../../src/paths'
-import { PathProvider, usePathContext } from '../../src/path'
 import {
-  Timeline as ResourcesTimeline,
-  List as ResourcesList,
-  groupResourcesByType,
-  sortResources,
-} from '../../src/resources'
+  PathProvider,
+  OrderedResources,
+  UnorderedResources,
+  usePathContext,
+} from '../../src/path'
+import { groupResourcesByType, sortResources } from '../../src/resources'
 import config from '../../src/config'
 
 interface Props {
@@ -70,7 +70,7 @@ const PathMain = () => {
         </Typography>
         <Grid container>
           <Grid item xs={12} md={8} xl={6}>
-            <ResourcesTimeline resources={main} />
+            <OrderedResources resources={main} />
           </Grid>
         </Grid>
       </Stack>
@@ -97,7 +97,9 @@ const PathResources = () => {
                   <Typography component="h3" variant="h5">
                     {group.title}
                   </Typography>
-                  <ResourcesList resources={sortResources(group.resources)} />
+                  <UnorderedResources
+                    resources={sortResources(group.resources)}
+                  />
                 </Stack>
               ))}
             </Masonry>
@@ -129,11 +131,11 @@ const PathChildren = () => {
                   </Typography>
 
                   {childPath.main && (
-                    <ResourcesTimeline resources={childPath.main} />
+                    <OrderedResources resources={childPath.main} />
                   )}
 
                   {childPath.resources && (
-                    <ResourcesList
+                    <UnorderedResources
                       resources={sortResources(childPath.resources)}
                     />
                   )}
@@ -174,6 +176,21 @@ const PageContent = ({ path, topic }: Props) => {
 
         <Stack spacing={12} pt={5} pb={8}>
           <PathPrev />
+
+          {path.main && (
+            <LayoutContainer>
+              <Stack spacing={5}>
+                <Typography variant="h3" component="h2">
+                  The path
+                </Typography>
+                <Grid container>
+                  <Grid item xs={12} md={8} xl={6}>
+                    <OrderedResources resources={path.main} />
+                  </Grid>
+                </Grid>
+              </Stack>
+            </LayoutContainer>
+          )}
 
           <PathMain />
 
