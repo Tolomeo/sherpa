@@ -1,14 +1,12 @@
 import Head from 'next/head'
-import { Path } from '../../data'
 
 type Props = {
-  path: Path
+  children: React.ReactNode
 }
 
-const PageHead = ({ path }: Props) => {
+const PageHead = ({ children }: Props) => {
   return (
     <Head>
-      <title>{`Sherpa: the ${path.title} path`}</title>
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -31,6 +29,8 @@ const PageHead = ({ path }: Props) => {
       <link rel="shortcut icon" href="/favicon.ico?v=1" />
       <meta name="msapplication-TileColor" content="#ff6bdf" />
       <meta name="theme-color" content="#ffffff" />
+
+      {children}
     </Head>
   )
 }

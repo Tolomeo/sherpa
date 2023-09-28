@@ -1,4 +1,5 @@
 import { Path } from '../../data/paths'
+import { Resource } from '../../data/resources'
 import {
   LayoutHero,
   LayoutContainer,
@@ -12,7 +13,6 @@ import {
 } from '../../src/theme'
 import { List as PathsList } from '../../src/paths'
 import {
-  PathProvider,
   OrderedResources,
   UnorderedResources,
   usePathContext,
@@ -23,6 +23,7 @@ import config from '../../src/config'
 interface Props {
   topic: (typeof config.topics)[number]
   path: Path
+  resources: Resource[]
 }
 
 const PathHero = () => {
@@ -168,40 +169,38 @@ const PathNext = () => {
   )
 }
 
-const PageContent = ({ path, topic }: Props) => {
+const PageContent = ({ path }: Props) => {
   return (
-    <PathProvider topic={topic} path={path}>
-      <main>
-        <PathHero />
+    <main>
+      <PathHero />
 
-        <Stack spacing={12} pt={5} pb={8}>
-          <PathPrev />
+      <Stack spacing={12} pt={5} pb={8}>
+        <PathPrev />
 
-          {path.main && (
-            <LayoutContainer>
-              <Stack spacing={5}>
-                <Typography variant="h3" component="h2">
-                  The path
-                </Typography>
-                <Grid container>
-                  <Grid item xs={12} md={8} xl={6}>
-                    <OrderedResources resources={path.main} />
-                  </Grid>
+        {path.main && (
+          <LayoutContainer>
+            <Stack spacing={5}>
+              <Typography variant="h3" component="h2">
+                The path
+              </Typography>
+              <Grid container>
+                <Grid item xs={12} md={8} xl={6}>
+                  <OrderedResources resources={path.main} />
                 </Grid>
-              </Stack>
-            </LayoutContainer>
-          )}
+              </Grid>
+            </Stack>
+          </LayoutContainer>
+        )}
 
-          <PathMain />
+        <PathMain />
 
-          <PathResources />
+        <PathResources />
 
-          <PathChildren />
+        <PathChildren />
 
-          <PathNext />
-        </Stack>
-      </main>
-    </PathProvider>
+        <PathNext />
+      </Stack>
+    </main>
   )
 }
 

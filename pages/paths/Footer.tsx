@@ -1,30 +1,14 @@
-import { Path } from '../../data/paths'
-import { LayoutContainer, Typography } from '../../src/theme'
+import { LayoutContainer } from '../../src/theme'
 
 interface Props {
-  path: Path
+  children: React.ReactNode
 }
 
-const PathFooter = ({ path }: Props) => {
-  if (!path.notes) return null
-
+const PathFooter = ({ children }: Props) => {
   return (
-    <LayoutContainer>
-      <footer>
-        {path.notes.map((note, index) => (
-          <Typography
-            key={index}
-            variant="body2"
-            color="text.disabled"
-            sx={{
-              overflowWrap: 'anywhere',
-            }}
-          >
-            {note}
-          </Typography>
-        ))}
-      </footer>
-    </LayoutContainer>
+    <footer>
+      <LayoutContainer>{children}</LayoutContainer>
+    </footer>
   )
 }
 

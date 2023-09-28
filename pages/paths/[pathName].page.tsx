@@ -2,7 +2,10 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import { Path, PathsList as TPathsList } from '../../data/paths'
 import { getPath, getPathsList } from '../../data/paths/utils'
-import { Layout } from '../../src/theme'
+import { readResources } from '../../data/resources/utils'
+import { Resource } from '../../data'
+import { Layout, Typography } from '../../src/theme'
+import { PathProvider } from '../../src/path'
 import config from '../../src/config'
 import PageHead from './Head'
 import PageHeader from './Header'
@@ -16,6 +19,7 @@ interface Params extends ParsedUrlQuery {
 interface StaticProps {
   topic: (typeof config.topics)[number]
   path: Path
+  resources: Resource[]
   paths: TPathsList
 }
 
@@ -32,12 +36,14 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
 }) => {
   const topic = params!.pathName as (typeof config.topics)[number]
   const path = getPath(topic)
+  const resources = readResources(topic)
   const paths = getPathsList(config.topics as unknown as string[])
 
   return {
     props: {
       topic,
       path,
+      resources,
       paths,
     },
   }
@@ -45,17 +51,36 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export default function PathPage({ path, paths, topic }: Props) {
+export default function PathPage({ path, paths, topic, resources }: Props) {
   return (
     <>
-      <PageHead path={path} />
+      <PageHead>
+        <title>{`Sherpa: the ${path.title} path`}</title>
+      </PageHead>
 
       <Layout>
         <PageHeader paths={paths} />
 
-        <PageContent topic={topic} path={path} />
+        <PathProvider topic={topic} path={path}>
+          <PageContent topic={topic} path={path} resources={resources} />
+        </PathProvider>
 
-        <PageFooter path={path} />
+        {path.notes && (
+          <PageFooter>
+            {path.notes.map((note, index) => (
+              <Typography
+                key={index}
+                variant="body2"
+                color="text.disabled"
+                sx={{
+                  overflowWrap: 'anywhere',
+                }}
+              >
+                {note}
+              </Typography>
+            ))}
+          </PageFooter>
+        )}
       </Layout>
     </>
   )

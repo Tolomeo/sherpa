@@ -68,3 +68,9 @@ export const getSerializedResources = (topicName: string) => {
 export const getResources = (topicName: string) => {
   return parseSerializedResources(getSerializedResources(topicName))
 }
+
+export const readResources = (topicName: string) => {
+  return getSerializedResources(topicName).map((serializedResource) =>
+    parseSerializedResource(serializedResource),
+  )
+}
