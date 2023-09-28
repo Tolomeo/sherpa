@@ -1,11 +1,6 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
-import {
-  Path,
-  SerializedPath,
-  PathsList as TPathsList,
-  ParsedPath,
-} from '../../data/paths'
+import { Path, PathsList as TPathsList, ParsedPath } from '../../data/paths'
 import { getPath, getPathsList, readPath } from '../../data/paths/utils'
 import { readResources } from '../../data/resources/utils'
 import { Resource } from '../../data'
@@ -23,7 +18,7 @@ interface Params extends ParsedUrlQuery {
 
 interface StaticProps {
   topic: (typeof config.topics)[number]
-  path: Path
+  // path: Path
   serializedPath: ParsedPath
   resources: Resource[]
   paths: TPathsList
@@ -41,7 +36,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
   const topic = params!.pathName as (typeof config.topics)[number]
-  const path = getPath(topic)
+  // const path = getPath(topic)
   const serializedPath = readPath(topic)
   const resources = readResources(topic)
   const paths = getPathsList(config.topics as unknown as string[])
@@ -49,7 +44,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   return {
     props: {
       topic,
-      path,
+      // path,
       serializedPath,
       resources,
       paths,
@@ -60,7 +55,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 export default function PathPage({
-  path,
+  // path,
   serializedPath,
   paths,
   topic,
@@ -69,19 +64,24 @@ export default function PathPage({
   return (
     <>
       <PageHead>
-        <title>{`Sherpa: the ${path.title} path`}</title>
+        <title>{`Sherpa: the ${serializedPath.title} path`}</title>
       </PageHead>
 
       <Layout>
         <PageHeader paths={paths} />
 
-        <PathProvider topic={topic} path={serializedPath} resources={resources}>
-          <PageContent topic={topic} path={path} resources={resources} />
+        <PathProvider
+          topic={topic}
+          path={serializedPath}
+          resources={resources}
+          paths={paths}
+        >
+          <PageContent />
         </PathProvider>
 
-        {path.notes && (
+        {serializedPath.notes && (
           <PageFooter>
-            {path.notes.map((note, index) => (
+            {serializedPath.notes.map((note, index) => (
               <Typography
                 key={index}
                 variant="body2"

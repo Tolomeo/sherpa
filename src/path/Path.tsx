@@ -1,5 +1,11 @@
-import React, { createContext, useContext, useState } from 'react'
-import { Path, Resource, SerializedPath, ParsedPath } from '../../data'
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react'
+import { Path, Resource, ParsedPath, PathsList } from '../../data'
 import config from '../config'
 
 type PathContextValue = {
@@ -29,6 +35,7 @@ type Props = {
   topic: (typeof config.topics)[number]
   path: ParsedPath
   resources: Resource[]
+  paths: PathsList
   children: React.ReactNode
 }
 
@@ -64,12 +71,28 @@ const populatePath = (parsedPath: ParsedPath, resources: Resource[]): Path => {
   }
 }
 
-const PathContextProvider = ({ children, path, resources, topic }: Props) => {
-  const [populatedPath] = useState(populatePath(path, resources))
-  const context = {
-    topic,
-    ...populatedPath,
-  }
+const PathContextProvider = ({
+  children,
+  path,
+  resources,
+  topic,
+  paths,
+}: Props) => {
+  const [populatedPath, setPopulatedPath] = useState(
+    populatePath(path, resources),
+  )
+  const context = useMemo(
+    () => ({
+      topic,
+      ...populatedPath,
+      paths,
+    }),
+    [populatedPath, paths, topic],
+  )
+
+  useEffect(() => {
+    setPopulatedPath(populatePath(path, resources))
+  }, [path, resources])
 
   return <PathContext.Provider value={context}>{children}</PathContext.Provider>
 }

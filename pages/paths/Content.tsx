@@ -1,5 +1,3 @@
-import { Path } from '../../data/paths'
-import { Resource } from '../../data/resources'
 import {
   LayoutHero,
   LayoutContainer,
@@ -18,13 +16,6 @@ import {
   usePathContext,
 } from '../../src/path'
 import { groupResourcesByType, sortResources } from '../../src/resources'
-import config from '../../src/config'
-
-interface Props {
-  topic: (typeof config.topics)[number]
-  path: Path
-  resources: Resource[]
-}
 
 const PathHero = () => {
   const { hero, logo, title } = usePathContext()
@@ -169,28 +160,13 @@ const PathNext = () => {
   )
 }
 
-const PageContent = ({ path }: Props) => {
+const PageContent = () => {
   return (
     <main>
       <PathHero />
 
       <Stack spacing={12} pt={5} pb={8}>
         <PathPrev />
-
-        {path.main && (
-          <LayoutContainer>
-            <Stack spacing={5}>
-              <Typography variant="h3" component="h2">
-                The path
-              </Typography>
-              <Grid container>
-                <Grid item xs={12} md={8} xl={6}>
-                  <OrderedResources resources={path.main} />
-                </Grid>
-              </Grid>
-            </Stack>
-          </LayoutContainer>
-        )}
 
         <PathMain />
 
