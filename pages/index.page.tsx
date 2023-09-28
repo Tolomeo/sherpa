@@ -6,8 +6,8 @@ import {
 import Head from 'next/head'
 import { PathsList as TPathsList } from '../data/paths'
 import { getPathsList } from '../data/paths/utils'
-import { Resources } from '../data/resources'
-import { getResources } from '../data/resources/utils'
+import { Resource } from '../data/resources'
+import { readResources } from '../data/resources/utils'
 import {
   Layout,
   LayoutHeader,
@@ -23,14 +23,14 @@ import config from '../src/config'
 
 interface StaticProps {
   paths: TPathsList
-  alternateSources: Resources
+  alternateSources: Resource[]
 }
 
 export const getStaticProps: GetStaticProps<StaticProps> = async (
   _: GetStaticPropsContext,
 ) => {
-  const paths = getPathsList(config.topics)
-  const alternateSources = getResources('alternatives')
+  const paths = getPathsList(config.topics as unknown as string[])
+  const alternateSources = readResources('alternatives')
 
   return {
     props: {

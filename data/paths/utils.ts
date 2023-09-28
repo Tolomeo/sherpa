@@ -1,67 +1,7 @@
 import fs from 'fs'
 import path from 'path'
-import { Resources } from '../resources'
-import {
-  SerializedPath,
-  Path,
-  SubPath,
-  SubTopic,
-  PathsList,
-  ParsedPath,
-} from './types'
+import { SerializedPath, PathsList, ParsedPath } from './types'
 import { validateSerializedPath } from './schema'
-import { getResources } from '../resources/utils'
-
-export const parseSerializedPath = (
-  serializedPath: SerializedPath,
-  resources: Resources,
-): Path => ({
-  ...serializedPath,
-  logo: serializedPath.logo || null,
-  hero: serializedPath.hero || null,
-  notes: serializedPath.notes || null,
-  resources: (() => {
-    if (!serializedPath.resources) return null
-
-    return serializedPath.resources.map((resourceId) => {
-      const resource = resources[resourceId]
-
-      if (!resource)
-        throw new Error(`resource not found error [ ${resourceId} ]`)
-
-      return resource
-    })
-  })(),
-  main: (() => {
-    if (!serializedPath.main) return null
-
-    return serializedPath.main.map((resourceId) => {
-      const resource = resources[resourceId]
-
-      if (!resource)
-        throw new Error(`resource not found error [ ${resourceId} ]`)
-
-      return resource
-    })
-  })(),
-  children: (() => {
-    if (!serializedPath.children) return null
-
-    return serializedPath.children.map((childPath) =>
-      getPath(childPath, resources),
-    )
-  })(),
-  next: (() => {
-    if (!serializedPath.next) return null
-
-    return getPathsList(serializedPath.next)
-  })(),
-  prev: (() => {
-    if (!serializedPath.prev) return null
-
-    return getPathsList(serializedPath.prev)
-  })(),
-})
 
 export const getSerializedPath = (pathName: string) => {
   const filepath = path.join(process.cwd(), `data/paths/json/${pathName}.json`)
@@ -82,42 +22,31 @@ export const getSerializedPath = (pathName: string) => {
   return data as SerializedPath
 }
 
-export const getPath = (topicName: string, resources?: Resources) => {
-  try {
-    const topicResources = resources || getResources(topicName)
-    const path = parseSerializedPath(
-      getSerializedPath(topicName),
-      topicResources,
-    )
-    return path
-  } catch (err) {
-    throw new Error(`'${topicName}' topic data error [ ${err} ]`)
-  }
-}
-
-export const getPaths = (topicNames: string[]) =>
-  topicNames.map((topicName) => getPath(topicName))
 
 export const getPathsList = (topicNames: Array<string>) =>
-  topicNames.reduce((pathsList, pathName) => {
-    const serializedPath = getSerializedPath(pathName)
+  topicNames.reduce((pathsList, topicName) => {
+    const serializedPath = getSerializedPath(topicName)
 
-    pathsList[pathName] = { title: serializedPath.title }
+    pathsList[topicName] = { topic: topicName, title: serializedPath.title }
 
     return pathsList
   }, {} as PathsList)
 
-export const parseReadPath = ({
-  title,
-  logo,
-  hero,
-  notes,
-  resources,
-  main,
-  children,
-  prev,
-  next,
-}: SerializedPath): ParsedPath => ({
+export const parseReadPath = (
+  topicName: string,
+  {
+    title,
+    logo,
+    hero,
+    notes,
+    resources,
+    main,
+    children,
+    prev,
+    next,
+  }: SerializedPath,
+): ParsedPath => ({
+  topic: topicName,
   title,
   logo: logo || null,
   hero: hero || null,
@@ -142,5 +71,9 @@ export const parseReadPath = ({
 })
 
 export const readPath = (topicName: string) => {
-  return parseReadPath(getSerializedPath(topicName))
+  return parseReadPath(topicName, getSerializedPath(topicName))
 }
+
+//TODO: rename
+export const getPaths = (topicNames: string[]) =>
+  topicNames.map((topicName) => readPath(topicName))

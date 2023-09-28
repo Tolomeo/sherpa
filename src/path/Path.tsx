@@ -5,21 +5,34 @@ import React, {
   useMemo,
   useState,
 } from 'react'
-import { Path, Resource, ParsedPath, PathsList } from '../../data'
+import { Resource, ParsedPath, PathsList } from '../../data'
 import config from '../config'
+
+export interface PopulatedPath {
+  title: ParsedPath['title']
+  logo: ParsedPath['logo']
+  hero: ParsedPath['hero']
+  notes: ParsedPath['notes']
+  resources: Array<Resource> | null
+  main: Array<Resource> | null
+  children: Array<PopulatedPath> | null
+  next: ParsedPath['next']
+  prev: ParsedPath['prev']
+}
 
 type PathContextValue = {
   topic: (typeof config.topics)[number]
-  title: Path['title']
-  hero: Path['hero']
-  logo: Path['logo']
-  prev: Path['prev']
-  main: Path['main']
-  resources: Path['resources']
-  children: Path['children']
-  next: Path['next']
+  title: PopulatedPath['title']
+  hero: PopulatedPath['hero']
+  logo: PopulatedPath['logo']
+  prev: PopulatedPath['prev']
+  main: PopulatedPath['main']
+  resources: PopulatedPath['resources']
+  children: PopulatedPath['children']
+  next: PopulatedPath['next']
 }
 
+// TODO: split context into 2
 const PathContext = createContext<PathContextValue | null>(null)
 
 export const usePathContext = () => {
@@ -39,7 +52,10 @@ type Props = {
   children: React.ReactNode
 }
 
-const populatePath = (parsedPath: ParsedPath, resources: Resource[]): Path => {
+const populatePath = (
+  parsedPath: ParsedPath,
+  resources: Resource[],
+): PopulatedPath => {
   const resourcesMap = resources.reduce((map, resource) => {
     map[resource.url] = resource
     return map
