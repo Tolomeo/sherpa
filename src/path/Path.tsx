@@ -5,19 +5,19 @@ import React, {
   useMemo,
   useState,
 } from 'react'
-import { Resource, ParsedPath, PathsList } from '../../data'
+import { Resource, Path, Paths } from '../../data'
 import config from '../config'
 
 export interface PopulatedPath {
-  title: ParsedPath['title']
-  logo: ParsedPath['logo']
-  hero: ParsedPath['hero']
-  notes: ParsedPath['notes']
+  title: Path['title']
+  logo: Path['logo']
+  hero: Path['hero']
+  notes: Path['notes']
   resources: Array<Resource> | null
   main: Array<Resource> | null
   children: Array<PopulatedPath> | null
-  next: ParsedPath['next']
-  prev: ParsedPath['prev']
+  next: Path['next']
+  prev: Path['prev']
 }
 
 type PathContextValue = {
@@ -46,14 +46,14 @@ export const usePathContext = () => {
 
 type Props = {
   topic: (typeof config.topics)[number]
-  path: ParsedPath
+  path: Path
   resources: Resource[]
-  paths: PathsList
+  paths: Paths
   children: React.ReactNode
 }
 
 const populatePath = (
-  parsedPath: ParsedPath,
+  parsedPath: Path,
   resources: Resource[],
 ): PopulatedPath => {
   const resourcesMap = resources.reduce((map, resource) => {

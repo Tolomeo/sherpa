@@ -1,5 +1,4 @@
-import { Path } from '../../data'
-import { usePathContext } from '../../src/path'
+import { Resource } from '../../data'
 import {
   Link,
   Typography,
@@ -12,7 +11,7 @@ import {
 } from '../theme'
 
 type Props = {
-  resources: NonNullable<Path['main']>
+  resources: Resource[]
 }
 
 const PathTimeline = ({ resources }: Props) => {

@@ -24,7 +24,7 @@ export type SerializedPaths<PathNames = string> = Record<
   SerializedPath<PathNames>
 >
 
-export interface ParsedPath {
+export interface Path {
   topic: string
   title: string
   logo: string | null
@@ -32,12 +32,9 @@ export interface ParsedPath {
   notes: PathNotes | null
   resources: Array<Resource['url']> | null
   main: Array<Resource['url']> | null
-  children: Array<ParsedPath> | null
-  next: PathsList | null
-  prev: PathsList | null
+  children: Array<Path> | null
+  next: Paths | null
+  prev: Paths | null
 }
 
-export type PathsList = Record<
-  string,
-  { topic: string; title: ParsedPath['title'] }
->
+export type Paths = Record<string, { topic: string; title: Path['title'] }>

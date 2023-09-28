@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
-import { PathsList as TPathsList, ParsedPath } from '../../data/paths'
+import { Paths, Path } from '../../data/paths'
 import { getPathsList, readPath } from '../../data/paths/utils'
 import { readResources } from '../../data/resources/utils'
 import { Resource } from '../../data'
@@ -19,9 +19,9 @@ interface Params extends ParsedUrlQuery {
 interface StaticProps {
   topic: (typeof config.topics)[number]
   // path: Path
-  serializedPath: ParsedPath
+  serializedPath: Path
   resources: Resource[]
-  paths: TPathsList
+  paths: Paths
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

@@ -4,7 +4,7 @@ import {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { PathsList as TPathsList } from '../data/paths'
+import { Paths } from '../data/paths'
 import { getPathsList } from '../data/paths/utils'
 import { Resource } from '../data/resources'
 import { readResources } from '../data/resources/utils'
@@ -22,7 +22,7 @@ import { List as PathsList } from '../src/paths'
 import config from '../src/config'
 
 interface StaticProps {
-  paths: TPathsList
+  paths: Paths
   alternateSources: Resource[]
 }
 

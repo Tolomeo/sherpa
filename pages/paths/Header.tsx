@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { PathsList as TPathsList } from '../../data/paths'
+import { Paths } from '../../data/paths'
 import {
   LayoutHeader,
   LayoutDrawer,
@@ -27,7 +27,7 @@ const CloseLayoutDrawerOnRouteChange = () => {
 }
 
 interface Props {
-  paths: TPathsList
+  paths: Paths
 }
 
 const PathHeader = ({ paths }: Props) => {

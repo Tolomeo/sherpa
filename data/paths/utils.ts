@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { SerializedPath, PathsList, ParsedPath } from './types'
+import { SerializedPath, Paths, Path } from './types'
 import { validateSerializedPath } from './schema'
 
 export const getSerializedPath = (pathName: string) => {
@@ -30,7 +30,7 @@ export const getPathsList = (topicNames: Array<string>) =>
     pathsList[topicName] = { topic: topicName, title: serializedPath.title }
 
     return pathsList
-  }, {} as PathsList)
+  }, {} as Paths)
 
 export const parseReadPath = (
   topicName: string,
@@ -45,7 +45,7 @@ export const parseReadPath = (
     prev,
     next,
   }: SerializedPath,
-): ParsedPath => ({
+): Path => ({
   topic: topicName,
   title,
   logo: logo || null,
