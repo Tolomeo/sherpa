@@ -1,7 +1,12 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
-import { Path, PathsList as TPathsList } from '../../data/paths'
-import { getPath, getPathsList } from '../../data/paths/utils'
+import {
+  Path,
+  SerializedPath,
+  PathsList as TPathsList,
+  ParsedPath,
+} from '../../data/paths'
+import { getPath, getPathsList, readPath } from '../../data/paths/utils'
 import { readResources } from '../../data/resources/utils'
 import { Resource } from '../../data'
 import { Layout, Typography } from '../../src/theme'
@@ -19,6 +24,7 @@ interface Params extends ParsedUrlQuery {
 interface StaticProps {
   topic: (typeof config.topics)[number]
   path: Path
+  serializedPath: ParsedPath
   resources: Resource[]
   paths: TPathsList
 }
@@ -36,6 +42,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
 }) => {
   const topic = params!.pathName as (typeof config.topics)[number]
   const path = getPath(topic)
+  const serializedPath = readPath(topic)
   const resources = readResources(topic)
   const paths = getPathsList(config.topics as unknown as string[])
 
@@ -43,6 +50,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
     props: {
       topic,
       path,
+      serializedPath,
       resources,
       paths,
     },
@@ -51,7 +59,13 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export default function PathPage({ path, paths, topic, resources }: Props) {
+export default function PathPage({
+  path,
+  serializedPath,
+  paths,
+  topic,
+  resources,
+}: Props) {
   return (
     <>
       <PageHead>
@@ -61,7 +75,7 @@ export default function PathPage({ path, paths, topic, resources }: Props) {
       <Layout>
         <PageHeader paths={paths} />
 
-        <PathProvider topic={topic} path={path}>
+        <PathProvider topic={topic} path={serializedPath} resources={resources}>
           <PageContent topic={topic} path={path} resources={resources} />
         </PathProvider>
 

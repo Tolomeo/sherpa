@@ -62,4 +62,16 @@ export interface Path {
   prev: PathsList | null
 }
 
+export interface ParsedPath {
+  title: string
+  logo: string | null
+  hero: PathHero | null
+  notes: PathNotes | null
+  resources: Array<Resource['url']> | null
+  main: Array<Resource['url']> | null
+  children: Array<ParsedPath> | null
+  next: PathsList | null
+  prev: PathsList | null
+}
+
 export type PathsList = Record<string, Pick<Path, 'title'>>

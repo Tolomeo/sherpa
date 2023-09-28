@@ -1,7 +1,14 @@
 import fs from 'fs'
 import path from 'path'
 import { Resources } from '../resources'
-import { SerializedPath, Path, SubPath, SubTopic, PathsList } from './types'
+import {
+  SerializedPath,
+  Path,
+  SubPath,
+  SubTopic,
+  PathsList,
+  ParsedPath,
+} from './types'
 import { validateSerializedPath } from './schema'
 import { getResources } from '../resources/utils'
 
@@ -100,18 +107,40 @@ export const getPathsList = (topicNames: Array<string>) =>
     return pathsList
   }, {} as PathsList)
 
-export const hasSubPathExtraResources = <T extends SubPath>(subpath: T) => {
-  return Boolean(subpath.extra.length)
-}
+export const parseReadPath = ({
+  title,
+  logo,
+  hero,
+  notes,
+  resources,
+  main,
+  children,
+  prev,
+  next,
+}: SerializedPath): ParsedPath => ({
+  title,
+  logo: logo || null,
+  hero: hero || null,
+  notes: notes || null,
+  resources: resources || null,
+  main: main || null,
+  children: (() => {
+    if (!children) return null
 
-export const isSubTopic = (
-  pathExtra: SubPath | SubTopic,
-): pathExtra is SubTopic => {
-  return 'resources' in pathExtra
-}
+    return children.map((childPath) => readPath(childPath))
+  })(),
+  next: (() => {
+    if (!next) return null
 
-export const isSubPath = (
-  pathExtra: SubPath | SubTopic,
-): pathExtra is SubPath => {
-  return 'main' in pathExtra
+    return getPathsList(next)
+  })(),
+  prev: (() => {
+    if (!prev) return null
+
+    return getPathsList(prev)
+  })(),
+})
+
+export const readPath = (topicName: string) => {
+  return parseReadPath(getSerializedPath(topicName))
 }
