@@ -1,4 +1,4 @@
-import { LayoutContainer, Typography } from '../../theme'
+import { LayoutContainer, Typography, Stack } from '../../theme'
 import { usePathContext } from '../Provider'
 
 const PathFooter = () => {
@@ -10,19 +10,21 @@ const PathFooter = () => {
 
   return (
     <footer>
-      <LayoutContainer>
-        {notes.map((note, index) => (
-          <Typography
-            key={index}
-            variant="body2"
-            color="text.disabled"
-            sx={{
-              overflowWrap: 'anywhere',
-            }}
-          >
-            {note}
-          </Typography>
-        ))}
+      <LayoutContainer pt={8} pb={2}>
+        <Stack spacing={1}>
+          {notes.map((note, index) => (
+            <Typography
+              key={index}
+              variant="body2"
+              color="text.disabled"
+              sx={{
+                overflowWrap: 'anywhere',
+              }}
+            >
+              {note}
+            </Typography>
+          ))}
+        </Stack>
       </LayoutContainer>
     </footer>
   )
