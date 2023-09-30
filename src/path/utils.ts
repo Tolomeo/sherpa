@@ -1,4 +1,5 @@
-import { PopulatedPath, Path, Resource, ResourceType } from './types'
+import config from '../config'
+import { PopulatedPath, Path, Resource } from './types'
 
 export const sortResources = (resources: Array<Resource>) =>
   [...resources].sort((resourceA, resourceB) => {
@@ -19,35 +20,10 @@ export type ResourcesTypeGroups = Record<
   }
 >
 
-// TODO: move to config
-const resourcesTypesGroupsOrder: Array<NonNullable<Resource['type']>> = [
-  ResourceType.basics,
-  ResourceType.advanced,
-  ResourceType['how-to'],
-  ResourceType.curiosity,
-  ResourceType.tool,
-  ResourceType.reference,
-  ResourceType.feed,
-]
-
 export const sortResourcesTypeGroups = (groups: ResourcesTypeGroups) =>
-  resourcesTypesGroupsOrder
+  config.resources.categoriesOrder
     .filter((groupType) => !!groups[groupType])
     .map((groupType) => groups[groupType])
-
-// TODO: move to config
-const resourceTypeToGroupTitle: Record<
-  NonNullable<Resource['type']>,
-  string
-> = {
-  basics: 'Fundamentals',
-  advanced: 'Beyond basics',
-  'how-to': 'How do they do it',
-  curiosity: 'Nice to know',
-  tool: 'Work smarter, not harder',
-  reference: 'Great bookmarks',
-  feed: 'Stay in the loop',
-}
 
 export const groupResourcesByType = (resources: Array<Resource>) => {
   const groups = resources.reduce((groupedResources, resource) => {
@@ -55,7 +31,7 @@ export const groupResourcesByType = (resources: Array<Resource>) => {
 
     if (!groupedResources[type]) {
       groupedResources[type] = {
-        title: resourceTypeToGroupTitle[type],
+        title: config.resources.categoriesTitles[type],
         resources: [],
       }
     }
