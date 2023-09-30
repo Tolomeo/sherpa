@@ -13,17 +13,15 @@ type Props = {
 
 const Path = ({ path, resources, paths }: Props) => {
   return (
-    <LayoutProvider>
-      <Provider path={path} resources={resources} paths={paths}>
-        <main>
+    <main>
+      <LayoutProvider>
+        <Provider path={path} resources={resources} paths={paths}>
           <Header />
-
           <Content />
-
           <Footer />
-        </main>
-      </Provider>
-    </LayoutProvider>
+        </Provider>
+      </LayoutProvider>
+    </main>
   )
 }
 

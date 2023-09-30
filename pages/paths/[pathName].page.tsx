@@ -1,11 +1,10 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import Head from 'next/head'
-import { Paths, Path } from '../../data/paths'
+import { Paths, Path, Resource } from '../../data'
 import { getPathsList, readPath } from '../../data/paths/utils'
 import { readResources } from '../../data/resources/utils'
-import { Resource } from '../../data'
-import { Path as PathContent } from '../../src/path'
+import PathBody from '../../src/path'
 import config from '../../src/config'
 
 interface Params extends ParsedUrlQuery {
@@ -81,7 +80,7 @@ export default function PathPage({ path, paths, resources }: Props) {
         <title>{`Sherpa: the ${path.title} path`}</title>
       </Head>
 
-      <PathContent path={path} resources={resources} paths={paths} />
+      <PathBody path={path} resources={resources} paths={paths} />
     </>
   )
 }
