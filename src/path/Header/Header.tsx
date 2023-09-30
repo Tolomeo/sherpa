@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { Paths } from '../../data/paths'
+import { Paths } from '../../../data/paths'
 import {
   LayoutHeader,
   LayoutDrawer,
@@ -8,8 +8,9 @@ import {
   useLayoutContext,
   Stack,
   Typography,
-} from '../../src/theme'
-import { List as PathsList } from '../../src/paths'
+} from '../../theme'
+import { List as PathsList } from '../../paths'
+import { usePathContext } from '../Provider'
 
 const CloseLayoutDrawerOnRouteChange = () => {
   const router = useRouter()
@@ -26,11 +27,9 @@ const CloseLayoutDrawerOnRouteChange = () => {
   return null
 }
 
-interface Props {
-  paths: Paths
-}
+const PathHeader = () => {
+  const { paths } = usePathContext()
 
-const PathHeader = ({ paths }: Props) => {
   return (
     <>
       <LayoutHeader>

@@ -1,3 +1,2 @@
-export { default as UnorderedResources } from './UnorderedResources'
-export { default as OrderedResources } from './OrderedResources'
-export { default as PathProvider, usePathContext } from './Path'
+export { default as PathProvider, usePathContext } from './Provider'
+export { default as Path } from './Path'

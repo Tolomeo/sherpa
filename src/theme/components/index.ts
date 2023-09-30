@@ -34,7 +34,7 @@ export { default as Checkbox } from '@mui/material/Checkbox'
 export { default as Underline } from './Underline'
 export { default as SvgImage } from './SvgImage'
 export {
-  default as Layout,
+  default as LayoutProvider,
   LayoutHeader,
   LayoutHero,
   LayoutContainer,

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, type ChangeEvent } from 'react'
-import { Resource } from '../../data'
-import { Link, Typography, Box, List, ListItem } from '../theme'
-import { useResourceCompletion } from '../user'
+import { Resource } from '../../../data'
+import { Link, Typography, Box, List, ListItem } from '../../theme'
+import { useResourceCompletion } from '../../user'
 
 type Props = {
   resources: Array<Resource>

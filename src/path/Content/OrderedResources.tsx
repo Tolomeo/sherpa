@@ -1,4 +1,4 @@
-import { Resource } from '../../data'
+import { Resource } from '../../../data'
 import {
   Link,
   Typography,
@@ -8,7 +8,7 @@ import {
   TimelineConnector,
   TimelineContent,
   TimelineDot,
-} from '../theme'
+} from '../../theme'
 
 type Props = {
   resources: Resource[]
