@@ -1,5 +1,6 @@
 import { openDB, DBSchema, IDBPDatabase } from 'idb'
-import config from '../config'
+// import config from '../config'
+import { Path } from '../../data'
 
 const dbConfig = {
   name: 'sherpa',
@@ -14,7 +15,13 @@ const dbConfig = {
 interface Schema extends DBSchema {
   [dbConfig.store.resourceCompletion.name]: {
     key: string
-    value: string[]
+    value: {
+      topic: string
+      resource: string
+    }
+    indexes: {
+      topicResource: [string, string]
+    }
   }
 }
 
@@ -26,7 +33,14 @@ const useDB = () => {
   if (!db) {
     db = openDB<Schema>(dbConfig.name, dbConfig.version, {
       upgrade(db) {
-        db.createObjectStore(dbConfig.store.resourceCompletion.name)
+        const objectStore = db.createObjectStore(
+          dbConfig.store.resourceCompletion.name,
+          {
+            autoIncrement: true,
+          },
+        )
+
+        objectStore.createIndex('topicResource', ['resource', 'topic'])
       },
     })
   }
@@ -34,67 +48,83 @@ const useDB = () => {
   return db
 }
 
-export const useResourceCompletion = () => {
-  const db = useDB()
+export const useResourcesCompletionStore = () => {
+  const database = useDB()
 
-  const isCompleted = async (url: string) => {
-    if (!db) return false
-
-    const completedUrl = await (
-      await db
-    ).get(dbConfig.store.resourceCompletion.name, url)
-
-    return completedUrl !== undefined
-  }
-
-  const areCompleted = async (urls: string[]) => {
-    if (!db) {
-      return urls.map(() => false)
-    }
-
-    const completedUrls = await (
-      await db
-    ).getAllKeys(dbConfig.store.resourceCompletion.name)
-
-    return urls.map((url) => completedUrls.includes(url))
-  }
-
-  const setCompleted = async (
-    url: string,
-    topic: (typeof config.topics)[number],
-  ) => {
-    if (!db) return true
+  const areCompleted = async (resources: string[], topic: string) => {
+    if (!database) return resources.map(() => false)
 
     try {
       const transaction = (await db).transaction(
         dbConfig.store.resourceCompletion.name,
         'readwrite',
       )
+      const objectStore = transaction.objectStore(
+        dbConfig.store.resourceCompletion.name,
+      )
+      const result = await Promise.all(
+        resources.map((resource) =>
+          objectStore.index('topicResource').get([resource, topic]),
+        ),
+      )
 
-      const completed = await transaction.store.get(url)
-
-      if (!completed) {
-        await transaction.store.add([topic], url)
-        await transaction.done
-        return true
-      }
-
-      if (completed.includes(topic)) {
-        await transaction.done
-        return true
-      }
-
-      await transaction.store.put([...completed, topic], url)
-      await transaction.done
-      return true
-    } catch (err) {
-      throw err
+      return result.map((resourceResult) => (resourceResult ? true : false))
+    } catch (error) {
+      console.error(error)
+      return resources.map(() => false)
     }
   }
 
-  return {
-    isCompleted,
-    areCompleted,
-    setCompleted,
+  const complete = async (resource: string, topic: string) => {
+    if (!database) return false
+
+    try {
+      const transaction = (await db).transaction(
+        dbConfig.store.resourceCompletion.name,
+        'readwrite',
+      )
+      const objectStore = transaction.objectStore(
+        dbConfig.store.resourceCompletion.name,
+      )
+      const completed = await objectStore
+        .index('topicResource')
+        .get([resource, topic])
+
+      if (completed) return true
+
+      await objectStore.add({ topic, resource })
+
+      return true
+    } catch (error) {
+      console.error(error)
+      return false
+    }
   }
+
+  const uncomplete = async (resource: string, topic: string) => {
+    if (!database) return false
+
+    try {
+      const transaction = (await db).transaction(
+        dbConfig.store.resourceCompletion.name,
+        'readwrite',
+      )
+      const objectStore = transaction.objectStore(
+        dbConfig.store.resourceCompletion.name,
+      )
+      const deletekey = await objectStore
+        .index('topicResource')
+        .getKey([resource, topic])
+
+      if (!deletekey) return true
+
+      await objectStore.delete(deletekey)
+      return true
+    } catch (error) {
+      console.error(error)
+      return false
+    }
+  }
+
+  return { areCompleted, complete, uncomplete }
 }

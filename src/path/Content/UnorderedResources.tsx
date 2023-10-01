@@ -1,41 +1,33 @@
-import React, { useEffect, useState, type ChangeEvent } from 'react'
+import React from 'react'
 import { Resource } from '../../../data'
 import { Link, Typography, Box, List, ListItem } from '../../theme'
-import { useResourceCompletion } from '../../user'
+import { usePathContext, usePathResourcesCompletion } from '../Provider'
 
 type Props = {
   resources: Array<Resource>
 }
 
 const UnorderedResources = ({ resources }: Props) => {
-  const { areCompleted, setCompleted } = useResourceCompletion()
-  const [resourcesCompletion, setResourcesCompletion] = useState<boolean[]>(
-    resources.map(() => false),
-  )
+  const [resourcesCompletion, { complete, uncomplete }] =
+    usePathResourcesCompletion(resources)
 
-  useEffect(() => {
-    syncResourcesCompletion()
-  }, [resources, areCompleted])
+  const isCompleted = (resource: string) => !!resourcesCompletion[resource]
 
-  const syncResourcesCompletion = async () => {
-    const resourcesUrls = resources.map(({ url }) => url)
-    setResourcesCompletion(await areCompleted(resourcesUrls))
-  }
-
-  const setResourceCompleted = async (url: string) => {
-    await setCompleted(url, 'docker')
-    await syncResourcesCompletion()
+  const toggleCompletion = (resource: string, completed: boolean) => {
+    return completed ? complete(resource) : uncomplete(resource)
   }
 
   return (
     <Box>
       <List>
-        {resources.map((resource, resourceIndex) => (
+        {resources.map((resource) => (
           <ListItem
             marker={
               <ListItem.Checkbox
-                onChange={(_, checked) => setResourceCompleted(resource.url)}
-                checked={resourcesCompletion[resourceIndex]}
+                onChange={(_, checked) =>
+                  toggleCompletion(resource.url, checked)
+                }
+                checked={isCompleted(resource.url)}
                 value={resource.url}
                 inputProps={{ 'aria-label': resource.title }}
               />
