@@ -1,6 +1,6 @@
 import { openDB, DBSchema, IDBPDatabase } from 'idb'
 // import config from '../config'
-import { Path } from '../../data'
+// import { Path } from '../../data'
 
 const dbConfig = {
   name: 'sherpa',
@@ -21,6 +21,7 @@ interface Schema extends DBSchema {
     }
     indexes: {
       topicResource: [string, string]
+      topic: string
     }
   }
 }
@@ -41,6 +42,7 @@ const useDB = () => {
         )
 
         objectStore.createIndex('topicResource', ['resource', 'topic'])
+        objectStore.createIndex('topic', 'topic')
       },
     })
   }
@@ -51,13 +53,50 @@ const useDB = () => {
 export const useResourcesCompletionStore = () => {
   const database = useDB()
 
+  const prune = async (resources: string[], topic: string) => {
+    if (!database) return true
+
+    try {
+      const transaction = (await db).transaction(
+        dbConfig.store.resourceCompletion.name,
+        'readwrite',
+      )
+      const objectStore = transaction.objectStore(
+        dbConfig.store.resourceCompletion.name,
+      )
+      const allByTopic = await objectStore.index('topic').getAll(topic)
+      const toBePruned = allByTopic.filter(
+        (storedResource) =>
+          !resources.find((resource) => resource === storedResource.resource),
+      )
+
+      if (!toBePruned.length) return true
+
+      const pruneResource = async (resource: string) => {
+        const key = await objectStore
+          .index('topicResource')
+          .getKey([resource, topic])
+        await objectStore.delete(key!)
+      }
+
+      await Promise.all(
+        toBePruned.map(({ resource }) => pruneResource(resource)),
+      )
+
+      return true
+    } catch (error) {
+      console.error(error)
+      return false
+    }
+  }
+
   const areCompleted = async (resources: string[], topic: string) => {
     if (!database) return resources.map(() => false)
 
     try {
       const transaction = (await db).transaction(
         dbConfig.store.resourceCompletion.name,
-        'readwrite',
+        'readonly',
       )
       const objectStore = transaction.objectStore(
         dbConfig.store.resourceCompletion.name,
@@ -126,5 +165,5 @@ export const useResourcesCompletionStore = () => {
     }
   }
 
-  return { areCompleted, complete, uncomplete }
+  return { areCompleted, complete, uncomplete, prune }
 }
