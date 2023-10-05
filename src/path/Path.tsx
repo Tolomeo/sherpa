@@ -1,11 +1,11 @@
+import { useEffect } from 'react'
 import { Path, Paths, Resource } from '../../data'
 import { LayoutProvider } from '../../src/theme'
 import Provider from './Provider'
 import Header from './Header'
 import Footer from './Footer'
 import Content from './Content'
-import { useResourcesCompletionStore } from '../user'
-import { useEffect } from 'react'
+import { useResourcesCompletionStore } from './utils'
 
 type Props = {
   path: Path

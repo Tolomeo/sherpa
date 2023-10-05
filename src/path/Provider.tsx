@@ -5,9 +5,8 @@ import React, {
   useMemo,
   useState,
 } from 'react'
-import { useResourcesCompletionStore } from '../user'
 import { Resource, Path, Paths, PopulatedPath } from './types'
-import { populatePath } from './utils'
+import { populatePath, useResourcesCompletionStore } from './utils'
 
 type PathContextValue = {
   paths: Paths

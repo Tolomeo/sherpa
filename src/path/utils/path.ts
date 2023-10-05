@@ -1,5 +1,5 @@
-import config from '../config'
-import { PopulatedPath, Path, Resource } from './types'
+import config from '../../config'
+import { PopulatedPath, Path, Resource } from '../types'
 
 export const sortResources = (resources: Array<Resource>) =>
   [...resources].sort((resourceA, resourceB) => {
