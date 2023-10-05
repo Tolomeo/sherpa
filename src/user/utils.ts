@@ -18,10 +18,11 @@ interface Schema extends DBSchema {
     value: {
       topic: string
       resource: string
+      createdAt: number
     }
     indexes: {
-      topicResource: [string, string]
       topic: string
+      topicResource: [string, string]
     }
   }
 }
@@ -41,8 +42,8 @@ const useDB = () => {
           },
         )
 
-        objectStore.createIndex('topicResource', ['resource', 'topic'])
         objectStore.createIndex('topic', 'topic')
+        objectStore.createIndex('topicResource', ['resource', 'topic'])
       },
     })
   }
@@ -131,7 +132,7 @@ export const useResourcesCompletionStore = () => {
 
       if (completed) return true
 
-      await objectStore.add({ topic, resource })
+      await objectStore.add({ topic, resource, createdAt: Date.now() })
 
       return true
     } catch (error) {

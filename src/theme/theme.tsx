@@ -82,6 +82,15 @@ export const createTheme = (mode: ThemeMode) => {
           },
         },
       },
+      MuiTimelineDot: {
+        styleOverrides: {
+          root: {
+            ['&:not(:empty)']: {
+              padding: 0,
+            },
+          },
+        },
+      },
       MuiTimelineItem: {
         styleOverrides: {
           positionRight: {

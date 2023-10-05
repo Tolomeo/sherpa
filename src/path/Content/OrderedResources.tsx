@@ -8,13 +8,24 @@ import {
   TimelineConnector,
   TimelineContent,
   TimelineDot,
+  Checkbox,
 } from '../../theme'
+import { usePathResourcesCompletion } from '../Provider'
 
 type Props = {
   resources: Resource[]
 }
 
 const PathTimeline = ({ resources }: Props) => {
+  const [resourcesCompletion, { complete, uncomplete }] =
+    usePathResourcesCompletion(resources)
+
+  const isCompleted = (resource: string) => !!resourcesCompletion[resource]
+
+  const toggleCompletion = (resource: string, completed: boolean) => {
+    return completed ? complete(resource) : uncomplete(resource)
+  }
+
   return (
     <Timeline position="right">
       {Object.values(resources).map((resource, index) => (
@@ -26,7 +37,18 @@ const PathTimeline = ({ resources }: Props) => {
                   index === 0 ? 'background.default' : 'text.grey.400',
               }}
             />
-            <TimelineDot variant="outlined" />
+            <TimelineDot variant="outlined">
+              <Checkbox
+                onChange={(_, checked) =>
+                  toggleCompletion(resource.url, checked)
+                }
+                checked={isCompleted(resource.url)}
+                value={resource.url}
+                inputProps={{ 'aria-label': resource.title }}
+                size="small"
+                color="secondary"
+              />
+            </TimelineDot>
             <TimelineConnector
               sx={{
                 backgroundColor:
