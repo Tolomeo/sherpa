@@ -9,7 +9,7 @@ import { getPathsList } from '../data/paths/utils'
 import { Resource } from '../data/resources'
 import { readResources } from '../data/resources/utils'
 import {
-  Layout,
+  LayoutProvider,
   LayoutHeader,
   LayoutHero,
   LayoutContainer,
@@ -74,7 +74,7 @@ export default function Home({ paths, alternateSources }: Props) {
   return (
     <>
       <PageHead />
-      <Layout>
+      <LayoutProvider>
         <LayoutHeader />
 
         <main>
@@ -140,7 +140,7 @@ export default function Home({ paths, alternateSources }: Props) {
             </LayoutContainer>
           </Box>
         </main>
-      </Layout>
+      </LayoutProvider>
     </>
   )
 }
