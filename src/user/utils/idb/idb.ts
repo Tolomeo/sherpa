@@ -1,50 +1,15 @@
-import { openDB, DBSchema, IDBPDatabase } from 'idb'
-// import config from '../config'
-// import { Path } from '../../data'
+import { openDB } from 'idb'
+import { dbConfig, DatabaseSchema, Database } from './types'
+import { migrations } from './migrations'
 
-const dbConfig = {
-  name: 'sherpa',
-  version: 1,
-  store: {
-    resourceCompletion: {
-      name: 'user.resource-completion',
-    },
-  },
-} as const
-
-interface Schema extends DBSchema {
-  [dbConfig.store.resourceCompletion.name]: {
-    key: string
-    value: {
-      topic: string
-      resource: string
-      createdAt: number
-    }
-    indexes: {
-      topic: string
-      topicResource: [string, string]
-    }
-  }
-}
-
-let db: Promise<IDBPDatabase<Schema>>
+let db: Promise<Database>
 
 const useDB = () => {
   if (typeof window === 'undefined') return
 
   if (!db) {
-    db = openDB<Schema>(dbConfig.name, dbConfig.version, {
-      upgrade(db) {
-        const objectStore = db.createObjectStore(
-          dbConfig.store.resourceCompletion.name,
-          {
-            autoIncrement: true,
-          },
-        )
-
-        objectStore.createIndex('topic', 'topic')
-        objectStore.createIndex('topicResource', ['resource', 'topic'])
-      },
+    db = openDB<DatabaseSchema>(dbConfig.name, dbConfig.version, {
+      upgrade: migrations[0],
     })
   }
 
