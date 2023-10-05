@@ -133,7 +133,9 @@ export const createTheme = (mode: ThemeMode) => {
       MuiListItemIcon: {
         styleOverrides: {
           root: {
-            minWidth: 28,
+            minWidth: 36,
+            justifyContent: 'center',
+            marginInlineEnd: 16,
           },
         },
       },
