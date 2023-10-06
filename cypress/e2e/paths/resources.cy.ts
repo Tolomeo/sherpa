@@ -1,4 +1,4 @@
-import { SerializedResource, Path, SerializedPath } from '../../../data'
+import { Path, Resource } from '../../../data'
 import config from '../../../src/config'
 
 const flattenPathResources = (path: Path) => {
@@ -26,29 +26,25 @@ describe("Paths' resources", () => {
   config.topics.forEach((topicName) => {
     describe(topicName, () => {
       it("Lists non overlapping urls in 'main' and 'resources'", () => {
-        cy.task<SerializedPath>('getSerializedPath', topicName).then(
-          ({ main, resources }) => {
-            if (main && resources) {
-              const overlappingUrls = main.filter((url) =>
-                resources.includes(url),
-              )
-              expect(overlappingUrls).to.be.empty
-            }
-          },
-        )
+        cy.task<Path>('readPath', topicName).then(({ main, resources }) => {
+          if (main && resources) {
+            const overlappingUrls = main.filter((url) =>
+              resources.includes(url),
+            )
+            expect(overlappingUrls).to.be.empty
+          }
+        })
       })
 
       it("Uses all available topic's resources", () => {
-        cy.task<Path>('getPath', topicName).then((path) =>
+        cy.task<Path>('readPath', topicName).then((path) =>
           cy
-            .task<SerializedResource[]>('getSerializedResources', topicName)
+            .task<Resource[]>('getSerializedResources', topicName)
             .then((pathSerializedResources) => {
               const pathResources = flattenPathResources(path)
               const unusedResources = pathSerializedResources.filter(
                 ({ url }) =>
-                  !pathResources.find(
-                    (pathResource) => pathResource.url === url,
-                  ),
+                  !pathResources.find((pathResource) => pathResource === url),
               )
 
               expect(unusedResources).to.be.empty

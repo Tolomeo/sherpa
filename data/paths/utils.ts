@@ -22,7 +22,6 @@ export const getSerializedPath = (pathName: string) => {
   return data as SerializedPath
 }
 
-
 export const getPathsList = (topicNames: Array<string>) =>
   topicNames.reduce((pathsList, topicName) => {
     const serializedPath = getSerializedPath(topicName)
@@ -32,7 +31,7 @@ export const getPathsList = (topicNames: Array<string>) =>
     return pathsList
   }, {} as Paths)
 
-export const parseReadPath = (
+const parseReadPath = (
   topicName: string,
   {
     title,
