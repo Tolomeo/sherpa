@@ -20,7 +20,7 @@ const PathContent = () => {
   } = usePathContext()
 
   return (
-    <Stack spacing={8}>
+    <Stack spacing={8} pb={6}>
       <LayoutHero foreground={hero?.foreground} background={hero?.background}>
         {logo && <SvgImage svg={logo} />}
         <Typography variant="h1">

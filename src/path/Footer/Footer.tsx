@@ -10,7 +10,7 @@ const PathFooter = () => {
 
   return (
     <footer>
-      <LayoutContainer pt={8} pb={2}>
+      <LayoutContainer pt={6} pb={2}>
         <Stack spacing={1}>
           {notes.map((note, index) => (
             <Typography
