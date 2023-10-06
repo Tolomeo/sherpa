@@ -1,9 +1,9 @@
 import React from 'react'
-import { Resources } from '../../data'
+import { Resource } from '../../data'
 import { Link, Typography, Box, List, ListItem } from '../theme'
 
 type Props = {
-  resources: Resources
+  resources: Resource[]
 }
 
 const alternativesListTestId = 'alternatives.list'
