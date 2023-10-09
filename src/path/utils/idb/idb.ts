@@ -1,5 +1,6 @@
 import { openDB } from 'idb'
-import { dbConfig, DatabaseSchema, Database } from './types'
+import config from '../../../config'
+import { DatabaseSchema, Database } from './types'
 import { migrations } from './migrations'
 
 let db: Promise<Database>
@@ -8,7 +9,7 @@ const useDB = () => {
   if (typeof window === 'undefined') return
 
   if (!db) {
-    db = openDB<DatabaseSchema>(dbConfig.name, dbConfig.version, {
+    db = openDB<DatabaseSchema>(config.db.name, config.db.version, {
       upgrade: migrations[0],
     })
   }
@@ -24,11 +25,11 @@ export const useResourcesCompletionStore = () => {
 
     try {
       const transaction = (await db).transaction(
-        dbConfig.store.resourceCompletion.name,
+        config.db.store.resourceCompletion.name,
         'readwrite',
       )
       const objectStore = transaction.objectStore(
-        dbConfig.store.resourceCompletion.name,
+        config.db.store.resourceCompletion.name,
       )
       const allByTopic = await objectStore.index('topic').getAll(topic)
       const toBePruned = allByTopic.filter(
@@ -61,11 +62,11 @@ export const useResourcesCompletionStore = () => {
 
     try {
       const transaction = (await db).transaction(
-        dbConfig.store.resourceCompletion.name,
+        config.db.store.resourceCompletion.name,
         'readonly',
       )
       const objectStore = transaction.objectStore(
-        dbConfig.store.resourceCompletion.name,
+        config.db.store.resourceCompletion.name,
       )
       const result = await Promise.all(
         resources.map((resource) =>
@@ -85,11 +86,11 @@ export const useResourcesCompletionStore = () => {
 
     try {
       const transaction = (await db).transaction(
-        dbConfig.store.resourceCompletion.name,
+        config.db.store.resourceCompletion.name,
         'readwrite',
       )
       const objectStore = transaction.objectStore(
-        dbConfig.store.resourceCompletion.name,
+        config.db.store.resourceCompletion.name,
       )
       const completed = await objectStore
         .index('topicResource')
@@ -111,11 +112,11 @@ export const useResourcesCompletionStore = () => {
 
     try {
       const transaction = (await db).transaction(
-        dbConfig.store.resourceCompletion.name,
+        config.db.store.resourceCompletion.name,
         'readwrite',
       )
       const objectStore = transaction.objectStore(
-        dbConfig.store.resourceCompletion.name,
+        config.db.store.resourceCompletion.name,
       )
       const deletekey = await objectStore
         .index('topicResource')

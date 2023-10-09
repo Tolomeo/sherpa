@@ -44,9 +44,20 @@ const resources = {
   categoriesTitles: resourceTypesTitles,
 } as const
 
+const db = {
+  name: 'sherpa',
+  version: 1,
+  store: {
+    resourceCompletion: {
+      name: 'user.resource-completion',
+    },
+  },
+} as const
+
 const config = {
   topics,
   resources,
+  db,
 } as const
 
 export default config

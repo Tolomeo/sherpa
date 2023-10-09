@@ -1,17 +1,8 @@
 import { DBSchema, IDBPDatabase, OpenDBCallbacks } from 'idb'
-
-export const dbConfig = {
-  name: 'sherpa',
-  version: 1,
-  store: {
-    resourceCompletion: {
-      name: 'user.resource-completion',
-    },
-  },
-} as const
+import config from '../../../config'
 
 export interface DatabaseSchema extends DBSchema {
-  [dbConfig.store.resourceCompletion.name]: {
+  [config.db.store.resourceCompletion.name]: {
     key: string
     value: {
       topic: string
