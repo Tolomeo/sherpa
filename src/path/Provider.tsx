@@ -13,7 +13,6 @@ type PathContextValue = {
   path: PopulatedPath
 }
 
-// TODO: split context into 2
 const PathContext = createContext<PathContextValue | null>(null)
 
 export const usePathContext = () => {

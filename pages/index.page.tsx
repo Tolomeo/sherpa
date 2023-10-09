@@ -5,7 +5,7 @@ import {
 } from 'next'
 import Head from 'next/head'
 import { Paths } from '../data/paths'
-import { getPathsList } from '../data/paths/utils'
+import { readPathsList } from '../data/paths/utils'
 import { Resource } from '../data/resources'
 import { readResources } from '../data/resources/utils'
 import {
@@ -29,7 +29,7 @@ interface StaticProps {
 export const getStaticProps: GetStaticProps<StaticProps> = async (
   _: GetStaticPropsContext,
 ) => {
-  const paths = getPathsList(config.topics as unknown as string[])
+  const paths = readPathsList(config.topics as unknown as string[])
   const alternateSources = readResources('alternatives')
 
   return {

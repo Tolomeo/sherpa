@@ -39,7 +39,7 @@ describe("Paths' resources", () => {
       it("Uses all available topic's resources", () => {
         cy.task<Path>('readPath', topicName).then((path) =>
           cy
-            .task<Resource[]>('getSerializedResources', topicName)
+            .task<Resource[]>('readSerializedResources', topicName)
             .then((pathSerializedResources) => {
               const pathResources = flattenPathResources(path)
               const unusedResources = pathSerializedResources.filter(

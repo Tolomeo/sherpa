@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import Head from 'next/head'
 import { Paths, Path, Resource } from '../../data'
-import { getPathsList, readPath } from '../../data/paths/utils'
+import { readPathsList, readPath } from '../../data/paths/utils'
 import { readResources } from '../../data/resources/utils'
 import PathBody from '../../src/path'
 import config from '../../src/config'
@@ -32,7 +32,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   const topic = params!.pathName as (typeof config.topics)[number]
   const path = readPath(topic)
   const resources = readResources(topic)
-  const paths = getPathsList(config.topics as unknown as string[])
+  const paths = readPathsList(config.topics as unknown as string[])
 
   return {
     props: {

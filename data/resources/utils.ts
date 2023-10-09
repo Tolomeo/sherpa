@@ -23,7 +23,25 @@ const parseSerializedResource = (serializedResource: SerializedResource) => {
   return parsedResource
 }
 
-export const getSerializedResources = (topicName: string) => {
+const parseSerializedResources = (serializedResources: SerializedResources) => {
+  const uniqueResources: Record<SerializedResource['url'], true> = {}
+
+  return serializedResources.map((serializedResource) => {
+    if (uniqueResources[serializedResource.url]) {
+      throw new Error(
+        `SerializedResource duplication error[ ${serializedResource.url} ]:
+				1: ${JSON.stringify(uniqueResources[serializedResource.url], null, 4)}
+				2: ${JSON.stringify(serializedResource, null, 4)}`,
+      )
+    }
+
+    uniqueResources[serializedResource.url] = true
+
+    return parseSerializedResource(serializedResource)
+  })
+}
+
+export const readSerializedResources = (topicName: string) => {
   const pathFilepath = path.join(
     process.cwd(),
     `data/resources/json/${topicName}.json`,
@@ -44,24 +62,6 @@ export const getSerializedResources = (topicName: string) => {
   return resourcesData as SerializedResources
 }
 
-const parseReadResources = (serializedResources: SerializedResources) => {
-  const uniqueResources: Record<SerializedResource['url'], true> = {}
-
-  return serializedResources.map((serializedResource) => {
-    if (uniqueResources[serializedResource.url]) {
-      throw new Error(
-        `SerializedResource duplication error[ ${serializedResource.url} ]:
-				1: ${JSON.stringify(uniqueResources[serializedResource.url], null, 4)}
-				2: ${JSON.stringify(serializedResource, null, 4)}`,
-      )
-    }
-
-    uniqueResources[serializedResource.url] = true
-
-    return parseSerializedResource(serializedResource)
-  })
-}
-
 export const readResources = (topicName: string) => {
-  return parseReadResources(getSerializedResources(topicName))
+  return parseSerializedResources(readSerializedResources(topicName))
 }
