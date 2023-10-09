@@ -1,12 +1,21 @@
 import fs from 'fs'
 import path from 'path'
 import { SerializedPath, Path, PathTopic } from './types'
-import { validateSerializedPath } from './schema'
+import { validatePathTopic, validateSerializedPath } from './schema'
 
 const parseSerializedPath = (
   topicName: string,
   serializedPath: SerializedPath,
 ): Path => {
+  const topicNameValidationErrors = validatePathTopic(topicName)
+
+  if (topicNameValidationErrors) {
+    throw new Error(
+      `'${topicName}' name error[ ${JSON.stringify(topicName, null, 2)} ]:
+				${JSON.stringify(topicNameValidationErrors, null, 2)}`,
+    )
+  }
+
   const dataValidationErrors = validateSerializedPath(serializedPath)
 
   if (dataValidationErrors) {
