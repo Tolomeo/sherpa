@@ -8,7 +8,6 @@ ajvErrors(ajv)
 const serializedPathSchema: JSONSchemaType<SerializedPath> = {
   type: 'object',
   properties: {
-    title: { type: 'string', minLength: 2 },
     logo: {
       type: 'string',
       pattern: '^<svg.+/svg>$',
@@ -83,7 +82,7 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
       nullable: true,
     },
   },
-  required: ['title'],
+  required: [],
   additionalProperties: false,
 }
 

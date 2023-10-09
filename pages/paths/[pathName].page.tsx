@@ -12,14 +12,14 @@ interface Params extends ParsedUrlQuery {
 }
 
 interface StaticProps {
-  topic: (typeof config.topics)[number]
+  topic: (typeof config.paths.topics)[number]
   path: Path
   resources: Resource[]
   paths: Paths
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const staticPaths = config.topics.map((pathName) => ({
+  const staticPaths = config.paths.topics.map((pathName) => ({
     params: { pathName },
   }))
 
@@ -29,10 +29,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
-  const topic = params!.pathName as (typeof config.topics)[number]
+  const topic = params!.pathName as (typeof config.paths.topics)[number]
   const path = readPath(topic)
   const resources = readResources(topic)
-  const paths = readPathsList(config.topics as unknown as string[])
+  const paths = readPathsList(config.paths.topics as unknown as string[])
 
   return {
     props: {
@@ -77,7 +77,9 @@ export default function PathPage({ path, paths, resources }: Props) {
         <meta name="msapplication-TileColor" content="#ff6bdf" />
         <meta name="theme-color" content="#ffffff" />
 
-        <title>{`Sherpa: the ${path.title} path`}</title>
+        <title>{`Sherpa: the ${
+          config.paths.topicsTitles[path.topic]
+        } path`}</title>
       </Head>
 
       <PathBody path={path} resources={resources} paths={paths} />

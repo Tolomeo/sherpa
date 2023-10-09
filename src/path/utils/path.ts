@@ -55,6 +55,7 @@ export const populatePath = (
 
   return {
     ...path,
+    title: config.paths.topicsTitles[path.topic],
     main: (() => {
       if (!path.main) return null
 
@@ -77,9 +78,9 @@ export const populatePath = (
     children: (() => {
       if (!path.children) return null
 
-      return path.children.map(({ title, main, resources }) => {
+      return path.children.map(({ topic, main, resources }) => {
         return {
-          title,
+          title: config.paths.topicsTitles[topic],
           main: (() => {
             if (!main) return null
 

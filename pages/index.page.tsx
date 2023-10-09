@@ -29,7 +29,7 @@ interface StaticProps {
 export const getStaticProps: GetStaticProps<StaticProps> = async (
   _: GetStaticPropsContext,
 ) => {
-  const paths = readPathsList(config.topics as unknown as string[])
+  const paths = readPathsList(config.paths.topics as unknown as string[])
   const alternateSources = readResources('alternatives')
 
   return {

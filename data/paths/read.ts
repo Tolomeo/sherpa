@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { SerializedPath, Paths, Path } from './types'
+import { SerializedPath, Paths, Path, PathTopic } from './types'
 import { validateSerializedPath } from './schema'
 
 const parseSerializedPath = (
@@ -20,12 +20,11 @@ const parseSerializedPath = (
     )
   }
 
-  const { title, logo, hero, notes, resources, main, children, prev, next } =
+  const { logo, hero, notes, resources, main, children, prev, next } =
     serializedPath
 
   return {
-    topic: topicName,
-    title,
+    topic: topicName as PathTopic,
     logo: logo || null,
     hero: hero || null,
     notes: notes || null,
@@ -65,9 +64,7 @@ export const readPaths = (topicNames: string[]) =>
 
 export const readPathsList = (topicNames: Array<string>) =>
   topicNames.reduce((pathsList, topicName) => {
-    const serializedPath = readSerializedPath(topicName)
-
-    pathsList[topicName] = { topic: topicName, title: serializedPath.title }
+    pathsList[topicName] = { topic: topicName }
 
     return pathsList
   }, {} as Paths)

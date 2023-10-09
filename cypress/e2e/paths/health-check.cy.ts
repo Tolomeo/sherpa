@@ -2,7 +2,7 @@ import { SerializedResource } from '../../../data'
 import config from '../../../src/config'
 
 const topicsResources: Array<[string, SerializedResource[]]> =
-  config.topics.map((topicName) => [
+  config.paths.topics.map((topicName) => [
     topicName,
     require(`../../../data/resources/json/${topicName}.json`),
   ])

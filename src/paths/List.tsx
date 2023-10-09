@@ -1,7 +1,8 @@
 import React from 'react'
 import NextLink from 'next/link'
-import { Paths } from '../../data'
+import { Path, Paths } from '../../data'
 import { List, ListItem, Link, Typography, Box, Underline } from '../theme'
+import config from '../config'
 
 type Props = Omit<React.ComponentProps<typeof List>, 'children'> & {
   paths: Paths
@@ -20,7 +21,12 @@ const PathsList = ({ paths, ...props }: Props) => (
             <NextLink href={`/paths/${pathName}`} passHref legacyBehavior>
               <Link data-testid={pathsListItemLinkTestId}>
                 <Typography variant="h6" component="span">
-                  The <Underline>{path.title}</Underline> path
+                  The{' '}
+                  <Underline>
+                    {/*TODO*/}
+                    {config.paths.topicsTitles[path.topic as Path['topic']]}
+                  </Underline>{' '}
+                  path
                 </Typography>
               </Link>
             </NextLink>

@@ -23,7 +23,7 @@ const flattenPathResources = (path: Path) => {
 // TODO: https://github.com/cypress-io/cypress-example-todomvc/compare/master...NicholasBoll:cypress-example-todomvc:feat/type-safe-alias
 
 describe("Paths' resources", () => {
-  config.topics.forEach((topicName) => {
+  config.paths.topics.forEach((topicName) => {
     describe(topicName, () => {
       it("Lists non overlapping urls in 'main' and 'resources'", () => {
         cy.task<Path>('readPath', topicName).then(({ main, resources }) => {
