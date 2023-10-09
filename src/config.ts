@@ -19,10 +19,6 @@ const topics: Array<Path['topic']> = [
   PathTopic.lua,
 ]
 
-export type Topic =
-  | (typeof topics)[number]
-  | `${(typeof topics)[number]}.${string}`
-
 const topicsTitles: Record<PathTopic, string> = {
   'commandline.cliapps': 'CLI apps',
   'commandline.dotfiles': 'Dotfiles',
