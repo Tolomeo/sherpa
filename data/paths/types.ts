@@ -74,8 +74,6 @@ export interface SerializedPath {
   prev?: Array<PathTopic>
 }
 
-export type SerializedPaths = Record<string, SerializedPath>
-
 export interface Path {
   topic: PathTopic
   logo: string | null
@@ -87,5 +85,3 @@ export interface Path {
   next: Array<PathTopic> | null
   prev: Array<PathTopic> | null
 }
-
-export type Paths = Record<string, { topic: string }>
