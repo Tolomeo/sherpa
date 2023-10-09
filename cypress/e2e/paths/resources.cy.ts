@@ -1,4 +1,4 @@
-import { SerializedResource, Path, SerializedPath } from '../../../data'
+import { Path, Resource } from '../../../data'
 import config from '../../../src/config'
 
 const flattenPathResources = (path: Path) => {
@@ -23,32 +23,28 @@ const flattenPathResources = (path: Path) => {
 // TODO: https://github.com/cypress-io/cypress-example-todomvc/compare/master...NicholasBoll:cypress-example-todomvc:feat/type-safe-alias
 
 describe("Paths' resources", () => {
-  config.topics.forEach((topicName) => {
+  config.paths.topics.forEach((topicName) => {
     describe(topicName, () => {
       it("Lists non overlapping urls in 'main' and 'resources'", () => {
-        cy.task<SerializedPath>('getSerializedPath', topicName).then(
-          ({ main, resources }) => {
-            if (main && resources) {
-              const overlappingUrls = main.filter((url) =>
-                resources.includes(url),
-              )
-              expect(overlappingUrls).to.be.empty
-            }
-          },
-        )
+        cy.task<Path>('readPath', topicName).then(({ main, resources }) => {
+          if (main && resources) {
+            const overlappingUrls = main.filter((url) =>
+              resources.includes(url),
+            )
+            expect(overlappingUrls).to.be.empty
+          }
+        })
       })
 
       it("Uses all available topic's resources", () => {
-        cy.task<Path>('getPath', topicName).then((path) =>
+        cy.task<Path>('readPath', topicName).then((path) =>
           cy
-            .task<SerializedResource[]>('getSerializedResources', topicName)
+            .task<Resource[]>('readSerializedResources', topicName)
             .then((pathSerializedResources) => {
               const pathResources = flattenPathResources(path)
               const unusedResources = pathSerializedResources.filter(
                 ({ url }) =>
-                  !pathResources.find(
-                    (pathResource) => pathResource.url === url,
-                  ),
+                  !pathResources.find((pathResource) => pathResource === url),
               )
 
               expect(unusedResources).to.be.empty

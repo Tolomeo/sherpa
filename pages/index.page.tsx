@@ -4,12 +4,10 @@ import {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { PathsList as TPathsList } from '../data/paths'
-import { getPathsList } from '../data/paths/utils'
-import { Resources } from '../data/resources'
-import { getResources } from '../data/resources/utils'
+import { Resource } from '../data/resources'
+import { readResources } from '../data/resources/read'
 import {
-  Layout,
+  LayoutProvider,
   LayoutHeader,
   LayoutHero,
   LayoutContainer,
@@ -19,22 +17,18 @@ import {
 } from '../src/theme'
 import { AlternateSourcesList } from '../src/resources'
 import { List as PathsList } from '../src/paths'
-import config from '../src/config'
 
 interface StaticProps {
-  paths: TPathsList
-  alternateSources: Resources
+  alternateSources: Resource[]
 }
 
 export const getStaticProps: GetStaticProps<StaticProps> = async (
   _: GetStaticPropsContext,
 ) => {
-  const paths = getPathsList(config.topics)
-  const alternateSources = getResources('alternatives')
+  const alternateSources = readResources('alternatives')
 
   return {
     props: {
-      paths,
       alternateSources,
     },
   }
@@ -70,11 +64,11 @@ const PageHead = () => (
   </Head>
 )
 
-export default function Home({ paths, alternateSources }: Props) {
+export default function Home({ alternateSources }: Props) {
   return (
     <>
       <PageHead />
-      <Layout>
+      <LayoutProvider>
         <LayoutHeader />
 
         <main>
@@ -111,7 +105,7 @@ export default function Home({ paths, alternateSources }: Props) {
               </Grid>
             </Box>
             <Box py={2}>
-              <PathsList paths={paths} />
+              <PathsList />
             </Box>
           </LayoutContainer>
 
@@ -140,7 +134,7 @@ export default function Home({ paths, alternateSources }: Props) {
             </LayoutContainer>
           </Box>
         </main>
-      </Layout>
+      </LayoutProvider>
     </>
   )
 }

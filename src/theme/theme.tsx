@@ -82,6 +82,15 @@ export const createTheme = (mode: ThemeMode) => {
           },
         },
       },
+      MuiTimelineDot: {
+        styleOverrides: {
+          root: {
+            ['&:not(:empty)']: {
+              padding: 0,
+            },
+          },
+        },
+      },
       MuiTimelineItem: {
         styleOverrides: {
           positionRight: {
@@ -124,7 +133,9 @@ export const createTheme = (mode: ThemeMode) => {
       MuiListItemIcon: {
         styleOverrides: {
           root: {
-            minWidth: 28,
+            minWidth: 36,
+            justifyContent: 'center',
+            marginInlineEnd: 16,
           },
         },
       },
@@ -170,6 +181,11 @@ export const createTheme = (mode: ThemeMode) => {
         defaultProps: {
           disableRipple: true,
           disableFocusRipple: true,
+        },
+      },
+      MuiCheckbox: {
+        defaultProps: {
+          disableRipple: true,
         },
       },
     },

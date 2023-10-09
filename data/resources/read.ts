@@ -1,11 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import {
-  SerializedResources,
-  SerializedResource,
-  Resource,
-  Resources,
-} from './types'
+import { SerializedResources, SerializedResource, Resource } from './types'
 import { validateSerializedResources } from './schema'
 
 const parseSerializedResource = (serializedResource: SerializedResource) => {
@@ -28,23 +23,25 @@ const parseSerializedResource = (serializedResource: SerializedResource) => {
   return parsedResource
 }
 
-const parseSerializedResources = (serializedResources: SerializedResources) =>
-  serializedResources.reduce((resourcesMap, serializedResource) => {
-    if (resourcesMap[serializedResource.url]) {
+const parseSerializedResources = (serializedResources: SerializedResources) => {
+  const uniqueResources: Record<SerializedResource['url'], true> = {}
+
+  return serializedResources.map((serializedResource) => {
+    if (uniqueResources[serializedResource.url]) {
       throw new Error(
         `SerializedResource duplication error[ ${serializedResource.url} ]:
-				1: ${JSON.stringify(resourcesMap[serializedResource.url], null, 4)}
+				1: ${JSON.stringify(uniqueResources[serializedResource.url], null, 4)}
 				2: ${JSON.stringify(serializedResource, null, 4)}`,
       )
     }
 
-    resourcesMap[serializedResource.url] =
-      parseSerializedResource(serializedResource)
+    uniqueResources[serializedResource.url] = true
 
-    return resourcesMap
-  }, {} as Resources)
+    return parseSerializedResource(serializedResource)
+  })
+}
 
-export const getSerializedResources = (topicName: string) => {
+export const readSerializedResources = (topicName: string) => {
   const pathFilepath = path.join(
     process.cwd(),
     `data/resources/json/${topicName}.json`,
@@ -65,6 +62,6 @@ export const getSerializedResources = (topicName: string) => {
   return resourcesData as SerializedResources
 }
 
-export const getResources = (topicName: string) => {
-  return parseSerializedResources(getSerializedResources(topicName))
+export const readResources = (topicName: string) => {
+  return parseSerializedResources(readSerializedResources(topicName))
 }

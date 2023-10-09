@@ -23,7 +23,3 @@ export interface Resource {
   source: string
   type: ResourceType
 }
-
-export type Resources = {
-  [resourceId: string]: Resource
-}

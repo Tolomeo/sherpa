@@ -1,9 +1,9 @@
 import React from 'react'
-import { Resources } from '../../data'
-import { Link, Typography, List, Box } from '../theme'
+import { Resource } from '../../data'
+import { Link, Typography, Box, List, ListItem } from '../theme'
 
 type Props = {
-  resources: Resources
+  resources: Resource[]
 }
 
 const alternativesListTestId = 'alternatives.list'
@@ -14,25 +14,27 @@ const alternativesListItemTitleTestId = 'alternatives.list.item.title'
 const AlternateSourcesList = ({ resources }: Props) => {
   return (
     <Box data-testid={alternativesListTestId}>
-      <List bulleted={false}>
+      <List>
         {Object.entries(resources).map(([resourceId, resource]) => (
-          <Box data-testid={alternativesListItemTestId} key={resourceId}>
-            <Link
-              data-testid={alternativesListItemLinkTestId}
-              href={resource.url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Typography
-                data-testid={alternativesListItemTitleTestId}
-                component="span"
-                variant="h6"
-                display="block"
+          <ListItem key={resourceId}>
+            <Box data-testid={alternativesListItemTestId}>
+              <Link
+                data-testid={alternativesListItemLinkTestId}
+                href={resource.url}
+                target="_blank"
+                rel="noreferrer"
               >
-                {resource.title}
-              </Typography>
-            </Link>
-          </Box>
+                <Typography
+                  data-testid={alternativesListItemTitleTestId}
+                  component="span"
+                  variant="h6"
+                  display="block"
+                >
+                  {resource.title}
+                </Typography>
+              </Link>
+            </Box>
+          </ListItem>
         ))}
       </List>
     </Box>

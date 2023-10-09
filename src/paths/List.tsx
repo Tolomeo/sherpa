@@ -1,29 +1,30 @@
 import React from 'react'
 import NextLink from 'next/link'
-import { PathsList as TPathsList } from '../../data'
-import { List, Link, Typography, Box, Underline } from '../theme'
+import { Path } from '../../data'
+import { List, ListItem, Link, Typography, Box, Underline } from '../theme'
+import config from '../config'
 
 type Props = Omit<React.ComponentProps<typeof List>, 'children'> & {
-  paths: TPathsList
+  paths?: Array<Path['topic']>
 }
 
-const pathsListTestId = 'paths.list'
-const pathsListItemTestId = 'paths.list.item'
-const pathsListItemLinkTestId = 'paths.list.item.link'
-
-const PathsList = ({ paths, ...props }: Props) => (
-  <Box data-testid={pathsListTestId}>
-    <List bulleted={false} {...props}>
-      {Object.entries(paths).map(([pathName, path]) => (
-        <Box key={pathName} data-testid={pathsListItemTestId} component="span">
-          <NextLink href={`/paths/${pathName}`} passHref legacyBehavior>
-            <Link data-testid={pathsListItemLinkTestId}>
-              <Typography variant="h6" component="span">
-                The <Underline>{path.title}</Underline> path
-              </Typography>
-            </Link>
-          </NextLink>
-        </Box>
+const PathsList = ({ paths = config.paths.topics, ...props }: Props) => (
+  <Box>
+    <List {...props}>
+      {paths.map((pathName) => (
+        <ListItem marker={<ListItem.Bullet />} key={pathName}>
+          <Box component="span">
+            <NextLink href={`/paths/${pathName}`} passHref legacyBehavior>
+              <Link>
+                <Typography variant="h6" component="span">
+                  The{' '}
+                  <Underline>{config.paths.topicsTitles[pathName]}</Underline>{' '}
+                  path
+                </Typography>
+              </Link>
+            </NextLink>
+          </Box>
+        </ListItem>
       ))}
     </List>
   </Box>

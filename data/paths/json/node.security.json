@@ -1,5 +1,4 @@
 {
-  "title": "Security",
   "resources": [
     "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html",
     "https://github.com/lirantal/awesome-nodejs-security"

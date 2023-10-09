@@ -1,6 +1,6 @@
 import Ajv, { JSONSchemaType } from 'ajv'
 import ajvErrors from 'ajv-errors'
-import { SerializedPath } from './types'
+import { SerializedPath, PathTopic } from './types'
 
 const ajv = new Ajv({ allErrors: true })
 ajvErrors(ajv)
@@ -8,7 +8,6 @@ ajvErrors(ajv)
 const serializedPathSchema: JSONSchemaType<SerializedPath> = {
   type: 'object',
   properties: {
-    title: { type: 'string', minLength: 2 },
     logo: {
       type: 'string',
       pattern: '^<svg.+/svg>$',
@@ -83,8 +82,20 @@ const serializedPathSchema: JSONSchemaType<SerializedPath> = {
       nullable: true,
     },
   },
-  required: ['title'],
+  required: [],
   additionalProperties: false,
+}
+
+export const validatePathTopic = (topic: string) => {
+  ajv.validate(
+    {
+      type: 'string',
+      enum: Object.values(PathTopic),
+    },
+    topic,
+  )
+
+  return ajv.errors ? ajv.errors : null
 }
 
 export const validateSerializedPath = (data: SerializedPath) => {
