@@ -5,57 +5,53 @@ import { validateSerializedPath } from './schema'
 
 const parseSerializedPath = (
   topicName: string,
-  {
+  serializedPath: SerializedPath,
+): Path => {
+  const dataValidationErrors = validateSerializedPath(serializedPath)
+
+  if (dataValidationErrors) {
+    throw new Error(
+      `'${topicName}' serialized data schema error[ ${JSON.stringify(
+        topicName,
+        null,
+        2,
+      )} ]:
+				${JSON.stringify(dataValidationErrors, null, 2)}`,
+    )
+  }
+
+  const { title, logo, hero, notes, resources, main, children, prev, next } =
+    serializedPath
+
+  return {
+    topic: topicName,
     title,
-    logo,
-    hero,
-    notes,
-    resources,
-    main,
-    children,
-    prev,
-    next,
-  }: SerializedPath,
-): Path => ({
-  topic: topicName,
-  title,
-  logo: logo || null,
-  hero: hero || null,
-  notes: notes || null,
-  resources: resources || null,
-  main: main || null,
-  children: (() => {
-    if (!children) return null
+    logo: logo || null,
+    hero: hero || null,
+    notes: notes || null,
+    resources: resources || null,
+    main: main || null,
+    children: (() => {
+      if (!children) return null
 
-    return children.map((childPath) => readPath(childPath))
-  })(),
-  next: (() => {
-    if (!next) return null
+      return children.map((childPath) => readPath(childPath))
+    })(),
+    next: (() => {
+      if (!next) return null
 
-    return readPathsList(next)
-  })(),
-  prev: (() => {
-    if (!prev) return null
+      return readPathsList(next)
+    })(),
+    prev: (() => {
+      if (!prev) return null
 
-    return readPathsList(prev)
-  })(),
-})
+      return readPathsList(prev)
+    })(),
+  }
+}
 
 export const readSerializedPath = (pathName: string) => {
   const filepath = path.join(process.cwd(), `data/paths/json/${pathName}.json`)
   const data = JSON.parse(fs.readFileSync(filepath, 'utf-8'))
-  const dataValidationErrors = validateSerializedPath(data)
-
-  if (dataValidationErrors) {
-    throw new Error(
-      `'${pathName}' serialized data schema error[ ${JSON.stringify(
-        pathName,
-        null,
-        2,
-      )} ]:
-				${JSON.stringify(dataValidationErrors, null, 4)}`,
-    )
-  }
 
   return data as SerializedPath
 }
