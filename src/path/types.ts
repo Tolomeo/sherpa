@@ -1,12 +1,12 @@
-import { Resource, ResourceType, Path, Paths } from '../../data'
+import { Resource, ResourceType, Path } from '../../data'
 
-export type { Resource, Path, Paths }
+export type { Resource, Path }
 
 export { ResourceType }
 
 export interface PopulatedPath {
-  topic: string
-  title: Path['title']
+  topic: Path['topic']
+  title: string
   logo: Path['logo']
   hero: Path['hero']
   notes: Path['notes']
