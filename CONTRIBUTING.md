@@ -30,7 +30,7 @@ Import and spread the new resources in `/data/resources/index.ts`.
 
 You will find paths definitions in `/data/paths`.
 Paths list only the url of resources and they will be enriched with full data at build time.
-`/data/paths/utils.ts` contains paths' schema definition.
+`/data/paths/read.ts` contains paths' schema definition.
 To add a path create a new json file here (ex: `/data/paths/cobol.json`) containing the path.
 Import the newly created path and add it to other paths in `/data/paths/index.ts`.
 

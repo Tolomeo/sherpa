@@ -5,9 +5,9 @@ import {
 } from 'next'
 import Head from 'next/head'
 import { Paths } from '../data/paths'
-import { readPathsList } from '../data/paths/utils'
 import { Resource } from '../data/resources'
-import { readResources } from '../data/resources/utils'
+import { readPathsList } from '../data/paths/read'
+import { readResources } from '../data/resources/read'
 import {
   LayoutProvider,
   LayoutHeader,
