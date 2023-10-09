@@ -4,9 +4,7 @@ import {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { Paths } from '../data/paths'
 import { Resource } from '../data/resources'
-import { readPathsList } from '../data/paths/read'
 import { readResources } from '../data/resources/read'
 import {
   LayoutProvider,
@@ -19,22 +17,18 @@ import {
 } from '../src/theme'
 import { AlternateSourcesList } from '../src/resources'
 import { List as PathsList } from '../src/paths'
-import config from '../src/config'
 
 interface StaticProps {
-  paths: Paths
   alternateSources: Resource[]
 }
 
 export const getStaticProps: GetStaticProps<StaticProps> = async (
   _: GetStaticPropsContext,
 ) => {
-  const paths = readPathsList(config.paths.topics as unknown as string[])
   const alternateSources = readResources('alternatives')
 
   return {
     props: {
-      paths,
       alternateSources,
     },
   }
@@ -70,7 +64,7 @@ const PageHead = () => (
   </Head>
 )
 
-export default function Home({ paths, alternateSources }: Props) {
+export default function Home({ alternateSources }: Props) {
   return (
     <>
       <PageHead />
@@ -111,7 +105,7 @@ export default function Home({ paths, alternateSources }: Props) {
               </Grid>
             </Box>
             <Box py={2}>
-              <PathsList paths={paths} />
+              <PathsList />
             </Box>
           </LayoutContainer>
 

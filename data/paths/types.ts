@@ -63,21 +63,18 @@ export interface PathHero {
 
 export type PathNotes = string[]
 
-export interface SerializedPath<PathNames = string> {
+export interface SerializedPath {
   logo?: string
   hero?: PathHero
   notes?: PathNotes
   resources?: Array<string>
   main?: Array<string>
   children?: Array<string>
-  next?: Array<PathNames>
-  prev?: Array<PathNames>
+  next?: Array<PathTopic>
+  prev?: Array<PathTopic>
 }
 
-export type SerializedPaths<PathNames = string> = Record<
-  string,
-  SerializedPath<PathNames>
->
+export type SerializedPaths = Record<string, SerializedPath>
 
 export interface Path {
   topic: PathTopic
@@ -87,8 +84,8 @@ export interface Path {
   resources: Array<Resource['url']> | null
   main: Array<Resource['url']> | null
   children: Array<Path> | null
-  next: Paths | null
-  prev: Paths | null
+  next: Array<PathTopic> | null
+  prev: Array<PathTopic> | null
 }
 
 export type Paths = Record<string, { topic: string }>

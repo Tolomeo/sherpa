@@ -35,16 +35,8 @@ const parseSerializedPath = (
 
       return children.map((childPath) => readPath(childPath))
     })(),
-    next: (() => {
-      if (!next) return null
-
-      return readPathsList(next)
-    })(),
-    prev: (() => {
-      if (!prev) return null
-
-      return readPathsList(prev)
-    })(),
+    next: next || null,
+    prev: prev || null,
   }
 }
 

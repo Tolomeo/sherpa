@@ -10,7 +10,6 @@ import {
   Typography,
 } from '../../theme'
 import { List as PathsList } from '../../paths'
-import { usePathContext } from '../Provider'
 
 const CloseLayoutDrawerOnRouteChange = () => {
   const router = useRouter()
@@ -28,8 +27,6 @@ const CloseLayoutDrawerOnRouteChange = () => {
 }
 
 const PathHeader = () => {
-  const { paths } = usePathContext()
-
   return (
     <>
       <LayoutHeader>
@@ -43,7 +40,7 @@ const PathHeader = () => {
               <Typography variant="h5" component="p">
                 Need a compass?
               </Typography>
-              <PathsList paths={paths} />
+              <PathsList />
             </Stack>
           </nav>
 

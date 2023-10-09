@@ -5,11 +5,10 @@ import React, {
   useMemo,
   useState,
 } from 'react'
-import { Resource, Path, Paths, PopulatedPath } from './types'
+import { Resource, Path, PopulatedPath } from './types'
 import { populatePath, useResourcesCompletionStore } from './utils'
 
 type PathContextValue = {
-  paths: Paths
   path: PopulatedPath
 }
 
@@ -99,20 +98,18 @@ export const usePathResourcesCompletion = (
 type Props = {
   path: Path
   resources: Resource[]
-  paths: Paths
   children: React.ReactNode
 }
 
-const PathContextProvider = ({ children, path, resources, paths }: Props) => {
+const PathContextProvider = ({ children, path, resources }: Props) => {
   const [populatedPath, setPopulatedPath] = useState(
     populatePath(path, resources),
   )
   const context = useMemo(
     () => ({
-      paths,
       path: populatedPath,
     }),
-    [populatedPath, paths],
+    [populatedPath],
   )
 
   useEffect(() => {

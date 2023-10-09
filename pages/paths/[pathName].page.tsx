@@ -1,8 +1,8 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import Head from 'next/head'
-import { Paths, Path, Resource } from '../../data'
-import { readPathsList, readPath } from '../../data/paths/read'
+import { Path, Resource } from '../../data'
+import { readPath } from '../../data/paths/read'
 import { readResources } from '../../data/resources/read'
 import PathBody from '../../src/path'
 import config from '../../src/config'
@@ -15,7 +15,6 @@ interface StaticProps {
   topic: (typeof config.paths.topics)[number]
   path: Path
   resources: Resource[]
-  paths: Paths
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -32,21 +31,19 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   const topic = params!.pathName as (typeof config.paths.topics)[number]
   const path = readPath(topic)
   const resources = readResources(topic)
-  const paths = readPathsList(config.paths.topics as unknown as string[])
 
   return {
     props: {
       topic,
       path,
       resources,
-      paths,
     },
   }
 }
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export default function PathPage({ path, paths, resources }: Props) {
+export default function PathPage({ path, resources }: Props) {
   return (
     <>
       <Head>
@@ -82,7 +79,7 @@ export default function PathPage({ path, paths, resources }: Props) {
         } path`}</title>
       </Head>
 
-      <PathBody path={path} resources={resources} paths={paths} />
+      <PathBody path={path} resources={resources} />
     </>
   )
 }

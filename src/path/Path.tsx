@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Path, Paths, Resource } from '../../data'
+import { Path, Resource } from '../../data'
 import { LayoutProvider } from '../../src/theme'
 import Provider from './Provider'
 import Header from './Header'
@@ -10,10 +10,9 @@ import { useResourcesCompletionStore } from './utils'
 type Props = {
   path: Path
   resources: Resource[]
-  paths: Paths
 }
 
-const Path = ({ path, resources, paths }: Props) => {
+const Path = ({ path, resources }: Props) => {
   const { prune } = useResourcesCompletionStore()
 
   useEffect(() => {
@@ -25,7 +24,7 @@ const Path = ({ path, resources, paths }: Props) => {
   return (
     <main>
       <LayoutProvider>
-        <Provider path={path} resources={resources} paths={paths}>
+        <Provider path={path} resources={resources}>
           <Header />
           <Content />
           <Footer />
