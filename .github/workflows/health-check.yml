@@ -8,7 +8,7 @@ on:
 jobs:
   Health-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 45 # higher timeout because network requests can be slow in CI
+    timeout-minutes: 90 # higher timeout because network requests can be slow in CI
     steps:
       - uses: actions/checkout@v2
       - name: Path resources healthcheck
