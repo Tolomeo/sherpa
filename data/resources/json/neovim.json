@@ -1,6 +1,6 @@
 [
   {
-    "title": "Learn Vim For the Last Time: A Tutorial and Primer",
+    "title": "Learn Vim For the Last Time",
     "url": "https://danielmiessler.com/study/vim",
     "type": "basics"
   },
@@ -84,11 +84,6 @@
     "title": "Vim Regular Expressions 101",
     "url": "http://vimregex.com",
     "type": "advanced"
-  },
-  {
-    "title": "Best of VIM Tips",
-    "url": "http://zzapper.co.uk/vimtips.html",
-    "type": "how-to"
   },
   {
     "title": "How to Do 90% of What Plugins Do (With Just Vim)",

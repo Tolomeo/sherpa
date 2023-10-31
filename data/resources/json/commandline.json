@@ -210,7 +210,7 @@
     "type": "advanced"
   },
   {
-    "title": "GNU AWK",
+    "title": "CLI text processing with GNU awk",
     "url": "https://learnbyexample.github.io/learn_gnuawk/",
     "type": "advanced"
   },
@@ -285,7 +285,7 @@
     "type": "advanced"
   },
   {
-    "title": "Bash Tutorials for Beginners",
+    "title": "Bash Beginner Tutorials",
     "url": "https://linuxhandbook.com/tag/bash-beginner/",
     "type": "basics"
   },
@@ -599,7 +599,7 @@
     "type": "basics"
   },
   {
-    "title": "Getting Started with tmux",
+    "title": "Learn tmux",
     "url": "https://www.youtube.com/playlist?list=PLT98CRl2KxKGiyV1u6wHDV8VwcQdzfuKe",
     "source": "youtube.com/@LearnLinuxTV",
     "type": "basics"

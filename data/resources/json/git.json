@@ -185,11 +185,6 @@
     "type": "reference"
   },
   {
-    "title": "GitSheet",
-    "url": "https://gitsheet.wtf",
-    "type": "reference"
-  },
-  {
     "title": "git-cheat-sheet",
     "url": "https://github.com/arslanbilal/git-cheat-sheet",
     "type": "reference"
@@ -292,7 +287,7 @@
     "type": "advanced"
   },
   {
-    "title": "Git Notes: git's coolest, most unloved­ feature",
+    "title": "Git Notes: git's coolest, most unloved­ feature",
     "url": "https://ikiwiki.tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/",
     "type": "advanced"
   },

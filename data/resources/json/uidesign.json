@@ -96,11 +96,6 @@
     "type": "basics"
   },
   {
-    "title": "Intro to the Design of Everyday Things",
-    "url": "https://www.udacity.com/course/intro-to-the-design-of-everyday-things--design101",
-    "type": "basics"
-  },
-  {
     "title": "UI / UX Design",
     "url": "https://www.coursera.org/specializations/ui-ux-design",
     "type": "basics"
@@ -444,11 +439,6 @@
     "title": "One Formula To Rule Them All: The ROI Of A Design System",
     "url": "https://www.smashingmagazine.com/2022/09/formula-roi-design-system/",
     "type": "advanced"
-  },
-  {
-    "title": "An Introduction to Constraint Based Design Systems",
-    "url": "https://www.colepeters.dev/posts/an-introduction-to-constraint-based-design-systems",
-    "type": "basics"
   },
   {
     "title": "Getting Started with Design Systems",
@@ -837,7 +827,7 @@
     "type": "feed"
   },
   {
-    "title": "Web Designer Depot",
+    "title": "Web Design Blog",
     "url": "https://www.webdesignerdepot.com/",
     "type": "feed"
   },
