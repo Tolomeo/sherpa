@@ -86,11 +86,6 @@
     "type": "advanced"
   },
   {
-    "title": "Best of VIM Tips",
-    "url": "http://zzapper.co.uk/vimtips.html",
-    "type": "how-to"
-  },
-  {
     "title": "How to Do 90% of What Plugins Do (With Just Vim)",
     "url": "https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs",
     "source": "youtube.com/c/ThoughtbotVideo",

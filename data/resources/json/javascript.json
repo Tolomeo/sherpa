@@ -123,11 +123,6 @@
     "type": "basics"
   },
   {
-    "title": "JavaScript Testing",
-    "url": "https://www.udacity.com/course/javascript-testing--ud549",
-    "type": "basics"
-  },
-  {
     "title": "Jest JavaScript Testing Framework",
     "url": "https://testautomationu.applitools.com/jest-testing-tutorial",
     "type": "basics"
@@ -460,7 +455,7 @@
   },
   {
     "title": "State of JavaScript",
-    "url": "https://stateofjs.com",
+    "url": "https://stateofjs.com/en-US",
     "type": "feed"
   },
   {
