@@ -27,6 +27,8 @@ const checkResourceHealth = (resource: SerializedResource) => {
     case 'programmingpercy.tech':
     case 'gogognome.nl':
     case 'superfastpython.com':
+    case 'phuoc.ng':
+    case 'tsh.io':
       return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h1' })
     case 'blob42.xyz':
       return cy.checkHealthByUrlRequest(resource, { titleSelector: 'h3' })
