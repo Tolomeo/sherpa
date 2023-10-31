@@ -42,13 +42,10 @@ const checkResourceHealth = (resource: SerializedResource) => {
     case 'gameaccessibilityguidelines.com':
     case 'app.codecrafters.io':
     case 'animatedbackgrounds.me':
-    case 'git.herrbischoff.com':
     case 'linux.org':
     case 'conventionalcommits.org':
     case 'harrisoncramer.me':
-    case 'bash.cyberciti.biz':
     case 'tldp.org':
-    case 'codementor.io':
     case 'snipcart.com':
       return cy.checkHealthByVisit(resource)
     case 'reactdigest.net':
@@ -58,6 +55,7 @@ const checkResourceHealth = (resource: SerializedResource) => {
     case 'git.herrbischoff.com':
     case 'linux.org':
     case 'bash.cyberciti.biz':
+    case 'codementor.io':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
       })
