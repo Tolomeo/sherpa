@@ -18,12 +18,9 @@ const checkResourceHealth = (resource: SerializedResource) => {
 
   switch (host) {
     case 'youtube.com':
-      // skipping consent check page
-      // TODO: evaluate using youtube apis instead?
-      cy.setCookie('CONSENT', 'YES+cb.20220215-09-p0.en-GB+F+903', {
-        domain: '.youtube.com',
+      return cy.checkHealthByYoutubeDataAPIv3Request(resource, {
+        apikey: Cypress.env('YOUTUBE_API_KEY'),
       })
-      return cy.checkHealthByUrlRequest(resource)
     case 'programmingpercy.tech':
     case 'gogognome.nl':
     case 'superfastpython.com':
