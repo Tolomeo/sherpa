@@ -8,7 +8,10 @@ type CheckHealthOptions = {
 declare global {
   namespace Cypress {
     interface Chainable {
-      checkHealthByVisit(value: SerializedResource, options?: CheckHealthOptions): void
+      checkHealthByVisit(
+        value: SerializedResource,
+        options?: CheckHealthOptions,
+      ): void
 
       checkHealthByUrlRequest(
         value: SerializedResource,
@@ -16,6 +19,11 @@ declare global {
       ): void
 
       checkHealthByBinaryRequest(value: SerializedResource): void
+
+      checkHealthByYoutubeDataAPIv3Request(
+        value: SerializedResource,
+        options: { apikey: string },
+      ): void
 
       checkHealthByScraperRequest(
         value: SerializedResource,
@@ -89,6 +97,56 @@ const checkHealthByBinaryRequest = (resource: SerializedResource) => {
   })
 }
 
+// NB: this type contains only what we are checking for in the response, when we pass 'snippet' as value for 'part' query parameter
+// the actual response is richer
+type YoutubeDataApiResponse = {
+  items: Array<{
+    snippet: {
+      title: string
+    }
+  }>
+  pageInfo: {
+    totalResults: number
+  }
+}
+
+const checkHealthByYoutubeDataAPIv3Request = (
+  resource: SerializedResource,
+  { apikey }: { apikey: string },
+) => {
+  const { host, pathname, searchParams } = new URL(resource.url)
+  let resourceType: string
+  let id: string
+
+  switch (true) {
+    case host === 'www.youtube.com' && pathname === '/playlist':
+      resourceType = 'playlists'
+      id = searchParams.get('list')!
+      break
+    case host === 'www.youtube.com' && pathname === '/watch':
+      resourceType = 'videos'
+      id = searchParams.get('v')!
+      break
+    default:
+      return expect.fail(
+        `The resource url ${resource.url} is not recognizable as a valid video or playlist youtube url`,
+      )
+  }
+
+  const url = `https://youtube.googleapis.com/youtube/v3/${resourceType}?id=${id}&key=${apikey}&part=snippet`
+
+  cy.request<YoutubeDataApiResponse>({
+    url,
+    log: false,
+  }).then((response) => {
+    expect(response.body.pageInfo.totalResults).eql(
+      1,
+      `No ${resourceType} found matching the ${id} id`,
+    )
+    expect(response.body.items[0].snippet.title).to.contain(resource.title)
+  })
+}
+
 const checkHealthByScraperRequest = (
   resource: SerializedResource,
   {
@@ -138,4 +196,8 @@ const checkHealthByScraperRequest = (
 Cypress.Commands.add('checkHealthByVisit', checkHealthByVisit)
 Cypress.Commands.add('checkHealthByUrlRequest', checkHealthByUrlRequest)
 Cypress.Commands.add('checkHealthByBinaryRequest', checkHealthByBinaryRequest)
+Cypress.Commands.add(
+  'checkHealthByYoutubeDataAPIv3Request',
+  checkHealthByYoutubeDataAPIv3Request,
+)
 Cypress.Commands.add('checkHealthByScraperRequest', checkHealthByScraperRequest)
