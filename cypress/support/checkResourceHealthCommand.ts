@@ -128,7 +128,7 @@ const checkHealthByYoutubeDataAPIv3Request = (
       id = searchParams.get('v')!
       break
     default:
-      return expect.fail(
+      return assert.fail(
         `The resource url ${resource.url} is not recognizable as a valid video or playlist youtube url`,
       )
   }
@@ -139,9 +139,9 @@ const checkHealthByYoutubeDataAPIv3Request = (
     url,
     log: false,
   }).then((response) => {
-    expect(response.body.pageInfo.totalResults).eql(
+    expect(response.body.pageInfo.totalResults).eq(
       1,
-      `No ${resourceType} found matching the ${id} id`,
+      `Should find one match returned by the api`,
     )
     expect(response.body.items[0].snippet.title).to.contain(resource.title)
   })
