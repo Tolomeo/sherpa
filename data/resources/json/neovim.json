@@ -337,11 +337,6 @@
     "type": "advanced"
   },
   {
-    "title": "Dot-Repeat in Vim and Neovim",
-    "url": "https://www.vikasraj.dev/blog/vim-dot-repeat",
-    "type": "advanced"
-  },
-  {
     "title": "do-nothing.vim",
     "url": "https://github.com/michaelb/do-nothing.vim",
     "type": "curiosity"
