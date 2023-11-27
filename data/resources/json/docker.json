@@ -325,11 +325,6 @@
     "type": "how-to"
   },
   {
-    "title": "Dockerizing a Node.js web app",
-    "url": "https://nodejs.org/en/docs/guides/nodejs-docker-webapp",
-    "type": "how-to"
-  },
-  {
     "title": "Docker Compose: From Local to Amazon ECS",
     "url": "https://www.docker.com/blog/docker-compose-from-local-to-amazon-ecs",
     "type": "how-to"

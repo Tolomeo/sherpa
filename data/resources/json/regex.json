@@ -93,11 +93,6 @@
     "type": "how-to"
   },
   {
-    "title": "RegexGuide",
-    "url": "https://regex.guide",
-    "type": "basics"
-  },
-  {
     "title": "i Hate Regex - The Regex Cheat Sheet",
     "url": "https://ihateregex.io",
     "type": "reference"
