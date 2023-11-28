@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 import { SerializedResource } from '../../data'
+import { recurse } from 'cypress-recurse'
 
 type CheckHealthOptions = {
   titleSelector?: string
@@ -160,32 +161,50 @@ const checkHealthByScraperRequest = (
     premium?: boolean
   },
 ) => {
+  // apparently the scraper api doesn't accept 'false' as valid qs parameter
+  // so we can only pass 'true' or omit the url parameter entirely
+  // that is why we are not using RequestOptions.qs here
   let url = `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
     resource.url,
   )}`
-
   if (render) {
     url = `${url}&render=true`
   }
-
   if (premium) {
     url = `${url}&premium=true`
   }
 
-  // waiting for enough time to avoid 429 error (too many concurrent requests)
-  cy.wait(1000)
-
-  cy.request({
+  const requestOptions: Partial<Cypress.RequestOptions> = {
     url,
     headers: {
       apikey,
     },
-    log: false,
-    // longer timeout to make sure the request process ends on the scraper side
-    // before possibly calling the service again
+    failOnStatusCode: false,
+  }
+
+  const scraperRequest = () => cy.request<string>(requestOptions)
+  const retryUntil = ({ status }: Cypress.Response<string>) => status !== 429
+
+  return recurse(scraperRequest, retryUntil, {
     timeout: 60000,
-  }).then((response) => {
-    const document = new DOMParser().parseFromString(response.body, 'text/html')
+    delay: 5000,
+    limit: 6,
+  }).then((scraperResponse) => {
+    expect(scraperResponse.status).within(
+      200,
+      399,
+      'Scraping request returned ' +
+        scraperResponse.status +
+        ': ' +
+        scraperResponse.statusText +
+        '\n' +
+        JSON.stringify(scraperResponse, null, 2),
+    )
+
+    const document = new DOMParser().parseFromString(
+      scraperResponse.body,
+      'text/html',
+    )
     const titleElement = document.querySelector(titleSelector)
     const titleElementText = cleanTitleString(titleElement?.textContent || '')
 
