@@ -174,17 +174,20 @@ const checkHealthByScraperRequest = (
     url = `${url}&premium=true`
   }
 
-  const requestOptions: Partial<Cypress.RequestOptions> = {
-    url,
-    headers: {
-      apikey,
-    },
-    failOnStatusCode: false,
-  }
+  const scraperRequest = () =>
+    cy.request<string>({
+      url,
+      headers: {
+        apikey,
+      },
+      failOnStatusCode: false,
+    })
+  const retryUntil = (scraperRequest: Cypress.Response<string>) =>
+    scraperRequest.status !== 429
 
-  const scraperRequest = () => cy.request<string>(requestOptions)
-  const retryUntil = ({ status }: Cypress.Response<string>) => status !== 429
-
+  // we are repeating the request up to  6 times, with a 5s delay between repeatitions
+  // to handle the api returning 429: Too many requests
+  // which happens when we accidentally create concurrent request in the scraping platform
   return recurse(scraperRequest, retryUntil, {
     timeout: 60000,
     delay: 5000,
@@ -193,12 +196,9 @@ const checkHealthByScraperRequest = (
     expect(scraperResponse.status).within(
       200,
       399,
-      'Scraping request returned ' +
-        scraperResponse.status +
-        ': ' +
-        scraperResponse.statusText +
-        '\n' +
-        JSON.stringify(scraperResponse, null, 2),
+      `Scraping request returned ${scraperResponse.status}: ${
+        scraperResponse.statusText
+      }\n${JSON.stringify(scraperResponse, null, 2)}`,
     )
 
     const document = new DOMParser().parseFromString(
