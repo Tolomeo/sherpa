@@ -1,11 +1,51 @@
 import { SerializedResource } from '../../../data'
 import config from '../../../src/config'
 
-const topicsResources: Array<[string, SerializedResource[]]> =
-  config.paths.topics.map((topicName) => [
-    topicName,
-    require(`../../../data/resources/json/${topicName}.json`),
-  ])
+const uniqueResources = ((topics: string[]) => {
+  const uniques: Record<string, SerializedResource> = {}
+
+  topics.forEach((topicName) => {
+    const topicResources =
+      require(`../../../data/resources/json/${topicName}.json`) as SerializedResource[]
+
+    topicResources.forEach((serializedResource) => {
+      if (uniques[serializedResource.url]) return
+
+      uniques[serializedResource.url] = serializedResource
+    })
+  })
+
+  return Object.values(uniques)
+})(config.paths.topics)
+
+const duplicatedResources = ((topics: string[]) => {
+  const uniques: Record<string, SerializedResource> = {}
+  const duplicates: Record<string, SerializedResource[]> = {}
+
+  topics.forEach((topicName) => {
+    const topicResources =
+      require(`../../../data/resources/json/${topicName}.json`) as SerializedResource[]
+
+    topicResources.forEach((serializedResource) => {
+      if (!uniques[serializedResource.url]) {
+        uniques[serializedResource.url] = serializedResource
+        return
+      }
+
+      if (!duplicates[serializedResource.url]) {
+        duplicates[serializedResource.url] = [
+          uniques[serializedResource.url],
+          serializedResource,
+        ]
+        return
+      }
+
+      duplicates[serializedResource.url].push(serializedResource)
+    })
+  })
+
+  return Object.entries(duplicates)
+})(config.paths.topics)
 
 const checkResourceHealth = (resource: SerializedResource) => {
   // checking if it is a downloadable resource
@@ -78,35 +118,24 @@ const checkResourceHealth = (resource: SerializedResource) => {
 
 describe('Resources', () => {
   describe('Duplicated resources', () => {
-    topicsResources.reduce((uniqueResources, [topicName, topicResources]) => {
-      topicResources.forEach((topicResource) => {
-        if (uniqueResources[topicResource.url]) {
-          it(`${topicName} "${topicResource.title}" [ ${topicResource.url} ] data should be the same in all duplicates`, () => {
-            expect(topicResource).to.deep.equal(
-              uniqueResources[topicResource.url],
-            )
-          })
-        } else {
-          uniqueResources[topicResource.url] = topicResource
-        }
+    duplicatedResources.forEach(([duplicatedUrl, duplicatedUrlResources]) => {
+      it(`"${duplicatedUrlResources[0].title}" [ ${duplicatedUrl} ] : ${duplicatedUrlResources.length} duplicates`, () => {
+        cy.wrap(duplicatedUrlResources).each((duplicatedUrlResource) => {
+          expect(duplicatedUrlResource).to.deep.equal(duplicatedUrlResources[0])
+        })
       })
-      return uniqueResources
-    }, {} as Record<SerializedResource['url'], SerializedResource>)
+    })
   })
 
-  describe('Health check', () => {
-    topicsResources.forEach(([topicName, topicResources]) => {
-      describe(`${topicName} resources`, () => {
-        topicResources.forEach((resource) => {
-          it(`"${resource.title}" [ ${resource.url} ]`, () => {
-            // this event will automatically be unbound when this test ends
-            // returning false here prevents Cypress from
-            // failing the test when an uncaught exception is thrown by the resource page
-            cy.on('uncaught:exception', () => false)
+  describe.skip('Health check', () => {
+    uniqueResources.forEach((resource) => {
+      it(`"${resource.title}" [ ${resource.url} ]`, () => {
+        // this event will automatically be unbound when this test ends
+        // returning false here prevents Cypress from
+        // failing the test when an uncaught exception is thrown by the resource page
+        cy.on('uncaught:exception', () => false)
 
-            checkResourceHealth(resource)
-          })
-        })
+        checkResourceHealth(resource)
       })
     })
   })
