@@ -127,7 +127,7 @@ describe('Resources', () => {
     })
   })
 
-  describe.skip('Health check', () => {
+  describe('Health check', () => {
     uniqueResources.forEach((resource) => {
       it(`"${resource.title}" [ ${resource.url} ]`, () => {
         // this event will automatically be unbound when this test ends
