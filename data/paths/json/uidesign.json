@@ -5,6 +5,9 @@
     "foreground": "#000000",
     "background": ["#0acf83", "#68FFB8"]
   },
+  "notes": [
+    "Logo image: Vectors Market (https://commons.wikimedia.org/wiki/File:Noun_Project_web_design_icon_1849452.svg), „Noun Project web design icon 1849452“, https://creativecommons.org/licenses/by/3.0/legalcode"
+  ],
   "main": [
     "https://whydoweinterface.com",
     "https://www.udacity.com/course/human-computer-interaction--ud400",
