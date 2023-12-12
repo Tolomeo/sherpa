@@ -20,7 +20,7 @@ const Header: React.FC<Props> = ({ children }) => {
           <Box sx={{ flexGrow: 1 }}>
             <Link href="/" legacyBehavior>
               <a aria-label="Go to homepage">
-                <Logo />
+                <Logo aria-hidden="true" />
               </a>
             </Link>
           </Box>
