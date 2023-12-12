@@ -1,22 +1,44 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
-import { createTheme as createMuiTheme } from '@mui/material/styles'
+import {
+  ThemeOptions,
+  createTheme as createMuiTheme,
+} from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
 export type ThemeMode = 'light' | 'dark'
 
+const themePalette: Record<ThemeMode, ThemeOptions['palette']> = {
+  light: {
+    mode: 'light',
+    primary: {
+      main: '#9b51e0',
+      dark: '#621AA8',
+      contrastText: '#ffffff',
+    },
+    secondary: {
+      main: '#ff6bdf',
+      dark: '#da72ff',
+      contrastText: '#ffffff',
+    },
+  },
+  dark: {
+    mode: 'dark',
+    primary: {
+      main: '#ff6bdf',
+      dark: '#da72ff',
+      contrastText: '#ffffff',
+    },
+    secondary: {
+      main: '#9b51e0',
+      dark: '#621AA8',
+      contrastText: '#ffffff',
+    },
+  },
+}
+
 const getThemeTokens = (mode: ThemeMode) =>
   createMuiTheme({
-    palette: {
-      mode,
-      primary: {
-        main: '#ff6bdf',
-        dark: '#da72ff',
-        contrastText: '#ffffff',
-      },
-      secondary: {
-        main: '#9b51e0',
-      },
-    },
+    palette: themePalette[mode],
     typography: {
       fontFamily: 'Poppins',
       h1: {
@@ -164,28 +186,11 @@ export const createTheme = (mode: ThemeMode) => {
           },
         },
       },
-      MuiButton: {
-        defaultProps: {
-          disableRipple: true,
-          disableFocusRipple: true,
-        },
-      },
       MuiSvgIcon: {
         styleOverrides: {
           fontSizeSmall: {
             fontSize: '1rem',
           },
-        },
-      },
-      MuiIconButton: {
-        defaultProps: {
-          disableRipple: true,
-          disableFocusRipple: true,
-        },
-      },
-      MuiCheckbox: {
-        defaultProps: {
-          disableRipple: true,
         },
       },
     },

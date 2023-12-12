@@ -19,8 +19,8 @@ const Header: React.FC<Props> = ({ children }) => {
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1 }}>
             <Link href="/" legacyBehavior>
-              <a>
-                <Logo />
+              <a aria-label="Go to homepage">
+                <Logo aria-hidden="true" />
               </a>
             </Link>
           </Box>

@@ -11,7 +11,7 @@ const PathFooter = () => {
   return (
     <footer>
       <LayoutContainer pt={6} pb={2}>
-        <Stack spacing={1}>
+        <Stack spacing={1} data-cy="path.notes">
           {notes.map((note, index) => (
             <Typography
               key={index}
