@@ -22,15 +22,13 @@ const Path = ({ path, resources }: Props) => {
   }, [prune, path, resources])
 
   return (
-    <main>
-      <LayoutProvider>
-        <Provider path={path} resources={resources}>
-          <Header />
-          <Content />
-          <Footer />
-        </Provider>
-      </LayoutProvider>
-    </main>
+    <LayoutProvider>
+      <Provider path={path} resources={resources}>
+        <Header />
+        <Content />
+        <Footer />
+      </Provider>
+    </LayoutProvider>
   )
 }
 

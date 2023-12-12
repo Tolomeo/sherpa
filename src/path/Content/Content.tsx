@@ -20,112 +20,116 @@ const PathContent = () => {
   } = usePathContext()
 
   return (
-    <Stack spacing={8} pb={6}>
-      <LayoutHero foreground={hero?.foreground} background={hero?.background}>
-        {logo && <SvgImage svg={logo} />}
-        <Typography variant="h1">
-          The <Underline>{title}</Underline> path
-        </Typography>
-      </LayoutHero>
+    <main>
+      <Stack spacing={8} pb={6}>
+        <LayoutHero foreground={hero?.foreground} background={hero?.background}>
+          {logo && <SvgImage svg={logo} />}
+          <Typography variant="h1">
+            The <Underline>{title}</Underline> path
+          </Typography>
+        </LayoutHero>
 
-      <Stack spacing={12}>
-        {prev && (
-          <LayoutContainer>
-            <aside>
+        <Stack spacing={12}>
+          {prev && (
+            <LayoutContainer>
+              <aside>
+                <Stack spacing={5}>
+                  <Typography variant="h3" component="h2">
+                    You want to come from
+                  </Typography>
+                  <PathsList paths={prev} />
+                </Stack>
+              </aside>
+            </LayoutContainer>
+          )}
+
+          {main && (
+            <LayoutContainer>
               <Stack spacing={5}>
                 <Typography variant="h3" component="h2">
-                  You want to come from
+                  The path
                 </Typography>
-                <PathsList paths={prev} />
-              </Stack>
-            </aside>
-          </LayoutContainer>
-        )}
-
-        {main && (
-          <LayoutContainer>
-            <Stack spacing={5}>
-              <Typography variant="h3" component="h2">
-                The path
-              </Typography>
-              <Grid container>
-                <Grid item xs={12} md={8} xl={6}>
-                  <OrderedResources resources={main} />
+                <Grid container>
+                  <Grid item xs={12} md={8} xl={6}>
+                    <OrderedResources resources={main} />
+                  </Grid>
                 </Grid>
-              </Grid>
-            </Stack>
-          </LayoutContainer>
-        )}
-
-        {resources && (
-          <LayoutContainer>
-            <section>
-              <Stack spacing={7}>
-                <Typography variant="h3" component="h2">
-                  Other trails
-                </Typography>
-                <Box>
-                  <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={5}>
-                    {resources.map((group, index) => (
-                      <Stack spacing={2} key={index}>
-                        <Typography component="h3" variant="h5">
-                          {group.title}
-                        </Typography>
-                        <UnorderedResources resources={group.resources} />
-                      </Stack>
-                    ))}
-                  </Masonry>
-                </Box>
               </Stack>
-            </section>
-          </LayoutContainer>
-        )}
+            </LayoutContainer>
+          )}
 
-        {children && (
-          <LayoutContainer>
-            <section>
-              <Stack spacing={7}>
-                <Typography variant="h3" component="h2">
-                  Short hikes
-                </Typography>
-                <Box>
-                  <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
-                    {children.map((childPath, index) => (
-                      <Stack spacing={2} key={index}>
-                        <Typography variant="h5" component="h3">
-                          {childPath.title}
-                        </Typography>
+          {resources && (
+            <LayoutContainer>
+              <section>
+                <Stack spacing={7}>
+                  <Typography variant="h3" component="h2">
+                    Other trails
+                  </Typography>
+                  <Box>
+                    <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={5}>
+                      {resources.map((group, index) => (
+                        <Stack spacing={2} key={index}>
+                          <Typography component="h3" variant="h5">
+                            {group.title}
+                          </Typography>
+                          <UnorderedResources resources={group.resources} />
+                        </Stack>
+                      ))}
+                    </Masonry>
+                  </Box>
+                </Stack>
+              </section>
+            </LayoutContainer>
+          )}
 
-                        {childPath.main && (
-                          <OrderedResources resources={childPath.main} />
-                        )}
+          {children && (
+            <LayoutContainer>
+              <section>
+                <Stack spacing={7}>
+                  <Typography variant="h3" component="h2">
+                    Short hikes
+                  </Typography>
+                  <Box>
+                    <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={4}>
+                      {children.map((childPath, index) => (
+                        <Stack spacing={2} key={index}>
+                          <Typography variant="h5" component="h3">
+                            {childPath.title}
+                          </Typography>
 
-                        {childPath.resources && (
-                          <UnorderedResources resources={childPath.resources} />
-                        )}
-                      </Stack>
-                    ))}
-                  </Masonry>
-                </Box>
-              </Stack>
-            </section>
-          </LayoutContainer>
-        )}
+                          {childPath.main && (
+                            <OrderedResources resources={childPath.main} />
+                          )}
 
-        {next && (
-          <LayoutContainer>
-            <aside>
-              <Stack spacing={5}>
-                <Typography variant="h3" component="h2">
-                  You could continue with
-                </Typography>
-                <PathsList paths={next} />
-              </Stack>
-            </aside>
-          </LayoutContainer>
-        )}
+                          {childPath.resources && (
+                            <UnorderedResources
+                              resources={childPath.resources}
+                            />
+                          )}
+                        </Stack>
+                      ))}
+                    </Masonry>
+                  </Box>
+                </Stack>
+              </section>
+            </LayoutContainer>
+          )}
+
+          {next && (
+            <LayoutContainer>
+              <aside>
+                <Stack spacing={5}>
+                  <Typography variant="h3" component="h2">
+                    You could continue with
+                  </Typography>
+                  <PathsList paths={next} />
+                </Stack>
+              </aside>
+            </LayoutContainer>
+          )}
+        </Stack>
       </Stack>
-    </Stack>
+    </main>
   )
 }
 
