@@ -11,6 +11,7 @@ describe('Paths', () => {
       })
 
       it('Passes automated accessibility checks', () => {
+        // skipping path notes smalltext
         cy.checkA11y({ exclude: '[data-cy="path.notes"]' })
       })
     })
