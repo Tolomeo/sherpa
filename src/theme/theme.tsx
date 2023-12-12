@@ -164,28 +164,11 @@ export const createTheme = (mode: ThemeMode) => {
           },
         },
       },
-      MuiButton: {
-        defaultProps: {
-          disableRipple: true,
-          disableFocusRipple: true,
-        },
-      },
       MuiSvgIcon: {
         styleOverrides: {
           fontSizeSmall: {
             fontSize: '1rem',
           },
-        },
-      },
-      MuiIconButton: {
-        defaultProps: {
-          disableRipple: true,
-          disableFocusRipple: true,
-        },
-      },
-      MuiCheckbox: {
-        defaultProps: {
-          disableRipple: true,
         },
       },
     },
