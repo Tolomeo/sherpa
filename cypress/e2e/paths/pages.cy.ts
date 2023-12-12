@@ -2,10 +2,16 @@ import config from '../../../src/config'
 
 describe('Paths', () => {
   config.paths.topics.forEach((topicName) => {
-    describe(topicName, () => {
-      it(`Renders the ${topicName} path page with no errors`, () => {
-        const pathUrl = `${Cypress.config('baseUrl')}/paths/${topicName}`
+    const pathUrl = `${Cypress.config('baseUrl')}/paths/${topicName}`
+
+    describe(`${topicName} page`, () => {
+      before(() => {
         cy.visit(pathUrl)
+        cy.injectAxe()
+      })
+
+      it('Passes automated accessibility checks', () => {
+        cy.checkA11y({ exclude: '[data-cy="path.notes"]' })
       })
     })
   })

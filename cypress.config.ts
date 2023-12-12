@@ -10,6 +10,16 @@ export default defineConfig({
       on('task', {
         ...resourcesDataUtils,
         ...pathDataUtils,
+        log(message) {
+          console.log(message)
+
+          return null
+        },
+        table(message) {
+          console.table(message)
+
+          return null
+        },
       })
     },
     baseUrl: 'http://localhost:3000',

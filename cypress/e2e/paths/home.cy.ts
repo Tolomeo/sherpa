@@ -1,5 +1,10 @@
 describe('Index page', () => {
-  it('Renders with no errors', () => {
+  before(() => {
     cy.visit(Cypress.config('baseUrl')!)
+    cy.injectAxe()
+  })
+
+  it('Passes automated accessibility checks', () => {
+    cy.checkA11y()
   })
 })

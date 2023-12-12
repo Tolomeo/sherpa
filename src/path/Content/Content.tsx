@@ -32,7 +32,7 @@ const PathContent = () => {
         <Stack spacing={12}>
           {prev && (
             <LayoutContainer>
-              <aside>
+              <aside aria-label="You want to come from">
                 <Stack spacing={5}>
                   <Typography variant="h3" component="h2">
                     You want to come from
@@ -117,7 +117,7 @@ const PathContent = () => {
 
           {next && (
             <LayoutContainer>
-              <aside>
+              <aside aria-label="You could continue with">
                 <Stack spacing={5}>
                   <Typography variant="h3" component="h2">
                     You could continue with
