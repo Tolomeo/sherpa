@@ -19,6 +19,7 @@ jobs:
           CYPRESS_pageLoadTimeout: 60000
           CYPRESS_requestTimeout: 30000
           CYPRESS_ZENSCRAPE_API_KEY: ${{ secrets.ZENSCRAPE_API_KEY }}
+          CYPRESS_YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         with:
           browser: chrome
           spec: cypress/e2e/paths/health-check.cy.ts # Running only resources tests
