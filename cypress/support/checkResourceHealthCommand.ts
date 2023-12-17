@@ -115,29 +115,40 @@ const checkHealthByYoutubeDataAPIv3Request = (
   resource: SerializedResource,
   { apikey }: { apikey: string },
 ) => {
-  const { host, pathname, searchParams } = new URL(resource.url)
-  let resourceType: string
-  let id: string
+  const apiBaseUrl = 'https://youtube.googleapis.com/youtube/v3'
+  let apiPath = ''
+
+  const videoUrl = /^https?:\/\/www\.youtube\.com\/watch\?v=(\S+)$/
+  const playlistUrl = /^https?:\/\/www\.youtube\.com\/playlist\?list=(\S+)$/
+  const channelUrl = /^https?:\/\/www.youtube.com\/(?:@|c\/){1}(\S+)$/
 
   switch (true) {
-    case host === 'www.youtube.com' && pathname === '/playlist':
-      resourceType = 'playlists'
-      id = searchParams.get('list')!
+    case videoUrl.test(resource.url):
+      const [, videoId] = resource.url.match(videoUrl)!
+      apiPath = `/videos?id=${videoId}`
       break
-    case host === 'www.youtube.com' && pathname === '/watch':
-      resourceType = 'videos'
-      id = searchParams.get('v')!
+    case playlistUrl.test(resource.url):
+      const [, playlistId] = resource.url.match(videoUrl)!
+      apiPath = `/playlists?id=${playlistId}`
+      break
+    case channelUrl.test(resource.url):
+      const [, channelHandle] = resource.url.match(channelUrl)!
+      // NB: youtube data api doesn't yes support retrieving channels data by handle
+      // therefore we are executing a channel search specifying the channel handle as query
+      apiPath = `/search?q=${channelHandle}&type=channel`
       break
     default:
       return assert.fail(
-        `The resource url ${resource.url} is not recognizable as a valid video or playlist youtube url`,
+        `The resource url ${resource.url} is not recognizable as a valid video, playlist or channel youtube url`,
       )
   }
 
-  const url = `https://youtube.googleapis.com/youtube/v3/${resourceType}?id=${id}&key=${apikey}&part=snippet`
+  apiPath += `&key=${apikey}&part=snippet&maxResults=1`
+
+  const requestUrl = `${apiBaseUrl}${apiPath}`
 
   cy.request<YoutubeDataApiResponse>({
-    url,
+    url: requestUrl,
     log: false,
   }).then((response) => {
     expect(response.body.pageInfo.totalResults).eq(
