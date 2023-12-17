@@ -133,9 +133,10 @@ const checkHealthByYoutubeDataAPIv3Request = (
       break
     case channelUrl.test(resource.url):
       const [, channelHandle] = resource.url.match(channelUrl)!
-      // NB: youtube data api doesn't yes support retrieving channels data by handle
+      // NB: youtube data api doesn't yet support retrieving channel's data by handle
       // therefore we are executing a channel search specifying the channel handle as query
-      apiPath = `/search?q=${channelHandle}&type=channel`
+      // see https://stackoverflow.com/a/74902789/3162406
+      apiPath = `/search?q=%40${channelHandle}&type=channel`
       break
     default:
       return assert.fail(
@@ -151,9 +152,9 @@ const checkHealthByYoutubeDataAPIv3Request = (
     url: requestUrl,
     log: false,
   }).then((response) => {
-    expect(response.body.pageInfo.totalResults).eq(
+    expect(response.body.pageInfo.totalResults).to.be.at.least(
       1,
-      `Should find one match returned by the api`,
+      `Should find at least one match returned by the api`,
     )
     expect(response.body.items[0].snippet.title).to.contain(resource.title)
   })
