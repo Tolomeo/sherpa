@@ -128,7 +128,7 @@ const checkHealthByYoutubeDataAPIv3Request = (
       apiPath = `/videos?id=${videoId}`
       break
     case playlistUrl.test(resource.url):
-      const [, playlistId] = resource.url.match(videoUrl)!
+      const [, playlistId] = resource.url.match(playlistUrl)!
       apiPath = `/playlists?id=${playlistId}`
       break
     case channelUrl.test(resource.url):
