@@ -15,8 +15,8 @@
     "type": "basics"
   },
   {
-    "title": "Human-Computer Interaction",
-    "url": "https://www.udacity.com/course/human-computer-interaction--ud400",
+    "title": "Learn UX Design",
+    "url": "https://www.udacity.com/course/ux-designer-nanodegree--nd578",
     "type": "basics"
   },
   {
@@ -141,29 +141,34 @@
     "type": "advanced"
   },
   {
-    "title": "DesignOps Handbook",
-    "url": "https://www.designbetter.co/designops-handbook",
-    "type": "advanced"
+    "title": "DesignOperationsHandbook",
+    "url": "https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_DesignOperationsHandbook.pdf",
+    "type": "advanced",
+    "source": "designbetter.co"
   },
   {
-    "title": "Enterprise Design Sprints",
-    "url": "https://www.designbetter.co/enterprise-design-sprints",
-    "type": "advanced"
+    "title": "EnterpriseDesignSprints",
+    "url": "https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_EnterpriseDesignSprints.pdf",
+    "type": "advanced",
+    "source": "designbetter.co"
   },
   {
-    "title": "Design Leadership Handbook, your guide to becoming a strong design leader",
-    "url": "https://www.designbetter.co/design-leadership-handbook",
-    "type": "advanced"
+    "title": "DesignLeadershipHandbook",
+    "url": "https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_DesignLeadershipHandbook.pdf",
+    "type": "advanced",
+    "source": "designbetter.co"
   },
   {
-    "title": "Design Engineering Handbook",
-    "url": "https://www.designbetter.co/design-engineering-handbook",
-    "type": "advanced"
+    "title": "DesignEngineeringHandbook",
+    "url": "https://marketing.invisionapp-cdn.com/www-assets.invisionapp.com/epubs/InVision_DesignEngineeringHandbook.pdf",
+    "type": "advanced",
+    "source": "designbetter.co"
   },
   {
-    "title": "Business Thinking for Designers",
-    "url": "https://www.designbetter.co/business-thinking-for-designers",
-    "type": "advanced"
+    "title": "BusinessThinkingforDesigners",
+    "url": "https://uploads-ssl.webflow.com/609ce44d3dfdab98b5019cf9/6143613a2ebbb44c1e9d1251_BusinessThinkingforDesigners.pdf",
+    "type": "advanced",
+    "source": "designbetter.co"
   },
   {
     "title": "Design Thinking Process and Its Phases",
@@ -227,9 +232,10 @@
     "type": "advanced"
   },
   {
-    "title": "Principles of Product Design",
-    "url": "https://www.designbetter.co/principles-of-product-design",
-    "type": "basics"
+    "title": "PrinciplesOfProductDesign",
+    "url": "https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_PrinciplesOfProductDesign.pdf",
+    "type": "basics",
+    "source": "designbetter.co"
   },
   {
     "title": "Design Principles FTW",
@@ -431,9 +437,10 @@
     "type": "basics"
   },
   {
-    "title": "Design Systems Handbook",
-    "url": "https://www.designbetter.co/design-systems-handbook",
-    "type": "basics"
+    "title": "DesignSystemsHandbook",
+    "url": "https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_DesignSystemsHandbook.pdf",
+    "type": "basics",
+    "source": "designbetter.co"
   },
   {
     "title": "One Formula To Rule Them All: The ROI Of A Design System",
