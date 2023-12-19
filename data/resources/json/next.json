@@ -237,7 +237,7 @@
     "type": "basics"
   },
   {
-    "title": "Next.js 13 Crash Course, Projects, and Tutorials",
+    "title": "Next.js 14 Crash Course, Projects, and Tutorials",
     "url": "https://www.youtube.com/playlist?list=PL6QREj8te1P7gixBDSU8JLvQndTEEX3c3",
     "source": "youtube.com/@javascriptmastery",
     "type": "basics"
@@ -373,7 +373,7 @@
     "type": "feed"
   },
   {
-    "title": "Modern Web App Design Patterns",
+    "title": "Patterns.dev",
     "url": "https://www.patterns.dev",
     "type": "reference"
   }

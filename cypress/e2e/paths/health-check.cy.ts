@@ -5,8 +5,9 @@ const uniqueResources = ((topics: string[]) => {
   const uniques: Record<string, SerializedResource> = {}
 
   topics.forEach((topicName) => {
-    const topicResources =
-      require(`../../../data/resources/json/${topicName}.json`) as SerializedResource[]
+    const topicResources = require(
+      `../../../data/resources/json/${topicName}.json`,
+    ) as SerializedResource[]
 
     topicResources.forEach((serializedResource) => {
       if (uniques[serializedResource.url]) return
@@ -23,8 +24,9 @@ const duplicatedResources = ((topics: string[]) => {
   const duplicates: Record<string, SerializedResource[]> = {}
 
   topics.forEach((topicName) => {
-    const topicResources =
-      require(`../../../data/resources/json/${topicName}.json`) as SerializedResource[]
+    const topicResources = require(
+      `../../../data/resources/json/${topicName}.json`,
+    ) as SerializedResource[]
 
     topicResources.forEach((serializedResource) => {
       if (!uniques[serializedResource.url]) {
@@ -83,7 +85,8 @@ const checkResourceHealth = (resource: SerializedResource) => {
     case 'conventionalcommits.org':
     case 'harrisoncramer.me':
     case 'tldp.org':
-    case 'snipcart.com':
+    case 'gitexplorer.com':
+    case 'ubuntu.com':
       return cy.checkHealthByVisit(resource)
     case 'reactdigest.net':
     case 'data-flair.training':
@@ -91,13 +94,12 @@ const checkResourceHealth = (resource: SerializedResource) => {
     case 'replit.com':
     case 'git.herrbischoff.com':
     case 'linux.org':
-    case 'bash.cyberciti.biz':
-    case 'codementor.io':
+    case 'snipcart.com':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
       })
-    case 'tooltester.com':
-    case 'regexr.com':
+    case 'bash.cyberciti.biz':
+    case 'codementor.io':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
         render: true,
@@ -106,9 +108,16 @@ const checkResourceHealth = (resource: SerializedResource) => {
     case 'ui.dev':
     case 'developer.apple.com':
     case 'udemy.com':
+    case 'regexr.com':
+    case 'tooltester.com':
+      return cy.checkHealthByScraperRequest(resource, {
+        apikey: Cypress.env('ZENSCRAPE_API_KEY'),
+        premium: true,
+      })
     case 'pexels.com':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY'),
+        render: true,
         premium: true,
       })
     default:
