@@ -1,0 +1,11 @@
+{
+  "name": "@sherpa/data",
+  "version": "0.4.0",
+  "private": true,
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "ajv": "^8.11.0",
+    "ajv-errors": "^3.0.0"
+  }
+}
