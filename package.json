@@ -1,5 +1,5 @@
 {
-  "name": "sherpa",
+  "name": "@sherpa/repo",
   "version": "0.4.0",
   "private": true,
   "workspaces": [
@@ -15,27 +15,8 @@
     "test": "cypress open",
     "test:ci": "cypress run"
   },
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.7",
-    "@mui/lab": "^5.0.0-alpha.142",
-    "@mui/material": "^5.14.7",
-    "ajv": "^8.11.0",
-    "idb": "^7.1.1",
-    "next": "^13.4.19",
-    "querystring": "^0.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@testing-library/cypress": "8.0.7",
-    "@types/node": "^20.6.2",
-    "@types/react": "18.2.0",
-    "ajv-errors": "^3.0.0",
-    "cypress": "13.2.0",
-    "cypress-axe": "^1.5.0",
-    "cypress-recurse": "^1.35.2",
     "eslint": "^8.48.0",
     "eslint-config-next": "^13.4.19",
     "eslint-config-prettier": "^9.0.0",

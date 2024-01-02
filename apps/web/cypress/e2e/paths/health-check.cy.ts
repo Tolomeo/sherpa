@@ -1,4 +1,4 @@
-import { SerializedResource } from '../../../data'
+import { SerializedResource } from '@sherpa/data'
 import config from '../../../src/config'
 
 const uniqueResources = ((topics: string[]) => {
@@ -6,7 +6,7 @@ const uniqueResources = ((topics: string[]) => {
 
   topics.forEach((topicName) => {
     const topicResources = require(
-      `../../../data/resources/json/${topicName}.json`,
+      `@sherpa/data/resources/json/${topicName}.json`,
     ) as SerializedResource[]
 
     topicResources.forEach((serializedResource) => {
@@ -25,7 +25,7 @@ const duplicatedResources = ((topics: string[]) => {
 
   topics.forEach((topicName) => {
     const topicResources = require(
-      `../../../data/resources/json/${topicName}.json`,
+      `@sherpa/data/resources/json/${topicName}.json`,
     ) as SerializedResource[]
 
     topicResources.forEach((serializedResource) => {

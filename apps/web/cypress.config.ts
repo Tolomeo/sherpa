@@ -1,6 +1,6 @@
 import { defineConfig } from 'cypress'
-import * as resourcesDataUtils from './data/resources/read'
-import * as pathDataUtils from './data/paths/read'
+import * as resourcesDataUtils from '@sherpa/data/resources/read'
+import * as pathDataUtils from '@sherpa/data/data/paths/read'
 
 export default defineConfig({
   video: false,

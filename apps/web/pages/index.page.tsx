@@ -4,8 +4,8 @@ import {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { Resource } from '../data/resources'
-import { readResources } from '../data/resources/read'
+import { Resource } from '@sherpa/data/resources'
+import { readResources } from '@sherpa/data/resources/read'
 import {
   LayoutProvider,
   LayoutHeader,

@@ -1,9 +1,9 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import Head from 'next/head'
-import { Path, Resource } from '../../data'
-import { readPath } from '../../data/paths/read'
-import { readResources } from '../../data/resources/read'
+import { Path, Resource } from '@sherpa/data'
+import { readPath } from '@sherpa/data/paths/read'
+import { readResources } from '@sherpa/data/resources/read'
 import PathBody from '../../src/path'
 import config from '../../src/config'
 

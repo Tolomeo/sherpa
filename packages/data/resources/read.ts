@@ -44,7 +44,7 @@ const parseSerializedResources = (serializedResources: SerializedResources) => {
 export const readSerializedResources = (topicName: string) => {
   const pathFilepath = path.join(
     process.cwd(),
-    `data/resources/json/${topicName}.json`,
+    `@sherpa/data/resources/json/${topicName}.json`,
   )
   const resourcesData = JSON.parse(fs.readFileSync(pathFilepath, 'utf-8'))
   const resourcesDataSchemaErrors = validateSerializedResources(resourcesData)
