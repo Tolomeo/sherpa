@@ -1,4 +1,4 @@
-import { Resource, ResourceType, Path, PathTopic } from '../data'
+import { Resource, ResourceType, Path, PathTopic } from '@sherpa/data'
 
 const topics: Array<Path['topic']> = [
   PathTopic.uidesign,
