@@ -7,21 +7,24 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --write \"./{src,pages,data}/**/*.{js,jsx,ts,tsx,json,scss}\"",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "start": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
     "test": "cypress open",
     "test:ci": "cypress run"
   },
-  "dependencies": {},
   "devDependencies": {
     "eslint": "^8.48.0",
     "eslint-config-next": "^13.4.19",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.3",
+    "turbo": "^1.11.2",
     "typescript": "5.2.2"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
