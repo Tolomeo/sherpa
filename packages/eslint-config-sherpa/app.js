@@ -42,5 +42,9 @@ module.exports = {
     'import/no-default-export': 'off',
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    'react/jsx-sort-props': 'off',
+    'react/function-component-definition': 'off',
+    'react/jsx-no-leaked-render': 'off',
+    'unicorn/filename-case': 'off',
   },
 }

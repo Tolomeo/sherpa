@@ -1,4 +1,4 @@
-import { Resource } from '../../../data'
+import type { Resource } from '@sherpa/data'
 import {
   Link,
   Typography,
@@ -12,7 +12,7 @@ import {
 } from '../../theme'
 import { usePathResourcesCompletion } from '../Provider'
 
-type Props = {
+interface Props {
   resources: Resource[]
 }
 
@@ -20,10 +20,13 @@ const PathTimeline = ({ resources }: Props) => {
   const [resourcesCompletion, { complete, uncomplete }] =
     usePathResourcesCompletion(resources)
 
-  const isCompleted = (resource: string) => !!resourcesCompletion[resource]
+  const isCompleted = (resource: string) =>
+    Boolean(resourcesCompletion[resource])
 
   const toggleCompletion = (resource: string, completed: boolean) => {
-    return completed ? complete(resource) : uncomplete(resource)
+    // TODO: handle a possible failure
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    completed ? complete(resource) : uncomplete(resource)
   }
 
   return (

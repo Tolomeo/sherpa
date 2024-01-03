@@ -1,9 +1,9 @@
 import React from 'react'
-import { Resource } from '../../../data'
+import type { Resource } from '@sherpa/data'
 import { Link, Typography, Box, List, ListItem } from '../../theme'
 
-type Props = {
-  resources: Array<Resource>
+interface Props {
+  resources: Resource[]
 }
 
 const UnorderedResources = ({ resources }: Props) => {

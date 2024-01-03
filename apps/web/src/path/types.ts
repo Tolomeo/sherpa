@@ -1,4 +1,5 @@
-import { Resource, ResourceType, Path } from '../../data'
+import type { Resource, Path } from '@sherpa/data'
+import { ResourceType } from '@sherpa/data'
 
 export type { Resource, Path }
 
@@ -10,13 +11,15 @@ export interface PopulatedPath {
   logo: Path['logo']
   hero: Path['hero']
   notes: Path['notes']
-  resources: Array<{ title: string; resources: Array<Resource> }> | null
-  main: Array<Resource> | null
-  children: Array<{
-    title: string
-    main: Array<Resource> | null
-    resources: Array<Resource> | null
-  }> | null
+  resources: { title: string; resources: Resource[] }[] | null
+  main: Resource[] | null
+  children:
+    | {
+        title: string
+        main: Resource[] | null
+        resources: Resource[] | null
+      }[]
+    | null
   next: Path['next']
   prev: Path['prev']
 }

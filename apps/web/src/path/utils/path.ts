@@ -1,7 +1,7 @@
 import config from '../../config'
-import { PopulatedPath, Path, Resource } from '../types'
+import type { PopulatedPath, Path, Resource } from '../types'
 
-export const sortResources = (resources: Array<Resource>) =>
+export const sortResources = (resources: Resource[]) =>
   [...resources].sort((resourceA, resourceB) => {
     const titleA = resourceA.title.toUpperCase()
     const titleB = resourceB.title.toUpperCase()
@@ -16,16 +16,16 @@ export type ResourcesTypeGroups = Record<
   NonNullable<Resource['type']>,
   {
     title: string
-    resources: Array<Resource>
+    resources: Resource[]
   }
 >
 
 export const sortResourcesTypeGroups = (groups: ResourcesTypeGroups) =>
   config.resources.categoriesOrder
-    .filter((groupType) => !!groups[groupType])
+    .filter((groupType) => Boolean(groups[groupType]))
     .map((groupType) => groups[groupType])
 
-export const groupResourcesByType = (resources: Array<Resource>) => {
+export const groupResourcesByType = (resources: Resource[]) => {
   const groups = resources.reduce((groupedResources, resource) => {
     const { type } = resource
 
@@ -48,10 +48,13 @@ export const populatePath = (
   path: Path,
   resources: Resource[],
 ): PopulatedPath => {
-  const resourcesMap = resources.reduce((map, resource) => {
-    map[resource.url] = resource
-    return map
-  }, {} as Record<Resource['url'], Resource>)
+  const resourcesMap = resources.reduce<Record<Resource['url'], Resource>>(
+    (map, resource) => {
+      map[resource.url] = resource
+      return map
+    },
+    {},
+  )
 
   return {
     ...path,
@@ -78,7 +81,7 @@ export const populatePath = (
     children: (() => {
       if (!path.children) return null
 
-      return path.children.map(({ topic, main, resources }) => {
+      return path.children.map(({ topic, main, resources: childResources }) => {
         return {
           title: config.paths.topicsTitles[topic],
           main: (() => {
@@ -89,10 +92,10 @@ export const populatePath = (
             })
           })(),
           resources: (() => {
-            if (!resources) return null
+            if (!childResources) return null
 
             return sortResources(
-              resources.map((resourceId) => {
+              childResources.map((resourceId) => {
                 return resourcesMap[resourceId]
               }),
             )

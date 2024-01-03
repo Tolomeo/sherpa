@@ -1,6 +1,7 @@
-import { Resource, ResourceType, Path, PathTopic } from '@sherpa/data'
+import type { Resource, Path} from '@sherpa/data';
+import { ResourceType, PathTopic } from '@sherpa/data'
 
-const topics: Array<Path['topic']> = [
+const topics: Path['topic'][] = [
   PathTopic.uidesign,
   PathTopic.htmlcss,
   PathTopic.webaccessibility,
@@ -80,7 +81,7 @@ const paths = {
   topicsTitles,
 }
 
-const resourcesTypesOrder: Array<NonNullable<Resource['type']>> = [
+const resourcesTypesOrder: NonNullable<Resource['type']>[] = [
   ResourceType.basics,
   ResourceType.advanced,
   ResourceType['how-to'],

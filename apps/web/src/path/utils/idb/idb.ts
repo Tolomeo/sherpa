@@ -1,6 +1,6 @@
 import { openDB } from 'idb'
 import config from '../../../config'
-import { DatabaseSchema, Database } from './types'
+import type { DatabaseSchema, Database } from './types'
 import { migrations } from './migrations'
 
 let db: Promise<Database>
@@ -8,6 +8,7 @@ let db: Promise<Database>
 const useDB = () => {
   if (typeof window === 'undefined') return
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, @typescript-eslint/no-misused-promises
   if (!db) {
     db = openDB<DatabaseSchema>(config.db.name, config.db.version, {
       upgrade: migrations[0],
@@ -52,6 +53,7 @@ export const useResourcesCompletionStore = () => {
 
       return true
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error(error)
       return false
     }
@@ -74,8 +76,9 @@ export const useResourcesCompletionStore = () => {
         ),
       )
 
-      return result.map((resourceResult) => (resourceResult ? true : false))
+      return result.map((resourceResult) => Boolean(resourceResult))
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error(error)
       return resources.map(() => false)
     }
@@ -102,6 +105,7 @@ export const useResourcesCompletionStore = () => {
 
       return true
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error(error)
       return false
     }
@@ -127,6 +131,7 @@ export const useResourcesCompletionStore = () => {
       await objectStore.delete(deletekey)
       return true
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error(error)
       return false
     }

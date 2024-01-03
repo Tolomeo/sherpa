@@ -1,5 +1,5 @@
-import { DBSchema, IDBPDatabase, OpenDBCallbacks } from 'idb'
-import config from '../../../config'
+import type { DBSchema, IDBPDatabase, OpenDBCallbacks } from 'idb'
+import type config from '../../../config'
 
 export interface DatabaseSchema extends DBSchema {
   [config.db.store.resourceCompletion.name]: {

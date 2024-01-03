@@ -5,10 +5,10 @@ import React, {
   useMemo,
   useState,
 } from 'react'
-import { Resource, Path, PopulatedPath } from './types'
+import type { Resource, Path, PopulatedPath } from './types'
 import { populatePath, useResourcesCompletionStore } from './utils'
 
-type PathContextValue = {
+interface PathContextValue {
   path: PopulatedPath
 }
 
@@ -28,8 +28,8 @@ export const usePathResourcesCompletion = (
 ): [
   Record<Resource['url'], boolean>,
   {
-    complete: (url: Resource['url']) => Promise<void>
-    uncomplete: (url: Resource['url']) => Promise<void>
+    complete: (_: Resource['url']) => Promise<void>
+    uncomplete: (_: Resource['url']) => Promise<void>
   },
 ] => {
   const {
@@ -40,10 +40,13 @@ export const usePathResourcesCompletion = (
   const [completion, setCompletion] = useState(
     resources
       .map(({ url }) => url)
-      .reduce((initialCompletion, url) => {
-        initialCompletion[url] = false
-        return initialCompletion
-      }, {} as Record<string, boolean>),
+      .reduce(
+        (initialCompletion, url) => {
+          initialCompletion[url] = false
+          return initialCompletion
+        },
+        {} as Record<string, boolean>,
+      ),
   )
 
   useEffect(() => {
@@ -73,7 +76,7 @@ export const usePathResourcesCompletion = (
     const success = await resourcesCompletionStore.complete(resource, topic)
 
     if (success)
-      setCompletion((currentCompletion) => ({
+      setCompletion((currentCompletion: Record<string, boolean>) => ({
         ...currentCompletion,
         [resource]: true,
       }))
@@ -86,7 +89,7 @@ export const usePathResourcesCompletion = (
     const success = await resourcesCompletionStore.uncomplete(resource, topic)
 
     if (success)
-      setCompletion((currentCompletion) => ({
+      setCompletion((currentCompletion: Record<string, boolean>) => ({
         ...currentCompletion,
         [resource]: false,
       }))
