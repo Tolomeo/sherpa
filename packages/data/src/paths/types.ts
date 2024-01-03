@@ -1,4 +1,4 @@
-import { Resource } from '../resources'
+import type { Resource } from '../resources'
 
 export enum PathTopic {
   'commandline.cliapps' = 'commandline.cliapps',
@@ -67,11 +67,11 @@ export interface SerializedPath {
   logo?: string
   hero?: PathHero
   notes?: PathNotes
-  resources?: Array<string>
-  main?: Array<string>
-  children?: Array<string>
-  next?: Array<PathTopic>
-  prev?: Array<PathTopic>
+  resources?: string[]
+  main?: string[]
+  children?: string[]
+  next?: PathTopic[]
+  prev?: PathTopic[]
 }
 
 export interface Path {
@@ -79,9 +79,9 @@ export interface Path {
   logo: string | null
   hero: PathHero | null
   notes: PathNotes | null
-  resources: Array<Resource['url']> | null
-  main: Array<Resource['url']> | null
-  children: Array<Path> | null
-  next: Array<PathTopic> | null
-  prev: Array<PathTopic> | null
+  resources: Resource['url'][] | null
+  main: Resource['url'][] | null
+  children: Path[] | null
+  next: PathTopic[] | null
+  prev: PathTopic[] | null
 }

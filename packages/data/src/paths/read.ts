@@ -1,4 +1,4 @@
-import { SerializedPath, Path, PathTopic } from './types'
+import type { SerializedPath, Path, PathTopic } from './types'
 import { validatePathTopic, validateSerializedPath } from './schema'
 
 const parseSerializedPath = (
@@ -48,9 +48,11 @@ const parseSerializedPath = (
 }
 
 export const readSerializedPath = (pathName: string) => {
-  const data = require(`@sherpa/data/paths/json/${pathName}.json`)
+  const data = require(
+    `@sherpa/data/paths/json/${pathName}.json`,
+  ) as SerializedPath
 
-  return data as SerializedPath
+  return data
 }
 
 export const readPath = (topicName: string) => {

@@ -1,4 +1,4 @@
-import { SerializedResources, SerializedResource, Resource } from './types'
+import type { SerializedResources, SerializedResource, Resource } from './types'
 import { validateSerializedResources } from './schema'
 
 const parseSerializedResource = (serializedResource: SerializedResource) => {
@@ -22,7 +22,8 @@ const parseSerializedResource = (serializedResource: SerializedResource) => {
 }
 
 const parseSerializedResources = (serializedResources: SerializedResources) => {
-  const uniqueResources: Record<SerializedResource['url'], true> = {}
+  const uniqueResources: Record<SerializedResource['url'], true | undefined> =
+    {}
 
   return serializedResources.map((serializedResource) => {
     if (uniqueResources[serializedResource.url]) {
@@ -40,7 +41,9 @@ const parseSerializedResources = (serializedResources: SerializedResources) => {
 }
 
 export const readSerializedResources = (topicName: string) => {
-  const resourcesData = require(`@sherpa/data/resources/json/${topicName}.json`)
+  const resourcesData = require(
+    `@sherpa/data/resources/json/${topicName}.json`,
+  ) as SerializedResource[]
   const resourcesDataSchemaErrors = validateSerializedResources(resourcesData)
 
   if (resourcesDataSchemaErrors) {

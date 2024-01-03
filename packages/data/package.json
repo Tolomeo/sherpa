@@ -9,13 +9,14 @@
   "types": "types/index.d.ts",
   "scripts": {
     "build": "tsc && npm run copy:json",
-    "copy:json": "cpy \"src/**/*.json\" dist"
+    "copy:json": "cpy \"src/**/*.json\" dist",
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "tsconfig-sherpa": "*",
-    "eslint-config-sherpa": "*",
     "ajv": "^8.11.0",
     "ajv-errors": "^3.0.0",
-    "cpy-cli": "^5.0.0"
+    "cpy-cli": "^5.0.0",
+    "eslint-config-sherpa": "*",
+    "tsconfig-sherpa": "*"
   }
 }

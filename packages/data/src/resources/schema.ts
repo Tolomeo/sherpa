@@ -1,10 +1,12 @@
-import Ajv, { JSONSchemaType } from 'ajv'
+import Ajv from 'ajv'
+import type { JSONSchemaType } from 'ajv'
 import ajvErrors from 'ajv-errors'
-import { SerializedResource, ResourceType } from './types'
+import { ResourceType } from './types'
+import type { SerializedResource } from './types'
 
 const ajv = ajvErrors(new Ajv({ allErrors: true }))
 
-const serializedResourcesSchema: JSONSchemaType<Array<SerializedResource>> = {
+const serializedResourcesSchema: JSONSchemaType<SerializedResource[]> = {
   type: 'array',
   items: {
     type: 'object',
