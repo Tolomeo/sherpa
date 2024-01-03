@@ -42,9 +42,8 @@ const parseSerializedResources = (serializedResources: SerializedResources) => {
 }
 
 export const readSerializedResources = (topicName: string) => {
-	const resourcesData = require(`@sherpa/data/resources/json/${topicName}.json`)
-  /* const pathFilepath = path.join(__dirname, 'json', `${topicName}.json`)
-  const resourcesData = JSON.parse(fs.readFileSync(pathFilepath, 'utf-8')) */
+  const pathFilepath = path.join(__dirname, 'json', `${topicName}.json`)
+  const resourcesData = JSON.parse(fs.readFileSync(pathFilepath, 'utf-8'))
   const resourcesDataSchemaErrors = validateSerializedResources(resourcesData)
 
   if (resourcesDataSchemaErrors) {

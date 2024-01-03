@@ -1,5 +1,5 @@
 {
-	"extends": "@sherpa/configs/tsconfig.base.json",
+	"extends": "../../tsconfig.json",
   "include": [
     "next-env.d.ts",
     "**/*.ts",
