@@ -1,5 +1,5 @@
 import React from 'react'
-import { Resource } from '../../data'
+import { Resource } from '@sherpa/data'
 import { Link, Typography, Box, List, ListItem } from '../theme'
 
 type Props = {
@@ -21,14 +21,14 @@ const AlternateSourcesList = ({ resources }: Props) => {
               <Link
                 data-testid={alternativesListItemLinkTestId}
                 href={resource.url}
-                target="_blank"
                 rel="noreferrer"
+                target="_blank"
               >
                 <Typography
-                  data-testid={alternativesListItemTitleTestId}
                   component="span"
-                  variant="h6"
+                  data-testid={alternativesListItemTitleTestId}
                   display="block"
+                  variant="h6"
                 >
                   {resource.title}
                 </Typography>

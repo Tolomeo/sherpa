@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Path, Resource } from '../../data'
+import { Path, Resource } from '@sherpa/data'
 import { LayoutProvider } from '../../src/theme'
 import Provider from './Provider'
 import Header from './Header'

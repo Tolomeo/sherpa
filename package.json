@@ -13,9 +13,10 @@
     "format": "prettier --write \"**/*.{ts,tsx,md,json}\""
   },
   "devDependencies": {
-    "@sherpa/configs": "*",
     "eslint": "^8.48.0",
+    "eslint-config-sherpa": "*",
     "prettier": "^3.0.3",
+    "tsconfig-sherpa": "*",
     "turbo": "^1.11.2",
     "typescript": "5.2.2"
   },
