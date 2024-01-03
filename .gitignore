@@ -42,3 +42,4 @@ cypress.env.json
 
 # Typescript
 tsconfig.tsbuildinfo
+types/

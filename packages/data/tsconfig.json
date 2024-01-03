@@ -3,13 +3,16 @@
 	"rootDir": "./src",
 	"compilerOptions": {
 		"outDir": "./dist",
-		"rootDir": "./src"
+		"rootDir": "./src",
+		"declaration": true,
+		"declarationDir": "./types"
 	},
   "include": [
     "**/*.ts"
   ],
   "exclude": [
     "node_modules",
-		"dist"
+		"dist",
+		"types"
   ]
 }
