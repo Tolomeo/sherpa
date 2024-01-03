@@ -11,6 +11,7 @@
     "copy:json": "cpy \"src/**/*.json\" dist"
   },
   "devDependencies": {
+		"@sherpa/configs": "*",
     "ajv": "^8.11.0",
     "ajv-errors": "^3.0.0",
     "cpy-cli": "^5.0.0"

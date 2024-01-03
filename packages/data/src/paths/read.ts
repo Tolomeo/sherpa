@@ -1,5 +1,3 @@
-import fs from 'fs'
-import path from 'path'
 import { SerializedPath, Path, PathTopic } from './types'
 import { validatePathTopic, validateSerializedPath } from './schema'
 
@@ -50,8 +48,6 @@ const parseSerializedPath = (
 }
 
 export const readSerializedPath = (pathName: string) => {
-  /* const filepath = path.join(__dirname, 'json', `${pathName}.json`)
-  const data = JSON.parse(fs.readFileSync(filepath, 'utf-8')) */
   const data = require(`@sherpa/data/paths/json/${pathName}.json`)
 
   return data as SerializedPath
