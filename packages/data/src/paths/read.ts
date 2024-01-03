@@ -50,8 +50,9 @@ const parseSerializedPath = (
 }
 
 export const readSerializedPath = (pathName: string) => {
-  const filepath = path.join(__dirname, 'json', `${pathName}.json`)
-  const data = JSON.parse(fs.readFileSync(filepath, 'utf-8'))
+	const data = require(`@sherpa/data/paths/json/${pathName}.json`)
+  /* const filepath = path.join(__dirname, 'json', `${pathName}.json`)
+  const data = JSON.parse(fs.readFileSync(filepath, 'utf-8')) */
 
   return data as SerializedPath
 }
