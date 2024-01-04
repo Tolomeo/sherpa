@@ -20,7 +20,7 @@
     "prebuild": "rimraf dist",
     "build": "tsc",
     "postbuild": "cpy \"src/**/*.json\" dist",
-    "lint": "eslint ."
+    "lint": "eslint \"src\""
   },
   "devDependencies": {
     "ajv": "^8.11.0",
