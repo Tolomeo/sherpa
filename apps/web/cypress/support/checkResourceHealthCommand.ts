@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+/* eslint-disable no-case-declarations */
 import type { SerializedResource } from '@sherpa/data'
 import { recurse } from 'cypress-recurse'
 
@@ -62,7 +62,10 @@ const checkHealthByUrlRequest = (
   { titleSelector = 'title' }: CheckHealthOptions = {},
 ) => {
   cy.request(resource.url).then((response) => {
-    const document = new DOMParser().parseFromString(response.body, 'text/html')
+    const document = new DOMParser().parseFromString(
+      response.body as string,
+      'text/html',
+    )
     const titleElement = document.querySelector(titleSelector)
     const titleElementText = cleanTitleString(titleElement?.textContent || '')
 
@@ -98,12 +101,12 @@ const checkHealthByBinaryRequest = (resource: SerializedResource) => {
 
 // NB: this type contains only what we are checking for in the response, when we pass 'snippet' as value for 'part' query parameter
 // the actual response is richer
-type YoutubeDataApiResponse = {
-  items: Array<{
+interface YoutubeDataApiResponse {
+  items: {
     snippet: {
       title: string
     }
-  }>
+  }[]
   pageInfo: {
     totalResults: number
   }
@@ -192,8 +195,8 @@ const checkHealthByScraperRequest = (
       },
       failOnStatusCode: false,
     })
-  const retryUntil = (scraperRequest: Cypress.Response<string>) =>
-    scraperRequest.status !== 429
+  const retryUntil = (request: Cypress.Response<string>) =>
+    request.status !== 429
 
   // we are repeating the request up to  6 times, with a 5s delay between repetitions
   // to handle the api returning 429: Too many requests

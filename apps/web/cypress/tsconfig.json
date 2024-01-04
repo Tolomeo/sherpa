@@ -1,7 +1,4 @@
 {
-  "extends": "../tsconfig.json",
-  "compilerOptions": {
-    "types": ["cypress", "@testing-library/cypress", "cypress-axe", "node"]
-  },
+	"extends": "@sherpa/configs/tsconfig.cy.json",
   "include": ["**/*.ts"]
 }

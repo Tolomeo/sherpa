@@ -6,20 +6,13 @@ module.exports = {
   extends: [
     '@vercel/style-guide/eslint/node',
     '@vercel/style-guide/eslint/typescript',
-    '@vercel/style-guide/eslint/browser',
-    '@vercel/style-guide/eslint/react',
-    '@vercel/style-guide/eslint/next',
     // turborepo custom eslint configuration configures the following rules:
     //  - https://github.com/vercel/turbo/blob/main/packages/eslint-plugin-turbo/docs/rules/no-undeclared-env-vars.md
     'eslint-config-turbo',
   ].map(require.resolve),
-  plugins: ['prettier'],
+  plugins: ['prettier', 'cypress'],
   parserOptions: {
     project,
-  },
-  globals: {
-    React: true,
-    JSX: true,
   },
   settings: {
     'import/resolver': {
@@ -28,8 +21,10 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ['node_modules/', 'dist/'],
-  // add rules configurations here
+  ignorePatterns: ['node_modules/'],
+  env: {
+    'cypress/globals': true,
+  },
   rules: {
 		'prefer-named-capture-group': 'off',
     'prettier/prettier': 'warn',
@@ -42,8 +37,9 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
     '@typescript-eslint/no-unnecessary-condition': 'warn',
-    'react/jsx-sort-props': 'off',
-    'react/function-component-definition': 'off',
-    'react/jsx-no-leaked-render': 'off',
+    'cypress/no-assigning-return-values': 'error',
+    'cypress/no-unnecessary-waiting': 'error',
+    'cypress/no-async-tests': 'error',
+    'cypress/unsafe-to-chain-command': 'error',
   },
 }
