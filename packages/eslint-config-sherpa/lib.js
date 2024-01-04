@@ -32,8 +32,12 @@ module.exports = {
   ignorePatterns: ['node_modules/', 'dist/'],
   // add rules configurations here
   rules: {
+    'eslint-comments/require-description': 'warn',
     'import/no-default-export': 'off',
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+		'@typescript-eslint/no-non-null-assertion': 'warn',
+		'@typescript-eslint/prefer-reduce-type-parameter': 'warn',
+		'@typescript-eslint/no-unnecessary-condition': 'warn',
   },
 }

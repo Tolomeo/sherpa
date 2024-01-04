@@ -39,12 +39,17 @@ module.exports = {
   ignorePatterns: ['node_modules/', 'dist/'],
   // add rules configurations here
   rules: {
+    'eslint-comments/require-description': 'warn',
     'import/no-default-export': 'off',
+    'unicorn/filename-case': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'warn',
+    '@typescript-eslint/no-confusing-void-expression': 'off',
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
+    '@typescript-eslint/no-unnecessary-condition': 'warn',
     'react/jsx-sort-props': 'off',
     'react/function-component-definition': 'off',
     'react/jsx-no-leaked-render': 'off',
-    'unicorn/filename-case': 'off',
   },
 }

@@ -12,8 +12,7 @@ interface MyAppProps extends AppProps {
 }
 
 export default function App(props: MyAppProps) {
-	// TODO: check how to avoid disabling the line
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- TODO: check how to avoid
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
   return (
     <ThemeProvider cache={emotionCache}>
