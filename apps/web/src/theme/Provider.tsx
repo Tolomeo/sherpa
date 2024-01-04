@@ -1,10 +1,10 @@
 import React, { useMemo, createContext, useContext } from 'react'
-import type { Theme} from '@mui/material/styles';
+import type { Theme } from '@mui/material/styles'
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
-import type { EmotionCache } from './emotion';
+import type { EmotionCache } from './emotion'
 import { CacheProvider } from './emotion'
-import type { ThemeMode } from './theme';
+import type { ThemeMode } from './theme'
 import { useTheme } from './theme'
 
 type ThemeContextValue = {

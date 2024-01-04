@@ -1,9 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
-import type {
-  ThemeOptions} from '@mui/material/styles';
-import {
-  createTheme as createMuiTheme,
-} from '@mui/material/styles'
+import type { ThemeOptions } from '@mui/material/styles'
+import { createTheme as createMuiTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
 export type ThemeMode = 'light' | 'dark'

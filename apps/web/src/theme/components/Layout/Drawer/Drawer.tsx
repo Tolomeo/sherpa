@@ -1,5 +1,5 @@
 import React from 'react'
-import type { DrawerProps } from '@mui/material/Drawer';
+import type { DrawerProps } from '@mui/material/Drawer'
 import MuiDrawer from '@mui/material/Drawer'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'

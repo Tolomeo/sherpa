@@ -2,21 +2,13 @@
   "logo": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 180 180\"> <g clip-path=\"url(#a)\"> <mask id=\"b\" width=\"180\" height=\"180\" x=\"0\" y=\"0\" maskUnits=\"userSpaceOnUse\" style=\"mask-type:alpha\"> <path fill=\"#000\" d=\"M90 180c49.706 0 90-40.294 90-90S139.706 0 90 0 0 40.294 0 90s40.294 90 90 90Z\"/> </mask> <g mask=\"url(#b)\"> <path fill=\"#000\" stroke=\"#fff\" stroke-width=\"6\" d=\"M90 180c49.706 0 90-40.294 90-90S139.706 0 90 0 0 40.294 0 90s40.294 90 90 90Z\"/> <path fill=\"url(#c)\" d=\"M149.508 157.52 69.142 54H54v71.97h12.114V69.384l73.885 95.461a90.304 90.304 0 0 0 9.509-7.325Z\"/> <path fill=\"url(#d)\" d=\"M127 54h-12v72h12V54Z\"/> </g> </g> <defs> <linearGradient id=\"c\" x1=\"109\" x2=\"144.5\" y1=\"116.5\" y2=\"160.5\" gradientUnits=\"userSpaceOnUse\"> <stop stop-color=\"#fff\"/> <stop offset=\"1\" stop-color=\"#fff\" stop-opacity=\"0\"/> </linearGradient> <linearGradient id=\"d\" x1=\"121\" x2=\"120.799\" y1=\"54\" y2=\"106.875\" gradientUnits=\"userSpaceOnUse\"> <stop stop-color=\"#fff\"/> <stop offset=\"1\" stop-color=\"#fff\" stop-opacity=\"0\"/> </linearGradient> <clipPath id=\"a\"> <path fill=\"#fff\" d=\"M0 0h180v180H0z\"/> </clipPath> </defs> </svg>",
   "hero": {
     "foreground": "#ffffff",
-    "background": [
-      "#0072F5",
-      "#4F2768"
-    ]
+    "background": ["#0072F5", "#4F2768"]
   },
   "notes": [
     "Logo image: The Next.js symbol is the exclusive property of Vercel and used in accordance to Vercel's guidelines for logo usage (https://vercel.com/design/brands)"
   ],
-  "prev": [
-    "react",
-    "npm"
-  ],
-  "next": [
-    "node"
-  ],
+  "prev": ["react", "npm"],
+  "next": ["node"],
   "main": [
     "https://medium.com/swlh/the-hitchhikers-guide-to-next-js-fd7aa14ae8d0",
     "https://nextjs.org/learn/basics/create-nextjs-app",

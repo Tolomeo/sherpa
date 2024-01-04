@@ -3,7 +3,7 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["es2017", "dom"],
-		"types": ["cypress", "@testing-library/cypress", "cypress-axe", "node"]
+    "types": ["cypress", "@testing-library/cypress", "cypress-axe", "node"]
   },
   "include": ["**/*.ts"]
 }

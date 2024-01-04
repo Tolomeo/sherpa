@@ -1,4 +1,4 @@
-import type { Resource, Path} from '@sherpa/data';
+import type { Resource, Path } from '@sherpa/data'
 import { ResourceType, PathTopic } from '@sherpa/data'
 
 const topics: Path['topic'][] = [

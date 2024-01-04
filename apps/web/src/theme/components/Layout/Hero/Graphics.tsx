@@ -1,4 +1,4 @@
-import type { SVGProps, Ref} from 'react';
+import type { SVGProps, Ref } from 'react'
 import React, { forwardRef } from 'react'
 import { styled } from '@mui/material/styles'
 import { useThemeContext } from '../../../Provider'

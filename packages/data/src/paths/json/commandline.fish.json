@@ -3,8 +3,5 @@
     "https://fishshell.com/docs/current/tutorial.html",
     "https://github.com/jorgebucaran/awsm.fish"
   ],
-  "resources": [
-    "https://rootnroll.com/d/fish-shell/",
-    "https://fishshell.com/"
-  ]
+  "resources": ["https://rootnroll.com/d/fish-shell/", "https://fishshell.com/"]
 }

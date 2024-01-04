@@ -1,5 +1,9 @@
 import type { ParsedUrlQuery } from 'querystring'
-import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
+import type {
+  GetStaticPaths,
+  GetStaticProps,
+  InferGetStaticPropsType,
+} from 'next'
 import Head from 'next/head'
 import type { Path, Resource } from '@sherpa/data'
 import { readPath } from '@sherpa/data/paths/read'

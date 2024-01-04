@@ -22,7 +22,7 @@ interface StaticProps {
   alternateSources: Resource[]
 }
 
-export const getStaticProps: GetStaticProps<StaticProps> =  (
+export const getStaticProps: GetStaticProps<StaticProps> = (
   _: GetStaticPropsContext,
 ) => {
   const alternateSources = readResources('alternatives')
