@@ -1,8 +1,8 @@
-import { Path, Resource } from '../../../data'
+import type { Path, Resource } from '@sherpa/data'
 import config from '../../../src/config'
 
 const flattenPathResources = (path: Path) => {
-  let pathResources = []
+  const pathResources = []
 
   const { main, resources, children } = path
 

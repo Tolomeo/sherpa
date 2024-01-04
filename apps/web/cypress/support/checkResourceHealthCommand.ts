@@ -1,34 +1,32 @@
 /// <reference types="cypress" />
-import { SerializedResource } from '../../data'
+import type { SerializedResource } from '@sherpa/data'
 import { recurse } from 'cypress-recurse'
 
-type CheckHealthOptions = {
+interface CheckHealthOptions {
   titleSelector?: string
 }
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace Cypress {
     interface Chainable {
-      checkHealthByVisit(
-        value: SerializedResource,
-        options?: CheckHealthOptions,
-      ): void
+      checkHealthByVisit(_: SerializedResource, __?: CheckHealthOptions): void
 
       checkHealthByUrlRequest(
-        value: SerializedResource,
-        options?: CheckHealthOptions,
+        _: SerializedResource,
+        __?: CheckHealthOptions,
       ): void
 
-      checkHealthByBinaryRequest(value: SerializedResource): void
+      checkHealthByBinaryRequest(_: SerializedResource): void
 
       checkHealthByYoutubeDataAPIv3Request(
-        value: SerializedResource,
-        options: { apikey: string },
+        _: SerializedResource,
+        __: { apikey: string },
       ): void
 
       checkHealthByScraperRequest(
-        value: SerializedResource,
-        options: CheckHealthOptions & {
+        _: SerializedResource,
+        __: CheckHealthOptions & {
           apikey: string
           render?: boolean
           premium?: boolean
