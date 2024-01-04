@@ -1,5 +1,5 @@
 {
-	"extends": "tsconfig-sherpa/lib.json",
+	"extends": "@sherpa/configs/tsconfig.lib.json",
 	"compilerOptions": {
 		"outDir": "dist",
 		"rootDir": "src",

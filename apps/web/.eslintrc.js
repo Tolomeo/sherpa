@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ['sherpa/app'],
+  extends: [require.resolve('@sherpa/configs/eslintrc.app')],
 }
