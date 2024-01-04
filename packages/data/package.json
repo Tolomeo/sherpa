@@ -2,10 +2,17 @@
   "name": "@sherpa/data",
   "version": "0.4.0",
   "private": true,
+  "type": "module",
   "exports": {
     "./*": "./dist/*.js"
   },
-  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
+    }
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
