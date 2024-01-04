@@ -1,10 +1,10 @@
-import {
+import type {
   GetStaticProps,
   GetStaticPropsContext,
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { Resource } from '@sherpa/data/resources'
+import type { Resource } from '@sherpa/data'
 import { readResources } from '@sherpa/data/resources/read'
 import {
   LayoutProvider,
@@ -22,7 +22,7 @@ interface StaticProps {
   alternateSources: Resource[]
 }
 
-export const getStaticProps: GetStaticProps<StaticProps> = async (
+export const getStaticProps: GetStaticProps<StaticProps> =  (
   _: GetStaticPropsContext,
 ) => {
   const alternateSources = readResources('alternatives')

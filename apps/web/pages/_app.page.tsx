@@ -1,7 +1,8 @@
 import * as React from 'react'
 import Head from 'next/head'
-import { AppProps } from 'next/app'
-import ThemeProvider, { createCache, EmotionCache } from '../src/theme'
+import type { AppProps } from 'next/app'
+import type { EmotionCache } from '../src/theme';
+import ThemeProvider, { createCache } from '../src/theme'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createCache()
@@ -11,6 +12,8 @@ interface MyAppProps extends AppProps {
 }
 
 export default function App(props: MyAppProps) {
+	// TODO: check how to avoid disabling the line
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
   return (
     <ThemeProvider cache={emotionCache}>

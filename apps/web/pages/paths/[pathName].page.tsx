@@ -1,7 +1,7 @@
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
-import { ParsedUrlQuery } from 'querystring'
+import type { ParsedUrlQuery } from 'querystring'
+import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
-import { Path, Resource } from '@sherpa/data'
+import type { Path, Resource } from '@sherpa/data'
 import { readPath } from '@sherpa/data/paths/read'
 import { readResources } from '@sherpa/data/resources/read'
 import PathBody from '../../src/path'
@@ -17,7 +17,7 @@ interface StaticProps {
   resources: Resource[]
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = () => {
   const staticPaths = config.paths.topics.map((pathName) => ({
     params: { pathName },
   }))
@@ -25,7 +25,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths: staticPaths, fallback: false }
 }
 
-export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
+export const getStaticProps: GetStaticProps<StaticProps, Params> = ({
   params,
 }) => {
   const topic = params!.pathName as (typeof config.paths.topics)[number]

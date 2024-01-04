@@ -4,7 +4,11 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./*": "./dist/*.js"
+    ".": "./dist/index.js",
+    "./*": {
+      "import": "./dist/*.js",
+      "require": "./dist/*"
+    }
   },
   "typesVersions": {
     "*": {
