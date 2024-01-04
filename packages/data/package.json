@@ -3,13 +3,13 @@
   "version": "0.4.0",
   "private": true,
   "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*"
+    "./*": "./dist/*.js"
   },
-  "types": "types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc && npm run copy:json",
-    "copy:json": "cpy \"src/**/*.json\" dist",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "postbuild": "cpy \"src/**/*.json\" dist",
     "lint": "eslint ."
   },
   "devDependencies": {
@@ -17,6 +17,7 @@
     "ajv-errors": "^3.0.0",
     "cpy-cli": "^5.0.0",
     "eslint-config-sherpa": "*",
+    "rimraf": "^5.0.5",
     "tsconfig-sherpa": "*"
   }
 }

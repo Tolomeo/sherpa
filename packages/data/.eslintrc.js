@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   extends: ['sherpa/lib'],
-  ignorePatterns: ['types/**', 'dist/**'],
+  ignorePatterns: ['dist/**'],
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
   },

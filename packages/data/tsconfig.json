@@ -4,15 +4,13 @@
 	"compilerOptions": {
 		"outDir": "./dist",
 		"rootDir": "./src",
-		"declaration": true,
-		"declarationDir": "./types"
+		"declaration": true
 	},
   "include": [
-    "**/*.ts"
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-		"dist",
-		"types"
+		"dist"
   ]
 }
