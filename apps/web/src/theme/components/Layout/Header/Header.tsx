@@ -8,7 +8,7 @@ import Logo from '../../Logo'
 import ThemeModeToggle from './ThemeModeToggle'
 import GitHubLink from './GitHubLink'
 
-type Props = {
+interface Props {
   children?: React.ReactNode
 }
 
@@ -19,6 +19,7 @@ const Header: React.FC<Props> = ({ children }) => {
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1 }}>
             <Link href="/" legacyBehavior>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a aria-label="Go to homepage">
                 <Logo aria-hidden="true" />
               </a>

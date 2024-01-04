@@ -1,4 +1,5 @@
-import React, { SVGProps, Ref, forwardRef } from 'react'
+import type { SVGProps, Ref} from 'react';
+import React, { forwardRef } from 'react'
 import { useThemeContext } from '../../Provider'
 
 const SvgLogo = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => {

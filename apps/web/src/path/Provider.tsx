@@ -40,13 +40,10 @@ export const usePathResourcesCompletion = (
   const [completion, setCompletion] = useState(
     resources
       .map(({ url }) => url)
-      .reduce(
-        (initialCompletion, url) => {
-          initialCompletion[url] = false
-          return initialCompletion
-        },
-        {} as Record<string, boolean>,
-      ),
+      .reduce<Record<string, boolean>>((initialCompletion, url) => {
+        initialCompletion[url] = false
+        return initialCompletion
+      }, {}),
   )
 
   useEffect(() => {
@@ -56,16 +53,17 @@ export const usePathResourcesCompletion = (
         resourcesUrls,
         topic,
       )
-      const storedUrlsCompletion = resourcesUrls.reduce(
-        (_urlsCompletion, url, index) => {
-          _urlsCompletion[url] = storedCompletion[index]
-          return _urlsCompletion
-        },
-        {} as Record<string, boolean>,
-      )
+      const storedUrlsCompletion = resourcesUrls.reduce<
+        Record<string, boolean>
+      >((_urlsCompletion, url, index) => {
+        _urlsCompletion[url] = storedCompletion[index]
+        return _urlsCompletion
+      }, {})
       setCompletion(storedUrlsCompletion)
     }
 
+    // TODO: Check how to deal with this
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     setStoredCompletion()
   }, [resources, resourcesCompletionStore, topic])
 
@@ -98,7 +96,7 @@ export const usePathResourcesCompletion = (
   return [completion, { complete, uncomplete }]
 }
 
-type Props = {
+interface Props {
   path: Path
   resources: Resource[]
   children: React.ReactNode

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
+import type {
+  ThemeOptions} from '@mui/material/styles';
 import {
-  ThemeOptions,
   createTheme as createMuiTheme,
 } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
@@ -107,7 +108,7 @@ export const createTheme = (mode: ThemeMode) => {
       MuiTimelineDot: {
         styleOverrides: {
           root: {
-            ['&:not(:empty)']: {
+            '&:not(:empty)': {
               padding: 0,
             },
           },
@@ -116,7 +117,7 @@ export const createTheme = (mode: ThemeMode) => {
       MuiTimelineItem: {
         styleOverrides: {
           positionRight: {
-            ['&::before']: {
+            '&::before': {
               display: 'none',
             },
           },
@@ -213,15 +214,15 @@ const setUserThemeModePreference = (mode: ThemeMode) => {
   window.localStorage.setItem('theme.preferences.mode', mode)
 }
 
-export const useThemeMode = (): [ThemeMode, (mode: ThemeMode) => void] => {
+export const useThemeMode = (): [ThemeMode, (_: ThemeMode) => void] => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const [mode, setModeValue] = useState<ThemeMode>(
     prefersDarkMode ? 'dark' : 'light',
   )
 
-  const setMode = useCallback((mode: ThemeMode) => {
-    setModeValue(mode)
-    setUserThemeModePreference(mode)
+  const setMode = useCallback((newMode: ThemeMode) => {
+    setModeValue(newMode)
+    setUserThemeModePreference(newMode)
   }, [])
 
   useEffect(() => {

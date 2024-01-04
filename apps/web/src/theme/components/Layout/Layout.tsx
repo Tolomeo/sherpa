@@ -2,7 +2,7 @@ import React from 'react'
 import Box from '@mui/material/Box'
 import LayoutContext from './Context'
 
-type Props = {
+interface Props {
   children: React.ReactNode
 }
 

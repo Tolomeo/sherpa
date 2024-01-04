@@ -5,7 +5,7 @@ import Stack from '@mui/material/Stack'
 import Container from '../Container'
 import Graphics from './Graphics'
 
-type Props = {
+interface Props {
   children: React.ReactNode
   foreground?: string
   background?: string[]

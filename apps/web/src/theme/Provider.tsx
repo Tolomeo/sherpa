@@ -1,18 +1,21 @@
 import React, { useMemo, createContext, useContext } from 'react'
-import { Theme, ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
+import type { Theme} from '@mui/material/styles';
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
-import { CacheProvider, EmotionCache } from './emotion'
-import { useTheme, ThemeMode } from './theme'
+import type { EmotionCache } from './emotion';
+import { CacheProvider } from './emotion'
+import type { ThemeMode } from './theme';
+import { useTheme } from './theme'
 
 type ThemeContextValue = {
   mode: ThemeMode
-  setMode: (mode: ThemeMode) => void
+  setMode: (_: ThemeMode) => void
   theme: Theme
 } | null
 
 const ThemeContext = createContext<ThemeContextValue>(null)
 
-type Props = {
+interface Props {
   cache: EmotionCache
   children: React.ReactNode
 }

@@ -1,8 +1,8 @@
 import React from 'react'
-import { Resource } from '@sherpa/data'
+import type { Resource } from '@sherpa/data'
 import { Link, Typography, Box, List, ListItem } from '../theme'
 
-type Props = {
+interface Props {
   resources: Resource[]
 }
 

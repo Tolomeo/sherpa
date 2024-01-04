@@ -1,6 +1,7 @@
-import { Resource, ResourceType } from '@sherpa/data/resources/types'
+import type { Resource } from '@sherpa/data'
+import { ResourceType } from '@sherpa/data'
 
-export const sortResources = (resources: Array<Resource>) =>
+export const sortResources = (resources: Resource[]) =>
   [...resources].sort((resourceA, resourceB) => {
     const titleA = resourceA.title.toUpperCase()
     const titleB = resourceB.title.toUpperCase()
@@ -15,11 +16,11 @@ export type ResourcesTypeGroups = Record<
   NonNullable<Resource['type']>,
   {
     title: string
-    resources: Array<Resource>
+    resources: Resource[]
   }
 >
 
-const resourcesTypesGroupsOrder: Array<NonNullable<Resource['type']>> = [
+const resourcesTypesGroupsOrder: NonNullable<Resource['type']>[] = [
   ResourceType.basics,
   ResourceType.advanced,
   ResourceType['how-to'],
@@ -31,7 +32,7 @@ const resourcesTypesGroupsOrder: Array<NonNullable<Resource['type']>> = [
 
 export const sortResourcesTypeGroups = (groups: ResourcesTypeGroups) =>
   resourcesTypesGroupsOrder
-    .filter((groupType) => !!groups[groupType])
+    .filter((groupType) => Boolean(groups[groupType]))
     .map((groupType) => groups[groupType])
 
 const resourceTypeToGroupTitle: Record<
@@ -47,7 +48,7 @@ const resourceTypeToGroupTitle: Record<
   feed: 'Stay in the loop',
 }
 
-export const groupResourcesByType = (resources: Array<Resource>) => {
+export const groupResourcesByType = (resources: Resource[]) => {
   const groups = resources.reduce((groupedResources, resource) => {
     const { type } = resource
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 
-type Props = {
+interface Props {
   svg: string
 }
 
@@ -15,7 +15,7 @@ const Img = styled('img')`
 
 const ImgSizer = styled(Box)(
   ({ theme }) => `
-	font-size: ${theme.typography.h1.fontSize};
+	font-size: ${theme.typography.h1.fontSize as string};
 `,
 )
 

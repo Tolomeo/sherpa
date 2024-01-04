@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react'
 import Box from '@mui/material/Box'
 
-type LayoutContextValue = {
+interface LayoutContextValue {
   drawerOpen: boolean
   openDrawer: () => void
   closeDrawer: () => void
@@ -19,7 +19,7 @@ export const useLayoutContext = () => {
   return layoutContext
 }
 
-type Props = {
+interface Props {
   children: React.ReactNode
 }
 

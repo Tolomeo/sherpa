@@ -1,11 +1,11 @@
 import React from 'react'
 import NextLink from 'next/link'
-import { Path } from '../../data'
+import type { Path } from '@sherpa/data'
 import { List, ListItem, Link, Typography, Box, Underline } from '../theme'
 import config from '../config'
 
 type Props = Omit<React.ComponentProps<typeof List>, 'children'> & {
-  paths?: Array<Path['topic']>
+  paths?: Path['topic'][]
 }
 
 const PathsList = ({ paths = config.paths.topics, ...props }: Props) => (
