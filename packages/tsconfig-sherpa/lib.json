@@ -6,7 +6,7 @@
     "esModuleInterop": true,
 		"declaration": true,
     "forceConsistentCasingInFileNames": true,
-    "incremental": true,
+    "incremental": false,
     "isolatedModules": true,
     "lib": ["dom", "dom.iterable", "ES2020"],
     "module": "ES2020",
