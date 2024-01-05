@@ -3,14 +3,13 @@ const { resolve } = require('node:path')
 const project = resolve(process.cwd(), 'tsconfig.json')
 
 module.exports = {
-  extends: [
-    '@vercel/style-guide/eslint/node',
-    '@vercel/style-guide/eslint/typescript',
-    // turborepo custom eslint configuration configures the following rules:
-    //  - https://github.com/vercel/turbo/blob/main/packages/eslint-plugin-turbo/docs/rules/no-undeclared-env-vars.md
-    'eslint-config-turbo',
-  ].map(require.resolve),
   plugins: ['prettier', 'cypress'],
+  extends: [
+    require.resolve('@vercel/style-guide/eslint/node'),
+    require.resolve('@vercel/style-guide/eslint/typescript'),
+    require.resolve('eslint-config-turbo'),
+    'plugin:cypress/recommended',
+  ],
   parserOptions: {
     project,
   },
@@ -22,11 +21,8 @@ module.exports = {
     },
   },
   ignorePatterns: ['node_modules/'],
-  env: {
-    'cypress/globals': true,
-  },
   rules: {
-		'prefer-named-capture-group': 'off',
+    'prefer-named-capture-group': 'off',
     'prettier/prettier': 'warn',
     'eslint-comments/require-description': 'warn',
     'import/no-default-export': 'off',
@@ -37,9 +33,5 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
     '@typescript-eslint/no-unnecessary-condition': 'warn',
-    'cypress/no-assigning-return-values': 'error',
-    'cypress/no-unnecessary-waiting': 'error',
-    'cypress/no-async-tests': 'error',
-    'cypress/unsafe-to-chain-command': 'error',
   },
 }

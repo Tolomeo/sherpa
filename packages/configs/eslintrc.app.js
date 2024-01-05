@@ -3,17 +3,15 @@ const { resolve } = require('node:path')
 const project = resolve(process.cwd(), 'tsconfig.json')
 
 module.exports = {
-  extends: [
-    '@vercel/style-guide/eslint/node',
-    '@vercel/style-guide/eslint/typescript',
-    '@vercel/style-guide/eslint/browser',
-    '@vercel/style-guide/eslint/react',
-    '@vercel/style-guide/eslint/next',
-    // turborepo custom eslint configuration configures the following rules:
-    //  - https://github.com/vercel/turbo/blob/main/packages/eslint-plugin-turbo/docs/rules/no-undeclared-env-vars.md
-    'eslint-config-turbo',
-  ].map(require.resolve),
   plugins: ['prettier'],
+  extends: [
+    require.resolve('@vercel/style-guide/eslint/node'),
+    require.resolve('@vercel/style-guide/eslint/typescript'),
+    require.resolve('@vercel/style-guide/eslint/browser'),
+    require.resolve('@vercel/style-guide/eslint/react'),
+    require.resolve('@vercel/style-guide/eslint/next'),
+    require.resolve('eslint-config-turbo'),
+  ],
   parserOptions: {
     project,
   },
@@ -29,9 +27,8 @@ module.exports = {
     },
   },
   ignorePatterns: ['node_modules/', 'dist/'],
-  // add rules configurations here
   rules: {
-		'prefer-named-capture-group': 'off',
+    'prefer-named-capture-group': 'off',
     'prettier/prettier': 'warn',
     'eslint-comments/require-description': 'warn',
     'import/no-default-export': 'off',
