@@ -1,15 +1,7 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
     "moduleResolution": "node",
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
+    "lib": ["es5", "dom"],
     "strict": true,
     "target": "es5",
     "types": ["cypress", "node"]

@@ -1,6 +1,6 @@
 import { defineConfig } from 'cypress'
-import * as resourcesDataUtils from '@sherpa/data/resources/read'
-import * as pathDataUtils from '@sherpa/data/paths/read'
+import * as pathsReadUtils from '@sherpa/data/paths/read'
+import * as resourcesReadUtils from '@sherpa/data/resources/read'
 
 export default defineConfig({
   video: false,
@@ -8,8 +8,8 @@ export default defineConfig({
   e2e: {
     setupNodeEvents(on, _config) {
       on('task', {
-        ...resourcesDataUtils,
-        ...pathDataUtils,
+        ...pathsReadUtils,
+        ...resourcesReadUtils,
       })
     },
     baseUrl: 'http://localhost:3000',
