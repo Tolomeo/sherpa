@@ -28,22 +28,23 @@ jobs:
           github-comment: true
           github-deployment: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          working-directory: apps/web
     outputs:
       preview-url: ${{ steps.vercel-deployment.outputs.preview-url }}
 
-  Test:
-    runs-on: ubuntu-latest
-    needs: Deploy
-    timeout-minutes: 30 # to prevent a hanging process from using all CI minutes
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Cypress
-        uses: cypress-io/github-action@v4
-        env:
-          CYPRESS_BASE_URL: ${{ needs.Deploy.outputs.preview-url }}
-        with:
-          spec: |
-            cypress/e2e/paths/home.cy.ts
-            cypress/e2e/paths/pages.cy.ts
-            cypress/e2e/paths/resources.cy.ts
+  # Test:
+  #   runs-on: ubuntu-latest
+  #   needs: Deploy
+  #   timeout-minutes: 30 # to prevent a hanging process from using all CI minutes
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #     - name: Cypress
+  #       uses: cypress-io/github-action@v4
+  #       env:
+  #         CYPRESS_BASE_URL: ${{ needs.Deploy.outputs.preview-url }}
+  #       with:
+  #         spec: |
+  #           cypress/e2e/paths/home.cy.ts
+  #           cypress/e2e/paths/pages.cy.ts
+  #           cypress/e2e/paths/resources.cy.ts

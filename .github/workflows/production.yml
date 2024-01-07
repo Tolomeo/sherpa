@@ -27,3 +27,4 @@ jobs:
           github-comment: true
           github-deployment: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          working-directory: apps/web
