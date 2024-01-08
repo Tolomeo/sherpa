@@ -10,9 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90 # higher timeout because network requests can be slow in CI
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Path resources healthcheck
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v6
         env:
           CYPRESS_baseUrl: https://www.sherpa.guide
           CYPRESS_retries: 0
@@ -21,5 +22,8 @@ jobs:
           CYPRESS_ZENSCRAPE_API_KEY: ${{ secrets.ZENSCRAPE_API_KEY }}
           CYPRESS_YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         with:
+          build: npm run build:packages # cypress.config.ts depends on read utils from @sherpa/data package
+          project: apps/web
           browser: chrome
-          spec: cypress/e2e/paths/health-check.cy.ts # Running only resources tests
+          spec: |
+            **/cypress/e2e/paths/health-check.cy.ts
