@@ -1,6 +1,7 @@
-const { defineConfig } = require('cypress')
-const pathsReadUtils = require('@sherpa/data/paths/read.js')
-const resourcesReadUtils = require('@sherpa/data/resources/read.js')
+/* eslint-disable import/no-unresolved */
+import { defineConfig } from 'cypress'
+import * as pathsReadUtils from '@sherpa/data/paths/read.js'
+import * as resourcesReadUtils from '@sherpa/data/resources/read.js'
 
 export default defineConfig({
   video: false,
