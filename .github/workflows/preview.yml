@@ -43,6 +43,7 @@ jobs:
         env:
           CYPRESS_BASE_URL: ${{ needs.Deploy.outputs.preview-url }}
         with:
+          build: npm run build
           project: apps/web
           spec: |
             cypress/e2e/paths/home.cy.ts
