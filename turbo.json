@@ -6,14 +6,17 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
-    "lint": {},
-    "test": {
-      "cache": false,
-      "dependsOn": ["^build"]
+    "@sherpa/build": {
+			"env": ["NEXT_PUBLIC_GITHUB_URL"]
     },
     "dev": {
       "cache": false,
       "persistent": true,
+      "dependsOn": ["^build"]
+    },
+    "lint": {},
+    "test": {
+      "cache": false,
       "dependsOn": ["^build"]
     }
   }

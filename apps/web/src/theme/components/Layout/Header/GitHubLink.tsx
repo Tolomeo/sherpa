@@ -6,8 +6,7 @@ const GithubIconLink = () => {
     <IconButton
       color="inherit"
       aria-label="Go to repository"
-      // TODO: verify how to fix turbo
-      // eslint-disable-next-line turbo/no-undeclared-env-vars
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       href={process.env.NEXT_PUBLIC_GITHUB_URL!}
     >
       <GitHubIcon />
