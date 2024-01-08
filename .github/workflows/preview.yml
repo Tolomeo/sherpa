@@ -43,7 +43,7 @@ jobs:
         env:
           CYPRESS_BASE_URL: ${{ needs.Deploy.outputs.preview-url }}
         with:
-          build: npm run build
+          build: npm run build:packages # cypress.config.ts depends on read utils from @sherpa/data package
           project: apps/web
           spec: |
             **/cypress/e2e/paths/home.cy.ts
