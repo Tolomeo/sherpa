@@ -24,8 +24,5 @@
   },
   "engines": {
     "node": ">=18"
-  },
-  "dependencies": {
-    "@sherpa/data": "^0.4.0"
   }
 }
