@@ -39,11 +39,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Cypress
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v6
         env:
           CYPRESS_BASE_URL: ${{ needs.Deploy.outputs.preview-url }}
         with:
+          build: npm run build:packages # cypress.config.ts depends on read utils from @sherpa/data package
+          project: apps/web
           spec: |
-            cypress/e2e/paths/home.cy.ts
-            cypress/e2e/paths/pages.cy.ts
-            cypress/e2e/paths/resources.cy.ts
+            **/cypress/e2e/paths/home.cy.ts
+            **/cypress/e2e/paths/pages.cy.ts
+            **/cypress/e2e/paths/resources.cy.ts

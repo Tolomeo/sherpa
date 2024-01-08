@@ -1,0 +1,5 @@
+{
+  "extends": "@sherpa/configs/tsconfig.app.json",
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "cypress"]
+}

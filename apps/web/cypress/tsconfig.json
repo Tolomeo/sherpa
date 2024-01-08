@@ -1,0 +1,4 @@
+{
+	"extends": "@sherpa/configs/tsconfig.cy.json",
+  "include": ["**/*.ts"]
+}

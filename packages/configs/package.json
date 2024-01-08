@@ -1,0 +1,13 @@
+{
+  "name": "@sherpa/configs",
+  "license": "MIT",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^14.0.4",
+    "@vercel/style-guide": "^5.1.0",
+    "eslint-config-turbo": "^1.10.12",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-prettier": "^5.1.2"
+  }
+}
