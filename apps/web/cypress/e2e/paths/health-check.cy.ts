@@ -88,24 +88,24 @@ const checkResourceHealth = (resource: SerializedResource) => {
     case 'tldp.org':
     case 'gitexplorer.com':
     case 'ubuntu.com':
+    case 'curlbuilder.com':
       return cy.checkHealthByVisit(resource)
     case 'reactdigest.net':
     case 'data-flair.training':
-    case 'codepen.io':
-    case 'replit.com':
-    case 'git.herrbischoff.com':
     case 'linux.org':
     case 'snipcart.com':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY') as string,
       })
     case 'bash.cyberciti.biz':
+    case 'git.herrbischoff.com':
     case 'codementor.io':
+    case 'codepen.io':
+    case 'replit.com':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY') as string,
         render: true,
       })
-    case 'adobe.com':
     case 'ui.dev':
     case 'developer.apple.com':
     case 'udemy.com':
@@ -116,6 +116,7 @@ const checkResourceHealth = (resource: SerializedResource) => {
         premium: true,
       })
     case 'pexels.com':
+    case 'adobe.com':
       return cy.checkHealthByScraperRequest(resource, {
         apikey: Cypress.env('ZENSCRAPE_API_KEY') as string,
         render: true,
