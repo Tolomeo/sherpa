@@ -76,12 +76,6 @@
     "type": "advanced"
   },
   {
-    "title": "CSS Layout",
-    "url": "https://csslayout.io",
-    "source": "csslayout.io",
-    "type": "how-to"
-  },
-  {
     "title": "awesome-html5",
     "url": "https://github.com/diegocard/awesome-html5",
     "type": "reference"

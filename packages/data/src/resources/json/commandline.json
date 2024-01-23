@@ -394,7 +394,7 @@
     "type": "reference"
   },
   {
-    "title": "Linux Shell Scripting Tutorial",
+    "title": "Linux Bash Shell Scripting Tutorial",
     "url": "https://bash.cyberciti.biz/guide/Main_Page",
     "type": "basics"
   },
@@ -569,19 +569,9 @@
     "type": "feed"
   },
   {
-    "title": "Install Ubuntu on WSL2 on Windows 10",
-    "url": "https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview",
-    "type": "how-to"
-  },
-  {
-    "title": "Install Ubuntu on WSL2 and get started with graphical applications",
-    "url": "https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview",
-    "type": "how-to"
-  },
-  {
-    "title": "Enabling GPU acceleration on Ubuntu on WSL2 with the NVIDIA CUDA Platform",
-    "url": "https://ubuntu.com/tutorials/enabling-gpu-acceleration-on-ubuntu-on-wsl2-with-the-nvidia-cuda-platform#1-overview",
-    "type": "how-to"
+    "title": "Ubuntu WSL documentation",
+    "url": "https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/",
+    "type": "reference"
   },
   {
     "title": "awesome-wsl",
@@ -686,11 +676,6 @@
     "title": "Forking Chrome to render in a terminal",
     "url": "https://fathy.fr/carbonyl",
     "type": "curiosity"
-  },
-  {
-    "title": "Chmod Calculator",
-    "url": "https://chmodcommand.com/",
-    "type": "tool"
   },
   {
     "title": "You-Dont-Need-GUI",

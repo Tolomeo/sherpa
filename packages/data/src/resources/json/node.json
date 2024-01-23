@@ -271,11 +271,6 @@
     "type": "advanced"
   },
   {
-    "title": "Building Modern Node.js Applications on AWS",
-    "url": "https://www.coursera.org/learn/building-modern-node-applications-on-aws",
-    "type": "advanced"
-  },
-  {
     "title": "awesome-nodejs-security",
     "url": "https://github.com/lirantal/awesome-nodejs-security",
     "type": "reference"
