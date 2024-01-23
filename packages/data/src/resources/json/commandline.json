@@ -569,19 +569,9 @@
     "type": "feed"
   },
   {
-    "title": "Install Ubuntu on WSL2 on Windows 10",
-    "url": "https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview",
-    "type": "how-to"
-  },
-  {
-    "title": "Install Ubuntu on WSL2 and get started with graphical applications",
-    "url": "https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview",
-    "type": "how-to"
-  },
-  {
-    "title": "Enabling GPU acceleration on Ubuntu on WSL2 with the NVIDIA CUDA Platform",
-    "url": "https://ubuntu.com/tutorials/enabling-gpu-acceleration-on-ubuntu-on-wsl2-with-the-nvidia-cuda-platform#1-overview",
-    "type": "how-to"
+    "title": "Ubuntu WSL documentation",
+    "url": "https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/",
+    "type": "reference"
   },
   {
     "title": "awesome-wsl",

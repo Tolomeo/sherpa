@@ -1,14 +1,12 @@
 {
   "main": [
-    "https://github.com/mikeroyal/WSL-Guide",
+    "https://www.youtube.com/playlist?list=PLhfrWIlLOoKNMHhB39bh3XBpoLxV3f0V9",
     "https://github.com/sirredbeard/Awesome-WSL"
   ],
   "resources": [
-    "https://www.youtube.com/playlist?list=PLhfrWIlLOoKNMHhB39bh3XBpoLxV3f0V9",
+    "https://github.com/mikeroyal/WSL-Guide",
     "https://docs.microsoft.com/en-us/windows/wsl/",
     "https://devblogs.microsoft.com/commandline/",
-    "https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview",
-    "https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview",
-    "https://ubuntu.com/tutorials/enabling-gpu-acceleration-on-ubuntu-on-wsl2-with-the-nvidia-cuda-platform#1-overview"
+    "https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/"
   ]
 }
