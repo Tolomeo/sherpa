@@ -18,12 +18,12 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "npm run build:ts && npm run build:json",
+    "build": "run-s build:ts build:json",
     "build:ts": "tsc",
     "build:json": "cpy \"src/**/*.json\" dist",
-    "dev": "npm run dev:ts & npm run dev:json",
-		"dev:ts": "nodemon --watch src --ext ts --on-change-only --exec \"npm run build:ts\"",
-		"dev:json": "nodemon --watch src --ext json --on-change-only --exec \"npm run build:json\"",
+    "dev": "run-p dev:ts dev:json",
+    "dev:ts": "nodemon --watch src --ext ts --on-change-only --exec \"npm run build:ts\"",
+    "dev:json": "nodemon --watch src --ext json --on-change-only --exec \"npm run build:json\"",
     "lint": "eslint \"src\""
   },
   "devDependencies": {
@@ -32,6 +32,7 @@
     "ajv-errors": "^3.0.0",
     "cpy-cli": "^5.0.0",
     "nodemon": "^3.0.3",
+    "npm-run-all2": "^6.1.1",
     "rimraf": "^5.0.5"
   }
 }
