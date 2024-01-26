@@ -1,5 +1,29 @@
+import * as fs from 'fs'
+import * as path from 'path'
+import * as url from 'url'
 import type { SerializedResources, SerializedResource, Resource } from './types'
 import { validateSerializedResources } from './schema'
+
+const resourcesDir = path.join(
+  path.dirname(url.fileURLToPath(import.meta.url)),
+  'json',
+)
+
+export async function listResources(): Promise<string[]> {
+  try {
+    let files = await fs.promises.readdir(resourcesDir)
+    files = files.filter((file: string) => file.endsWith('.json'))
+
+    const fileNames = files.map((file: string) => {
+      return path.parse(file).name
+    })
+
+    return fileNames
+  } catch (error) {
+    console.error('Error reading resource sources:', error)
+    throw error // Re-throw the error to handle it properly in the calling code
+  }
+}
 
 const parseSerializedResource = (serializedResource: SerializedResource) => {
   const parsedResource = { ...serializedResource } as Resource
@@ -41,22 +65,33 @@ const parseSerializedResources = (serializedResources: SerializedResources) => {
 }
 
 export const readSerializedResources = (topicName: string) => {
-  const resourcesData = require(
-    `@sherpa/data/resources/json/${topicName}.json`,
-  ) as SerializedResource[]
-  const resourcesDataSchemaErrors = validateSerializedResources(resourcesData)
+  const resourcesFile = path.join(resourcesDir, `${topicName}.json`)
 
-  if (resourcesDataSchemaErrors) {
-    throw new Error(
-      `Serialized resources schema error[ ${JSON.stringify(
-        resourcesDataSchemaErrors,
-        null,
-        2,
-      )} ]`,
+  try {
+    const serializedResources = JSON.parse(
+      fs.readFileSync(resourcesFile, {
+        encoding: 'utf8',
+      }),
     )
-  }
 
-  return resourcesData as SerializedResources
+    const resourcesDataSchemaErrors =
+      validateSerializedResources(serializedResources)
+
+    if (resourcesDataSchemaErrors) {
+      throw new Error(
+        `Serialized resources schema error[ ${JSON.stringify(
+          resourcesDataSchemaErrors,
+          null,
+          2,
+        )} ]`,
+      )
+    }
+
+    return serializedResources as SerializedResources
+  } catch (err) {
+    console.error(`Error reading ${topicName} resources`)
+    throw err
+  }
 }
 
 export const readResources = (topicName: string) => {

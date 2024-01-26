@@ -1,5 +1,29 @@
+import * as fs from 'fs'
+import * as path from 'path'
+import * as url from 'url'
 import type { SerializedPath, Path, PathTopic } from './types'
 import { validatePathTopic, validateSerializedPath } from './schema'
+
+const pathsDir = path.join(
+  path.dirname(url.fileURLToPath(import.meta.url)),
+  'json',
+)
+
+export async function listPaths(): Promise<string[]> {
+  try {
+    let files = await fs.promises.readdir(pathsDir)
+    files = files.filter((file: string) => file.endsWith('.json'))
+
+    const fileNames = files.map((file: string) => {
+      return path.parse(file).name
+    })
+
+    return fileNames
+  } catch (error) {
+    console.error('Error reading path sources:', error)
+    throw error // Re-throw the error to handle it properly in the calling code
+  }
+}
 
 const parseSerializedPath = (
   topicName: string,
@@ -48,11 +72,15 @@ const parseSerializedPath = (
 }
 
 export const readSerializedPath = (pathName: string) => {
-  const data = require(
-    `@sherpa/data/paths/json/${pathName}.json`,
-  ) as SerializedPath
+  const pathFile = path.join(pathsDir, `${pathName}.json`)
 
-  return data
+  try {
+    const serializedPath = JSON.parse(fs.readFileSync(pathFile, { encoding: 'utf8' }))
+    return serializedPath as SerializedPath
+  } catch (err) {
+    console.error(`Error reading ${pathFile}`)
+    throw err
+  }
 }
 
 export const readPath = (topicName: string) => {
