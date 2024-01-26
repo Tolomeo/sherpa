@@ -1,12 +1,24 @@
 import * as fs from 'node:fs'
 import * as path from 'node:path'
+import * as util from 'node:util'
 import { listPaths, readPath } from '../src/paths/read'
 import { listResources, readResources } from '../src/resources/read'
 
-const dest = 'dist'
+const {
+  positionals: [outDir],
+} = util.parseArgs({
+  args: process.argv.slice(2),
+  allowPositionals: true,
+})
+
+if (!outDir) {
+  console.error('An output directory must be specified')
+  console.error('For example: tsx scripts/build.ts dist')
+  process.exit(1)
+}
 
 const buildPaths = async () => {
-  const pathsDest = `${dest}/paths`
+  const pathsDest = `${outDir}/paths`
   const pathsList = await listPaths()
 
   fs.mkdirSync(pathsDest, { recursive: true })
@@ -19,7 +31,7 @@ const buildPaths = async () => {
 }
 
 const buildResources = async () => {
-  const resourcesDest = `${dest}/resources`
+  const resourcesDest = `${outDir}/resources`
   const pathResourcesList = await listResources()
 
   fs.mkdirSync(resourcesDest, { recursive: true })

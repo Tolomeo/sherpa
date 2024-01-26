@@ -18,7 +18,7 @@
     }
   },
   "scripts": {
-    "b": "tsx \"scripts/build.ts\"",
+    "b": "tsx \"scripts/build.ts\" dist",
     "prebuild": "rimraf dist",
     "build": "run-s build:ts build:json",
     "build:ts": "tsc",
