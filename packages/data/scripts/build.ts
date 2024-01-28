@@ -1,8 +1,8 @@
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 import * as util from 'node:util'
-import { listPaths, readPath } from '../src/paths/read'
-import { listResources, readResources } from '../src/resources/read'
+import { listPaths, readPath } from './paths/read'
+import { listResources, readResources } from './resources/read'
 
 const {
   positionals: [outDir],

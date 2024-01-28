@@ -1,12 +1,12 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import * as url from 'url'
-import type { SerializedResources, SerializedResource, Resource } from '../types'
+import type { SerializedResources, SerializedResource, Resource } from '../../src/types'
 import { validateSerializedResources } from './validate'
 
 const resourcesDir = path.join(
   path.dirname(url.fileURLToPath(import.meta.url)),
-  'json',
+  '../../src/resources',
 )
 
 export async function listResources(): Promise<string[]> {

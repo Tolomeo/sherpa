@@ -18,7 +18,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "run-s build:ts build:json",
-    "build:ts": "tsc --project tsconfig.build.json",
+    "build:ts": "tsc",
     "build:json": "tsx \"./scripts/build.ts\" dist",
     "dev": "run-p dev:ts dev:json",
     "dev:ts": "nodemon --watch src --ext ts --on-change-only --exec \"npm run build:ts\"",

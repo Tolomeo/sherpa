@@ -1,8 +1,8 @@
 import Ajv from 'ajv'
 import type { JSONSchemaType } from 'ajv'
 import ajvErrors from 'ajv-errors'
-import { ResourceType } from '../types'
-import type { SerializedResource } from '../types'
+import { ResourceType } from '../../src/types'
+import type { SerializedResource } from '../../src/types'
 
 const ajv = ajvErrors(new Ajv({ allErrors: true }))
 

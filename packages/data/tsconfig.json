@@ -1,8 +1,9 @@
 {
   "extends": "@sherpa/configs/tsconfig.lib.json",
   "compilerOptions": {
-    "rootDirs": [ "src", "scripts" ]
+		"outDir": "dist",
+		"rootDir": "src"
   },
-  "include": ["src/**/*.ts", "scripts/**/*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"],
 }
