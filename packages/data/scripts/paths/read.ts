@@ -1,6 +1,6 @@
-import * as fs from 'fs'
-import * as path from 'path'
-import * as url from 'url'
+import * as fs from 'node:fs'
+import * as path from 'node:path'
+import * as url from 'node:url'
 import type { SerializedPath, Path, PathTopic } from '../../src/types'
 import { validatePathTopic, validateSerializedPath } from './validate'
 
@@ -75,8 +75,10 @@ export const readSerializedPath = (pathName: string) => {
   const pathFile = path.join(pathsDir, `${pathName}.json`)
 
   try {
-    const serializedPath = JSON.parse(fs.readFileSync(pathFile, { encoding: 'utf8' }))
-    return serializedPath as SerializedPath
+    const serializedPath = JSON.parse(
+      fs.readFileSync(pathFile, { encoding: 'utf8' }),
+    ) as SerializedPath
+    return serializedPath
   } catch (err) {
     console.error(`Error reading ${pathFile}`)
     throw err

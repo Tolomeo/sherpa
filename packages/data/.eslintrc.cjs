@@ -1,11 +1,13 @@
+const { resolve } = require('node:path')
+
 module.exports = {
   root: true,
   extends: [require.resolve('@sherpa/configs/eslintrc.lib')],
   parserOptions: {
-    project: './tsconfig.json',
+    project: resolve(__dirname, 'tsconfig.eslint.json'),
   },
   ignorePatterns: ['dist/**'],
   rules: {
-    '@typescript-eslint/no-var-requires': 'off',
+    'no-console': 'off',
   },
 }

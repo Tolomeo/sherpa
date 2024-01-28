@@ -23,7 +23,7 @@ const buildPaths = async () => {
 
   fs.mkdirSync(pathsDest, { recursive: true })
 
-  for (let pathName of pathsList) {
+  for (const pathName of pathsList) {
     const pathDest = path.join(pathsDest, `${pathName}.json`)
     const pathData = readPath(pathName)
     fs.writeFileSync(pathDest, JSON.stringify(pathData))
@@ -36,7 +36,7 @@ const buildResources = async () => {
 
   fs.mkdirSync(resourcesDest, { recursive: true })
 
-  for (let pathResources of pathResourcesList) {
+  for (const pathResources of pathResourcesList) {
     const resourceDest = path.join(resourcesDest, `${pathResources}.json`)
     const resoucesData = readResources(pathResources)
     fs.writeFileSync(resourceDest, JSON.stringify(resoucesData))

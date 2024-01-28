@@ -1,7 +1,11 @@
-import * as fs from 'fs'
-import * as path from 'path'
-import * as url from 'url'
-import type { SerializedResources, SerializedResource, Resource } from '../../src/types'
+import * as fs from 'node:fs'
+import * as path from 'node:path'
+import * as url from 'node:url'
+import type {
+  SerializedResources,
+  SerializedResource,
+  Resource,
+} from '../../src/types'
 import { validateSerializedResources } from './validate'
 
 const resourcesDir = path.join(
@@ -72,7 +76,7 @@ export const readSerializedResources = (topicName: string) => {
       fs.readFileSync(resourcesFile, {
         encoding: 'utf8',
       }),
-    )
+    ) as SerializedResources
 
     const resourcesDataSchemaErrors =
       validateSerializedResources(serializedResources)
@@ -87,7 +91,7 @@ export const readSerializedResources = (topicName: string) => {
       )
     }
 
-    return serializedResources as SerializedResources
+    return serializedResources
   } catch (err) {
     console.error(`Error reading ${topicName} resources`)
     throw err
