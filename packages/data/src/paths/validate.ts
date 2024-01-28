@@ -1,8 +1,8 @@
 import Ajv from 'ajv'
 import type { JSONSchemaType } from 'ajv'
 import ajvErrors from 'ajv-errors'
-import { PathTopic } from './types'
-import type { SerializedPath } from './types'
+import { PathTopic } from '../types'
+import type { SerializedPath } from '../types'
 
 const ajv = new Ajv({ allErrors: true })
 ajvErrors(ajv)
