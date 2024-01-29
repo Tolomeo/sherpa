@@ -17,9 +17,9 @@ if (!outDir) {
   process.exit(1)
 }
 
-const buildPaths = async () => {
+const buildPaths = () => {
   const pathsDest = `${outDir}/paths`
-  const pathsList = await listPaths()
+  const pathsList = listPaths()
 
   fs.mkdirSync(pathsDest, { recursive: true })
 
@@ -45,7 +45,7 @@ const buildResources = async () => {
 
 ;(async function main() {
   await buildResources()
-  await buildPaths()
+  buildPaths()
 })().catch((err) => {
   console.error(err)
   process.exit(1)

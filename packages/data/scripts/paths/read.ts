@@ -9,10 +9,11 @@ const pathsDir = path.join(
   '../../src/paths',
 )
 
-export async function listPaths(): Promise<string[]> {
+export function listPaths() {
   try {
-    let files = await fs.promises.readdir(pathsDir)
-    files = files.filter((file: string) => file.endsWith('.json'))
+    const files = fs
+      .readdirSync(pathsDir)
+      .filter((file: string) => file.endsWith('.json'))
 
     const fileNames = files.map((file: string) => {
       return path.parse(file).name
@@ -21,7 +22,7 @@ export async function listPaths(): Promise<string[]> {
     return fileNames
   } catch (error) {
     console.error('Error reading path sources:', error)
-    throw error // Re-throw the error to handle it properly in the calling code
+    throw error
   }
 }
 
