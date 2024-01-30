@@ -30,8 +30,10 @@
     "@sherpa/configs": "*",
     "ajv": "^8.11.0",
     "ajv-errors": "^3.0.0",
+    "crawlee": "^3.7.2",
     "nodemon": "^3.0.3",
     "npm-run-all2": "^6.1.1",
+    "playwright": "^1.41.1",
     "shx": "^0.3.4",
     "tsx": "^4.7.0",
     "vitest": "^1.2.2"
