@@ -1,4 +1,5 @@
-import { CheerioCrawler, log } from 'crawlee'
+import { BasicCrawler, CheerioCrawler, log } from 'crawlee'
+import { fileTypeFromBuffer } from 'file-type'
 import type { Resource } from '../src'
 
 export type HealthCheckResult =
@@ -13,6 +14,46 @@ export type HealthCheckResult =
     }
 
 export type HealthCheckRunResult = Record<string, HealthCheckResult>
+
+export class PdfFileHealthCheckRunner implements HealthCheckRunner {
+  private crawler: BasicCrawler
+
+  private results: HealthCheckRunResult = {}
+
+  constructor(_: undefined) {
+    const { results } = this
+    this.crawler = new BasicCrawler({
+      async requestHandler({ request, sendRequest }) {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        const { body } = await sendRequest({
+          responseType: 'buffer',
+        })
+        const file = await fileTypeFromBuffer(body as ArrayBuffer)
+
+        console.log(request)
+
+        if (file?.ext === 'pdf' && file.mime === 'application/pdf') {
+          results[request.url] = {
+            success: true,
+            data: { title: request.url.split('/').pop()! },
+          }
+        } else {
+          results[request.url] = {
+            success: false,
+          }
+        }
+      },
+      failedRequestHandler({ request }) {
+        results[request.url] = { success: false }
+      },
+    })
+  }
+
+  async run(...urls: string[]) {
+    await this.crawler.run(urls)
+    return this.results
+  }
+}
 
 export interface HttpRequestHealthCheckRunnerConfig {
   titleSelector: string
@@ -57,8 +98,8 @@ export type HealthCheckStrategy =
       config: HttpRequestHealthCheckRunnerConfig
     }
   | {
-      runner: 'request.binary'
-      config?: object
+      runner: 'PdfFile'
+      config?: undefined
     }
   | {
       runner: 'render.browser'
@@ -105,14 +146,18 @@ export class HealthCheck {
 
     const groupRunResults = await Promise.all(
       Object.entries(runGroups).map(([strategy, resources]) => {
-        const { config } = JSON.parse(strategy) as {
-          runner: 'HttpRequest'
-          config: HttpRequestHealthCheckRunnerConfig
+        const { runner, config } = JSON.parse(strategy) as HealthCheckStrategy
+        const urls = resources.map(({ url }) => url)
+
+        // eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check
+        switch (runner) {
+          case 'PdfFile':
+            return new PdfFileHealthCheckRunner(config).run(...urls)
+          case 'HttpRequest':
+            return new HttpRequestHealthCheckRunner(config).run(...urls)
         }
 
-        return new HttpRequestHealthCheckRunner(config).run(
-          ...resources.map(({ url }) => url),
-        )
+        throw new Error(`Unrecognized health check strategy "${runner}"`)
 
         /* switch (runner) {
         case 'HttpRequest':

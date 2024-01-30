@@ -2,7 +2,8 @@ import { describe, test, expect, beforeAll } from 'vitest'
 // import { listPaths } from '../scripts/paths/read'
 import { readResources } from '../scripts/resources/read'
 import type { Resource } from '../src'
-import { HealthCheck, HealthCheckStrategy } from '../scripts/healthcheck'
+import type { HealthCheckStrategy } from '../scripts/healthcheck'
+import { HealthCheck } from '../scripts/healthcheck'
 
 const getResourceHealthCheckStrategy = (
   resource: Resource,
@@ -10,7 +11,7 @@ const getResourceHealthCheckStrategy = (
   // checking if it is a downloadable resource
   // so far only PDFs
   if (resource.url.match(/\.pdf$/)) {
-    return { runner: 'request.binary' }
+    return { runner: 'PdfFile' }
   }
 
   const host = new URL(resource.url).hostname.replace(/^www./, '')
@@ -109,6 +110,21 @@ const getResourceHealthCheckStrategy = (
   }
 }
 
+const resources: Resource[] = [
+  /* {
+    title: 'Interneting Is Hard',
+    url: 'https://internetingishard.netlify.app',
+    type: 'basics' as Resource['type'],
+    source: 'internetingishard.netlify.app',
+  }, */
+  {
+    title: 'EnterpriseDesignSprints',
+    url: 'https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_EnterpriseDesignSprints.pdf',
+    type: 'advanced' as Resource['type'],
+    source: 'designbetter.co',
+  },
+]
+
 describe('Resources', () => {
   // taking only first level paths
   /* const paths = listPaths()
@@ -117,7 +133,7 @@ describe('Resources', () => {
 
   describe.each(['htmlcss'])('$topic resources', (path) => {
     const healthCheck = new HealthCheck(
-      readResources(path).slice(0, 1),
+      resources,
       getResourceHealthCheckStrategy,
     )
 

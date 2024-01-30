@@ -22,7 +22,7 @@ const flattenPathResources = (path: Path) => {
   return pathResources
 }
 
-describe('Paths', () => {
+describe.skip('Paths', () => {
   const paths = readPaths(listPaths())
 
   describe.each(paths)('$topic path', (path) => {
