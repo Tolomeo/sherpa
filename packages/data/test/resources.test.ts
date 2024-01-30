@@ -1,88 +1,12 @@
 import { describe, test, expect, beforeAll } from 'vitest'
 // import { listPaths } from '../scripts/paths/read'
-import { CheerioCrawler, log } from 'crawlee'
 import { readResources } from '../scripts/resources/read'
-import type { Resource } from '../dist'
+import type { Resource } from '../src'
+import { HealthCheck, HealthCheckStrategy } from '../scripts/healthcheck'
 
-type HealthCheckResult =
-  | {
-      success: true
-      data: {
-        title: string
-      }
-    }
-  | {
-      success: false
-    }
-
-type HealthCheckRunResult = Record<string, HealthCheckResult>
-
-interface HttpRequestHealthCheckRunnerConfig {
-  titleSelector: string
-}
-
-interface HealthCheckRunner {
-  run: (...urls: string[]) => Promise<HealthCheckRunResult>
-}
-
-class HttpRequestHealthCheckRunner implements HealthCheckRunner {
-  private crawler: CheerioCrawler
-
-  private results: HealthCheckRunResult = {}
-
-  constructor({ titleSelector }: HttpRequestHealthCheckRunnerConfig) {
-    const { results } = this
-
-    this.crawler = new CheerioCrawler({
-      requestHandler({ request, $ }) {
-        log.debug(`Processing ${request.url}...`)
-
-        // Extract data from the page using cheerio.
-        const title = $(titleSelector).text()
-
-        results[request.url] = { success: true, data: { title } }
-      },
-      failedRequestHandler({ request }) {
-        results[request.url] = { success: false }
-      },
-    })
-  }
-
-  async run(...urls: string[]) {
-    await this.crawler.run(urls)
-    return this.results
-  }
-}
-
-type HealthCheckStrategy =
-  | {
-      runner: 'HttpRequest'
-      config: HttpRequestHealthCheckRunnerConfig
-    }
-  | {
-      runner: 'request.binary'
-      config?: object
-    }
-  | {
-      runner: 'render.browser'
-      config: {
-        titleSelector: string
-      }
-    }
-  | {
-      runner: 'request.youtube'
-      config?: object
-    }
-  | {
-      runner: 'request.zenscrape'
-      config: {
-        titleSelector: string
-        render: boolean
-        premium: boolean
-      }
-    }
-
-const getStrategy = (resource: Resource): HealthCheckStrategy => {
+const getResourceHealthCheckStrategy = (
+  resource: Resource,
+): HealthCheckStrategy => {
   // checking if it is a downloadable resource
   // so far only PDFs
   if (resource.url.match(/\.pdf$/)) {
@@ -185,63 +109,6 @@ const getStrategy = (resource: Resource): HealthCheckStrategy => {
   }
 }
 
-class HealthCheck {
-  constructor(
-    public resources: Resource[],
-    public strategy: (resource: Resource) => HealthCheckStrategy,
-  ) {}
-
-  results: Record<string, HealthCheckResult> = {}
-
-  async run() {
-    const runGroups = this.resources.reduce<Record<string, Resource[]>>(
-      (groups, resource) => {
-        const strategy = this.strategy(resource)
-        const strategyId = JSON.stringify(strategy)
-
-        if (!groups[strategyId]) {
-          groups[strategyId] = []
-        }
-
-        groups[strategyId].push(resource)
-        return groups
-      },
-      {},
-    )
-
-    const groupRunResults = await Promise.all(
-      Object.entries(runGroups).map(([strategy, resources]) => {
-        const { config } = JSON.parse(strategy) as {
-          runner: 'HttpRequest'
-          config: HttpRequestHealthCheckRunnerConfig
-        }
-
-        return new HttpRequestHealthCheckRunner(config).run(
-          ...resources.map(({ url }) => url),
-        )
-
-        /* switch (runner) {
-        case 'HttpRequest':
-            return new HttpRequestHealthCheckRunner(config).run(
-              ...resources.map(({ url }) => url),
-            )
-        /* case 'request.binary':
-				case 'render.browser':
-				case 'request.youtube':
-				case 'request.zenscrape': */
-        // } */
-      }),
-    )
-
-    this.results = groupRunResults.reduce<Record<string, HealthCheckResult>>(
-      (results, groupResults) => {
-        return { ...results, ...groupResults }
-      },
-      {},
-    )
-  }
-}
-
 describe('Resources', () => {
   // taking only first level paths
   /* const paths = listPaths()
@@ -251,7 +118,7 @@ describe('Resources', () => {
   describe.each(['htmlcss'])('$topic resources', (path) => {
     const healthCheck = new HealthCheck(
       readResources(path).slice(0, 1),
-      getStrategy,
+      getResourceHealthCheckStrategy,
     )
 
     beforeAll(async () => {
