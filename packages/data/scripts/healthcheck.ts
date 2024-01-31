@@ -1,7 +1,17 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion -- several indirect accesses force to null-assert */
 import { randomUUID } from 'node:crypto'
-import { RequestQueue, BasicCrawler, CheerioCrawler } from 'crawlee'
-import type { BasicCrawlerOptions, CheerioCrawlerOptions } from 'crawlee'
+import {
+  Configuration,
+  RequestQueue,
+  BasicCrawler,
+  CheerioCrawler,
+  PlaywrightCrawler,
+} from 'crawlee'
+import type {
+  BasicCrawlerOptions,
+  CheerioCrawlerOptions,
+  PlaywrightCrawlerOptions,
+} from 'crawlee'
 import { fileTypeFromBuffer } from 'file-type'
 
 export class Deferred<T = unknown> {
@@ -45,6 +55,8 @@ export class Deferred<T = unknown> {
   }
 }
 
+const configuration = new Configuration({ persistStorage: false })
+
 export type HealthCheckResult =
   | {
       success: true
@@ -72,32 +84,38 @@ export class PdfFileHealthCheckRunner implements HealthCheckRunner {
 
   results = new Map<string, Deferred<HealthCheckResult>>()
 
-  constructor(_: undefined, crawlerOptions: Partial<BasicCrawlerOptions>) {
+  private constructor(
+    _: undefined,
+    crawlerOptions: Partial<BasicCrawlerOptions>,
+  ) {
     const { results } = this
-    this.crawler = new BasicCrawler({
-      ...crawlerOptions,
-      keepAlive: true,
-      async requestHandler({ request, sendRequest }) {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- adapted from the official docs https://crawlee.dev/docs/guides/got-scraping#sendrequest-api
-        const { body } = await sendRequest({
-          responseType: 'buffer',
-        })
-        const file = await fileTypeFromBuffer(body as Buffer)
+    this.crawler = new BasicCrawler(
+      {
+        ...crawlerOptions,
+        keepAlive: true,
+        async requestHandler({ request, sendRequest }) {
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- adapted from the official docs https://crawlee.dev/docs/guides/got-scraping#sendrequest-api
+          const { body } = await sendRequest({
+            responseType: 'buffer',
+          })
+          const file = await fileTypeFromBuffer(body as Buffer)
 
-        if (!file || file.ext !== 'pdf' || file.mime !== 'application/pdf') {
-          results.get(request.url)!.resolve({ success: false })
-          return
-        }
+          if (!file || file.ext !== 'pdf' || file.mime !== 'application/pdf') {
+            results.get(request.url)!.resolve({ success: false })
+            return
+          }
 
-        results.get(request.url)?.resolve({
-          success: true,
-          data: { title: request.url.split('/').pop()! },
-        })
+          results.get(request.url)?.resolve({
+            success: true,
+            data: { title: request.url.split('/').pop()! },
+          })
+        },
+        failedRequestHandler({ request }) {
+          results.get(request.url)?.resolve({ success: false })
+        },
       },
-      failedRequestHandler({ request }) {
-        results.get(request.url)?.resolve({ success: false })
-      },
-    })
+      configuration,
+    )
   }
 
   async teardown() {
@@ -131,24 +149,81 @@ export class HttpRequestHealthCheckRunner implements HealthCheckRunner {
 
   results = new Map<string, Deferred<HealthCheckResult>>()
 
-  constructor(
+  private constructor(
     { titleSelector }: HttpRequestHealthCheckRunnerConfig,
     crawlerOptions: Partial<CheerioCrawlerOptions>,
   ) {
     const { results } = this
 
-    this.crawler = new CheerioCrawler({
-      ...crawlerOptions,
-      keepAlive: true,
-      requestHandler({ request, $ }) {
-        const title = $(titleSelector).text()
+    this.crawler = new CheerioCrawler(
+      {
+        ...crawlerOptions,
+        keepAlive: true,
+        requestHandler({ request, $ }) {
+          const title = $(titleSelector).text()
 
-        results.get(request.url)?.resolve({ success: true, data: { title } })
+          results.get(request.url)?.resolve({ success: true, data: { title } })
+        },
+        failedRequestHandler({ request }) {
+          results.get(request.url)?.resolve({ success: false })
+        },
       },
-      failedRequestHandler({ request }) {
-        results.get(request.url)?.resolve({ success: false })
+      configuration,
+    )
+  }
+
+  async teardown() {
+    await this.crawler.teardown()
+    this.results.clear()
+  }
+
+  async run(url: string) {
+    const result = this.results.get(url)
+
+    if (result) return result.promise
+
+    this.results.set(url, new Deferred())
+    await this.crawler.addRequests([url]).catch(console.error)
+    !this.crawler.running && this.crawler.run().catch(console.error)
+    return this.results.get(url)!.promise
+  }
+}
+
+interface E2EHealthCheckRunnerConfig {
+  titleSelector: string
+}
+
+export class E2EHealthCheckRunner implements HealthCheckRunner {
+  static async create(config: E2EHealthCheckRunnerConfig) {
+    const requestQueue = await RequestQueue.open(randomUUID())
+    return new E2EHealthCheckRunner(config, { requestQueue })
+  }
+
+  private crawler: PlaywrightCrawler
+
+  results = new Map<string, Deferred<HealthCheckResult>>()
+
+  private constructor(
+    { titleSelector }: E2EHealthCheckRunnerConfig,
+    crawlerOptions: Partial<PlaywrightCrawlerOptions>,
+  ) {
+    const { results } = this
+    this.crawler = new PlaywrightCrawler(
+      {
+        ...crawlerOptions,
+        keepAlive: true,
+        async requestHandler({ page, request }) {
+          console.log(request.url)
+
+          const title = (await page.locator(titleSelector).textContent()) || ''
+          results.get(request.url)?.resolve({ success: true, data: { title } })
+        },
+        failedRequestHandler({ request }) {
+          results.get(request.url)?.resolve({ success: false })
+        },
       },
-    })
+      configuration,
+    )
   }
 
   async teardown() {
@@ -178,7 +253,7 @@ export type HealthCheckStrategy =
       config?: undefined
     }
   | {
-      runner: 'render.browser'
+      runner: 'E2E'
       config: {
         titleSelector: string
       }
@@ -199,7 +274,9 @@ export type HealthCheckStrategy =
 export class HealthCheck {
   private runners = new Map<
     string,
-    PdfFileHealthCheckRunner | HttpRequestHealthCheckRunner
+    | PdfFileHealthCheckRunner
+    | HttpRequestHealthCheckRunner
+    | E2EHealthCheckRunner
   >()
 
   private async getRunner(strategy: HealthCheckStrategy) {
@@ -214,6 +291,9 @@ export class HealthCheck {
         break
       case 'HttpRequest':
         runner = await HttpRequestHealthCheckRunner.create(strategy.config)
+        break
+      case 'E2E':
+        runner = await E2EHealthCheckRunner.create(strategy.config)
         break
       default:
         throw new Error(

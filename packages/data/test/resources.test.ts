@@ -30,6 +30,7 @@ const getResourceHealthCheckStrategy = (
     case 'blob42.xyz':
       return { runner: 'HttpRequest', config: { titleSelector: 'h3' } }
 
+    case 'freecodecamp.org':
     case 'thevaluable.dev':
     case 'usehooks-ts.com':
     case 'developer.ibm.com':
@@ -46,7 +47,10 @@ const getResourceHealthCheckStrategy = (
     case 'gitexplorer.com':
     case 'ubuntu.com':
     case 'curlbuilder.com':
-      return { runner: 'render.browser', config: { titleSelector: 'title' } }
+      return {
+        runner: 'E2E',
+        config: { titleSelector: 'head title:not(:empty)' },
+      }
 
     case 'reactdigest.net':
     case 'data-flair.training':
@@ -55,7 +59,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'request.zenscrape',
         config: {
-          titleSelector: 'title',
+          titleSelector: 'head title:not(:empty)',
           render: false,
           premium: false,
         },
@@ -69,7 +73,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'request.zenscrape',
         config: {
-          titleSelector: 'title',
+          titleSelector: 'head title:not(:empty)',
           render: true,
           premium: false,
         },
@@ -83,7 +87,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'request.zenscrape',
         config: {
-          titleSelector: 'title',
+          titleSelector: 'head title:not(:empty)',
           render: false,
           premium: true,
         },
@@ -94,7 +98,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'request.zenscrape',
         config: {
-          titleSelector: 'title',
+          titleSelector: 'head title:not(:empty)',
           render: true,
           premium: true,
         },
@@ -104,7 +108,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'HttpRequest',
         config: {
-          titleSelector: 'title',
+          titleSelector: 'head title:not(:empty)',
         },
       }
   }
