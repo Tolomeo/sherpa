@@ -1,6 +1,6 @@
-import { describe, test, expect, beforeAll } from 'vitest'
+import { describe, test, expect, beforeAll, afterAll } from 'vitest'
 // import { listPaths } from '../scripts/paths/read'
-import { readResources } from '../scripts/resources/read'
+// import { readResources } from '../scripts/resources/read'
 import type { Resource } from '../src'
 import type { HealthCheckStrategy } from '../scripts/healthcheck'
 import { HealthCheck } from '../scripts/healthcheck'
@@ -116,12 +116,18 @@ const resources: Resource[] = [
     url: 'https://internetingishard.netlify.app',
     type: 'basics' as Resource['type'],
     source: 'internetingishard.netlify.app',
-  }, */
+  },
   {
     title: 'EnterpriseDesignSprints',
     url: 'https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_EnterpriseDesignSprints.pdf',
     type: 'advanced' as Resource['type'],
     source: 'designbetter.co',
+  }, */
+  {
+    title: 'Responsive Web Design Certification',
+    url: 'https://www.freecodecamp.org/learn/2022/responsive-web-design/',
+    type: 'basics' as Resource['type'],
+    source: 'freecodecamp.org',
   },
 ]
 
@@ -131,19 +137,30 @@ describe('Resources', () => {
     .filter((path) => path.split('.').length === 1)
     .slice(0, 1) */
 
-  describe.each(['htmlcss'])('$topic resources', (path) => {
-    const healthCheck = new HealthCheck(
-      resources,
-      getResourceHealthCheckStrategy,
+  describe.each(['htmlcss'])('$topic resources', () => {
+    let healthCheck: HealthCheck
+    beforeAll(() => {
+      healthCheck = new HealthCheck()
+    })
+    afterAll(async () => {
+      await healthCheck.teardown()
+    })
+
+    test.each(resources)(
+      '$url',
+      async (resource) => {
+        const resourceHealthCheck = await healthCheck.run(
+          resource.url,
+          getResourceHealthCheckStrategy(resource),
+        )
+
+        expect(resourceHealthCheck.success).toBe(true)
+
+        if (resourceHealthCheck.success) {
+          expect(resourceHealthCheck.data.title).toContain(resource.title)
+        }
+      },
+      30000,
     )
-
-    beforeAll(async () => {
-      await healthCheck.run()
-    })
-
-    test.each(readResources(path).slice(0, 1))('$url', () => {
-      console.log(healthCheck.results)
-      expect(1).toBe(1)
-    })
   })
 })
