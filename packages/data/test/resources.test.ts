@@ -111,7 +111,7 @@ const getResourceHealthCheckStrategy = (
 }
 
 const resources: Resource[] = [
-  /* {
+  {
     title: 'Interneting Is Hard',
     url: 'https://internetingishard.netlify.app',
     type: 'basics' as Resource['type'],
@@ -122,7 +122,13 @@ const resources: Resource[] = [
     url: 'https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_EnterpriseDesignSprints.pdf',
     type: 'advanced' as Resource['type'],
     source: 'designbetter.co',
-  }, */
+  },
+  {
+    title: 'Search engine optimization',
+    url: 'https://learn-the-web.algonquindesign.ca/topics/search-engine-optimization',
+    source: 'learn-the-web.algonquindesign.ca',
+    type: 'basics' as Resource['type'],
+  },
   {
     title: 'Responsive Web Design Certification',
     url: 'https://www.freecodecamp.org/learn/2022/responsive-web-design/',
@@ -154,11 +160,10 @@ describe('Resources', () => {
           getResourceHealthCheckStrategy(resource),
         )
 
-        expect(resourceHealthCheck.success).toBe(true)
-
-        if (resourceHealthCheck.success) {
-          expect(resourceHealthCheck.data.title).toContain(resource.title)
-        }
+        expect(resourceHealthCheck).toMatchObject({
+          success: true,
+          data: { title: expect.stringContaining(resource.title) as string },
+        })
       },
       30000,
     )
