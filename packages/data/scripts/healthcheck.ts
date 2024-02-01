@@ -19,6 +19,7 @@ import type {
   PlaywrightCrawlerOptions,
   PlaywrightCrawlingContext,
 } from 'crawlee'
+import * as cheerio from 'cheerio'
 import { fileTypeFromBuffer } from 'file-type'
 import { Deferred } from './_utils/defer'
 
@@ -64,11 +65,6 @@ abstract class HealthCheckRunner<
 }
 
 export class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
-  static async create() {
-    const requestQueue = await RequestQueue.open(randomUUID())
-    return new PdfFileHealthCheckRunner({ requestQueue })
-  }
-
   constructor(crawlerOptions: Partial<BasicCrawlerOptions>) {
     super()
     this.crawler = new BasicCrawler(
@@ -117,11 +113,6 @@ export interface HttpRequestHealthCheckRequestData {
 }
 
 export class HttpRequestHealthCheckRunner extends HealthCheckRunner<CheerioCrawler> {
-  static async create() {
-    const requestQueue = await RequestQueue.open(randomUUID())
-    return new HttpRequestHealthCheckRunner({ requestQueue })
-  }
-
   constructor(crawlerOptions: Partial<CheerioCrawlerOptions>) {
     super()
 
@@ -163,11 +154,6 @@ export class E2EHealthCheckRunner extends HealthCheckRunner<
   PlaywrightCrawler,
   E2EHealthCheckRequestData
 > {
-  static async create() {
-    const requestQueue = await RequestQueue.open(randomUUID())
-    return new E2EHealthCheckRunner({ requestQueue })
-  }
-
   constructor(crawlerOptions: Partial<PlaywrightCrawlerOptions>) {
     super()
     this.crawler = new PlaywrightCrawler(
@@ -216,11 +202,6 @@ interface YoutubeDataApiResponse {
 }
 
 class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
-  static async create() {
-    const requestQueue = await RequestQueue.open(randomUUID())
-    return new YoutubeDataApiV3HealthCheckRunner({ requestQueue })
-  }
-
   static getVideoId = (url: string) => {
     const videoUrl = /^https?:\/\/www\.youtube\.com\/watch\?v=(\S+)$/
 
@@ -326,6 +307,76 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
   }
 }
 
+export interface ZenscrapeHealthCheckRequestData {
+  titleSelector: string
+  render: boolean
+  premium: boolean
+}
+
+class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
+  constructor(crawlerOptions: BasicCrawlerOptions) {
+    super()
+    this.crawler = new BasicCrawler(
+      {
+        ...crawlerOptions,
+        keepAlive: true,
+        requestHandler: this.requestHandler.bind(this),
+        failedRequestHandler: this.failedRequestHandler.bind(this),
+      },
+      configuration,
+    )
+  }
+
+  getDataRequestUrl(url: string, render: boolean, premium: boolean) {
+    // apparently the scraper api doesn't accept 'false' as valid qs parameter
+    // so we can only pass 'true' or omit the url parameter entirely
+    // that is why we are not using RequestOptions.qs here
+    let dataRequestUrl = `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
+      url,
+    )}`
+
+    if (render) {
+      dataRequestUrl = `${url}&render=true`
+    }
+
+    if (premium) {
+      dataRequestUrl = `${url}&premium=true`
+    }
+
+    return dataRequestUrl
+  }
+
+  async requestHandler({
+    request,
+    sendRequest,
+  }: BasicCrawlingContext<ZenscrapeHealthCheckRequestData>) {
+    const { ZENSCRAPE_API_KEY: apiKey } = import.meta.env
+
+    if (!apiKey) throw new Error(`Zenscrape api key not found`)
+
+    const { titleSelector, render, premium } = request.userData
+    const dataRequestUrl = this.getDataRequestUrl(request.url, render, premium)
+    const { body } = (await sendRequest({
+      url: dataRequestUrl,
+      headers: { apiKey },
+    })) as { body: string }
+
+    const $ = cheerio.load(body)
+    const title = $(titleSelector).text()
+
+    this.results.get(request.url)?.resolve({
+      success: true,
+      data: {
+        title,
+      },
+    })
+  }
+
+  failedRequestHandler({ request }: BasicCrawlingContext, error: Error) {
+    this.results.get(request.url)?.resolve({ success: false, error })
+  }
+}
+
 export type HealthCheckRunners =
   | PdfFileHealthCheckRunner
   | HttpRequestHealthCheckRunner
@@ -339,7 +390,6 @@ export type HealthCheckStrategy =
     }
   | {
       runner: 'PdfFile'
-      config?: undefined
     }
   | {
       runner: 'E2E'
@@ -347,15 +397,10 @@ export type HealthCheckStrategy =
     }
   | {
       runner: 'YoutubeData'
-      config?: undefined
     }
   | {
-      runner: 'request.zenscrape'
-      config: {
-        titleSelector: string
-        render: boolean
-        premium: boolean
-      }
+      runner: 'Zenscrape'
+      config: ZenscrapeHealthCheckRequestData
     }
 
 export class HealthCheck {
@@ -367,14 +412,14 @@ export class HealthCheck {
   async getRunner<R extends HealthCheckRunners>(
     Runner: Constructor<R>,
   ): Promise<R> {
-    let runner = this.runners.get(Runner)
+    const runner = this.runners.get(Runner)
 
     if (runner) return runner as R
 
     const requestQueue = await RequestQueue.open(randomUUID())
-    runner = new Runner({ requestQueue })
-    this.runners.set(Runner, runner)
-    return runner as R
+    const runnerInstance = new Runner({ requestQueue })
+    this.runners.set(Runner, runnerInstance)
+    return runnerInstance
   }
 
   async run(url: string, strategy: HealthCheckStrategy) {
@@ -393,10 +438,9 @@ export class HealthCheck {
       case 'YoutubeData':
         runner = await this.getRunner(YoutubeDataApiV3HealthCheckRunner)
         return runner.run(url, {})
-      default:
-        throw new Error(
-          `Unrecognized health check strategy "${strategy.runner}"`,
-        )
+      case 'Zenscrape':
+        runner = await this.getRunner(ZenscrapeHealthCheckRunner)
+        return runner.run(url, strategy.config)
     }
   }
 

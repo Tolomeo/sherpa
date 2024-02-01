@@ -59,7 +59,7 @@ const getResourceHealthCheckStrategy = (
     case 'linux.org':
     case 'snipcart.com':
       return {
-        runner: 'request.zenscrape',
+        runner: 'Zenscrape',
         config: {
           titleSelector: 'head title:not(:empty)',
           render: false,
@@ -73,7 +73,7 @@ const getResourceHealthCheckStrategy = (
     case 'codepen.io':
     case 'replit.com':
       return {
-        runner: 'request.zenscrape',
+        runner: 'Zenscrape',
         config: {
           titleSelector: 'head title:not(:empty)',
           render: true,
@@ -87,7 +87,7 @@ const getResourceHealthCheckStrategy = (
     case 'regexr.com':
     case 'tooltester.com':
       return {
-        runner: 'request.zenscrape',
+        runner: 'Zenscrape',
         config: {
           titleSelector: 'head title:not(:empty)',
           render: false,
@@ -98,7 +98,7 @@ const getResourceHealthCheckStrategy = (
     case 'pexels.com':
     case 'adobe.com':
       return {
-        runner: 'request.zenscrape',
+        runner: 'Zenscrape',
         config: {
           titleSelector: 'head title:not(:empty)',
           render: true,
@@ -117,13 +117,13 @@ const getResourceHealthCheckStrategy = (
 }
 
 const resources: Resource[] = [
-  {
+  /* {
     title: 'Interneting Is Hard',
     url: 'https://internetingishard.netlify.app',
     type: 'basics' as Resource['type'],
     source: 'internetingishard.netlify.app',
-  },
-  {
+  }, */
+  /* {
     title: 'SEO Mythbusting',
     url: 'https://www.youtube.com/playlist?list=PLKoqnv2vTMUN6lFDz6qMBsz7-Jm8YRV9H',
     source: 'youtube.com/c/GoogleSearchCentral',
@@ -158,6 +158,18 @@ const resources: Resource[] = [
     url: 'https://www.freecodecamp.org/learn/2022/responsive-web-design/',
     type: 'basics' as Resource['type'],
     source: 'freecodecamp.org',
+  }, */
+  /* {
+    title: 'Animated Backgrounds',
+    url: 'https://animatedbackgrounds.me',
+    type: 'tool' as Resource['type'],
+    source: 'animatedbackgrounds.me',
+  }, */
+  {
+    title: 'React Digest',
+    url: 'https://reactdigest.net',
+    type: 'feed' as Resource['type'],
+    source: 'reactdigest.net',
   },
 ]
 
