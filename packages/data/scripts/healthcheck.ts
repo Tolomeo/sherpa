@@ -29,6 +29,7 @@ export type HealthCheckResult =
     }
   | {
       success: false
+      error: Error
     }
 
 abstract class HealthCheckRunner<
@@ -86,7 +87,14 @@ export class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
     const file = await fileTypeFromBuffer(body as Buffer)
 
     if (!file || file.ext !== 'pdf' || file.mime !== 'application/pdf') {
-      this.results.get(request.url)!.resolve({ success: false })
+      this.results.get(request.url)!.resolve({
+        success: false,
+        error: new Error(
+          `The received buffer is not a pdf. The buffer is instead a ${JSON.stringify(
+            file,
+          )} filetype`,
+        ),
+      })
       return
     }
 
@@ -96,8 +104,8 @@ export class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
     })
   }
 
-  failedRequestHandler({ request }: BasicCrawlingContext) {
-    this.results.get(request.url)?.resolve({ success: false })
+  failedRequestHandler({ request }: BasicCrawlingContext, error: Error) {
+    this.results.get(request.url)?.resolve({ success: false, error })
   }
 }
 
@@ -134,8 +142,8 @@ export class HttpRequestHealthCheckRunner extends HealthCheckRunner<CheerioCrawl
     this.results.get(request.url)?.resolve({ success: true, data: { title } })
   }
 
-  failedRequestHandler({ request }: CheerioCrawlingContext) {
-    this.results.get(request.url)?.resolve({ success: false })
+  failedRequestHandler({ request }: CheerioCrawlingContext, error: Error) {
+    this.results.get(request.url)?.resolve({ success: false, error })
   }
 }
 
@@ -171,8 +179,8 @@ export class E2EHealthCheckRunner extends HealthCheckRunner<PlaywrightCrawler> {
     this.results.get(request.url)?.resolve({ success: true, data: { title } })
   }
 
-  failedRequestHandler({ request }: PlaywrightCrawlingContext) {
-    this.results.get(request.url)?.resolve({ success: false })
+  failedRequestHandler({ request }: PlaywrightCrawlingContext, error: Error) {
+    this.results.get(request.url)?.resolve({ success: false, error })
   }
 }
 
@@ -257,14 +265,14 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
 
     const playlistId = getPlaylistId(url)
     if (playlistId)
-      return `${apiBaseUrl}/playlist?id=${playlistId}&key=${apiKey}&part=snippet&maxResults=1`
+      return `${apiBaseUrl}/playlists?id=${playlistId}&key=${apiKey}&part=snippet&maxResults=1`
 
     // NB: youtube data api doesn't yet support retrieving channel's data by handle
     // therefore we are executing a channel search specifying the channel handle as query
     // see https://stackoverflow.com/a/74902789/3162406
     const channelId = getChannelId(url)
     if (channelId)
-      return `${apiBaseUrl}/search?q%40${channelId}&type=channel&key=${apiKey}&part=snippet&maxResults=1`
+      return `${apiBaseUrl}/search?q=%40${channelId}&type=channel&key=${apiKey}&part=snippet&maxResults=1`
 
     throw new Error(
       `The url "${url}" is not recognizable as a valid video, playlist or channel youtube url`,
@@ -278,8 +286,15 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
       responseType: 'json',
     })) as { body: YoutubeDataApiResponse }
 
+    console.log(body)
+
     if (body.pageInfo.totalResults < 1) {
-      this.results.get(request.url)?.resolve({ success: false })
+      this.results.get(request.url)?.resolve({
+        success: false,
+        error: new Error(
+          `Api response returned no matches: ${JSON.stringify(body)}`,
+        ),
+      })
       return
     }
 
@@ -291,8 +306,8 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
     })
   }
 
-  failedRequestHandler({ request }: BasicCrawlingContext) {
-    this.results.get(request.url)?.resolve({ success: false })
+  failedRequestHandler({ request }: BasicCrawlingContext, error: Error) {
+    this.results.get(request.url)?.resolve({ success: false, error })
   }
 }
 
