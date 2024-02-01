@@ -16,47 +16,7 @@ import type {
   PlaywrightCrawlingContext,
 } from 'crawlee'
 import { fileTypeFromBuffer } from 'file-type'
-
-export class Deferred<T = unknown> {
-  private _promise: Promise<T>
-  private _resolve!: (value: T | PromiseLike<T>) => void
-  private _reject!: (reason?: unknown) => void
-  public status: 'pending' | 'resolved' | 'rejected' = 'pending'
-  public promise: Promise<T>
-
-  public constructor() {
-    this._promise = new Promise<T>((resolve, reject) => {
-      this._resolve = resolve
-      this._reject = reject
-    })
-    this.promise = this._promise
-  }
-
-  public reject(reason?: unknown): void {
-    this.status = 'rejected'
-    this._reject(reason)
-  }
-
-  public resolve(value: T): void {
-    this.status = 'resolved'
-    this._resolve(value)
-  }
-
-  public then(onfulfilled: (value: T) => T | PromiseLike<T>) {
-    this.promise = this.promise.then(onfulfilled)
-    return this
-  }
-
-  public catch(onrejected: (reason: unknown) => T | PromiseLike<T> | never) {
-    this.promise = this.promise.catch(onrejected)
-    return this
-  }
-
-  public finally(onfinally: (() => void) | undefined | null) {
-    this.promise = this.promise.finally(onfinally)
-    return this
-  }
-}
+import { Deferred } from './_utils/defer'
 
 const configuration = new Configuration({ persistStorage: false })
 
@@ -80,6 +40,7 @@ abstract class HealthCheckRunner<
 
   async teardown() {
     await this.crawler.teardown()
+    await this.crawler.requestQueue?.drop()
     this.results.clear()
   }
 
@@ -215,6 +176,126 @@ export class E2EHealthCheckRunner extends HealthCheckRunner<PlaywrightCrawler> {
   }
 }
 
+interface YoutubeDataApiV3HealthCheckRunnerConfig {
+  apiKey: string
+}
+
+// NB: this type contains only what we are checking for in the response, when we pass 'snippet' as value for 'part' query parameter
+// the actual response is richer
+interface YoutubeDataApiResponse {
+  items: {
+    snippet: {
+      title: string
+    }
+  }[]
+  pageInfo: {
+    totalResults: number
+  }
+}
+
+class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
+  static async create(config: YoutubeDataApiV3HealthCheckRunnerConfig) {
+    const requestQueue = await RequestQueue.open(randomUUID())
+    return new YoutubeDataApiV3HealthCheckRunner(config, { requestQueue })
+  }
+
+  static getVideoId = (url: string) => {
+    const videoUrl = /^https?:\/\/www\.youtube\.com\/watch\?v=(\S+)$/
+
+    if (videoUrl.test(url)) {
+      const [, videoId] = url.match(videoUrl)!
+      return videoId
+    }
+
+    return null
+  }
+
+  static getPlaylistId = (url: string) => {
+    const playlistUrl = /^https?:\/\/www\.youtube\.com\/playlist\?list=(\S+)$/
+
+    if (playlistUrl.test(url)) {
+      const [, playlistId] = url.match(playlistUrl)!
+      return playlistId
+    }
+
+    return null
+  }
+
+  static getChannelId = (url: string) => {
+    const channelUrl = /^https?:\/\/www.youtube.com\/(?:@|c\/){1}(\S+)$/
+
+    if (channelUrl.test(url)) {
+      const [, channelHandle] = url.match(channelUrl)!
+      return channelHandle
+    }
+
+    return null
+  }
+
+  private constructor(
+    private options: YoutubeDataApiV3HealthCheckRunnerConfig,
+    crawlerOptions: BasicCrawlerOptions,
+  ) {
+    super()
+    this.crawler = new BasicCrawler({
+      ...crawlerOptions,
+      keepAlive: true,
+      requestHandler: this.requestHandler.bind(this),
+      failedRequestHandler: this.failedRequestHandler.bind(this),
+    })
+  }
+
+  getDataRequestUrl(url: string) {
+    const apiBaseUrl = 'https://youtube.googleapis.com/youtube/v3'
+    const { apiKey } = this.options
+    const { getVideoId, getPlaylistId, getChannelId } =
+      YoutubeDataApiV3HealthCheckRunner
+
+    const videoId = getVideoId(url)
+    if (videoId)
+      return `${apiBaseUrl}/videos?id=${videoId}&key=${apiKey}&part=snippet&maxResults=1`
+
+    const playlistId = getPlaylistId(url)
+    if (playlistId)
+      return `${apiBaseUrl}/playlist?id=${playlistId}&key=${apiKey}&part=snippet&maxResults=1`
+
+    // NB: youtube data api doesn't yet support retrieving channel's data by handle
+    // therefore we are executing a channel search specifying the channel handle as query
+    // see https://stackoverflow.com/a/74902789/3162406
+    const channelId = getChannelId(url)
+    if (channelId)
+      return `${apiBaseUrl}/search?q%40${channelId}&type=channel&key=${apiKey}&part=snippet&maxResults=1`
+
+    throw new Error(
+      `The url "${url}" is not recognizable as a valid video, playlist or channel youtube url`,
+    )
+  }
+
+  async requestHandler({ request, sendRequest }: BasicCrawlingContext) {
+    const dataRequestUrl = this.getDataRequestUrl(request.url)
+    const { body } = (await sendRequest({
+      url: dataRequestUrl,
+      responseType: 'json',
+    })) as { body: YoutubeDataApiResponse }
+
+    if (body.pageInfo.totalResults < 1) {
+      this.results.get(request.url)?.resolve({ success: false })
+      return
+    }
+
+    this.results.get(request.url)?.resolve({
+      success: true,
+      data: {
+        title: body.items[0].snippet.title,
+      },
+    })
+  }
+
+  failedRequestHandler({ request }: BasicCrawlingContext) {
+    this.results.get(request.url)?.resolve({ success: false })
+  }
+}
+
 export type HealthCheckStrategy =
   | {
       runner: 'HttpRequest'
@@ -226,13 +307,11 @@ export type HealthCheckStrategy =
     }
   | {
       runner: 'E2E'
-      config: {
-        titleSelector: string
-      }
+      config: E2EHealthCheckRunnerConfig
     }
   | {
-      runner: 'request.youtube'
-      config?: object
+      runner: 'YoutubeData'
+      config: YoutubeDataApiV3HealthCheckRunnerConfig
     }
   | {
       runner: 'request.zenscrape'
@@ -249,6 +328,7 @@ export class HealthCheck {
     | PdfFileHealthCheckRunner
     | HttpRequestHealthCheckRunner
     | E2EHealthCheckRunner
+    | YoutubeDataApiV3HealthCheckRunner
   >()
 
   private async getRunner(strategy: HealthCheckStrategy) {
@@ -266,6 +346,9 @@ export class HealthCheck {
         break
       case 'E2E':
         runner = await E2EHealthCheckRunner.create(strategy.config)
+        break
+      case 'YoutubeData':
+        runner = await YoutubeDataApiV3HealthCheckRunner.create(strategy.config)
         break
       default:
         throw new Error(
