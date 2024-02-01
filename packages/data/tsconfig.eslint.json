@@ -4,6 +4,6 @@
 		"outDir": "dist",
 		"rootDirs": ["src", "scripts", "test"]
   },
-  "include": ["src/**/*.ts", "scripts/**/*.ts", "test/**/*.ts"],
+  "include": ["env.d.ts", "src/**/*.ts", "scripts/**/*.ts", "test/**/*.ts"],
   "exclude": ["node_modules", "dist"],
 }

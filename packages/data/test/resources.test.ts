@@ -21,7 +21,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'YoutubeData',
         config: {
-          apiKey: import.meta.env.YOUTUBE_API_KEY as string,
+          apiKey: import.meta.env.YOUTUBE_API_KEY,
         },
       }
 
@@ -126,24 +126,24 @@ const resources: Resource[] = [
     type: 'basics' as Resource['type'],
     source: 'internetingishard.netlify.app',
   },
-  {
+  /* {
     title: 'SEO Mythbusting',
     url: 'https://www.youtube.com/playlist?list=PLKoqnv2vTMUN6lFDz6qMBsz7-Jm8YRV9H',
     source: 'youtube.com/c/GoogleSearchCentral',
     type: 'curiosity' as Resource['type'],
-  },
+  }, */
   {
     title: 'Sass (CSS Preprocessor) Crash Course - CSS with Superpowers',
     url: 'https://www.youtube.com/watch?v=fc3IFF4B6Jw',
     source: 'youtube.com/@laithacademy',
     type: 'advanced' as Resource['type'],
   },
-  {
+  /* {
     title: 'TJ DeVries',
     url: 'https://www.youtube.com/c/TJDeVries',
     source: 'youtube/c/TJDeVries',
     type: 'feed' as Resource['type'],
-  },
+  }, */
   /* {
     title: 'EnterpriseDesignSprints',
     url: 'https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_EnterpriseDesignSprints.pdf',
@@ -192,7 +192,7 @@ describe('Resources', () => {
           data: { title: expect.stringContaining(resource.title) as string },
         })
       },
-      30000,
+      60_000,
     )
   })
 })

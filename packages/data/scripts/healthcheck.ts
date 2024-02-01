@@ -245,12 +245,15 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
     crawlerOptions: BasicCrawlerOptions,
   ) {
     super()
-    this.crawler = new BasicCrawler({
-      ...crawlerOptions,
-      keepAlive: true,
-      requestHandler: this.requestHandler.bind(this),
-      failedRequestHandler: this.failedRequestHandler.bind(this),
-    })
+    this.crawler = new BasicCrawler(
+      {
+        ...crawlerOptions,
+        keepAlive: true,
+        requestHandler: this.requestHandler.bind(this),
+        failedRequestHandler: this.failedRequestHandler.bind(this),
+      },
+      configuration,
+    )
   }
 
   getDataRequestUrl(url: string) {
@@ -285,8 +288,6 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
       url: dataRequestUrl,
       responseType: 'json',
     })) as { body: YoutubeDataApiResponse }
-
-    console.log(body)
 
     if (body.pageInfo.totalResults < 1) {
       this.results.get(request.url)?.resolve({
