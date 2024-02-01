@@ -359,19 +359,21 @@ export type HealthCheckStrategy =
     }
 
 export class HealthCheck {
-  private runners = new Map<string, HealthCheckRunners>()
+  private runners = new Map<
+    Constructor<HealthCheckRunners>,
+    HealthCheckRunners
+  >()
 
   async getRunner<R extends HealthCheckRunners>(
-    key: string,
     Runner: Constructor<R>,
   ): Promise<R> {
-    let runner = this.runners.get(key)
+    let runner = this.runners.get(Runner)
 
     if (runner) return runner as R
 
     const requestQueue = await RequestQueue.open(randomUUID())
     runner = new Runner({ requestQueue })
-    this.runners.set(key, runner)
+    this.runners.set(Runner, runner)
     return runner as R
   }
 
@@ -380,22 +382,16 @@ export class HealthCheck {
 
     switch (strategy.runner) {
       case 'PdfFile':
-        runner = await this.getRunner('PdfFile', PdfFileHealthCheckRunner)
+        runner = await this.getRunner(PdfFileHealthCheckRunner)
         return runner.run(url, {})
       case 'HttpRequest':
-        runner = await this.getRunner(
-          'HttpRequest',
-          HttpRequestHealthCheckRunner,
-        )
+        runner = await this.getRunner(HttpRequestHealthCheckRunner)
         return runner.run(url, strategy.config)
       case 'E2E':
-        runner = await this.getRunner('E2E', E2EHealthCheckRunner)
+        runner = await this.getRunner(E2EHealthCheckRunner)
         return runner.run(url, strategy.config)
       case 'YoutubeData':
-        runner = await this.getRunner(
-          'YoutubeData',
-          YoutubeDataApiV3HealthCheckRunner,
-        )
+        runner = await this.getRunner(YoutubeDataApiV3HealthCheckRunner)
         return runner.run(url, {})
       default:
         throw new Error(
