@@ -9,8 +9,11 @@ import {
 } from 'crawlee'
 import type {
   BasicCrawlerOptions,
+  BasicCrawlingContext,
   CheerioCrawlerOptions,
+  CheerioCrawlingContext,
   PlaywrightCrawlerOptions,
+  PlaywrightCrawlingContext,
 } from 'crawlee'
 import { fileTypeFromBuffer } from 'file-type'
 
@@ -68,55 +71,12 @@ export type HealthCheckResult =
       success: false
     }
 
-export interface HealthCheckRunner {
-  results: Map<string, Deferred<HealthCheckResult>>
-  run: (url: string) => Promise<HealthCheckResult>
-  teardown: () => Promise<void>
-}
+abstract class HealthCheckRunner<
+  C extends BasicCrawler | PlaywrightCrawler | CheerioCrawler,
+> {
+  protected results = new Map<string, Deferred<HealthCheckResult>>()
 
-export class PdfFileHealthCheckRunner implements HealthCheckRunner {
-  static async create(_: undefined) {
-    const requestQueue = await RequestQueue.open(randomUUID())
-    return new PdfFileHealthCheckRunner(_, { requestQueue })
-  }
-
-  private crawler: BasicCrawler
-
-  results = new Map<string, Deferred<HealthCheckResult>>()
-
-  private constructor(
-    _: undefined,
-    crawlerOptions: Partial<BasicCrawlerOptions>,
-  ) {
-    const { results } = this
-    this.crawler = new BasicCrawler(
-      {
-        ...crawlerOptions,
-        keepAlive: true,
-        async requestHandler({ request, sendRequest }) {
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- adapted from the official docs https://crawlee.dev/docs/guides/got-scraping#sendrequest-api
-          const { body } = await sendRequest({
-            responseType: 'buffer',
-          })
-          const file = await fileTypeFromBuffer(body as Buffer)
-
-          if (!file || file.ext !== 'pdf' || file.mime !== 'application/pdf') {
-            results.get(request.url)!.resolve({ success: false })
-            return
-          }
-
-          results.get(request.url)?.resolve({
-            success: true,
-            data: { title: request.url.split('/').pop()! },
-          })
-        },
-        failedRequestHandler({ request }) {
-          results.get(request.url)?.resolve({ success: false })
-        },
-      },
-      configuration,
-    )
-  }
+  protected crawler: C
 
   async teardown() {
     await this.crawler.teardown()
@@ -132,6 +92,51 @@ export class PdfFileHealthCheckRunner implements HealthCheckRunner {
     await this.crawler.addRequests([url]).catch(console.error)
     !this.crawler.running && this.crawler.run().catch(console.error)
     return this.results.get(url)!.promise
+  }
+}
+
+export class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
+  static async create(_: undefined) {
+    const requestQueue = await RequestQueue.open(randomUUID())
+    return new PdfFileHealthCheckRunner(_, { requestQueue })
+  }
+
+  private constructor(
+    _: undefined,
+    crawlerOptions: Partial<BasicCrawlerOptions>,
+  ) {
+    super()
+    this.crawler = new BasicCrawler(
+      {
+        ...crawlerOptions,
+        keepAlive: true,
+        requestHandler: this.requestHandler.bind(this),
+        failedRequestHandler: this.failedRequestHandler.bind(this),
+      },
+      configuration,
+    )
+  }
+
+  async requestHandler({ request, sendRequest }: BasicCrawlingContext) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- adapted from the official docs https://crawlee.dev/docs/guides/got-scraping#sendrequest-api
+    const { body } = await sendRequest({
+      responseType: 'buffer',
+    })
+    const file = await fileTypeFromBuffer(body as Buffer)
+
+    if (!file || file.ext !== 'pdf' || file.mime !== 'application/pdf') {
+      this.results.get(request.url)!.resolve({ success: false })
+      return
+    }
+
+    this.results.get(request.url)?.resolve({
+      success: true,
+      data: { title: request.url.split('/').pop()! },
+    })
+  }
+
+  failedRequestHandler({ request }: BasicCrawlingContext) {
+    this.results.get(request.url)?.resolve({ success: false })
   }
 }
 
@@ -139,53 +144,37 @@ export interface HttpRequestHealthCheckRunnerConfig {
   titleSelector: string
 }
 
-export class HttpRequestHealthCheckRunner implements HealthCheckRunner {
+export class HttpRequestHealthCheckRunner extends HealthCheckRunner<CheerioCrawler> {
   static async create(config: HttpRequestHealthCheckRunnerConfig) {
     const requestQueue = await RequestQueue.open(randomUUID())
     return new HttpRequestHealthCheckRunner(config, { requestQueue })
   }
 
-  private crawler: CheerioCrawler
-
-  results = new Map<string, Deferred<HealthCheckResult>>()
-
   private constructor(
-    { titleSelector }: HttpRequestHealthCheckRunnerConfig,
+    private options: HttpRequestHealthCheckRunnerConfig,
     crawlerOptions: Partial<CheerioCrawlerOptions>,
   ) {
-    const { results } = this
+    super()
 
     this.crawler = new CheerioCrawler(
       {
         ...crawlerOptions,
         keepAlive: true,
-        requestHandler({ request, $ }) {
-          const title = $(titleSelector).text()
-
-          results.get(request.url)?.resolve({ success: true, data: { title } })
-        },
-        failedRequestHandler({ request }) {
-          results.get(request.url)?.resolve({ success: false })
-        },
+        requestHandler: this.requestHandler.bind(this),
+        failedRequestHandler: this.failedRequestHandler.bind(this),
       },
       configuration,
     )
   }
 
-  async teardown() {
-    await this.crawler.teardown()
-    this.results.clear()
+  requestHandler({ request, $ }: CheerioCrawlingContext) {
+    const title = $(this.options.titleSelector).text()
+
+    this.results.get(request.url)?.resolve({ success: true, data: { title } })
   }
 
-  async run(url: string) {
-    const result = this.results.get(url)
-
-    if (result) return result.promise
-
-    this.results.set(url, new Deferred())
-    await this.crawler.addRequests([url]).catch(console.error)
-    !this.crawler.running && this.crawler.run().catch(console.error)
-    return this.results.get(url)!.promise
+  failedRequestHandler({ request }: CheerioCrawlingContext) {
+    this.results.get(request.url)?.resolve({ success: false })
   }
 }
 
@@ -193,53 +182,36 @@ interface E2EHealthCheckRunnerConfig {
   titleSelector: string
 }
 
-export class E2EHealthCheckRunner implements HealthCheckRunner {
+export class E2EHealthCheckRunner extends HealthCheckRunner<PlaywrightCrawler> {
   static async create(config: E2EHealthCheckRunnerConfig) {
     const requestQueue = await RequestQueue.open(randomUUID())
     return new E2EHealthCheckRunner(config, { requestQueue })
   }
 
-  private crawler: PlaywrightCrawler
-
-  results = new Map<string, Deferred<HealthCheckResult>>()
-
   private constructor(
-    { titleSelector }: E2EHealthCheckRunnerConfig,
+    private options: E2EHealthCheckRunnerConfig,
     crawlerOptions: Partial<PlaywrightCrawlerOptions>,
   ) {
-    const { results } = this
+    super()
     this.crawler = new PlaywrightCrawler(
       {
         ...crawlerOptions,
         keepAlive: true,
-        async requestHandler({ page, request }) {
-          console.log(request.url)
-
-          const title = (await page.locator(titleSelector).textContent()) || ''
-          results.get(request.url)?.resolve({ success: true, data: { title } })
-        },
-        failedRequestHandler({ request }) {
-          results.get(request.url)?.resolve({ success: false })
-        },
+        requestHandler: this.requestHandler.bind(this),
+        failedRequestHandler: this.failedRequestHandler.bind(this),
       },
       configuration,
     )
   }
 
-  async teardown() {
-    await this.crawler.teardown()
-    this.results.clear()
+  async requestHandler({ page, request }: PlaywrightCrawlingContext) {
+    const title =
+      (await page.locator(this.options.titleSelector).textContent()) || ''
+    this.results.get(request.url)?.resolve({ success: true, data: { title } })
   }
 
-  async run(url: string) {
-    const result = this.results.get(url)
-
-    if (result) return result.promise
-
-    this.results.set(url, new Deferred())
-    await this.crawler.addRequests([url]).catch(console.error)
-    !this.crawler.running && this.crawler.run().catch(console.error)
-    return this.results.get(url)!.promise
+  failedRequestHandler({ request }: PlaywrightCrawlingContext) {
+    this.results.get(request.url)?.resolve({ success: false })
   }
 }
 
