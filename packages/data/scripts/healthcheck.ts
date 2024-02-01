@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion -- several indirect accesses force to null-assert */
 import { randomUUID } from 'node:crypto'
 import {
+  Request,
   Configuration,
   RequestQueue,
   BasicCrawler,
@@ -12,6 +13,7 @@ import type {
   BasicCrawlingContext,
   CheerioCrawlerOptions,
   CheerioCrawlingContext,
+  Dictionary,
   PlaywrightCrawlerOptions,
   PlaywrightCrawlingContext,
 } from 'crawlee'
@@ -34,6 +36,7 @@ export type HealthCheckResult =
 
 abstract class HealthCheckRunner<
   C extends BasicCrawler | PlaywrightCrawler | CheerioCrawler,
+  D extends Dictionary = Dictionary,
 > {
   protected results = new Map<string, Deferred<HealthCheckResult>>()
 
@@ -45,28 +48,26 @@ abstract class HealthCheckRunner<
     this.results.clear()
   }
 
-  async run(url: string) {
+  async run(url: string, userData: D) {
     const result = this.results.get(url)
 
     if (result) return result.promise
 
     this.results.set(url, new Deferred())
-    await this.crawler.addRequests([url]).catch(console.error)
+    const request = new Request<D>({ url, userData })
+    await this.crawler.addRequests([request]).catch(console.error)
     !this.crawler.running && this.crawler.run().catch(console.error)
     return this.results.get(url)!.promise
   }
 }
 
 export class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
-  static async create(_: undefined) {
+  static async create() {
     const requestQueue = await RequestQueue.open(randomUUID())
-    return new PdfFileHealthCheckRunner(_, { requestQueue })
+    return new PdfFileHealthCheckRunner({ requestQueue })
   }
 
-  private constructor(
-    _: undefined,
-    crawlerOptions: Partial<BasicCrawlerOptions>,
-  ) {
+  private constructor(crawlerOptions: Partial<BasicCrawlerOptions>) {
     super()
     this.crawler = new BasicCrawler(
       {
@@ -109,20 +110,17 @@ export class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
   }
 }
 
-export interface HttpRequestHealthCheckRunnerConfig {
+export interface HttpRequestHealthCheckRequestData {
   titleSelector: string
 }
 
 export class HttpRequestHealthCheckRunner extends HealthCheckRunner<CheerioCrawler> {
-  static async create(config: HttpRequestHealthCheckRunnerConfig) {
+  static async create() {
     const requestQueue = await RequestQueue.open(randomUUID())
-    return new HttpRequestHealthCheckRunner(config, { requestQueue })
+    return new HttpRequestHealthCheckRunner({ requestQueue })
   }
 
-  private constructor(
-    private options: HttpRequestHealthCheckRunnerConfig,
-    crawlerOptions: Partial<CheerioCrawlerOptions>,
-  ) {
+  private constructor(crawlerOptions: Partial<CheerioCrawlerOptions>) {
     super()
 
     this.crawler = new CheerioCrawler(
@@ -136,8 +134,16 @@ export class HttpRequestHealthCheckRunner extends HealthCheckRunner<CheerioCrawl
     )
   }
 
-  requestHandler({ request, $ }: CheerioCrawlingContext) {
-    const title = $(this.options.titleSelector).text()
+  requestHandler({
+    request,
+    $,
+  }: CheerioCrawlingContext<HttpRequestHealthCheckRequestData>) {
+    console.log(request.userData)
+    const {
+      userData: { titleSelector },
+    } = request
+
+    const title = $(titleSelector).text()
 
     this.results.get(request.url)?.resolve({ success: true, data: { title } })
   }
@@ -147,20 +153,20 @@ export class HttpRequestHealthCheckRunner extends HealthCheckRunner<CheerioCrawl
   }
 }
 
-interface E2EHealthCheckRunnerConfig {
+interface E2EHealthCheckRequestData {
   titleSelector: string
 }
 
-export class E2EHealthCheckRunner extends HealthCheckRunner<PlaywrightCrawler> {
-  static async create(config: E2EHealthCheckRunnerConfig) {
+export class E2EHealthCheckRunner extends HealthCheckRunner<
+  PlaywrightCrawler,
+  E2EHealthCheckRequestData
+> {
+  static async create() {
     const requestQueue = await RequestQueue.open(randomUUID())
-    return new E2EHealthCheckRunner(config, { requestQueue })
+    return new E2EHealthCheckRunner({ requestQueue })
   }
 
-  private constructor(
-    private options: E2EHealthCheckRunnerConfig,
-    crawlerOptions: Partial<PlaywrightCrawlerOptions>,
-  ) {
+  private constructor(crawlerOptions: Partial<PlaywrightCrawlerOptions>) {
     super()
     this.crawler = new PlaywrightCrawler(
       {
@@ -173,19 +179,25 @@ export class E2EHealthCheckRunner extends HealthCheckRunner<PlaywrightCrawler> {
     )
   }
 
-  async requestHandler({ page, request }: PlaywrightCrawlingContext) {
-    const title =
-      (await page.locator(this.options.titleSelector).textContent()) || ''
+  async requestHandler({
+    page,
+    request,
+  }: PlaywrightCrawlingContext<E2EHealthCheckRequestData>) {
+    const {
+      userData: { titleSelector },
+    } = request
+
+    const title = (await page.locator(titleSelector).textContent()) || ''
+
     this.results.get(request.url)?.resolve({ success: true, data: { title } })
   }
 
-  failedRequestHandler({ request }: PlaywrightCrawlingContext, error: Error) {
+  failedRequestHandler(
+    { request }: PlaywrightCrawlingContext<E2EHealthCheckRequestData>,
+    error: Error,
+  ) {
     this.results.get(request.url)?.resolve({ success: false, error })
   }
-}
-
-interface YoutubeDataApiV3HealthCheckRunnerConfig {
-  apiKey: string
 }
 
 // NB: this type contains only what we are checking for in the response, when we pass 'snippet' as value for 'part' query parameter
@@ -202,9 +214,9 @@ interface YoutubeDataApiResponse {
 }
 
 class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
-  static async create(config: YoutubeDataApiV3HealthCheckRunnerConfig) {
+  static async create() {
     const requestQueue = await RequestQueue.open(randomUUID())
-    return new YoutubeDataApiV3HealthCheckRunner(config, { requestQueue })
+    return new YoutubeDataApiV3HealthCheckRunner({ requestQueue })
   }
 
   static getVideoId = (url: string) => {
@@ -240,10 +252,7 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
     return null
   }
 
-  private constructor(
-    private options: YoutubeDataApiV3HealthCheckRunnerConfig,
-    crawlerOptions: BasicCrawlerOptions,
-  ) {
+  private constructor(crawlerOptions: BasicCrawlerOptions) {
     super()
     this.crawler = new BasicCrawler(
       {
@@ -258,7 +267,10 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
 
   getDataRequestUrl(url: string) {
     const apiBaseUrl = 'https://youtube.googleapis.com/youtube/v3'
-    const { apiKey } = this.options
+    const { YOUTUBE_API_KEY: apiKey } = import.meta.env
+
+    if (!apiKey) throw new Error(`Youtube data api key not found`)
+
     const { getVideoId, getPlaylistId, getChannelId } =
       YoutubeDataApiV3HealthCheckRunner
 
@@ -293,7 +305,7 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
       this.results.get(request.url)?.resolve({
         success: false,
         error: new Error(
-          `Api response returned no matches: ${JSON.stringify(body)}`,
+          `Api response returned no results: ${JSON.stringify(body)}`,
         ),
       })
       return
@@ -315,7 +327,7 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
 export type HealthCheckStrategy =
   | {
       runner: 'HttpRequest'
-      config: HttpRequestHealthCheckRunnerConfig
+      config: HttpRequestHealthCheckRequestData
     }
   | {
       runner: 'PdfFile'
@@ -323,11 +335,11 @@ export type HealthCheckStrategy =
     }
   | {
       runner: 'E2E'
-      config: E2EHealthCheckRunnerConfig
+      config: E2EHealthCheckRequestData
     }
   | {
       runner: 'YoutubeData'
-      config: YoutubeDataApiV3HealthCheckRunnerConfig
+      config?: undefined
     }
   | {
       runner: 'request.zenscrape'
@@ -347,38 +359,52 @@ export class HealthCheck {
     | YoutubeDataApiV3HealthCheckRunner
   >()
 
-  private async getRunner(strategy: HealthCheckStrategy) {
-    const runnerId = JSON.stringify(strategy)
-    let runner = this.runners.get(runnerId)
+  private async getRunner(name: HealthCheckStrategy['runner']) {
+    let runner = this.runners.get(name)
 
     if (runner) return runner
 
-    switch (strategy.runner) {
+    switch (name) {
       case 'PdfFile':
-        runner = await PdfFileHealthCheckRunner.create(strategy.config)
+        runner = await PdfFileHealthCheckRunner.create()
         break
       case 'HttpRequest':
-        runner = await HttpRequestHealthCheckRunner.create(strategy.config)
+        runner = await HttpRequestHealthCheckRunner.create()
         break
       case 'E2E':
-        runner = await E2EHealthCheckRunner.create(strategy.config)
+        runner = await E2EHealthCheckRunner.create()
         break
       case 'YoutubeData':
-        runner = await YoutubeDataApiV3HealthCheckRunner.create(strategy.config)
+        runner = await YoutubeDataApiV3HealthCheckRunner.create()
         break
+      default:
+        throw new Error(`Unrecognized health check strategy "${name}"`)
+    }
+
+    this.runners.set(name, runner)
+    return runner
+  }
+
+  async run(url: string, strategy: HealthCheckStrategy) {
+    const runner = await this.getRunner(strategy.runner)
+
+    switch (strategy.runner) {
+      case 'PdfFile':
+        return (runner as PdfFileHealthCheckRunner).run(url, {})
+      case 'HttpRequest':
+        return (runner as HttpRequestHealthCheckRunner).run(
+          url,
+          strategy.config,
+        )
+      case 'E2E':
+        return (runner as E2EHealthCheckRunner).run(url, strategy.config)
+      case 'YoutubeData':
+        return (runner as YoutubeDataApiV3HealthCheckRunner).run(url, {})
       default:
         throw new Error(
           `Unrecognized health check strategy "${strategy.runner}"`,
         )
     }
-
-    this.runners.set(runnerId, runner)
-    return runner
-  }
-
-  async run(url: string, strategy: HealthCheckStrategy) {
-    const runner = await this.getRunner(strategy)
-    return runner.run(url)
   }
 
   async teardown() {
