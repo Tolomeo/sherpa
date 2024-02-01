@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 /* eslint-disable @typescript-eslint/no-non-null-assertion -- several indirect accesses force to null-assert */
 import { randomUUID } from 'node:crypto'
 import {
@@ -9,6 +10,7 @@ import {
   PlaywrightCrawler,
 } from 'crawlee'
 import type {
+  Constructor,
   BasicCrawlerOptions,
   BasicCrawlingContext,
   CheerioCrawlerOptions,
@@ -67,7 +69,7 @@ export class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
     return new PdfFileHealthCheckRunner({ requestQueue })
   }
 
-  private constructor(crawlerOptions: Partial<BasicCrawlerOptions>) {
+  constructor(crawlerOptions: Partial<BasicCrawlerOptions>) {
     super()
     this.crawler = new BasicCrawler(
       {
@@ -120,7 +122,7 @@ export class HttpRequestHealthCheckRunner extends HealthCheckRunner<CheerioCrawl
     return new HttpRequestHealthCheckRunner({ requestQueue })
   }
 
-  private constructor(crawlerOptions: Partial<CheerioCrawlerOptions>) {
+  constructor(crawlerOptions: Partial<CheerioCrawlerOptions>) {
     super()
 
     this.crawler = new CheerioCrawler(
@@ -166,7 +168,7 @@ export class E2EHealthCheckRunner extends HealthCheckRunner<
     return new E2EHealthCheckRunner({ requestQueue })
   }
 
-  private constructor(crawlerOptions: Partial<PlaywrightCrawlerOptions>) {
+  constructor(crawlerOptions: Partial<PlaywrightCrawlerOptions>) {
     super()
     this.crawler = new PlaywrightCrawler(
       {
@@ -252,7 +254,7 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
     return null
   }
 
-  private constructor(crawlerOptions: BasicCrawlerOptions) {
+  constructor(crawlerOptions: BasicCrawlerOptions) {
     super()
     this.crawler = new BasicCrawler(
       {
@@ -324,6 +326,12 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
   }
 }
 
+export type HealthCheckRunners =
+  | PdfFileHealthCheckRunner
+  | HttpRequestHealthCheckRunner
+  | E2EHealthCheckRunner
+  | YoutubeDataApiV3HealthCheckRunner
+
 export type HealthCheckStrategy =
   | {
       runner: 'HttpRequest'
@@ -351,55 +359,44 @@ export type HealthCheckStrategy =
     }
 
 export class HealthCheck {
-  private runners = new Map<
-    string,
-    | PdfFileHealthCheckRunner
-    | HttpRequestHealthCheckRunner
-    | E2EHealthCheckRunner
-    | YoutubeDataApiV3HealthCheckRunner
-  >()
+  private runners = new Map<string, HealthCheckRunners>()
 
-  private async getRunner(name: HealthCheckStrategy['runner']) {
-    let runner = this.runners.get(name)
+  async getRunner<R extends HealthCheckRunners>(
+    key: string,
+    Runner: Constructor<R>,
+  ): Promise<R> {
+    let runner = this.runners.get(key)
 
-    if (runner) return runner
+    if (runner) return runner as R
 
-    switch (name) {
-      case 'PdfFile':
-        runner = await PdfFileHealthCheckRunner.create()
-        break
-      case 'HttpRequest':
-        runner = await HttpRequestHealthCheckRunner.create()
-        break
-      case 'E2E':
-        runner = await E2EHealthCheckRunner.create()
-        break
-      case 'YoutubeData':
-        runner = await YoutubeDataApiV3HealthCheckRunner.create()
-        break
-      default:
-        throw new Error(`Unrecognized health check strategy "${name}"`)
-    }
-
-    this.runners.set(name, runner)
-    return runner
+    const requestQueue = await RequestQueue.open(randomUUID())
+    runner = new Runner({ requestQueue })
+    this.runners.set(key, runner)
+    return runner as R
   }
 
   async run(url: string, strategy: HealthCheckStrategy) {
-    const runner = await this.getRunner(strategy.runner)
+    let runner: HealthCheckRunners
 
     switch (strategy.runner) {
       case 'PdfFile':
-        return (runner as PdfFileHealthCheckRunner).run(url, {})
+        runner = await this.getRunner('PdfFile', PdfFileHealthCheckRunner)
+        return runner.run(url, {})
       case 'HttpRequest':
-        return (runner as HttpRequestHealthCheckRunner).run(
-          url,
-          strategy.config,
+        runner = await this.getRunner(
+          'HttpRequest',
+          HttpRequestHealthCheckRunner,
         )
+        return runner.run(url, strategy.config)
       case 'E2E':
-        return (runner as E2EHealthCheckRunner).run(url, strategy.config)
+        runner = await this.getRunner('E2E', E2EHealthCheckRunner)
+        return runner.run(url, strategy.config)
       case 'YoutubeData':
-        return (runner as YoutubeDataApiV3HealthCheckRunner).run(url, {})
+        runner = await this.getRunner(
+          'YoutubeData',
+          YoutubeDataApiV3HealthCheckRunner,
+        )
+        return runner.run(url, {})
       default:
         throw new Error(
           `Unrecognized health check strategy "${strategy.runner}"`,
@@ -409,8 +406,7 @@ export class HealthCheck {
 
   async teardown() {
     const runnersTeardown = Object.values(this.runners).map(
-      (runner: PdfFileHealthCheckRunner | HttpRequestHealthCheckRunner) =>
-        runner.teardown(),
+      (runner: HealthCheckRunners) => runner.teardown(),
     )
     await Promise.all(runnersTeardown)
 
