@@ -31,10 +31,10 @@ const getResourceHealthCheckStrategy = (
     case 'superfastpython.com':
     case 'phuoc.ng':
     case 'tsh.io':
-      return { runner: 'HttpRequest', config: { titleSelector: 'h1' } }
+      return { runner: 'Http', config: { titleSelector: 'h1' } }
 
     case 'blob42.xyz':
-      return { runner: 'HttpRequest', config: { titleSelector: 'h3' } }
+      return { runner: 'Http', config: { titleSelector: 'h3' } }
 
     case 'freecodecamp.org':
     case 'thevaluable.dev':
@@ -111,7 +111,7 @@ const getResourceHealthCheckStrategy = (
 
     default:
       return {
-        runner: 'HttpRequest',
+        runner: 'Http',
         config: {
           titleSelector: 'head title:not(:empty)',
         },
@@ -120,72 +120,70 @@ const getResourceHealthCheckStrategy = (
 }
 
 const resources: Resource[] = [
-  /* {
+  // http
+  {
     title: 'Interneting Is Hard',
     url: 'https://internetingishard.netlify.app',
     type: 'basics' as Resource['type'],
     source: 'internetingishard.netlify.app',
-  }, */
-  /* {
+  },
+  // youtube playlist
+  {
     title: 'SEO Mythbusting',
     url: 'https://www.youtube.com/playlist?list=PLKoqnv2vTMUN6lFDz6qMBsz7-Jm8YRV9H',
     source: 'youtube.com/c/GoogleSearchCentral',
     type: 'curiosity' as Resource['type'],
   },
+  // youtube video
   {
     title: 'Sass (CSS Preprocessor) Crash Course - CSS with Superpowers',
     url: 'https://www.youtube.com/watch?v=fc3IFF4B6Jw',
     source: 'youtube.com/@laithacademy',
     type: 'advanced' as Resource['type'],
   },
+  // youtube channel
   {
     title: 'TJ DeVries',
     url: 'https://www.youtube.com/c/TJDeVries',
     source: 'youtube/c/TJDeVries',
     type: 'feed' as Resource['type'],
   },
+  //pdf file
   {
     title: 'EnterpriseDesignSprints',
     url: 'https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_EnterpriseDesignSprints.pdf',
     type: 'advanced' as Resource['type'],
     source: 'designbetter.co',
   },
-  {
-    title: 'Search engine optimization',
-    url: 'https://learn-the-web.algonquindesign.ca/topics/search-engine-optimization',
-    source: 'learn-the-web.algonquindesign.ca',
-    type: 'basics' as Resource['type'],
-  },
+  // E2E
   {
     title: 'Responsive Web Design Certification',
     url: 'https://www.freecodecamp.org/learn/2022/responsive-web-design/',
     type: 'basics' as Resource['type'],
     source: 'freecodecamp.org',
-  }, */
-  /* {
-    title: 'Animated Backgrounds',
-    url: 'https://animatedbackgrounds.me',
-    type: 'tool' as Resource['type'],
-    source: 'animatedbackgrounds.me',
-  }, */
-  /* {
+  },
+  // Zenscrape
+  {
     title: 'React Digest',
     url: 'https://reactdigest.net',
     type: 'feed' as Resource['type'],
     source: 'reactdigest.net',
   },
+  // Zenscrape render
   {
     title: 'RegExr: Learn, Build, & Test RegEx',
     url: 'https://regexr.com',
     type: 'reference' as Resource['type'],
     source: 'regexr.com',
-  }, */
-  /* {
+  },
+  // Zenscrape render premium
+  {
     title: 'Pexels',
     url: 'https://www.pexels.com/',
     type: 'tool' as Resource['type'],
     source: 'pexels.com',
-  }, */
+  },
+  // udemy
   {
     title: 'Javascript Essentials',
     url: 'https://www.udemy.com/course/javascript-essentials',
