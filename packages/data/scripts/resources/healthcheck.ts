@@ -21,7 +21,10 @@ import * as cheerio from 'cheerio'
 import { fileTypeFromBuffer } from 'file-type'
 import { Deferred } from '../_utils/defer'
 
-const configuration = new Configuration({ persistStorage: false })
+const configuration = new Configuration({
+  persistStorage: false,
+  purgeOnStart: true,
+})
 
 export { type Constructor, RequestQueue }
 
@@ -133,7 +136,6 @@ export class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCrawler> {
     request,
     $,
   }: CheerioCrawlingContext<HttpHealthCheckRequestData>) {
-    console.log(request.userData)
     const {
       userData: { titleSelector },
     } = request
