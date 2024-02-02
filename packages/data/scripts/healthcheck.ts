@@ -382,11 +382,96 @@ class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
   }
 }
 
+// NB: this type contains only what we are checking for in the response
+// the actual response is richer, see https://www.udemy.com/developers/affiliate/models/course/
+// the available fields are defined by the 'fields' query parameter of the api request url
+interface UdemyAffiliateApiResponse {
+  title: string
+}
+
+class UdemyAffiliateApiHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
+  static getCourseSlug = (url: string) => {
+    const courseUrl = /^https?:\/\/www\.udemy\.com\/course\/(\S+)$/
+
+    if (courseUrl.test(url)) {
+      const [, courseSlug] = url.match(courseUrl)!
+      return courseSlug
+    }
+
+    return null
+  }
+
+  constructor(crawlerOptions: BasicCrawlerOptions) {
+    super()
+    this.crawler = new BasicCrawler(
+      {
+        ...crawlerOptions,
+        keepAlive: true,
+        retryOnBlocked: true,
+        requestHandler: this.requestHandler.bind(this),
+        failedRequestHandler: this.failedRequestHandler.bind(this),
+      },
+      configuration,
+    )
+  }
+
+  getDataRequestUrl(url: string) {
+    const apiBaseUrl = 'https://www.udemy.com/api-2.0/courses'
+    const { getCourseSlug } = UdemyAffiliateApiHealthCheckRunner
+
+    const courseSlug = getCourseSlug(url)
+
+    if (courseSlug) return `${apiBaseUrl}/${courseSlug}?fields[course]=title`
+
+    throw new Error(
+      `The resource url ${url} is not recognizable as a valid Udemy course url`,
+    )
+  }
+
+  async requestHandler({ request, sendRequest }: BasicCrawlingContext) {
+    const {
+      UDEMY_AFFILIATE_API_CLIENT_ID: clientId,
+      UDEMY_AFFILIATE_API_CLIENT_SECRET: clientSecret,
+    } = import.meta.env
+
+    if (!clientId)
+      throw new Error(`Udemy affialiate api client id was not found`)
+
+    if (!clientSecret)
+      throw new Error(`Udemy affialiate api client secret was not found`)
+
+    const dataRequestUrl = this.getDataRequestUrl(request.url)
+    const Authentication = `Basic ${Buffer.from(
+      `${clientId}:${clientSecret}`,
+    ).toString('base64')}`
+
+    const { body } = (await sendRequest({
+      url: dataRequestUrl,
+      responseType: 'json',
+      headers: {
+        Authentication,
+      },
+    })) as { body: UdemyAffiliateApiResponse }
+
+    this.results.get(request.url)?.resolve({
+      success: true,
+      data: {
+        title: body.title,
+      },
+    })
+  }
+
+  failedRequestHandler({ request }: BasicCrawlingContext, error: Error) {
+    this.results.get(request.url)?.resolve({ success: false, error })
+  }
+}
+
 export type HealthCheckRunners =
   | PdfFileHealthCheckRunner
   | HttpRequestHealthCheckRunner
   | E2EHealthCheckRunner
   | YoutubeDataApiV3HealthCheckRunner
+  | UdemyAffiliateApiHealthCheckRunner
 
 export type HealthCheckStrategy =
   | {
@@ -406,6 +491,9 @@ export type HealthCheckStrategy =
   | {
       runner: 'Zenscrape'
       config: ZenscrapeHealthCheckRequestData
+    }
+  | {
+      runner: 'UdemyAffiliate'
     }
 
 export class HealthCheck {
@@ -446,6 +534,9 @@ export class HealthCheck {
       case 'Zenscrape':
         runner = await this.getRunner(ZenscrapeHealthCheckRunner)
         return runner.run(url, strategy.config)
+      case 'UdemyAffiliate':
+        runner = await this.getRunner(UdemyAffiliateApiHealthCheckRunner)
+        return runner.run(url, {})
     }
   }
 

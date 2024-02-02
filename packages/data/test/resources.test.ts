@@ -17,6 +17,10 @@ const getResourceHealthCheckStrategy = (
   const host = new URL(resource.url).hostname.replace(/^www./, '')
 
   switch (host) {
+    case 'udemy.com':
+      return {
+        runner: 'UdemyAffiliate',
+      }
     case 'youtube.com':
       return {
         runner: 'YoutubeData',
@@ -83,7 +87,6 @@ const getResourceHealthCheckStrategy = (
 
     case 'ui.dev':
     case 'developer.apple.com':
-    case 'udemy.com':
     case 'regexr.com':
     case 'tooltester.com':
       return {
@@ -165,7 +168,7 @@ const resources: Resource[] = [
     type: 'tool' as Resource['type'],
     source: 'animatedbackgrounds.me',
   }, */
-  {
+  /* {
     title: 'React Digest',
     url: 'https://reactdigest.net',
     type: 'feed' as Resource['type'],
@@ -176,12 +179,18 @@ const resources: Resource[] = [
     url: 'https://regexr.com',
     type: 'reference' as Resource['type'],
     source: 'regexr.com',
-  },
-  {
+  }, */
+  /* {
     title: 'Pexels',
     url: 'https://www.pexels.com/',
     type: 'tool' as Resource['type'],
     source: 'pexels.com',
+  }, */
+  {
+    title: 'Javascript Essentials',
+    url: 'https://www.udemy.com/course/javascript-essentials',
+    type: 'basics' as Resource['type'],
+    source: 'udemy.com',
   },
 ]
 
