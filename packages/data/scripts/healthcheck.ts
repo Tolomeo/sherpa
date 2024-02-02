@@ -71,6 +71,7 @@ export class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
       {
         ...crawlerOptions,
         keepAlive: true,
+        retryOnBlocked: true,
         requestHandler: this.requestHandler.bind(this),
         failedRequestHandler: this.failedRequestHandler.bind(this),
       },
@@ -120,6 +121,7 @@ export class HttpRequestHealthCheckRunner extends HealthCheckRunner<CheerioCrawl
       {
         ...crawlerOptions,
         keepAlive: true,
+        retryOnBlocked: true,
         requestHandler: this.requestHandler.bind(this),
         failedRequestHandler: this.failedRequestHandler.bind(this),
       },
@@ -160,6 +162,7 @@ export class E2EHealthCheckRunner extends HealthCheckRunner<
       {
         ...crawlerOptions,
         keepAlive: true,
+        retryOnBlocked: true,
         requestHandler: this.requestHandler.bind(this),
         failedRequestHandler: this.failedRequestHandler.bind(this),
       },
@@ -241,6 +244,7 @@ class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
       {
         ...crawlerOptions,
         keepAlive: true,
+        retryOnBlocked: true,
         requestHandler: this.requestHandler.bind(this),
         failedRequestHandler: this.failedRequestHandler.bind(this),
       },
@@ -320,6 +324,8 @@ class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
       {
         ...crawlerOptions,
         keepAlive: true,
+        retryOnBlocked: true,
+        maxConcurrency: 1,
         requestHandler: this.requestHandler.bind(this),
         failedRequestHandler: this.failedRequestHandler.bind(this),
       },
@@ -328,19 +334,18 @@ class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
   }
 
   getDataRequestUrl(url: string, render: boolean, premium: boolean) {
-    // apparently the scraper api doesn't accept 'false' as valid qs parameter
-    // so we can only pass 'true' or omit the url parameter entirely
-    // that is why we are not using RequestOptions.qs here
     let dataRequestUrl = `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
       url,
     )}`
 
+    // apparently the scraper api doesn't accept 'false' as valid qs parameter
+    // so we can only pass 'true' or omit the url parameter entirely
     if (render) {
-      dataRequestUrl = `${url}&render=true`
+      dataRequestUrl = `${dataRequestUrl}&render=true`
     }
 
     if (premium) {
-      dataRequestUrl = `${url}&premium=true`
+      dataRequestUrl = `${dataRequestUrl}&premium=true`
     }
 
     return dataRequestUrl

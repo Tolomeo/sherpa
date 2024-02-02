@@ -171,6 +171,18 @@ const resources: Resource[] = [
     type: 'feed' as Resource['type'],
     source: 'reactdigest.net',
   },
+  {
+    title: 'RegExr: Learn, Build, & Test RegEx',
+    url: 'https://regexr.com',
+    type: 'reference' as Resource['type'],
+    source: 'regexr.com',
+  },
+  {
+    title: 'Pexels',
+    url: 'https://www.pexels.com/',
+    type: 'tool' as Resource['type'],
+    source: 'pexels.com',
+  },
 ]
 
 describe('Resources', () => {
@@ -201,7 +213,7 @@ describe('Resources', () => {
           data: { title: expect.stringContaining(resource.title) as string },
         })
       },
-      60_000,
+      120_000,
     )
   })
 })
