@@ -1,6 +1,5 @@
-import React from 'react'
 import NextLink from 'next/link'
-import type { Path } from '@sherpa/data'
+import type { Path } from '@sherpa/data/types'
 import { List, ListItem, Link, Typography, Box, Underline } from '../theme'
 import config from '../config'
 

@@ -5,7 +5,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import type { Path, Resource } from '@sherpa/data'
+import type { Path, Resource } from '@sherpa/data/types'
 import PathBody from '../../src/path'
 import config from '../../src/config'
 

@@ -1,5 +1,5 @@
-import type { Resource, Path } from '@sherpa/data'
-import { ResourceType } from '@sherpa/data'
+import type { Resource, Path } from '@sherpa/data/types'
+import { ResourceType } from '@sherpa/data/types'
 
 export type { Resource, Path }
 

@@ -4,7 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import type { Resource } from '@sherpa/data'
+import type { Resource } from '@sherpa/data/types'
 import {
   LayoutProvider,
   LayoutHeader,

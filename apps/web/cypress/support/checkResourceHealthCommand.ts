@@ -1,5 +1,5 @@
 /* eslint-disable no-case-declarations */
-import type { SerializedResource } from '@sherpa/data'
+import type { SerializedResource } from '@sherpa/data/types'
 import { recurse } from 'cypress-recurse'
 
 interface CheckHealthOptions {

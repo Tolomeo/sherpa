@@ -1,5 +1,4 @@
-import React from 'react'
-import type { Resource } from '@sherpa/data'
+import type { Resource } from '@sherpa/data/types'
 import { Link, Typography, Box, List, ListItem } from '../../theme'
 
 interface Props {
