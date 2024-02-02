@@ -2,7 +2,6 @@
 import {
   Request,
   RequestQueue,
-  Configuration,
   BasicCrawler,
   CheerioCrawler,
   PlaywrightCrawler,
@@ -20,11 +19,6 @@ import type {
 import * as cheerio from 'cheerio'
 import { fileTypeFromBuffer } from 'file-type'
 import { Deferred } from '../_utils/defer'
-
-const configuration = new Configuration({
-  persistStorage: false,
-  purgeOnStart: true,
-})
 
 export { type Constructor, RequestQueue }
 
@@ -70,16 +64,13 @@ abstract class HealthCheckRunner<
 export class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
   constructor(crawlerOptions: Partial<BasicCrawlerOptions>) {
     super()
-    this.crawler = new BasicCrawler(
-      {
-        ...crawlerOptions,
-        keepAlive: true,
-        retryOnBlocked: true,
-        requestHandler: this.requestHandler.bind(this),
-        failedRequestHandler: this.failedRequestHandler.bind(this),
-      },
-      configuration,
-    )
+    this.crawler = new BasicCrawler({
+      ...crawlerOptions,
+      keepAlive: true,
+      retryOnBlocked: true,
+      requestHandler: this.requestHandler.bind(this),
+      failedRequestHandler: this.failedRequestHandler.bind(this),
+    })
   }
 
   async requestHandler({ request, sendRequest }: BasicCrawlingContext) {
@@ -120,16 +111,13 @@ export class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCrawler> {
   constructor(crawlerOptions: Partial<CheerioCrawlerOptions>) {
     super()
 
-    this.crawler = new CheerioCrawler(
-      {
-        ...crawlerOptions,
-        keepAlive: true,
-        retryOnBlocked: true,
-        requestHandler: this.requestHandler.bind(this),
-        failedRequestHandler: this.failedRequestHandler.bind(this),
-      },
-      configuration,
-    )
+    this.crawler = new CheerioCrawler({
+      ...crawlerOptions,
+      keepAlive: true,
+      retryOnBlocked: true,
+      requestHandler: this.requestHandler.bind(this),
+      failedRequestHandler: this.failedRequestHandler.bind(this),
+    })
   }
 
   requestHandler({
@@ -160,16 +148,13 @@ export class E2EHealthCheckRunner extends HealthCheckRunner<
 > {
   constructor(crawlerOptions: Partial<PlaywrightCrawlerOptions>) {
     super()
-    this.crawler = new PlaywrightCrawler(
-      {
-        ...crawlerOptions,
-        keepAlive: true,
-        retryOnBlocked: true,
-        requestHandler: this.requestHandler.bind(this),
-        failedRequestHandler: this.failedRequestHandler.bind(this),
-      },
-      configuration,
-    )
+    this.crawler = new PlaywrightCrawler({
+      ...crawlerOptions,
+      keepAlive: true,
+      retryOnBlocked: true,
+      requestHandler: this.requestHandler.bind(this),
+      failedRequestHandler: this.failedRequestHandler.bind(this),
+    })
   }
 
   async requestHandler({
@@ -242,16 +227,13 @@ export class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCr
 
   constructor(crawlerOptions: BasicCrawlerOptions) {
     super()
-    this.crawler = new BasicCrawler(
-      {
-        ...crawlerOptions,
-        keepAlive: true,
-        retryOnBlocked: true,
-        requestHandler: this.requestHandler.bind(this),
-        failedRequestHandler: this.failedRequestHandler.bind(this),
-      },
-      configuration,
-    )
+    this.crawler = new BasicCrawler({
+      ...crawlerOptions,
+      keepAlive: true,
+      retryOnBlocked: true,
+      requestHandler: this.requestHandler.bind(this),
+      failedRequestHandler: this.failedRequestHandler.bind(this),
+    })
   }
 
   getDataRequestUrl(url: string) {
@@ -322,17 +304,14 @@ export interface ZenscrapeHealthCheckRequestData {
 export class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
   constructor(crawlerOptions: BasicCrawlerOptions) {
     super()
-    this.crawler = new BasicCrawler(
-      {
-        ...crawlerOptions,
-        keepAlive: true,
-        retryOnBlocked: true,
-        maxConcurrency: 1,
-        requestHandler: this.requestHandler.bind(this),
-        failedRequestHandler: this.failedRequestHandler.bind(this),
-      },
-      configuration,
-    )
+    this.crawler = new BasicCrawler({
+      ...crawlerOptions,
+      keepAlive: true,
+      retryOnBlocked: true,
+      maxConcurrency: 1,
+      requestHandler: this.requestHandler.bind(this),
+      failedRequestHandler: this.failedRequestHandler.bind(this),
+    })
   }
 
   getDataRequestUrl(url: string, render: boolean, premium: boolean) {
@@ -405,16 +384,13 @@ export class UdemyAffiliateApiHealthCheckRunner extends HealthCheckRunner<BasicC
 
   constructor(crawlerOptions: BasicCrawlerOptions) {
     super()
-    this.crawler = new BasicCrawler(
-      {
-        ...crawlerOptions,
-        keepAlive: true,
-        retryOnBlocked: true,
-        requestHandler: this.requestHandler.bind(this),
-        failedRequestHandler: this.failedRequestHandler.bind(this),
-      },
-      configuration,
-    )
+    this.crawler = new BasicCrawler({
+      ...crawlerOptions,
+      keepAlive: true,
+      retryOnBlocked: true,
+      requestHandler: this.requestHandler.bind(this),
+      failedRequestHandler: this.failedRequestHandler.bind(this),
+    })
   }
 
   getDataRequestUrl(url: string) {

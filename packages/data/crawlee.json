@@ -1,0 +1,5 @@
+{
+  "persistStorage": false,
+	"purgeOnStart": true,
+  "logLevel": "OFF"
+}
