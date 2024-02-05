@@ -191,7 +191,7 @@ export class E2EHealthCheckRunner extends HealthCheckRunner<
       userData: { titleSelector },
     } = request
 
-    const title = await page.locator(titleSelector).textContent()
+    const title = await page.locator(titleSelector).first().textContent()
 
     if (!title) {
       this.failure(

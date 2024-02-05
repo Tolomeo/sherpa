@@ -57,7 +57,7 @@ const getResourceHealthCheckStrategy = (
     case 'codepen.io':
       return {
         runner: 'E2E',
-        config: { titleSelector: 'title:first-of-type:not(:empty)' },
+        config: { titleSelector: 'title:not(:empty)' },
       }
 
     case 'reactdigest.net':
@@ -67,7 +67,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'Zenscrape',
         config: {
-          titleSelector: 'title:first-of-type:not(:empty)',
+          titleSelector: 'title:not(:empty)',
           render: false,
           premium: false,
         },
@@ -80,7 +80,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'Zenscrape',
         config: {
-          titleSelector: 'title:first-of-type:not(:empty)',
+          titleSelector: 'title:not(:empty)',
           render: true,
           premium: false,
         },
@@ -93,7 +93,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'Zenscrape',
         config: {
-          titleSelector: 'title:first-of-type:not(:empty)',
+          titleSelector: 'title:not(:empty)',
           render: false,
           premium: true,
         },
@@ -104,7 +104,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'Zenscrape',
         config: {
-          titleSelector: 'title:first-of-type:not(:empty)',
+          titleSelector: 'title:not(:empty)',
           render: true,
           premium: true,
         },
@@ -114,7 +114,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'Http',
         config: {
-          titleSelector: 'title:first-of-type:not(:empty)',
+          titleSelector: 'title:not(:empty)',
         },
       }
   }
@@ -136,14 +136,14 @@ describe('Resources', () => {
   const paths = ['htmlcss']
 
   describe.each(paths)('%s resources', (path) => {
-    // const resources = readResources(path)
-    const resources = [
+    const resources = readResources(path)
+    /* const resources = [
       {
         title: 'State of CSS',
         url: 'https://stateofcss.com/en-US',
         type: 'feed',
       },
-      /* {
+      {
         title: 'CodePen',
         url: 'https://codepen.io',
         type: 'feed',
@@ -152,8 +152,8 @@ describe('Resources', () => {
         title: 'HTML Standard',
         url: 'https://html.spec.whatwg.org/multipage',
         type: 'reference',
-      }, */
-    ] as Resource[]
+      },
+    ] as Resource[] */
 
     test.each(resources)(
       '$url',
