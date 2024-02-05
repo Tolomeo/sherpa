@@ -55,6 +55,9 @@ const getResourceHealthCheckStrategy = (
     case 'curlbuilder.com':
     case 'refrf.dev':
     case 'codepen.io':
+    case 'webdesignmuseum.org':
+    case 'pexels.com':
+    case 'adobe.com':
       return {
         runner: 'E2E',
         config: { titleSelector: 'title:not(:empty)' },
@@ -99,8 +102,7 @@ const getResourceHealthCheckStrategy = (
         },
       }
 
-    case 'pexels.com':
-    case 'adobe.com':
+    /* case 'adobe.com':
       return {
         runner: 'Zenscrape',
         config: {
@@ -108,7 +110,7 @@ const getResourceHealthCheckStrategy = (
           render: true,
           premium: true,
         },
-      }
+      } */
 
     default:
       return {
@@ -133,27 +135,10 @@ describe('Resources', () => {
 
   // taking only first level paths
   // const paths = listPaths().filter((path) => path.split('.').length === 1)
-  const paths = ['htmlcss']
+  const paths = ['webaccessibility']
 
   describe.each(paths)('%s resources', (path) => {
     const resources = readResources(path)
-    /* const resources = [
-      {
-        title: 'State of CSS',
-        url: 'https://stateofcss.com/en-US',
-        type: 'feed',
-      },
-      {
-        title: 'CodePen',
-        url: 'https://codepen.io',
-        type: 'feed',
-      },
-      {
-        title: 'HTML Standard',
-        url: 'https://html.spec.whatwg.org/multipage',
-        type: 'reference',
-      },
-    ] as Resource[] */
 
     test.each(resources)(
       '$url',
@@ -169,7 +154,7 @@ describe('Resources', () => {
           data: { title: expect.stringContaining(resource.title) as string },
         })
       },
-      120_000,
+      150_000,
     )
   })
 })

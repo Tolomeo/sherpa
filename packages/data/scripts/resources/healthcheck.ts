@@ -18,7 +18,7 @@ import type {
 } from 'crawlee'
 import * as cheerio from 'cheerio'
 import { fileTypeFromBuffer } from 'file-type'
-import { Deferred } from '../_utils/defer'
+import { Deferred, wait } from '../_utils/defer'
 
 export { type Constructor, RequestQueue }
 
@@ -354,6 +354,8 @@ export class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
       keepAlive: true,
       retryOnBlocked: true,
       maxConcurrency: 1,
+      sameDomainDelaySecs: 5,
+      maxRequestRetries: 6,
       requestHandler: this.requestHandler.bind(this),
       failedRequestHandler: this.failedRequestHandler.bind(this),
     })
@@ -391,10 +393,15 @@ export class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
 
     const { titleSelector, render, premium } = request.userData
     const dataRequestUrl = this.getDataRequestUrl(request.url, render, premium)
-    const { body } = (await sendRequest({
+    const { statusCode, body } = (await sendRequest({
       url: dataRequestUrl,
       headers: { apiKey },
-    })) as { body: string }
+    })) as { body: string; statusCode: number }
+
+    if (statusCode === 429) {
+      await wait(5000)
+      throw new Error(`Concurrent requests are not supported`)
+    }
 
     const $ = cheerio.load(body)
     const title = $(titleSelector).text()
