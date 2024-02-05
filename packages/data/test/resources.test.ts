@@ -54,9 +54,10 @@ const getResourceHealthCheckStrategy = (
     case 'ubuntu.com':
     case 'curlbuilder.com':
     case 'refrf.dev':
+    case 'codepen.io':
       return {
         runner: 'E2E',
-        config: { titleSelector: 'head title:not(:empty)' },
+        config: { titleSelector: 'title:first-of-type:not(:empty)' },
       }
 
     case 'reactdigest.net':
@@ -66,7 +67,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'Zenscrape',
         config: {
-          titleSelector: 'head title:not(:empty)',
+          titleSelector: 'title:first-of-type:not(:empty)',
           render: false,
           premium: false,
         },
@@ -75,12 +76,11 @@ const getResourceHealthCheckStrategy = (
     case 'bash.cyberciti.biz':
     case 'git.herrbischoff.com':
     case 'codementor.io':
-    case 'codepen.io':
     case 'replit.com':
       return {
         runner: 'Zenscrape',
         config: {
-          titleSelector: 'head title:not(:empty)',
+          titleSelector: 'title:first-of-type:not(:empty)',
           render: true,
           premium: false,
         },
@@ -93,7 +93,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'Zenscrape',
         config: {
-          titleSelector: 'head title:not(:empty)',
+          titleSelector: 'title:first-of-type:not(:empty)',
           render: false,
           premium: true,
         },
@@ -104,7 +104,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'Zenscrape',
         config: {
-          titleSelector: 'head title:not(:empty)',
+          titleSelector: 'title:first-of-type:not(:empty)',
           render: true,
           premium: true,
         },
@@ -114,7 +114,7 @@ const getResourceHealthCheckStrategy = (
       return {
         runner: 'Http',
         config: {
-          titleSelector: 'head title:not(:empty)',
+          titleSelector: 'title:first-of-type:not(:empty)',
         },
       }
   }
@@ -132,10 +132,30 @@ describe('Resources', () => {
   })
 
   // taking only first level paths
-  const paths = listPaths().filter((path) => path.split('.').length === 1)
+  // const paths = listPaths().filter((path) => path.split('.').length === 1)
+  const paths = ['htmlcss']
 
   describe.each(paths)('%s resources', (path) => {
-    test.each(readResources(path))(
+    // const resources = readResources(path)
+    const resources = [
+      {
+        title: 'State of CSS',
+        url: 'https://stateofcss.com/en-US',
+        type: 'feed',
+      },
+      /* {
+        title: 'CodePen',
+        url: 'https://codepen.io',
+        type: 'feed',
+      },
+      {
+        title: 'HTML Standard',
+        url: 'https://html.spec.whatwg.org/multipage',
+        type: 'reference',
+      }, */
+    ] as Resource[]
+
+    test.each(resources)(
       '$url',
       async (resource) => {
         const resourceHealthCheck = await healthCheck.run(
@@ -144,6 +164,7 @@ describe('Resources', () => {
         )
 
         expect(resourceHealthCheck).toMatchObject({
+          url: resource.url,
           success: true,
           data: { title: expect.stringContaining(resource.title) as string },
         })

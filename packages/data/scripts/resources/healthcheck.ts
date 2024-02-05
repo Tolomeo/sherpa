@@ -24,12 +24,14 @@ export { type Constructor, RequestQueue }
 
 export type HealthCheckResult =
   | {
+      url: string
       success: true
       data: {
         title: string
       }
     }
   | {
+      url: string
       success: false
       error: Error
     }
@@ -41,6 +43,22 @@ abstract class HealthCheckRunner<
   protected results = new Map<string, Deferred<HealthCheckResult>>()
 
   protected crawler: C
+
+  protected success(request: Request<D>, data: { title: string }) {
+    this.results.get(request.url)?.resolve({
+      url: request.url,
+      success: true,
+      data,
+    })
+  }
+
+  protected failure(request: Request<D>, error: Error) {
+    this.results.get(request.url)?.resolve({
+      url: request.url,
+      success: false,
+      error,
+    })
+  }
 
   async teardown() {
     await this.crawler.requestQueue?.drop()
@@ -81,25 +99,22 @@ export class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
     const file = await fileTypeFromBuffer(body as Buffer)
 
     if (!file || file.ext !== 'pdf' || file.mime !== 'application/pdf') {
-      this.results.get(request.url)!.resolve({
-        success: false,
-        error: new Error(
+      this.failure(
+        request,
+        new Error(
           `The received buffer is not a pdf. The buffer is instead a ${JSON.stringify(
             file,
           )} filetype`,
         ),
-      })
+      )
       return
     }
 
-    this.results.get(request.url)?.resolve({
-      success: true,
-      data: { title: request.url.split('/').pop()! },
-    })
+    this.success(request, { title: request.url.split('/').pop()! })
   }
 
   failedRequestHandler({ request }: BasicCrawlingContext, error: Error) {
-    this.results.get(request.url)?.resolve({ success: false, error })
+    this.failure(request, error)
   }
 }
 
@@ -130,11 +145,22 @@ export class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCrawler> {
 
     const title = $(titleSelector).text()
 
-    this.results.get(request.url)?.resolve({ success: true, data: { title } })
+    if (title.trim() === '') {
+      this.failure(
+        request,
+        new Error(`Could not retrieve title text from ${$.html()}`),
+      )
+      return
+    }
+
+    this.success(request, { title })
   }
 
-  failedRequestHandler({ request }: CheerioCrawlingContext, error: Error) {
-    this.results.get(request.url)?.resolve({ success: false, error })
+  failedRequestHandler(
+    { request }: CheerioCrawlingContext<HttpHealthCheckRequestData>,
+    error: Error,
+  ) {
+    this.failure(request, error)
   }
 }
 
@@ -165,16 +191,24 @@ export class E2EHealthCheckRunner extends HealthCheckRunner<
       userData: { titleSelector },
     } = request
 
-    const title = (await page.locator(titleSelector).textContent()) || ''
+    const title = await page.locator(titleSelector).textContent()
 
-    this.results.get(request.url)?.resolve({ success: true, data: { title } })
+    if (!title) {
+      this.failure(
+        request,
+        new Error(`Could not retrieve title text from ${await page.content()}`),
+      )
+      return
+    }
+
+    this.success(request, { title })
   }
 
   failedRequestHandler(
     { request }: PlaywrightCrawlingContext<E2EHealthCheckRequestData>,
     error: Error,
   ) {
-    this.results.get(request.url)?.resolve({ success: false, error })
+    this.failure(request, error)
   }
 }
 
@@ -236,11 +270,8 @@ export class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCr
     })
   }
 
-  getDataRequestUrl(url: string) {
+  getDataRequestUrl(url: string, apiKey: string) {
     const apiBaseUrl = 'https://youtube.googleapis.com/youtube/v3'
-    const { YOUTUBE_API_KEY: apiKey } = import.meta.env
-
-    if (!apiKey) throw new Error(`Youtube data api key not found`)
 
     const { getVideoId, getPlaylistId, getChannelId } =
       YoutubeDataApiV3HealthCheckRunner
@@ -260,38 +291,52 @@ export class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner<BasicCr
     if (channelId)
       return `${apiBaseUrl}/search?q=%40${channelId}&type=channel&key=${apiKey}&part=snippet&maxResults=1`
 
-    throw new Error(
-      `The url "${url}" is not recognizable as a valid video, playlist or channel youtube url`,
-    )
+    return null
   }
 
   async requestHandler({ request, sendRequest }: BasicCrawlingContext) {
-    const dataRequestUrl = this.getDataRequestUrl(request.url)
+    const { YOUTUBE_API_KEY: apiKey } = import.meta.env
+
+    if (!apiKey) {
+      this.failure(request, new Error(`Youtube data api key not found`))
+      request.noRetry = true
+      return
+    }
+
+    const dataRequestUrl = this.getDataRequestUrl(request.url, apiKey)
+
+    if (!dataRequestUrl) {
+      this.failure(
+        request,
+        new Error(
+          `The url "${request.url}" is not recognizable as a valid video, playlist or channel youtube url`,
+        ),
+      )
+      request.noRetry = true
+      return
+    }
+
     const { body } = (await sendRequest({
       url: dataRequestUrl,
       responseType: 'json',
     })) as { body: YoutubeDataApiResponse }
 
     if (body.pageInfo.totalResults < 1) {
-      this.results.get(request.url)?.resolve({
-        success: false,
-        error: new Error(
-          `Api response returned no results: ${JSON.stringify(body)}`,
-        ),
-      })
+      this.failure(
+        request,
+        new Error(`Api response returned no results: ${JSON.stringify(body)}`),
+      )
+      request.noRetry = true
       return
     }
 
-    this.results.get(request.url)?.resolve({
-      success: true,
-      data: {
-        title: body.items[0].snippet.title,
-      },
+    this.success(request, {
+      title: body.items[0].snippet.title,
     })
   }
 
   failedRequestHandler({ request }: BasicCrawlingContext, error: Error) {
-    this.results.get(request.url)?.resolve({ success: false, error })
+    this.failure(request, error)
   }
 }
 
@@ -338,7 +383,11 @@ export class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
   }: BasicCrawlingContext<ZenscrapeHealthCheckRequestData>) {
     const { ZENSCRAPE_API_KEY: apiKey } = import.meta.env
 
-    if (!apiKey) throw new Error(`Zenscrape api key not found`)
+    if (!apiKey) {
+      this.failure(request, new Error(`Zenscrape api key not found`))
+      request.noRetry = true
+      return
+    }
 
     const { titleSelector, render, premium } = request.userData
     const dataRequestUrl = this.getDataRequestUrl(request.url, render, premium)
@@ -350,16 +399,19 @@ export class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicCrawler> 
     const $ = cheerio.load(body)
     const title = $(titleSelector).text()
 
-    this.results.get(request.url)?.resolve({
-      success: true,
-      data: {
-        title,
-      },
-    })
+    if (title.trim() === '') {
+      this.failure(
+        request,
+        new Error(`Could not retrieve title text from ${body}`),
+      )
+      return
+    }
+
+    this.success(request, { title })
   }
 
   failedRequestHandler({ request }: BasicCrawlingContext, error: Error) {
-    this.results.get(request.url)?.resolve({ success: false, error })
+    this.failure(request, error)
   }
 }
 
@@ -401,9 +453,7 @@ export class UdemyAffiliateApiHealthCheckRunner extends HealthCheckRunner<BasicC
 
     if (courseSlug) return `${apiBaseUrl}/${courseSlug}?fields[course]=title`
 
-    throw new Error(
-      `The resource url ${url} is not recognizable as a valid Udemy course url`,
-    )
+    return null
   }
 
   async requestHandler({ request, sendRequest }: BasicCrawlingContext) {
@@ -412,13 +462,36 @@ export class UdemyAffiliateApiHealthCheckRunner extends HealthCheckRunner<BasicC
       UDEMY_AFFILIATE_API_CLIENT_SECRET: clientSecret,
     } = import.meta.env
 
-    if (!clientId)
-      throw new Error(`Udemy affialiate api client id was not found`)
+    if (!clientId) {
+      this.failure(
+        request,
+        new Error(`Udemy affialiate api client id was not found`),
+      )
+      request.noRetry = true
+      return
+    }
 
-    if (!clientSecret)
-      throw new Error(`Udemy affialiate api client secret was not found`)
+    if (!clientSecret) {
+      this.failure(
+        request,
+        new Error(`Udemy affiliate api client secret was not found`),
+      )
+      request.noRetry = true
+      return
+    }
 
     const dataRequestUrl = this.getDataRequestUrl(request.url)
+
+    if (!dataRequestUrl) {
+      this.failure(
+        request,
+        new Error(
+          `The resource url ${request.url} is not recognizable as a valid Udemy course url`,
+        ),
+      )
+      request.noRetry = true
+      return
+    }
     const Authentication = `Basic ${Buffer.from(
       `${clientId}:${clientSecret}`,
     ).toString('base64')}`
@@ -431,15 +504,12 @@ export class UdemyAffiliateApiHealthCheckRunner extends HealthCheckRunner<BasicC
       },
     })) as { body: UdemyAffiliateApiResponse }
 
-    this.results.get(request.url)?.resolve({
-      success: true,
-      data: {
-        title: body.title,
-      },
+    this.success(request, {
+      title: body.title,
     })
   }
 
   failedRequestHandler({ request }: BasicCrawlingContext, error: Error) {
-    this.results.get(request.url)?.resolve({ success: false, error })
+    this.failure(request, error)
   }
 }
