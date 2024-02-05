@@ -43,8 +43,8 @@ abstract class HealthCheckRunner<
   protected crawler: C
 
   async teardown() {
-    await this.crawler.teardown()
     await this.crawler.requestQueue?.drop()
+    await this.crawler.teardown()
     this.results.clear()
   }
 

@@ -53,6 +53,7 @@ const getResourceHealthCheckStrategy = (
     case 'gitexplorer.com':
     case 'ubuntu.com':
     case 'curlbuilder.com':
+    case 'refrf.dev':
       return {
         runner: 'E2E',
         config: { titleSelector: 'head title:not(:empty)' },
@@ -120,18 +121,20 @@ const getResourceHealthCheckStrategy = (
 }
 
 describe('Resources', () => {
+  let healthCheck: HealthCheck
+
+  beforeAll(() => {
+    healthCheck = new HealthCheck()
+  })
+
+  afterAll(async () => {
+    await healthCheck.teardown()
+  })
+
   // taking only first level paths
   const paths = listPaths().filter((path) => path.split('.').length === 1)
 
   describe.each(paths)('%s resources', (path) => {
-    let healthCheck: HealthCheck
-    beforeAll(() => {
-      healthCheck = new HealthCheck()
-    })
-    afterAll(async () => {
-      await healthCheck.teardown()
-    })
-
     test.each(readResources(path))(
       '$url',
       async (resource) => {
