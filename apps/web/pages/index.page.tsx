@@ -4,8 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import type { Resource } from '@sherpa/data'
-import { readResources } from '@sherpa/data/resources/read'
+import type { Resource } from '@sherpa/data/types'
 import {
   LayoutProvider,
   LayoutHeader,
@@ -25,7 +24,9 @@ interface StaticProps {
 export const getStaticProps: GetStaticProps<StaticProps> = (
   _: GetStaticPropsContext,
 ) => {
-  const alternateSources = readResources('alternatives')
+  const alternateSources =
+    // eslint-disable-next-line @typescript-eslint/no-var-requires -- await import returns a js module instead of json, require works
+    require('@sherpa/data/resources/alternatives.json') as Resource[]
 
   return {
     props: {

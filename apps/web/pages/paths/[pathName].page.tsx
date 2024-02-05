@@ -5,9 +5,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import type { Path, Resource } from '@sherpa/data'
-import { readPath } from '@sherpa/data/paths/read'
-import { readResources } from '@sherpa/data/resources/read'
+import type { Path, Resource } from '@sherpa/data/types'
 import PathBody from '../../src/path'
 import config from '../../src/config'
 
@@ -33,8 +31,12 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = ({
   params,
 }) => {
   const topic = params!.pathName as (typeof config.paths.topics)[number]
-  const path = readPath(topic)
-  const resources = readResources(topic)
+  // eslint-disable-next-line @typescript-eslint/no-var-requires -- await import returns a js module instead of json, require works
+  const path = require(`@sherpa/data/paths/${topic}.json`) as Path
+  // eslint-disable-next-line @typescript-eslint/no-var-requires -- await import returns a js module instead of json, require works
+  const resources = require(
+    `@sherpa/data/resources/${topic}.json`,
+  ) as Resource[]
 
   return {
     props: {

@@ -1,5 +1,4 @@
 module.exports = {
-  transpilePackages: ['@sherpa/data'],
   pageExtensions: ['page.ts', 'page.tsx', 'page.mdx'],
   reactStrictMode: true,
   i18n: {

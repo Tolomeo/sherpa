@@ -1,5 +1,30 @@
-import type { SerializedPath, Path, PathTopic } from './types'
-import { validatePathTopic, validateSerializedPath } from './schema'
+import * as fs from 'node:fs'
+import * as path from 'node:path'
+import * as url from 'node:url'
+import type { SerializedPath, Path, PathTopic } from '../../src/types'
+import { validatePathTopic, validateSerializedPath } from './validate'
+
+const pathsDir = path.join(
+  path.dirname(url.fileURLToPath(import.meta.url)),
+  '../../src/paths',
+)
+
+export function listPaths() {
+  try {
+    const files = fs
+      .readdirSync(pathsDir)
+      .filter((file: string) => file.endsWith('.json'))
+
+    const fileNames = files.map((file: string) => {
+      return path.parse(file).name
+    })
+
+    return fileNames
+  } catch (error) {
+    console.error('Error reading path sources:', error)
+    throw error
+  }
+}
 
 const parseSerializedPath = (
   topicName: string,
@@ -48,11 +73,17 @@ const parseSerializedPath = (
 }
 
 export const readSerializedPath = (pathName: string) => {
-  const data = require(
-    `@sherpa/data/paths/json/${pathName}.json`,
-  ) as SerializedPath
+  const pathFile = path.join(pathsDir, `${pathName}.json`)
 
-  return data
+  try {
+    const serializedPath = JSON.parse(
+      fs.readFileSync(pathFile, { encoding: 'utf8' }),
+    ) as SerializedPath
+    return serializedPath
+  } catch (err) {
+    console.error(`Error reading ${pathFile}`)
+    throw err
+  }
 }
 
 export const readPath = (topicName: string) => {

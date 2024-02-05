@@ -1,4 +1,4 @@
-import type { Resource } from '@sherpa/data'
+import type { Resource } from '@sherpa/data/types'
 import {
   Link,
   Typography,

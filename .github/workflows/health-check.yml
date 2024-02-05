@@ -8,22 +8,22 @@ on:
 jobs:
   Health-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 90 # higher timeout because network requests can be slow in CI
+    timeout-minutes: 90
     steps:
+      - name: Setup Node 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Playwright
+        run: npx playwright install
       - name: Path resources healthcheck
-        uses: cypress-io/github-action@v6
+        run: npm run test:resources --workspace=@sherpa/data
         env:
-          CYPRESS_baseUrl: https://www.sherpa.guide
-          CYPRESS_retries: 0
-          CYPRESS_pageLoadTimeout: 60000
-          CYPRESS_requestTimeout: 30000
-          CYPRESS_ZENSCRAPE_API_KEY: ${{ secrets.ZENSCRAPE_API_KEY }}
-          CYPRESS_YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-        with:
-          build: npm run build:packages # cypress.config.ts depends on read utils from @sherpa/data package
-          project: apps/web
-          browser: chrome
-          spec: |
-            **/cypress/e2e/paths/health-check.cy.ts
+          ZENSCRAPE_API_KEY: ${{ secrets.ZENSCRAPE_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          UDEMY_AFFILIATE_API_CLIENT_ID: ${{ secrets.UDEMY_AFFILIATE_API_CLIENT_ID }}
+          UDEMY_AFFILIATE_API_CLIENT_SECRET: ${{ secrets.UDEMY_AFFILIATE_API_CLIENT_SECRET }}

@@ -43,3 +43,6 @@ cypress.env.json
 # Typescript
 tsconfig.tsbuildinfo
 types/
+
+# Crawlee request queues
+storage

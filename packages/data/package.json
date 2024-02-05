@@ -2,12 +2,11 @@
   "name": "@sherpa/data",
   "version": "0.4.0",
   "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
   "exports": {
     ".": "./dist/index.js",
-    "./*": {
-      "import": "./dist/*.js",
-      "require": "./dist/*"
-    }
+    "./*": "./dist/*"
   },
   "typesVersions": {
     "*": {
@@ -17,16 +16,30 @@
     }
   },
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "tsc",
-    "postbuild": "cpy \"src/**/*.json\" dist",
-    "lint": "eslint \"src\""
+    "prebuild": "shx rm -rf \"dist\"",
+    "build": "run-s build:ts build:json",
+    "build:ts": "tsc",
+    "build:json": "tsx \"./scripts/build.ts\" dist",
+    "dev": "run-p dev:ts dev:json",
+    "dev:ts": "nodemon --watch src --ext ts --on-change-only --exec \"npm run build:ts\"",
+    "dev:json": "nodemon --watch src --ext json --on-change-only --exec \"npm run build:json\"",
+    "lint": "eslint \"src\" \"scripts\"",
+    "test:paths": "vitest paths",
+		"test:resources": "vitest resources"
   },
   "devDependencies": {
     "@sherpa/configs": "*",
     "ajv": "^8.11.0",
     "ajv-errors": "^3.0.0",
-    "cpy-cli": "^5.0.0",
-    "rimraf": "^5.0.5"
+    "cheerio": "^1.0.0-rc.12",
+    "crawlee": "^3.7.2",
+    "dotenv": "^16.4.1",
+    "file-type": "^19.0.0",
+    "nodemon": "^3.0.3",
+    "npm-run-all2": "^6.1.1",
+    "playwright": "^1.41.1",
+    "shx": "^0.3.4",
+    "tsx": "^4.7.0",
+    "vitest": "^1.2.2"
   }
 }

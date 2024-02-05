@@ -1,10 +1,11 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Cypress",
   "compilerOptions": {
-    "moduleResolution": "node",
-    "lib": ["es5", "dom"],
-    "strict": true,
-    "target": "es5",
+		"module": "es2015",
+		"moduleResolution": "node",
+    "target": "es2015",
+    "lib": ["ES2015", "dom"],
     "types": ["cypress", "node"]
-  },
-  "include": ["**/*.ts"]
+  }
 }

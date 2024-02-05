@@ -1,5 +1,5 @@
-import type { Resource } from '@sherpa/data'
-import { ResourceType } from '@sherpa/data'
+import type { Resource } from '@sherpa/data/types'
+import { ResourceType } from '@sherpa/data/types'
 
 export const sortResources = (resources: Resource[]) =>
   [...resources].sort((resourceA, resourceB) => {
