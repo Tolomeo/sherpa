@@ -59,6 +59,8 @@ const getResourceHealthCheckStrategy = (
     case 'adobe.com':
     case 'deniskyashif.com':
     case 'reactbyexample.github.io':
+    case 'codelivly.com':
+    case 'cmdchallenge.com':
       return {
         runner: 'E2E',
         config: {
