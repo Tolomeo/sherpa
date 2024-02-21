@@ -451,7 +451,7 @@
     "type": "basics"
   },
   {
-    "title": "Scaling Docker",
+    "title": "Scaling Containers",
     "url": "https://betterstack.com/community/guides/scaling-docker/",
     "type": "advanced"
   },
