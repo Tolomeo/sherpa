@@ -62,11 +62,12 @@ const getResourceHealthCheckStrategy = (
     case 'codelivly.com':
     case 'cmdchallenge.com':
     case 'replit.com':
+    case 'bash.cyberciti.biz':
       return {
         runner: 'E2E',
         config: {
           titleSelector: 'title:not(:empty)',
-          waitForLoadState: 'domcontentloaded',
+          waitForLoadState: 'load',
         },
       }
 
@@ -93,7 +94,6 @@ const getResourceHealthCheckStrategy = (
         },
       }
 
-    case 'bash.cyberciti.biz':
     case 'git.herrbischoff.com':
     case 'codementor.io':
       return {
