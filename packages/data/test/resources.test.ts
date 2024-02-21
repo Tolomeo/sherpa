@@ -61,6 +61,7 @@ const getResourceHealthCheckStrategy = (
     case 'reactbyexample.github.io':
     case 'codelivly.com':
     case 'cmdchallenge.com':
+    case 'replit.com':
       return {
         runner: 'E2E',
         config: {
@@ -95,7 +96,6 @@ const getResourceHealthCheckStrategy = (
     case 'bash.cyberciti.biz':
     case 'git.herrbischoff.com':
     case 'codementor.io':
-    case 'replit.com':
       return {
         runner: 'Zenscrape',
         config: {

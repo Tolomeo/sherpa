@@ -17,9 +17,19 @@ import type {
   PlaywrightCrawlingContext,
 } from 'crawlee'
 import * as cheerio from 'cheerio'
+import { decode, encode } from 'he'
 import formatHTML from 'html-format'
 import { fileTypeFromBuffer } from 'file-type'
 import { Deferred, wait } from '../_utils/defer'
+
+const filterEntities = function decodeEntities(html: string) {
+  const entities: Record<string, string> = {
+    '&#xAD;': '',
+  }
+  const eEntities = new RegExp(Object.keys(entities).join('|'), 'g')
+
+  return decode(encode(html).replace(eEntities, (entity) => entities[entity]))
+}
 
 export { type Constructor, RequestQueue }
 
@@ -144,13 +154,18 @@ export class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCrawler> {
       userData: { titleSelector },
     } = request
 
-    const title = $(titleSelector).text()
+    const title = filterEntities($(titleSelector).text())
 
     if (title.trim() === '') {
+      const pageContent = $.html()
+
       this.failure(
         request,
-        new Error(`Could not retrieve title text from ${$.html()}`),
+        new Error(
+          `Could not retrieve title text from ${formatHTML(pageContent)}`,
+        ),
       )
+
       return
     }
 
