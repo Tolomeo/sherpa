@@ -25,7 +25,7 @@
     "dev:json": "nodemon --watch src --ext json --on-change-only --exec \"npm run build:json\"",
     "lint": "eslint \"src\" \"scripts\"",
     "test:paths": "vitest paths",
-		"test:resources": "vitest resources"
+    "test:resources": "vitest resources"
   },
   "devDependencies": {
     "@sherpa/configs": "*",
@@ -35,6 +35,7 @@
     "crawlee": "^3.7.2",
     "dotenv": "^16.4.1",
     "file-type": "^19.0.0",
+    "html-format": "^1.1.6",
     "nodemon": "^3.0.3",
     "npm-run-all2": "^6.1.1",
     "playwright": "^1.41.1",

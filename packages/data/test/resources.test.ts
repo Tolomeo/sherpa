@@ -39,7 +39,6 @@ const getResourceHealthCheckStrategy = (
     case 'freecodecamp.org':
     case 'thevaluable.dev':
     case 'usehooks-ts.com':
-    case 'developer.ibm.com':
     case 'davrous.com':
     case 'zzapper.co.uk':
     case 'launchschool.com':
@@ -58,9 +57,24 @@ const getResourceHealthCheckStrategy = (
     case 'webdesignmuseum.org':
     case 'pexels.com':
     case 'adobe.com':
+    case 'deniskyashif.com':
+    case 'reactbyexample.github.io':
       return {
         runner: 'E2E',
-        config: { titleSelector: 'title:not(:empty)' },
+        config: {
+          titleSelector: 'title:not(:empty)',
+          waitForLoadState: 'domcontentloaded',
+        },
+      }
+
+    // this loads a generic page, with valid title and then fetches more data updating content and title
+    case 'developer.ibm.com':
+      return {
+        runner: 'E2E',
+        config: {
+          titleSelector: 'title:not(empty)',
+          waitForLoadState: 'networkidle',
+        },
       }
 
     case 'reactdigest.net':
@@ -133,7 +147,7 @@ describe('Resources', () => {
     await healthCheck.teardown()
   })
 
-  // taking only first level paths
+  // HACK: taking only first level paths
   const paths = listPaths().filter((path) => path.split('.').length === 1)
 
   describe.each(paths)('%s resources', (path) => {

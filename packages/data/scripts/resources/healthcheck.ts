@@ -17,6 +17,7 @@ import type {
   PlaywrightCrawlingContext,
 } from 'crawlee'
 import * as cheerio from 'cheerio'
+import formatHTML from 'html-format'
 import { fileTypeFromBuffer } from 'file-type'
 import { Deferred, wait } from '../_utils/defer'
 
@@ -166,6 +167,8 @@ export class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCrawler> {
 
 export interface E2EHealthCheckRequestData {
   titleSelector: string
+  // https://playwright.dev/docs/api/class-page#page-wait-for-load-state
+  waitForLoadState: 'load' | 'domcontentloaded' | 'networkidle'
 }
 
 export class E2EHealthCheckRunner extends HealthCheckRunner<
@@ -188,16 +191,24 @@ export class E2EHealthCheckRunner extends HealthCheckRunner<
     request,
   }: PlaywrightCrawlingContext<E2EHealthCheckRequestData>) {
     const {
-      userData: { titleSelector },
+      userData: { titleSelector, waitForLoadState },
     } = request
 
+    await page.waitForLoadState(waitForLoadState)
     const title = await page.locator(titleSelector).first().textContent()
 
     if (!title) {
+      const pageContent = await page.content()
+
       this.failure(
         request,
-        new Error(`Could not retrieve title text from ${await page.content()}`),
+        new Error(
+          `Could not retrieve ${titleSelector} text from ${formatHTML(
+            pageContent,
+          )}`,
+        ),
       )
+
       return
     }
 
