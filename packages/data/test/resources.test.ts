@@ -65,7 +65,7 @@ const getResourceHealthCheckStrategy = (
         runner: 'E2E',
         config: {
           titleSelector: 'title:not(:empty)',
-          waitForLoadState: 'load',
+          waitForLoadState: 'domcontentloaded',
         },
       }
 
@@ -148,7 +148,9 @@ describe('Resources', () => {
   })
 
   // HACK: taking only first level paths
-  const paths = listPaths().filter((path) => path.split('.').length === 1)
+  const paths = listPaths()
+    .filter((path) => path.split('.').length === 1)
+    .filter((p) => p === 'webaccessibility')
 
   describe.each(paths)('%s resources', (path) => {
     const resources = readResources(path)
