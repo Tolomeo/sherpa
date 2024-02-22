@@ -48,7 +48,6 @@ const getResourceHealthCheckStrategy = (
     case 'animatedbackgrounds.me':
     case 'harrisoncramer.me':
     case 'tldp.org':
-    case 'gitexplorer.com':
     case 'ubuntu.com':
     case 'curlbuilder.com':
     case 'refrf.dev':
