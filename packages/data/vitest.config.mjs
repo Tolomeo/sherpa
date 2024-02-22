@@ -2,9 +2,12 @@ import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   test: {
-    reporters: ['verbose', 'tap'],
+    reporters: ['default', 'tap'],
     setupFiles: ['dotenv/config'],
     watch: false,
-		isolate: false
+    isolate: false,
+    chaiConfig: {
+      truncateThreshold: 120,
+    },
   },
 })

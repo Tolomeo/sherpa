@@ -5,7 +5,7 @@ import {
   HttpHealthCheckRunner,
   E2EHealthCheckRunner,
   ZenscrapeHealthCheckRunner,
-  YoutubeDataApiV3HealthCheckRunner,
+  YoutubeDataApiHealthCheckRunner,
   UdemyAffiliateApiHealthCheckRunner,
 } from './resources/healthcheck'
 import type {
@@ -20,7 +20,7 @@ type HealthCheckRunners =
   | HttpHealthCheckRunner
   | E2EHealthCheckRunner
   | ZenscrapeHealthCheckRunner
-  | YoutubeDataApiV3HealthCheckRunner
+  | YoutubeDataApiHealthCheckRunner
   | UdemyAffiliateApiHealthCheckRunner
 
 export type HealthCheckStrategy =
@@ -79,7 +79,7 @@ export class HealthCheck {
         runner = await this.getRunner(E2EHealthCheckRunner)
         return runner.run(url, strategy.config)
       case 'YoutubeData':
-        runner = await this.getRunner(YoutubeDataApiV3HealthCheckRunner)
+        runner = await this.getRunner(YoutubeDataApiHealthCheckRunner)
         return runner.run(url, {})
       case 'Zenscrape':
         runner = await this.getRunner(ZenscrapeHealthCheckRunner)

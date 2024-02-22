@@ -39,7 +39,6 @@ const getResourceHealthCheckStrategy = (
     case 'freecodecamp.org':
     case 'thevaluable.dev':
     case 'usehooks-ts.com':
-    case 'developer.ibm.com':
     case 'davrous.com':
     case 'zzapper.co.uk':
     case 'launchschool.com':
@@ -47,10 +46,8 @@ const getResourceHealthCheckStrategy = (
     case 'gameaccessibilityguidelines.com':
     case 'app.codecrafters.io':
     case 'animatedbackgrounds.me':
-    case 'conventionalcommits.org':
     case 'harrisoncramer.me':
     case 'tldp.org':
-    case 'gitexplorer.com':
     case 'ubuntu.com':
     case 'curlbuilder.com':
     case 'refrf.dev':
@@ -58,9 +55,28 @@ const getResourceHealthCheckStrategy = (
     case 'webdesignmuseum.org':
     case 'pexels.com':
     case 'adobe.com':
+    case 'deniskyashif.com':
+    case 'reactbyexample.github.io':
+    case 'codelivly.com':
+    case 'cmdchallenge.com':
+    case 'replit.com':
+    case 'bash.cyberciti.biz':
       return {
         runner: 'E2E',
-        config: { titleSelector: 'title:not(:empty)' },
+        config: {
+          titleSelector: 'title:not(:empty)',
+          waitForLoadState: 'domcontentloaded',
+        },
+      }
+
+    // this loads a generic page, with valid title and then fetches more data updating content and title
+    case 'developer.ibm.com':
+      return {
+        runner: 'E2E',
+        config: {
+          titleSelector: 'title:not(empty)',
+          waitForLoadState: 'networkidle',
+        },
       }
 
     case 'reactdigest.net':
@@ -76,10 +92,8 @@ const getResourceHealthCheckStrategy = (
         },
       }
 
-    case 'bash.cyberciti.biz':
     case 'git.herrbischoff.com':
     case 'codementor.io':
-    case 'replit.com':
       return {
         runner: 'Zenscrape',
         config: {
@@ -133,7 +147,7 @@ describe('Resources', () => {
     await healthCheck.teardown()
   })
 
-  // taking only first level paths
+  // HACK: taking only first level paths
   const paths = listPaths().filter((path) => path.split('.').length === 1)
 
   describe.each(paths)('%s resources', (path) => {
