@@ -46,7 +46,6 @@ const getResourceHealthCheckStrategy = (
     case 'gameaccessibilityguidelines.com':
     case 'app.codecrafters.io':
     case 'animatedbackgrounds.me':
-    case 'conventionalcommits.org':
     case 'harrisoncramer.me':
     case 'tldp.org':
     case 'gitexplorer.com':
