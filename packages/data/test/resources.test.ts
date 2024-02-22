@@ -148,9 +148,7 @@ describe('Resources', () => {
   })
 
   // HACK: taking only first level paths
-  const paths = listPaths()
-    .filter((path) => path.split('.').length === 1)
-    .filter((p) => p === 'webaccessibility')
+  const paths = listPaths().filter((path) => path.split('.').length === 1)
 
   describe.each(paths)('%s resources', (path) => {
     const resources = readResources(path)

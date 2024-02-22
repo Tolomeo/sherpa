@@ -5,6 +5,9 @@ export default defineConfig({
     reporters: ['default', 'tap'],
     setupFiles: ['dotenv/config'],
     watch: false,
-		isolate: false
+    isolate: false,
+    chaiConfig: {
+      truncateThreshold: 120,
+    },
   },
 })
