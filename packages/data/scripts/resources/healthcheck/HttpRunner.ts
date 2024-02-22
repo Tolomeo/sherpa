@@ -1,17 +1,6 @@
 import { CheerioCrawler } from 'crawlee'
 import type { CheerioCrawlerOptions, CheerioCrawlingContext } from 'crawlee'
-import { decode, encode } from 'he'
-import formatHTML from 'html-format'
 import HealthCheckRunner from './Runner'
-
-const filterEntities = function decodeEntities(html: string) {
-  const entities: Record<string, string> = {
-    '&#xAD;': '',
-  }
-  const eEntities = new RegExp(Object.keys(entities).join('|'), 'g')
-
-  return decode(encode(html).replace(eEntities, (entity) => entities[entity]))
-}
 
 export interface HttpHealthCheckRequestData {
   titleSelector: string
@@ -38,7 +27,7 @@ export default class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCraw
       userData: { titleSelector },
     } = request
 
-    const title = filterEntities($(titleSelector).text())
+    const title = $(titleSelector).text()
 
     if (title.trim() === '') {
       const pageContent = $.html()
@@ -46,14 +35,16 @@ export default class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCraw
       this.failure(
         request,
         new Error(
-          `Could not retrieve title text from ${formatHTML(pageContent)}`,
+          `Could not retrieve ${titleSelector} text from ${this.formatHTML(
+            pageContent,
+          )}`,
         ),
       )
 
       return
     }
 
-    this.success(request, { title })
+    this.success(request, { title: this.filterEntities(title) })
   }
 
   failedRequestHandler(

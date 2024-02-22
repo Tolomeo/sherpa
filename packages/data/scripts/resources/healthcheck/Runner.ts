@@ -6,8 +6,8 @@ import type {
   PlaywrightCrawler,
   BasicCrawler,
 } from 'crawlee'
-// import { decode, encode } from 'he'
-// import formatHTML from 'html-format'
+import { decode, encode } from 'he'
+import formatHTML from 'html-format'
 import { Deferred } from '../../_utils/defer'
 
 export { type Constructor, RequestQueue }
@@ -48,6 +48,19 @@ abstract class HealthCheckRunner<
       success: false,
       error,
     })
+  }
+
+  protected formatHTML(htmlString: string) {
+    return formatHTML(htmlString)
+  }
+
+  protected filterEntities(text: string) {
+    const entities: Record<string, string> = {
+      '&#xAD;': '',
+    }
+    const eEntities = new RegExp(Object.keys(entities).join('|'), 'g')
+
+    return decode(encode(text).replace(eEntities, (entity) => entities[entity]))
   }
 
   async teardown() {

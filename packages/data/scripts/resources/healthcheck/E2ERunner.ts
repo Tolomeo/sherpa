@@ -4,7 +4,6 @@ import type {
   PlaywrightCrawlerOptions,
   PlaywrightCrawlingContext,
 } from 'crawlee'
-import formatHTML from 'html-format'
 import HealthCheckRunner from './Runner'
 
 export interface E2EHealthCheckRequestData {
@@ -45,7 +44,7 @@ export default class E2EHealthCheckRunner extends HealthCheckRunner<
       this.failure(
         request,
         new Error(
-          `Could not retrieve ${titleSelector} text from ${formatHTML(
+          `Could not retrieve ${titleSelector} text from ${this.formatHTML(
             pageContent,
           )}`,
         ),
@@ -54,7 +53,7 @@ export default class E2EHealthCheckRunner extends HealthCheckRunner<
       return
     }
 
-    this.success(request, { title })
+    this.success(request, { title: this.filterEntities(title) })
   }
 
   failedRequestHandler(

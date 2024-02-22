@@ -1,6 +1,7 @@
 import { BasicCrawler } from 'crawlee'
 import type { BasicCrawlerOptions, BasicCrawlingContext } from 'crawlee'
 import * as cheerio from 'cheerio'
+import { wait } from '../../_utils/defer'
 import HealthCheckRunner from './Runner'
 
 export interface ZenscrapeHealthCheckRequestData {
@@ -67,17 +68,21 @@ export default class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicC
     }
 
     const $ = cheerio.load(body)
-    const title = $(titleSelector).text()
+    const title = $(titleSelector).text().trim()
 
-    if (title.trim() === '') {
+    if (!title) {
       this.failure(
         request,
-        new Error(`Could not retrieve title text from ${body}`),
+        new Error(
+          `Could not retrieve ${titleSelector} text from ${this.formatHTML(
+            body,
+          )}`,
+        ),
       )
       return
     }
 
-    this.success(request, { title })
+    this.success(request, { title: this.filterEntities(title) })
   }
 
   failedRequestHandler({ request }: BasicCrawlingContext, error: Error) {
