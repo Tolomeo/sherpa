@@ -1,5 +1,10 @@
 [
   {
+    "title": "Dotfyle",
+    "url": "https://dotfyle.com",
+    "type": "reference"
+  },
+  {
     "title": "Learn Vim For the Last Time",
     "url": "https://danielmiessler.com/study/vim",
     "type": "basics"
