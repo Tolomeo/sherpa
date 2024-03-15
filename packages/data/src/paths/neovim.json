@@ -16,7 +16,7 @@
   ],
   "next": ["lua"],
   "resources": [
-		"https://dotfyle.com",
+    "https://dotfyle.com",
     "https://ssp.sh/blog/why-using-neovim-data-engineer-and-writer-2023/",
     "http://www.vimgenius.com/lessons",
     "https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f",
