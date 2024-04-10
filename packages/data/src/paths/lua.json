@@ -14,7 +14,6 @@
   ],
   "children": ["lua.luarocks", "lua.openresty", "lua.lve"],
   "resources": [
-    "https://replit.com/talk/learn/Lua-Tutorial-All-the-Basics/126578",
     "https://opensource.com/downloads/learn-lua",
     "https://www.youtube.com/playlist?list=PLxgtJR7f0RBKGid7F2dfv7qc-xWwSee2O",
     "https://en.m.wikibooks.org/wiki/Lua_Programming",
