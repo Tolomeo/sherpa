@@ -173,7 +173,7 @@
   },
   {
     "title": "Overlay Fact Sheet",
-    "url": "https://overlayfactsheet.com",
+    "url": "https://overlayfactsheet.com/en/",
     "type": "curiosity"
   },
   {
@@ -262,7 +262,7 @@
     "type": "feed"
   },
   {
-    "title": "Sara Soueidan",
+    "title": "Blog",
     "url": "https://www.sarasoueidan.com/blog",
     "type": "feed"
   },
@@ -408,7 +408,7 @@
     "type": "basics"
   },
   {
-    "title": "A Definitive Guide On How To Do An Accessibility Audit",
+    "title": "How To Conduct A Web Accessibility Audit?",
     "url": "https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/",
     "type": "basics"
   },
