@@ -25,9 +25,11 @@
     "dev:json": "nodemon --watch src --ext json --on-change-only --exec \"npm run build:json\"",
     "lint": "eslint \"src\" \"scripts\"",
     "test:paths": "vitest paths",
-    "test:resources": "vitest resources"
+    "test:resources": "vitest resources",
+		"db:create": "tsx \"./scripts/dbcreate.ts\" db"
   },
   "devDependencies": {
+    "@seald-io/nedb": "^4.0.4",
     "@sherpa/configs": "*",
     "@types/he": "^1.2.3",
     "ajv": "^8.11.0",
