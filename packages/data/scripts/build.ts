@@ -1,7 +1,8 @@
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 import * as util from 'node:util'
-import { listPaths, readPath } from './paths/read'
+// import { listPaths, readPath } from './paths/read'
+// import pathsData from '../src/store/paths'
 import { listResources, readResources } from './resources/read'
 
 const {
@@ -17,18 +18,17 @@ if (!outDir) {
   process.exit(1)
 }
 
-const buildPaths = () => {
+/* const buildPaths = async () => {
   const pathsDest = `${outDir}/paths`
-  const pathsList = listPaths()
+  const topics = await pathsData.getAll()
 
   fs.mkdirSync(pathsDest, { recursive: true })
 
-  for (const pathName of pathsList) {
-    const pathDest = path.join(pathsDest, `${pathName}.json`)
-    const pathData = readPath(pathName)
-    fs.writeFileSync(pathDest, JSON.stringify(pathData))
+  for (const topic of topics) {
+    const pathDest = path.join(pathsDest, `${topic.topic}.json`)
+    fs.writeFileSync(pathDest, JSON.stringify(topic))
   }
-}
+} */
 
 const buildResources = async () => {
   const resourcesDest = `${outDir}/resources`
@@ -45,7 +45,7 @@ const buildResources = async () => {
 
 ;(async function main() {
   await buildResources()
-  buildPaths()
+  // await buildPaths()
 })().catch((err) => {
   console.error(err)
   process.exit(1)

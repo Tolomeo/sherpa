@@ -1,9 +1,9 @@
-/* eslint-disable no-await-in-loop */
+/* eslint-disable no-await-in-loop -- need it */
 import * as fs from 'node:fs'
 // import * as path from 'node:path'
 import * as util from 'node:util'
 import Db from '@seald-io/nedb'
-import { listPaths, readPath } from './paths/read'
+import { listPaths, readSerializedPath } from './paths/read'
 import { listResources, readResources } from './resources/read'
 
 const {
@@ -14,7 +14,7 @@ const {
 })
 
 const buildPathsDb = async () => {
-  const dbFile = `${outDir}/paths.db`
+  const dbFile = `${outDir}/paths/paths.db`
   const pathsList = listPaths()
 
   fs.writeFileSync(dbFile, '')
@@ -23,13 +23,16 @@ const buildPathsDb = async () => {
   await db.ensureIndexAsync({ fieldName: 'topic', unique: true })
 
   for (const pathName of pathsList) {
-    const pathData = readPath(pathName)
-    await db.insertAsync(pathData)
+    const pathData = readSerializedPath(pathName)
+    await db.insertAsync({
+      topic: pathName,
+      ...pathData,
+    })
   }
 }
 
 const buildResourcesDb = async () => {
-  const dbFile = `${outDir}/resources.db`
+  const dbFile = `${outDir}/resources/resources.db`
   const pathResourcesList = await listResources()
 
   fs.writeFileSync(dbFile, '')

@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 import type { ParsedUrlQuery } from 'querystring'
 import type {
   GetStaticPaths,
@@ -27,21 +28,27 @@ export const getStaticPaths: GetStaticPaths = () => {
   return { paths: staticPaths, fallback: false }
 }
 
-export const getStaticProps: GetStaticProps<StaticProps, Params> = ({
+export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
+  const { default: Path } = await import(`@sherpa/data/model/path`)
+  const { default: Resource } = await import(`@sherpa/data/model/resource`)
+
   const topic = params!.pathName as (typeof config.paths.topics)[number]
-  // eslint-disable-next-line @typescript-eslint/no-var-requires -- await import returns a js module instead of json, require works
-  const path = require(`@sherpa/data/paths/${topic}.json`) as Path
-  // eslint-disable-next-line @typescript-eslint/no-var-requires -- await import returns a js module instead of json, require works
-  const resources = require(
-    `@sherpa/data/resources/${topic}.json`,
-  ) as Resource[]
+  const path = new Path(topic)
+  const pathData = await path.get()
+  const pathResources = await path.getResources()
+  const resources = []
+
+  for (const pathResource of pathResources) {
+    const resource = new Resource(pathResource)
+    resources.push(await resource.get())
+  }
 
   return {
     props: {
       topic,
-      path,
+      path: pathData,
       resources,
     },
   }
