@@ -1,7 +1,0 @@
-{
-  "resources": [
-    "https://github.com/luarocks/luarocks/wiki/Documentation",
-    "https://milindsweb.amved.com/LuaRocks_.html",
-    "https://leafo.net/guides/customizing-the-luarocks-tree.html"
-  ]
-}
