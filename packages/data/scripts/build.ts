@@ -1,9 +1,9 @@
-import * as fs from 'node:fs'
-import * as path from 'node:path'
+// import * as fs from 'node:fs'
+// import * as path from 'node:path'
 import * as util from 'node:util'
 // import { listPaths, readPath } from './paths/read'
 // import pathsData from '../src/store/paths'
-import { listResources, readResources } from './resources/read'
+// import { listResources, readResources } from './resources/read'
 
 const {
   positionals: [outDir],
@@ -30,7 +30,7 @@ if (!outDir) {
   }
 } */
 
-const buildResources = async () => {
+/* const buildResources = async () => {
   const resourcesDest = `${outDir}/resources`
   const pathResourcesList = await listResources()
 
@@ -41,10 +41,10 @@ const buildResources = async () => {
     const resoucesData = readResources(pathResources)
     fs.writeFileSync(resourceDest, JSON.stringify(resoucesData))
   }
-}
+} */
 
 ;(async function main() {
-  await buildResources()
+  // await buildResources()
   // await buildPaths()
 })().catch((err) => {
   console.error(err)

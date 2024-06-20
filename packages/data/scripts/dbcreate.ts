@@ -14,7 +14,7 @@ const {
 })
 
 const buildPathsDb = async () => {
-  const dbFile = `${outDir}/paths/paths.db`
+  const dbFile = `${outDir}/store/path/store.db`
   const pathsList = listPaths()
 
   fs.writeFileSync(dbFile, '')
@@ -32,7 +32,7 @@ const buildPathsDb = async () => {
 }
 
 const buildResourcesDb = async () => {
-  const dbFile = `${outDir}/resources/resources.db`
+  const dbFile = `${outDir}/store/resource/store.db`
   const pathResourcesList = await listResources()
 
   fs.writeFileSync(dbFile, '')
