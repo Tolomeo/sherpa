@@ -38,10 +38,16 @@ class ResourcesStore {
     }
   }
 
-  async getOne(resourceUrl: string) {
+  async findOne(resourceUrl: string) {
     const doc = await this.db.findOneAsync({ url: resourceUrl })
 
     return this.populate(doc)
+  }
+
+  async findAll(query: Partial<Record<keyof SerializedResource, unknown>>) {
+    const docs = await this.db.findAsync(query)
+
+    return docs.map((d) => this.populate(d))
   }
 }
 

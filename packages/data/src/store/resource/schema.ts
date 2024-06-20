@@ -1,4 +1,5 @@
 export enum ResourceType {
+  competitor = 'competitor',
   basics = 'basics',
   advanced = 'advanced',
   'how-to' = 'how-to',

@@ -1,17 +1,17 @@
 {"$$indexCreated":{"fieldName":"url","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"url","unique":true}}
-{"title":"Your Career in Web Development Starts Here | The Odin Project","url":"https://www.theodinproject.com","type":"reference","source":"theodinproject.com","_id":"WBt0arfywQB5War7"}
-{"title":"Bento - Learn to code and be a self-taught expert developer","url":"https://bento.io","type":"reference","source":"bento.io","_id":"4pDx6WbwGX3wNHKm"}
-{"title":"Developer Roadmaps","url":"https://roadmap.sh","type":"reference","source":"roadmap.sh","_id":"zMotyKVnLfZAePgm"}
-{"title":"Learn to Code — For Free — Coding Courses for Busy People","url":"https://www.freecodecamp.org","type":"reference","source":"freecodecamp.org","_id":"kK9YXqVA8vp35B4u"}
-{"title":"Learn Anything","url":"https://learn-anything.xyz","type":"reference","source":"learn-anything.xyz","_id":"7lAoRPJDRAt23NOm"}
-{"title":"build-your-own-x: 🤓 Build your own (insert technology here)","url":"https://github.com/danistefanovic/build-your-own-x","type":"reference","source":"github.com/danistefanovic","_id":"Dxc8c4FiLfsf84rf"}
-{"title":"free-programming-books: Freely available programming books","url":"https://github.com/EbookFoundation/free-programming-books","type":"reference","source":"github.com/EbookFoundation","_id":"EQ40ubRFpmrcRCpD"}
-{"title":"project-based-learning: Curated list of project-based tutorials","url":"https://github.com/practical-tutorials/project-based-learning","type":"reference","source":"github.com/practical-tutorials","_id":"RzdLancfz27HrOuP"}
-{"title":"learn-to-program: Educational resources to learn to program (Foundation in Web Development)","url":"https://github.com/karlhorky/learn-to-program","type":"reference","source":"github.com/karlhorky","_id":"1X0mdSwbcsibEI76"}
-{"title":"Class Central • Find the best courses, wherever they exist.","url":"https://www.classcentral.com","type":"reference","source":"classcentral.com","_id":"QtQeSIAmzathpXNa"}
-{"title":"Find the best online Programming courses and Tutorials - Hackr.io","url":"https://hackr.io","type":"reference","source":"hackr.io","_id":"CdWsdnRUYKniCuP3"}
-{"title":"Best-websites-a-programmer-should-visit: Some useful websites for programmers.","url":"https://github.com/sdmg15/Best-websites-a-programmer-should-visit","type":"reference","source":"github.com/sdmg15","_id":"ftnwyq0oZ084n3tD"}
+{"title":"Your Career in Web Development Starts Here | The Odin Project","url":"https://www.theodinproject.com","type":"competitor","source":"theodinproject.com","_id":"WBt0arfywQB5War7"}
+{"title":"Bento - Learn to code and be a self-taught expert developer","url":"https://bento.io","type":"competitor","source":"bento.io","_id":"4pDx6WbwGX3wNHKm"}
+{"title":"Developer Roadmaps","url":"https://roadmap.sh","type":"competitor","source":"roadmap.sh","_id":"zMotyKVnLfZAePgm"}
+{"title":"Learn to Code — For Free — Coding Courses for Busy People","url":"https://www.freecodecamp.org","type":"competitor","source":"freecodecamp.org","_id":"kK9YXqVA8vp35B4u"}
+{"title":"Learn Anything","url":"https://learn-anything.xyz","type":"competitor","source":"learn-anything.xyz","_id":"7lAoRPJDRAt23NOm"}
+{"title":"build-your-own-x: 🤓 Build your own (insert technology here)","url":"https://github.com/danistefanovic/build-your-own-x","type":"competitor","source":"github.com/danistefanovic","_id":"Dxc8c4FiLfsf84rf"}
+{"title":"free-programming-books: Freely available programming books","url":"https://github.com/EbookFoundation/free-programming-books","type":"competitor","source":"github.com/EbookFoundation","_id":"EQ40ubRFpmrcRCpD"}
+{"title":"project-based-learning: Curated list of project-based tutorials","url":"https://github.com/practical-tutorials/project-based-learning","type":"competitor","source":"github.com/practical-tutorials","_id":"RzdLancfz27HrOuP"}
+{"title":"learn-to-program: Educational resources to learn to program (Foundation in Web Development)","url":"https://github.com/karlhorky/learn-to-program","type":"competitor","source":"github.com/karlhorky","_id":"1X0mdSwbcsibEI76"}
+{"title":"Class Central • Find the best courses, wherever they exist.","url":"https://www.classcentral.com","type":"competitor","source":"classcentral.com","_id":"QtQeSIAmzathpXNa"}
+{"title":"Find the best online Programming courses and Tutorials - Hackr.io","url":"https://hackr.io","type":"competitor","source":"hackr.io","_id":"CdWsdnRUYKniCuP3"}
+{"title":"Best-websites-a-programmer-should-visit: Some useful websites for programmers.","url":"https://github.com/sdmg15/Best-websites-a-programmer-should-visit","type":"competitor","source":"github.com/sdmg15","_id":"ftnwyq0oZ084n3tD"}
 {"title":"Learn tmux","url":"https://thoughtbot.com/upcase/tmux","type":"basics","source":"thoughtbot.com","_id":"h1METGldYXStNoax"}
 {"title":"A Guide to the Terminal, Console, and Shell","url":"https://thevaluable.dev/guide-terminal-shell-console/","type":"curiosity","source":"thevaluable.dev","_id":"MiiQdmvgRXvG8tXz"}
 {"title":"Introduction to the Command Line","url":"https://launchschool.com/books/command_line","type":"basics","source":"launchschool.com","_id":"JQ9ttPVPY6d74VZH"}

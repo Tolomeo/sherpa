@@ -1,10 +1,12 @@
+/* eslint-disable no-await-in-loop */
 import type {
   GetStaticProps,
   GetStaticPropsContext,
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import type { Resource } from '@sherpa/data/types'
+import { getAllByType } from '@sherpa/data/model/resource'
+import type { Resource } from '@sherpa/data/store/resource/schema'
 import {
   LayoutProvider,
   LayoutHeader,
@@ -21,12 +23,14 @@ interface StaticProps {
   alternateSources: Resource[]
 }
 
-export const getStaticProps: GetStaticProps<StaticProps> = (
+export const getStaticProps: GetStaticProps<StaticProps> = async (
   _: GetStaticPropsContext,
 ) => {
-  const alternateSources =
-    // eslint-disable-next-line @typescript-eslint/no-var-requires -- await import returns a js module instead of json, require works
-    require('@sherpa/data/resources/alternatives.json') as Resource[]
+  const competitors = await getAllByType('competitor')
+  const alternateSources = []
+  for (const competitor of competitors) {
+    alternateSources.push(await competitor.get())
+  }
 
   return {
     props: {
