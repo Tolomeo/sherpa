@@ -17,12 +17,10 @@
   },
   "scripts": {
     "prebuild": "shx rm -rf \"dist\"",
-    "build": "run-s build:ts build:db",
+    "build": "run-s build:db build:ts",
     "build:ts": "tsc",
     "build:db": "tsx \"./scripts/copy-db.ts\" src dist",
-    "dev": "run-p dev:ts dev:db",
-    "dev:ts": "nodemon --watch src --ext ts --on-change-only --exec \"npm run build:ts\"",
-    "dev:db": "nodemon --watch src --ext db --on-change-only --exec \"npm run build:db\"",
+    "dev": "nodemon --watch src --ext ts,db --on-change-only --exec \"npm run build --ignore-scripts\"",
     "lint": "eslint \"src\" \"scripts\"",
     "test:paths": "vitest paths",
     "test:resources": "vitest resources"
