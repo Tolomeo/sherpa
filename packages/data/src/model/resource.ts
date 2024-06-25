@@ -18,10 +18,19 @@ class Resource {
     this.data = data
   }
 
+  public async exists() {
+    return Boolean(await this.get())
+  }
+
   public async get() {
     if (this.data) return this.data
 
-    this.data = await ResourcesStore.findOne(this.url)
+    const resourceData = await ResourcesStore.findOne(this.url)
+
+    if (resourceData) {
+      const { _id, ...data } = resourceData
+      this.data = data
+    }
 
     return this.data
   }

@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition -- somehow nedb types don't take in account non found docs */
 import * as path from 'node:path'
 import * as url from 'node:url'
-import Db from '@seald-io/nedb'
+import Db, { Document } from '@seald-io/nedb'
 import type { Resource, SerializedResource } from './schema'
 
 const dbFile = path.join(
@@ -18,7 +19,9 @@ class ResourcesStore {
     })
   }
 
-  private populate(serializedResource: SerializedResource): Resource {
+  private populate(
+    serializedResource: Document<SerializedResource>,
+  ): Document<Resource> {
     return {
       ...serializedResource,
       source: (() => {
@@ -40,6 +43,8 @@ class ResourcesStore {
 
   async findOne(resourceUrl: string) {
     const doc = await this.db.findOneAsync({ url: resourceUrl })
+
+    if (!doc) return null
 
     return this.populate(doc)
   }

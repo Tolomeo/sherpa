@@ -9,5 +9,6 @@ module.exports = {
   ignorePatterns: ['dist/**'],
   rules: {
     'no-console': 'off',
+    'no-await-in-loop': 'off',
   },
 }

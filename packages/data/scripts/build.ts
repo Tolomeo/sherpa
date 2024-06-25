@@ -14,7 +14,7 @@ const {
 
 if (!outDir) {
   console.error('An output directory must be specified')
-  console.error('For example: tsx scripts/build.ts dist')
+  console.error('For example: tsx scripts/build.ts dist\n')
   process.exit(1)
 }
 
