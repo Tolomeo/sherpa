@@ -4,7 +4,7 @@ import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import Container from '@mui/material/Container'
-import Logo from '../../Logo'
+import Logo from '../../logo'
 import ThemeModeToggle from './ThemeModeToggle'
 import GitHubLink from './GitHubLink'
 

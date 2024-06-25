@@ -1,7 +1,7 @@
-import LayoutHeader from './Header'
-import LayoutContainer from './Container'
-import LayoutHero from './Hero'
-import LayoutDrawer, { LayoutDrawerToggle } from './Drawer'
+import LayoutHeader from './header'
+import LayoutContainer from './container'
+import LayoutHero from './hero'
+import LayoutDrawer, { LayoutDrawerToggle } from './drawer'
 import { useLayoutContext } from './Context'
 
 export {

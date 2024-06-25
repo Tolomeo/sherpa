@@ -32,7 +32,7 @@ export { default as Chip } from '@mui/material/Chip'
 export { default as Stack } from '@mui/material/Stack'
 export { default as Checkbox } from '@mui/material/Checkbox'
 export { default as Underline } from './Underline'
-export { default as SvgImage } from './SvgImage'
+export { default as SvgImage } from './svg-image'
 export {
   default as LayoutProvider,
   LayoutHeader,
@@ -41,4 +41,4 @@ export {
   LayoutDrawer,
   LayoutDrawerToggle,
   useLayoutContext,
-} from './Layout'
+} from './layout'

@@ -2,7 +2,7 @@ import { styled, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Stack from '@mui/material/Stack'
-import Container from '../Container'
+import Container from '../container'
 import Graphics from './Graphics'
 
 interface Props {
