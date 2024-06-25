@@ -22,36 +22,44 @@ import Resource from '../../src/model/resource'
   )
   process.exit(1)
 } */
-const input = (question: string): Promise<string> => {
+type Nullable<T> = T | null
+
+const input = (question: string): Promise<Nullable<string>> => {
+  const describedQuestion = `\n${question}\n[:q] exit\n> `
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
   })
 
   return new Promise((resolve) => {
-    rl.question(`${question}\n`, (answer) => {
+    rl.question(describedQuestion, (answer) => {
       rl.close()
-      resolve(answer)
+
+      if (answer.trim() === ':q') resolve(null)
+      else resolve(answer)
     })
   })
 }
 
-const select = async <T extends string>(
+const choice = async <T extends string>(
   question: string,
   options: T[],
-): Promise<T> => {
+): Promise<Nullable<T>> => {
   const describedQuestion = `${question}\n${options
     .map((option, idx) => `[${idx + 1}] ${option}`)
-    .join('\n')}\n`
+    .join('\n')}`
 
   let optionAnswer: T | undefined
 
   while (!optionAnswer) {
     const answer = await input(describedQuestion)
+
+    if (answer === null) return null
+
     const answerIndex = parseInt(answer, 10)
 
     if (isNaN(answerIndex) || !options[answerIndex - 1]) {
-      console.log('\nInvalid choice\n')
+      console.log('\nInvalid choice')
       continue
     }
 
@@ -65,12 +73,15 @@ const getResource = async () => {
   let resource: Resource | undefined
 
   while (!resource) {
-    const url = await input(`Resource url`)
+    const url = await input(`Enter resource url`)
+
+    if (url === null) return null
+
     const urlResource = new Resource(url)
     const urlResourceExists = await urlResource.exists()
 
     if (!urlResourceExists) {
-      console.log(`\nResource "${url}" not found\n`)
+      console.log(`\nResource "${url}" not found`)
       continue
     }
 
@@ -88,24 +99,29 @@ const update = async (resource: Resource) => {
   let updating = true
 
   while (updating) {
-    console.log(`\n${JSON.stringify(resourceData, null, 2)}\n`)
+    console.log(`\n${JSON.stringify(resourceData, null, 2)}`)
 
-    const action = await select('Actions', ['open-url', 'exit'])
+    const action = await choice('Choose action', ['open'])
 
     switch (action) {
-      case 'open-url':
+      case 'open':
         await open(resource.url)
         break
-      case 'exit':
+      case null:
         updating = false
     }
   }
 }
 
 ;(async function main() {
-  const resource = await getResource()
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, no-constant-condition -- the user needs to break out explicitly
+  while (true) {
+    const resource = await getResource()
 
-  await update(resource)
+    if (resource === null) break
+
+    await update(resource)
+  }
 })().catch((err) => {
   console.error(err)
   process.exit(1)
