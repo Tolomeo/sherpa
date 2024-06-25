@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 import type { Path, Resource } from '@sherpa/data/types'
 import { LayoutProvider } from '../theme'
 import Provider from './Provider'
-import Header from './Header'
-import Footer from './Footer'
-import Content from './Content'
+import Header from './header'
+import Footer from './footer'
+import Content from './content'
 import { useResourcesCompletionStore } from './utils'
 
 interface Props {
