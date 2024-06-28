@@ -1,3 +1,5 @@
+/* eslint-disable no-constant-condition */
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 // import * as fs from 'node:fs'
 // import * as path from 'node:path'
 // import * as util from 'node:util'
@@ -25,7 +27,7 @@ import Resource from '../../src/model/resource'
 type Nullable<T> = T | null
 
 const input = (question: string): Promise<Nullable<string>> => {
-  const describedQuestion = `\n${question}\n[:q] exit\n> `
+  const describedQuestion = `\n${question}\n[q] cancel\n> `
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
@@ -35,7 +37,7 @@ const input = (question: string): Promise<Nullable<string>> => {
     rl.question(describedQuestion, (answer) => {
       rl.close()
 
-      if (answer.trim() === ':q') resolve(null)
+      if (answer.trim() === 'q') resolve(null)
       else resolve(answer)
     })
   })
@@ -69,6 +71,20 @@ const choice = async <T extends string>(
   return optionAnswer
 }
 
+const confirm = async (question: string): Promise<Nullable<boolean>> => {
+  const confirmOptionsMap: Record<string, boolean> = {
+    yes: true,
+    no: false,
+  }
+  const confirmOptions = Object.keys(confirmOptionsMap)
+
+  const optionAnswer = await choice(question, confirmOptions)
+
+  if (optionAnswer === null) return null
+
+  return confirmOptionsMap[optionAnswer]
+}
+
 const getResource = async () => {
   let resource: Resource | undefined
 
@@ -91,6 +107,28 @@ const getResource = async () => {
   return resource
 }
 
+const updateResource = async (resource: Resource) => {
+  const resourceData = await resource.get()
+
+  if (!resourceData) return
+
+  const resourceUpdate = { ...resourceData }
+
+  for (const [key, value] of Object.entries(resourceData)) {
+    const valueUpdate = await input(`${key}(${value})`)
+
+    if (!valueUpdate) continue
+
+    resourceUpdate[key] = valueUpdate
+  }
+
+  const persist = await confirm(
+    `Persist changes?\n${JSON.stringify(resourceUpdate, null, 2)}`,
+  )
+
+  console.log(persist)
+}
+
 const update = async (resource: Resource) => {
   const resourceData = await resource.get()
 
@@ -101,11 +139,14 @@ const update = async (resource: Resource) => {
   while (updating) {
     console.log(`\n${JSON.stringify(resourceData, null, 2)}`)
 
-    const action = await choice('Choose action', ['open'])
+    const action = await choice('Choose action', ['open', 'update'])
 
     switch (action) {
       case 'open':
         await open(resource.url)
+        break
+      case 'update':
+        await updateResource(resource)
         break
       case null:
         updating = false
@@ -114,7 +155,6 @@ const update = async (resource: Resource) => {
 }
 
 ;(async function main() {
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, no-constant-condition -- the user needs to break out explicitly
   while (true) {
     const resource = await getResource()
 
