@@ -30,9 +30,6 @@ class ResourceModel {
 
     if (data) this.data = data
 
-    console.log('Data read')
-    console.log(data)
-
     return this.data
   }
 
