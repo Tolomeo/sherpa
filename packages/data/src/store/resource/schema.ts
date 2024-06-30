@@ -1,3 +1,5 @@
+import { z } from 'zod'
+
 export enum ResourceType {
   competitor = 'competitor',
   basics = 'basics',
@@ -9,16 +11,17 @@ export enum ResourceType {
   feed = 'feed',
 }
 
-export interface SerializedResource {
-  title: string
-  url: string
-  source?: string
-  type: ResourceType
-}
+export const SerializedResourceSchema = z.object({
+  title: z.string(),
+  url: z.string().url(),
+  source: z.string().optional(),
+  type: z.nativeEnum(ResourceType),
+})
 
-export interface Resource {
-  title: string
-  url: string
-  source: string
-  type: ResourceType
-}
+export type SerializedResource = z.infer<typeof SerializedResourceSchema>
+
+export const ResourceSchema = SerializedResourceSchema.extend({
+  source: z.string(),
+})
+
+export type Resource = z.infer<typeof ResourceSchema>

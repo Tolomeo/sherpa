@@ -1,4 +1,3 @@
-/* eslint-disable no-await-in-loop */
 import PathsStore from '../store/path'
 
 class Path {

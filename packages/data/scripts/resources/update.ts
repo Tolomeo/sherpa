@@ -126,17 +126,22 @@ const updateResource = async (resource: Resource) => {
     `Persist changes?\n${JSON.stringify(resourceUpdate, null, 2)}`,
   )
 
-  console.log(persist)
+  if (!persist) return
+
+  try {
+    await resource.change(resourceUpdate)
+  } catch (error) {
+    console.error(`\nResource update failed.\n`)
+    console.error(error)
+  }
 }
 
 const update = async (resource: Resource) => {
-  const resourceData = await resource.get()
+  while (true) {
+    const resourceData = await resource.get()
 
-  if (!resourceData) return
+    if (!resourceData) return
 
-  let updating = true
-
-  while (updating) {
     console.log(`\n${JSON.stringify(resourceData, null, 2)}`)
 
     const action = await choice('Choose action', ['open', 'update'])
@@ -149,7 +154,7 @@ const update = async (resource: Resource) => {
         await updateResource(resource)
         break
       case null:
-        updating = false
+        return
     }
   }
 }
