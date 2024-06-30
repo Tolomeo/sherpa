@@ -48,9 +48,6 @@ class ResourceModel {
       ...update,
     })
 
-    console.log('Data update')
-    console.log(this.data)
-
     return this.data
   }
 
