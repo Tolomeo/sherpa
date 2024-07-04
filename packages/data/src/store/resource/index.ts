@@ -87,7 +87,9 @@ class ResourcesStore {
     }
   }
 
-  async findAll(query: Partial<Record<keyof SerializedResource, unknown>>) {
+  async findAll(
+    query: Partial<Record<keyof SerializedResource, unknown>> = {},
+  ) {
     const docs: Document<SerializedResource>[] = await this.db.findAsync(query)
 
     return docs.map((d) => this.populate(d))

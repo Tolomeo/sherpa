@@ -12,9 +12,9 @@ export enum ResourceType {
 }
 
 export const SerializedResourceSchema = z.object({
-  title: z.string(),
+  title: z.string().min(2),
   url: z.string().url(),
-  source: z.string().optional(),
+  source: z.string().min(2).optional(),
   type: z.nativeEnum(ResourceType),
 })
 

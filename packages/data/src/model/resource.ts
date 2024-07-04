@@ -6,10 +6,16 @@ type Maybe<T> = T | undefined
 // type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
 
 // type ResourceData = PartialBy<ResourceDocument, '_id'>
+export const getAll = async () => {
+  const docs = await ResourcesStore.findAll()
+  const resources = docs.map((d) => new ResourceModel(d))
+
+  return resources
+}
 
 export const getAllByType = async (type: string) => {
   const docs = await ResourcesStore.findAll({ type })
-  const resources = docs.map((r) => new ResourceModel(r.url))
+  const resources = docs.map((d) => new ResourceModel(d))
 
   return resources
 }
@@ -19,8 +25,13 @@ class ResourceModel {
 
   private data: Maybe<ResourceDocument>
 
-  constructor(url: string) {
-    this.url = url
+  constructor(resource: string | ResourceDocument) {
+    if (typeof resource === 'string') {
+      this.url = resource
+    } else {
+      this.url = resource.url
+      this.data = resource
+    }
   }
 
   private async read() {

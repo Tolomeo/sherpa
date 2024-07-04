@@ -1,4 +1,12 @@
-import type { Resource } from '../resource/schema'
+/* eslint-disable prefer-regex-literals -- TODO: fix */
+import { z } from 'zod'
+import { ResourceSchema } from '../resource/schema'
+
+type RequiredNullable<T> = {
+  [K in keyof T]-?: undefined extends T[K]
+    ? Exclude<T[K], undefined> | null
+    : T[K]
+}
 
 export enum PathTopic {
   'commandline.cliapps' = 'commandline.cliapps',
@@ -56,33 +64,49 @@ export enum PathTopic {
   'webaccessibility.testing' = 'webaccessibility.testing',
 }
 
-export interface PathHero {
-  foreground: string
-  background: string[]
-}
+export const SerializedPathSchema = z.object({
+  topic: z.string(),
+  logo: z.string().regex(new RegExp('^<svg.+/svg>$')).optional(),
+  hero: z
+    .object({
+      foreground: z
+        .string()
+        .regex(new RegExp('^#([a-fa-f0-9]{6}|[a-fa-f0-9]{3})$')),
+      background: z.array(
+        z.string().regex(new RegExp('^#([a-fa-f0-9]{6}|[a-fa-f0-9]{3})$')),
+      ),
+    })
+    .optional(),
+  notes: z.array(z.string()).optional(),
+  resources: z.array(ResourceSchema.shape.url).optional(),
+  main: z.array(ResourceSchema.shape.url).optional(),
+  next: z.array(z.string()).optional(),
+  prev: z.array(z.string()).optional(),
+  children: z.array(z.string()).optional(),
+})
 
-export type PathNotes = string[]
+export type SerializedPath = z.infer<typeof SerializedPathSchema>
 
-export interface SerializedPath {
-  topic: string
-  logo?: string
-  hero?: PathHero
-  notes?: PathNotes
-  resources?: string[]
-  main?: string[]
-  children?: string[]
-  next?: PathTopic[]
-  prev?: PathTopic[]
-}
-
-export interface Path {
-  topic: PathTopic
-  logo: string | null
-  hero: PathHero | null
-  notes: PathNotes | null
-  resources: Resource['url'][] | null
-  main: Resource['url'][] | null
+export type Path = RequiredNullable<Omit<SerializedPath, 'children'>> & {
   children: Path[] | null
-  next: PathTopic[] | null
-  prev: PathTopic[] | null
 }
+
+export const PathSchema: z.ZodType<Path> = SerializedPathSchema.extend({
+  logo: z.string().regex(new RegExp('^<svg.+/svg>$')).nullable(),
+  hero: z
+    .object({
+      foreground: z
+        .string()
+        .regex(new RegExp('^#([a-fa-f0-9]{6}|[a-fa-f0-9]{3})$')),
+      background: z.array(
+        z.string().regex(new RegExp('^#([a-fa-f0-9]{6}|[a-fa-f0-9]{3})$')),
+      ),
+    })
+    .nullable(),
+  notes: z.array(z.string()).nullable(),
+  resources: z.array(ResourceSchema.shape.url).nullable(),
+  main: z.array(ResourceSchema.shape.url).nullable(),
+  next: z.array(z.string()).nullable(),
+  prev: z.array(z.string()).nullable(),
+  children: z.array(z.lazy(() => PathSchema)).nullable(),
+})

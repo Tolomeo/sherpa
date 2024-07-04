@@ -2,7 +2,13 @@
 import * as path from 'node:path'
 import * as url from 'node:url'
 import Db, { type Document } from '@seald-io/nedb'
-import type { SerializedPath, Path, PathTopic } from './schema'
+import {
+  type SerializedPath,
+  type Path,
+  type PathTopic,
+  PathSchema,
+  SerializedPathSchema,
+} from './schema'
 
 const dbFile = path.join(
   path.dirname(url.fileURLToPath(import.meta.url)),
@@ -50,14 +56,14 @@ class PathsStore {
       children: await (async () => {
         if (!children) return null
 
-        const childrenPaths: Path[] = []
+        const childPaths: Path[] = []
 
         for (const childTopic of children) {
           const child = await this.findOneByTopic(childTopic)
-          if (child) childrenPaths.push()
+          if (child) childPaths.push(child)
         }
 
-        return childrenPaths
+        return childPaths
       })(),
       prev,
       next,
@@ -73,6 +79,19 @@ class PathsStore {
     }
 
     return paths
+  }
+
+  async insertOne(newPath: SerializedPath) {
+    const newPathValidation = SerializedPathSchema.safeParse(newPath)
+
+    if (!newPathValidation.success) {
+      throw newPathValidation.error
+    }
+
+    const doc = await this.db.insertAsync(newPath)
+    await this.db.compactDatafileAsync()
+
+    return doc
   }
 
   async findOneByTopic(topic: string) {

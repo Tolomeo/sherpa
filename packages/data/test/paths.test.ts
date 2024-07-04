@@ -1,9 +1,12 @@
 import { describe, test, expect } from 'vitest'
-import { listPaths, readPaths } from '../scripts/paths/read'
-import { readResources } from '../scripts/resources/read'
-import type { Path } from '../dist'
+// import { listPaths, readPaths } from '../scripts/paths/read'
+// import { readResources } from '../scripts/resources/read'
+import { getRootPaths } from '../dist/model/path'
+import { getAll } from '../dist/model/resource'
+// import { } from '../dist/model'
+// import type { Path } from '../dist'
 
-const flattenPathResources = (path: Path) => {
+/* const flattenPathResources = (path: Path) => {
   const pathResources: string[] = []
 
   const { main, resources, children } = path
@@ -20,12 +23,39 @@ const flattenPathResources = (path: Path) => {
   })
 
   return pathResources
-}
+} */
 
-describe('Paths', () => {
-  const paths = readPaths(listPaths())
+describe('Paths', async () => {
+  const rootPaths = await getRootPaths()
 
-  describe.each(paths)('$topic path', (path) => {
+  test('Use all available resources', async () => {
+    const allResources = await getAll()
+    const allResourceUrls = new Set<string>(allResources.map(({ url }) => url))
+
+    const allUniquePathResourceUrls = new Set<string>()
+    for (const rootPath of rootPaths) {
+      const pathResources = await rootPath.getResources()
+      for (const pathResource of pathResources) {
+        allUniquePathResourceUrls.add(pathResource)
+      }
+    }
+
+    const allUniquePathResourceUrlsArray = [...allUniquePathResourceUrls].sort()
+    const allResourceUrlsArray = [...allResourceUrls].sort()
+    expect(allUniquePathResourceUrlsArray).toEqual(allResourceUrlsArray)
+  })
+
+  describe.each(rootPaths)('$topic', (path) => {
+    test('Lists unique resources', async () => {
+      const pathResources = await path.getResources()
+      const uniqueResources = [...new Set(pathResources)]
+
+      expect(pathResources).toEqual(uniqueResources)
+    })
+  })
+  // const paths = readPaths(listPaths())
+
+  /* describe.each(paths)('$topic path', (path) => {
     test('Lists unique resources', () => {
       const { main, resources } = path
       if (main && resources) {
@@ -49,5 +79,5 @@ describe('Paths', () => {
         expect(pathResources).toHaveLength(pathSerializedResources.length)
       },
     )
-  })
+  }) */
 })
