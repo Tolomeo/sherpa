@@ -1,9 +1,7 @@
 import { describe, test, expect, beforeAll, afterAll } from 'vitest'
-import { listPaths } from '../scripts/paths/read'
-import { readResources } from '../scripts/resources/read'
-import type { Resource } from '../src'
-import type { HealthCheckStrategy } from '../scripts/healthcheck'
-import { HealthCheck } from '../scripts/healthcheck'
+import { getAll } from '../dist/model/resource'
+import { type Resource } from '../dist/store/resource/schema'
+import { HealthCheck, type HealthCheckStrategy } from '../scripts/healthcheck'
 
 const getResourceHealthCheckStrategy = (
   resource: Resource,
@@ -147,24 +145,24 @@ describe('Resources', () => {
     await healthCheck.teardown()
   })
 
-  // HACK: taking only first level paths
-  const paths = listPaths().filter((path) => path.split('.').length === 1)
-
-  describe.each(paths)('%s resources', (path) => {
-    const resources = readResources(path)
+  describe('Healthcheck', async () => {
+    const resources = await getAll()
 
     test.each(resources)(
       '$url',
       async (resource) => {
+        const resourceData = (await resource.get()) as Resource
         const resourceHealthCheck = await healthCheck.run(
           resource.url,
-          getResourceHealthCheckStrategy(resource),
+          getResourceHealthCheckStrategy(resourceData),
         )
 
         expect(resourceHealthCheck).toMatchObject({
           url: resource.url,
           success: true,
-          data: { title: expect.stringContaining(resource.title) as string },
+          data: {
+            title: expect.stringContaining(resourceData.title) as string,
+          },
         })
       },
       150_000,
