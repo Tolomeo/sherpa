@@ -6,7 +6,7 @@ import {
   type SerializedPath,
   type Path,
   type PathTopic,
-  PathSchema,
+  // PathSchema,
   SerializedPathSchema,
 } from './schema'
 

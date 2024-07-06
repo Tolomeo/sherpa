@@ -5,7 +5,8 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { getAllByType } from '@sherpa/data/model/resource'
+import { getTopic } from '@sherpa/data/model/path'
+import ResourceModel from '@sherpa/data/model/resource'
 import type { Resource } from '@sherpa/data/store/resource/schema'
 import {
   LayoutProvider,
@@ -26,15 +27,25 @@ interface StaticProps {
 export const getStaticProps: GetStaticProps<StaticProps> = async (
   _: GetStaticPropsContext,
 ) => {
-  const competitors = await getAllByType('competitor')
-  const alternateSources = []
-  for (const competitor of competitors) {
-    alternateSources.push(await competitor.get())
+  const competitors = await getTopic('competitors')
+
+  if (!competitors) throw new Error('No competitors topic found')
+
+  const competitorUrls = await competitors.getResources()
+
+  const competitorResources = []
+  for (const competitorUrl of competitorUrls) {
+    const competitorResource = new ResourceModel(competitorUrl)
+    const competitorResourceData = await competitorResource.get()
+
+    if (!competitorResourceData) continue
+
+    competitorResources.push(competitorResourceData)
   }
 
   return {
     props: {
-      alternateSources,
+      alternateSources: competitorResources,
     },
   }
 }

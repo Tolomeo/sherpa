@@ -9,6 +9,7 @@ type RequiredNullable<T> = {
 }
 
 export enum PathTopic {
+  competitors = 'competitors',
   'commandline.cliapps' = 'commandline.cliapps',
   'commandline.dotfiles' = 'commandline.dotfiles',
   'commandline.fish' = 'commandline.fish',

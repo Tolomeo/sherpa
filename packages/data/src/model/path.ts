@@ -2,6 +2,14 @@ import PathsStore, { type PathDocument } from '../store/path'
 
 type Maybe<T> = T | undefined
 
+export const getTopic = async (topic: string) => {
+  const doc = await PathsStore.findOneByTopic(topic)
+
+  if (!doc) return null
+
+  return new PathModel(doc)
+}
+
 export const getRootPaths = async () => {
   const docs = await PathsStore.findAllByTopic(/^[^.]+$/)
   const paths = docs.map((p) => new PathModel(p))
