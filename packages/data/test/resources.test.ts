@@ -1,5 +1,6 @@
 import { describe, test, expect, beforeAll, afterAll } from 'vitest'
-import { getAll } from '../dist/model/resource'
+import { getRootPaths } from '../dist/model/path'
+import ResourceModel from '../dist/model/resource'
 import { type Resource } from '../dist/store/resource/schema'
 import { HealthCheck, type HealthCheckStrategy } from '../scripts/healthcheck'
 
@@ -134,7 +135,8 @@ const getResourceHealthCheckStrategy = (
   }
 }
 
-describe('Resources', () => {
+describe('Resources', async () => {
+  const paths = await getRootPaths()
   let healthCheck: HealthCheck
 
   beforeAll(() => {
@@ -145,20 +147,21 @@ describe('Resources', () => {
     await healthCheck.teardown()
   })
 
-  describe('Healthcheck', async () => {
-    const resources = await getAll()
+  describe.each(paths)('$topic resources', async (path) => {
+    const pathResourceUrls = await path.getResources()
+    const pathResources = pathResourceUrls.map((url) => new ResourceModel(url))
 
-    test.each(resources)(
+    test.each(pathResources)(
       '$url',
       async (resource) => {
         const resourceData = (await resource.get()) as Resource
         const resourceHealthCheck = await healthCheck.run(
-          resource.url,
+          resourceData.url,
           getResourceHealthCheckStrategy(resourceData),
         )
 
         expect(resourceHealthCheck).toMatchObject({
-          url: resource.url,
+          url: resourceData.url,
           success: true,
           data: {
             title: expect.stringContaining(resourceData.title) as string,
