@@ -28,6 +28,7 @@ module.exports = {
   },
   ignorePatterns: ['node_modules/', 'dist/'],
   rules: {
+		'no-await-in-loop': 'warn',
     'prefer-named-capture-group': 'off',
     'prettier/prettier': 'warn',
     'eslint-comments/require-description': 'warn',

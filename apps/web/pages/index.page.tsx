@@ -1,13 +1,11 @@
-/* eslint-disable no-await-in-loop */
 import type {
   GetStaticProps,
   GetStaticPropsContext,
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { getTopic } from '@sherpa/data/model/path'
-import ResourceModel from '@sherpa/data/model/resource'
-import type { Resource } from '@sherpa/data/store/resource/schema'
+import { getTopic } from '@sherpa/data/path/index'
+import ResourceModel, { type Resource } from '@sherpa/data/resource/index'
 import {
   LayoutProvider,
   LayoutHeader,

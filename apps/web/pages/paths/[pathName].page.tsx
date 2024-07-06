@@ -1,4 +1,3 @@
-/* eslint-disable no-await-in-loop */
 import type { ParsedUrlQuery } from 'querystring'
 import type {
   GetStaticPaths,
@@ -6,7 +5,8 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import type { Path, Resource } from '@sherpa/data/types'
+import PathModel, { type Path, type PathTopic } from '@sherpa/data/path/index'
+import ResourceModel, { type Resource } from '@sherpa/data/resource/index'
 import PathBody from '../../src/path'
 import config from '../../src/config'
 
@@ -31,18 +31,22 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
-  const { default: Path } = await import(`@sherpa/data/model/path`)
-  const { default: Resource } = await import(`@sherpa/data/model/resource`)
-
   const topic = params!.pathName as (typeof config.paths.topics)[number]
-  const path = new Path(topic)
+  const path = new PathModel(topic)
   const pathData = await path.get()
+
+  if (!pathData) throw new Error(`Topic ${topic} data not found`)
+
   const pathResources = await path.getResources()
-  const resources = []
+  const resources: Resource[] = []
 
   for (const pathResource of pathResources) {
-    const resource = new Resource(pathResource)
-    resources.push(await resource.get())
+    const resource = new ResourceModel(pathResource)
+    const resourceData = await resource.get()
+
+    if (!resourceData) continue
+
+    resources.push(resourceData)
   }
 
   return {
@@ -88,7 +92,9 @@ export default function PathPage({ path, resources }: Props) {
         <meta name="theme-color" content="#ffffff" />
 
         <title>{`Sherpa: the ${
-          config.paths.topicsTitles[path.topic]
+          config.paths.topicsTitles[
+            path.topic as Exclude<PathTopic, 'competitors'>
+          ]
         } path`}</title>
       </Head>
 
