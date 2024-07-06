@@ -5,8 +5,8 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import PathModel, { type Path, type PathTopic } from '@sherpa/data/path/index'
-import ResourceModel, { type Resource } from '@sherpa/data/resource/index'
+import { type Path, PathTopic } from '@sherpa/data/path/schema'
+import { type Resource } from '@sherpa/data/resource/schema'
 import PathBody from '../../src/path'
 import config from '../../src/config'
 
@@ -31,7 +31,10 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
-  const topic = params!.pathName as (typeof config.paths.topics)[number]
+  const { default: PathModel } = await import('@sherpa/data/path/index')
+  const { default: ResourceModel } = await import('@sherpa/data/resource/index')
+
+  const topic = params!.pathName as PathTopic
   const path = new PathModel(topic)
   const pathData = await path.get()
 
@@ -92,9 +95,7 @@ export default function PathPage({ path, resources }: Props) {
         <meta name="theme-color" content="#ffffff" />
 
         <title>{`Sherpa: the ${
-          config.paths.topicsTitles[
-            path.topic as Exclude<PathTopic, 'competitors'>
-          ]
+          config.paths.topicsTitles[path.topic]
         } path`}</title>
       </Head>
 

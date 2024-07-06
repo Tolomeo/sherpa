@@ -1,5 +1,5 @@
-import type { Resource, Path } from '@sherpa/data/types'
-import { ResourceType, PathTopic } from '@sherpa/data/types'
+import { type Path, PathTopic } from '@sherpa/data/path/schema'
+import { type Resource, ResourceType } from '@sherpa/data/resource/schema'
 
 const topics: Path['topic'][] = [
   PathTopic.uidesign,
@@ -20,7 +20,8 @@ const topics: Path['topic'][] = [
   PathTopic.lua,
 ]
 
-const topicsTitles: Record<PathTopic, string> = {
+const topicsTitles: Record<Path['topic'], string> = {
+  competitors: 'Alternatives',
   'commandline.cliapps': 'CLI apps',
   'commandline.dotfiles': 'Dotfiles',
   'commandline.fish': 'Fish',
@@ -92,6 +93,7 @@ const resourcesTypesOrder: NonNullable<Resource['type']>[] = [
 ]
 
 const resourceTypesTitles: Record<NonNullable<Resource['type']>, string> = {
+  competitor: 'Competitor',
   basics: 'Fundamentals',
   advanced: 'Beyond basics',
   'how-to': 'How do they do it',

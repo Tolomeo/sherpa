@@ -1,6 +1,6 @@
 /* eslint-disable prefer-regex-literals -- TODO: fix */
 import { z } from 'zod'
-import { ResourceSchema } from '../resource'
+import { ResourceSchema } from '../resource/schema'
 
 type RequiredNullable<T> = {
   [K in keyof T]-?: undefined extends T[K]
@@ -66,7 +66,7 @@ export enum PathTopic {
 }
 
 export const SerializedPathSchema = z.object({
-  topic: z.string(),
+  topic: z.nativeEnum(PathTopic),
   logo: z.string().regex(new RegExp('^<svg.+/svg>$')).optional(),
   hero: z
     .object({
