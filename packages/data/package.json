@@ -23,7 +23,8 @@
     "lint": "eslint \"src\" \"scripts\"",
     "test:paths": "vitest paths",
     "test:resources": "vitest resources",
-    "update:resources": "tsx \"scripts/resources/update.ts\""
+    "update:resources": "tsx \"scripts/resources/update.ts\"",
+    "temp": "tsx \"scripts/temp.ts\""
   },
   "devDependencies": {
     "@seald-io/nedb": "^4.0.4",
