@@ -10,6 +10,13 @@ export const getTopic = async (topic: string) => {
   return new PathModel(doc)
 }
 
+export const getAll = async () => {
+  const docs = await PathsStore.findAll()
+  const paths = docs.map((p) => new PathModel(p))
+
+  return paths
+}
+
 export const getRootPaths = async () => {
   const docs = await PathsStore.findAllByTopic(/^[^.]+$/)
   const paths = docs.map((p) => new PathModel(p))

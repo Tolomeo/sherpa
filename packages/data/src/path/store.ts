@@ -5,9 +5,9 @@ import Db, { type Document } from '@seald-io/nedb'
 import {
   type SerializedPath,
   type Path,
-  type PathTopic,
   // PathSchema,
   SerializedPathSchema,
+  PathSchema,
 } from './schema'
 
 const dbFile = path.join(
@@ -47,7 +47,7 @@ class PathsStore {
 
     return {
       _id,
-      topic: topic as PathTopic,
+      topic: topic!,
       logo,
       hero,
       notes,
@@ -94,6 +94,22 @@ class PathsStore {
     return doc
   }
 
+  async updateOne(id: string, data: Path) {
+    const validation = PathSchema.safeParse(data)
+
+    if (!validation.success) {
+      throw validation.error
+    }
+
+    await this.db.updateAsync({ _id: id }, data)
+    await this.db.compactDatafileAsync()
+
+    return {
+      ...data,
+      _id: id,
+    }
+  }
+
   async findOneByTopic(topic: string) {
     const doc: Nullable<Document<SerializedPath>> = await this.db.findOneAsync({
       topic,
@@ -102,6 +118,18 @@ class PathsStore {
     if (!doc) return null
 
     return this.populate(doc)
+  }
+
+  async findAll() {
+    const docs: Document<SerializedPath>[] = await this.db.findAsync({})
+
+    const all = []
+
+    for (const doc of docs) {
+      all.push(await this.populate(doc))
+    }
+
+    return all
   }
 
   async findAllByTopic(topic: RegExp) {
