@@ -5,7 +5,7 @@ import type {
 } from 'next'
 import Head from 'next/head'
 import { getTopic } from '@sherpa/data/path/index'
-import ResourceModel, { type Resource } from '@sherpa/data/resource/index'
+import Resource, { type ResourceData } from '@sherpa/data/resource/index'
 import {
   LayoutProvider,
   LayoutHeader,
@@ -19,7 +19,7 @@ import { AlternateSourcesList } from '../src/resources'
 import { List as PathsList } from '../src/paths'
 
 interface StaticProps {
-  alternateSources: Resource[]
+  alternateSources: ResourceData[]
 }
 
 export const getStaticProps: GetStaticProps<StaticProps> = async (
@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (
 
   const competitorResources = []
   for (const competitorUrl of competitorUrls) {
-    const competitorResource = new ResourceModel(competitorUrl)
+    const competitorResource = new Resource(competitorUrl)
     const competitorResourceData = await competitorResource.get()
 
     if (!competitorResourceData) continue

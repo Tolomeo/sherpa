@@ -1,6 +1,6 @@
 /* eslint-disable prefer-regex-literals -- TODO: fix */
 import { z } from 'zod'
-import { ResourceSchema } from '../resource/schema'
+import { ResourceDataSchema } from '../resource/schema'
 
 type RequiredNullable<T> = {
   [K in keyof T]-?: undefined extends T[K]
@@ -79,8 +79,8 @@ export const SerializedPathSchema = z.object({
     })
     .optional(),
   notes: z.array(z.string()).optional(),
-  resources: z.array(ResourceSchema.shape.url).optional(),
-  main: z.array(ResourceSchema.shape.url).optional(),
+  resources: z.array(ResourceDataSchema.shape.url).optional(),
+  main: z.array(ResourceDataSchema.shape.url).optional(),
   next: z.array(z.string()).optional(),
   prev: z.array(z.string()).optional(),
   children: z.array(z.string()).optional(),
@@ -105,8 +105,8 @@ export const PathSchema: z.ZodType<Path> = SerializedPathSchema.extend({
     })
     .nullable(),
   notes: z.array(z.string()).nullable(),
-  resources: z.array(ResourceSchema.shape.url).nullable(),
-  main: z.array(ResourceSchema.shape.url).nullable(),
+  resources: z.array(ResourceDataSchema.shape.url).nullable(),
+  main: z.array(ResourceDataSchema.shape.url).nullable(),
   next: z.array(z.string()).nullable(),
   prev: z.array(z.string()).nullable(),
   children: z.array(z.lazy(() => PathSchema)).nullable(),

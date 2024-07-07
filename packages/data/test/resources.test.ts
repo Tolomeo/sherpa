@@ -1,11 +1,10 @@
 import { describe, test, expect, beforeAll, afterAll } from 'vitest'
-import { getRootPaths } from '../dist/model/path'
-import ResourceModel from '../dist/model/resource'
-import { type Resource } from '../dist/store/resource/schema'
+import { getRootPaths } from '../src/path'
+import Resource, { type ResourceData } from '../src/resource'
 import { HealthCheck, type HealthCheckStrategy } from '../scripts/healthcheck'
 
 const getResourceHealthCheckStrategy = (
-  resource: Resource,
+  resource: ResourceData,
 ): HealthCheckStrategy => {
   // checking if it is a downloadable resource
   // so far only PDFs
@@ -149,12 +148,12 @@ describe('Resources', async () => {
 
   describe.each(paths)('$topic resources', async (path) => {
     const pathResourceUrls = await path.getResources()
-    const pathResources = pathResourceUrls.map((url) => new ResourceModel(url))
+    const pathResources = pathResourceUrls.map((url) => new Resource(url))
 
     test.each(pathResources)(
       '$url',
       async (resource) => {
-        const resourceData = (await resource.get()) as Resource
+        const resourceData = (await resource.get()) as ResourceData
         const resourceHealthCheck = await healthCheck.run(
           resourceData.url,
           getResourceHealthCheckStrategy(resourceData),

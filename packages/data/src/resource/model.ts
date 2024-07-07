@@ -1,5 +1,5 @@
 import ResourcesStore, { type ResourceDocument } from './store'
-import type { Resource } from './schema'
+import type { ResourceData } from './schema'
 
 type Maybe<T> = T | undefined
 
@@ -44,7 +44,7 @@ class ResourceModel {
     return this.data
   }
 
-  private async update(update: Partial<Resource>) {
+  private async update(update: Partial<ResourceData>) {
     const data = await this.read()
 
     if (!data) return
@@ -72,7 +72,7 @@ class ResourceModel {
     return resourcedata
   }
 
-  public async change(update: Partial<Resource>) {
+  public async change(update: Partial<ResourceData>) {
     const updated = await this.update(update)
 
     if (!updated) return

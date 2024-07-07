@@ -1,5 +1,5 @@
 import { type Path, PathTopic } from '@sherpa/data/path/schema'
-import { type Resource, ResourceType } from '@sherpa/data/resource/schema'
+import { type ResourceData, ResourceType } from '@sherpa/data/resource/schema'
 
 const topics: Path['topic'][] = [
   PathTopic.uidesign,
@@ -82,7 +82,7 @@ const paths = {
   topicsTitles,
 }
 
-const resourcesTypesOrder: NonNullable<Resource['type']>[] = [
+const resourcesTypesOrder: NonNullable<ResourceData['type']>[] = [
   ResourceType.basics,
   ResourceType.advanced,
   ResourceType['how-to'],
@@ -92,7 +92,7 @@ const resourcesTypesOrder: NonNullable<Resource['type']>[] = [
   ResourceType.feed,
 ]
 
-const resourceTypesTitles: Record<NonNullable<Resource['type']>, string> = {
+const resourceTypesTitles: Record<NonNullable<ResourceData['type']>, string> = {
   competitor: 'Competitor',
   basics: 'Fundamentals',
   advanced: 'Beyond basics',

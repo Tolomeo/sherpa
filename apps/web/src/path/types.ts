@@ -1,7 +1,7 @@
-import type { Resource, Path } from '@sherpa/data/types'
-import { ResourceType } from '@sherpa/data/types'
+import type { Path } from '@sherpa/data/path/schema'
+import { ResourceType, type ResourceData } from '@sherpa/data/resource/schema'
 
-export type { Resource, Path }
+export type { ResourceData as Resource, Path }
 
 export { ResourceType }
 
@@ -11,13 +11,13 @@ export interface PopulatedPath {
   logo: Path['logo']
   hero: Path['hero']
   notes: Path['notes']
-  resources: { title: string; resources: Resource[] }[] | null
-  main: Resource[] | null
+  resources: { title: string; resources: ResourceData[] }[] | null
+  main: ResourceData[] | null
   children:
     | {
         title: string
-        main: Resource[] | null
-        resources: Resource[] | null
+        main: ResourceData[] | null
+        resources: ResourceData[] | null
       }[]
     | null
   next: Path['next']

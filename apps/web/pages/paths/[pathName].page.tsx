@@ -5,8 +5,8 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { type Path, PathTopic } from '@sherpa/data/path/schema'
-import { type Resource } from '@sherpa/data/resource/schema'
+import type { Path, PathTopic } from '@sherpa/data/path/schema'
+import type { ResourceData } from '@sherpa/data/resource/schema'
 import PathBody from '../../src/path'
 import config from '../../src/config'
 
@@ -17,7 +17,7 @@ interface Params extends ParsedUrlQuery {
 interface StaticProps {
   topic: (typeof config.paths.topics)[number]
   path: Path
-  resources: Resource[]
+  resources: ResourceData[]
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -41,7 +41,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   if (!pathData) throw new Error(`Topic ${topic} data not found`)
 
   const pathResources = await path.getResources()
-  const resources: Resource[] = []
+  const resources: ResourceData[] = []
 
   for (const pathResource of pathResources) {
     const resource = new ResourceModel(pathResource)

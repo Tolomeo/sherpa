@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'vitest'
-import { getRootPaths } from '../dist/model/path'
-import { getAll } from '../dist/model/resource'
+import { getRootPaths } from '../src/path'
+import { getAll } from '../src/resource'
 
 describe('Paths', async () => {
   const rootPaths = await getRootPaths()

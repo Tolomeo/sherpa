@@ -11,11 +11,11 @@ export enum ResourceType {
   feed = 'feed',
 }
 
-export const ResourceSchema = z.object({
+export const ResourceDataSchema = z.object({
   title: z.string().min(2),
   url: z.string().url(),
   type: z.nativeEnum(ResourceType),
   source: z.string().min(2),
 })
 
-export type Resource = z.infer<typeof ResourceSchema>
+export type ResourceData = z.infer<typeof ResourceDataSchema>

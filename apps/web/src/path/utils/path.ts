@@ -1,7 +1,7 @@
 import config from '../../config'
-import type { PopulatedPath, Path, Resource } from '../types'
+import type { PopulatedPath, Path, ResourceData } from '../types'
 
-export const sortResources = (resources: Resource[]) =>
+export const sortResources = (resources: ResourceData[]) =>
   [...resources].sort((resourceA, resourceB) => {
     const titleA = resourceA.title.toUpperCase()
     const titleB = resourceB.title.toUpperCase()
@@ -13,10 +13,10 @@ export const sortResources = (resources: Resource[]) =>
   })
 
 export type ResourcesTypeGroups = Record<
-  NonNullable<Resource['type']>,
+  NonNullable<ResourceData['type']>,
   {
     title: string
-    resources: Resource[]
+    resources: ResourceData[]
   }
 >
 
@@ -25,7 +25,7 @@ export const sortResourcesTypeGroups = (groups: ResourcesTypeGroups) =>
     .filter((groupType) => Boolean(groups[groupType]))
     .map((groupType) => groups[groupType])
 
-export const groupResourcesByType = (resources: Resource[]) => {
+export const groupResourcesByType = (resources: ResourceData[]) => {
   const groups = resources.reduce((groupedResources, resource) => {
     const { type } = resource
 
@@ -46,15 +46,14 @@ export const groupResourcesByType = (resources: Resource[]) => {
 
 export const populatePath = (
   path: Path,
-  resources: Resource[],
+  resources: ResourceData[],
 ): PopulatedPath => {
-  const resourcesMap = resources.reduce<Record<Resource['url'], Resource>>(
-    (map, resource) => {
-      map[resource.url] = resource
-      return map
-    },
-    {},
-  )
+  const resourcesMap = resources.reduce<
+    Record<ResourceData['url'], ResourceData>
+  >((map, resource) => {
+    map[resource.url] = resource
+    return map
+  }, {})
 
   return {
     ...path,

@@ -2,17 +2,17 @@
 import * as path from 'node:path'
 import * as url from 'node:url'
 import Db, { type Document } from '@seald-io/nedb'
-import { ResourceSchema, type Resource } from './schema'
+import { ResourceDataSchema, type ResourceData } from './schema'
 
 const dbFile = path.join(
   path.dirname(url.fileURLToPath(import.meta.url)),
   'store.db',
 )
 
-export type ResourceDocument = Document<Resource>
+export type ResourceDocument = Document<ResourceData>
 
 class ResourcesStore {
-  private db: Db<Resource>
+  private db: Db<ResourceData>
 
   constructor() {
     this.db = new Db({ filename: dbFile, autoload: true })
@@ -51,8 +51,8 @@ class ResourcesStore {
     return doc
   }
 
-  async updateOne(id: string, resource: Resource): Promise<ResourceDocument> {
-    const resourceValidation = ResourceSchema.safeParse(resource)
+  async updateOne(id: string, resource: ResourceData): Promise<ResourceDocument> {
+    const resourceValidation = ResourceDataSchema.safeParse(resource)
 
     if (!resourceValidation.success) {
       throw resourceValidation.error
@@ -83,8 +83,8 @@ class ResourcesStore {
     }
   }
 
-  async findAll(query: Partial<Record<keyof Resource, unknown>> = {}) {
-    const docs: Document<Resource>[] = await this.db.findAsync(query)
+  async findAll(query: Partial<Record<keyof ResourceData, unknown>> = {}) {
+    const docs: Document<ResourceData>[] = await this.db.findAsync(query)
 
     return docs
   }
