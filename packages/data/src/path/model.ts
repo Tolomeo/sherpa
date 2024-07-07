@@ -1,4 +1,5 @@
 import PathsStore, { type PathDocument } from './store'
+import { type Path } from './schema'
 
 type Maybe<T> = T | undefined
 
@@ -48,6 +49,21 @@ class PathModel {
     return this.data
   }
 
+  private async update(update: Partial<Path>) {
+    const data = await this.read()
+
+    if (!data) return
+
+    const { _id: id, ...path } = data
+
+    this.data = await PathsStore.updateOne(id, {
+      ...path,
+      ...update,
+    })
+
+    return this.data
+  }
+
   public async exists() {
     return Boolean(await this.read())
   }
@@ -82,6 +98,15 @@ class PathModel {
     }
 
     return resources
+  }
+
+  public async change(update: Partial<Path>) {
+    const updated = await this.update(update)
+
+    if (!updated) return
+
+    const { _id, ...data } = updated
+    return data
   }
 }
 
