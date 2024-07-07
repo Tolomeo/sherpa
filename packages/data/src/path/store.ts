@@ -85,6 +85,7 @@ class PathsStore {
     const newPathValidation = SerializedPathSchema.safeParse(newPath)
 
     if (!newPathValidation.success) {
+      console.error(`Path ${newPath.topic} validation error`)
       throw newPathValidation.error
     }
 
@@ -94,18 +95,19 @@ class PathsStore {
     return doc
   }
 
-  async updateOne(id: string, data: Path) {
-    const validation = PathSchema.safeParse(data)
+  async updateOne(id: string, update: SerializedPath) {
+    const validation = PathSchema.safeParse(update)
 
     if (!validation.success) {
+      console.error(`Path ${update.topic} validation error`)
       throw validation.error
     }
 
-    await this.db.updateAsync({ _id: id }, data)
+    await this.db.updateAsync({ _id: id }, update)
     await this.db.compactDatafileAsync()
 
     return {
-      ...data,
+      ...update,
       _id: id,
     }
   }

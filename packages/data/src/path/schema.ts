@@ -72,9 +72,9 @@ export const SerializedPathSchema = z.object({
     .object({
       foreground: z
         .string()
-        .regex(new RegExp('^#([a-fa-f0-9]{6}|[a-fa-f0-9]{3})$')),
+        .regex(new RegExp('^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$')),
       background: z.array(
-        z.string().regex(new RegExp('^#([a-fa-f0-9]{6}|[a-fa-f0-9]{3})$')),
+        z.string().regex(new RegExp('^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$')),
       ),
     })
     .optional(),
@@ -98,9 +98,9 @@ export const PathSchema: z.ZodType<Path> = SerializedPathSchema.extend({
     .object({
       foreground: z
         .string()
-        .regex(new RegExp('^#([a-fa-f0-9]{6}|[a-fa-f0-9]{3})$')),
+        .regex(new RegExp('^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$')),
       background: z.array(
-        z.string().regex(new RegExp('^#([a-fa-f0-9]{6}|[a-fa-f0-9]{3})$')),
+        z.string().regex(new RegExp('^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$')),
       ),
     })
     .nullable(),
