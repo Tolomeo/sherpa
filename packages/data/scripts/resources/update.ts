@@ -5,7 +5,7 @@
 // import * as util from 'node:util'
 import * as readline from 'node:readline'
 import open from 'open'
-import Resource from '../../src/model/resource'
+import ResourceModel from '../../src/resource'
 // import { listPaths, readPath } from './paths/read'
 // import pathsData from '../src/store/paths'
 // import { listResources, readResources } from './resources/read'
@@ -86,14 +86,14 @@ const confirm = async (question: string): Promise<Nullable<boolean>> => {
 }
 
 const getResource = async () => {
-  let resource: Resource | undefined
+  let resource: ResourceModel | undefined
 
   while (!resource) {
     const url = await input(`Enter resource url`)
 
     if (url === null) return null
 
-    const urlResource = new Resource(url)
+    const urlResource = new ResourceModel(url)
     const urlResourceExists = await urlResource.exists()
 
     if (!urlResourceExists) {
@@ -107,7 +107,7 @@ const getResource = async () => {
   return resource
 }
 
-const updateResource = async (resource: Resource) => {
+const updateResource = async (resource: ResourceModel) => {
   const resourceData = await resource.get()
 
   if (!resourceData) return
@@ -136,7 +136,7 @@ const updateResource = async (resource: Resource) => {
   }
 }
 
-const update = async (resource: Resource) => {
+const update = async (resource: ResourceModel) => {
   while (true) {
     const resourceData = await resource.get()
 
