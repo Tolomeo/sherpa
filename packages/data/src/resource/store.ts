@@ -2,11 +2,7 @@
 import * as path from 'node:path'
 import * as url from 'node:url'
 import Db, { type Document } from '@seald-io/nedb'
-import {
-  ResourceSchema,
-  type Resource,
-  type SerializedResource,
-} from './schema'
+import { ResourceSchema, type Resource } from './schema'
 
 const dbFile = path.join(
   path.dirname(url.fileURLToPath(import.meta.url)),
@@ -16,7 +12,7 @@ const dbFile = path.join(
 export type ResourceDocument = Document<Resource>
 
 class ResourcesStore {
-  private db: Db<SerializedResource>
+  private db: Db<Resource>
 
   constructor() {
     this.db = new Db({ filename: dbFile, autoload: true })
@@ -25,7 +21,7 @@ class ResourcesStore {
     })
   }
 
-  private populate(
+  /* private populate(
     serializedResource: Document<SerializedResource>,
   ): ResourceDocument {
     return {
@@ -45,14 +41,14 @@ class ResourcesStore {
         }
       })(),
     }
-  }
+  } */
 
   async findOneByUrl(resourceUrl: string) {
     const doc = await this.db.findOneAsync({ url: resourceUrl })
 
     if (!doc) return null
 
-    return this.populate(doc)
+    return doc
   }
 
   async updateOne(id: string, resource: Resource): Promise<ResourceDocument> {
@@ -87,12 +83,10 @@ class ResourcesStore {
     }
   }
 
-  async findAll(
-    query: Partial<Record<keyof SerializedResource, unknown>> = {},
-  ) {
-    const docs: Document<SerializedResource>[] = await this.db.findAsync(query)
+  async findAll(query: Partial<Record<keyof Resource, unknown>> = {}) {
+    const docs: Document<Resource>[] = await this.db.findAsync(query)
 
-    return docs.map((d) => this.populate(d))
+    return docs
   }
 }
 
