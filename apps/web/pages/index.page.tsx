@@ -4,8 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { getTopic } from '@sherpa/data/path/index'
-import Resource, { type ResourceData } from '@sherpa/data/resource/index'
+import { getTopic, type PopulatedPath } from '@sherpa/data/path/index'
 import {
   LayoutProvider,
   LayoutHeader,
@@ -19,7 +18,7 @@ import { AlternateSourcesList } from '../src/resources'
 import { List as PathsList } from '../src/paths'
 
 interface StaticProps {
-  alternateSources: ResourceData[]
+  competitors: PopulatedPath
 }
 
 export const getStaticProps: GetStaticProps<StaticProps> = async (
@@ -29,21 +28,11 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (
 
   if (!competitors) throw new Error('No competitors topic found')
 
-  const competitorUrls = await competitors.getResources()
-
-  const competitorResources = []
-  for (const competitorUrl of competitorUrls) {
-    const competitorResource = new Resource(competitorUrl)
-    const competitorResourceData = await competitorResource.get()
-
-    if (!competitorResourceData) continue
-
-    competitorResources.push(competitorResourceData)
-  }
+  const populatedCompetitors = await competitors.get(true)
 
   return {
     props: {
-      alternateSources: competitorResources,
+      competitors: populatedCompetitors!,
     },
   }
 }
@@ -78,7 +67,7 @@ const PageHead = () => (
   </Head>
 )
 
-export default function Home({ alternateSources }: Props) {
+export default function Home({ competitors }: Props) {
   return (
     <>
       <PageHead />
@@ -136,9 +125,11 @@ export default function Home({ alternateSources }: Props) {
                   at other similar projects.
                 </Typography>
               </Box>
-              <Box py={2}>
-                <AlternateSourcesList resources={alternateSources} />
-              </Box>
+              {competitors.main && (
+                <Box py={2}>
+                  <AlternateSourcesList resources={competitors.main} />
+                </Box>
+              )}
               <Box py={2}>
                 <Typography variant="body1" component="p">
                   And many others! <br /> All it takes is the effort to search

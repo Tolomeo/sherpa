@@ -20,6 +20,20 @@ export const getAllByType = async (type: string) => {
   return resources
 }
 
+export const getAllByUrl = async (...urls: string[]) => {
+  const docs = []
+
+  for (const url of urls) {
+    const doc = await ResourcesStore.findOneByUrl(url)
+
+    if (!doc) throw new Error(`Resource ${url} not found`)
+
+    docs.push(doc)
+  }
+
+  return docs.map((doc) => new ResourceModel(doc))
+}
+
 class ResourceModel {
   url: string
 

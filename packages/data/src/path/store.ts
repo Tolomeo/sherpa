@@ -29,9 +29,7 @@ class PathsStore {
     })
   }
 
-  private async populate(
-    serializedPath: Document<SerializedPath>,
-  ): Promise<Document<Path>> {
+  private populate(serializedPath: Document<SerializedPath>): Document<Path> {
     const {
       _id,
       topic = null,
@@ -53,7 +51,8 @@ class PathsStore {
       notes,
       resources,
       main,
-      children: await (async () => {
+      children,
+      /* children: await (async () => {
         if (!children) return null
 
         const childPaths: Path[] = []
@@ -64,7 +63,7 @@ class PathsStore {
         }
 
         return childPaths
-      })(),
+      })(), */
       prev,
       next,
     }
@@ -75,7 +74,7 @@ class PathsStore {
     const paths: PathDocument[] = []
 
     for (const doc of docs) {
-      paths.push(await this.populate(doc))
+      paths.push(this.populate(doc))
     }
 
     return paths
@@ -128,7 +127,7 @@ class PathsStore {
     const all = []
 
     for (const doc of docs) {
-      all.push(await this.populate(doc))
+      all.push(this.populate(doc))
     }
 
     return all
@@ -141,7 +140,7 @@ class PathsStore {
     const paths: PathDocument[] = []
 
     for (const doc of docs) {
-      paths.push(await this.populate(doc))
+      paths.push(this.populate(doc))
     }
 
     return paths

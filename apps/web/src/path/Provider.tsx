@@ -1,12 +1,7 @@
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react'
-import type { Resource, Path, PopulatedPath } from './types'
-import { populatePath, useResourcesCompletionStore } from './utils'
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import { type PopulatedPath } from '@sherpa/data/path/schema'
+import { type ResourceData } from '@sherpa/data/resource/schema'
+import { useResourcesCompletionStore } from './utils'
 
 interface PathContextValue {
   path: PopulatedPath
@@ -24,12 +19,12 @@ export const usePathContext = () => {
 }
 
 export const usePathResourcesCompletion = (
-  resources: Resource[],
+  resources: ResourceData[],
 ): [
-  Record<Resource['url'], boolean>,
+  Record<ResourceData['url'], boolean>,
   {
-    complete: (_: Resource['url']) => Promise<void>
-    uncomplete: (_: Resource['url']) => Promise<void>
+    complete: (_: ResourceData['url']) => Promise<void>
+    uncomplete: (_: ResourceData['url']) => Promise<void>
   },
 ] => {
   const {
@@ -97,25 +92,14 @@ export const usePathResourcesCompletion = (
 }
 
 interface Props {
-  path: Path
-  resources: Resource[]
+  path: PopulatedPath
   children: React.ReactNode
 }
 
-const PathContextProvider = ({ children, path, resources }: Props) => {
-  const [populatedPath, setPopulatedPath] = useState(
-    populatePath(path, resources),
-  )
-  const context = useMemo(
-    () => ({
-      path: populatedPath,
-    }),
-    [populatedPath],
-  )
-
-  useEffect(() => {
-    setPopulatedPath(populatePath(path, resources))
-  }, [path, resources])
+const PathContextProvider = ({ children, path }: Props) => {
+  const context = {
+    path,
+  }
 
   return <PathContext.Provider value={context}>{children}</PathContext.Provider>
 }

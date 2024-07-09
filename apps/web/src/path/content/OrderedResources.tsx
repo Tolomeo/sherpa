@@ -1,4 +1,4 @@
-import type { Resource } from '@sherpa/data/types'
+import type { ResourceData } from '@sherpa/data/resource/schema'
 import {
   Link,
   Typography,
@@ -13,7 +13,7 @@ import {
 import { usePathResourcesCompletion } from '../Provider'
 
 interface Props {
-  resources: Resource[]
+  resources: ResourceData[]
 }
 
 const PathTimeline = ({ resources }: Props) => {

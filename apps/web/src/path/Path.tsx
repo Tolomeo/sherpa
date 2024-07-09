@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
-import { type Path } from '@sherpa/data/path/index'
-import { type ResourceData } from '@sherpa/data/resource/index'
+import { type PopulatedPath } from '@sherpa/data/path/index'
 import { LayoutProvider } from '../theme'
 import Provider from './Provider'
 import Header from './header'
@@ -9,23 +8,25 @@ import Content from './content'
 import { useResourcesCompletionStore } from './utils'
 
 interface Props {
-  path: Path
-  resources: ResourceData[]
+  path: PopulatedPath
 }
 
-const PathComponent = ({ path, resources }: Props) => {
+const PathComponent = ({ path }: Props) => {
   const { prune } = useResourcesCompletionStore()
 
   useEffect(() => {
-    const resourcesUrls = resources.map(({ url }) => url)
-    const { topic } = path
-    // eslint-disable-next-line no-console
-    prune(resourcesUrls, topic).catch(console.error)
-  }, [prune, path, resources])
+    if (!path.main) return
+
+    const { topic, main } = path
+    const mainUrls = main.map(({ url }) => url)
+
+    // eslint-disable-next-line no-console -- catched error to console
+    prune(mainUrls, topic).catch(console.error)
+  }, [prune, path])
 
   return (
     <LayoutProvider>
-      <Provider path={path} resources={resources}>
+      <Provider path={path}>
         <Header />
         <Content />
         <Footer />

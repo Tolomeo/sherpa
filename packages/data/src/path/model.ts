@@ -1,5 +1,7 @@
+import ResourcesStore from '../resource/store'
+import type { ResourceData } from '../resource/schema'
 import PathsStore, { type PathDocument } from './store'
-// import { type Path } from './schema'
+import type { Path, PopulatedPath } from './schema'
 
 type Maybe<T> = T | undefined
 
@@ -23,6 +25,76 @@ export const getRootPaths = async () => {
   const paths = docs.map((p) => new PathModel(p))
 
   return paths
+}
+
+export interface ResourceGroup {
+  type: ResourceData['type']
+  resources: ResourceData[]
+}
+
+const populate = async (path: Path): Promise<PopulatedPath> => {
+  const populatedPath: PopulatedPath = {
+    ...path,
+    main: null,
+    resources: null,
+    children: null,
+  }
+
+  if (path.main) {
+    populatedPath.main = []
+
+    for (const mainUrl of path.main) {
+      const resourceDoc = await ResourcesStore.findOneByUrl(mainUrl)
+
+      if (!resourceDoc)
+        throw new Error(`Path "${path.topic}" resource ${mainUrl} not found`)
+
+      const { _id, ...resourceData } = resourceDoc
+
+      populatedPath.main.push(resourceData)
+    }
+  }
+
+  if (path.resources) {
+    populatedPath.resources = []
+
+    for (const resourceUrl of path.resources) {
+      const resourceDoc = await ResourcesStore.findOneByUrl(resourceUrl)
+
+      if (!resourceDoc)
+        throw new Error(
+          `Path "${path.topic}" resource ${resourceUrl} not found`,
+        )
+
+      const { _id, ...resourceData } = resourceDoc
+
+      populatedPath.resources.push(resourceData)
+    }
+
+    /* populatedPath.resources.sort((resourceA, resourceB) => {
+      const titleA = resourceA.title.toUpperCase()
+      const titleB = resourceB.title.toUpperCase()
+
+      if (titleA > titleB) return 1
+      else if (titleA < titleB) return -1
+
+      return 0
+    }) */
+  }
+
+  if (path.children) {
+		populatedPath.children = []
+
+    for (const child of path.children) {
+      const childPathData = await PathsStore.findOneByTopic(child)
+
+      if (!childPathData) throw new Error(`Child path ${child} not found`)
+
+      populatedPath.children.push(await populate(childPathData))
+    }
+  }
+
+  return populatedPath
 }
 
 class PathModel {
@@ -68,12 +140,17 @@ class PathModel {
     return Boolean(await this.read())
   }
 
-  public async get() {
+  public async get(populated?: false): Promise<Maybe<Path>>
+  public async get(populated: true): Promise<Maybe<PopulatedPath>>
+  public async get(populated?: boolean): Promise<Maybe<Path | PopulatedPath>> {
     const data = await this.read()
 
     if (!data) return
 
     const { _id, ...pathData } = data
+
+    if (populated) return populate(pathData)
+
     return pathData
   }
 
@@ -90,7 +167,7 @@ class PathModel {
 
     if (!data.children) return resources
 
-    for (const { topic } of data.children) {
+    for (const topic of data.children) {
       const child = new PathModel(topic)
       const childResources = await child.getResources()
 

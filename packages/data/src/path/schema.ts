@@ -1,12 +1,12 @@
 /* eslint-disable prefer-regex-literals -- TODO: fix */
 import { z } from 'zod'
-import { ResourceDataSchema } from '../resource/schema'
+import { ResourceDataSchema, type ResourceData } from '../resource/schema'
 
-type RequiredNullable<T> = {
+/* type RequiredNullable<T> = {
   [K in keyof T]-?: undefined extends T[K]
     ? Exclude<T[K], undefined> | null
     : T[K]
-}
+} */
 
 export enum PathTopic {
   competitors = 'competitors',
@@ -83,16 +83,12 @@ export const SerializedPathSchema = z.object({
   main: z.array(ResourceDataSchema.shape.url).optional(),
   next: z.array(z.string()).optional(),
   prev: z.array(z.string()).optional(),
-  children: z.array(z.string()).optional(),
+  children: z.array(z.nativeEnum(PathTopic)).optional(),
 })
 
 export type SerializedPath = z.infer<typeof SerializedPathSchema>
 
-export type Path = RequiredNullable<Omit<SerializedPath, 'children'>> & {
-  children: Path[] | null
-}
-
-export const PathSchema: z.ZodType<Path> = SerializedPathSchema.extend({
+export const PathSchema = SerializedPathSchema.extend({
   logo: z.string().regex(new RegExp('^<svg.+/svg>$')).nullable(),
   hero: z
     .object({
@@ -109,5 +105,19 @@ export const PathSchema: z.ZodType<Path> = SerializedPathSchema.extend({
   main: z.array(ResourceDataSchema.shape.url).nullable(),
   next: z.array(z.string()).nullable(),
   prev: z.array(z.string()).nullable(),
-  children: z.array(z.lazy(() => PathSchema)).nullable(),
+  children: z.array(z.nativeEnum(PathTopic)).nullable(),
 })
+
+export type Path = z.infer<typeof PathSchema>
+
+export const PopulatedPathSchema: z.ZodType<PopulatedPath> = PathSchema.extend({
+  main: z.array(ResourceDataSchema).nullable(),
+  resources: z.array(ResourceDataSchema).nullable(),
+  children: z.array(z.lazy(() => PopulatedPathSchema)).nullable(),
+})
+
+export type PopulatedPath = Omit<Path, 'main' | 'resources' | 'children'> & {
+  main: ResourceData[] | null
+  resources: ResourceData[] | null
+  children: PopulatedPath[] | null
+}

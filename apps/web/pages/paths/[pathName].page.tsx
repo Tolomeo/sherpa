@@ -5,8 +5,11 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import type { Path, PathTopic } from '@sherpa/data/path/schema'
-import type { ResourceData } from '@sherpa/data/resource/schema'
+import {
+  getTopic,
+  type PathTopic,
+  type PopulatedPath,
+} from '@sherpa/data/path/index'
 import PathBody from '../../src/path'
 import config from '../../src/config'
 
@@ -15,9 +18,9 @@ interface Params extends ParsedUrlQuery {
 }
 
 interface StaticProps {
-  topic: (typeof config.paths.topics)[number]
-  path: Path
-  resources: ResourceData[]
+  // topic: (typeof config.paths.topics)[number]
+  path: PopulatedPath
+  // resources: ResourceData[]
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -31,39 +34,26 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
-  const { default: PathModel } = await import('@sherpa/data/path/index')
-  const { default: ResourceModel } = await import('@sherpa/data/resource/index')
-
   const topic = params!.pathName as PathTopic
-  const path = new PathModel(topic)
-  const pathData = await path.get()
+  const path = await getTopic(topic)
 
-  if (!pathData) throw new Error(`Topic ${topic} data not found`)
+  if (!path) throw new Error(`Path ${topic} not found`)
 
-  const pathResources = await path.getResources()
-  const resources: ResourceData[] = []
+  const pathData = await path.get(true)
 
-  for (const pathResource of pathResources) {
-    const resource = new ResourceModel(pathResource)
-    const resourceData = await resource.get()
-
-    if (!resourceData) continue
-
-    resources.push(resourceData)
-  }
+  if (!pathData) throw new Error(`Path ${topic} data not found`)
 
   return {
     props: {
       topic,
       path: pathData,
-      resources,
     },
   }
 }
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export default function PathPage({ path, resources }: Props) {
+export default function PathPage({ path }: Props) {
   return (
     <>
       <Head>
@@ -99,7 +89,7 @@ export default function PathPage({ path, resources }: Props) {
         } path`}</title>
       </Head>
 
-      <PathBody path={path} resources={resources} />
+      <PathBody path={path} />
     </>
   )
 }

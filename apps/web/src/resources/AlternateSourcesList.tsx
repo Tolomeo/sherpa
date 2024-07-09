@@ -1,8 +1,8 @@
-import type { Resource } from '@sherpa/data/store/resource/schema'
+import type { ResourceData } from '@sherpa/data/resource/schema'
 import { Link, Typography, Box, List, ListItem } from '../theme'
 
 interface Props {
-  resources: Resource[]
+  resources: ResourceData[]
 }
 
 const alternativesListTestId = 'alternatives.list'
