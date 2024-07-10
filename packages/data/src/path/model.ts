@@ -1,7 +1,7 @@
 import ResourcesStore from '../resource/store'
 import type { ResourceData } from '../resource/schema'
 import PathsStore, { type PathDocument } from './store'
-import type { Path, PopulatedPath } from './schema'
+import type { PathData, PopulatedPathData } from './schema'
 
 type Maybe<T> = T | undefined
 
@@ -32,8 +32,8 @@ export interface ResourceGroup {
   resources: ResourceData[]
 }
 
-const populate = async (path: Path): Promise<PopulatedPath> => {
-  const populatedPath: PopulatedPath = {
+const populate = async (path: PathData): Promise<PopulatedPathData> => {
+  const populatedPath: PopulatedPathData = {
     ...path,
     main: null,
     resources: null,
@@ -121,7 +121,7 @@ class PathModel {
     return this.data
   }
 
-  private async update(update: Partial<Path>) {
+  private async update(update: Partial<PathData>) {
     const data = await this.read()
 
     if (!data) return
@@ -140,9 +140,9 @@ class PathModel {
     return Boolean(await this.read())
   }
 
-  public async get(populated?: false): Promise<Maybe<Path>>
-  public async get(populated: true): Promise<Maybe<PopulatedPath>>
-  public async get(populated?: boolean): Promise<Maybe<Path | PopulatedPath>> {
+  public async get(populated?: false): Promise<Maybe<PathData>>
+  public async get(populated: true): Promise<Maybe<PopulatedPathData>>
+  public async get(populated?: boolean): Promise<Maybe<PathData | PopulatedPathData>> {
     const data = await this.read()
 
     if (!data) return
@@ -177,7 +177,7 @@ class PathModel {
     return resources
   }
 
-  public async change(update: Partial<Path>) {
+  public async change(update: Partial<PathData>) {
     const updated = await this.update(update)
 
     if (!updated) return

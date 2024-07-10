@@ -4,7 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { getTopic, type PopulatedPath } from '@sherpa/data/path/index'
+import { getTopic, type PopulatedPathData } from '@sherpa/data/path/index'
 import {
   LayoutProvider,
   LayoutHeader,
@@ -18,7 +18,7 @@ import { AlternateSourcesList } from '../src/resources'
 import { List as PathsList } from '../src/paths'
 
 interface StaticProps {
-  competitors: PopulatedPath
+  competitors: PopulatedPathData
 }
 
 export const getStaticProps: GetStaticProps<StaticProps> = async (

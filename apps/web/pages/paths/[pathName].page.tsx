@@ -8,7 +8,7 @@ import Head from 'next/head'
 import {
   getTopic,
   type PathTopic,
-  type PopulatedPath,
+  type PopulatedPathData,
 } from '@sherpa/data/path/index'
 import PathBody from '../../src/path'
 import config from '../../src/config'
@@ -19,7 +19,7 @@ interface Params extends ParsedUrlQuery {
 
 interface StaticProps {
   // topic: (typeof config.paths.topics)[number]
-  path: PopulatedPath
+  path: PopulatedPathData
   // resources: ResourceData[]
 }
 

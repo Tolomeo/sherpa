@@ -65,7 +65,7 @@ export enum PathTopic {
   'webaccessibility.testing' = 'webaccessibility.testing',
 }
 
-export const PathSchema = z.object({
+export const PathDataSchema = z.object({
   topic: z.nativeEnum(PathTopic),
   logo: z.string().regex(new RegExp('^<svg.+/svg>$')).nullable(),
   hero: z
@@ -86,16 +86,20 @@ export const PathSchema = z.object({
   children: z.array(z.nativeEnum(PathTopic)).nullable(),
 })
 
-export type Path = z.infer<typeof PathSchema>
+export type PathData = z.infer<typeof PathDataSchema>
 
-export const PopulatedPathSchema: z.ZodType<PopulatedPath> = PathSchema.extend({
-  main: z.array(ResourceDataSchema).nullable(),
-  resources: z.array(ResourceDataSchema).nullable(),
-  children: z.array(z.lazy(() => PopulatedPathSchema)).nullable(),
-})
+export const PopulatedPathDataSchema: z.ZodType<PopulatedPathData> =
+  PathDataSchema.extend({
+    main: z.array(ResourceDataSchema).nullable(),
+    resources: z.array(ResourceDataSchema).nullable(),
+    children: z.array(z.lazy(() => PopulatedPathDataSchema)).nullable(),
+  })
 
-export type PopulatedPath = Omit<Path, 'main' | 'resources' | 'children'> & {
+export type PopulatedPathData = Omit<
+  PathData,
+  'main' | 'resources' | 'children'
+> & {
   main: ResourceData[] | null
   resources: ResourceData[] | null
-  children: PopulatedPath[] | null
+  children: PopulatedPathData[] | null
 }

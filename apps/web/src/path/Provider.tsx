@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { type PopulatedPath } from '@sherpa/data/path/schema'
+import { type PopulatedPathData } from '@sherpa/data/path/schema'
 import { type ResourceData } from '@sherpa/data/resource/schema'
 import { useResourcesCompletionStore } from './utils'
 
 interface PathContextValue {
-  path: PopulatedPath
+  path: PopulatedPathData
 }
 
 const PathContext = createContext<PathContextValue | null>(null)
@@ -92,7 +92,7 @@ export const usePathResourcesCompletion = (
 }
 
 interface Props {
-  path: PopulatedPath
+  path: PopulatedPathData
   children: React.ReactNode
 }
 

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { type PopulatedPath } from '@sherpa/data/path/index'
+import { type PopulatedPathData } from '@sherpa/data/path/index'
 import { LayoutProvider } from '../theme'
 import Provider from './Provider'
 import Header from './header'
@@ -8,7 +8,7 @@ import Content from './content'
 import { useResourcesCompletionStore } from './utils'
 
 interface Props {
-  path: PopulatedPath
+  path: PopulatedPathData
 }
 
 const PathComponent = ({ path }: Props) => {
