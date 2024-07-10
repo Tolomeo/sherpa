@@ -2,12 +2,7 @@
 import * as path from 'node:path'
 import * as url from 'node:url'
 import Db, { type Document } from '@seald-io/nedb'
-import {
-  type SerializedPath,
-  type Path,
-  SerializedPathSchema,
-  PathSchema,
-} from './schema'
+import { type Path, PathSchema } from './schema'
 
 const dbFile = path.join(
   path.dirname(url.fileURLToPath(import.meta.url)),
@@ -19,7 +14,7 @@ type Nullable<T> = T | null
 export type PathDocument = Document<Path>
 
 class PathsStore {
-  private db: Db<SerializedPath>
+  private db: Db<Path>
 
   constructor() {
     this.db = new Db({ filename: dbFile, autoload: true })
@@ -28,47 +23,19 @@ class PathsStore {
     })
   }
 
-  private populate(serializedPath: Document<SerializedPath>): Document<Path> {
-    const {
-      _id,
-      topic = null,
-      logo = null,
-      hero = null,
-      notes = null,
-      resources = null,
-      main = null,
-      children = null,
-      prev = null,
-      next = null,
-    } = serializedPath
-
-    return {
-      _id,
-      topic: topic!,
-      logo,
-      hero,
-      notes,
-      resources,
-      main,
-      children,
-      prev,
-      next,
-    }
-  }
-
   async getAll() {
-    const docs: Document<SerializedPath>[] = await this.db.findAsync({})
+    const docs: Document<Path>[] = await this.db.findAsync({})
     const paths: PathDocument[] = []
 
     for (const doc of docs) {
-      paths.push(this.populate(doc))
+      paths.push(doc)
     }
 
     return paths
   }
 
-  async insertOne(newPath: SerializedPath) {
-    const newPathValidation = SerializedPathSchema.safeParse(newPath)
+  async insertOne(newPath: Path) {
+    const newPathValidation = PathSchema.safeParse(newPath)
 
     if (!newPathValidation.success) {
       console.error(`Path ${newPath.topic} validation error`)
@@ -99,35 +66,35 @@ class PathsStore {
   }
 
   async findOneByTopic(topic: string) {
-    const doc: Nullable<Document<SerializedPath>> = await this.db.findOneAsync({
+    const doc: Nullable<Document<Path>> = await this.db.findOneAsync({
       topic,
     })
 
     if (!doc) return null
 
-    return this.populate(doc)
+    return doc
   }
 
   async findAll() {
-    const docs: Document<SerializedPath>[] = await this.db.findAsync({})
+    const docs: Document<Path>[] = await this.db.findAsync({})
 
     const all = []
 
     for (const doc of docs) {
-      all.push(this.populate(doc))
+      all.push(doc)
     }
 
     return all
   }
 
   async findAllByTopic(topic: RegExp) {
-    const docs: Document<SerializedPath>[] = await this.db.findAsync({
+    const docs: Document<Path>[] = await this.db.findAsync({
       topic,
     })
     const paths: PathDocument[] = []
 
     for (const doc of docs) {
-      paths.push(this.populate(doc))
+      paths.push(doc)
     }
 
     return paths

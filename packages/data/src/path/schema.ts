@@ -65,30 +65,8 @@ export enum PathTopic {
   'webaccessibility.testing' = 'webaccessibility.testing',
 }
 
-export const SerializedPathSchema = z.object({
+export const PathSchema = z.object({
   topic: z.nativeEnum(PathTopic),
-  logo: z.string().regex(new RegExp('^<svg.+/svg>$')).optional(),
-  hero: z
-    .object({
-      foreground: z
-        .string()
-        .regex(new RegExp('^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$')),
-      background: z.array(
-        z.string().regex(new RegExp('^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$')),
-      ),
-    })
-    .optional(),
-  notes: z.array(z.string()).optional(),
-  resources: z.array(ResourceDataSchema.shape.url).optional(),
-  main: z.array(ResourceDataSchema.shape.url).optional(),
-  next: z.array(z.string()).optional(),
-  prev: z.array(z.string()).optional(),
-  children: z.array(z.nativeEnum(PathTopic)).optional(),
-})
-
-export type SerializedPath = z.infer<typeof SerializedPathSchema>
-
-export const PathSchema = SerializedPathSchema.extend({
   logo: z.string().regex(new RegExp('^<svg.+/svg>$')).nullable(),
   hero: z
     .object({
