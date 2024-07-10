@@ -5,7 +5,6 @@ import Db, { type Document } from '@seald-io/nedb'
 import {
   type SerializedPath,
   type Path,
-  // PathSchema,
   SerializedPathSchema,
   PathSchema,
 } from './schema'
@@ -52,18 +51,6 @@ class PathsStore {
       resources,
       main,
       children,
-      /* children: await (async () => {
-        if (!children) return null
-
-        const childPaths: Path[] = []
-
-        for (const childTopic of children) {
-          const child = await this.findOneByTopic(childTopic)
-          if (child) childPaths.push(child)
-        }
-
-        return childPaths
-      })(), */
       prev,
       next,
     }
@@ -94,7 +81,7 @@ class PathsStore {
     return doc
   }
 
-  async updateOne(id: string, update: SerializedPath) {
+  async updateOne(id: string, update: Path) {
     const validation = PathSchema.safeParse(update)
 
     if (!validation.success) {

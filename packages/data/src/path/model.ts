@@ -83,7 +83,7 @@ const populate = async (path: Path): Promise<PopulatedPath> => {
   }
 
   if (path.children) {
-		populatedPath.children = []
+    populatedPath.children = []
 
     for (const child of path.children) {
       const childPathData = await PathsStore.findOneByTopic(child)
@@ -121,7 +121,7 @@ class PathModel {
     return this.data
   }
 
-  /* private async update(update: Partial<Path>) {
+  private async update(update: Partial<Path>) {
     const data = await this.read()
 
     if (!data) return
@@ -134,7 +134,7 @@ class PathModel {
     })
 
     return this.data
-  } */
+  }
 
   public async exists() {
     return Boolean(await this.read())
@@ -177,14 +177,14 @@ class PathModel {
     return resources
   }
 
-  /* public async change(update: Partial<Path>) {
+  public async change(update: Partial<Path>) {
     const updated = await this.update(update)
 
     if (!updated) return
 
     const { _id, ...data } = updated
     return data
-  } */
+  }
 }
 
 export default PathModel
