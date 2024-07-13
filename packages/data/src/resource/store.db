@@ -1528,3 +1528,4 @@
 {"title":"Learn React 18: The Complete React Developer Course","url":"https://www.youtube.com/watch?v=l4G2MVgXFkw","source":"youtube.com/@envatotuts","type":"basics","_id":"zxnTNzILzT5pnuFz"}
 {"title":"Building a simplified webpack clone","url":"https://lihautan.com/building-a-simplified-webpack-clone/","type":"advanced","source":"lihautan.com","_id":"zzZKjHqANa9vMJ9a"}
 {"$$indexCreated":{"fieldName":"url","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"url","unique":true}}

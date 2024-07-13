@@ -24,15 +24,13 @@ interface StaticProps {
 export const getStaticProps: GetStaticProps<StaticProps> = async (
   _: GetStaticPropsContext,
 ) => {
-  const competitors = await getTopic('competitors')
-
-  if (!competitors) throw new Error('No competitors topic found')
-
-  const populatedCompetitors = await competitors.get(true)
+  const { default: competitors } = await import(
+    '@sherpa/data/json/competitors.json'
+  )
 
   return {
     props: {
-      competitors: populatedCompetitors!,
+      competitors: competitors as PopulatedPathData,
     },
   }
 }

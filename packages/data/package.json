@@ -16,9 +16,7 @@
   },
   "scripts": {
     "prebuild": "shx rm -rf \"dist\"",
-    "build": "run-s build:db build:ts",
-    "build:ts": "tsc",
-    "build:db": "tsx \"./scripts/copy-db.ts\" src dist",
+    "build": "tsx \"./scripts/build.ts\"",
     "dev": "nodemon --watch src --ext ts,db --on-change-only --exec \"npm run build --ignore-scripts\"",
     "lint": "eslint \"src\" \"scripts\"",
     "test:paths": "vitest paths",

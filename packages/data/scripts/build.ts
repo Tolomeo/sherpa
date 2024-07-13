@@ -1,11 +1,14 @@
-// import * as fs from 'node:fs'
-// import * as path from 'node:path'
-import * as util from 'node:util'
-// import { listPaths, readPath } from './paths/read'
+import * as fs from 'node:fs'
+import * as path from 'node:path'
+import * as childProcess from 'node:child_process'
+import { getAll } from '../src/path/model'
+// import * as util from 'node:util'
 // import pathsData from '../src/store/paths'
 // import { listResources, readResources } from './resources/read'
 
-const {
+const srcDir = 'src'
+const outDir = 'dist'
+/* const {
   positionals: [outDir],
 } = util.parseArgs({
   args: process.argv.slice(2),
@@ -16,36 +19,70 @@ if (!outDir) {
   console.error('An output directory must be specified')
   console.error('For example: tsx scripts/build.ts dist\n')
   process.exit(1)
+} */
+
+function findFilesByExtension(dir: string, ext: string) {
+  const results: string[] = []
+
+  function getFilePaths(currentDir: string) {
+    const files = fs.readdirSync(currentDir, { withFileTypes: true })
+
+    for (const file of files) {
+      const filePath = path.join(currentDir, file.name)
+
+      if (file.isDirectory()) {
+        getFilePaths(filePath)
+      } else if (file.isFile() && path.extname(file.name) === ext) {
+        results.push(path.relative(dir, filePath))
+      }
+    }
+  }
+
+  getFilePaths(dir)
+  return results
 }
 
-/* const buildPaths = async () => {
-  const pathsDest = `${outDir}/paths`
-  const topics = await pathsData.getAll()
+const buildDB = () => {
+  const dbfiles = findFilesByExtension(srcDir, '.db')
 
-  fs.mkdirSync(pathsDest, { recursive: true })
+  for (const dbfile of dbfiles) {
+    const dbname = path.basename(dbfile)
+    const dbdir = path.dirname(dbfile)
+
+    fs.mkdirSync(path.join(outDir, dbdir), { recursive: true })
+    fs.copyFileSync(
+      path.join(srcDir, dbdir, dbname),
+      path.join(outDir, dbdir, dbname),
+    )
+  }
+}
+
+const buildTS = () => {
+  childProcess.execSync('tsc', { stdio: 'inherit' })
+}
+
+const buildJSON = async () => {
+  const jsonDist = path.join(outDir, 'json')
+
+  fs.mkdirSync(jsonDist)
+
+  const topics = await getAll()
 
   for (const topic of topics) {
-    const pathDest = path.join(pathsDest, `${topic.topic}.json`)
-    fs.writeFileSync(pathDest, JSON.stringify(topic))
+    const pathData = await topic.get(true)
+
+    fs.writeFileSync(
+      path.join(jsonDist, `${pathData!.topic}.json`),
+      JSON.stringify(pathData),
+      { encoding: 'utf8' },
+    )
   }
-} */
-
-/* const buildResources = async () => {
-  const resourcesDest = `${outDir}/resources`
-  const pathResourcesList = await listResources()
-
-  fs.mkdirSync(resourcesDest, { recursive: true })
-
-  for (const pathResources of pathResourcesList) {
-    const resourceDest = path.join(resourcesDest, `${pathResources}.json`)
-    const resoucesData = readResources(pathResources)
-    fs.writeFileSync(resourceDest, JSON.stringify(resoucesData))
-  }
-} */
+}
 
 ;(async function main() {
-  // await buildResources()
-  // await buildPaths()
+  buildDB()
+  buildTS()
+  await buildJSON()
 })().catch((err) => {
   console.error(err)
   process.exit(1)

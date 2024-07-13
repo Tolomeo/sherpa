@@ -6,10 +6,9 @@ import type {
 } from 'next'
 import Head from 'next/head'
 import {
-  getTopic,
   type PathTopic,
   type PopulatedPathData,
-} from '@sherpa/data/path/index'
+} from '@sherpa/data/path/schema'
 import PathBody from '../../src/path'
 import config from '../../src/config'
 
@@ -18,9 +17,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 interface StaticProps {
-  // topic: (typeof config.paths.topics)[number]
   path: PopulatedPathData
-  // resources: ResourceData[]
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -35,18 +32,12 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
   const topic = params!.pathName as PathTopic
-  const path = await getTopic(topic)
-
-  if (!path) throw new Error(`Path ${topic} not found`)
-
-  const pathData = await path.get(true)
-
-  if (!pathData) throw new Error(`Path ${topic} data not found`)
+  const { default: path } = await import(`@sherpa/data/json/${topic}.json`)
 
   return {
     props: {
       topic,
-      path: pathData,
+      path: path,
     },
   }
 }
