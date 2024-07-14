@@ -2,7 +2,7 @@
 import * as path from 'node:path'
 import * as url from 'node:url'
 import Db, { type Document } from '@seald-io/nedb'
-import { type PathData, PathDataSchema } from './schema'
+import { type PathData, PathDataSchema } from '../../types'
 
 const dbFile = path.join(
   path.dirname(url.fileURLToPath(import.meta.url)),

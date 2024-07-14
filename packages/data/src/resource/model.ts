@@ -1,5 +1,5 @@
+import type { ResourceData } from '../../types'
 import ResourcesStore, { type ResourceDocument } from './store'
-import type { ResourceData } from './schema'
 
 type Maybe<T> = T | undefined
 

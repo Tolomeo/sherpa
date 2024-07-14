@@ -1,5 +1,5 @@
-import { PathTopic } from '@sherpa/data/path/schema'
-import { ResourceType } from '@sherpa/data/resource/schema'
+import { PathTopic } from '@sherpa/data/path'
+import { ResourceType } from '@sherpa/data/resource'
 
 const topics: PathTopic[] = [
   PathTopic.uidesign,

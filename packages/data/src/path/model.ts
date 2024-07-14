@@ -1,7 +1,6 @@
 import ResourcesStore from '../resource/store'
-import type { ResourceData } from '../resource/schema'
+import type { ResourceData, PathData, PopulatedPathData } from '../../types'
 import PathsStore, { type PathDocument } from './store'
-import type { PathData, PopulatedPathData } from './schema'
 
 type Maybe<T> = T | undefined
 
@@ -142,7 +141,9 @@ class PathModel {
 
   public async get(populated?: false): Promise<Maybe<PathData>>
   public async get(populated: true): Promise<Maybe<PopulatedPathData>>
-  public async get(populated?: boolean): Promise<Maybe<PathData | PopulatedPathData>> {
+  public async get(
+    populated?: boolean,
+  ): Promise<Maybe<PathData | PopulatedPathData>> {
     const data = await this.read()
 
     if (!data) return
@@ -159,7 +160,7 @@ class PathModel {
 
     if (!data) return []
 
-    const resources = []
+    const resources: string[] = []
 
     data.main && resources.push(...data.main)
 

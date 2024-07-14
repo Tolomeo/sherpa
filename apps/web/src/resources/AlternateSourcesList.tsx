@@ -1,4 +1,4 @@
-import type { ResourceData } from '@sherpa/data/resource/schema'
+import type { ResourceData } from '@sherpa/data/resource'
 import { Link, Typography, Box, List, ListItem } from '../theme'
 
 interface Props {

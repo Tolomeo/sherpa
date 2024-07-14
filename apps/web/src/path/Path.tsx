@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { type PopulatedPathData } from '@sherpa/data/path/index'
+import { type PopulatedPathData } from '@sherpa/data/path'
 import { LayoutProvider } from '../theme'
 import Provider from './Provider'
 import Header from './header'

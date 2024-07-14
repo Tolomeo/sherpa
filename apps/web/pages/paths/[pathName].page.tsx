@@ -8,7 +8,7 @@ import Head from 'next/head'
 import {
   type PathTopic,
   type PopulatedPathData,
-} from '@sherpa/data/path/schema'
+} from '@sherpa/data/path'
 import PathBody from '../../src/path'
 import config from '../../src/config'
 

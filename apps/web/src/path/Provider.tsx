@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { type PopulatedPathData } from '@sherpa/data/path/schema'
-import { type ResourceData } from '@sherpa/data/resource/schema'
+import { type PopulatedPathData } from '@sherpa/data/path'
+import { type ResourceData } from '@sherpa/data/resource'
 import { useResourcesCompletionStore } from './utils'
 
 interface PathContextValue {

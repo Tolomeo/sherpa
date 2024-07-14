@@ -17,12 +17,11 @@
   "scripts": {
     "prebuild": "shx rm -rf \"dist\"",
     "build": "tsx \"./scripts/build.ts\"",
-    "dev": "nodemon --watch src --ext ts,db --on-change-only --exec \"npm run build --ignore-scripts\"",
-    "lint": "eslint \"src\" \"scripts\"",
+    "dev": "nodemon --watch types --watch src --ext ts,db --on-change-only --exec \"npm run build --ignore-scripts\"",
+    "lint": "eslint \"types\" \"src\" \"scripts\"",
     "test:paths": "vitest paths",
     "test:resources": "vitest resources",
-    "update:resources": "tsx \"scripts/resources/update.ts\"",
-    "temp": "tsx \"scripts/temp.ts\""
+    "update:resources": "tsx \"scripts/resources/update.ts\""
   },
   "devDependencies": {
     "@seald-io/nedb": "^4.0.4",

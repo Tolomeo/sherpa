@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import type { PathTopic } from '@sherpa/data/path/schema'
+import type { PathTopic } from '@sherpa/data/path'
 import { List, ListItem, Link, Typography, Box, Underline } from '../theme'
 import config from '../config'
 

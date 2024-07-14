@@ -2,12 +2,10 @@ import * as fs from 'node:fs'
 import * as path from 'node:path'
 import * as childProcess from 'node:child_process'
 import { getAll } from '../src/path/model'
-// import * as util from 'node:util'
-// import pathsData from '../src/store/paths'
-// import { listResources, readResources } from './resources/read'
 
 const srcDir = 'src'
 const outDir = 'dist'
+
 /* const {
   positionals: [outDir],
 } = util.parseArgs({
@@ -21,7 +19,7 @@ if (!outDir) {
   process.exit(1)
 } */
 
-function findFilesByExtension(dir: string, ext: string) {
+/* function findFilesByExtension(dir: string, ext: string) {
   const results: string[] = []
 
   function getFilePaths(currentDir: string) {
@@ -40,22 +38,7 @@ function findFilesByExtension(dir: string, ext: string) {
 
   getFilePaths(dir)
   return results
-}
-
-const buildDB = () => {
-  const dbfiles = findFilesByExtension(srcDir, '.db')
-
-  for (const dbfile of dbfiles) {
-    const dbname = path.basename(dbfile)
-    const dbdir = path.dirname(dbfile)
-
-    fs.mkdirSync(path.join(outDir, dbdir), { recursive: true })
-    fs.copyFileSync(
-      path.join(srcDir, dbdir, dbname),
-      path.join(outDir, dbdir, dbname),
-    )
-  }
-}
+} */
 
 const buildTS = () => {
   childProcess.execSync('tsc', { stdio: 'inherit' })
@@ -80,7 +63,6 @@ const buildJSON = async () => {
 }
 
 ;(async function main() {
-  buildDB()
   buildTS()
   await buildJSON()
 })().catch((err) => {

@@ -4,7 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { getTopic, type PopulatedPathData } from '@sherpa/data/path/index'
+import { type PopulatedPathData } from '@sherpa/data/path'
 import {
   LayoutProvider,
   LayoutHeader,
