@@ -38,7 +38,6 @@ const resourceTypeToGroupTitle: Record<
   NonNullable<ResourceData['type']>,
   string
 > = {
-  competitor: 'Competitor',
   basics: 'Fundamentals',
   advanced: 'Beyond basics',
   'how-to': 'How do they do it',

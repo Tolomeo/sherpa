@@ -93,7 +93,6 @@ const resourcesTypesOrder: NonNullable<ResourceType>[] = [
 ]
 
 const resourceTypesTitles: Record<NonNullable<ResourceType>, string> = {
-  competitor: 'Competitor',
   basics: 'Fundamentals',
   advanced: 'Beyond basics',
   'how-to': 'How do they do it',
