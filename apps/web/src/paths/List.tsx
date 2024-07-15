@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import type { PathTopic } from '@sherpa/data/path'
+import type { TopicName } from '@sherpa/data/topic'
 import { List, ListItem, Link, Typography, Box, Underline } from '../theme'
 import config from '../config'
 
@@ -18,7 +18,7 @@ const PathsList = ({ paths = config.paths.topics, ...props }: Props) => (
                 <Typography variant="h6" component="span">
                   The{' '}
                   <Underline>
-                    {config.paths.topicsTitles[pathName as PathTopic]}
+                    {config.paths.topicsTitles[pathName as TopicName]}
                   </Underline>{' '}
                   path
                 </Typography>

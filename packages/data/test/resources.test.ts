@@ -1,6 +1,7 @@
 import { describe, test, expect, beforeAll, afterAll } from 'vitest'
-import { getRootPaths } from '../src/path'
-import Resource, { type ResourceData } from '../src/resource'
+import { getRoots } from '../src/topic'
+import type { ResourceData } from '../types/resource'
+import { getUrl } from '../src/resource'
 import { HealthCheck, type HealthCheckStrategy } from '../scripts/healthcheck'
 
 const getResourceHealthCheckStrategy = (
@@ -135,7 +136,7 @@ const getResourceHealthCheckStrategy = (
 }
 
 describe('Resources', async () => {
-  const paths = await getRootPaths()
+  const paths = await getRoots()
   let healthCheck: HealthCheck
 
   beforeAll(() => {
@@ -148,12 +149,14 @@ describe('Resources', async () => {
 
   describe.each(paths)('$topic resources', async (path) => {
     const pathResourceUrls = await path.getResources()
-    const pathResources = pathResourceUrls.map((url) => new Resource(url))
+    const pathResources = await Promise.all(
+      pathResourceUrls.map((url) => getUrl(url)),
+    )
 
     test.each(pathResources)(
       '$url',
       async (resource) => {
-        const resourceData = (await resource.get()) as ResourceData
+        const resourceData = resource!.data
         const resourceHealthCheck = await healthCheck.run(
           resourceData.url,
           getResourceHealthCheckStrategy(resourceData),

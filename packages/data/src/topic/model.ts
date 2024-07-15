@@ -1,27 +1,27 @@
 import ResourcesStore from '../resource/store'
-import type { ResourceData, PathData, PopulatedPathData } from '../../types'
-import PathsStore, { type PathDocument } from './store'
+import type { ResourceData, TopicData, PopulatedTopicData } from '../../types'
+import TopicsStore, { type TopicDocument } from './store'
 
 type Maybe<T> = T | undefined
 
 export const getTopic = async (topic: string) => {
-  const doc = await PathsStore.findOneByTopic(topic)
+  const doc = await TopicsStore.findOneByTopic(topic)
 
   if (!doc) return null
 
-  return new Path(doc)
+  return new Topic(doc)
 }
 
 export const getAll = async () => {
-  const docs = await PathsStore.findAll()
-  const paths = docs.map((p) => new Path(p))
+  const docs = await TopicsStore.findAll()
+  const paths = docs.map((p) => new Topic(p))
 
   return paths
 }
 
-export const getRootPaths = async () => {
-  const docs = await PathsStore.findAllByTopic(/^[^.]+$/)
-  const paths = docs.map((p) => new Path(p))
+export const getRoots = async () => {
+  const docs = await TopicsStore.findAllByTopic(/^[^.]+$/)
+  const paths = docs.map((p) => new Topic(p))
 
   return paths
 }
@@ -31,8 +31,8 @@ export interface ResourceGroup {
   resources: ResourceData[]
 }
 
-const populate = async (path: PathData): Promise<PopulatedPathData> => {
-  const populatedPath: PopulatedPathData = {
+const populate = async (path: TopicData): Promise<PopulatedTopicData> => {
+  const populatedPath: PopulatedTopicData = {
     ...path,
     main: null,
     resources: null,
@@ -85,7 +85,7 @@ const populate = async (path: PathData): Promise<PopulatedPathData> => {
     populatedPath.children = []
 
     for (const child of path.children) {
-      const childPathData = await PathsStore.findOneByTopic(child)
+      const childPathData = await TopicsStore.findOneByTopic(child)
 
       if (!childPathData) throw new Error(`Child path ${child} not found`)
 
@@ -96,15 +96,15 @@ const populate = async (path: PathData): Promise<PopulatedPathData> => {
   return populatedPath
 }
 
-class Path {
-  data: PathDocument
+class Topic {
+  data: TopicDocument
 
-  constructor(path: PathDocument) {
+  constructor(path: TopicDocument) {
     this.data = path
   }
 
   private async read() {
-    const data = await PathsStore.findOneByTopic(this.topic)
+    const data = await TopicsStore.findOneByTopic(this.topic)
 
     if (!data) {
       throw new Error(`Path ${this.topic} data not found`)
@@ -115,26 +115,26 @@ class Path {
     return this.data
   }
 
-  private async update(update: Partial<PathData>) {
-    const { _id: id, ...path } = data
+  private async update(update: Partial<TopicData>) {
+    const { _id: id, ...path } = this.data
 
-    this.data = await PathsStore.updateOne(id, {
+    this.data = await TopicsStore.updateOne(id, {
       ...path,
       ...update,
     })
 
-    return this.read()
+    return this.data
   }
 
   public get topic() {
     return this.data.topic
   }
 
-  public async get(populated?: false): Promise<Maybe<PathData>>
-  public async get(populated: true): Promise<Maybe<PopulatedPathData>>
+  public async get(populated?: false): Promise<Maybe<TopicData>>
+  public async get(populated: true): Promise<Maybe<PopulatedTopicData>>
   public async get(
     populated?: boolean,
-  ): Promise<Maybe<PathData | PopulatedPathData>> {
+  ): Promise<Maybe<TopicData | PopulatedTopicData>> {
     const data = await this.read()
 
     const { _id, ...pathData } = data
@@ -170,7 +170,7 @@ class Path {
     return resources
   }
 
-  public async change(update: Partial<PathData>) {
+  public async change(update: Partial<TopicData>) {
     const updated = await this.update(update)
 
     const { _id, ...data } = updated
@@ -178,4 +178,4 @@ class Path {
   }
 }
 
-export default Path
+export default Topic

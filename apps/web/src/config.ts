@@ -1,26 +1,26 @@
-import { PathTopic } from '@sherpa/data/path'
+import { TopicName } from '@sherpa/data/topic'
 import { ResourceType } from '@sherpa/data/resource'
 
-const topics: PathTopic[] = [
-  PathTopic.uidesign,
-  PathTopic.htmlcss,
-  PathTopic.webaccessibility,
-  PathTopic.javascript,
-  PathTopic.typescript,
-  PathTopic.react,
-  PathTopic.next,
-  PathTopic.npm,
-  PathTopic.node,
-  PathTopic.commandline,
-  PathTopic.docker,
-  PathTopic.git,
-  PathTopic.python,
-  PathTopic.regex,
-  PathTopic.neovim,
-  PathTopic.lua,
+const topics: TopicName[] = [
+  TopicName.uidesign,
+  TopicName.htmlcss,
+  TopicName.webaccessibility,
+  TopicName.javascript,
+  TopicName.typescript,
+  TopicName.react,
+  TopicName.next,
+  TopicName.npm,
+  TopicName.node,
+  TopicName.commandline,
+  TopicName.docker,
+  TopicName.git,
+  TopicName.python,
+  TopicName.regex,
+  TopicName.neovim,
+  TopicName.lua,
 ]
 
-const topicsTitles: Record<PathTopic, string> = {
+const topicsTitles: Record<TopicName, string> = {
   competitors: 'Alternatives',
   'commandline.cliapps': 'CLI apps',
   'commandline.dotfiles': 'Dotfiles',

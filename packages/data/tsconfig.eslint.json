@@ -5,5 +5,5 @@
 		"rootDirs": ["types", "src", "scripts", "test"]
   },
   "include": ["env.d.ts", "types/**/*.ts", "src/**/*.ts", "scripts/**/*.ts", "test/**/*.ts"],
-  "exclude": ["node_modules", "dist"],
+  "exclude": ["node_modules", "dist"]
 }

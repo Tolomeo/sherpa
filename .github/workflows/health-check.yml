@@ -21,7 +21,7 @@ jobs:
       - name: Playwright
         run: npx playwright install
       - name: Path resources healthcheck
-        run: npm run test:resources --workspace=@sherpa/data
+        run: npm run test:topics --workspace=@sherpa/data
         env:
           ZENSCRAPE_API_KEY: ${{ secrets.ZENSCRAPE_API_KEY }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}

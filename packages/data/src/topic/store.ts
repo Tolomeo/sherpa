@@ -2,7 +2,7 @@
 import * as path from 'node:path'
 import * as url from 'node:url'
 import Db, { type Document } from '@seald-io/nedb'
-import { type PathData, PathDataSchema } from '../../types'
+import { type TopicData, TopicDataSchema } from '../../types'
 
 const dbFile = path.join(
   path.dirname(url.fileURLToPath(import.meta.url)),
@@ -11,10 +11,10 @@ const dbFile = path.join(
 
 type Nullable<T> = T | null
 
-export type PathDocument = Document<PathData>
+export type TopicDocument = Document<TopicData>
 
-class PathsStore {
-  private db: Db<PathData>
+class TopicsDb {
+  private db: Db<TopicData>
 
   constructor() {
     this.db = new Db({ filename: dbFile, autoload: true })
@@ -24,18 +24,13 @@ class PathsStore {
   }
 
   async getAll() {
-    const docs: Document<PathData>[] = await this.db.findAsync({})
-    const paths: PathDocument[] = []
+    const docs: TopicDocument[] = await this.db.findAsync({})
 
-    for (const doc of docs) {
-      paths.push(doc)
-    }
-
-    return paths
+    return docs
   }
 
-  async insertOne(newPath: PathData) {
-    const newPathValidation = PathDataSchema.safeParse(newPath)
+  async insertOne(newPath: TopicData) {
+    const newPathValidation = TopicDataSchema.safeParse(newPath)
 
     if (!newPathValidation.success) {
       console.error(`Path ${newPath.topic} validation error`)
@@ -48,8 +43,8 @@ class PathsStore {
     return doc
   }
 
-  async updateOne(id: string, update: PathData) {
-    const validation = PathDataSchema.safeParse(update)
+  async updateOne(id: string, update: TopicData) {
+    const validation = TopicDataSchema.safeParse(update)
 
     if (!validation.success) {
       console.error(`Path ${update.topic} validation error`)
@@ -66,7 +61,7 @@ class PathsStore {
   }
 
   async findOneByTopic(topic: string) {
-    const doc: Nullable<Document<PathData>> = await this.db.findOneAsync({
+    const doc: Nullable<TopicDocument> = await this.db.findOneAsync({
       topic,
     })
 
@@ -76,22 +71,16 @@ class PathsStore {
   }
 
   async findAll() {
-    const docs: Document<PathData>[] = await this.db.findAsync({})
+    const docs: TopicDocument[] = await this.db.findAsync({})
 
-    const all = []
-
-    for (const doc of docs) {
-      all.push(doc)
-    }
-
-    return all
+    return docs
   }
 
   async findAllByTopic(topic: RegExp) {
-    const docs: Document<PathData>[] = await this.db.findAsync({
+    const docs: TopicDocument[] = await this.db.findAsync({
       topic,
     })
-    const paths: PathDocument[] = []
+    const paths: TopicDocument[] = []
 
     for (const doc of docs) {
       paths.push(doc)
@@ -101,4 +90,4 @@ class PathsStore {
   }
 }
 
-export default new PathsStore()
+export default new TopicsDb()

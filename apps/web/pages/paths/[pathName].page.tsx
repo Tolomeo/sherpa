@@ -5,10 +5,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import {
-  type PathTopic,
-  type PopulatedPathData,
-} from '@sherpa/data/path'
+import { type TopicName, type PopulatedTopicData } from '@sherpa/data/topic'
 import PathBody from '../../src/path'
 import config from '../../src/config'
 
@@ -17,7 +14,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 interface StaticProps {
-  path: PopulatedPathData
+  path: PopulatedTopicData
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -31,7 +28,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
-  const topic = params!.pathName as PathTopic
+  const topic = params!.pathName as TopicName
   const { default: path } = await import(`@sherpa/data/json/${topic}.json`)
 
   return {

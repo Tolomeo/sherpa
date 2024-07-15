@@ -1,7 +1,7 @@
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 import * as childProcess from 'node:child_process'
-import { getAll } from '../src/path/model'
+import { getAll } from '../src/topic/model'
 
 const srcDir = 'src'
 const outDir = 'dist'

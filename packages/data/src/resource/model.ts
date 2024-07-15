@@ -43,7 +43,7 @@ export const getAllByUrl = async (...urls: string[]) => {
 }
 
 class Resource {
-  private data: ResourceDocument
+  public data: ResourceDocument
 
   constructor(resource: ResourceDocument) {
     this.data = resource

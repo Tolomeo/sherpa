@@ -1,9 +1,9 @@
 import { describe, test, expect } from 'vitest'
-import { getRootPaths } from '../src/path'
+import { getRoots } from '../src/topic'
 import { getAll } from '../src/resource'
 
 describe('Paths', async () => {
-  const rootPaths = await getRootPaths()
+  const rootPaths = await getRoots()
 
   test('Use all available resources', async () => {
     const allResources = await getAll()

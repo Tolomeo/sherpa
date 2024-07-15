@@ -18,7 +18,7 @@
     "prebuild": "shx rm -rf \"dist\"",
     "build": "tsx \"./scripts/build.ts\"",
     "lint": "eslint \"types\" \"src\" \"scripts\"",
-    "test:paths": "vitest paths",
+    "test:topics": "vitest topics",
     "test:resources": "vitest resources",
     "update:resources": "tsx \"scripts/resources/update.ts\""
   },
