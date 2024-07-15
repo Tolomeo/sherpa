@@ -29,7 +29,7 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
   const topic = params!.pathName as TopicName
-  const { default: path } = await import(`@sherpa/data/json/${topic}.json`)
+	const path = require(`@sherpa/data/json/${topic}.json`)
 
   return {
     props: {

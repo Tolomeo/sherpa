@@ -24,9 +24,7 @@ interface StaticProps {
 export const getStaticProps: GetStaticProps<StaticProps> = async (
   _: GetStaticPropsContext,
 ) => {
-  const { default: competitors } = await import(
-    '@sherpa/data/json/competitors.json'
-  )
+  const competitors = require('@sherpa/data/json/competitors.json')
 
   return {
     props: {
