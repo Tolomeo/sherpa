@@ -47,7 +47,7 @@ const buildTS = () => {
 const buildJSON = async () => {
   const jsonDist = path.join(outDir, 'json')
 
-  fs.mkdirSync(jsonDist)
+  if (!fs.existsSync(jsonDist)) fs.mkdirSync(jsonDist)
 
   const topics = await getAll()
 

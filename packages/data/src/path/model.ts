@@ -9,19 +9,19 @@ export const getTopic = async (topic: string) => {
 
   if (!doc) return null
 
-  return new PathModel(doc)
+  return new Path(doc)
 }
 
 export const getAll = async () => {
   const docs = await PathsStore.findAll()
-  const paths = docs.map((p) => new PathModel(p))
+  const paths = docs.map((p) => new Path(p))
 
   return paths
 }
 
 export const getRootPaths = async () => {
   const docs = await PathsStore.findAllByTopic(/^[^.]+$/)
-  const paths = docs.map((p) => new PathModel(p))
+  const paths = docs.map((p) => new Path(p))
 
   return paths
 }
@@ -96,35 +96,26 @@ const populate = async (path: PathData): Promise<PopulatedPathData> => {
   return populatedPath
 }
 
-class PathModel {
-  topic: string
+class Path {
+  data: PathDocument
 
-  data: Maybe<PathDocument>
-
-  constructor(path: string | PathDocument) {
-    if (typeof path === 'string') {
-      this.topic = path
-    } else {
-      this.topic = path.topic
-      this.data = path
-    }
+  constructor(path: PathDocument) {
+    this.data = path
   }
 
   private async read() {
-    if (this.data) return this.data
-
     const data = await PathsStore.findOneByTopic(this.topic)
 
-    if (data) this.data = data
+    if (!data) {
+      throw new Error(`Path ${this.topic} data not found`)
+    }
+
+    this.data = data
 
     return this.data
   }
 
   private async update(update: Partial<PathData>) {
-    const data = await this.read()
-
-    if (!data) return
-
     const { _id: id, ...path } = data
 
     this.data = await PathsStore.updateOne(id, {
@@ -132,11 +123,11 @@ class PathModel {
       ...update,
     })
 
-    return this.data
+    return this.read()
   }
 
-  public async exists() {
-    return Boolean(await this.read())
+  public get topic() {
+    return this.data.topic
   }
 
   public async get(populated?: false): Promise<Maybe<PathData>>
@@ -145,8 +136,6 @@ class PathModel {
     populated?: boolean,
   ): Promise<Maybe<PathData | PopulatedPathData>> {
     const data = await this.read()
-
-    if (!data) return
 
     const { _id, ...pathData } = data
 
@@ -169,7 +158,10 @@ class PathModel {
     if (!data.children) return resources
 
     for (const topic of data.children) {
-      const child = new PathModel(topic)
+      const child = await getTopic(topic)
+
+      if (!child) throw new Error(`Child path ${topic} data not found`)
+
       const childResources = await child.getResources()
 
       resources.push(...childResources)
@@ -181,11 +173,9 @@ class PathModel {
   public async change(update: Partial<PathData>) {
     const updated = await this.update(update)
 
-    if (!updated) return
-
     const { _id, ...data } = updated
     return data
   }
 }
 
-export default PathModel
+export default Path

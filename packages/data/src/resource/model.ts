@@ -1,27 +1,35 @@
 import type { ResourceData } from '../../types'
 import ResourcesStore, { type ResourceDocument } from './store'
 
-type Maybe<T> = T | undefined
-
 // type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
 
 // type ResourceData = PartialBy<ResourceDocument, '_id'>
+
 export const getAll = async () => {
   const docs = await ResourcesStore.findAll()
-  const resources = docs.map((d) => new ResourceModel(d))
+  const resources = docs.map((d) => new Resource(d))
 
   return resources
 }
 
+//TODO: validate url
+export const getUrl = async (url: string) => {
+  const doc = await ResourcesStore.findOneByUrl(url)
+
+  if (!doc) return null
+
+  return new Resource(doc)
+}
+
 export const getAllByType = async (type: string) => {
   const docs = await ResourcesStore.findAll({ type })
-  const resources = docs.map((d) => new ResourceModel(d))
+  const resources = docs.map((d) => new Resource(d))
 
   return resources
 }
 
 export const getAllByUrl = async (...urls: string[]) => {
-  const docs = []
+  const docs: ResourceDocument[] = []
 
   for (const url of urls) {
     const doc = await ResourcesStore.findOneByUrl(url)
@@ -31,69 +39,52 @@ export const getAllByUrl = async (...urls: string[]) => {
     docs.push(doc)
   }
 
-  return docs.map((doc) => new ResourceModel(doc))
+  return docs.map((doc) => new Resource(doc))
 }
 
-class ResourceModel {
-  url: string
+class Resource {
+  private data: ResourceDocument
 
-  private data: Maybe<ResourceDocument>
-
-  constructor(resource: string | ResourceDocument) {
-    if (typeof resource === 'string') {
-      this.url = resource
-    } else {
-      this.url = resource.url
-      this.data = resource
-    }
+  constructor(resource: ResourceDocument) {
+    this.data = resource
   }
 
   private async read() {
-    if (this.data) return this.data
-
     const data = await ResourcesStore.findOneByUrl(this.url)
 
-    if (data) this.data = data
+    if (!data) throw new Error(`Resource ${this.url} data not found`)
+
+    this.data = data
 
     return this.data
   }
 
   private async update(update: Partial<ResourceData>) {
-    const data = await this.read()
-
-    if (!data) return
-
-    const { _id: id, ...resource } = data
+    const { _id: id, ...resource } = this.data
 
     this.data = await ResourcesStore.updateOne(id, {
       ...resource,
       ...update,
     })
 
-    return this.data
+    return this.read()
   }
 
-  public async exists() {
-    return Boolean(await this.read())
+  public get url() {
+    return this.data.url
   }
 
   public async get() {
-    const data = await this.read()
-
-    if (!data) return
-
-    const { _id, ...resourcedata } = data
+    const { _id, ...resourcedata } = this.data
     return resourcedata
   }
 
   public async change(update: Partial<ResourceData>) {
     const updated = await this.update(update)
 
-    if (!updated) return
-
     const { _id, ...resourceData } = updated
     return resourceData
   }
 }
 
-export default ResourceModel
+export default Resource
