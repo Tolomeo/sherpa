@@ -21,9 +21,9 @@ module.exports = {
   },
   ignorePatterns: ['node_modules/', 'dist/'],
   rules: {
+		'no-await-in-loop': 'warn',
     'prefer-named-capture-group': 'off',
     'prettier/prettier': 'warn',
-    'import/no-default-export': 'off',
     'unicorn/filename-case': 'off',
     'eslint-comments/require-description': 'warn',
     'import/no-default-export': 'off',

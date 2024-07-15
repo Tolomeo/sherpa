@@ -1,10 +1,10 @@
 import NextLink from 'next/link'
-import type { Path } from '@sherpa/data/types'
+import type { TopicName } from '@sherpa/data/topic'
 import { List, ListItem, Link, Typography, Box, Underline } from '../theme'
 import config from '../config'
 
 type Props = Omit<React.ComponentProps<typeof List>, 'children'> & {
-  paths?: Path['topic'][]
+  paths?: string[]
 }
 
 const PathsList = ({ paths = config.paths.topics, ...props }: Props) => (
@@ -17,7 +17,9 @@ const PathsList = ({ paths = config.paths.topics, ...props }: Props) => (
               <Link>
                 <Typography variant="h6" component="span">
                   The{' '}
-                  <Underline>{config.paths.topicsTitles[pathName]}</Underline>{' '}
+                  <Underline>
+                    {config.paths.topicsTitles[pathName as TopicName]}
+                  </Underline>{' '}
                   path
                 </Typography>
               </Link>

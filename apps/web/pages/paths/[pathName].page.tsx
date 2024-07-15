@@ -5,7 +5,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import type { Path, Resource } from '@sherpa/data/types'
+import { type TopicName, type PopulatedTopicData } from '@sherpa/data/topic'
 import PathBody from '../../src/path'
 import config from '../../src/config'
 
@@ -14,9 +14,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 interface StaticProps {
-  topic: (typeof config.paths.topics)[number]
-  path: Path
-  resources: Resource[]
+  path: PopulatedTopicData
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -27,29 +25,23 @@ export const getStaticPaths: GetStaticPaths = () => {
   return { paths: staticPaths, fallback: false }
 }
 
-export const getStaticProps: GetStaticProps<StaticProps, Params> = ({
+export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
   params,
 }) => {
-  const topic = params!.pathName as (typeof config.paths.topics)[number]
-  // eslint-disable-next-line @typescript-eslint/no-var-requires -- await import returns a js module instead of json, require works
-  const path = require(`@sherpa/data/paths/${topic}.json`) as Path
-  // eslint-disable-next-line @typescript-eslint/no-var-requires -- await import returns a js module instead of json, require works
-  const resources = require(
-    `@sherpa/data/resources/${topic}.json`,
-  ) as Resource[]
+  const topic = params!.pathName as TopicName
+	const path = require(`@sherpa/data/json/${topic}.json`)
 
   return {
     props: {
       topic,
-      path,
-      resources,
+      path: path,
     },
   }
 }
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export default function PathPage({ path, resources }: Props) {
+export default function PathPage({ path }: Props) {
   return (
     <>
       <Head>
@@ -85,7 +77,7 @@ export default function PathPage({ path, resources }: Props) {
         } path`}</title>
       </Head>
 
-      <PathBody path={path} resources={resources} />
+      <PathBody path={path} />
     </>
   )
 }

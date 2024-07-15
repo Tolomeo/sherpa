@@ -3,9 +3,8 @@
   "version": "0.4.0",
   "private": true,
   "type": "module",
-  "main": "./dist/index.js",
+	"main": "./dist/index.js",
   "exports": {
-    ".": "./dist/index.js",
     "./*": "./dist/*"
   },
   "typesVersions": {
@@ -17,17 +16,14 @@
   },
   "scripts": {
     "prebuild": "shx rm -rf \"dist\"",
-    "build": "run-s build:ts build:json",
-    "build:ts": "tsc",
-    "build:json": "tsx \"./scripts/build.ts\" dist",
-    "dev": "run-p dev:ts dev:json",
-    "dev:ts": "nodemon --watch src --ext ts --on-change-only --exec \"npm run build:ts\"",
-    "dev:json": "nodemon --watch src --ext json --on-change-only --exec \"npm run build:json\"",
-    "lint": "eslint \"src\" \"scripts\"",
-    "test:paths": "vitest paths",
-    "test:resources": "vitest resources"
+    "build": "tsx \"./scripts/build.ts\"",
+    "lint": "eslint \"types\" \"src\" \"scripts\"",
+    "test:topics": "vitest topics",
+    "test:resources": "vitest resources",
+    "update:resources": "tsx \"scripts/resources/update.ts\""
   },
   "devDependencies": {
+    "@seald-io/nedb": "^4.0.4",
     "@sherpa/configs": "*",
     "@types/he": "^1.2.3",
     "ajv": "^8.11.0",
@@ -40,9 +36,13 @@
     "html-format": "^1.1.6",
     "nodemon": "^3.0.3",
     "npm-run-all2": "^6.1.1",
+    "open": "^10.1.0",
     "playwright": "^1.41.1",
     "shx": "^0.3.4",
     "tsx": "^4.7.0",
     "vitest": "^1.2.2"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
   }
 }

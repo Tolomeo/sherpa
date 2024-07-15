@@ -1,10 +1,12 @@
 import * as fs from 'node:fs'
 import * as path from 'node:path'
-import * as util from 'node:util'
-import { listPaths, readPath } from './paths/read'
-import { listResources, readResources } from './resources/read'
+import * as childProcess from 'node:child_process'
+import { getAll } from '../src/topic/model'
 
-const {
+const srcDir = 'src'
+const outDir = 'dist'
+
+/* const {
   positionals: [outDir],
 } = util.parseArgs({
   args: process.argv.slice(2),
@@ -13,39 +15,56 @@ const {
 
 if (!outDir) {
   console.error('An output directory must be specified')
-  console.error('For example: tsx scripts/build.ts dist')
+  console.error('For example: tsx scripts/build.ts dist\n')
   process.exit(1)
-}
+} */
 
-const buildPaths = () => {
-  const pathsDest = `${outDir}/paths`
-  const pathsList = listPaths()
+/* function findFilesByExtension(dir: string, ext: string) {
+  const results: string[] = []
 
-  fs.mkdirSync(pathsDest, { recursive: true })
+  function getFilePaths(currentDir: string) {
+    const files = fs.readdirSync(currentDir, { withFileTypes: true })
 
-  for (const pathName of pathsList) {
-    const pathDest = path.join(pathsDest, `${pathName}.json`)
-    const pathData = readPath(pathName)
-    fs.writeFileSync(pathDest, JSON.stringify(pathData))
+    for (const file of files) {
+      const filePath = path.join(currentDir, file.name)
+
+      if (file.isDirectory()) {
+        getFilePaths(filePath)
+      } else if (file.isFile() && path.extname(file.name) === ext) {
+        results.push(path.relative(dir, filePath))
+      }
+    }
   }
+
+  getFilePaths(dir)
+  return results
+} */
+
+const buildTS = () => {
+  childProcess.execSync('tsc', { stdio: 'inherit' })
 }
 
-const buildResources = async () => {
-  const resourcesDest = `${outDir}/resources`
-  const pathResourcesList = await listResources()
+const buildJSON = async () => {
+  const jsonDist = path.join(outDir, 'json')
 
-  fs.mkdirSync(resourcesDest, { recursive: true })
+  if (!fs.existsSync(jsonDist)) fs.mkdirSync(jsonDist)
 
-  for (const pathResources of pathResourcesList) {
-    const resourceDest = path.join(resourcesDest, `${pathResources}.json`)
-    const resoucesData = readResources(pathResources)
-    fs.writeFileSync(resourceDest, JSON.stringify(resoucesData))
+  const topics = await getAll()
+
+  for (const topic of topics) {
+    const pathData = await topic.get(true)
+
+    fs.writeFileSync(
+      path.join(jsonDist, `${pathData!.topic}.json`),
+      JSON.stringify(pathData),
+      { encoding: 'utf8' },
+    )
   }
 }
 
 ;(async function main() {
-  await buildResources()
-  buildPaths()
+  buildTS()
+  await buildJSON()
 })().catch((err) => {
   console.error(err)
   process.exit(1)

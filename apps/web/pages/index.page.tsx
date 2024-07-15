@@ -4,7 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import type { Resource } from '@sherpa/data/types'
+import { type PopulatedTopicData } from '@sherpa/data/topic'
 import {
   LayoutProvider,
   LayoutHeader,
@@ -18,19 +18,17 @@ import { AlternateSourcesList } from '../src/resources'
 import { List as PathsList } from '../src/paths'
 
 interface StaticProps {
-  alternateSources: Resource[]
+  competitors: PopulatedTopicData
 }
 
-export const getStaticProps: GetStaticProps<StaticProps> = (
+export const getStaticProps: GetStaticProps<StaticProps> = async (
   _: GetStaticPropsContext,
 ) => {
-  const alternateSources =
-    // eslint-disable-next-line @typescript-eslint/no-var-requires -- await import returns a js module instead of json, require works
-    require('@sherpa/data/resources/alternatives.json') as Resource[]
+  const competitors = require('@sherpa/data/json/competitors.json')
 
   return {
     props: {
-      alternateSources,
+      competitors: competitors as PopulatedTopicData,
     },
   }
 }
@@ -65,7 +63,7 @@ const PageHead = () => (
   </Head>
 )
 
-export default function Home({ alternateSources }: Props) {
+export default function Home({ competitors }: Props) {
   return (
     <>
       <PageHead />
@@ -123,9 +121,11 @@ export default function Home({ alternateSources }: Props) {
                   at other similar projects.
                 </Typography>
               </Box>
-              <Box py={2}>
-                <AlternateSourcesList resources={alternateSources} />
-              </Box>
+              {competitors.main && (
+                <Box py={2}>
+                  <AlternateSourcesList resources={competitors.main} />
+                </Box>
+              )}
               <Box py={2}>
                 <Typography variant="body1" component="p">
                   And many others! <br /> All it takes is the effort to search

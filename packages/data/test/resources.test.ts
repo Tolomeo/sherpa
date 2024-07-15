@@ -1,12 +1,11 @@
 import { describe, test, expect, beforeAll, afterAll } from 'vitest'
-import { listPaths } from '../scripts/paths/read'
-import { readResources } from '../scripts/resources/read'
-import type { Resource } from '../src'
-import type { HealthCheckStrategy } from '../scripts/healthcheck'
-import { HealthCheck } from '../scripts/healthcheck'
+import { getRoots } from '../src/topic'
+import type { ResourceData } from '../types/resource'
+import { getUrl } from '../src/resource'
+import { HealthCheck, type HealthCheckStrategy } from '../scripts/healthcheck'
 
 const getResourceHealthCheckStrategy = (
-  resource: Resource,
+  resource: ResourceData,
 ): HealthCheckStrategy => {
   // checking if it is a downloadable resource
   // so far only PDFs
@@ -136,7 +135,8 @@ const getResourceHealthCheckStrategy = (
   }
 }
 
-describe('Resources', () => {
+describe('Resources', async () => {
+  const topics = await getRoots()
   let healthCheck: HealthCheck
 
   beforeAll(() => {
@@ -147,24 +147,27 @@ describe('Resources', () => {
     await healthCheck.teardown()
   })
 
-  // HACK: taking only first level paths
-  const paths = listPaths().filter((path) => path.split('.').length === 1)
+  describe.each(topics)('$topic resources', async (topic) => {
+    const pathResourceUrls = await topic.getResources()
+    const pathResources = await Promise.all(
+      pathResourceUrls.map((url) => getUrl(url)),
+    )
 
-  describe.each(paths)('%s resources', (path) => {
-    const resources = readResources(path)
-
-    test.each(resources)(
+    test.each(pathResources)(
       '$url',
       async (resource) => {
+        const resourceData = resource!.data
         const resourceHealthCheck = await healthCheck.run(
-          resource.url,
-          getResourceHealthCheckStrategy(resource),
+          resourceData.url,
+          getResourceHealthCheckStrategy(resourceData),
         )
 
         expect(resourceHealthCheck).toMatchObject({
-          url: resource.url,
+          url: resourceData.url,
           success: true,
-          data: { title: expect.stringContaining(resource.title) as string },
+          data: {
+            title: expect.stringContaining(resourceData.title) as string,
+          },
         })
       },
       150_000,
