@@ -12,7 +12,7 @@ import {
   Underline,
 } from '../../theme'
 import { List as PathsList } from '../../paths'
-import { groupResourcesByType, sortResources } from '../utils'
+import { groupResourcesByType } from '../utils'
 import { usePathContext } from '../Provider'
 import OrderedResources from './OrderedResources'
 import UnorderedResources from './UnorderedResources'
@@ -26,7 +26,7 @@ const PathContent = () => {
 
     return groupResourcesByType(path.resources).map(({ type, resources }) => ({
       type,
-      resources: sortResources(resources),
+      resources,
     }))
   }, [path.resources])
 

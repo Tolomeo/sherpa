@@ -136,7 +136,7 @@ const getResourceHealthCheckStrategy = (
 }
 
 describe('Resources', async () => {
-  const paths = await getRoots()
+  const topics = await getRoots()
   let healthCheck: HealthCheck
 
   beforeAll(() => {
@@ -147,8 +147,8 @@ describe('Resources', async () => {
     await healthCheck.teardown()
   })
 
-  describe.each(paths)('$topic resources', async (path) => {
-    const pathResourceUrls = await path.getResources()
+  describe.each(topics)('$topic resources', async (topic) => {
+    const pathResourceUrls = await topic.getResources()
     const pathResources = await Promise.all(
       pathResourceUrls.map((url) => getUrl(url)),
     )

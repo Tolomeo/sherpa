@@ -1,16 +1,5 @@
 import { ResourceType, type ResourceData } from '@sherpa/data/resource'
 
-export const sortResources = (resources: ResourceData[]) =>
-  [...resources].sort((resourceA, resourceB) => {
-    const titleA = resourceA.title.toUpperCase()
-    const titleB = resourceB.title.toUpperCase()
-
-    if (titleA > titleB) return 1
-    else if (titleA < titleB) return -1
-
-    return 0
-  })
-
 export type ResourcesTypeGroups = Record<
   NonNullable<ResourceData['type']>,
   {
