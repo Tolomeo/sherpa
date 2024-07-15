@@ -17,8 +17,6 @@
   "scripts": {
     "prebuild": "shx rm -rf \"dist\"",
     "build": "tsx \"./scripts/build.ts\"",
-    "temp": "tsx \"./scripts/temp.ts\"",
-    "dev": "nodemon --watch types --watch src --ext ts --on-change-only --exec \"npm run build --ignore-scripts\"",
     "lint": "eslint \"types\" \"src\" \"scripts\"",
     "test:paths": "vitest paths",
     "test:resources": "vitest resources",
