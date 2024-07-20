@@ -21,6 +21,14 @@ export const getUrl = async (url: string) => {
   return new Resource(doc)
 }
 
+export const getById = async (id: string) => {
+  const doc = await ResourcesStore.findOne({ _id: id })
+
+  if (!doc) throw new Error(`Resource with id ${id} not found`)
+
+  return new Resource(doc)
+}
+
 export const getAllByType = async (type: string) => {
   const docs = await ResourcesStore.findAll({ type })
   const resources = docs.map((d) => new Resource(d))

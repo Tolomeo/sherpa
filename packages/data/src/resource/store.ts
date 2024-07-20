@@ -43,6 +43,14 @@ class ResourcesStore {
     }
   } */
 
+  async findOne(query: Partial<ResourceDocument>) {
+    const doc = await this.db.findOneAsync(query)
+
+    if (!doc) return null
+
+    return doc
+  }
+
   async findOneByUrl(resourceUrl: string) {
     const doc = await this.db.findOneAsync({ url: resourceUrl })
 
@@ -51,7 +59,10 @@ class ResourcesStore {
     return doc
   }
 
-  async updateOne(id: string, resource: ResourceData): Promise<ResourceDocument> {
+  async updateOne(
+    id: string,
+    resource: ResourceData,
+  ): Promise<ResourceDocument> {
     const resourceValidation = ResourceDataSchema.safeParse(resource)
 
     if (!resourceValidation.success) {

@@ -15,6 +15,6 @@ export const ResourceDataSchema = z.object({
   url: z.string().url(),
   type: z.nativeEnum(ResourceType),
   source: z.string().min(2),
-})
+}).strict()
 
 export type ResourceData = z.infer<typeof ResourceDataSchema>

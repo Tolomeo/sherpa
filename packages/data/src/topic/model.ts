@@ -1,8 +1,6 @@
-import ResourcesStore from '../resource/store'
+import { getById } from '../resource'
 import type { ResourceData, TopicData, PopulatedTopicData } from '../../types'
 import TopicsStore, { type TopicDocument } from './store'
-
-type Maybe<T> = T | undefined
 
 export const getTopic = async (topic: string) => {
   const doc = await TopicsStore.findOneByTopic(topic)
@@ -43,14 +41,9 @@ const populate = async (path: TopicData): Promise<PopulatedTopicData> => {
     populatedPath.main = []
 
     for (const mainUrl of path.main) {
-      const resourceDoc = await ResourcesStore.findOneByUrl(mainUrl)
+      const resource = await getById(mainUrl)
 
-      if (!resourceDoc)
-        throw new Error(`Path "${path.topic}" resource ${mainUrl} not found`)
-
-      const { _id, ...resourceData } = resourceDoc
-
-      populatedPath.main.push(resourceData)
+      populatedPath.main.push(await resource.get())
     }
   }
 
@@ -58,27 +51,10 @@ const populate = async (path: TopicData): Promise<PopulatedTopicData> => {
     populatedPath.resources = []
 
     for (const resourceUrl of path.resources) {
-      const resourceDoc = await ResourcesStore.findOneByUrl(resourceUrl)
+      const resource = await getById(resourceUrl)
 
-      if (!resourceDoc)
-        throw new Error(
-          `Path "${path.topic}" resource ${resourceUrl} not found`,
-        )
-
-      const { _id, ...resourceData } = resourceDoc
-
-      populatedPath.resources.push(resourceData)
+      populatedPath.resources.push(await resource.get())
     }
-
-    /* populatedPath.resources.sort((resourceA, resourceB) => {
-      const titleA = resourceA.title.toUpperCase()
-      const titleB = resourceB.title.toUpperCase()
-
-      if (titleA > titleB) return 1
-      else if (titleA < titleB) return -1
-
-      return 0
-    }) */
   }
 
   if (path.children) {
@@ -130,11 +106,11 @@ class Topic {
     return this.data.topic
   }
 
-  public async get(populated?: false): Promise<Maybe<TopicData>>
-  public async get(populated: true): Promise<Maybe<PopulatedTopicData>>
+  public async get(populated?: false): Promise<TopicData>
+  public async get(populated: true): Promise<PopulatedTopicData>
   public async get(
     populated?: boolean,
-  ): Promise<Maybe<TopicData | PopulatedTopicData>> {
+  ): Promise<TopicData | PopulatedTopicData> {
     const data = await this.read()
 
     const { _id, ...pathData } = data
