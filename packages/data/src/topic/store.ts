@@ -60,6 +60,14 @@ class TopicsDb {
     }
   }
 
+	async findOne(query: Partial<TopicDocument>) {
+		const doc : Nullable<TopicDocument> = await this.db.findOneAsync(query)
+
+    if (!doc) return null
+
+    return doc
+	}
+
   async findOneByTopic(topic: string) {
     const doc: Nullable<TopicDocument> = await this.db.findOneAsync({
       topic,

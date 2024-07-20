@@ -2,14 +2,6 @@ import { getById } from '../resource'
 import type { ResourceData, TopicData, PopulatedTopicData } from '../../types'
 import TopicsStore, { type TopicDocument } from './store'
 
-export const getTopic = async (topic: string) => {
-  const doc = await TopicsStore.findOneByTopic(topic)
-
-  if (!doc) return null
-
-  return new Topic(doc)
-}
-
 export const getAll = async () => {
   const docs = await TopicsStore.findAll()
   const paths = docs.map((p) => new Topic(p))
@@ -17,11 +9,19 @@ export const getAll = async () => {
   return paths
 }
 
-export const getRoots = async () => {
+export const getParents = async () => {
   const docs = await TopicsStore.findAllByTopic(/^[^.]+$/)
   const paths = docs.map((p) => new Topic(p))
 
   return paths
+}
+
+export const getByName = async (topic: string) => {
+  const doc = await TopicsStore.findOne({ topic })
+
+  if (!doc) throw new Error(`Topic named ${topic} not found`)
+
+  return new Topic(doc)
 }
 
 export interface ResourceGroup {
@@ -43,7 +43,7 @@ const populate = async (path: TopicData): Promise<PopulatedTopicData> => {
     for (const mainUrl of path.main) {
       const resource = await getById(mainUrl)
 
-      populatedPath.main.push(await resource.get())
+      populatedPath.main.push(resource.get())
     }
   }
 
@@ -53,7 +53,7 @@ const populate = async (path: TopicData): Promise<PopulatedTopicData> => {
     for (const resourceUrl of path.resources) {
       const resource = await getById(resourceUrl)
 
-      populatedPath.resources.push(await resource.get())
+      populatedPath.resources.push(resource.get())
     }
   }
 
@@ -73,13 +73,13 @@ const populate = async (path: TopicData): Promise<PopulatedTopicData> => {
 }
 
 class Topic {
-  data: TopicDocument
+  document: TopicDocument
 
   constructor(path: TopicDocument) {
-    this.data = path
+    this.document = path
   }
 
-  private async read() {
+  /* private async read() {
     const data = await TopicsStore.findOneByTopic(this.topic)
 
     if (!data) {
@@ -89,39 +89,39 @@ class Topic {
     this.data = data
 
     return this.data
-  }
+  } */
 
   private async update(update: Partial<TopicData>) {
-    const { _id: id, ...path } = this.data
+    const { _id: id, ...path } = this.document
 
-    this.data = await TopicsStore.updateOne(id, {
+    this.document = await TopicsStore.updateOne(id, {
       ...path,
       ...update,
     })
 
-    return this.data
+    return this.document
   }
 
   public get topic() {
-    return this.data.topic
+    return this.document.topic
   }
 
-  public async get(populated?: false): Promise<TopicData>
-  public async get(populated: true): Promise<PopulatedTopicData>
-  public async get(
-    populated?: boolean,
-  ): Promise<TopicData | PopulatedTopicData> {
-    const data = await this.read()
+  public get data() {
+    const { _id, ...topicData } = this.document
 
-    const { _id, ...pathData } = data
+    return topicData
+  }
 
-    if (populated) return populate(pathData)
+  public get(populated?: false): TopicData
+  public get(populated: true): Promise<PopulatedTopicData>
+  public get(populated?: boolean): TopicData | Promise<PopulatedTopicData> {
+    if (!populated) return this.data
 
-    return pathData
+    return populate(this.data)
   }
 
   public async getResources(): Promise<string[]> {
-    const data = await this.get()
+    const data = this.get()
 
     if (!data) return []
 
@@ -134,7 +134,7 @@ class Topic {
     if (!data.children) return resources
 
     for (const topic of data.children) {
-      const child = await getTopic(topic)
+      const child = await getByName(topic)
 
       if (!child) throw new Error(`Child path ${topic} data not found`)
 
