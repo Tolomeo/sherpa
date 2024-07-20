@@ -1,5 +1,10 @@
 import { getById } from '../resource'
-import type { ResourceData, TopicData, PopulatedTopicData } from '../../types'
+import type {
+  ResourceData,
+  TopicName,
+  TopicData,
+  PopulatedTopicData,
+} from '../../types'
 import TopicsStore, { type TopicDocument } from './store'
 
 export const getAll = async () => {
@@ -17,7 +22,7 @@ export const getParents = async () => {
 }
 
 export const getByName = async (topic: string) => {
-  const doc = await TopicsStore.findOne({ topic })
+  const doc = await TopicsStore.findOne({ topic: topic as TopicName })
 
   if (!doc) throw new Error(`Topic named ${topic} not found`)
 
@@ -27,49 +32,6 @@ export const getByName = async (topic: string) => {
 export interface ResourceGroup {
   type: ResourceData['type']
   resources: ResourceData[]
-}
-
-const populate = async (path: TopicData): Promise<PopulatedTopicData> => {
-  const populatedPath: PopulatedTopicData = {
-    ...path,
-    main: null,
-    resources: null,
-    children: null,
-  }
-
-  if (path.main) {
-    populatedPath.main = []
-
-    for (const mainUrl of path.main) {
-      const resource = await getById(mainUrl)
-
-      populatedPath.main.push(resource.get())
-    }
-  }
-
-  if (path.resources) {
-    populatedPath.resources = []
-
-    for (const resourceUrl of path.resources) {
-      const resource = await getById(resourceUrl)
-
-      populatedPath.resources.push(resource.get())
-    }
-  }
-
-  if (path.children) {
-    populatedPath.children = []
-
-    for (const child of path.children) {
-      const childPathData = await TopicsStore.findOneByTopic(child)
-
-      if (!childPathData) throw new Error(`Child path ${child} not found`)
-
-      populatedPath.children.push(await populate(childPathData))
-    }
-  }
-
-  return populatedPath
 }
 
 class Topic {
@@ -112,19 +74,50 @@ class Topic {
     return topicData
   }
 
-  public get(populated?: false): TopicData
-  public get(populated: true): Promise<PopulatedTopicData>
-  public get(populated?: boolean): TopicData | Promise<PopulatedTopicData> {
-    if (!populated) return this.data
+  public async populate() {
+    const data = this.data
+    const populatedData: PopulatedTopicData = {
+      ...data,
+      main: null,
+      resources: null,
+      children: null,
+    }
 
-    return populate(this.data)
+    if (data.main) {
+      populatedData.main = []
+
+      for (const mainUrl of data.main) {
+        const resource = await getById(mainUrl)
+
+        populatedData.main.push(resource.data)
+      }
+    }
+
+    if (data.resources) {
+      populatedData.resources = []
+
+      for (const resourceUrl of data.resources) {
+        const resource = await getById(resourceUrl)
+
+        populatedData.resources.push(resource.data)
+      }
+    }
+
+    if (data.children) {
+      populatedData.children = []
+
+      for (const child of data.children) {
+        const childTopic = await getByName(child)
+
+        populatedData.children.push(await childTopic.populate())
+      }
+    }
+
+    return populatedData
   }
 
   public async getResources(): Promise<string[]> {
-    const data = this.get()
-
-    if (!data) return []
-
+    const data = this.data
     const resources: string[] = []
 
     data.main && resources.push(...data.main)

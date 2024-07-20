@@ -52,7 +52,7 @@ const buildJSON = async () => {
   const topics = await getAll()
 
   for (const topic of topics) {
-    const pathData = await topic.get(true)
+    const pathData = await topic.populate()
 
     fs.writeFileSync(
       path.join(jsonDist, `${pathData!.topic}.json`),

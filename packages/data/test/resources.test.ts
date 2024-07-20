@@ -156,7 +156,7 @@ describe('Resources', async () => {
     test.each(pathResources)(
       '$url',
       async (resource) => {
-        const resourceData = resource!.get()
+        const resourceData = resource.data
         const resourceHealthCheck = await healthCheck.run(
           resourceData.url,
           getResourceHealthCheckStrategy(resourceData),

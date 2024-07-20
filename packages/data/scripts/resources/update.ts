@@ -107,13 +107,9 @@ const getResource = async () => {
 }
 
 const updateResource = async (resource: Resource) => {
-  const resourceData = resource.get()
+  const resourceUpdate = { ...resource.data }
 
-  if (!resourceData) return
-
-  const resourceUpdate = { ...resourceData }
-
-  for (const [key, value] of Object.entries(resourceData)) {
+  for (const [key, value] of Object.entries(resource.data)) {
     const valueUpdate = await input(`${key}(${value})`)
 
     if (!valueUpdate) continue
@@ -137,11 +133,7 @@ const updateResource = async (resource: Resource) => {
 
 const update = async (resource: Resource) => {
   while (true) {
-    const resourceData = resource.get()
-
-    if (!resourceData) return
-
-    console.log(`\n${JSON.stringify(resourceData, null, 2)}`)
+    console.log(`\n${JSON.stringify(resource.data, null, 2)}`)
 
     const action = await choice('Choose action', ['open', 'update'])
 

@@ -33,7 +33,7 @@ class Resource {
     this.document = resource
   }
 
-  private async read() {
+  /* private async read() {
     const data = await ResourcesStore.findOneByUrl(this.url)
 
     if (!data) throw new Error(`Resource ${this.url} data not found`)
@@ -41,7 +41,7 @@ class Resource {
     this.document = data
 
     return this.document
-  }
+  } */
 
   private async update(update: Partial<ResourceData>) {
     const { _id: id, ...resource } = this.document
@@ -51,7 +51,7 @@ class Resource {
       ...update,
     })
 
-    return this.read()
+    return this.document
   }
 
   public get id() {
@@ -62,7 +62,7 @@ class Resource {
     return this.document.url
   }
 
-  public get() {
+  public get data() {
     const { _id, ...resourcedata } = this.document
     return resourcedata
   }
