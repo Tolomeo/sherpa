@@ -26,8 +26,6 @@
     "@seald-io/nedb": "^4.0.4",
     "@sherpa/configs": "*",
     "@types/he": "^1.2.3",
-    "ajv": "^8.11.0",
-    "ajv-errors": "^3.0.0",
     "cheerio": "^1.0.0-rc.12",
     "crawlee": "^3.7.2",
     "dotenv": "^16.4.1",
