@@ -9,10 +9,26 @@ const dbFile = path.join(
   'store.db',
 )
 
+type Nullable<T> = T | null
+
+type DocumentQuery<T extends object> = Partial<
+  Document<{
+    [K in keyof T]: T[K] extends string
+      ? string | RegExp
+      : T[K] extends string | null
+        ? string | null | RegExp
+        : T[K]
+  }>
+>
+
+type ResourceDb = Db<ResourceData>
+
 export type ResourceDocument = Document<ResourceData>
 
+export type ResourceDocumentQuery = DocumentQuery<ResourceData>
+
 class ResourcesStore {
-  private db: Db<ResourceData>
+  private db: ResourceDb
 
   constructor() {
     this.db = new Db({ filename: dbFile, autoload: true })
@@ -21,38 +37,14 @@ class ResourcesStore {
     })
   }
 
-  /* private populate(
-    serializedResource: Document<SerializedResource>,
-  ): ResourceDocument {
-    return {
-      ...serializedResource,
-      source: (() => {
-        if (serializedResource.source) return serializedResource.source
+  async findAll(query: ResourceDocumentQuery = {}) {
+    const docs: ResourceDocument[] = await this.db.findAsync(query)
 
-        const source = new URL(serializedResource.url)
-
-        switch (source.hostname) {
-          case 'github.com':
-            return `${source.hostname}/${
-              source.pathname.split('/').filter(Boolean)[0]
-            }`
-          default:
-            return source.hostname.replace(/^www./, '')
-        }
-      })(),
-    }
-  } */
-
-  async findOne(query: Partial<ResourceDocument>) {
-    const doc = await this.db.findOneAsync(query)
-
-    if (!doc) return null
-
-    return doc
+    return docs
   }
 
-  async findOneByUrl(resourceUrl: string) {
-    const doc = await this.db.findOneAsync({ url: resourceUrl })
+  async findOne(query: ResourceDocumentQuery) {
+    const doc = await this.db.findOneAsync(query)
 
     if (!doc) return null
 
@@ -92,12 +84,6 @@ class ResourcesStore {
       ...resource,
       _id: id,
     }
-  }
-
-  async findAll(query: Partial<Record<keyof ResourceData, unknown>> = {}) {
-    const docs: Document<ResourceData>[] = await this.db.findAsync(query)
-
-    return docs
   }
 }
 

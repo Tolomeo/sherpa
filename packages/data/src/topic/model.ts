@@ -1,7 +1,6 @@
 import { getById } from '../resource'
 import type {
   ResourceData,
-  TopicName,
   TopicData,
   PopulatedTopicData,
 } from '../../types'
@@ -15,14 +14,14 @@ export const getAll = async () => {
 }
 
 export const getParents = async () => {
-  const docs = await TopicsStore.findAllByTopic(/^[^.]+$/)
+  const docs = await TopicsStore.findAll({ topic: /^[^.]+$/ })
   const paths = docs.map((p) => new Topic(p))
 
   return paths
 }
 
 export const getByName = async (topic: string) => {
-  const doc = await TopicsStore.findOne({ topic: topic as TopicName })
+  const doc = await TopicsStore.findOne({ topic })
 
   if (!doc) throw new Error(`Topic named ${topic} not found`)
 
@@ -140,10 +139,9 @@ class Topic {
   }
 
   public async change(update: Partial<TopicData>) {
-    const updated = await this.update(update)
+    await this.update(update)
 
-    const { _id, ...data } = updated
-    return data
+    return this.data
   }
 }
 
