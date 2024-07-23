@@ -340,3 +340,4 @@
 {"resource":"5kMMnxncuWnEzwgC","strategy":{"runner":"YoutubeData"},"_id":"zIUEnqRtR2KNxmmQ"}
 {"resource":"47yOpCLwlLw2H5SU","strategy":{"runner":"YoutubeData"},"_id":"zanT91vcfakSCr6N"}
 {"$$indexCreated":{"fieldName":"resource","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"resource","unique":true}}

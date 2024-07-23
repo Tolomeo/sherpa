@@ -3,8 +3,8 @@ import * as path from 'node:path'
 import * as url from 'node:url'
 import Db, { type Document } from '@seald-io/nedb'
 import {
-  HostnameHealthCheckStrategySchema,
-  type HostnameHealthCheckStrategy,
+  ResourceCrawlerStrategySchema,
+  type ResourceCrawlerStrategy,
 } from '../../../types'
 
 const dbFile = path.join(
@@ -24,29 +24,29 @@ type DocumentQuery<T extends object> = Partial<
   }>
 >
 
-type HealthCheckStrategiesDb = Db<HostnameHealthCheckStrategy>
+type CrawlerStrategiesDb = Db<ResourceCrawlerStrategy>
 
-export type HealthCheckStrategyDocument = Document<HostnameHealthCheckStrategy>
+export type CrawlerStrategyDocument = Document<ResourceCrawlerStrategy>
 
-export type HealthCheckStrategyDocumentQuery =
-  DocumentQuery<HostnameHealthCheckStrategy>
+export type CrawlerStrategyDocumentQuery =
+  DocumentQuery<ResourceCrawlerStrategy>
 
-class HealthCheckStrategiesStore {
-  private db: HealthCheckStrategiesDb
+class CrawlerStrategiesStore {
+  private db: CrawlerStrategiesDb
 
   constructor() {
     this.db = new Db({ filename: dbFile, autoload: true })
     this.db.ensureIndex({ fieldName: 'resource', unique: true })
   }
 
-  async findAll(query: HealthCheckStrategyDocumentQuery = {}) {
-    const docs: HealthCheckStrategyDocument[] = await this.db.findAsync(query)
+  async findAll(query: CrawlerStrategyDocumentQuery = {}) {
+    const docs: CrawlerStrategyDocument[] = await this.db.findAsync(query)
 
     return docs
   }
 
-  async insertOne(insert: HostnameHealthCheckStrategy) {
-    const insertValidation = HostnameHealthCheckStrategySchema.safeParse(insert)
+  async insertOne(insert: ResourceCrawlerStrategy) {
+    const insertValidation = ResourceCrawlerStrategySchema.safeParse(insert)
 
     if (!insertValidation.success) {
       throw insertValidation.error
@@ -58,8 +58,8 @@ class HealthCheckStrategiesStore {
     return doc
   }
 
-  async findOne(query: HealthCheckStrategyDocumentQuery) {
-    const doc: Nullable<HealthCheckStrategyDocument> =
+  async findOne(query: CrawlerStrategyDocumentQuery) {
+    const doc: Nullable<CrawlerStrategyDocument> =
       await this.db.findOneAsync(query)
 
     if (!doc) return null
@@ -69,9 +69,9 @@ class HealthCheckStrategiesStore {
 
   async updateOne(
     id: string,
-    update: HostnameHealthCheckStrategy,
-  ): Promise<HealthCheckStrategyDocument> {
-    const updateValidation = HostnameHealthCheckStrategySchema.safeParse(update)
+    update: ResourceCrawlerStrategy,
+  ): Promise<CrawlerStrategyDocument> {
+    const updateValidation = ResourceCrawlerStrategySchema.safeParse(update)
 
     if (!updateValidation.success) {
       throw updateValidation.error
@@ -87,4 +87,4 @@ class HealthCheckStrategiesStore {
   }
 }
 
-export default new HealthCheckStrategiesStore()
+export default new CrawlerStrategiesStore()
