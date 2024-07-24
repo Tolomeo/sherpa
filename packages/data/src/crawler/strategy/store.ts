@@ -36,7 +36,7 @@ class CrawlerStrategiesStore {
 
   constructor() {
     this.db = new Db({ filename: dbFile, autoload: true })
-    this.db.ensureIndex({ fieldName: 'resource', unique: true })
+    this.db.ensureIndex({ fieldName: 'resourceId', unique: true })
   }
 
   async findAll(query: CrawlerStrategyDocumentQuery = {}) {

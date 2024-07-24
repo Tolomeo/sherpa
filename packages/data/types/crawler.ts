@@ -68,7 +68,7 @@ export type CrawlerStrategy = z.infer<typeof CrawlerStrategySchema>
 const ResourceIdSchema = string().regex(/^[a-zA-Z0-9]{16}$/)
 
 export const ResourceCrawlerStrategySchema = object({
-  resource: ResourceIdSchema,
+  resourceId: ResourceIdSchema,
   strategy: CrawlerStrategySchema,
 }).strict()
 
