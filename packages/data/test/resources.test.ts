@@ -1,12 +1,10 @@
 import { describe, test, expect, beforeAll, afterAll } from 'vitest'
 import { getParents } from '../src/topic'
 import { getById } from '../src/resource'
-import { getByResourceId as getCrawlerStrategyByResourceId } from '../src/crawler/strategy'
-import type { ResourceData } from '../types/resource'
-import { HealthCheck, type HealthCheckStrategy } from '../scripts/healthcheck'
+import HealthCheck from '../src/healthcheck/runner'
 
 describe('Resources', async () => {
-  const topics = await getParents()
+  const [topics] = await getParents()
   let healthCheck: HealthCheck
 
   beforeAll(() => {
@@ -17,7 +15,7 @@ describe('Resources', async () => {
     await healthCheck.teardown()
   })
 
-  describe.each(topics)('$topic resources', async (topic) => {
+  describe.each([topics])('$topic resources', async (topic) => {
     const pathResourceUrls = await topic.getResources()
     const pathResources = await Promise.all(
       pathResourceUrls.map((url) => getById(url)),
@@ -27,15 +25,14 @@ describe('Resources', async () => {
       '$url',
       async (resource) => {
         const resourceData = resource.data
-        const resourceCrawlerStrategy = await getCrawlerStrategyByResourceId(
-          resource.id,
-        )
-        const resourceHealthCheck = await healthCheck.run(
+        const healthcheckStrategy = resource.healthcheck
+
+        const resourceHealthcheck = await healthCheck.run(
           resourceData.url,
-          resourceCrawlerStrategy.data,
+          healthcheckStrategy,
         )
 
-        expect(resourceHealthCheck).toMatchObject({
+        expect(resourceHealthcheck).toMatchObject({
           url: resourceData.url,
           success: true,
           data: {

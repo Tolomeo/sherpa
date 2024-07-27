@@ -63,8 +63,20 @@ class Resource {
   }
 
   public get data() {
-    const { _id, ...resourcedata } = this.document
+    const { _id, healthcheck, ...resourcedata } = this.document
     return resourcedata
+  }
+
+  public get healthcheck(): NonNullable<ResourceData['healthcheck']> {
+    if (!this.document.healthcheck)
+      return {
+        runner: 'Http',
+        config: {
+          titleSelector: 'title:not(:empty)',
+        },
+      }
+
+    return this.document.healthcheck
   }
 
   public async change(update: Partial<ResourceData>) {

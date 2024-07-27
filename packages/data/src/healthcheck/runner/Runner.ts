@@ -1,19 +1,12 @@
 import { randomUUID } from 'node:crypto'
-import {
-  RequestQueue,
-  PdfFileHealthCheckRunner,
-  HttpHealthCheckRunner,
-  E2EHealthCheckRunner,
-  ZenscrapeHealthCheckRunner,
-  YoutubeDataApiHealthCheckRunner,
-  UdemyAffiliateApiHealthCheckRunner,
-} from './resources/healthcheck'
-import type {
-  Constructor,
-  HttpHealthCheckRequestData,
-  E2EHealthCheckRequestData,
-  ZenscrapeHealthCheckRequestData,
-} from './resources/healthcheck'
+import PdfFileHealthCheckRunner from './PdfFileRunner'
+import HttpHealthCheckRunner from './HttpRunner'
+import E2EHealthCheckRunner from './E2ERunner'
+import ZenscrapeHealthCheckRunner from './ZenscrapeRunner'
+import YoutubeDataApiHealthCheckRunner from './YoutubeDataApiRunner'
+import UdemyAffiliateApiHealthCheckRunner from './UdemyAffiliateApiRunner'
+import { type Constructor, RequestQueue } from './common'
+import type { HealthcheckStrategy } from '../../../types/healthcheck'
 
 type HealthCheckRunners =
   | PdfFileHealthCheckRunner
@@ -23,30 +16,7 @@ type HealthCheckRunners =
   | YoutubeDataApiHealthCheckRunner
   | UdemyAffiliateApiHealthCheckRunner
 
-export type HealthCheckStrategy =
-  | {
-      runner: 'Http'
-      config: HttpHealthCheckRequestData
-    }
-  | {
-      runner: 'PdfFile'
-    }
-  | {
-      runner: 'E2E'
-      config: E2EHealthCheckRequestData
-    }
-  | {
-      runner: 'YoutubeData'
-    }
-  | {
-      runner: 'Zenscrape'
-      config: ZenscrapeHealthCheckRequestData
-    }
-  | {
-      runner: 'UdemyAffiliate'
-    }
-
-export class HealthCheck {
+class HealthCheck {
   private runners = new Map<
     Constructor<HealthCheckRunners>,
     HealthCheckRunners
@@ -65,7 +35,7 @@ export class HealthCheck {
     return runnerInstance
   }
 
-  async run(url: string, strategy: HealthCheckStrategy) {
+  async run(url: string, strategy: HealthcheckStrategy) {
     let runner: HealthCheckRunners
 
     switch (strategy.runner) {
@@ -99,3 +69,5 @@ export class HealthCheck {
     this.runners.clear()
   }
 }
+
+export default HealthCheck

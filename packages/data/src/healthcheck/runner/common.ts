@@ -8,7 +8,7 @@ import type {
 } from 'crawlee'
 import { decode, encode } from 'he'
 import formatHTML from 'html-format'
-import { Deferred } from '../../_utils/defer'
+import { Deferred } from '../../common/defer'
 
 export { type Constructor, RequestQueue }
 
@@ -26,7 +26,7 @@ export type HealthCheckResult =
       error: Error
     }
 
-abstract class HealthCheckRunner<
+export abstract class HealthCheckRunner<
   C extends BasicCrawler | PlaywrightCrawler | CheerioCrawler,
   D extends Dictionary = Dictionary,
 > {
@@ -81,5 +81,3 @@ abstract class HealthCheckRunner<
     return this.results.get(url)!.promise
   }
 }
-
-export default HealthCheckRunner
