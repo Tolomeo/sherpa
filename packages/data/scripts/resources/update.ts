@@ -1,91 +1,9 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
-// import * as fs from 'node:fs'
-// import * as path from 'node:path'
-// import * as util from 'node:util'
-import * as readline from 'node:readline'
-import open from 'open'
+import { open, diff, input, choice } from '../_utils'
 import Resource, { getByUrl } from '../../src/resource'
 import Healthcheck from '../../src/healthcheck/runner'
 import { ResourceData } from '../../types'
-// import { listPaths, readPath } from './paths/read'
-// import pathsData from '../src/store/paths'
-// import { listResources, readResources } from './resources/read'
-
-/* const {
-  positionals: [],
-} = util.parseArgs({
-  args: process.argv.slice(2),
-  allowPositionals: true,
-}) */
-
-/* if (!url) {
-  console.error('A resource url must be specified')
-  console.error(
-    'For example: tsx scripts/resources/update.ts "http://www.resource-url.com"\n',
-  )
-  process.exit(1)
-} */
-type Nullable<T> = T | null
-
-const input = (question: string): Promise<Nullable<string>> => {
-  const describedQuestion = `\n${question}\n[q] cancel\n> `
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  })
-
-  return new Promise((resolve) => {
-    rl.question(describedQuestion, (answer) => {
-      rl.close()
-
-      if (answer.trim() === 'q') resolve(null)
-      else resolve(answer)
-    })
-  })
-}
-
-const choice = async <T extends string>(
-  question: string,
-  options: T[],
-): Promise<Nullable<T>> => {
-  const describedQuestion = `${question}\n${options
-    .map((option, idx) => `[${idx + 1}] ${option}`)
-    .join('\n')}`
-
-  let optionAnswer: T | undefined
-
-  while (!optionAnswer) {
-    const answer = await input(describedQuestion)
-
-    if (answer === null) return null
-
-    const answerIndex = parseInt(answer, 10)
-
-    if (isNaN(answerIndex) || !options[answerIndex - 1]) {
-      console.log('\nInvalid choice')
-      continue
-    }
-
-    optionAnswer = options[answerIndex - 1]
-  }
-
-  return optionAnswer
-}
-
-const confirm = async (question: string): Promise<Nullable<boolean>> => {
-  const confirmOptionsMap: Record<string, boolean> = {
-    yes: true,
-    no: false,
-  }
-  const confirmOptions = Object.keys(confirmOptionsMap)
-
-  const optionAnswer = await choice(question, confirmOptions)
-
-  if (optionAnswer === null) return null
-
-  return confirmOptionsMap[optionAnswer]
-}
 
 const getResource = async () => {
   let resource: Resource | undefined
@@ -120,6 +38,8 @@ const updateResource = async (resource: Resource) => {
   }
 
   while (true) {
+    console.log(`Updated resource data:\n`)
+    console.log(`${JSON.stringify(resourceUpdate, null, 2)}\n`)
     const action = await choice('Choose action', ['persist', 'healthcheck'])
 
     switch (action) {
@@ -145,15 +65,34 @@ const updateResource = async (resource: Resource) => {
 }
 
 const healthcheck = async (
-  data: ResourceData,
+  { url, title }: ResourceData,
   strategy: NonNullable<ResourceData['healthcheck']>,
 ) => {
   const healthcheckRunner = new Healthcheck()
-  const healthCheckResult = await healthcheckRunner.run(data.url, strategy)
+  const healthCheckResult = await healthcheckRunner.run(url, strategy)
 
-  console.log(healthCheckResult)
+  if (!healthCheckResult.success) {
+    console.error(`\nHealth check failed\n`)
+    console.error(`${healthCheckResult.error}\n`)
+    return
+  }
 
-  healthcheckRunner.teardown()
+  console.log(`\nHealth check succeeded\n`)
+  console.log(
+    `${diff(
+      JSON.stringify({ url, title }, null, 2),
+      JSON.stringify(
+        {
+          url: healthCheckResult.url,
+          title: healthCheckResult.data.title,
+        },
+        null,
+        2,
+      ),
+    )}\n`,
+  )
+
+  await healthcheckRunner.teardown()
 }
 
 const update = async (resource: Resource) => {
@@ -168,7 +107,7 @@ const update = async (resource: Resource) => {
 
     switch (action) {
       case 'open':
-        await open(resource.url)
+        open(resource.url)
         break
       case 'update':
         await updateResource(resource)
