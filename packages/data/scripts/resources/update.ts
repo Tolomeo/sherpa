@@ -6,6 +6,8 @@
 import * as readline from 'node:readline'
 import open from 'open'
 import Resource, { getByUrl } from '../../src/resource'
+import Healthcheck from '../../src/healthcheck/runner'
+import { ResourceData } from '../../types'
 // import { listPaths, readPath } from './paths/read'
 // import pathsData from '../src/store/paths'
 // import { listResources, readResources } from './resources/read'
@@ -117,25 +119,52 @@ const updateResource = async (resource: Resource) => {
     resourceUpdate[key] = valueUpdate
   }
 
-  const persist = await confirm(
-    `Persist changes?\n${JSON.stringify(resourceUpdate, null, 2)}`,
-  )
+  while (true) {
+    const action = await choice('Choose action', ['persist', 'healthcheck'])
 
-  if (!persist) return
-
-  try {
-    await resource.change(resourceUpdate)
-  } catch (error) {
-    console.error(`\nResource update failed.\n`)
-    console.error(error)
+    switch (action) {
+      case 'persist':
+        try {
+          await resource.change(resourceUpdate)
+        } catch (error) {
+          console.error(`\nResource update failed.\n`)
+          console.error(error)
+        }
+        break
+      case 'healthcheck':
+        await healthcheck(resourceUpdate, resource.healthcheck)
+        break
+      case null:
+        return
+    }
   }
+
+  /* const action = await confirm(
+    `Persist changes?\n${JSON.stringify(resourceUpdate, null, 2)}`,
+  ) */
+}
+
+const healthcheck = async (
+  data: ResourceData,
+  strategy: NonNullable<ResourceData['healthcheck']>,
+) => {
+  const healthcheckRunner = new Healthcheck()
+  const healthCheckResult = await healthcheckRunner.run(data.url, strategy)
+
+  console.log(healthCheckResult)
+
+  healthcheckRunner.teardown()
 }
 
 const update = async (resource: Resource) => {
   while (true) {
     console.log(`\n${JSON.stringify(resource.data, null, 2)}`)
 
-    const action = await choice('Choose action', ['open', 'update'])
+    const action = await choice('Choose action', [
+      'open',
+      'update',
+      'healthcheck',
+    ])
 
     switch (action) {
       case 'open':
@@ -143,6 +172,9 @@ const update = async (resource: Resource) => {
         break
       case 'update':
         await updateResource(resource)
+        break
+      case 'healthcheck':
+        await healthcheck(resource.data, resource.healthcheck)
         break
       case null:
         return
@@ -154,7 +186,7 @@ const update = async (resource: Resource) => {
   while (true) {
     const resource = await getResource()
 
-    if (resource === null) break
+    if (resource === null) process.exit(0)
 
     await update(resource)
   }

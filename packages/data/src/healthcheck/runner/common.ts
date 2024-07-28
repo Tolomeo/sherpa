@@ -6,9 +6,11 @@ import type {
   PlaywrightCrawler,
   BasicCrawler,
 } from 'crawlee'
-import { decode, encode } from 'he'
+import he from 'he'
 import formatHTML from 'html-format'
 import { Deferred } from '../../common/defer'
+
+const { decode, encode } = he
 
 export { type Constructor, RequestQueue }
 
