@@ -1,6 +1,6 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
-import { open, diff, input, choice } from '../_utils'
+import { open, diff, input, choice, log } from '../_utils'
 import Resource, { getByUrl } from '../../src/resource'
 import Healthcheck from '../../src/healthcheck/runner'
 import { ResourceData } from '../../types'
@@ -16,7 +16,7 @@ const getResource = async () => {
     const urlResource = await getByUrl(url)
 
     if (!urlResource) {
-      console.log(`\nResource "${url}" not found`)
+      log.error(`\nResource "${url}" not found`)
       continue
     }
 
@@ -26,10 +26,10 @@ const getResource = async () => {
   return resource
 }
 
-const updateResource = async (resource: Resource) => {
-  const resourceUpdate = { ...resource.data }
+const getResourceUpdate = async (resourceData: ResourceData) => {
+  const resourceUpdate = { ...resourceData }
 
-  for (const [key, value] of Object.entries(resource.data)) {
+  for (const [key, value] of Object.entries(resourceData)) {
     const valueUpdate = await input(`${key}(${value})`)
 
     if (!valueUpdate) continue
@@ -37,31 +37,47 @@ const updateResource = async (resource: Resource) => {
     resourceUpdate[key] = valueUpdate
   }
 
+  return resourceUpdate
+}
+
+const updateResource = async (resource: Resource) => {
+  let resourceUpdate = await getResourceUpdate(resource.data)
+
   while (true) {
-    console.log(`Updated resource data:\n`)
-    console.log(`${JSON.stringify(resourceUpdate, null, 2)}\n`)
-    const action = await choice('Choose action', ['persist', 'healthcheck'])
+    log.text(`\nUpdated resource data:\n`)
+    log.text(
+      `${diff(
+        JSON.stringify(resource.data, null, 2),
+        JSON.stringify(resourceUpdate, null, 2),
+      )}\n`,
+    )
+
+    const action = await choice('Choose action', [
+      'change',
+      'healthcheck',
+      'persist',
+    ])
 
     switch (action) {
+      case 'change':
+        resourceUpdate = await getResourceUpdate(resourceUpdate)
+        continue
+      case 'healthcheck':
+        await healthcheck(resourceUpdate, resource.healthcheck)
+        continue
       case 'persist':
         try {
           await resource.change(resourceUpdate)
+          log.success(`\nResource update succeeded\n`)
         } catch (error) {
-          console.error(`\nResource update failed.\n`)
-          console.error(error)
+          log.error(`\nResource update failed.\n`)
+          log.error(error)
         }
-        break
-      case 'healthcheck':
-        await healthcheck(resourceUpdate, resource.healthcheck)
-        break
+        return
       case null:
         return
     }
   }
-
-  /* const action = await confirm(
-    `Persist changes?\n${JSON.stringify(resourceUpdate, null, 2)}`,
-  ) */
 }
 
 const healthcheck = async (
@@ -72,13 +88,13 @@ const healthcheck = async (
   const healthCheckResult = await healthcheckRunner.run(url, strategy)
 
   if (!healthCheckResult.success) {
-    console.error(`\nHealth check failed\n`)
-    console.error(`${healthCheckResult.error}\n`)
+    log.error(`\nHealth check failed\n`)
+    log.error(`${healthCheckResult.error}\n`)
     return
   }
 
-  console.log(`\nHealth check succeeded\n`)
-  console.log(
+  log.success(`\nHealth check succeeded\n`)
+  log.text(
     `${diff(
       JSON.stringify({ url, title }, null, 2),
       JSON.stringify(
@@ -97,7 +113,7 @@ const healthcheck = async (
 
 const update = async (resource: Resource) => {
   while (true) {
-    console.log(`\n${JSON.stringify(resource.data, null, 2)}`)
+    log.text(`\n${JSON.stringify(resource.data, null, 2)}`)
 
     const action = await choice('Choose action', [
       'open',
@@ -130,6 +146,6 @@ const update = async (resource: Resource) => {
     await update(resource)
   }
 })().catch((err) => {
-  console.error(err)
+  log.error(err)
   process.exit(1)
 })

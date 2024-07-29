@@ -2,6 +2,21 @@ import * as readline from 'node:readline'
 import chalk from 'chalk'
 import * as JSDiff from 'diff'
 
+export const log = {
+  text(text: string) {
+    return console.log(chalk.white(text))
+  },
+  heading(text: string) {
+    return console.log(chalk.magenta(text))
+  },
+  error(text: string) {
+    return console.log(chalk.red(text))
+  },
+  success(text: string) {
+    return console.log(chalk.green(text))
+  },
+}
+
 export { default as open } from 'open'
 
 type Nullable<T> = T | null
@@ -68,7 +83,7 @@ export function diff(
 }
 
 export const input = (question: string): Promise<Nullable<string>> => {
-  const describedQuestion = `\n${question}\n[q] cancel\n> `
+  const describedQuestion = chalk.cyan(`\n${question}\n[q] cancel\n> `)
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
@@ -102,7 +117,7 @@ export const choice = async <T extends string>(
     const answerIndex = parseInt(answer, 10)
 
     if (isNaN(answerIndex) || !options[answerIndex - 1]) {
-      console.log('\nInvalid choice')
+      log.error('\nInvalid choice')
       continue
     }
 

@@ -34,7 +34,7 @@
 {"title":"React Context: The Detailed Guide","url":"https://deadsimplechat.com/blog/react-context-tutorial/","type":"basics","source":"deadsimplechat.com","_id":"1RF6r6Qt8u3Cd9yJ"}
 {"title":"Build your own Docker","url":"https://app.codecrafters.io/courses/docker/overview","type":"advanced","source":"app.codecrafters.io","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"1UL2oYusxXyfsONd"}
 {"title":"Why would anyone need JavaScript generator functions?","url":"https://jrsinclair.com/articles/2022/why-would-anyone-need-javascript-generator-functions/","type":"basics","source":"jrsinclair.com","_id":"1UldGsClYlzxGO0P"}
-{"title":"Nick Coghlan’s Python Notes","url":"http://python-notes.curiousefficiency.org","type":"advanced","source":"python-notes.curiousefficiency.org","_id":"1VGM99qzghDpJUPy"}
+{"title":"Alyssa Coghlan's Python Notes","url":"https://python-notes.curiousefficiency.org","type":"advanced","source":"python-notes.curiousefficiency.org","_id":"1VGM99qzghDpJUPy"}
 {"title":"Practical Git for Everyday Professional Use","url":"https://egghead.io/courses/practical-git-for-everyday-professional-use","type":"basics","source":"egghead.io","_id":"1VZiz5JVMl2xDIyw"}
 {"title":"learn-to-program: Educational resources to learn to program (Foundation in Web Development)","url":"https://github.com/karlhorky/learn-to-program","type":"reference","source":"github.com/karlhorky","_id":"1X0mdSwbcsibEI76"}
 {"title":"Vim Commands","url":"https://thevaluable.dev/vim-commands-beginner/","type":"basics","source":"thevaluable.dev","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"1aLjPTSczJH7ge6L"}
@@ -185,7 +185,7 @@
 {"title":"Accessibility Myths","url":"https://a11ymyths.com","type":"curiosity","source":"a11ymyths.com","_id":"7qXD1IbyGGlyAczX"}
 {"title":"Learn X in Y Minutes","url":"https://learnxinyminutes.com/docs/git","type":"reference","source":"learnxinyminutes.com","_id":"7qjN3MNtXIQ3Mc46"}
 {"title":"The Hitchhiker’s Guide to Next.js","url":"https://medium.com/swlh/the-hitchhikers-guide-to-next-js-fd7aa14ae8d0","source":"medium.com/swlh","type":"curiosity","_id":"7ruHPJxP8YGUkmpw"}
-{"title":"Regex Tutorial: Learn Regular Expressions","url":"https://scrimba.com/learn/regularexpressions","type":"basics","source":"scrimba.com","_id":"7wk5vjcVG1dwtxje"}
+{"title":"Learn Regular Expressions","url":"https://v2.scrimba.com/learn-regular-expressions-c0d","type":"basics","source":"v2.scrimba.com","_id":"7wk5vjcVG1dwtxje"}
 {"title":"Drum Machine with Python and Pygame","url":"https://www.youtube.com/watch?v=F3J3PZj0zi0","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"7yrqDK81PX8KTxF2"}
 {"title":"Design Systems Repo","url":"https://designsystemsrepo.com","type":"how-to","source":"designsystemsrepo.com","_id":"81w9w35CzcHwkFID"}
 {"title":"Python Platformer Game Tutorial for Beginners","url":"https://www.youtube.com/watch?v=6gLeplbqtqg","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"84DKlzPpfL5mtxoW"}
@@ -286,7 +286,7 @@
 {"title":"A Neovim Task Runner in 30 lines of Lua","url":"https://www.hillelwayne.com/post/task-runner-neovim/","type":"how-to","source":"hillelwayne.com","_id":"BxNcP2BCVVUAHq81"}
 {"title":"60 Days of Animation","url":"https://undead.institute/60-days-of-animation","type":"how-to","source":"undead.institute","_id":"BzjYFPGGAYyLhn9z"}
 {"title":"Building Docker Images The Proper Way","url":"https://martinheinz.dev/blog/42","type":"how-to","source":"martinheinz.dev","_id":"BztGnD1pTub90WrJ"}
-{"title":"CSS variables tutorial","url":"https://scrimba.com/learn/cssvariables","source":"scrimba.com","type":"basics","_id":"C4z2OpehGATGk482"}
+{"title":"Learn CSS Variables","url":"https://v2.scrimba.com/learn-css-variables-c026","source":"v2.scrimba.com","type":"basics","_id":"C4z2OpehGATGk482"}
 {"title":"A Typescript onramp","url":"https://blog.scottnonnenberg.com/a-typescript-onramp","type":"basics","source":"blog.scottnonnenberg.com","_id":"C6K63IeYxsy5YTCC"}
 {"title":"The Hitchhiker’s Guide to Python!","url":"https://docs.python-guide.org/","type":"reference","source":"docs.python-guide.org","_id":"CAVbP8xfmtrY8q4w"}
 {"title":"Web Scraping With Python","url":"https://serpdog.io/blog/web-scraping-with-python/","type":"basics","source":"serpdog.io","_id":"CEkEOsUxQ0f6FBmv"}
@@ -518,7 +518,7 @@
 {"title":"2ality","url":"https://2ality.com","type":"feed","source":"2ality.com","_id":"KtXszhLeFMN5cxCr"}
 {"title":"Free Icons, Clipart Illustrations, Photos, and Music","url":"https://icons8.com","type":"tool","source":"icons8.com","_id":"Ku7I8CikLXpSDDK2"}
 {"title":"Material Design","url":"https://m3.material.io","type":"reference","source":"m3.material.io","_id":"KwlEflZjxaWrNsDy"}
-{"title":"SurviveJS - Maintenance","url":"https://survivejs.com/maintenance","type":"basics","source":"survivejs.com","_id":"KyW1Nikzjn2puxew"}
+{"title":"SurviveJS - Maintenance","url":"https://survivejs.com/books/maintenance","type":"basics","source":"survivejs.com","_id":"KyW1Nikzjn2puxew"}
 {"title":"A list of new(ish) command line tools","url":"https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/","type":"reference","source":"jvns.ca","_id":"L4rW0lmz3wu2gcQz"}
 {"title":"Recreating Zelda","url":"https://www.youtube.com/playlist?list=PLqPLyUreLV8D3Ckd_9UFNvEpg4xCvbL1a","source":"youtube.com/c/Challacade","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"L51cFtSCtPAGJYp6"}
 {"title":"Access Guide","url":"https://www.accessguide.io","type":"basics","source":"accessguide.io","_id":"LDA7nttpqT84TMnl"}
@@ -985,7 +985,7 @@
 {"title":"awesome-design","url":"https://github.com/gztchan/awesome-design","type":"reference","source":"github.com/gztchan","_id":"eJ44Emjp6Amu6QoN"}
 {"title":"A Deep Dive Into the Node js Event Loop","url":"https://www.youtube.com/watch?v=KKM_4-uQpow","source":"youtube.com/@UtahJS","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"eLBXQOaiYJqWm8Oz"}
 {"title":"Microservice Architecture and System Design with Python & Kubernetes","url":"https://www.youtube.com/watch?v=hmkF77F9TLw","source":"youtube.com/@freecodecamp","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"eObw5rLAAVP28V60"}
-{"title":"React Tutorial: Learn React JS","url":"https://scrimba.com/learn/learnreact","type":"basics","source":"scrimba.com","_id":"eRcJgCuvnGLnEVpL"}
+{"title":"Learn React","url":"https://v2.scrimba.com/learn-react-c0e","type":"basics","source":"scrimba.com","_id":"eRcJgCuvnGLnEVpL"}
 {"title":"How To Conduct A Web Accessibility Audit?","url":"https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/","type":"basics","source":"digitala11y.com","_id":"eT9DxfxLA1r0yPk9"}
 {"title":"HTML Standard","url":"https://html.spec.whatwg.org/multipage","type":"reference","source":"html.spec.whatwg.org","_id":"eTZEpxi9101QbEkM"}
 {"title":"Python Programming Fundamentals Towards Django Development","url":"https://www.youtube.com/playlist?list=PLOLrQ9Pn6cawb13MugxL-p1M4w7ZfT-qR","source":"youtube.com/@veryacademy","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"eUZpmxfEUKphdjEN"}
@@ -1311,7 +1311,7 @@
 {"title":"Next.js Crash Course","url":"https://www.youtube.com/watch?v=6HTs8HtZMt0","source":"youtube.com/@laithacademy","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"qJktO6WrIJEkulj4"}
 {"title":"Markup from hell","url":"https://www.htmhell.dev","type":"curiosity","source":"htmhell.dev","_id":"qMblO5mvqUy4zs5h"}
 {"title":"I Regret My $46k Website Redesign","url":"https://mtlynch.io/tinypilot-redesign","type":"curiosity","source":"mtlynch.io","_id":"qRMMFq0p6DHAbCHX"}
-{"title":"Learn Typescript tutorial","url":"https://scrimba.com/learn/intrototypescript","type":"basics","source":"scrimba.com","_id":"qSLqVObxUAFVuPmz"}
+{"title":"Learn Typescript","url":"https://v2.scrimba.com/learn-typescript-c0l","type":"basics","source":"v2.scrimba.com","_id":"qSLqVObxUAFVuPmz"}
 {"title":"Font Squirrel","url":"https://www.fontsquirrel.com/","type":"tool","source":"fontsquirrel.com","_id":"qSlR6HwYzdlzkX2Q"}
 {"title":"Basic Shell Scripting","url":"https://www.integralist.co.uk/posts/basic-shell-scripting/","type":"basics","source":"integralist.co.uk","_id":"qUWbXBBa46liHaED"}
 {"title":"The Ultimate Git & GitHub Crash Course - Learn to Version Control for Beginners","url":"https://www.youtube.com/watch?v=i76ts_0UryI","source":"youtube.com/@laithacademy","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"qUvQInydzwFHEZCa"}
@@ -1445,7 +1445,7 @@
 {"title":"awesome-css","url":"https://github.com/awesome-css-group/awesome-css","type":"reference","source":"github.com/awesome-css-group","_id":"wRE7HaJMQeey5prr"}
 {"title":"Why Python keeps growing, explained","url":"https://github.blog/2023-03-02-why-python-keeps-growing-explained/","type":"curiosity","source":"github.blog","_id":"wUWGNv3FA3hlH7rh"}
 {"title":"Django ChatGPT Clone Tutorial","url":"https://www.youtube.com/watch?v=qrZGfBBlXpk","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"wUXokWWk2uQqGjVO"}
-{"title":"Build an AI Search Engine Using FastAPI, Qdrant, and ChatGPT","url":"https://dylancastillo.co/ai-search-engine-fastapi-qdrant-chatgpt/","type":"how-to","source":"dylancastillo.co","_id":"wWD4dvmL4IRNWYEy"}
+{"title":"Build an AI Search Engine Using FastAPI, Qdrant, and ChatGPT","url":"https://dylancastillo.co/posts/ai-search-engine-fastapi-qdrant-chatgpt.html","type":"how-to","source":"dylancastillo.co","_id":"wWD4dvmL4IRNWYEy"}
 {"title":"Mastering the Shell Course","url":"https://thoughtbot.com/upcase/mastering-the-shell","type":"basics","source":"thoughtbot.com","_id":"wWPCJ1TeSBFWUkMA"}
 {"title":"React.js: The Documentary","url":"https://www.youtube.com/watch?v=8pDqJVdNa44","source":"youtube.com/@Honeypotio","type":"curiosity","healthcheck":{"runner":"YoutubeData"},"_id":"wXVKx0xvOyHCU5cG"}
 {"title":"BASH Programming","url":"https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html","type":"basics","source":"tldp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"wbcImPCCFXsGnmFe"}
@@ -1528,4 +1528,3 @@
 {"title":"Learn React 18: The Complete React Developer Course","url":"https://www.youtube.com/watch?v=l4G2MVgXFkw","source":"youtube.com/@envatotuts","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"zxnTNzILzT5pnuFz"}
 {"title":"Building a simplified webpack clone","url":"https://lihautan.com/building-a-simplified-webpack-clone/","type":"advanced","source":"lihautan.com","_id":"zzZKjHqANa9vMJ9a"}
 {"$$indexCreated":{"fieldName":"url","unique":true,"sparse":false}}
-{"$$indexCreated":{"fieldName":"url","unique":true}}
