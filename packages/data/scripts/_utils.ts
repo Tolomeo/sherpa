@@ -15,6 +15,21 @@ export const log = {
   success(text: string) {
     return console.log(chalk.green(text))
   },
+  warning(text: string) {
+    return console.log(chalk.yellow(text))
+  },
+  inspect(thing: any, options: { highlight?: string } = {}) {
+    let thingString = JSON.stringify(thing, null, 2)
+
+    if (options.highlight) {
+			// TODO: replaceAll
+      thingString = thingString.replace(options.highlight, (match) =>
+        chalk.black.bgYellow(match),
+      )
+    }
+
+    return log.text(thingString)
+  },
 }
 
 export { default as open } from 'open'

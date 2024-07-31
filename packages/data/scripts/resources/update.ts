@@ -1,6 +1,9 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
+import * as util from 'node:util'
+import chalk from 'chalk'
 import { open, diff, input, choice, log } from '../_utils'
+import { getAllByResourceId } from '../../src/topic'
 import Resource, { getByUrl } from '../../src/resource'
 import Healthcheck from '../../src/healthcheck/runner'
 import { ResourceData } from '../../types'
@@ -111,6 +114,49 @@ const healthcheck = async (
   await healthcheckRunner.teardown()
 }
 
+const deleteResource = async (resource: Resource) => {
+  const topics = await getAllByResourceId(resource.id)
+
+  log.warning(
+    `\nThe resource is listed in the following topics:\n${topics.map(
+      (t) => t.topic,
+    )}\n`,
+  )
+
+  while (true) {
+    log.text(`\n${JSON.stringify(resource.data, null, 2)}`)
+
+    const action = await choice(
+      `The resource is listed in the following topics:\n${topics.map(
+        (t) => t.topic,
+      )}`,
+      ['display topics', 'delete resource and update topics'],
+    )
+
+    switch (action) {
+      case 'display topics':
+        topics.forEach((t) => {
+          const { topic, main, resources } = t.data
+          const display = {
+            topic,
+            main,
+            resources,
+          }
+
+          log.inspect(display, {
+            highlight: resource.id,
+          })
+        })
+        break
+      case 'delete resource and update topics':
+        console.log('delete')
+        return
+      case null:
+        return
+    }
+  }
+}
+
 const update = async (resource: Resource) => {
   while (true) {
     log.text(`\n${JSON.stringify(resource.data, null, 2)}`)
@@ -119,6 +165,7 @@ const update = async (resource: Resource) => {
       'open',
       'update',
       'healthcheck',
+      'delete',
     ])
 
     switch (action) {
@@ -131,6 +178,8 @@ const update = async (resource: Resource) => {
       case 'healthcheck':
         await healthcheck(resource.data, resource.healthcheck)
         break
+      case 'delete':
+        await deleteResource(resource)
       case null:
         return
     }
