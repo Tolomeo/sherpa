@@ -1,8 +1,6 @@
 import type { ResourceData } from '../../types'
 import ResourcesStore, { type ResourceDocument } from './store'
 
-// type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
-
 export const getAll = async () => {
   const docs = await ResourcesStore.findAll()
   const resources = docs.map((d) => new Resource(d))

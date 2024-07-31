@@ -3,6 +3,7 @@ import type {
   ResourceData,
   TopicData,
   PopulatedTopicData,
+	TopicName
 } from '../../types'
 import TopicsStore, { type TopicDocument } from './store'
 
@@ -20,10 +21,11 @@ export const getParents = async () => {
   return paths
 }
 
-export const getByName = async (topic: string) => {
+export const getByName = async (name: string) => {
+	const topic = name as TopicName
   const doc = await TopicsStore.findOne({ topic })
 
-  if (!doc) throw new Error(`Topic named ${topic} not found`)
+  if (!doc) throw new Error(`Topic named ${name} not found`)
 
   return new Topic(doc)
 }

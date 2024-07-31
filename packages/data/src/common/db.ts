@@ -1,0 +1,243 @@
+import NEDB, { type Document } from '@seald-io/nedb'
+import { ZodObject } from 'zod'
+
+type Nullable<T> = T | null
+
+/* type IsAny<Type, ResultIfAny, ResultIfNotAny> = true extends false & Type
+  ? ResultIfAny
+  : ResultIfNotAny */
+
+type KeysOfAType<TSchema, Type> = {
+  [key in keyof TSchema]: NonNullable<TSchema[key]> extends Type ? key : never
+}[keyof TSchema]
+
+/* type KeysOfOtherType<TSchema, Type> = {
+  [key in keyof TSchema]: NonNullable<TSchema[key]> extends Type ? never : key
+}[keyof TSchema] */
+
+/* type NotAcceptedFields<TSchema, FieldType> = {
+  readonly [key in KeysOfOtherType<TSchema, FieldType>]?: never
+} */
+
+/* type AcceptedFields<TSchema, FieldType, AssignableType> = {
+  readonly [key in KeysOfAType<TSchema, FieldType>]?: AssignableType
+} */
+
+/* type OnlyFieldsOfType<
+  TSchema,
+  FieldType = any,
+  AssignableType = FieldType,
+> = IsAny<
+  TSchema[keyof TSchema],
+  AssignableType extends FieldType
+    ? Record<string, FieldType>
+    : Record<string, AssignableType>,
+  AcceptedFields<TSchema, FieldType, AssignableType> &
+    NotAcceptedFields<TSchema, FieldType> &
+    Record<string, AssignableType>
+> */
+
+type Join<T extends unknown[], D extends string> = T extends []
+  ? ''
+  : T extends [string | number]
+    ? `${T[0]}`
+    : T extends [string | number, ...infer R]
+      ? `${T[0]}${D}${Join<R, D>}`
+      : string
+
+type NestedPaths<Type, Depth extends number[]> = Depth['length'] extends 8
+  ? []
+  : Type extends
+        | string
+        | number
+        | bigint
+        | boolean
+        | Date
+        | RegExp
+        | Buffer
+        | Uint8Array
+        | ((...args: any[]) => any)
+    ? /* | {
+            _bsontype: string
+          } */
+      []
+    : Type extends ReadonlyArray<infer ArrayType>
+      ? [] | [number, ...NestedPaths<ArrayType, [...Depth, 1]>]
+      : Type extends Map<string, any>
+        ? [string]
+        : Type extends object
+          ? {
+              [Key in Extract<keyof Type, string>]: Type[Key] extends Type
+                ? [Key]
+                : Type extends Type[Key]
+                  ? [Key]
+                  : Type[Key] extends ReadonlyArray<infer ArrayType>
+                    ? Type extends ArrayType
+                      ? [Key]
+                      : ArrayType extends Type
+                        ? [Key]
+                        : [Key, ...NestedPaths<Type[Key], [...Depth, 1]>] // child is not structured the same as the parent
+                    : [Key, ...NestedPaths<Type[Key], [...Depth, 1]>] | [Key]
+            }[Extract<keyof Type, string>]
+          : []
+
+type WithId<TSchema> = Omit<TSchema, '_id'> & {
+  _id: string
+}
+
+type RegExpOrString<T> = T extends string ? RegExp | T : T
+
+type AlternativeType<T> = T extends ReadonlyArray<infer U>
+  ? T | RegExpOrString<U>
+  : RegExpOrString<T>
+
+interface FilterOperators<TValue> {
+  $eq?: TValue
+  $gt?: TValue
+  $gte?: TValue
+  $in?: ReadonlyArray<TValue>
+  $lt?: TValue
+  $lte?: TValue
+  $ne?: TValue
+  $nin?: ReadonlyArray<TValue>
+  $not?: TValue extends string
+    ? FilterOperators<TValue> | RegExp
+    : FilterOperators<TValue>
+  /**
+   * When `true`, `$exists` matches the documents that contain the field,
+   * including documents where the field value is null.
+   */
+  $exists?: boolean
+  $regex?: TValue extends string ? RegExp | string : never
+  $elemMatch?: Document<TValue>
+  /*  $type?: BSONType | BSONTypeAlias;
+    $expr?: Record<string, any>;
+    $jsonSchema?: Record<string, any>;
+    $mod?: TValue extends number ? [number, number] : never;
+    $options?: TValue extends string ? string : never;
+    $geoIntersects?: {
+        $geometry: Document;
+    };
+    $geoWithin?: Document;
+    $near?: Document;
+    $nearSphere?: Document;
+    $maxDistance?: number;
+    $all?: ReadonlyArray<any>;
+    $elemMatch?: Document;
+    $size?: TValue extends ReadonlyArray<any> ? number : never;
+    $bitsAllClear?: BitwiseFilter;
+    $bitsAllSet?: BitwiseFilter;
+    $bitsAnyClear?: BitwiseFilter;
+    $bitsAnySet?: BitwiseFilter;
+    $rand?: Record<string, never>; */
+}
+
+type PropertyType<Type, Property extends string> = string extends Property
+  ? unknown
+  : Property extends keyof Type
+    ? Type[Property]
+    : Property extends `${number}`
+      ? Type extends ReadonlyArray<infer ArrayType>
+        ? ArrayType
+        : unknown
+      : Property extends `${infer Key}.${infer Rest}`
+        ? Key extends `${number}`
+          ? Type extends ReadonlyArray<infer ArrayType>
+            ? PropertyType<ArrayType, Rest>
+            : unknown
+          : Key extends keyof Type
+            ? Type[Key] extends Map<string, infer MapType>
+              ? MapType
+              : PropertyType<Type[Key], Rest>
+            : unknown
+        : unknown
+
+type Condition<T> = AlternativeType<T> | FilterOperators<AlternativeType<T>>
+
+type Filter<TSchema> = {
+  [P in keyof WithId<TSchema>]?: Condition<WithId<TSchema>[P]>
+} & RootFilterOperators<WithId<TSchema>>
+
+interface RootFilterOperators<TSchema> {
+  $and?: Filter<TSchema>[]
+  // $nor?: Filter<TSchema>[]
+  $or?: Filter<TSchema>[]
+  $where?: (this: TSchema) => boolean
+  /* $text?: {
+    $search: string
+    $language?: string
+    $caseSensitive?: boolean
+    $diacriticSensitive?: boolean
+  }
+  $where?: string | ((this: TSchema) => boolean)
+  $comment?: string | Document */
+}
+
+type StrictFilter<TSchema> =
+  | Partial<TSchema>
+  | ({
+      [Property in Join<NestedPaths<WithId<TSchema>, []>, '.'>]?: Condition<
+        PropertyType<WithId<TSchema>, Property>
+      >
+    } & RootFilterOperators<WithId<TSchema>>)
+
+class Db<S extends ZodObject<any>> {
+  private schema: S
+  private db: NEDB<S['_output']>
+
+  constructor(
+    filename: string,
+    schema: S,
+    {
+      uniqueFieldName,
+    }: { uniqueFieldName: KeysOfAType<S['_output'], string | string[]> },
+  ) {
+    this.schema = schema
+    this.db = new NEDB({ filename, autoload: true })
+    this.db.ensureIndex(
+      { fieldName: uniqueFieldName as string, unique: true, sparse: false },
+      (err) => {
+        if (err) {
+          throw err
+        }
+      },
+    )
+  }
+
+  async findAll(filter: StrictFilter<S['_output']> = {}) {
+    const docs: Document<S['_output']>[] = await this.db.findAsync(filter)
+
+    return docs
+  }
+
+  async findOne(filter: StrictFilter<S['_output']>) {
+    const doc: Nullable<Document<S['_output']>> =
+      await this.db.findOneAsync(filter)
+
+    if (!doc) return null
+
+    return doc
+  }
+
+  async updateOne(
+    id: string,
+    update: S['_output'],
+  ): Promise<Document<S['_output']>> {
+    const validation = this.schema.safeParse(update)
+
+    if (!validation.success) {
+      throw validation.error
+    }
+
+    await this.db.updateAsync({ _id: id }, update)
+    await this.db.compactDatafileAsync()
+
+    return {
+      ...update,
+      _id: id,
+    }
+  }
+}
+
+export { type Document }
+export default Db
