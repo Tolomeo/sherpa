@@ -1,7 +1,5 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
-import * as util from 'node:util'
-import chalk from 'chalk'
 import { open, diff, input, choice, log } from '../_utils'
 import { getAllByResourceId } from '../../src/topic'
 import Resource, { getByUrl } from '../../src/resource'
@@ -19,7 +17,7 @@ const getResource = async () => {
     const urlResource = await getByUrl(url)
 
     if (!urlResource) {
-      log.error(`\nResource "${url}" not found`)
+      log.error(`Resource "${url}" not found`)
       continue
     }
 
@@ -47,12 +45,9 @@ const updateResource = async (resource: Resource) => {
   let resourceUpdate = await getResourceUpdate(resource.data)
 
   while (true) {
-    log.text(`\nUpdated resource data:\n`)
+    log.text(`Updated resource data:`)
     log.text(
-      `${diff(
-        JSON.stringify(resource.data, null, 2),
-        JSON.stringify(resourceUpdate, null, 2),
-      )}\n`,
+      `${diff(log.stringify(resource.data), log.stringify(resourceUpdate))}`,
     )
 
     const action = await choice('Choose action', [
@@ -71,9 +66,9 @@ const updateResource = async (resource: Resource) => {
       case 'persist':
         try {
           await resource.change(resourceUpdate)
-          log.success(`\nResource update succeeded\n`)
+          log.success(`Resource update succeeded`)
         } catch (error) {
-          log.error(`\nResource update failed.\n`)
+          log.error(`Resource update failed.`)
           log.error(error)
         }
         return
@@ -91,24 +86,20 @@ const healthcheck = async (
   const healthCheckResult = await healthcheckRunner.run(url, strategy)
 
   if (!healthCheckResult.success) {
-    log.error(`\nHealth check failed\n`)
-    log.error(`${healthCheckResult.error}\n`)
+    log.error(`Health check failed`)
+    log.error(`${healthCheckResult.error}`)
     return
   }
 
-  log.success(`\nHealth check succeeded\n`)
+  log.success(`Health check succeeded`)
   log.text(
     `${diff(
-      JSON.stringify({ url, title }, null, 2),
-      JSON.stringify(
-        {
-          url: healthCheckResult.url,
-          title: healthCheckResult.data.title,
-        },
-        null,
-        2,
-      ),
-    )}\n`,
+      log.stringify({ url, title }),
+      log.stringify({
+        url: healthCheckResult.url,
+        title: healthCheckResult.data.title,
+      }),
+    )}`,
   )
 
   await healthcheckRunner.teardown()
@@ -118,23 +109,23 @@ const deleteResource = async (resource: Resource) => {
   const topics = await getAllByResourceId(resource.id)
 
   log.warning(
-    `\nThe resource is listed in the following topics:\n${topics.map(
+    `The resource is listed in the following topics:${topics.map(
       (t) => t.topic,
-    )}\n`,
+    )}`,
   )
 
   while (true) {
-    log.text(`\n${JSON.stringify(resource.data, null, 2)}`)
+    log.inspect(resource.data)
 
     const action = await choice(
-      `The resource is listed in the following topics:\n${topics.map(
-        (t) => t.topic,
-      )}`,
-      ['display topics', 'delete resource and update topics'],
+      `The resource occurs in the following topics:\n${topics
+        .map((t) => t.topic)
+        .join(', ')}`,
+      ['display occurrences', 'delete resource and update topics'],
     )
 
     switch (action) {
-      case 'display topics':
+      case 'display occurrences':
         topics.forEach((t) => {
           const { topic, main, resources } = t.data
           const display = {
@@ -159,7 +150,7 @@ const deleteResource = async (resource: Resource) => {
 
 const update = async (resource: Resource) => {
   while (true) {
-    log.text(`\n${JSON.stringify(resource.data, null, 2)}`)
+    log.inspect(resource.data)
 
     const action = await choice('Choose action', [
       'open',

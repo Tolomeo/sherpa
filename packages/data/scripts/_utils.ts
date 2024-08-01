@@ -2,33 +2,47 @@ import * as readline from 'node:readline'
 import chalk from 'chalk'
 import * as JSDiff from 'diff'
 
+type JSONSerializable =
+  | string
+  | number
+  | boolean
+  | null
+  | Array<JSONSerializable>
+  | { [key: string]: JSONSerializable }
+
 export const log = {
   text(text: string) {
-    return console.log(chalk.white(text))
+    return console.log(`\n${chalk.white(text)}\n`)
   },
   heading(text: string) {
-    return console.log(chalk.magenta(text))
+    return console.log(`\n${chalk.magenta(text)}\n`)
   },
   error(text: string) {
-    return console.log(chalk.red(text))
+    return console.log(`\n${chalk.red(text)}\n`)
   },
   success(text: string) {
-    return console.log(chalk.green(text))
+    return console.log(`\n${chalk.green(text)}\n`)
   },
   warning(text: string) {
-    return console.log(chalk.yellow(text))
+    return console.log(`\n${chalk.yellow(text)}\n`)
   },
-  inspect(thing: any, options: { highlight?: string } = {}) {
-    let thingString = JSON.stringify(thing, null, 2)
+  stringify(stringifiable: JSONSerializable) {
+    return JSON.stringify(stringifiable, null, 2)
+  },
+  inspect(
+    stringifiable: JSONSerializable,
+    options: { highlight?: string } = {},
+  ) {
+    let stringified = log.stringify(stringifiable)
 
     if (options.highlight) {
-			// TODO: replaceAll
-      thingString = thingString.replace(options.highlight, (match) =>
-        chalk.black.bgYellow(match),
+      stringified = stringified.replace(
+        new RegExp(options.highlight, 'g'),
+        (match) => chalk.black.bgYellow(match),
       )
     }
 
-    return log.text(thingString)
+    return log.text(stringified)
   },
 }
 
