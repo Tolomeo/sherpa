@@ -239,7 +239,8 @@ class Db<S extends ZodObject<any>> {
   }
 
   async removeOne(id: string) {
-    return this.db.removeAsync({ _id: id }, {})
+    await this.db.removeAsync({ _id: id }, {})
+    await this.db.compactDatafileAsync()
   }
 }
 
