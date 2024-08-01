@@ -108,21 +108,18 @@ const healthcheck = async (
 const deleteResource = async (resource: Resource) => {
   const topics = await getAllByResourceId(resource.id)
 
-  log.warning(
-    `The resource is listed in the following topics:${topics.map(
-      (t) => t.topic,
-    )}`,
-  )
-
   while (true) {
     log.inspect(resource.data)
 
-    const action = await choice(
+    log.warning(
       `The resource occurs in the following topics:\n${topics
         .map((t) => t.topic)
         .join(', ')}`,
-      ['display occurrences', 'delete resource and update topics'],
     )
+    const action = await choice(`Choose action`, [
+      'display occurrences',
+      'delete resource and update topics',
+    ])
 
     switch (action) {
       case 'display occurrences':
