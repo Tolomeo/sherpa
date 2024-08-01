@@ -1,6 +1,6 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
-import { open, diff, input, choice, log } from '../_utils'
+import { open, diff, input, choice, log, confirm } from '../_utils'
 import { getAllByResourceId } from '../../src/topic'
 import Resource, { getByUrl } from '../../src/resource'
 import Healthcheck from '../../src/healthcheck/runner'
@@ -136,7 +136,12 @@ const deleteResource = async (resource: Resource) => {
           })
         })
         break
+
       case 'delete resource and update topics':
+        const confirmed = await confirm(`Confirm resource removal`)
+
+        if (!confirmed) break
+
         await Promise.all(
           topics.map((topic) =>
             topic.change({
@@ -153,10 +158,15 @@ const deleteResource = async (resource: Resource) => {
           log.error(err)
           process.exit(1)
         })
+
         log.success(`Topics updated`)
+
         await resource.delete()
+
         log.success(`Resource removed`)
+
         return
+
       case null:
         return
     }
