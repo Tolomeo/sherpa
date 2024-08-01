@@ -237,6 +237,10 @@ class Db<S extends ZodObject<any>> {
       _id: id,
     }
   }
+
+  async removeOne(id: string) {
+    return this.db.removeAsync({ _id: id }, {})
+  }
 }
 
 export { type Document }
