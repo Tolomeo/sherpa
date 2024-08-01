@@ -66,10 +66,10 @@ class Topic {
   } */
 
   private async update(update: Partial<TopicData>) {
-    const { _id: id, ...path } = this.document
+    const { _id: id, ...topic } = this.document
 
     this.document = await TopicsStore.updateOne(id, {
-      ...path,
+      ...topic,
       ...update,
     })
 

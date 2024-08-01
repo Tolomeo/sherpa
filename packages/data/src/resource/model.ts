@@ -52,6 +52,12 @@ class Resource {
     return this.document
   }
 
+  private async remove() {
+    const { _id: id } = this.document
+
+    await ResourcesStore.removeOne(id)
+  }
+
   public get id() {
     return this.document._id
   }
@@ -82,6 +88,10 @@ class Resource {
 
     const { _id, ...resourceData } = updated
     return resourceData
+  }
+
+  public async delete() {
+    return this.remove()
   }
 }
 
