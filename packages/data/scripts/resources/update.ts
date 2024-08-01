@@ -110,12 +110,12 @@ const deleteResource = async (resource: Resource) => {
 
   while (true) {
     log.inspect(resource.data)
-
     log.warning(
       `The resource occurs in the following topics:\n${topics
         .map((t) => t.topic)
         .join(', ')}`,
     )
+
     const action = await choice(`Choose action`, [
       'display occurrences',
       'delete resource and update topics',
@@ -137,7 +137,25 @@ const deleteResource = async (resource: Resource) => {
         })
         break
       case 'delete resource and update topics':
-        console.log('delete')
+        await Promise.all(
+          topics.map((topic) =>
+            topic.change({
+              main: topic.data.main
+                ? topic.data.main.filter((id) => id !== resource.id)
+                : null,
+              resources: topic.data.resources
+                ? topic.data.resources.filter((id) => id !== resource.id)
+                : null,
+            }),
+          ),
+        ).catch((err) => {
+          log.error(`Error updating topics`)
+          log.error(err)
+          process.exit(1)
+        })
+        log.success(`Topics updated`)
+        await resource.delete()
+        log.success(`Resource removed`)
         return
       case null:
         return
