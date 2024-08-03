@@ -6,27 +6,6 @@ import Resource, { getByUrl, getAllByUrl } from '../../src/resource'
 import Healthcheck from '../../src/healthcheck/runner'
 import { ResourceData } from '../../types'
 
-const getResource = async () => {
-  let resource: Resource | undefined
-
-  while (!resource) {
-    const url = await input(`Enter resource url`)
-
-    if (url === null) return null
-
-    const urlResource = await getByUrl(url)
-
-    if (!urlResource) {
-      log.error(`Resource "${url}" not found`)
-      continue
-    }
-
-    resource = urlResource
-  }
-
-  return resource
-}
-
 const searchResource = async () => {
   while (true) {
     const url = await input(`Enter url search`)
@@ -41,6 +20,10 @@ const searchResource = async () => {
     }
 
     log.success(`${resources.length} found`)
+
+    if (resources.length === 1) {
+      return resources[0]
+    }
 
     const action = await choice(
       `Select resource`,
@@ -263,20 +246,9 @@ const update = async (resource: Resource) => {
 
 ;(async function main() {
   while (true) {
-    const action = await choice(`Choose action`, [
-      'choose a resource by url',
-      'search a resource by url',
-    ])
+    const action = await choice(`Choose action`, ['search a resource by url'])
 
     switch (action) {
-      case 'choose a resource by url': {
-        log.text(`Choose a resource`)
-        const resource = await getResource()
-        if (!resource) break
-        await update(resource)
-        break
-      }
-
       case 'search a resource by url': {
         const resource = await searchResource()
         if (!resource) break
