@@ -1,6 +1,6 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
-import { open, diff, input, choice, log, confirm } from '../_utils'
+import { open, input, choice, log, confirm } from '../_utils'
 import { getAllByResourceId } from '../../src/topic'
 import Resource, { getByUrl, getAllByUrl } from '../../src/resource'
 import Healthcheck from '../../src/healthcheck/runner'
@@ -74,9 +74,7 @@ const updateResource = async (resource: Resource) => {
 
   while (true) {
     log.text(`Updated resource data:`)
-    log.text(
-      `${diff(log.stringify(resource.data), log.stringify(resourceUpdate))}`,
-    )
+    log.diff(log.stringify(resource.data), log.stringify(resourceUpdate))
 
     const action = await choice('Choose action', [
       'change',
@@ -120,14 +118,12 @@ const healthcheck = async (
   }
 
   log.success(`Health check succeeded`)
-  log.text(
-    `${diff(
-      log.stringify({ url, title }),
-      log.stringify({
-        url: healthCheckResult.url,
-        title: healthCheckResult.data.title,
-      }),
-    )}`,
+  log.diff(
+    log.stringify({ url, title }),
+    log.stringify({
+      url: healthCheckResult.url,
+      title: healthCheckResult.data.title,
+    }),
   )
 
   await healthcheckRunner.teardown()
