@@ -43,7 +43,6 @@
 {"title":"How to use JavaScript Regular Expressions","url":"https://flaviocopes.com/javascript-regular-expressions","type":"basics","source":"flaviocopes.com","_id":"1gm3AkXrpT4yi2LB"}
 {"title":"How to Dockerize a Flask Application","url":"https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/","type":"how-to","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"1m4j1A0kbtIK7kKZ"}
 {"title":"The Encyclopedia of Human-Computer Interaction","url":"https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed","type":"basics","source":"interaction-design.org","_id":"1oEg2PEy6jHU8g7d"}
-{"title":"Your Next.js Bundle Will Thank You","url":"https://renatopozzi.me/articles/your-nextjs-bundle-will-thank-you","type":"advanced","source":"renatopozzi.me","_id":"1qVAkxk1tedP8DdW"}
 {"title":"Develop Accessible Web Apps with React","url":"https://egghead.io/courses/develop-accessible-web-apps-with-react","type":"advanced","source":"egghead.io","_id":"1qYK2RHWBQVtZcT0"}
 {"title":"TypeScript Generics for People Who Gave Up on Understanding Generics","url":"https://ts.chibicode.com/generics","type":"basics","source":"ts.chibicode.com","_id":"1qqa6CQyg56GGa5n"}
 {"title":"Free Icon Design Guide","url":"https://iconutopia.com/free-icon-design-guide","type":"basics","source":"iconutopia.com","_id":"1tSnZl8jCZrGhgFu"}
@@ -66,7 +65,6 @@
 {"title":"Regex course","url":"https://wanago.io/courses/regex-course","type":"basics","source":"wanago.io","_id":"2VW8dfhZwqWyzIE1"}
 {"title":"A Complete Guide to useEffect","url":"https://overreacted.io/a-complete-guide-to-useeffect","type":"advanced","source":"overreacted.io","_id":"2Y8RGSJISqfgV2NX"}
 {"title":"A Visual Git Reference","url":"https://marklodato.github.io/visual-git-guide","type":"basics","source":"marklodato.github.io","_id":"2YLWN7IIngSX24fl"}
-{"title":"Sidebar","url":"https://sidebar.io","type":"feed","source":"sidebar.io","_id":"2Z5Hxqcqa6NYIkfQ"}
 {"title":"awesome-functional-python","url":"https://github.com/sfermigier/awesome-functional-python","type":"reference","source":"github.com/sfermigier","_id":"2fopzms4y3LJBdTd"}
 {"title":"TypeScript Weekly","url":"https://www.typescript-weekly.com","type":"feed","source":"typescript-weekly.com","_id":"2friK9V6WPYrfBza"}
 {"title":"An Illustrated Guide to Some Useful Command Line Tools","url":"https://www.wezm.net/technical/2019/10/useful-command-line-tools/","type":"reference","source":"wezm.net","_id":"2g2zRYUDP85XBOnW"}
@@ -191,7 +189,6 @@
 {"title":"Python Platformer Game Tutorial for Beginners","url":"https://www.youtube.com/watch?v=6gLeplbqtqg","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"84DKlzPpfL5mtxoW"}
 {"title":"Christian Heilmann","url":"https://christianheilmann.com","type":"feed","source":"christianheilmann.com","_id":"87B6W5XE8NalDCMJ"}
 {"title":"css-protips","url":"https://github.com/AllThingsSmitty/css-protips","type":"how-to","source":"github.com/AllThingsSmitty","_id":"89yZHbk9J7CMHP0B"}
-{"title":"Typography Handbook","url":"https://typographyhandbook.com","type":"basics","source":"typographyhandbook.com","_id":"8AHjmhgZ20lMe81a"}
 {"title":"Learn Images","url":"https://web.dev/learn/images/","type":"advanced","source":"web.dev","_id":"8AbqF7OzAtrsPlfj"}
 {"title":"awesome-css-learning","url":"https://github.com/micromata/awesome-css-learning","type":"reference","source":"github.com/micromata","_id":"8Io8pNZbV7sMRdFT"}
 {"title":"Build A Simple Terminal Emulator In 100 Lines of Golang","url":"https://ishuah.com/2021/03/10/build-a-terminal-emulator-in-100-lines-of-go/","type":"advanced","source":"ishuah.com","_id":"8Lh5r6uaj5gJS2Jd"}
@@ -410,7 +407,6 @@
 {"title":"WhoCanUse","url":"https://whocanuse.com","type":"tool","source":"whocanuse.com","_id":"GfTKxkZ6bBHy0pAy"}
 {"title":"Docker Tutorial for Beginners","url":"https://www.youtube.com/watch?v=p28piYY_wv8","source":"youtube.com/c/amigoscode","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"Gh6ytE97cEvtqBar"}
 {"title":"react-redux-typescript-guide","url":"https://github.com/piotrwitek/react-redux-typescript-guide","type":"basics","source":"github.com/piotrwitek","_id":"GiiKx6tmvwo5zJeW"}
-{"title":"Learney","url":"https://app.learney.me/maps/PythonCurriculum","type":"basics","source":"app.learney.me","_id":"GtBLMGE1lXtHq1x9"}
 {"title":"typography","url":"https://github.com/deanhume/typography","type":"reference","source":"github.com/deanhume","_id":"GtNr8qjvcOxsW0QK"}
 {"title":"React Redux with TypeScript Crash Course","url":"https://www.youtube.com/watch?v=udr2rx_B99w","source":"youtube.com/@laithacademy","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"GvlCWnXwvDCFxadc"}
 {"title":"Defensive coding guide","url":"https://docs.fedoraproject.org/en-US/defensive-coding/","type":"curiosity","source":"docs.fedoraproject.org","_id":"GzzLPK2xi4bVMgxO"}
@@ -593,7 +589,6 @@
 {"title":"Build Advanced Components with React Hooks","url":"https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc","type":"basics","source":"egghead.io","_id":"O05gvW78zjsDJ1Ys"}
 {"title":"How to Improve Performance in Git: The Complete Guide","url":"https://www.git-tower.com/blog/git-performance/","type":"advanced","source":"git-tower.com","_id":"O1h6Eqbe9inPCIKF"}
 {"title":"TypeScript Error Translator","url":"https://ts-error-translator.vercel.app","type":"tool","source":"ts-error-translator.vercel.app","_id":"O2gp7sjfyp5jAH0K"}
-{"title":"Developing Cloud Apps with Node.js and React","url":"https://www.coursera.org/learn/node-js","type":"basics","source":"coursera.org","_id":"O6sl1JV0JVIYKibb"}
 {"title":"How to use CSS variables with React","url":"https://www.joshwcomeau.com/css/css-variables-for-react-devs/","type":"how-to","source":"joshwcomeau.com","_id":"O8MYvrexT4CCcO3r"}
 {"title":"Next.js on Vercel","url":"https://vercel.com/docs/frameworks/nextjs","type":"advanced","source":"vercel.com","_id":"O9Hib66Mw4dCzXOt"}
 {"title":"Lua: mailing list","url":"https://www.lua.org/lua-l.html","type":"feed","source":"lua.org","_id":"OCMPzS5kvmV8Ep2I"}
@@ -768,7 +763,6 @@
 {"title":"git-cheat-sheet","url":"https://github.com/arslanbilal/git-cheat-sheet","type":"reference","source":"github.com/arslanbilal","_id":"VdfrayIjz5vgtMEb"}
 {"title":"Introduction to Containers w/ Docker, Kubernetes & OpenShift","url":"https://www.coursera.org/learn/ibm-containers-docker-kubernetes-openshift","type":"basics","source":"coursera.org","_id":"Vh2AST1FHS89BpH1"}
 {"title":"ASCII Table - ASCII Character Codes, HTML, Octal, Hex, Decimal","url":"https://www.asciitable.com","type":"reference","source":"asciitable.com","_id":"VkV63bCvFmoTaLzU"}
-{"title":"Fish shell playground","url":"https://rootnroll.com/d/fish-shell/","type":"basics","source":"rootnroll.com","_id":"VkhDqIltff7obBum"}
 {"title":"Regular Expressions With GNU grep in the Terminal - Part 01","url":"https://www.youtube.com/watch?v=LIVBktatfQI","source":"youtube.com/@themouselessdev8655","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"Vnxzd5WnN63uP2xK"}
 {"title":"A Guide To Accessible Form Validation","url":"https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/","type":"how-to","source":"smashingmagazine.com","_id":"VtD2wqN8k0tdRY7x"}
 {"title":"Introduction","url":"https://trunkbaseddevelopment.com","type":"advanced","source":"trunkbaseddevelopment.com","_id":"VuQwt0C797ceCrgO"}
@@ -972,7 +966,6 @@
 {"title":"Windows Command Line","url":"https://devblogs.microsoft.com/commandline/","type":"feed","source":"devblogs.microsoft.com","_id":"dwDqIBVLZVoXfaom"}
 {"title":"Adobe XD 2022 Crash Course","url":"https://www.youtube.com/watch?v=oo5EoelQ_DQ","source":"youtube.com/@DesignCourse","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"e1wGR8jkFrzcKMKb"}
 {"title":"the-art-of-command-line","url":"https://github.com/jlevy/the-art-of-command-line","type":"basics","source":"github.com/jlevy","_id":"e23rhOYViSzP2bh9"}
-{"title":"Thinking in React Hooks","url":"https://wattenberger.com/blog/react-hooks","type":"basics","source":"wattenberger.com","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"e3bakgki5ZtRkbxR"}
 {"title":"Blue Green Deployment for Node.js Without Kubernetes","url":"https://semaphoreci.com/blog/blue-green-deployment-nodejs","type":"how-to","source":"semaphoreci.com","_id":"e7IlgNIY6LzsSbZL"}
 {"title":"CSS-Tricks","url":"https://css-tricks.com","type":"feed","source":"css-tricks.com","_id":"e8aYs2Q3Q72KMfUY"}
 {"title":"Learn HTML","url":"https://web.dev/learn/html/","type":"basics","source":"web.dev","_id":"eAr3YwzbCLp1guXr"}
@@ -1017,7 +1010,6 @@
 {"title":"HTML & Coding Introduction","url":"https://www.youtube.com/watch?v=GDGejH3SDNQ","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"fD8LfBFdnMaAfkTr"}
 {"title":"A Complete Guide To CSS Cascade Layers","url":"https://css-tricks.com/css-cascade-layers","type":"advanced","source":"css-tricks.com","_id":"fF0niUO4otyRq3r4"}
 {"title":"TypeScript","url":"https://www.typescriptlang.org/","type":"reference","source":"typescriptlang.org","_id":"fHoxkag1ITifShqC"}
-{"title":"The Lua Integration Guide","url":"https://lua.msys.ch/lua-integration-guide.html","type":"advanced","source":"lua.msys.ch","_id":"fM6n8mGrUQW3cuPK"}
 {"title":"CSS Challenges","url":"https://css-challenges.com","type":"basics","source":"css-challenges.com","_id":"fNRQgJ2s4zuLE94i"}
 {"title":"Accessible Front-End Patterns For Responsive Tables (Part 1)","url":"https://www.smashingmagazine.com/2022/12/accessible-front-end-patterns-responsive-tables-part1/","type":"how-to","source":"smashingmagazine.com","_id":"fOTSZgM8ACbLzSv8"}
 {"title":"Docker Tutorial for Beginners","url":"https://www.youtube.com/watch?v=3c-iBn73dDE&t=20s","source":"youtube.com/c/TechWorldwithNana","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"fQ2lh1uy785STf50"}
@@ -1228,7 +1220,6 @@
 {"title":"awesome-a11y","url":"https://github.com/brunopulis/awesome-a11y","type":"reference","source":"github.com/brunopulis","_id":"mtB0MMG6vQDzw7S8"}
 {"title":"useHooks","url":"https://usehooks.com","type":"reference","source":"usehooks.com","_id":"mwKNchaIk3sXI4hF"}
 {"title":"Learn Django by Building an Online Marketplace","url":"https://www.youtube.com/watch?v=ZxMB6Njs3ck","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"n0nFltHmoN9nKoCI"}
-{"title":"Designing Grids","url":"https://vimeo.com/239782886","type":"basics","source":"vimeo.com","_id":"n5bycLASWen3hkcI"}
 {"title":"Bash-Snippets","url":"https://github.com/alexanderepstein/Bash-Snippets","type":"reference","source":"github.com/alexanderepstein","_id":"n9Ontd68MM9KChlQ"}
 {"title":"Python for Beginners","url":"https://www.youtube.com/watch?v=7utwZYKweho","source":"youtube.com/@TCMSecurityAcademy","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"nDW4M38ORfRbPdbJ"}
 {"title":"awesome-javascript","url":"https://github.com/sorrycc/awesome-javascript","type":"reference","source":"github.com/sorrycc","_id":"nIQ7nRAMuTr7ZsgZ"}
@@ -1526,5 +1517,4 @@
 {"title":"Everything You Need to Know About CSS Variables","url":"https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855","type":"basics","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"zpxwwUOweG1naSu4"}
 {"title":"Principles of User Interface Design","url":"http://bokardo.com/principles-of-user-interface-design","type":"basics","source":"bokardo.com","_id":"zxIjPYNX0STmGLDN"}
 {"title":"Learn React 18: The Complete React Developer Course","url":"https://www.youtube.com/watch?v=l4G2MVgXFkw","source":"youtube.com/@envatotuts","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"zxnTNzILzT5pnuFz"}
-{"title":"Building a simplified webpack clone","url":"https://lihautan.com/building-a-simplified-webpack-clone/","type":"advanced","source":"lihautan.com","_id":"zzZKjHqANa9vMJ9a"}
 {"$$indexCreated":{"fieldName":"url","unique":true,"sparse":false}}
