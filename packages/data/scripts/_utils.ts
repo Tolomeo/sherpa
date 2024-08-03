@@ -41,6 +41,55 @@ export const log = {
 
     return log.text(stringified)
   },
+  diff(
+    oldFile: DiffFile | string,
+    newFile: DiffFile | string,
+    options?: DiffOptions,
+  ): string {
+    if (typeof oldFile === 'string') {
+      oldFile = { content: oldFile }
+    }
+    if (typeof newFile === 'string') {
+      newFile = { content: newFile }
+    }
+
+    const diff = JSDiff.createTwoFilesPatch(
+      oldFile.name || '',
+      newFile.name || '',
+      oldFile.content,
+      newFile.content,
+      oldFile.header || '',
+      newFile.header || '',
+      options,
+    )
+      .split('\n')
+      // remove "Index:" (if files are the same) and "====..."
+      .slice(oldFile.name === newFile.name ? 2 : 1)
+      // remove +++ and --- lines if the file name and header are blank
+      .slice(
+        oldFile.name || newFile.name || oldFile.header || newFile.header
+          ? 0
+          : 2,
+      )
+      .map((chunk) => {
+        switch (chunk[0]) {
+          case '+':
+            return chalk.green(chunk)
+          case '-':
+            return chalk.red(chunk)
+          case '@':
+            return chalk.dim.blue(chunk)
+          // \ No newline at end of file
+          case '\\':
+            return chalk.dim.yellow(chunk)
+          default:
+            return chunk
+        }
+      })
+      .join('\n')
+
+    log.text(diff)
+  },
 }
 
 export { default as open } from 'open'

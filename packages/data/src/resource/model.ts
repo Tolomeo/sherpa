@@ -8,6 +8,13 @@ export const getAll = async () => {
   return resources
 }
 
+export const getAllByUrl = async (url: string) => {
+  const docs = await ResourcesStore.findAll({ url: new RegExp(url, 'g') })
+  const resources = docs.map((d) => new Resource(d))
+
+  return resources
+}
+
 export const getByUrl = async (url: string) => {
   const doc = await ResourcesStore.findOne({ url })
 

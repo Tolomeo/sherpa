@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import { open, diff, input, choice, log, confirm } from '../_utils'
 import { getAllByResourceId } from '../../src/topic'
-import Resource, { getByUrl } from '../../src/resource'
+import Resource, { getByUrl, getAllByUrl } from '../../src/resource'
 import Healthcheck from '../../src/healthcheck/runner'
 import { ResourceData } from '../../types'
 
@@ -25,6 +25,34 @@ const getResource = async () => {
   }
 
   return resource
+}
+
+const searchResource = async () => {
+  while (true) {
+    const url = await input(`Enter url search`)
+
+    if (!url) return
+
+    const resources = await getAllByUrl(url)
+
+    if (!resources.length) {
+      log.warning(`No resources found`)
+      continue
+    }
+
+    log.success(`${resources.length} found`)
+
+    const action = await choice(
+      `Select resource`,
+      resources.map((r) => r.url),
+    )
+
+    if (!action) continue
+
+    const resource = resources.find((r) => r.url === action)
+
+    return resource
+  }
 }
 
 const getResourceUpdate = async (resourceData: ResourceData) => {
@@ -173,6 +201,37 @@ const deleteResource = async (resource: Resource) => {
   }
 }
 
+const compareResource = async (resource: Resource) => {
+  while (true) {
+    log.inspect(resource.data)
+
+    log.text(`Choose a resource to compare with`)
+    const comparedResource = await getResource()
+
+    if (!comparedResource) return
+
+    if (resource.id === comparedResource.id) {
+      log.warning(
+        `The chosen comparison resource matches the compared resource`,
+      )
+      continue
+    }
+
+    log.diff(log.stringify(resource.data), log.stringify(comparedResource.data))
+
+    const action = await choice(`Choose action`, [
+      'choose another resource to compare with',
+    ])
+
+    switch (action) {
+      case 'choose another resource to compare with':
+        continue
+      case null:
+        return
+    }
+  }
+}
+
 const update = async (resource: Resource) => {
   while (true) {
     log.inspect(resource.data)
@@ -181,6 +240,7 @@ const update = async (resource: Resource) => {
       'open',
       'update',
       'healthcheck',
+      'compare',
       'delete',
     ])
 
@@ -194,6 +254,9 @@ const update = async (resource: Resource) => {
       case 'healthcheck':
         await healthcheck(resource.data, resource.healthcheck)
         break
+      case 'compare':
+        await compareResource(resource)
+        break
       case 'delete':
         await deleteResource(resource)
       case null:
@@ -204,11 +267,30 @@ const update = async (resource: Resource) => {
 
 ;(async function main() {
   while (true) {
-    const resource = await getResource()
+    const action = await choice(`Choose action`, [
+      'choose a resource by url',
+      'search a resource by url',
+    ])
 
-    if (resource === null) process.exit(0)
+    switch (action) {
+      case 'choose a resource by url': {
+        log.text(`Choose a resource`)
+        const resource = await getResource()
+        if (!resource) break
+        await update(resource)
+        break
+      }
 
-    await update(resource)
+      case 'search a resource by url': {
+        const resource = await searchResource()
+        if (!resource) break
+        await update(resource)
+        break
+      }
+
+      case null:
+        process.exit(0)
+    }
   }
 })().catch((err) => {
   log.error(err)
