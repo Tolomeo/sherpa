@@ -16,7 +16,7 @@ export default class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCraw
     })
   }
 
-  requestHandler({
+  async requestHandler({
     request,
     $,
   }: CheerioCrawlingContext<HttpHealthcheckRunConfig>) {
@@ -24,19 +24,14 @@ export default class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCraw
       userData: { titleSelector },
     } = request
 
-    const title = $(titleSelector).text()
+    const metadata = await this.getMetadata({ url: request.url, htmlDom: $ })
 
-    if (title.trim() === '') {
-      const pageContent = $.html()
+    console.log(metadata)
 
-      this.failure(
-        request,
-        new Error(
-          `Could not retrieve ${titleSelector} text from ${this.formatHTML(
-            pageContent,
-          )}`,
-        ),
-      )
+    const { title } = metadata
+
+    if (!title || title.trim() === '') {
+      this.failure(request, new Error(`Could not retrieve title text`))
 
       return
     }

@@ -8,6 +8,8 @@ import type {
 } from 'crawlee'
 import he from 'he'
 import formatHTML from 'html-format'
+import createMetascraper, { MetascraperOptions } from 'metascraper'
+import createMetascraperTitleRules from 'metascraper-title'
 import { Deferred } from '../../common/defer'
 
 const { decode, encode } = he
@@ -27,6 +29,8 @@ export type HealthCheckResult =
       success: false
       error: Error
     }
+
+const scrapeMetadata = createMetascraper([createMetascraperTitleRules()])
 
 export abstract class HealthCheckRunner<
   C extends BasicCrawler | PlaywrightCrawler | CheerioCrawler,
@@ -63,6 +67,10 @@ export abstract class HealthCheckRunner<
     const eEntities = new RegExp(Object.keys(entities).join('|'), 'g')
 
     return decode(encode(text).replace(eEntities, (entity) => entities[entity]))
+  }
+
+  protected getMetadata(options: MetascraperOptions) {
+    return scrapeMetadata(options)
   }
 
   async teardown() {
