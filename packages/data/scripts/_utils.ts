@@ -12,19 +12,16 @@ type JSONSerializable =
 
 export const log = {
   text(text: string) {
-    return console.log(`\n${chalk.white(text)}\n`)
-  },
-  heading(text: string) {
-    return console.log(`\n${chalk.magenta(text)}\n`)
+    return console.log(`\n${text}`)
   },
   error(text: string) {
-    return console.log(`\n${chalk.red(text)}\n`)
+    return log.text(chalk.red(text))
   },
   success(text: string) {
-    return console.log(`\n${chalk.green(text)}\n`)
+    return log.text(chalk.green(text))
   },
   warning(text: string) {
-    return console.log(`\n${chalk.yellow(text)}\n`)
+    return log.text(chalk.yellow(text))
   },
   stringify(stringifiable: JSONSerializable) {
     return JSON.stringify(stringifiable, null, 2)
