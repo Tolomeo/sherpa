@@ -552,7 +552,7 @@
 {"title":"Hello, animation!","url":"https://css-animations.io/","type":"basics","source":"css-animations.io","_id":"MBq2H66gpjfYtucD"}
 {"title":"GoodUI ideas and A/B tested patterns for higher conversion rates and growth","url":"https://goodui.org/","type":"feed","source":"goodui.org","_id":"MD8JCyGN6awtQQAC"}
 {"title":"Docker Containers and Kubernetes Fundamentals","url":"https://www.youtube.com/watch?v=kTp5xUtcalw","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"MGnKu8opTsUFNuCf"}
-{"title":"JavaScript, React, TypeScript, and other Web Tech Articles and Tutorials - ui.dev","url":"https://ui.dev/blog/","type":"feed","source":"ui.dev","healthcheck":{"runner":"Zenscrape","config":{"titleSelector":"title:not(:empty)","render":false,"premium":true}},"_id":"MIuICLhVkMfpMLAp"}
+{"title":"JavaScript, React, TypeScript, and other Web Tech Articles and Tutorials - ui.dev","url":"https://ui.dev/blog/","type":"feed","source":"ui.dev","healthcheck":{"runner":"Http","config":{"titleSelector":"title:not(:empty)"}},"_id":"MIuICLhVkMfpMLAp"}
 {"title":"Functional-Light-JS","url":"https://github.com/getify/Functional-Light-JS","type":"advanced","source":"github.com/getify","_id":"MJblN6qzUSFHqfh1"}
 {"title":"The NumPy Tutorial","url":"https://www.youtube.com/watch?v=TyIE3py-rFQ","source":"youtube.com/@laithacademy","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"MW2v0TG3m7QCF51T"}
 {"title":"Node.js TypeScript","url":"https://wanago.io/courses/node-js-typescript","type":"advanced","source":"wanago.io","_id":"MbWV2jFqffZuDAem"}
@@ -576,7 +576,7 @@
 {"title":"javascript-algorithms","url":"https://github.com/trekhleb/javascript-algorithms","type":"advanced","source":"github.com/trekhleb","_id":"NQFGTi0QITr3ABE0"}
 {"title":"Getting geeky with Git","url":"https://wanago.io/courses/getting-geeky-with-git","type":"advanced","source":"wanago.io","_id":"NSK6Ee3Kls4PMlog"}
 {"title":"Ahmad Shadeed","url":"https://ishadeed.com","type":"feed","source":"ishadeed.com","_id":"Nbqk8q71wjpvXR99"}
-{"title":"Build your own React Router","url":"https://ui.dev/build-your-own-react-router","type":"advanced","source":"ui.dev","healthcheck":{"runner":"Zenscrape","config":{"titleSelector":"title:not(:empty)","render":false,"premium":true}},"_id":"Nc6133hInJMTAKrJ"}
+{"title":"Build your own React Router","url":"https://ui.dev/build-your-own-react-router","type":"advanced","source":"ui.dev","healthcheck":{"runner":"Http","config":{"titleSelector":"title:not(:empty)"}},"_id":"Nc6133hInJMTAKrJ"}
 {"title":"Dependency Manager","url":"https://devopedia.org/dependency-manager","type":"basics","source":"devopedia.org","_id":"Ndikg3QuRe8EnOkn"}
 {"title":"unix-shell-script-tactics","url":"https://github.com/SixArm/unix-shell-script-tactics","type":"how-to","source":"github.com/SixArm","_id":"Ne2cPt5UnSpxdpZF"}
 {"title":"web-dev.nvim","url":"https://github.com/jonathandion/web-dev.nvim","type":"reference","source":"github.com/jonathandion","_id":"NkSscei0ILSqNUyh"}
@@ -594,7 +594,7 @@
 {"title":"Lua: mailing list","url":"https://www.lua.org/lua-l.html","type":"feed","source":"lua.org","_id":"OCMPzS5kvmV8Ep2I"}
 {"title":"htop explained","url":"https://peteris.rocks/blog/htop/","type":"advanced","source":"peteris.rocks","_id":"OI19ocXxqxwlbhfl"}
 {"title":"101 Bash Commands and Tips for Beginners to Experts","url":"https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je","type":"basics","source":"dev.to","_id":"OQiHvRCeWWl1rGjA"}
-{"title":"The Interactive Guide to Rendering in React","url":"https://ui.dev/why-react-renders","type":"advanced","source":"ui.dev","healthcheck":{"runner":"Zenscrape","config":{"titleSelector":"title:not(:empty)","render":false,"premium":true}},"_id":"ORhUNzhHaZIWUuGE"}
+{"title":"The Interactive Guide to Rendering in React","url":"https://ui.dev/why-react-renders","type":"advanced","source":"ui.dev","healthcheck":{"runner":"Http","config":{"titleSelector":"title:not(:empty)"}},"_id":"ORhUNzhHaZIWUuGE"}
 {"title":"Interaction Design","url":"https://www.coursera.org/specializations/interaction-design","type":"basics","source":"coursera.org","_id":"OSFCiNbuIbyrGe7t"}
 {"title":"Dive Into Python 3","url":"https://diveintopython3.problemsolving.io","type":"curiosity","source":"diveintopython3.problemsolving.io","_id":"OTSG9dXuDkFVOQ4b"}
 {"title":"Learn Vite – Frontend Build Tool Course","url":"https://www.youtube.com/watch?v=VAeRhmpcWEQ","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"OVWVrEzo5NYJ4g8i"}
@@ -1047,7 +1047,7 @@
 {"title":"Bash2Basics","url":"https://www.youtube.com/playlist?list=PLep05UYkc6wTWlugE_9Lj6JlLpvSBbkZ_","source":"youtube.com/c/TJDeVries","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"gnKxzDbXgesBvOyL"}
 {"title":"Advanced TypeScript","url":"https://www.youtube.com/playlist?list=PLIvujZeVDLMx040-j1W4WFs1BxuTGdI_b","source":"youtube.com/@mattpocockuk","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"gnjegZVLdle25vLf"}
 {"title":"A complete guide to using CSS filters with SVGs","url":"https://blog.logrocket.com/complete-guide-using-css-filters-svgs","type":"advanced","source":"blog.logrocket.com","_id":"gqHw2Rg0r2zCJrcA"}
-{"title":"Why React Hooks?","url":"https://ui.dev/why-react-hooks","type":"curiosity","source":"ui.dev","healthcheck":{"runner":"Zenscrape","config":{"titleSelector":"title:not(:empty)","render":false,"premium":true}},"_id":"grPqX9Ork1jvOd3F"}
+{"title":"Why React Hooks?","url":"https://ui.dev/why-react-hooks","type":"curiosity","source":"ui.dev","healthcheck":{"runner":"Http","config":{"titleSelector":"title:not(:empty)"}},"_id":"grPqX9Ork1jvOd3F"}
 {"title":"CLIs are reified UIs","url":"https://www.expressionsofchange.org/reification-of-interaction/","type":"curiosity","source":"expressionsofchange.org","_id":"gvIHADRnCuvrC787"}
 {"title":"Frontend Masters Online Bootcamp","url":"https://frontendmasters.com/bootcamp","type":"advanced","source":"frontendmasters.com","_id":"gvdfYHUI0MVbOTJ9"}
 {"title":"Regular Expressions for Regular Folk","url":"https://refrf.dev","type":"basics","source":"refrf.dev","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"gvvNXf4SSYVfc9Q4"}
@@ -1103,7 +1103,7 @@
 {"title":"ARIA Authoring Practices Guide","url":"https://www.w3.org/WAI/ARIA/apg/","type":"how-to","source":"w3.org","_id":"i4HH4uhkKiXl5FdW"}
 {"title":"Git Time","url":"https://git.bradwoods.io/","type":"basics","source":"git.bradwoods.io","_id":"i67GyZ8uMSt7gvLO"}
 {"title":"Accessibility for teams","url":"https://accessibility-for-teams.com","type":"advanced","source":"accessibility-for-teams.com","_id":"i6W1BorkYEj1PwXy"}
-{"title":"A Complete Guide to React Router: Everything You Need to Know","url":"https://ui.dev/react-router-tutorial","type":"advanced","source":"ui.dev","healthcheck":{"runner":"Zenscrape","config":{"titleSelector":"title:not(:empty)","render":false,"premium":true}},"_id":"i7Peh5IcBBtHoiWt"}
+{"title":"A Complete Guide to React Router: Everything You Need to Know","url":"https://ui.dev/react-router-tutorial","type":"advanced","source":"ui.dev","healthcheck":{"runner":"Http","config":{"titleSelector":"title:not(:empty)"}},"_id":"i7Peh5IcBBtHoiWt"}
 {"title":"User Interface (UI) Personalization","url":"https://www.edx.org/course/user-interface-ui-personalization","type":"basics","source":"edx.org","_id":"iBMPAg4gz4DMg2Vq"}
 {"title":"React Express","url":"http://www.react.express","type":"basics","source":"react.express","_id":"iFZiUTm3zStA0sxs"}
 {"title":"How To Section Your HTML","url":"https://css-tricks.com/how-to-section-your-html","type":"basics","source":"css-tricks.com","_id":"iGkevTVRuR4387Jd"}
