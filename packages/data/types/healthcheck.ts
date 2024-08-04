@@ -17,6 +17,15 @@ export type HttpHealthcheckRunConfig = z.infer<
   typeof HttpHealthcheckRunConfigSchema
 >
 
+export const HttpHealthcheckStrategySchema = object({
+  runner: literal('Http'),
+  config: HttpHealthcheckRunConfigSchema,
+}).strict()
+
+export const PdfFileHealthcheckStrategySchema = object({
+  runner: literal('PdfFile'),
+}).strict()
+
 export const E2EHealthcheckRunConfigSchema = object({
   // TODO: css selector regex
   titleSelector: string(),
@@ -28,6 +37,15 @@ export type E2EHealthcheckRunConfig = z.infer<
   typeof E2EHealthcheckRunConfigSchema
 >
 
+export const E2EHealthcheckStrategySchema = object({
+  runner: literal('E2E'),
+  config: E2EHealthcheckRunConfigSchema,
+}).strict()
+
+export const YoutubeDataHealthcheckStrategySchema = object({
+  runner: literal('YoutubeData'),
+}).strict()
+
 export const ZenscrapeHealthcheckRunConfigSchema = object({
   titleSelector: string(),
   render: boolean(),
@@ -38,33 +56,63 @@ export type ZenscrapeHealthcheckRunConfig = z.infer<
   typeof ZenscrapeHealthcheckRunConfigSchema
 >
 
+export const ZenscrapeHealthcheckStrategySchema = object({
+  runner: literal('Zenscrape'),
+  config: ZenscrapeHealthcheckRunConfigSchema,
+}).strict()
+
+export const UdemyAffiliateHealthcheckStrategySchema = object({
+  runner: literal('UdemyAffiliate'),
+}).strict()
+
 export const HealthcheckStrategySchema = discriminatedUnion('runner', [
-  object({
-    runner: literal('Http'),
-    config: HttpHealthcheckRunConfigSchema,
-  }).strict(),
-
-  object({
-    runner: literal('PdfFile'),
-  }).strict(),
-
-  object({
-    runner: literal('E2E'),
-    config: E2EHealthcheckRunConfigSchema,
-  }).strict(),
-
-  object({
-    runner: literal('YoutubeData'),
-  }).strict(),
-
-  object({
-    runner: literal('Zenscrape'),
-    config: ZenscrapeHealthcheckRunConfigSchema,
-  }).strict(),
-
-  object({
-    runner: literal('UdemyAffiliate'),
-  }).strict(),
-])
+  HttpHealthcheckStrategySchema,
+  PdfFileHealthcheckStrategySchema,
+  E2EHealthcheckStrategySchema,
+  YoutubeDataHealthcheckStrategySchema,
+  ZenscrapeHealthcheckStrategySchema,
+  UdemyAffiliateHealthcheckStrategySchema,
+]).default({
+  runner: 'Http',
+  config: {
+    titleSelector: 'title:not(:empty)',
+  },
+})
 
 export type HealthcheckStrategy = z.infer<typeof HealthcheckStrategySchema>
+
+export const HealthCheckStrategies: Record<
+  HealthcheckStrategy['runner'],
+  HealthcheckStrategy
+> = {
+  Http: {
+    runner: 'Http',
+    config: {
+      titleSelector: 'title:not(:empty)',
+    },
+  },
+  PdfFile: {
+    runner: 'PdfFile',
+  },
+  E2E: {
+    runner: 'E2E',
+    config: {
+      titleSelector: 'title:not(:empty)',
+      waitForLoadState: 'load',
+    },
+  },
+  YoutubeData: {
+    runner: 'YoutubeData',
+  },
+  Zenscrape: {
+    runner: 'Zenscrape',
+    config: {
+      titleSelector: 'title:not(:empty)',
+      render: false,
+      premium: false,
+    },
+  },
+  UdemyAffiliate: {
+    runner: 'UdemyAffiliate',
+  },
+}
