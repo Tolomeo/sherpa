@@ -10,24 +10,25 @@ import {
   type HealthcheckStrategy,
 } from '../../types'
 
-const searchResource = async () => {
+const getResource = async () => {
   while (true) {
-    const url = await input(`Enter url search`)
+    const url = await input(`Enter url fragment to search for`)
 
     if (!url) return
 
     const resources = await getAllByUrl(url)
 
     if (!resources.length) {
-      log.warning(`No resources found`)
+      log.warning(`No results found`)
       continue
     }
 
-    log.success(`${resources.length} found`)
-
     if (resources.length === 1) {
+      log.success(`1 result found`)
       return resources[0]
     }
+
+    log.success(`${resources.length} results found`)
 
     const action = await choice(
       `Select resource`,
@@ -39,55 +40,6 @@ const searchResource = async () => {
     const resource = resources.find((r) => r.url === action)
 
     return resource
-  }
-}
-
-const getResourceUpdate = async (resourceData: ResourceData) => {
-  const resourceUpdate = { ...resourceData }
-
-  for (const [key, value] of Object.entries(resourceData)) {
-    const valueUpdate = await input(`${key}(${value})`)
-
-    if (!valueUpdate) continue
-
-    resourceUpdate[key] = valueUpdate
-  }
-
-  return resourceUpdate
-}
-
-const updateResource = async (resource: Resource) => {
-  let resourceUpdate = await getResourceUpdate(resource.data)
-
-  while (true) {
-    log.text(`Updated resource data:`)
-    log.diff(log.stringify(resource.data), log.stringify(resourceUpdate))
-
-    const action = await choice('Choose action', [
-      'change',
-      'healthcheck',
-      'persist',
-    ])
-
-    switch (action) {
-      case 'change':
-        resourceUpdate = await getResourceUpdate(resourceUpdate)
-        continue
-      case 'healthcheck':
-        await runHealthcheck(resourceUpdate, resource.healthcheck)
-        continue
-      case 'persist':
-        try {
-          await resource.change(resourceUpdate)
-          log.success(`Resource update succeeded`)
-        } catch (error) {
-          log.error(`Resource update failed.`)
-          log.error(error)
-        }
-        return
-      case null:
-        return
-    }
   }
 }
 
@@ -114,6 +66,55 @@ const runHealthcheck = async (
   )
 
   await healthcheckRunner.teardown()
+}
+
+const getResourceDataUpdate = async (resourceData: ResourceData) => {
+  const resourceUpdate = clone(resourceData)
+
+  for (const [key, value] of Object.entries(resourceData)) {
+    const valueUpdate = await input(`${key}(${value})`)
+
+    if (!valueUpdate) continue
+
+    resourceUpdate[key] = valueUpdate
+  }
+
+  return resourceUpdate
+}
+
+const manageResourceData = async (resource: Resource) => {
+  let resourceData = clone(resource.data)
+
+  while (true) {
+    log.inspect(resource.data)
+    log.diff(log.stringify(resource.data), log.stringify(resourceData))
+
+    const action = await choice('Choose action', [
+      'change resource data',
+      'healthcheck resource data',
+      'persist resource data',
+    ])
+
+    switch (action) {
+      case 'change resource data':
+        resourceData = await getResourceDataUpdate(resourceData)
+        continue
+      case 'healthcheck resource data':
+        await runHealthcheck(resourceData, resource.healthcheck)
+        continue
+      case 'persist resource data':
+        try {
+          await resource.change(resourceData)
+          log.success(`Resource update succeeded`)
+        } catch (error) {
+          log.error(`Resource update failed.`)
+          log.error(error)
+        }
+        return
+      case null:
+        return
+    }
+  }
 }
 
 const deleteResource = async (resource: Resource) => {
@@ -153,28 +154,35 @@ const deleteResource = async (resource: Resource) => {
 
         if (!confirmed) break
 
-        await Promise.all(
-          topics.map((topic) =>
-            topic.change({
-              main: topic.data.main
+        try {
+          await Promise.all(
+            topics.map((topic) => {
+              const main = topic.data.main
                 ? topic.data.main.filter((id) => id !== resource.id)
-                : null,
-              resources: topic.data.resources
+                : null
+              const resources = topic.data.resources
                 ? topic.data.resources.filter((id) => id !== resource.id)
-                : null,
+                : null
+
+              return topic.change({
+                main,
+                resources,
+              })
             }),
-          ),
-        ).catch((err) => {
+          )
+          log.success(`Topics updated`)
+        } catch (err) {
           log.error(`Error updating topics`)
           log.error(err)
-          process.exit(1)
-        })
+        }
 
-        log.success(`Topics updated`)
-
-        await resource.delete()
-
-        log.success(`Resource removed`)
+        try {
+          await resource.delete()
+          log.success(`Resource removed`)
+        } catch (err) {
+          log.error(`Error removing resource`)
+          log.error(err)
+        }
 
         return
 
@@ -189,7 +197,7 @@ const compareResource = async (resource: Resource) => {
     log.inspect(resource.document)
 
     log.text(`Choose a resource to compare with`)
-    const comparedResource = await searchResource()
+    const comparedResource = await getResource()
 
     if (!comparedResource) return
 
@@ -206,11 +214,11 @@ const compareResource = async (resource: Resource) => {
     )
 
     const action = await choice(`Choose action`, [
-      'choose another resource to compare with',
+      'choose another resource for comparison',
     ])
 
     switch (action) {
-      case 'choose another resource to compare with':
+      case 'choose another resource for comparison':
         continue
       case null:
         return
@@ -232,7 +240,7 @@ const getHealthcheckUpdate = async () => {
   return clone(strategy)
 }
 
-const updateHealthcheck = async (resource: Resource) => {
+const manageResourceHealthcheck = async (resource: Resource) => {
   let healthcheck = clone(resource.healthcheck)
 
   while (true) {
@@ -272,15 +280,14 @@ const updateHealthcheck = async (resource: Resource) => {
   }
 }
 
-const update = async (resource: Resource) => {
+const manageResource = async (resource: Resource) => {
   while (true) {
     log.inspect(resource.document)
 
     const action = await choice('Choose action', [
       'open in browser',
-      'run healthcheck',
-      'update data',
-      'update healthcheck',
+      'manage data',
+      'manage healthcheck',
       'compare',
       'delete',
     ])
@@ -289,14 +296,11 @@ const update = async (resource: Resource) => {
       case 'open in browser':
         open(resource.url)
         break
-      case 'update data':
-        await updateResource(resource)
+      case 'manage data':
+        await manageResourceData(resource)
         break
-      case 'run healthcheck':
-        await runHealthcheck(resource.data, resource.healthcheck)
-        break
-      case 'update healthcheck':
-        await updateHealthcheck(resource)
+      case 'manage healthcheck':
+        await manageResourceHealthcheck(resource)
         break
       case 'compare':
         await compareResource(resource)
@@ -311,19 +315,13 @@ const update = async (resource: Resource) => {
 
 ;(async function main() {
   while (true) {
-    const action = await choice(`Choose action`, ['search a resource by url'])
+    log.text(`Search a resource by url`)
 
-    switch (action) {
-      case 'search a resource by url': {
-        const resource = await searchResource()
-        if (!resource) break
-        await update(resource)
-        break
-      }
+    const resource = await getResource()
 
-      case null:
-        process.exit(0)
-    }
+    if (!resource) process.exit(0)
+
+    await manageResource(resource)
   }
 })().catch((err) => {
   log.error(err)

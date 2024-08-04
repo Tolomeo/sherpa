@@ -102,7 +102,8 @@ class Resource {
   }
 
   public async delete() {
-    return this.remove()
+    await this.remove()
+    this.document._id = ''
   }
 }
 
