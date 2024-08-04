@@ -4,17 +4,12 @@ import type {
   PlaywrightCrawlerOptions,
   PlaywrightCrawlingContext,
 } from 'crawlee'
-import HealthCheckRunner from './Runner'
-
-export interface E2EHealthCheckRequestData {
-  titleSelector: string
-  // https://playwright.dev/docs/api/class-page#page-wait-for-load-state
-  waitForLoadState: 'load' | 'domcontentloaded' | 'networkidle'
-}
+import type { E2EHealthcheckRunConfig } from '../../../types'
+import { HealthCheckRunner } from './common'
 
 export default class E2EHealthCheckRunner extends HealthCheckRunner<
   PlaywrightCrawler,
-  E2EHealthCheckRequestData
+  E2EHealthcheckRunConfig
 > {
   constructor(crawlerOptions: Partial<PlaywrightCrawlerOptions>) {
     super()
@@ -30,7 +25,7 @@ export default class E2EHealthCheckRunner extends HealthCheckRunner<
   async requestHandler({
     page,
     request,
-  }: PlaywrightCrawlingContext<E2EHealthCheckRequestData>) {
+  }: PlaywrightCrawlingContext<E2EHealthcheckRunConfig>) {
     const {
       userData: { titleSelector, waitForLoadState },
     } = request
@@ -57,7 +52,7 @@ export default class E2EHealthCheckRunner extends HealthCheckRunner<
   }
 
   failedRequestHandler(
-    { request }: PlaywrightCrawlingContext<E2EHealthCheckRequestData>,
+    { request }: PlaywrightCrawlingContext<E2EHealthcheckRunConfig>,
     error: Error,
   ) {
     this.failure(request, error)

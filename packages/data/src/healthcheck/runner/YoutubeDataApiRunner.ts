@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion -- several indirect accesses force to null-assert */
 import { BasicCrawler } from 'crawlee'
 import type { BasicCrawlerOptions, BasicCrawlingContext } from 'crawlee'
-import HealthCheckRunner from './Runner'
+import { HealthCheckRunner } from './common'
 
 // NB: this type contains only what we are checking for in the response, when we pass 'snippet' as value for 'part' query parameter
 // the actual response is richer

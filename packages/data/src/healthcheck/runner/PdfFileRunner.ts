@@ -2,7 +2,7 @@
 import { BasicCrawler } from 'crawlee'
 import type { BasicCrawlerOptions, BasicCrawlingContext } from 'crawlee'
 import { fileTypeFromBuffer } from 'file-type'
-import HealthCheckRunner from './Runner'
+import { HealthCheckRunner } from './common'
 
 export default class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
   constructor(crawlerOptions: Partial<BasicCrawlerOptions>) {

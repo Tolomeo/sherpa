@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { HealthcheckStrategySchema } from './healthcheck'
 
 export enum ResourceType {
   basics = 'basics',
@@ -10,11 +11,14 @@ export enum ResourceType {
   feed = 'feed',
 }
 
-export const ResourceDataSchema = z.object({
-  title: z.string().min(2),
-  url: z.string().url(),
-  type: z.nativeEnum(ResourceType),
-  source: z.string().min(2),
-})
+export const ResourceDataSchema = z
+  .object({
+    title: z.string().min(2),
+    url: z.string().url(),
+    type: z.nativeEnum(ResourceType),
+    source: z.string().min(2),
+    healthcheck: HealthcheckStrategySchema.optional(),
+  })
+  .strict()
 
 export type ResourceData = z.infer<typeof ResourceDataSchema>

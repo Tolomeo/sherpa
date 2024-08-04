@@ -65,26 +65,30 @@ export enum TopicName {
   'webaccessibility.testing' = 'webaccessibility.testing',
 }
 
-export const TopicDataSchema = z.object({
-  topic: z.nativeEnum(TopicName),
-  logo: z.string().regex(new RegExp('^<svg.+/svg>$')).nullable(),
-  hero: z
-    .object({
-      foreground: z
-        .string()
-        .regex(new RegExp('^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$')),
-      background: z.array(
-        z.string().regex(new RegExp('^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$')),
-      ),
-    })
-    .nullable(),
-  notes: z.array(z.string()).nullable(),
-  resources: z.array(ResourceDataSchema.shape.url).nullable(),
-  main: z.array(ResourceDataSchema.shape.url).nullable(),
-  next: z.array(z.string()).nullable(),
-  prev: z.array(z.string()).nullable(),
-  children: z.array(z.nativeEnum(TopicName)).nullable(),
-})
+const ResourceIdSchema = z.string().regex(/^[a-zA-Z0-9]{16}$/);
+
+export const TopicDataSchema = z
+  .object({
+    topic: z.nativeEnum(TopicName),
+    logo: z.string().regex(new RegExp('^<svg.+/svg>$')).nullable(),
+    hero: z
+      .object({
+        foreground: z
+          .string()
+          .regex(new RegExp('^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$')),
+        background: z.array(
+          z.string().regex(new RegExp('^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$')),
+        ),
+      })
+      .nullable(),
+    notes: z.array(z.string()).nullable(),
+    main: z.array(ResourceIdSchema).nullable(),
+    resources: z.array(ResourceIdSchema).nullable(),
+    next: z.array(z.string()).nullable(),
+    prev: z.array(z.string()).nullable(),
+    children: z.array(z.nativeEnum(TopicName)).nullable(),
+  })
+  .strict()
 
 export type TopicData = z.infer<typeof TopicDataSchema>
 
@@ -93,7 +97,7 @@ export const PopulatedTopicDataSchema: z.ZodType<PopulatedTopicData> =
     main: z.array(ResourceDataSchema).nullable(),
     resources: z.array(ResourceDataSchema).nullable(),
     children: z.array(z.lazy(() => PopulatedTopicDataSchema)).nullable(),
-  })
+  }).strict()
 
 export type PopulatedTopicData = Omit<
   TopicData,

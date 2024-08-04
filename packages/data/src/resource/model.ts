@@ -1,9 +1,5 @@
-import type { ResourceData } from '../../types'
+import { type ResourceData, HealthCheckStrategies } from '../../types'
 import ResourcesStore, { type ResourceDocument } from './store'
-
-// type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
-
-// type ResourceData = PartialBy<ResourceDocument, '_id'>
 
 export const getAll = async () => {
   const docs = await ResourcesStore.findAll()
@@ -12,71 +8,80 @@ export const getAll = async () => {
   return resources
 }
 
-//TODO: validate url
-export const getUrl = async (url: string) => {
-  const doc = await ResourcesStore.findOneByUrl(url)
+export const getAllByUrl = async (url: string) => {
+  const docs = await ResourcesStore.findAll({ url: new RegExp(url, 'g') })
+  const resources = docs.map((d) => new Resource(d))
+
+  return resources
+}
+
+export const getByUrl = async (url: string) => {
+  const doc = await ResourcesStore.findOne({ url })
 
   if (!doc) return null
 
   return new Resource(doc)
 }
 
-export const getAllByType = async (type: string) => {
-  const docs = await ResourcesStore.findAll({ type })
-  const resources = docs.map((d) => new Resource(d))
+export const getById = async (id: string) => {
+  const doc = await ResourcesStore.findOne({ _id: id })
 
-  return resources
-}
+  if (!doc) throw new Error(`Resource with id ${id} not found`)
 
-export const getAllByUrl = async (...urls: string[]) => {
-  const docs: ResourceDocument[] = []
-
-  for (const url of urls) {
-    const doc = await ResourcesStore.findOneByUrl(url)
-
-    if (!doc) throw new Error(`Resource ${url} not found`)
-
-    docs.push(doc)
-  }
-
-  return docs.map((doc) => new Resource(doc))
+  return new Resource(doc)
 }
 
 class Resource {
-  public data: ResourceDocument
+  public document: ResourceDocument
 
   constructor(resource: ResourceDocument) {
-    this.data = resource
+    this.document = resource
   }
 
-  private async read() {
+  /* private async read() {
     const data = await ResourcesStore.findOneByUrl(this.url)
 
     if (!data) throw new Error(`Resource ${this.url} data not found`)
 
-    this.data = data
+    this.document = data
 
-    return this.data
-  }
+    return this.document
+  } */
 
   private async update(update: Partial<ResourceData>) {
-    const { _id: id, ...resource } = this.data
+    const { _id: id, ...resource } = this.document
 
-    this.data = await ResourcesStore.updateOne(id, {
+    this.document = await ResourcesStore.updateOne(id, {
       ...resource,
       ...update,
     })
 
-    return this.read()
+    return this.document
+  }
+
+  private async remove() {
+    const { _id: id } = this.document
+
+    await ResourcesStore.removeOne(id)
+  }
+
+  public get id() {
+    return this.document._id
   }
 
   public get url() {
-    return this.data.url
+    return this.document.url
   }
 
-  public async get() {
-    const { _id, ...resourcedata } = this.data
+  public get data() {
+    const { _id, healthcheck, ...resourcedata } = this.document
     return resourcedata
+  }
+
+  public get healthcheck(): NonNullable<ResourceData['healthcheck']> {
+    if (!this.document.healthcheck) return HealthCheckStrategies.Http
+
+    return this.document.healthcheck
   }
 
   public async change(update: Partial<ResourceData>) {
@@ -84,6 +89,10 @@ class Resource {
 
     const { _id, ...resourceData } = updated
     return resourceData
+  }
+
+  public async delete() {
+    return this.remove()
   }
 }
 

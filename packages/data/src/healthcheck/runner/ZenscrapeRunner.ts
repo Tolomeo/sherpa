@@ -1,14 +1,9 @@
 import { BasicCrawler } from 'crawlee'
 import type { BasicCrawlerOptions, BasicCrawlingContext } from 'crawlee'
 import * as cheerio from 'cheerio'
-import { wait } from '../../_utils/defer'
-import HealthCheckRunner from './Runner'
-
-export interface ZenscrapeHealthCheckRequestData {
-  titleSelector: string
-  render: boolean
-  premium: boolean
-}
+import type { ZenscrapeHealthcheckRunConfig } from '../../../types'
+import { wait } from '../../common/defer'
+import { HealthCheckRunner } from './common'
 
 export default class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
   constructor(crawlerOptions: BasicCrawlerOptions) {
@@ -46,7 +41,7 @@ export default class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicC
   async requestHandler({
     request,
     sendRequest,
-  }: BasicCrawlingContext<ZenscrapeHealthCheckRequestData>) {
+  }: BasicCrawlingContext<ZenscrapeHealthcheckRunConfig>) {
     const { ZENSCRAPE_API_KEY: apiKey } = import.meta.env
 
     if (!apiKey) {

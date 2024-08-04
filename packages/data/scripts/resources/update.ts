@@ -1,116 +1,48 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
-// import * as fs from 'node:fs'
-// import * as path from 'node:path'
-// import * as util from 'node:util'
-import * as readline from 'node:readline'
-import open from 'open'
-import Resource, { getUrl } from '../../src/resource'
-// import { listPaths, readPath } from './paths/read'
-// import pathsData from '../src/store/paths'
-// import { listResources, readResources } from './resources/read'
+import { clone, open, input, choice, log, confirm } from '../_utils'
+import { getAllByResourceId } from '../../src/topic'
+import Resource, { getAllByUrl } from '../../src/resource'
+import Healthcheck from '../../src/healthcheck/runner'
+import {
+  HealthCheckStrategies,
+  type ResourceData,
+  type HealthcheckStrategy,
+} from '../../types'
 
-/* const {
-  positionals: [],
-} = util.parseArgs({
-  args: process.argv.slice(2),
-  allowPositionals: true,
-}) */
+const searchResource = async () => {
+  while (true) {
+    const url = await input(`Enter url search`)
 
-/* if (!url) {
-  console.error('A resource url must be specified')
-  console.error(
-    'For example: tsx scripts/resources/update.ts "http://www.resource-url.com"\n',
-  )
-  process.exit(1)
-} */
-type Nullable<T> = T | null
+    if (!url) return
 
-const input = (question: string): Promise<Nullable<string>> => {
-  const describedQuestion = `\n${question}\n[q] cancel\n> `
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  })
+    const resources = await getAllByUrl(url)
 
-  return new Promise((resolve) => {
-    rl.question(describedQuestion, (answer) => {
-      rl.close()
-
-      if (answer.trim() === 'q') resolve(null)
-      else resolve(answer)
-    })
-  })
-}
-
-const choice = async <T extends string>(
-  question: string,
-  options: T[],
-): Promise<Nullable<T>> => {
-  const describedQuestion = `${question}\n${options
-    .map((option, idx) => `[${idx + 1}] ${option}`)
-    .join('\n')}`
-
-  let optionAnswer: T | undefined
-
-  while (!optionAnswer) {
-    const answer = await input(describedQuestion)
-
-    if (answer === null) return null
-
-    const answerIndex = parseInt(answer, 10)
-
-    if (isNaN(answerIndex) || !options[answerIndex - 1]) {
-      console.log('\nInvalid choice')
+    if (!resources.length) {
+      log.warning(`No resources found`)
       continue
     }
 
-    optionAnswer = options[answerIndex - 1]
-  }
+    log.success(`${resources.length} found`)
 
-  return optionAnswer
-}
-
-const confirm = async (question: string): Promise<Nullable<boolean>> => {
-  const confirmOptionsMap: Record<string, boolean> = {
-    yes: true,
-    no: false,
-  }
-  const confirmOptions = Object.keys(confirmOptionsMap)
-
-  const optionAnswer = await choice(question, confirmOptions)
-
-  if (optionAnswer === null) return null
-
-  return confirmOptionsMap[optionAnswer]
-}
-
-const getResource = async () => {
-  let resource: Resource | undefined
-
-  while (!resource) {
-    const url = await input(`Enter resource url`)
-
-    if (url === null) return null
-
-    const urlResource = await getUrl(url)
-
-    if (!urlResource) {
-      console.log(`\nResource "${url}" not found`)
-      continue
+    if (resources.length === 1) {
+      return resources[0]
     }
 
-    resource = urlResource
-  }
+    const action = await choice(
+      `Select resource`,
+      resources.map((r) => r.url),
+    )
 
-  return resource
+    if (!action) continue
+
+    const resource = resources.find((r) => r.url === action)
+
+    return resource
+  }
 }
 
-const updateResource = async (resource: Resource) => {
-  const resourceData = await resource.get()
-
-  if (!resourceData) return
-
+const getResourceUpdate = async (resourceData: ResourceData) => {
   const resourceUpdate = { ...resourceData }
 
   for (const [key, value] of Object.entries(resourceData)) {
@@ -121,37 +53,256 @@ const updateResource = async (resource: Resource) => {
     resourceUpdate[key] = valueUpdate
   }
 
-  const persist = await confirm(
-    `Persist changes?\n${JSON.stringify(resourceUpdate, null, 2)}`,
+  return resourceUpdate
+}
+
+const updateResource = async (resource: Resource) => {
+  let resourceUpdate = await getResourceUpdate(resource.data)
+
+  while (true) {
+    log.text(`Updated resource data:`)
+    log.diff(log.stringify(resource.data), log.stringify(resourceUpdate))
+
+    const action = await choice('Choose action', [
+      'change',
+      'healthcheck',
+      'persist',
+    ])
+
+    switch (action) {
+      case 'change':
+        resourceUpdate = await getResourceUpdate(resourceUpdate)
+        continue
+      case 'healthcheck':
+        await runHealthcheck(resourceUpdate, resource.healthcheck)
+        continue
+      case 'persist':
+        try {
+          await resource.change(resourceUpdate)
+          log.success(`Resource update succeeded`)
+        } catch (error) {
+          log.error(`Resource update failed.`)
+          log.error(error)
+        }
+        return
+      case null:
+        return
+    }
+  }
+}
+
+const runHealthcheck = async (
+  { url, title }: ResourceData,
+  strategy: HealthcheckStrategy,
+) => {
+  const healthcheckRunner = new Healthcheck()
+  const healthCheckResult = await healthcheckRunner.run(url, clone(strategy))
+
+  if (!healthCheckResult.success) {
+    log.error(`Health check failed`)
+    log.error(`${healthCheckResult.error}`)
+    return
+  }
+
+  log.success(`Health check succeeded`)
+  log.diff(
+    log.stringify({ url, title }),
+    log.stringify({
+      url: healthCheckResult.url,
+      title: healthCheckResult.data.title,
+    }),
   )
 
-  if (!persist) return
+  await healthcheckRunner.teardown()
+}
 
-  try {
-    await resource.change(resourceUpdate)
-  } catch (error) {
-    console.error(`\nResource update failed.\n`)
-    console.error(error)
+const deleteResource = async (resource: Resource) => {
+  const topics = await getAllByResourceId(resource.id)
+
+  while (true) {
+    log.inspect(resource.document)
+    log.warning(
+      `The resource occurs in the following topics:\n${topics
+        .map((t) => t.topic)
+        .join(', ')}`,
+    )
+
+    const action = await choice(`Choose action`, [
+      'display occurrences',
+      'delete resource and update topics',
+    ])
+
+    switch (action) {
+      case 'display occurrences':
+        topics.forEach((t) => {
+          const { topic, main, resources } = t.data
+          const display = {
+            topic,
+            main,
+            resources,
+          }
+
+          log.inspect(display, {
+            highlight: resource.id,
+          })
+        })
+        break
+
+      case 'delete resource and update topics':
+        const confirmed = await confirm(`Confirm resource removal`)
+
+        if (!confirmed) break
+
+        await Promise.all(
+          topics.map((topic) =>
+            topic.change({
+              main: topic.data.main
+                ? topic.data.main.filter((id) => id !== resource.id)
+                : null,
+              resources: topic.data.resources
+                ? topic.data.resources.filter((id) => id !== resource.id)
+                : null,
+            }),
+          ),
+        ).catch((err) => {
+          log.error(`Error updating topics`)
+          log.error(err)
+          process.exit(1)
+        })
+
+        log.success(`Topics updated`)
+
+        await resource.delete()
+
+        log.success(`Resource removed`)
+
+        return
+
+      case null:
+        return
+    }
+  }
+}
+
+const compareResource = async (resource: Resource) => {
+  while (true) {
+    log.inspect(resource.document)
+
+    log.text(`Choose a resource to compare with`)
+    const comparedResource = await searchResource()
+
+    if (!comparedResource) return
+
+    if (resource.id === comparedResource.id) {
+      log.warning(
+        `The chosen comparison resource matches the compared resource`,
+      )
+      continue
+    }
+
+    log.diff(
+      log.stringify(resource.document),
+      log.stringify(comparedResource.document),
+    )
+
+    const action = await choice(`Choose action`, [
+      'choose another resource to compare with',
+    ])
+
+    switch (action) {
+      case 'choose another resource to compare with':
+        continue
+      case null:
+        return
+    }
+  }
+}
+
+const getHealthcheckUpdate = async () => {
+  const healthcheck = await choice(
+    `Choose a strategy`,
+    Object.keys(HealthCheckStrategies),
+  )
+
+  if (!healthcheck) return
+
+  const strategy =
+    HealthCheckStrategies[healthcheck as HealthcheckStrategy['runner']]
+
+  return clone(strategy)
+}
+
+const updateHealthcheck = async (resource: Resource) => {
+  let healthcheck = clone(resource.healthcheck)
+
+  while (true) {
+    log.inspect(resource.healthcheck)
+    log.diff(log.stringify(resource.healthcheck), log.stringify(healthcheck))
+
+    const action = await choice(`Choose action`, [
+      'run healthcheck',
+      'change healthcheck strategy',
+      'persist healthcheck strategy',
+    ])
+
+    switch (action) {
+      case 'run healthcheck':
+        await runHealthcheck(resource.data, healthcheck)
+        continue
+
+      case 'change healthcheck strategy':
+        const healthcheckUpdate = await getHealthcheckUpdate()
+        if (!healthcheckUpdate) continue
+        healthcheck = healthcheckUpdate
+        continue
+
+      case 'persist healthcheck strategy':
+        try {
+          await resource.change({ healthcheck })
+          log.success('Healthcheck strategy updated')
+        } catch (err) {
+          log.error(`Resource update failed.`)
+          log.error(err)
+        }
+        return
+
+      case null:
+        return
+    }
   }
 }
 
 const update = async (resource: Resource) => {
   while (true) {
-    const resourceData = await resource.get()
+    log.inspect(resource.document)
 
-    if (!resourceData) return
-
-    console.log(`\n${JSON.stringify(resourceData, null, 2)}`)
-
-    const action = await choice('Choose action', ['open', 'update'])
+    const action = await choice('Choose action', [
+      'open in browser',
+      'run healthcheck',
+      'update data',
+      'update healthcheck',
+      'compare',
+      'delete',
+    ])
 
     switch (action) {
-      case 'open':
-        await open(resource.url)
+      case 'open in browser':
+        open(resource.url)
         break
-      case 'update':
+      case 'update data':
         await updateResource(resource)
         break
+      case 'run healthcheck':
+        await runHealthcheck(resource.data, resource.healthcheck)
+        break
+      case 'update healthcheck':
+        await updateHealthcheck(resource)
+        break
+      case 'compare':
+        await compareResource(resource)
+        break
+      case 'delete':
+        await deleteResource(resource)
       case null:
         return
     }
@@ -160,13 +311,21 @@ const update = async (resource: Resource) => {
 
 ;(async function main() {
   while (true) {
-    const resource = await getResource()
+    const action = await choice(`Choose action`, ['search a resource by url'])
 
-    if (resource === null) break
+    switch (action) {
+      case 'search a resource by url': {
+        const resource = await searchResource()
+        if (!resource) break
+        await update(resource)
+        break
+      }
 
-    await update(resource)
+      case null:
+        process.exit(0)
+    }
   }
 })().catch((err) => {
-  console.error(err)
+  log.error(err)
   process.exit(1)
 })

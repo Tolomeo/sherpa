@@ -6,9 +6,13 @@ import type {
   PlaywrightCrawler,
   BasicCrawler,
 } from 'crawlee'
-import { decode, encode } from 'he'
+import he from 'he'
 import formatHTML from 'html-format'
-import { Deferred } from '../../_utils/defer'
+import createMetascraper, { MetascraperOptions } from 'metascraper'
+import createMetascraperTitleRules from 'metascraper-title'
+import { Deferred } from '../../common/defer'
+
+const { decode, encode } = he
 
 export { type Constructor, RequestQueue }
 
@@ -26,7 +30,9 @@ export type HealthCheckResult =
       error: Error
     }
 
-abstract class HealthCheckRunner<
+const scrapeMetadata = createMetascraper([createMetascraperTitleRules()])
+
+export abstract class HealthCheckRunner<
   C extends BasicCrawler | PlaywrightCrawler | CheerioCrawler,
   D extends Dictionary = Dictionary,
 > {
@@ -63,6 +69,10 @@ abstract class HealthCheckRunner<
     return decode(encode(text).replace(eEntities, (entity) => entities[entity]))
   }
 
+  protected getMetadata(options: MetascraperOptions) {
+    return scrapeMetadata(options)
+  }
+
   async teardown() {
     await this.crawler.requestQueue?.drop()
     await this.crawler.teardown()
@@ -81,5 +91,3 @@ abstract class HealthCheckRunner<
     return this.results.get(url)!.promise
   }
 }
-
-export default HealthCheckRunner

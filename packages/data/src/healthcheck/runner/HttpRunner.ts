@@ -1,10 +1,7 @@
 import { CheerioCrawler } from 'crawlee'
 import type { CheerioCrawlerOptions, CheerioCrawlingContext } from 'crawlee'
-import HealthCheckRunner from './Runner'
-
-export interface HttpHealthCheckRequestData {
-  titleSelector: string
-}
+import type { HttpHealthcheckRunConfig } from '../../../types'
+import { HealthCheckRunner } from './common'
 
 export default class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCrawler> {
   constructor(crawlerOptions: Partial<CheerioCrawlerOptions>) {
@@ -19,27 +16,20 @@ export default class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCraw
     })
   }
 
-  requestHandler({
+  async requestHandler({
     request,
     $,
-  }: CheerioCrawlingContext<HttpHealthCheckRequestData>) {
+  }: CheerioCrawlingContext<HttpHealthcheckRunConfig>) {
     const {
       userData: { titleSelector },
     } = request
 
-    const title = $(titleSelector).text()
+    const metadata = await this.getMetadata({ url: request.url, htmlDom: $ })
 
-    if (title.trim() === '') {
-      const pageContent = $.html()
+    const { title } = metadata
 
-      this.failure(
-        request,
-        new Error(
-          `Could not retrieve ${titleSelector} text from ${this.formatHTML(
-            pageContent,
-          )}`,
-        ),
-      )
+    if (!title || title.trim() === '') {
+      this.failure(request, new Error(`Could not retrieve title text`))
 
       return
     }
@@ -48,7 +38,7 @@ export default class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCraw
   }
 
   failedRequestHandler(
-    { request }: CheerioCrawlingContext<HttpHealthCheckRequestData>,
+    { request }: CheerioCrawlingContext<HttpHealthcheckRunConfig>,
     error: Error,
   ) {
     this.failure(request, error)

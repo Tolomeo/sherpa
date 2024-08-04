@@ -1,28 +1,28 @@
 import { describe, test, expect } from 'vitest'
-import { getRoots } from '../src/topic'
+import { getParents } from '../src/topic'
 import { getAll } from '../src/resource'
 
 describe('Paths', async () => {
-  const rootPaths = await getRoots()
+  const parents = await getParents()
 
   test('Use all available resources', async () => {
     const allResources = await getAll()
-    const allResourceUrls = new Set<string>(allResources.map(({ url }) => url))
+    const allResourcesIds = new Set<string>(allResources.map(({ id }) => id))
 
-    const allUniquePathResourceUrls = new Set<string>()
-    for (const rootPath of rootPaths) {
-      const pathResources = await rootPath.getResources()
-      for (const pathResource of pathResources) {
-        allUniquePathResourceUrls.add(pathResource)
+    const allUniqueTopicsResourceIds = new Set<string>()
+    for (const parent of parents) {
+      const topicResources = await parent.getResources()
+      for (const topicResource of topicResources) {
+        allUniqueTopicsResourceIds.add(topicResource)
       }
     }
 
-    const allUniquePathResourceUrlsArray = [...allUniquePathResourceUrls].sort()
-    const allResourceUrlsArray = [...allResourceUrls].sort()
+    const allUniquePathResourceUrlsArray = [...allUniqueTopicsResourceIds].sort()
+    const allResourceUrlsArray = [...allResourcesIds].sort()
     expect(allUniquePathResourceUrlsArray).toEqual(allResourceUrlsArray)
   })
 
-  describe.each(rootPaths)('$topic', (path) => {
+  describe.each(parents)('$topic', (path) => {
     test('Lists unique resources', async () => {
       const pathResources = await path.getResources()
       const uniqueResources = [...new Set(pathResources)]

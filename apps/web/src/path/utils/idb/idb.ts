@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { openDB } from 'idb'
 import config from '../../../config'
 import type { DatabaseSchema, Database } from './types'
@@ -137,5 +138,15 @@ export const useResourcesCompletionStore = () => {
     }
   }
 
-  return { areCompleted, complete, uncomplete, prune }
+  const actions = useMemo(
+    () => ({
+      prune,
+      areCompleted,
+      complete,
+      uncomplete,
+    }),
+    [],
+  )
+
+  return actions
 }

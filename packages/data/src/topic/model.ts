@@ -1,16 +1,11 @@
-import ResourcesStore from '../resource/store'
-import type { ResourceData, TopicData, PopulatedTopicData } from '../../types'
+import { getById } from '../resource'
+import type {
+  ResourceData,
+  TopicData,
+  PopulatedTopicData,
+  TopicName,
+} from '../../types'
 import TopicsStore, { type TopicDocument } from './store'
-
-type Maybe<T> = T | undefined
-
-export const getTopic = async (topic: string) => {
-  const doc = await TopicsStore.findOneByTopic(topic)
-
-  if (!doc) return null
-
-  return new Topic(doc)
-}
 
 export const getAll = async () => {
   const docs = await TopicsStore.findAll()
@@ -19,11 +14,31 @@ export const getAll = async () => {
   return paths
 }
 
-export const getRoots = async () => {
-  const docs = await TopicsStore.findAllByTopic(/^[^.]+$/)
+export const getParents = async () => {
+  const docs = await TopicsStore.findAll({ topic: /^[^.]+$/ })
   const paths = docs.map((p) => new Topic(p))
 
   return paths
+}
+
+export const getByName = async (name: string) => {
+  const topic = name as TopicName
+  const doc = await TopicsStore.findOne({ topic })
+
+  if (!doc) throw new Error(`Topic named ${name} not found`)
+
+  return new Topic(doc)
+}
+
+export const getAllByResourceId = async (resourceId: string) => {
+  const docs = await TopicsStore.findAll({
+    $or: [
+      { main: { $in: [resourceId] } },
+      { resources: { $in: [resourceId] } },
+    ],
+  })
+
+  return docs.map((t) => new Topic(t))
 }
 
 export interface ResourceGroup {
@@ -31,79 +46,14 @@ export interface ResourceGroup {
   resources: ResourceData[]
 }
 
-const populate = async (path: TopicData): Promise<PopulatedTopicData> => {
-  const populatedPath: PopulatedTopicData = {
-    ...path,
-    main: null,
-    resources: null,
-    children: null,
-  }
-
-  if (path.main) {
-    populatedPath.main = []
-
-    for (const mainUrl of path.main) {
-      const resourceDoc = await ResourcesStore.findOneByUrl(mainUrl)
-
-      if (!resourceDoc)
-        throw new Error(`Path "${path.topic}" resource ${mainUrl} not found`)
-
-      const { _id, ...resourceData } = resourceDoc
-
-      populatedPath.main.push(resourceData)
-    }
-  }
-
-  if (path.resources) {
-    populatedPath.resources = []
-
-    for (const resourceUrl of path.resources) {
-      const resourceDoc = await ResourcesStore.findOneByUrl(resourceUrl)
-
-      if (!resourceDoc)
-        throw new Error(
-          `Path "${path.topic}" resource ${resourceUrl} not found`,
-        )
-
-      const { _id, ...resourceData } = resourceDoc
-
-      populatedPath.resources.push(resourceData)
-    }
-
-    /* populatedPath.resources.sort((resourceA, resourceB) => {
-      const titleA = resourceA.title.toUpperCase()
-      const titleB = resourceB.title.toUpperCase()
-
-      if (titleA > titleB) return 1
-      else if (titleA < titleB) return -1
-
-      return 0
-    }) */
-  }
-
-  if (path.children) {
-    populatedPath.children = []
-
-    for (const child of path.children) {
-      const childPathData = await TopicsStore.findOneByTopic(child)
-
-      if (!childPathData) throw new Error(`Child path ${child} not found`)
-
-      populatedPath.children.push(await populate(childPathData))
-    }
-  }
-
-  return populatedPath
-}
-
 class Topic {
-  data: TopicDocument
+  document: TopicDocument
 
   constructor(path: TopicDocument) {
-    this.data = path
+    this.document = path
   }
 
-  private async read() {
+  /* private async read() {
     const data = await TopicsStore.findOneByTopic(this.topic)
 
     if (!data) {
@@ -113,42 +63,73 @@ class Topic {
     this.data = data
 
     return this.data
-  }
+  } */
 
   private async update(update: Partial<TopicData>) {
-    const { _id: id, ...path } = this.data
+    const { _id: id, ...topic } = this.document
 
-    this.data = await TopicsStore.updateOne(id, {
-      ...path,
+    this.document = await TopicsStore.updateOne(id, {
+      ...topic,
       ...update,
     })
 
-    return this.data
+    return this.document
   }
 
   public get topic() {
-    return this.data.topic
+    return this.document.topic
   }
 
-  public async get(populated?: false): Promise<Maybe<TopicData>>
-  public async get(populated: true): Promise<Maybe<PopulatedTopicData>>
-  public async get(
-    populated?: boolean,
-  ): Promise<Maybe<TopicData | PopulatedTopicData>> {
-    const data = await this.read()
+  public get data() {
+    const { _id, ...topicData } = this.document
 
-    const { _id, ...pathData } = data
+    return topicData
+  }
 
-    if (populated) return populate(pathData)
+  public async populate() {
+    const data = this.data
+    const populatedData: PopulatedTopicData = {
+      ...data,
+      main: null,
+      resources: null,
+      children: null,
+    }
 
-    return pathData
+    if (data.main) {
+      populatedData.main = []
+
+      for (const mainUrl of data.main) {
+        const resource = await getById(mainUrl)
+
+        populatedData.main.push(resource.data)
+      }
+    }
+
+    if (data.resources) {
+      populatedData.resources = []
+
+      for (const resourceUrl of data.resources) {
+        const resource = await getById(resourceUrl)
+
+        populatedData.resources.push(resource.data)
+      }
+    }
+
+    if (data.children) {
+      populatedData.children = []
+
+      for (const child of data.children) {
+        const childTopic = await getByName(child)
+
+        populatedData.children.push(await childTopic.populate())
+      }
+    }
+
+    return populatedData
   }
 
   public async getResources(): Promise<string[]> {
-    const data = await this.get()
-
-    if (!data) return []
-
+    const data = this.data
     const resources: string[] = []
 
     data.main && resources.push(...data.main)
@@ -158,7 +139,7 @@ class Topic {
     if (!data.children) return resources
 
     for (const topic of data.children) {
-      const child = await getTopic(topic)
+      const child = await getByName(topic)
 
       if (!child) throw new Error(`Child path ${topic} data not found`)
 
@@ -171,10 +152,9 @@ class Topic {
   }
 
   public async change(update: Partial<TopicData>) {
-    const updated = await this.update(update)
+    await this.update(update)
 
-    const { _id, ...data } = updated
-    return data
+    return this.data
   }
 }
 
