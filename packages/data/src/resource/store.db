@@ -106,7 +106,7 @@
 {"title":"Monorepos in JavaScript & TypeScript","url":"https://www.robinwieruch.de/javascript-monorepos","type":"advanced","source":"robinwieruch.de","_id":"4UZmoW3ogA30KN9v"}
 {"title":"Python Practice Book","url":"https://anandology.com/python-practice-book/index.html","type":"basics","source":"anandology.com","_id":"4WsEXea49DmN2VY7"}
 {"title":"runpkg | the package explorer","url":"https://www.runpkg.com","type":"tool","source":"runpkg.com","_id":"4YixjjY7wmJTs8cZ"}
-{"title":"RegExr: Learn, Build, & Test RegEx","url":"https://regexr.com","type":"reference","source":"regexr.com","healthcheck":{"runner":"Zenscrape","config":{"titleSelector":"title:not(:empty)","render":false,"premium":true}},"_id":"4df5bXRgr5fgPGQN"}
+{"title":"RegExr: Learn, Build, & Test RegEx","url":"https://regexr.com","type":"reference","source":"regexr.com","healthcheck":{"runner":"Http","config":{"titleSelector":"title:not(:empty)"}},"_id":"4df5bXRgr5fgPGQN"}
 {"title":"Pytest for Beginners","url":"https://testdriven.io/blog/pytest-for-beginners/","type":"basics","source":"testdriven.io","_id":"4k1fFCzMfsM5oSjn"}
 {"title":"33-js-concepts","url":"https://github.com/leonardomso/33-js-concepts","type":"basics","source":"github.com/leonardomso","_id":"4n2uYWuSkg2JLa62"}
 {"title":"Bento - Learn to code and be a self-taught expert developer","url":"https://bento.io","type":"reference","source":"bento.io","_id":"4pDx6WbwGX3wNHKm"}
@@ -1096,7 +1096,7 @@
 {"title":"best-of-python","url":"https://github.com/ml-tooling/best-of-python","type":"reference","source":"github.com/ml-tooling","_id":"htMc9LVzXeHASWXs"}
 {"title":"Idiot proof git","url":"https://softwaredoug.com/blog/2022/11/09/idiot-proof-git-aliases.html","type":"how-to","source":"softwaredoug.com","_id":"hxpD5aikRxotJiX4"}
 {"title":"Grid by Example","url":"https://gridbyexample.com","type":"reference","source":"gridbyexample.com","_id":"hxuxoW1B95sR18Q1"}
-{"title":"React Digest","url":"https://reactdigest.net","type":"feed","source":"reactdigest.net","healthcheck":{"runner":"Zenscrape","config":{"titleSelector":"title:not(:empty)","render":false,"premium":false}},"_id":"hzu6E51wgNJe1Piu"}
+{"title":"React Digest","url":"https://reactdigest.net","type":"feed","source":"reactdigest.net","healthcheck":{"runner":"Http","config":{"titleSelector":"title:not(:empty)"}},"_id":"hzu6E51wgNJe1Piu"}
 {"title":"Scaling Containers","url":"https://betterstack.com/community/guides/scaling-docker/","type":"advanced","source":"betterstack.com","_id":"i117bcNrGb9KEJVE"}
 {"title":"Using LuaRocks to install packages in the current directory","url":"https://leafo.net/guides/customizing-the-luarocks-tree.html","type":"how-to","source":"leafo.net","_id":"i2b5WJ3eqOx6lwiW"}
 {"title":"A Beginner’s Guide to UX Design","url":"https://webdesign.tutsplus.com/series/a-beginners-guide-to-ux-design--cms-1168","type":"basics","source":"webdesign.tutsplus.com","_id":"i3H8rhnUN9LUAzDw"}
