@@ -11,8 +11,19 @@ const dbFile = path.join(
 
 export type TopicDocument = Document<TopicData>
 
-const TopicsStore = new Db(dbFile, TopicDataSchema, {
-  uniqueFieldName: 'topic',
-})
+let TopicsStore: Db<typeof TopicDataSchema>
 
-export default TopicsStore
+const getInstance = async () => {
+  if (TopicsStore) return TopicsStore
+
+  TopicsStore = await Db.build(TopicDataSchema, {
+    filename: dbFile,
+    indexes: { unique: 'topic' },
+  })
+
+  return TopicsStore
+}
+
+export default {
+  getInstance,
+}

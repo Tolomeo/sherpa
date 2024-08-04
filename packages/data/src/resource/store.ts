@@ -11,8 +11,19 @@ const dbFile = path.join(
 
 export type ResourceDocument = Document<ResourceData>
 
-const ResourceStore = new Db(dbFile, ResourceDataSchema, {
-  uniqueFieldName: 'url',
-})
+let ResourcesStore: Db<typeof ResourceDataSchema>
 
-export default ResourceStore
+const getInstance = async () => {
+  if (ResourcesStore) return ResourcesStore
+
+  ResourcesStore = await Db.build(ResourceDataSchema, {
+    filename: dbFile,
+    indexes: { unique: 'url' },
+  })
+
+  return ResourcesStore
+}
+
+export default {
+  getInstance,
+}

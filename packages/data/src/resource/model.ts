@@ -2,21 +2,27 @@ import { type ResourceData, HealthCheckStrategies } from '../../types'
 import ResourcesStore, { type ResourceDocument } from './store'
 
 export const getAll = async () => {
-  const docs = await ResourcesStore.findAll()
+  const docs = await ResourcesStore.getInstance().then((store) =>
+    store.findAll(),
+  )
   const resources = docs.map((d) => new Resource(d))
 
   return resources
 }
 
 export const getAllByUrl = async (url: string) => {
-  const docs = await ResourcesStore.findAll({ url: new RegExp(url, 'g') })
+  const docs = await ResourcesStore.getInstance().then((store) =>
+    store.findAll({ url: new RegExp(url, 'g') }),
+  )
   const resources = docs.map((d) => new Resource(d))
 
   return resources
 }
 
 export const getByUrl = async (url: string) => {
-  const doc = await ResourcesStore.findOne({ url })
+  const doc = await ResourcesStore.getInstance().then((store) =>
+    store.findOne({ url }),
+  )
 
   if (!doc) return null
 
@@ -24,7 +30,9 @@ export const getByUrl = async (url: string) => {
 }
 
 export const getById = async (id: string) => {
-  const doc = await ResourcesStore.findOne({ _id: id })
+  const doc = await ResourcesStore.getInstance().then((store) =>
+    store.findOne({ _id: id }),
+  )
 
   if (!doc) throw new Error(`Resource with id ${id} not found`)
 
@@ -51,10 +59,12 @@ class Resource {
   private async update(update: Partial<ResourceData>) {
     const { _id: id, ...resource } = this.document
 
-    this.document = await ResourcesStore.updateOne(id, {
-      ...resource,
-      ...update,
-    })
+    this.document = await ResourcesStore.getInstance().then((store) =>
+      store.updateOne(id, {
+        ...resource,
+        ...update,
+      }),
+    )
 
     return this.document
   }
@@ -62,7 +72,7 @@ class Resource {
   private async remove() {
     const { _id: id } = this.document
 
-    await ResourcesStore.removeOne(id)
+    await ResourcesStore.getInstance().then((store) => store.removeOne(id))
   }
 
   public get id() {

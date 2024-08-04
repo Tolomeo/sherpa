@@ -182,26 +182,34 @@ type StrictFilter<TSchema> =
     } & RootFilterOperators<WithId<TSchema>>)
 
 class Db<S extends ZodObject<any>> {
+  public static async build<S extends ZodObject<any>>(
+    schema: S,
+    {
+      filename,
+      indexes,
+    }: {
+      filename: string
+      indexes: { unique: string }
+    },
+  ): Promise<Db<S>> {
+    const db = new NEDB({ filename, autoload: true })
+
+    await db.ensureIndexAsync({
+      fieldName: indexes.unique as string,
+      unique: true,
+      sparse: false,
+    })
+    await db.compactDatafileAsync()
+
+    return new Db(schema, db)
+  }
+
   private schema: S
   private db: NEDB<S['_output']>
 
-  constructor(
-    filename: string,
-    schema: S,
-    {
-      uniqueFieldName,
-    }: { uniqueFieldName: KeysOfAType<S['_output'], string | string[]> },
-  ) {
+  private constructor(schema: S, db: NEDB<S['_output']>) {
     this.schema = schema
-    this.db = new NEDB({ filename, autoload: true })
-    this.db.ensureIndex(
-      { fieldName: uniqueFieldName as string, unique: true, sparse: false },
-      (err) => {
-        if (err) {
-          throw err
-        }
-      },
-    )
+    this.db = db
   }
 
   async findAll(filter: StrictFilter<S['_output']> = {}) {
