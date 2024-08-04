@@ -2,6 +2,9 @@ import * as readline from 'node:readline'
 import chalk from 'chalk'
 import * as JSDiff from 'diff'
 
+export const clone = <T extends JSONSerializable>(value: T): T =>
+  JSON.parse(JSON.stringify(value))
+
 type JSONSerializable =
   | string
   | number

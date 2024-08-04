@@ -1,6 +1,6 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
-import { open, input, choice, log, confirm } from '../_utils'
+import { clone, open, input, choice, log, confirm } from '../_utils'
 import { getAllByResourceId } from '../../src/topic'
 import Resource, { getAllByUrl } from '../../src/resource'
 import Healthcheck from '../../src/healthcheck/runner'
@@ -96,7 +96,7 @@ const runHealthcheck = async (
   strategy: HealthcheckStrategy,
 ) => {
   const healthcheckRunner = new Healthcheck()
-  const healthCheckResult = await healthcheckRunner.run(url, strategy)
+  const healthCheckResult = await healthcheckRunner.run(url, clone(strategy))
 
   if (!healthCheckResult.success) {
     log.error(`Health check failed`)
@@ -229,13 +229,11 @@ const getHealthcheckUpdate = async () => {
   const strategy =
     HealthCheckStrategies[healthcheck as HealthcheckStrategy['runner']]
 
-  return JSON.parse(JSON.stringify(strategy)) as HealthcheckStrategy
+  return clone(strategy)
 }
 
 const updateHealthcheck = async (resource: Resource) => {
-  let healthcheck = JSON.parse(
-    JSON.stringify(resource.healthcheck),
-  ) as HealthcheckStrategy
+  let healthcheck = clone(resource.healthcheck)
 
   while (true) {
     log.inspect(resource.healthcheck)
