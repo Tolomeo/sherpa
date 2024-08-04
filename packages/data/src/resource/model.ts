@@ -1,4 +1,4 @@
-import type { ResourceData } from '../../types'
+import { type ResourceData, HealthCheckStrategies } from '../../types'
 import ResourcesStore, { type ResourceDocument } from './store'
 
 export const getAll = async () => {
@@ -79,13 +79,7 @@ class Resource {
   }
 
   public get healthcheck(): NonNullable<ResourceData['healthcheck']> {
-    if (!this.document.healthcheck)
-      return {
-        runner: 'Http',
-        config: {
-          titleSelector: 'title:not(:empty)',
-        },
-      }
+    if (!this.document.healthcheck) return HealthCheckStrategies.Http
 
     return this.document.healthcheck
   }

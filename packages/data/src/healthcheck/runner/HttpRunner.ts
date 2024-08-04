@@ -26,8 +26,6 @@ export default class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCraw
 
     const metadata = await this.getMetadata({ url: request.url, htmlDom: $ })
 
-    console.log(metadata)
-
     const { title } = metadata
 
     if (!title || title.trim() === '') {

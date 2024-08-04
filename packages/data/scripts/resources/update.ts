@@ -2,9 +2,13 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import { open, input, choice, log, confirm } from '../_utils'
 import { getAllByResourceId } from '../../src/topic'
-import Resource, { getByUrl, getAllByUrl } from '../../src/resource'
+import Resource, { getAllByUrl } from '../../src/resource'
 import Healthcheck from '../../src/healthcheck/runner'
-import { ResourceData } from '../../types'
+import {
+  HealthCheckStrategies,
+  type ResourceData,
+  type HealthcheckStrategy,
+} from '../../types'
 
 const searchResource = async () => {
   while (true) {
@@ -70,7 +74,7 @@ const updateResource = async (resource: Resource) => {
         resourceUpdate = await getResourceUpdate(resourceUpdate)
         continue
       case 'healthcheck':
-        await healthcheck(resourceUpdate, resource.healthcheck)
+        await runHealthcheck(resourceUpdate, resource.healthcheck)
         continue
       case 'persist':
         try {
@@ -87,9 +91,9 @@ const updateResource = async (resource: Resource) => {
   }
 }
 
-const healthcheck = async (
+const runHealthcheck = async (
   { url, title }: ResourceData,
-  strategy: NonNullable<ResourceData['healthcheck']>,
+  strategy: HealthcheckStrategy,
 ) => {
   const healthcheckRunner = new Healthcheck()
   const healthCheckResult = await healthcheckRunner.run(url, strategy)
@@ -116,7 +120,7 @@ const deleteResource = async (resource: Resource) => {
   const topics = await getAllByResourceId(resource.id)
 
   while (true) {
-    log.inspect(resource.data)
+    log.inspect(resource.document)
     log.warning(
       `The resource occurs in the following topics:\n${topics
         .map((t) => t.topic)
@@ -182,10 +186,10 @@ const deleteResource = async (resource: Resource) => {
 
 const compareResource = async (resource: Resource) => {
   while (true) {
-    log.inspect(resource.data)
+    log.inspect(resource.document)
 
     log.text(`Choose a resource to compare with`)
-    const comparedResource = await getResource()
+    const comparedResource = await searchResource()
 
     if (!comparedResource) return
 
@@ -196,7 +200,10 @@ const compareResource = async (resource: Resource) => {
       continue
     }
 
-    log.diff(log.stringify(resource.data), log.stringify(comparedResource.data))
+    log.diff(
+      log.stringify(resource.document),
+      log.stringify(comparedResource.document),
+    )
 
     const action = await choice(`Choose action`, [
       'choose another resource to compare with',
@@ -211,27 +218,86 @@ const compareResource = async (resource: Resource) => {
   }
 }
 
+const getHealthcheckUpdate = async () => {
+  const healthcheck = await choice(
+    `Choose a strategy`,
+    Object.keys(HealthCheckStrategies),
+  )
+
+  if (!healthcheck) return
+
+  const strategy =
+    HealthCheckStrategies[healthcheck as HealthcheckStrategy['runner']]
+
+  return JSON.parse(JSON.stringify(strategy)) as HealthcheckStrategy
+}
+
+const updateHealthcheck = async (resource: Resource) => {
+  let healthcheck = JSON.parse(
+    JSON.stringify(resource.healthcheck),
+  ) as HealthcheckStrategy
+
+  while (true) {
+    log.inspect(healthcheck)
+    log.diff(log.stringify(resource.healthcheck), log.stringify(healthcheck))
+
+    const action = await choice(`Choose action`, [
+      'run healthcheck',
+      'change healthcheck strategy',
+      'persist healthcheck strategy',
+    ])
+
+    switch (action) {
+      case 'run healthcheck':
+        await runHealthcheck(resource.data, healthcheck)
+        continue
+
+      case 'change healthcheck strategy':
+        healthcheck = await getHealthcheckUpdate()
+        if (!healthcheck) return
+        continue
+
+      case 'persist healthcheck strategy':
+        try {
+          await resource.change({ healthcheck: healthcheckUpdate })
+          log.success('Healthcheck strategy updated')
+        } catch (err) {
+          log.error(`Resource update failed.`)
+          log.error(err)
+        }
+        return
+
+      case null:
+        return
+    }
+  }
+}
+
 const update = async (resource: Resource) => {
   while (true) {
-    log.inspect(resource.data)
+    log.inspect(resource.document)
 
     const action = await choice('Choose action', [
-      'open',
-      'update',
-      'healthcheck',
+      'open in browser',
+      'run healthcheck',
+      'update data',
+      'update healthcheck',
       'compare',
       'delete',
     ])
 
     switch (action) {
-      case 'open':
+      case 'open in browser':
         open(resource.url)
         break
-      case 'update':
+      case 'update data':
         await updateResource(resource)
         break
-      case 'healthcheck':
-        await healthcheck(resource.data, resource.healthcheck)
+      case 'run healthcheck':
+        await runHealthcheck(resource.data, resource.healthcheck)
+        break
+      case 'update healthcheck':
+        await updateHealthcheck(resource)
         break
       case 'compare':
         await compareResource(resource)
