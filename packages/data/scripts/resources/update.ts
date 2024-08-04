@@ -238,7 +238,7 @@ const updateHealthcheck = async (resource: Resource) => {
   ) as HealthcheckStrategy
 
   while (true) {
-    log.inspect(healthcheck)
+    log.inspect(resource.healthcheck)
     log.diff(log.stringify(resource.healthcheck), log.stringify(healthcheck))
 
     const action = await choice(`Choose action`, [
@@ -253,13 +253,14 @@ const updateHealthcheck = async (resource: Resource) => {
         continue
 
       case 'change healthcheck strategy':
-        healthcheck = await getHealthcheckUpdate()
-        if (!healthcheck) return
+        const healthcheckUpdate = await getHealthcheckUpdate()
+        if (!healthcheckUpdate) continue
+        healthcheck = healthcheckUpdate
         continue
 
       case 'persist healthcheck strategy':
         try {
-          await resource.change({ healthcheck: healthcheckUpdate })
+          await resource.change({ healthcheck })
           log.success('Healthcheck strategy updated')
         } catch (err) {
           log.error(`Resource update failed.`)
