@@ -1,4 +1,5 @@
 import chalk from 'chalk'
+import * as JSDiff from 'diff'
 import type { JSONSerializable } from './util'
 
 interface DiffFile {
