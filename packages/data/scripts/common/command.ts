@@ -84,7 +84,7 @@ const confirm = async (question: string): Promise<Nullable<boolean>> => {
 }
 
 export default {
-	loop,
+  loop,
   input,
   choice,
   confirm,
