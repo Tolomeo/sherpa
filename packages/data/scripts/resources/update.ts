@@ -1,6 +1,5 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
-import { clone, open, input, choice, log, confirm } from '../_utils'
 import { getAllByResourceId } from '../../src/topic'
 import Resource, { getAllByUrl } from '../../src/resource'
 import Healthcheck from '../../src/healthcheck/runner'
@@ -9,10 +8,11 @@ import {
   type ResourceData,
   type HealthcheckStrategy,
 } from '../../types'
+import { util, format, log, command } from '../common'
 
 const getResource = async () => {
   while (true) {
-    const url = await input(`Enter url fragment to search for`)
+    const url = await command.input(`Enter url fragment to search for`)
 
     if (!url) return
 
@@ -30,7 +30,7 @@ const getResource = async () => {
 
     log.success(`${resources.length} results found`)
 
-    const action = await choice(
+    const action = await command.choice(
       `Select resource`,
       resources.map((r) => r.url),
     )
@@ -48,7 +48,10 @@ const runHealthcheck = async (
   strategy: HealthcheckStrategy,
 ) => {
   const healthcheckRunner = new Healthcheck()
-  const healthCheckResult = await healthcheckRunner.run(url, clone(strategy))
+  const healthCheckResult = await healthcheckRunner.run(
+    url,
+    util.clone(strategy),
+  )
 
   if (!healthCheckResult.success) {
     log.error(`Health check failed`)
@@ -57,22 +60,24 @@ const runHealthcheck = async (
   }
 
   log.success(`Health check succeeded`)
-  log.diff(
-    log.stringify({ url, title }),
-    log.stringify({
-      url: healthCheckResult.url,
-      title: healthCheckResult.data.title,
-    }),
+  log.text(
+    format.diff(
+      { url, title },
+      {
+        url: healthCheckResult.url,
+        title: healthCheckResult.data.title,
+      },
+    ),
   )
 
   await healthcheckRunner.teardown()
 }
 
 const getResourceDataUpdate = async (resourceData: ResourceData) => {
-  const resourceUpdate = clone(resourceData)
+  const resourceUpdate = util.clone(resourceData)
 
   for (const [key, value] of Object.entries(resourceData)) {
-    const valueUpdate = await input(`${key}(${value})`)
+    const valueUpdate = await command.input(`${key}(${value})`)
 
     if (!valueUpdate) continue
 
@@ -83,13 +88,13 @@ const getResourceDataUpdate = async (resourceData: ResourceData) => {
 }
 
 const manageResourceData = async (resource: Resource) => {
-  let resourceData = clone(resource.data)
+  let resourceData = util.clone(resource.data)
 
   while (true) {
     log.inspect(resource.data)
-    log.diff(log.stringify(resource.data), log.stringify(resourceData))
+    log.text(format.diff(resource.data, resourceData))
 
-    const action = await choice('Choose action', [
+    const action = await command.choice('Choose action', [
       'change resource data',
       'healthcheck resource data',
       'persist resource data',
@@ -128,7 +133,7 @@ const deleteResource = async (resource: Resource) => {
         .join(', ')}`,
     )
 
-    const action = await choice(`Choose action`, [
+    const action = await command.choice(`Choose action`, [
       'display occurrences',
       'delete resource and update topics',
     ])
@@ -150,7 +155,7 @@ const deleteResource = async (resource: Resource) => {
         break
 
       case 'delete resource and update topics':
-        const confirmed = await confirm(`Confirm resource removal`)
+        const confirmed = await command.confirm(`Confirm resource removal`)
 
         if (!confirmed) break
 
@@ -208,12 +213,9 @@ const compareResource = async (resource: Resource) => {
       continue
     }
 
-    log.diff(
-      log.stringify(resource.document),
-      log.stringify(comparedResource.document),
-    )
+    log.text(format.diff(resource.document, comparedResource.document))
 
-    const action = await choice(`Choose action`, [
+    const action = await command.choice(`Choose action`, [
       'choose another resource for comparison',
     ])
 
@@ -227,7 +229,7 @@ const compareResource = async (resource: Resource) => {
 }
 
 const getHealthcheckUpdate = async () => {
-  const healthcheck = await choice(
+  const healthcheck = await command.choice(
     `Choose a strategy`,
     Object.keys(HealthCheckStrategies),
   )
@@ -237,17 +239,17 @@ const getHealthcheckUpdate = async () => {
   const strategy =
     HealthCheckStrategies[healthcheck as HealthcheckStrategy['runner']]
 
-  return clone(strategy)
+  return util.clone(strategy)
 }
 
 const manageResourceHealthcheck = async (resource: Resource) => {
-  let healthcheck = clone(resource.healthcheck)
+  let healthcheck = util.clone(resource.healthcheck)
 
   while (true) {
     log.inspect(resource.healthcheck)
-    log.diff(log.stringify(resource.healthcheck), log.stringify(healthcheck))
+    log.text(format.diff(resource.healthcheck, healthcheck))
 
-    const action = await choice(`Choose action`, [
+    const action = await command.choice(`Choose action`, [
       'run healthcheck',
       'change healthcheck strategy',
       'persist healthcheck strategy',
@@ -284,7 +286,7 @@ const manageResource = async (resource: Resource) => {
   while (true) {
     log.inspect(resource.document)
 
-    const action = await choice('Choose action', [
+    const action = await command.choice('Choose action', [
       'open in browser',
       'manage data',
       'manage healthcheck',
@@ -294,7 +296,7 @@ const manageResource = async (resource: Resource) => {
 
     switch (action) {
       case 'open in browser':
-        open(resource.url)
+        util.open(resource.url)
         break
       case 'manage data':
         await manageResourceData(resource)
