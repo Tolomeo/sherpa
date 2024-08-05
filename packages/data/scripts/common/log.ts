@@ -5,6 +5,9 @@ export const log = {
   text(text: string) {
     return console.log(`\n${text}`)
   },
+  lead(text: string) {
+    return log.text(format.lead(text))
+  },
   error(text: string) {
     return log.text(format.error(text))
   },

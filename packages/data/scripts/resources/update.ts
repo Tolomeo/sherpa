@@ -1,5 +1,4 @@
-/* eslint-disable no-constant-condition */
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+/* eslint-disable no-constant-condition */ /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import { getAllByResourceId } from '../../src/topic'
 import Resource, { getAllByUrl } from '../../src/resource'
 import Healthcheck from '../../src/healthcheck/runner'
@@ -82,7 +81,7 @@ const getResourceDataUpdate = async (resourceData: ResourceData) => {
   const resourceUpdate = util.clone(resourceData)
 
   for (const [key, value] of Object.entries(resourceData)) {
-    const valueUpdate = await command.input(`${key}(${value})`)
+    const valueUpdate = await command.input(`${key} (${value})`)
 
     if (!valueUpdate) continue
 
@@ -136,9 +135,9 @@ const deleteResource = async (resource: Resource) => {
   await command.loop(async () => {
     log.inspect(resource.document)
     log.warning(
-      `The resource occurs in the following topics:\n${topics
-        .map((t) => t.topic)
-        .join(', ')}`,
+      `The resource occurs in the following topics:\n${format.stringify(
+        topics.map((t) => t.topic),
+      )}`,
     )
 
     const action = await command.choice(`Choose action`, [
@@ -150,15 +149,16 @@ const deleteResource = async (resource: Resource) => {
       case 'display occurrences':
         topics.forEach((t) => {
           const { topic, main, resources } = t.data
-          const display = {
-            topic,
-            main,
-            resources,
-          }
-
-          log.inspect(display, {
-            highlight: resource.id,
-          })
+          log.inspect(
+            {
+              topic,
+              main,
+              resources,
+            },
+            {
+              highlight: resource.id,
+            },
+          )
         })
         return command.loop.REPEAT
 
@@ -326,7 +326,7 @@ const manageResource = async (resource: Resource) => {
 
 ;(async function main() {
   await command.loop(async () => {
-    log.text(`Search a resource by url`)
+    log.lead(`Search a resource by url`)
     const resource = await getResource()
 
     if (!resource) return command.loop.END
