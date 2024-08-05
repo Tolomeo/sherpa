@@ -95,25 +95,27 @@ const manageResourceData = async (resource: Resource) => {
   let resourceData = util.clone(resource.data)
 
   await command.loop(async () => {
+    log.lead(`Current resource data`)
     log.inspect(resource.data)
+    log.lead(`Resource data update`)
     log.text(format.diff(resource.data, resourceData))
 
     const action = await command.choice('Choose action', [
-      'change resource data',
-      'healthcheck resource data',
-      'persist resource data',
+      'update resource data',
+      'healthcheck resource data update',
+      'persist resource data update',
     ])
 
     switch (action) {
-      case 'change resource data':
+      case 'update resource data':
         resourceData = await getResourceDataUpdate(resourceData)
         return command.loop.REPEAT
 
-      case 'healthcheck resource data':
+      case 'healthcheck resource data update':
         await runHealthcheck(resourceData, resource.healthcheck)
         return command.loop.REPEAT
 
-      case 'persist resource data':
+      case 'persist resource data update':
         try {
           await resource.change(resourceData)
           log.success(`Resource update succeeded`)
@@ -163,7 +165,9 @@ const deleteResource = async (resource: Resource) => {
         return command.loop.REPEAT
 
       case 'delete resource and update topics':
-        const confirmed = await command.confirm(`Confirm resource removal`)
+        const confirmed = await command.confirm(
+          `Confirm resource ${resource.id} removal`,
+        )
 
         if (!confirmed) return command.loop.REPEAT
 
@@ -209,7 +213,7 @@ const compareResource = async (resource: Resource) => {
   await command.loop(async () => {
     log.inspect(resource.document)
 
-    log.text(`Choose a resource to compare with`)
+    log.lead(`Choose a resource to compare with`)
     const comparedResource = await getResource()
 
     if (!comparedResource) return command.loop.END
@@ -254,12 +258,14 @@ const manageResourceHealthcheck = async (resource: Resource) => {
   let healthcheck = util.clone(resource.healthcheck)
 
   await command.loop(async () => {
+    log.lead(`Current healthcheck strategy`)
     log.inspect(resource.healthcheck)
+    log.lead(`Healthcheck strategy update`)
     log.text(format.diff(resource.healthcheck, healthcheck))
 
     const action = await command.choice(`Choose action`, [
       'run healthcheck',
-      'change healthcheck strategy',
+      'update healthcheck strategy',
       'persist healthcheck strategy',
     ])
 
@@ -268,7 +274,7 @@ const manageResourceHealthcheck = async (resource: Resource) => {
         await runHealthcheck(resource.data, healthcheck)
         return command.loop.REPEAT
 
-      case 'change healthcheck strategy':
+      case 'update healthcheck strategy':
         const healthcheckUpdate = await getHealthcheckUpdate()
         if (!healthcheckUpdate) return command.loop.REPEAT
         healthcheck = healthcheckUpdate
@@ -292,7 +298,9 @@ const manageResourceHealthcheck = async (resource: Resource) => {
 
 const manageResource = async (resource: Resource) => {
   await command.loop(async () => {
-    log.inspect(resource.document)
+    log.lead(`Resource ${resource.id}`)
+    log.inspect(resource.data)
+    log.inspect(resource.healthcheck)
 
     const action = await command.choice('Choose action', [
       'open in browser',

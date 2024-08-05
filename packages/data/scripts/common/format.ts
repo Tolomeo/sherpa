@@ -8,7 +8,7 @@ interface DiffFile {
   header?: string
 }
 
-interface DiffOptions {
+export interface DiffOptions {
   context: number
 }
 
@@ -74,6 +74,10 @@ const format = {
         }
       })
       .join('\n')
+
+    if (!diff) {
+      return chalk.grey(oldFile.content)
+    }
 
     return diff
   },
