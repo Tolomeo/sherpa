@@ -15,12 +15,12 @@
     }
   },
   "scripts": {
+    "start": "tsx \"scripts/start.ts\"",
     "prebuild": "shx rm -rf \"dist\"",
     "build": "tsx \"./scripts/build.ts\"",
     "lint": "eslint \"types\" \"src\" \"scripts\"",
     "test:topics": "vitest topics",
-    "test:resources": "vitest resources",
-    "update:resources": "tsx \"scripts/resources/update.ts\""
+    "test:resources": "vitest resources"
   },
   "devDependencies": {
     "@seald-io/nedb": "^4.0.4",

@@ -1,13 +1,13 @@
 /* eslint-disable no-constant-condition */ /* eslint-disable @typescript-eslint/no-unnecessary-condition */
-import { getAllByResourceId } from '../../src/topic'
-import Resource, { getAllByUrl } from '../../src/resource'
-import Healthcheck from '../../src/healthcheck/runner'
+import { getAllByResourceId } from '../src/topic'
+import Resource, { getAllByUrl } from '../src/resource'
+import Healthcheck from '../src/healthcheck/runner'
 import {
   HealthCheckStrategies,
   type ResourceData,
   type HealthcheckStrategy,
-} from '../../types'
-import { util, format, log, command } from '../common'
+} from '../types'
+import { util, format, log, command } from './common'
 
 const getResource = async () => {
   let resource: Resource | undefined
