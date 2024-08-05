@@ -11,21 +11,24 @@ import {
 import { util, format, log, command } from '../common'
 
 const getResource = async () => {
-  while (true) {
+  let resource: Resource | undefined
+
+  await command.loop(async () => {
     const url = await command.input(`Enter url fragment to search for`)
 
-    if (!url) return
+    if (!url) return command.loop.END
 
     const resources = await getAllByUrl(url)
 
     if (!resources.length) {
       log.warning(`No results found`)
-      continue
+      return command.loop.REPEAT
     }
 
     if (resources.length === 1) {
       log.success(`1 result found`)
-      return resources[0]
+      resource = resources[0]
+      return command.loop.END
     }
 
     log.success(`${resources.length} results found`)
@@ -35,12 +38,14 @@ const getResource = async () => {
       resources.map((r) => r.url),
     )
 
-    if (!action) continue
+    if (!action) command.loop.REPEAT
 
-    const resource = resources.find((r) => r.url === action)
+    resource = resources.find((r) => r.url === action)
 
-    return resource
-  }
+    return command.loop.END
+  })
+
+  return resource
 }
 
 const runHealthcheck = async (
@@ -90,7 +95,7 @@ const getResourceDataUpdate = async (resourceData: ResourceData) => {
 const manageResourceData = async (resource: Resource) => {
   let resourceData = util.clone(resource.data)
 
-  while (true) {
+  await command.loop(async () => {
     log.inspect(resource.data)
     log.text(format.diff(resource.data, resourceData))
 
@@ -103,10 +108,12 @@ const manageResourceData = async (resource: Resource) => {
     switch (action) {
       case 'change resource data':
         resourceData = await getResourceDataUpdate(resourceData)
-        continue
+        return command.loop.REPEAT
+
       case 'healthcheck resource data':
         await runHealthcheck(resourceData, resource.healthcheck)
-        continue
+        return command.loop.REPEAT
+
       case 'persist resource data':
         try {
           await resource.change(resourceData)
@@ -115,17 +122,18 @@ const manageResourceData = async (resource: Resource) => {
           log.error(`Resource update failed.`)
           log.error(error)
         }
-        return
+        return command.loop.END
+
       case null:
-        return
+        return command.loop.END
     }
-  }
+  })
 }
 
 const deleteResource = async (resource: Resource) => {
   const topics = await getAllByResourceId(resource.id)
 
-  while (true) {
+  await command.loop(async () => {
     log.inspect(resource.document)
     log.warning(
       `The resource occurs in the following topics:\n${topics
@@ -152,12 +160,12 @@ const deleteResource = async (resource: Resource) => {
             highlight: resource.id,
           })
         })
-        break
+        return command.loop.REPEAT
 
       case 'delete resource and update topics':
         const confirmed = await command.confirm(`Confirm resource removal`)
 
-        if (!confirmed) break
+        if (!confirmed) return command.loop.REPEAT
 
         try {
           await Promise.all(
@@ -189,28 +197,28 @@ const deleteResource = async (resource: Resource) => {
           log.error(err)
         }
 
-        return
+        return command.loop.END
 
       case null:
-        return
+        return command.loop.END
     }
-  }
+  })
 }
 
 const compareResource = async (resource: Resource) => {
-  while (true) {
+  await command.loop(async () => {
     log.inspect(resource.document)
 
     log.text(`Choose a resource to compare with`)
     const comparedResource = await getResource()
 
-    if (!comparedResource) return
+    if (!comparedResource) return command.loop.END
 
     if (resource.id === comparedResource.id) {
       log.warning(
         `The chosen comparison resource matches the compared resource`,
       )
-      continue
+      return command.loop.REPEAT
     }
 
     log.text(format.diff(resource.document, comparedResource.document))
@@ -221,11 +229,11 @@ const compareResource = async (resource: Resource) => {
 
     switch (action) {
       case 'choose another resource for comparison':
-        continue
+        return command.loop.REPEAT
       case null:
-        return
+        return command.loop.END
     }
-  }
+  })
 }
 
 const getHealthcheckUpdate = async () => {
@@ -245,7 +253,7 @@ const getHealthcheckUpdate = async () => {
 const manageResourceHealthcheck = async (resource: Resource) => {
   let healthcheck = util.clone(resource.healthcheck)
 
-  while (true) {
+  await command.loop(async () => {
     log.inspect(resource.healthcheck)
     log.text(format.diff(resource.healthcheck, healthcheck))
 
@@ -258,13 +266,13 @@ const manageResourceHealthcheck = async (resource: Resource) => {
     switch (action) {
       case 'run healthcheck':
         await runHealthcheck(resource.data, healthcheck)
-        continue
+        return command.loop.REPEAT
 
       case 'change healthcheck strategy':
         const healthcheckUpdate = await getHealthcheckUpdate()
-        if (!healthcheckUpdate) continue
+        if (!healthcheckUpdate) return command.loop.REPEAT
         healthcheck = healthcheckUpdate
-        continue
+        return command.loop.REPEAT
 
       case 'persist healthcheck strategy':
         try {
@@ -274,16 +282,16 @@ const manageResourceHealthcheck = async (resource: Resource) => {
           log.error(`Resource update failed.`)
           log.error(err)
         }
-        return
+        return command.loop.END
 
       case null:
-        return
+        return command.loop.END
     }
-  }
+  })
 }
 
 const manageResource = async (resource: Resource) => {
-  while (true) {
+  await command.loop(async () => {
     log.inspect(resource.document)
 
     const action = await command.choice('Choose action', [
@@ -297,34 +305,36 @@ const manageResource = async (resource: Resource) => {
     switch (action) {
       case 'open in browser':
         util.open(resource.url)
-        break
+        return command.loop.REPEAT
       case 'manage data':
         await manageResourceData(resource)
-        break
+        return command.loop.REPEAT
       case 'manage healthcheck':
         await manageResourceHealthcheck(resource)
-        break
+        return command.loop.REPEAT
       case 'compare':
         await compareResource(resource)
-        break
+        return command.loop.REPEAT
       case 'delete':
         await deleteResource(resource)
+        return command.loop.END
       case null:
-        return
+        return command.loop.END
     }
-  }
+  })
 }
 
 ;(async function main() {
-  while (true) {
+  await command.loop(async () => {
     log.text(`Search a resource by url`)
-
     const resource = await getResource()
 
-    if (!resource) process.exit(0)
+    if (!resource) return command.loop.END
 
     await manageResource(resource)
-  }
+
+    return command.loop.REPEAT
+  })
 })().catch((err) => {
   log.error(err)
   process.exit(1)

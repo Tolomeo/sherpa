@@ -4,7 +4,27 @@ import log from './log'
 
 type Nullable<T> = T | null
 
-export const input = (question: string): Promise<Nullable<string>> => {
+enum LoopCommand {
+  REPEAT,
+  END,
+}
+
+const loop = async (fn: () => LoopCommand | Promise<LoopCommand>) => {
+  while (true) {
+    const loopAction = await fn()
+
+    switch (loopAction) {
+      case LoopCommand.REPEAT:
+        continue
+      case LoopCommand.END:
+        return
+    }
+  }
+}
+loop.REPEAT = LoopCommand.REPEAT
+loop.END = LoopCommand.END
+
+const input = (question: string): Promise<Nullable<string>> => {
   const describedQuestion = format.lead(`\n${question}\n[q] cancel\n> `)
   const rl = readline.createInterface({
     input: process.stdin,
@@ -21,7 +41,7 @@ export const input = (question: string): Promise<Nullable<string>> => {
   })
 }
 
-export const choice = async <T extends string>(
+const choice = async <T extends string>(
   question: string,
   options: T[],
 ): Promise<Nullable<T>> => {
@@ -49,7 +69,7 @@ export const choice = async <T extends string>(
   return optionAnswer
 }
 
-export const confirm = async (question: string): Promise<Nullable<boolean>> => {
+const confirm = async (question: string): Promise<Nullable<boolean>> => {
   const confirmOptionsMap: Record<string, boolean> = {
     yes: true,
     no: false,
@@ -64,6 +84,7 @@ export const confirm = async (question: string): Promise<Nullable<boolean>> => {
 }
 
 export default {
+	loop,
   input,
   choice,
   confirm,
