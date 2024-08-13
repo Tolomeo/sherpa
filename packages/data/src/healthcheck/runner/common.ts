@@ -8,7 +8,7 @@ import type {
 } from 'crawlee'
 import he from 'he'
 import formatHTML from 'html-format'
-import createMetascraper, { MetascraperOptions } from 'metascraper'
+import createMetascraper, { type MetascraperOptions } from 'metascraper'
 import createMetascraperTitleRules from 'metascraper-title'
 import { Deferred } from '../../common/defer'
 

@@ -29,8 +29,6 @@ export const getByName = async (name: string) => {
     store.findOne({ topic }),
   )
 
-  if (!doc) throw new Error(`Topic named ${name} not found`)
-
   return new Topic(doc)
 }
 

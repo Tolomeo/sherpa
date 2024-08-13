@@ -20,9 +20,9 @@ export default class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCraw
     request,
     $,
   }: CheerioCrawlingContext<HttpHealthcheckRunConfig>) {
-    const {
+    /* const {
       userData: { titleSelector },
-    } = request
+    } = request */
 
     const metadata = await this.getMetadata({ url: request.url, htmlDom: $ })
 

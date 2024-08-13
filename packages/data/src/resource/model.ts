@@ -84,7 +84,7 @@ class Resource {
   }
 
   public get data() {
-    const { _id, healthcheck, ...resourcedata } = this.document
+    const { _id, healthcheck: _healthcheck, ...resourcedata } = this.document
     return resourcedata
   }
 

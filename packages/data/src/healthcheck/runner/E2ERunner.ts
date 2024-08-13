@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion -- several indirect accesses force to null-assert */
 import { PlaywrightCrawler } from 'crawlee'
 import type {
   PlaywrightCrawlerOptions,

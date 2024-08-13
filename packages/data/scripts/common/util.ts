@@ -10,8 +10,8 @@ export type JSONSerializable =
 
 const util = {
   open,
-  clone: <T extends JSONSerializable>(value: T): T =>
-    JSON.parse(JSON.stringify(value)),
+  clone: <T extends JSONSerializable>(value: T) =>
+    JSON.parse(JSON.stringify(value)) as T,
 }
 
 export default util

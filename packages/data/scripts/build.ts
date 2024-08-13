@@ -3,7 +3,7 @@ import * as path from 'node:path'
 import * as childProcess from 'node:child_process'
 import { getAll } from '../src/topic/model'
 
-const srcDir = 'src'
+// const srcDir = 'src'
 const outDir = 'dist'
 
 /* const {
@@ -55,7 +55,7 @@ const buildJSON = async () => {
     const pathData = await topic.populate()
 
     fs.writeFileSync(
-      path.join(jsonDist, `${pathData!.topic}.json`),
+      path.join(jsonDist, `${pathData.topic}.json`),
       JSON.stringify(pathData),
       { encoding: 'utf8' },
     )

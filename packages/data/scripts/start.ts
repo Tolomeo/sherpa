@@ -1,6 +1,6 @@
-/* eslint-disable no-constant-condition */ /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import { getAllByResourceId } from '../src/topic'
-import Resource, { getAllByUrl } from '../src/resource'
+import type Resource from '../src/resource'
+import { getAllByUrl } from '../src/resource'
 import Healthcheck from '../src/healthcheck/runner'
 import {
   HealthCheckStrategies,
@@ -59,7 +59,7 @@ const runHealthcheck = async (
 
   if (!healthCheckResult.success) {
     log.error(`Health check failed`)
-    log.error(`${healthCheckResult.error}`)
+    log.error(healthCheckResult.error.message)
     return
   }
 
@@ -77,14 +77,19 @@ const runHealthcheck = async (
   await healthcheckRunner.teardown()
 }
 
-const getResourceDataUpdate = async (resourceData: ResourceData) => {
+type ResourceDataUpdate = Omit<ResourceData, 'healthcheck'>
+
+const getResourceDataUpdate = async (resourceData: ResourceDataUpdate) => {
   const resourceUpdate = util.clone(resourceData)
 
   for (const [key, value] of Object.entries(resourceData)) {
-    const valueUpdate = await command.input(`${key} (${value})`)
+    const valueUpdate = await command.input(
+      `${key} (${format.stringify(value)})`,
+    )
 
     if (!valueUpdate) continue
 
+    // @ts-expect-error -- we will remove the enum this typecheck is complaining about
     resourceUpdate[key] = valueUpdate
   }
 
@@ -121,7 +126,7 @@ const manageResourceData = async (resource: Resource) => {
           log.success(`Resource update succeeded`)
         } catch (error) {
           log.error(`Resource update failed.`)
-          log.error(error)
+          log.error(error as string)
         }
         return command.loop.END
 
@@ -164,7 +169,7 @@ const deleteResource = async (resource: Resource) => {
         })
         return command.loop.REPEAT
 
-      case 'delete resource and update topics':
+      case 'delete resource and update topics': {
         const confirmed = await command.confirm(
           `Confirm resource ${resource.id} removal`,
         )
@@ -190,7 +195,7 @@ const deleteResource = async (resource: Resource) => {
           log.success(`Topics updated`)
         } catch (err) {
           log.error(`Error updating topics`)
-          log.error(err)
+          log.error(err as string)
         }
 
         try {
@@ -198,10 +203,11 @@ const deleteResource = async (resource: Resource) => {
           log.success(`Resource removed`)
         } catch (err) {
           log.error(`Error removing resource`)
-          log.error(err)
+          log.error(err as string)
         }
 
         return command.loop.END
+      }
 
       case null:
         return command.loop.END
@@ -274,11 +280,12 @@ const manageResourceHealthcheck = async (resource: Resource) => {
         await runHealthcheck(resource.data, healthcheck)
         return command.loop.REPEAT
 
-      case 'update healthcheck strategy':
+      case 'update healthcheck strategy': {
         const healthcheckUpdate = await getHealthcheckUpdate()
         if (!healthcheckUpdate) return command.loop.REPEAT
         healthcheck = healthcheckUpdate
         return command.loop.REPEAT
+      }
 
       case 'persist healthcheck strategy':
         try {
@@ -286,7 +293,7 @@ const manageResourceHealthcheck = async (resource: Resource) => {
           log.success('Healthcheck strategy updated')
         } catch (err) {
           log.error(`Resource update failed.`)
-          log.error(err)
+          log.error(err as string)
         }
         return command.loop.END
 
@@ -312,7 +319,7 @@ const manageResource = async (resource: Resource) => {
 
     switch (action) {
       case 'open in browser':
-        util.open(resource.url)
+        await util.open(resource.url)
         return command.loop.REPEAT
       case 'manage data':
         await manageResourceData(resource)
@@ -344,6 +351,6 @@ const manageResource = async (resource: Resource) => {
     return command.loop.REPEAT
   })
 })().catch((err) => {
-  log.error(err)
+  log.error(err as string)
   process.exit(1)
 })
