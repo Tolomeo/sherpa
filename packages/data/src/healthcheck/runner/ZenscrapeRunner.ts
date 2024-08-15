@@ -1,9 +1,7 @@
-import { BasicCrawler } from 'crawlee'
-import type { BasicCrawlerOptions, BasicCrawlingContext } from 'crawlee'
-import * as cheerio from 'cheerio'
 import type { ZenscrapeHealthcheckRunConfig } from '../../../types'
 import { wait } from '../../common/defer'
-import { HealthCheckRunner } from './common'
+import { HealthCheckRunner, BasicCrawler, cheerio } from './common'
+import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
 
 export default class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
   constructor(crawlerOptions: BasicCrawlerOptions) {

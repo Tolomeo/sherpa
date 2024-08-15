@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion -- several indirect accesses force to null-assert */
-import { BasicCrawler } from 'crawlee'
-import type { BasicCrawlerOptions, BasicCrawlingContext } from 'crawlee'
-import { HealthCheckRunner } from './common'
+import { HealthCheckRunner, BasicCrawler } from './common'
+import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
 
 // NB: this type contains only what we are checking for in the response
 // the actual response is richer, see https://www.udemy.com/developers/affiliate/models/course/

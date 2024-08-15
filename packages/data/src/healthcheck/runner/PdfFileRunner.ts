@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion -- several indirect accesses force to null-assert */
-import { BasicCrawler } from 'crawlee'
-import type { BasicCrawlerOptions, BasicCrawlingContext } from 'crawlee'
-import { fileTypeFromBuffer } from 'file-type'
-import { HealthCheckRunner } from './common'
+import { HealthCheckRunner, BasicCrawler, fileTypeFromBuffer } from './common'
+import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
 
 export default class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
   constructor(crawlerOptions: Partial<BasicCrawlerOptions>) {
@@ -21,7 +19,7 @@ export default class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCra
     const { body } = await sendRequest({
       responseType: 'buffer',
     })
-    const file = await fileTypeFromBuffer(body as Buffer)
+    const file = await fileTypeFromBuffer(body as unknown as Buffer)
 
     if (!file || file.ext !== 'pdf' || file.mime !== 'application/pdf') {
       this.failure(

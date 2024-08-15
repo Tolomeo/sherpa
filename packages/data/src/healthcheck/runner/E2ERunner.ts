@@ -1,10 +1,9 @@
-import { PlaywrightCrawler } from 'crawlee'
+import type { E2EHealthcheckRunConfig } from '../../../types'
+import { HealthCheckRunner, PlaywrightCrawler } from './common'
 import type {
   PlaywrightCrawlerOptions,
   PlaywrightCrawlingContext,
-} from 'crawlee'
-import type { E2EHealthcheckRunConfig } from '../../../types'
-import { HealthCheckRunner } from './common'
+} from './common'
 
 export default class E2EHealthCheckRunner extends HealthCheckRunner<
   PlaywrightCrawler,

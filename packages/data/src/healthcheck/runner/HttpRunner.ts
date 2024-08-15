@@ -1,7 +1,6 @@
-import { CheerioCrawler } from 'crawlee'
-import type { CheerioCrawlerOptions, CheerioCrawlingContext } from 'crawlee'
 import type { HttpHealthcheckRunConfig } from '../../../types'
-import { HealthCheckRunner } from './common'
+import { HealthCheckRunner, CheerioCrawler } from './common'
+import type { CheerioCrawlerOptions, CheerioCrawlingContext } from './common'
 
 export default class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCrawler> {
   constructor(crawlerOptions: Partial<CheerioCrawlerOptions>) {

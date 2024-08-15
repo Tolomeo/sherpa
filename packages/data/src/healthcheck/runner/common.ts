@@ -1,10 +1,9 @@
-import { Request, RequestQueue } from 'crawlee'
+import { Request } from 'crawlee'
 import type {
-  Constructor,
-  Dictionary,
-  CheerioCrawler,
-  PlaywrightCrawler,
   BasicCrawler,
+  PlaywrightCrawler,
+  CheerioCrawler,
+  Dictionary,
 } from 'crawlee'
 import he from 'he'
 import formatHTML from 'html-format'
@@ -12,9 +11,28 @@ import createMetascraper, { type MetascraperOptions } from 'metascraper'
 import createMetascraperTitleRules from 'metascraper-title'
 import { Deferred } from '../../common/defer'
 
-const { decode, encode } = he
+export {
+  RequestQueue,
+  BasicCrawler,
+  CheerioCrawler,
+  PlaywrightCrawler,
+} from 'crawlee'
 
-export { type Constructor, RequestQueue }
+export type {
+  Constructor,
+  BasicCrawlerOptions,
+  BasicCrawlingContext,
+  CheerioCrawlerOptions,
+  CheerioCrawlingContext,
+  PlaywrightCrawlerOptions,
+  PlaywrightCrawlingContext,
+} from 'crawlee'
+
+export * as cheerio from 'cheerio'
+
+export { fileTypeFromBuffer } from 'file-type'
+
+const { decode, encode } = he
 
 export type HealthCheckResult =
   | {
