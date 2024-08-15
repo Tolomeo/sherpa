@@ -29,6 +29,8 @@ export const getByName = async (name: string) => {
     store.findOne({ topic }),
   )
 
+  if (!doc) return null
+
   return new Topic(doc)
 }
 
@@ -126,6 +128,8 @@ class Topic {
 
       for (const child of data.children) {
         const childTopic = await getByName(child)
+
+        if (!childTopic) throw new Error(`Child topic ${child} not found`)
 
         populatedData.children.push(await childTopic.populate())
       }

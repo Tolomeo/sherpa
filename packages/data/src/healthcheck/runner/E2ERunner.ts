@@ -15,7 +15,9 @@ export default class E2EHealthCheckRunner extends HealthCheckRunner<
       ...crawlerOptions,
       keepAlive: true,
       retryOnBlocked: true,
+      // @ts-expect-error -- TODO revisit OO design
       requestHandler: this.requestHandler.bind(this),
+      // @ts-expect-error -- TODO revisit OO design
       failedRequestHandler: this.failedRequestHandler.bind(this),
     })
   }

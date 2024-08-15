@@ -4,6 +4,7 @@ import type {
   PlaywrightCrawler,
   CheerioCrawler,
   Dictionary,
+  BasicCrawlingContext,
 } from 'crawlee'
 import he from 'he'
 import formatHTML from 'html-format'
@@ -51,11 +52,15 @@ export type HealthCheckResult =
 const scrapeMetadata = createMetascraper([createMetascraperTitleRules()])
 
 export abstract class HealthCheckRunner<
-  C extends BasicCrawler | PlaywrightCrawler | CheerioCrawler,
+  C extends
+    | BasicCrawler<BasicCrawlingContext<D>>
+    | PlaywrightCrawler
+    | CheerioCrawler,
   D extends Dictionary = Dictionary,
 > {
   protected results = new Map<string, Deferred<HealthCheckResult>>()
 
+  // @ts-expect-error -- TODO revisit the OO design
   protected crawler: C
 
   protected success(request: Request<D>, data: { title: string }) {
