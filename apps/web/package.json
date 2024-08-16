@@ -7,7 +7,7 @@
     "build": "next build",
     "check:lint": "next lint",
 		"check:types": "tsc --pretty --noEmit",
-    "test": "cypress open",
+    "test:local": "cypress open",
     "test:ci": "cypress run"
   },
   "dependencies": {
