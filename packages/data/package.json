@@ -18,8 +18,8 @@
     "start": "tsx \"scripts/start.ts\"",
     "prebuild": "shx rm -rf \"dist\"",
     "build": "tsx \"./scripts/build.ts\"",
-    "lint": "eslint \"types\" \"src\" \"scripts\"",
-		"lint:types": "tsc --noEmit --project tsconfig.eslint.json",
+    "check:lint": "eslint \"types\" \"src\" \"scripts\"",
+		"check:types": "tsc --noEmit --project tsconfig.eslint.json",
     "test:topics": "vitest topics",
     "test:resources": "vitest resources"
   },

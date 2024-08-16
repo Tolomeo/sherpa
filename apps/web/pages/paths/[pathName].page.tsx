@@ -25,16 +25,16 @@ export const getStaticPaths: GetStaticPaths = () => {
   return { paths: staticPaths, fallback: false }
 }
 
-export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
+export const getStaticProps: GetStaticProps<StaticProps, Params> = ({
   params,
 }) => {
   const topic = params!.pathName as TopicName
-	const path = require(`@sherpa/data/json/${topic}.json`)
+  const path = require(`@sherpa/data/json/${topic}.json`) as PopulatedTopicData
 
   return {
     props: {
       topic,
-      path: path,
+      path,
     },
   }
 }

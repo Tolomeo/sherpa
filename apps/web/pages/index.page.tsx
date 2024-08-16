@@ -21,14 +21,15 @@ interface StaticProps {
   competitors: PopulatedTopicData
 }
 
-export const getStaticProps: GetStaticProps<StaticProps> = async (
+export const getStaticProps: GetStaticProps<StaticProps> = (
   _: GetStaticPropsContext,
 ) => {
-  const competitors = require('@sherpa/data/json/competitors.json')
+  const competitors =
+    require('@sherpa/data/json/competitors.json') as PopulatedTopicData
 
   return {
     props: {
-      competitors: competitors as PopulatedTopicData,
+      competitors: competitors,
     },
   }
 }

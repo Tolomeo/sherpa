@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "lint": "next lint",
-		"check": "tsc --pretty --noEmit",
+    "check:lint": "next lint",
+		"check:types": "tsc --pretty --noEmit",
     "test": "cypress open",
     "test:ci": "cypress run"
   },

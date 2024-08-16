@@ -10,7 +10,7 @@ module.exports = {
     require.resolve('@vercel/style-guide/eslint/browser'),
     require.resolve('@vercel/style-guide/eslint/react'),
     require.resolve('@vercel/style-guide/eslint/next'),
-    require.resolve('eslint-config-turbo'),
+    // require.resolve('eslint-config-turbo'),
   ],
   parserOptions: {
     project,
