@@ -17,6 +17,10 @@ jobs:
           node-version: '18.x'
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Lint check
+        run: npm run check:lint
+      - name: Types check
+        run: npm run check:types
       - name: Deploy
         uses: amondnet/vercel-action@v25
         id: vercel-deployment
