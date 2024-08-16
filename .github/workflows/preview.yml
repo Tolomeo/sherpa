@@ -17,6 +17,8 @@ jobs:
           node-version: '18.x'
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
       - name: Lint check
         run: npm run check:lint
       - name: Types check
