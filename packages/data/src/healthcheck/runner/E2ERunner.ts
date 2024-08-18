@@ -1,11 +1,9 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion -- several indirect accesses force to null-assert */
-import { PlaywrightCrawler } from 'crawlee'
+import type { E2EHealthcheckRunConfig } from '../../../types'
+import { HealthCheckRunner, PlaywrightCrawler } from './common'
 import type {
   PlaywrightCrawlerOptions,
   PlaywrightCrawlingContext,
-} from 'crawlee'
-import type { E2EHealthcheckRunConfig } from '../../../types'
-import { HealthCheckRunner } from './common'
+} from './common'
 
 export default class E2EHealthCheckRunner extends HealthCheckRunner<
   PlaywrightCrawler,
@@ -17,7 +15,9 @@ export default class E2EHealthCheckRunner extends HealthCheckRunner<
       ...crawlerOptions,
       keepAlive: true,
       retryOnBlocked: true,
+      // @ts-expect-error -- TODO revisit OO design
       requestHandler: this.requestHandler.bind(this),
+      // @ts-expect-error -- TODO revisit OO design
       failedRequestHandler: this.failedRequestHandler.bind(this),
     })
   }

@@ -1,14 +1,20 @@
-import { BasicCrawler } from 'crawlee'
-import type { BasicCrawlerOptions, BasicCrawlingContext } from 'crawlee'
-import * as cheerio from 'cheerio'
 import type { ZenscrapeHealthcheckRunConfig } from '../../../types'
 import { wait } from '../../common/defer'
-import { HealthCheckRunner } from './common'
+import { HealthCheckRunner, BasicCrawler, cheerio } from './common'
+import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
 
-export default class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
-  constructor(crawlerOptions: BasicCrawlerOptions) {
+type ZenscrapeHealthCheckRunnerCrawlingContext =
+  BasicCrawlingContext<ZenscrapeHealthcheckRunConfig>
+
+export default class ZenscrapeHealthCheckRunner extends HealthCheckRunner<
+  BasicCrawler<ZenscrapeHealthCheckRunnerCrawlingContext>,
+  ZenscrapeHealthcheckRunConfig
+> {
+  constructor(
+    crawlerOptions: BasicCrawlerOptions<ZenscrapeHealthCheckRunnerCrawlingContext>,
+  ) {
     super()
-    this.crawler = new BasicCrawler({
+    this.crawler = new BasicCrawler<ZenscrapeHealthCheckRunnerCrawlingContext>({
       ...crawlerOptions,
       keepAlive: true,
       retryOnBlocked: true,
@@ -41,7 +47,7 @@ export default class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicC
   async requestHandler({
     request,
     sendRequest,
-  }: BasicCrawlingContext<ZenscrapeHealthcheckRunConfig>) {
+  }: ZenscrapeHealthCheckRunnerCrawlingContext) {
     const { ZENSCRAPE_API_KEY: apiKey } = import.meta.env
 
     if (!apiKey) {
@@ -80,7 +86,10 @@ export default class ZenscrapeHealthCheckRunner extends HealthCheckRunner<BasicC
     this.success(request, { title: this.filterEntities(title) })
   }
 
-  failedRequestHandler({ request }: BasicCrawlingContext, error: Error) {
+  failedRequestHandler(
+    { request }: ZenscrapeHealthCheckRunnerCrawlingContext,
+    error: Error,
+  ) {
     this.failure(request, error)
   }
 }

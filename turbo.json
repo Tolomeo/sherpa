@@ -1,37 +1,30 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": [
-    "**/.env.*local"
-  ],
+  "globalDependencies": ["**/.env.*local"],
   "tasks": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "dist/**",
-        ".next/**",
-        "!.next/cache/**"
-      ]
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
     "@sherpa/build": {
-      "env": [
-        "NEXT_PUBLIC_GITHUB_URL"
-      ]
+      "env": ["NEXT_PUBLIC_GITHUB_URL"]
     },
     "dev": {
+      "dependsOn": ["^build"],
       "cache": false,
-      "persistent": true,
-      "dependsOn": [
-        "^build"
-      ]
+      "persistent": true
     },
-    "lint": {},
+    "check:lint": {
+      "dependsOn": ["^build"],
+      "cache": false
+    },
+    "check:types": {
+      "dependsOn": ["^build"],
+      "cache": false
+    },
     "test": {
-      "cache": false,
-      "dependsOn": [
-        "^build"
-      ]
+      "dependsOn": ["^build"],
+      "cache": false
     }
   }
 }

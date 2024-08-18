@@ -1,4 +1,5 @@
 import { randomUUID } from 'node:crypto'
+import type { HealthcheckStrategy } from '../../../types/healthcheck'
 import PdfFileHealthCheckRunner from './PdfFileRunner'
 import HttpHealthCheckRunner from './HttpRunner'
 import E2EHealthCheckRunner from './E2ERunner'
@@ -6,7 +7,6 @@ import ZenscrapeHealthCheckRunner from './ZenscrapeRunner'
 import YoutubeDataApiHealthCheckRunner from './YoutubeDataApiRunner'
 import UdemyAffiliateApiHealthCheckRunner from './UdemyAffiliateApiRunner'
 import { type Constructor, RequestQueue } from './common'
-import type { HealthcheckStrategy } from '../../../types/healthcheck'
 
 type HealthCheckRunners =
   | PdfFileHealthCheckRunner

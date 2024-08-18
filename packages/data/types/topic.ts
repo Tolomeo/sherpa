@@ -65,7 +65,7 @@ export enum TopicName {
   'webaccessibility.testing' = 'webaccessibility.testing',
 }
 
-const ResourceIdSchema = z.string().regex(/^[a-zA-Z0-9]{16}$/);
+const ResourceIdSchema = z.string().regex(/^[a-zA-Z0-9]{16}$/)
 
 export const TopicDataSchema = z
   .object({

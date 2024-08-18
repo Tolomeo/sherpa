@@ -8,14 +8,16 @@ import type {
 import TopicsStore, { type TopicDocument } from './store'
 
 export const getAll = async () => {
-  const docs = await TopicsStore.findAll()
+  const docs = await TopicsStore.getInstance().then((store) => store.findAll())
   const paths = docs.map((p) => new Topic(p))
 
   return paths
 }
 
 export const getParents = async () => {
-  const docs = await TopicsStore.findAll({ topic: /^[^.]+$/ })
+  const docs = await TopicsStore.getInstance().then((store) =>
+    store.findAll({ topic: /^[^.]+$/ }),
+  )
   const paths = docs.map((p) => new Topic(p))
 
   return paths
@@ -23,20 +25,24 @@ export const getParents = async () => {
 
 export const getByName = async (name: string) => {
   const topic = name as TopicName
-  const doc = await TopicsStore.findOne({ topic })
+  const doc = await TopicsStore.getInstance().then((store) =>
+    store.findOne({ topic }),
+  )
 
-  if (!doc) throw new Error(`Topic named ${name} not found`)
+  if (!doc) return null
 
   return new Topic(doc)
 }
 
 export const getAllByResourceId = async (resourceId: string) => {
-  const docs = await TopicsStore.findAll({
-    $or: [
-      { main: { $in: [resourceId] } },
-      { resources: { $in: [resourceId] } },
-    ],
-  })
+  const docs = await TopicsStore.getInstance().then((store) =>
+    store.findAll({
+      $or: [
+        { main: { $in: [resourceId] } },
+        { resources: { $in: [resourceId] } },
+      ],
+    }),
+  )
 
   return docs.map((t) => new Topic(t))
 }
@@ -68,10 +74,12 @@ class Topic {
   private async update(update: Partial<TopicData>) {
     const { _id: id, ...topic } = this.document
 
-    this.document = await TopicsStore.updateOne(id, {
-      ...topic,
-      ...update,
-    })
+    this.document = await TopicsStore.getInstance().then((store) =>
+      store.updateOne(id, {
+        ...topic,
+        ...update,
+      }),
+    )
 
     return this.document
   }
@@ -120,6 +128,8 @@ class Topic {
 
       for (const child of data.children) {
         const childTopic = await getByName(child)
+
+        if (!childTopic) throw new Error(`Child topic ${child} not found`)
 
         populatedData.children.push(await childTopic.populate())
       }

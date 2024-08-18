@@ -15,12 +15,13 @@
     }
   },
   "scripts": {
+    "start": "tsx \"scripts/start.ts\"",
     "prebuild": "shx rm -rf \"dist\"",
     "build": "tsx \"./scripts/build.ts\"",
-    "lint": "eslint \"types\" \"src\" \"scripts\"",
+    "check:lint": "eslint \"types\" \"src\" \"scripts\"",
+    "check:types": "tsc --noEmit --project tsconfig.eslint.json",
     "test:topics": "vitest topics",
-    "test:resources": "vitest resources",
-    "update:resources": "tsx \"scripts/resources/update.ts\""
+    "test:resources": "vitest resources"
   },
   "devDependencies": {
     "@seald-io/nedb": "^4.0.4",
@@ -29,7 +30,7 @@
     "@types/he": "^1.2.3",
     "chalk": "^5.3.0",
     "cheerio": "^1.0.0-rc.12",
-    "crawlee": "^3.7.2",
+    "crawlee": "^3.11.1",
     "diff": "^5.2.0",
     "dotenv": "^16.4.1",
     "file-type": "^19.0.0",

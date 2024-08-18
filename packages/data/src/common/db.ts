@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any -- Most of the typing is copy-pasted from mongodb types */
 import NEDB, { type Document } from '@seald-io/nedb'
-import { ZodObject } from 'zod'
+import type { ZodObject } from 'zod'
 
 type Nullable<T> = T | null
 
@@ -7,9 +8,9 @@ type Nullable<T> = T | null
   ? ResultIfAny
   : ResultIfNotAny */
 
-type KeysOfAType<TSchema, Type> = {
+/* type KeysOfAType<TSchema, Type> = {
   [key in keyof TSchema]: NonNullable<TSchema[key]> extends Type ? key : never
-}[keyof TSchema]
+}[keyof TSchema] */
 
 /* type KeysOfOtherType<TSchema, Type> = {
   [key in keyof TSchema]: NonNullable<TSchema[key]> extends Type ? never : key
@@ -182,26 +183,35 @@ type StrictFilter<TSchema> =
     } & RootFilterOperators<WithId<TSchema>>)
 
 class Db<S extends ZodObject<any>> {
+  public static async build<S extends ZodObject<any>>(
+    schema: S,
+    {
+      filename,
+      indexes,
+    }: {
+      filename: string
+      // TODO: type unique as a valid keypath of S['_output']
+      indexes: { unique: string }
+    },
+  ): Promise<Db<S>> {
+    const db = new NEDB({ filename, autoload: true })
+
+    await db.ensureIndexAsync({
+      fieldName: indexes.unique,
+      unique: true,
+      sparse: false,
+    })
+    await db.compactDatafileAsync()
+
+    return new Db(schema, db)
+  }
+
   private schema: S
   private db: NEDB<S['_output']>
 
-  constructor(
-    filename: string,
-    schema: S,
-    {
-      uniqueFieldName,
-    }: { uniqueFieldName: KeysOfAType<S['_output'], string | string[]> },
-  ) {
+  private constructor(schema: S, db: NEDB<S['_output']>) {
     this.schema = schema
-    this.db = new NEDB({ filename, autoload: true })
-    this.db.ensureIndex(
-      { fieldName: uniqueFieldName as string, unique: true, sparse: false },
-      (err) => {
-        if (err) {
-          throw err
-        }
-      },
-    )
+    this.db = db
   }
 
   async findAll(filter: StrictFilter<S['_output']> = {}) {
@@ -214,6 +224,7 @@ class Db<S extends ZodObject<any>> {
     const doc: Nullable<Document<S['_output']>> =
       await this.db.findOneAsync(filter)
 
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- NEDB could return null when no doc is found
     if (!doc) return null
 
     return doc

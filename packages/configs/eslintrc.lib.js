@@ -7,7 +7,8 @@ module.exports = {
   extends: [
     require.resolve('@vercel/style-guide/eslint/node'),
     require.resolve('@vercel/style-guide/eslint/typescript'),
-    require.resolve('eslint-config-turbo'),
+    // TODO: this doesn't resolve anymore, investigate
+    // require.resolve('eslint-config-turbo'),
   ],
   parserOptions: {
     project,
@@ -21,7 +22,7 @@ module.exports = {
   },
   ignorePatterns: ['node_modules/', 'dist/'],
   rules: {
-		'no-await-in-loop': 'warn',
+    'no-await-in-loop': 'warn',
     'prefer-named-capture-group': 'off',
     'prettier/prettier': 'warn',
     'unicorn/filename-case': 'off',
@@ -33,5 +34,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
     '@typescript-eslint/no-unnecessary-condition': 'warn',
+    '@typescript-eslint/array-type': 'off',
   },
 }
