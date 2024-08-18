@@ -190,6 +190,7 @@ class Db<S extends ZodObject<any>> {
       indexes,
     }: {
       filename: string
+      // TODO: type unique as a valid keypath of S['_output']
       indexes: { unique: string }
     },
   ): Promise<Db<S>> {

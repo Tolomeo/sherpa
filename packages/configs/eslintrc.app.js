@@ -10,6 +10,7 @@ module.exports = {
     require.resolve('@vercel/style-guide/eslint/browser'),
     require.resolve('@vercel/style-guide/eslint/react'),
     require.resolve('@vercel/style-guide/eslint/next'),
+    // TODO: this doesn't resolve anymore, investigate
     // require.resolve('eslint-config-turbo'),
   ],
   parserOptions: {
@@ -28,7 +29,7 @@ module.exports = {
   },
   ignorePatterns: ['node_modules/', 'dist/'],
   rules: {
-		'no-await-in-loop': 'warn',
+    'no-await-in-loop': 'warn',
     'prefer-named-capture-group': 'off',
     'prettier/prettier': 'warn',
     'eslint-comments/require-description': 'warn',

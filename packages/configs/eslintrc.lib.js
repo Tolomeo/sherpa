@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     require.resolve('@vercel/style-guide/eslint/node'),
     require.resolve('@vercel/style-guide/eslint/typescript'),
+    // TODO: this doesn't resolve anymore, investigate
     // require.resolve('eslint-config-turbo'),
   ],
   parserOptions: {
