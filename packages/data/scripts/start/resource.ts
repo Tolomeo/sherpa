@@ -13,7 +13,9 @@ const getResource = async () => {
   let resource: Resource | undefined
 
   await command.loop(async () => {
-    const url = await command.input(`Search resource - Enter url fragment to look for`)
+    const url = await command.input(
+      `Search resource - Enter url fragment to look for`,
+    )
 
     if (!url) return command.loop.END
 
@@ -341,13 +343,28 @@ const manageResource = async (resource: Resource) => {
 
 const manageResources = async () => {
   await command.loop(async () => {
-    const resource = await getResource()
+    const action = await command.choice('Choose action', [
+      'manage existing resources',
+      'import resources',
+    ])
 
-    if (!resource) return command.loop.END
+    switch (action) {
+      case 'manage existing resources': {
+        const resource = await getResource()
 
-    await manageResource(resource)
+        if (!resource) return command.loop.END
 
-    return command.loop.REPEAT
+        await manageResource(resource)
+
+        return command.loop.REPEAT
+      }
+      case 'import resources': {
+        console.log('import')
+        return command.loop.REPEAT
+      }
+      case null:
+        return command.loop.END
+    }
   })
 }
 
