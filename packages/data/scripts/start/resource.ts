@@ -1,19 +1,19 @@
-import { getAllByResourceId } from '../src/topic'
-import type Resource from '../src/resource'
-import { getAllByUrl } from '../src/resource'
-import Healthcheck from '../src/healthcheck/runner'
+import { getAllByResourceId } from '../../src/topic'
+import type Resource from '../../src/resource'
+import { getAllByUrl } from '../../src/resource'
+import Healthcheck from '../../src/healthcheck/runner'
 import {
   HealthCheckStrategies,
   type ResourceData,
   type HealthcheckStrategy,
-} from '../types'
-import { util, format, log, command } from './common'
+} from '../../types'
+import { util, format, log, command } from '../common'
 
 const getResource = async () => {
   let resource: Resource | undefined
 
   await command.loop(async () => {
-    const url = await command.input(`Enter url fragment to search for`)
+    const url = await command.input(`Search resource - Enter url fragment to look for`)
 
     if (!url) return command.loop.END
 
@@ -339,9 +339,8 @@ const manageResource = async (resource: Resource) => {
   })
 }
 
-;(async function main() {
+const manageResources = async () => {
   await command.loop(async () => {
-    log.lead(`Search a resource by url`)
     const resource = await getResource()
 
     if (!resource) return command.loop.END
@@ -350,7 +349,6 @@ const manageResource = async (resource: Resource) => {
 
     return command.loop.REPEAT
   })
-})().catch((err) => {
-  log.error(err as string)
-  process.exit(1)
-})
+}
+
+export default manageResources
