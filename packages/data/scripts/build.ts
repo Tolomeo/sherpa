@@ -41,7 +41,9 @@ if (!outDir) {
 } */
 
 const buildTS = () => {
-  childProcess.execSync('tsc', { stdio: 'inherit' })
+  childProcess.execSync('tsc --project "tsconfig.build.json"', {
+    stdio: 'inherit',
+  })
 }
 
 const buildJSON = async () => {
