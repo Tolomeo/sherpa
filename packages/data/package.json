@@ -19,7 +19,7 @@
     "prebuild": "shx rm -rf \"dist\"",
     "build": "tsx \"./scripts/build.ts\"",
     "check:lint": "eslint \"types\" \"src\" \"scripts\"",
-    "check:types": "tsc --noEmit --project tsconfig.eslint.json",
+    "check:types": "tsc",
     "test:topics": "vitest topics",
     "test:resources": "vitest resources"
   },
