@@ -17,11 +17,11 @@ const PathComponent = ({ path }: Props) => {
   useEffect(() => {
     if (!path.main) return
 
-    const { topic, main } = path
+    const { name, main } = path
     const mainUrls = main.map(({ url }) => url)
 
     // eslint-disable-next-line no-console -- catched error to console
-    prune(mainUrls, topic).catch(console.error)
+    prune(mainUrls, name).catch(console.error)
   }, [prune, path])
 
   return (

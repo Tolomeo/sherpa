@@ -16,7 +16,7 @@ export const getAll = async () => {
 
 export const getParents = async () => {
   const docs = await TopicsStore.getInstance().then((store) =>
-    store.findAll({ topic: /^[^.]+$/ }),
+    store.findAll({ name: /^[^.]+$/ }),
   )
   const paths = docs.map((p) => new Topic(p))
 
@@ -24,9 +24,9 @@ export const getParents = async () => {
 }
 
 export const getByName = async (name: string) => {
-  const topic = name as TopicName
+  const topicName = name as TopicName
   const doc = await TopicsStore.getInstance().then((store) =>
-    store.findOne({ topic }),
+    store.findOne({ name: topicName }),
   )
 
   if (!doc) return null
@@ -84,8 +84,8 @@ class Topic {
     return this.document
   }
 
-  public get topic() {
-    return this.document.topic
+  public get name() {
+    return this.document.name
   }
 
   public get data() {

@@ -57,7 +57,7 @@ const buildJSON = async () => {
     const pathData = await topic.populate()
 
     fs.writeFileSync(
-      path.join(jsonDist, `${pathData.topic}.json`),
+      path.join(jsonDist, `${pathData.name}.json`),
       JSON.stringify(pathData),
       { encoding: 'utf8' },
     )

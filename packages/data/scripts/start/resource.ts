@@ -145,7 +145,7 @@ const deleteResource = async (resource: Resource) => {
     log.inspect(resource.document)
     log.warning(
       `The resource occurs in the following topics:\n${format.stringify(
-        topics.map((t) => t.topic),
+        topics.map((t) => t.name),
       )}`,
     )
 
@@ -157,10 +157,10 @@ const deleteResource = async (resource: Resource) => {
     switch (action) {
       case 'display occurrences':
         topics.forEach((t) => {
-          const { topic, main, resources } = t.data
+          const { name, main, resources } = t.data
           log.inspect(
             {
-              topic,
+              name,
               main,
               resources,
             },

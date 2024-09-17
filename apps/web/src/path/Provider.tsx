@@ -28,7 +28,7 @@ export const usePathResourcesCompletion = (
   },
 ] => {
   const {
-    path: { topic },
+    path: { name },
   } = usePathContext()
   const resourcesCompletionStore = useResourcesCompletionStore()
 
@@ -46,7 +46,7 @@ export const usePathResourcesCompletion = (
       const resourcesUrls = resources.map(({ url }) => url)
       const storedCompletion = await resourcesCompletionStore.areCompleted(
         resourcesUrls,
-        topic,
+        name,
       )
       const storedUrlsCompletion = resourcesUrls.reduce<
         Record<string, boolean>
@@ -60,13 +60,13 @@ export const usePathResourcesCompletion = (
     // TODO: Check how to deal with this
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
     setStoredCompletion()
-  }, [resources, resourcesCompletionStore, topic])
+  }, [resources, resourcesCompletionStore, name])
 
   const complete = async (resource: string) => {
     if (!(resource in completion))
       throw new Error(`${resource} not found among initialization resources`)
 
-    const success = await resourcesCompletionStore.complete(resource, topic)
+    const success = await resourcesCompletionStore.complete(resource, name)
 
     if (success)
       setCompletion((currentCompletion: Record<string, boolean>) => ({
@@ -79,7 +79,7 @@ export const usePathResourcesCompletion = (
     if (!(resource in completion))
       throw new Error(`${resource} not found among initialization resources`)
 
-    const success = await resourcesCompletionStore.uncomplete(resource, topic)
+    const success = await resourcesCompletionStore.uncomplete(resource, name)
 
     if (success)
       setCompletion((currentCompletion: Record<string, boolean>) => ({

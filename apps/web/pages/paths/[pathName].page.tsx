@@ -73,7 +73,7 @@ export default function PathPage({ path }: Props) {
         <meta name="theme-color" content="#ffffff" />
 
         <title>{`Sherpa: the ${
-          config.paths.topicsTitles[path.topic]
+          config.paths.topicsTitles[path.name]
         } path`}</title>
       </Head>
 

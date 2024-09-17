@@ -20,7 +20,7 @@ import UnorderedResources from './UnorderedResources'
 const PathContent = () => {
   const { path } = usePathContext()
 
-  const title = config.paths.topicsTitles[path.topic]
+  const title = config.paths.topicsTitles[path.name]
   const pathResourcesGroups = useMemo(() => {
     if (!path.resources) return null
 
@@ -108,7 +108,7 @@ const PathContent = () => {
                       {path.children.map((childPath, index) => (
                         <Stack spacing={2} key={index}>
                           <Typography variant="h5" component="h3">
-                            {config.paths.topicsTitles[childPath.topic]}
+                            {config.paths.topicsTitles[childPath.name]}
                           </Typography>
 
                           {childPath.main && (
