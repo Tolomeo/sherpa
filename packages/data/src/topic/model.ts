@@ -1,17 +1,12 @@
 import { getById } from '../resource'
-import type {
-  ResourceData,
-  TopicData,
-  PopulatedTopicData,
-  TopicName,
-} from '../../types'
+import type { ResourceData, TopicData, PopulatedTopicData } from '../../types'
 import TopicsStore, { type TopicDocument } from './store'
 
 export const getAll = async () => {
   const docs = await TopicsStore.getInstance().then((store) => store.findAll())
-  const paths = docs.map((p) => new Topic(p))
+  const topics = docs.map((p) => new Topic(p))
 
-  return paths
+  return topics
 }
 
 export const getParents = async () => {
@@ -24,9 +19,8 @@ export const getParents = async () => {
 }
 
 export const getByName = async (name: string) => {
-  const topicName = name as TopicName
   const doc = await TopicsStore.getInstance().then((store) =>
-    store.findOne({ name: topicName }),
+    store.findOne({ name }),
   )
 
   if (!doc) return null
@@ -45,6 +39,14 @@ export const getAllByResourceId = async (resourceId: string) => {
   )
 
   return docs.map((t) => new Topic(t))
+}
+
+export const create = async (topic: TopicData) => {
+  const doc = await TopicsStore.getInstance().then((store) =>
+    store.insertOne(topic),
+  )
+
+  return new Topic(doc)
 }
 
 export interface ResourceGroup {

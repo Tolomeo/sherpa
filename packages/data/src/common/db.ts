@@ -230,6 +230,20 @@ class Db<S extends ZodObject<any>> {
     return doc
   }
 
+  async insertOne(insert: S['_output']) {
+    const validation = this.schema.safeParse(insert)
+
+    if (!validation.success) {
+      throw validation.error
+    }
+
+    const doc = this.db.insertAsync<S['_output']>(insert)
+
+    await this.db.compactDatafileAsync()
+
+    return doc
+  }
+
   async updateOne(
     id: string,
     update: S['_output'],

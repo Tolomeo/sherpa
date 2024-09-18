@@ -1,17 +1,17 @@
 import { log, command } from '../common'
-import managePaths from './path'
+import manageTopics from './topic'
 import manageResources from './resource'
 
 const main = async () => {
   await command.loop(async () => {
     const action = await command.choice('Choose action', [
-      'manage paths',
+      'manage topics',
       'manage resources',
     ])
 
     switch (action) {
-      case 'manage paths':
-        managePaths()
+      case 'manage topics':
+        await manageTopics()
         return command.loop.REPEAT
       case 'manage resources':
         await manageResources()
