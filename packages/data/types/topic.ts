@@ -69,7 +69,7 @@ const ResourceIdSchema = z.string().regex(/^[a-zA-Z0-9]{16}$/)
 
 export const TopicDataSchema = z
   .object({
-    name: z.nativeEnum(TopicName),
+    name: z.string().regex(/^[a-zA-Z0-9_-]+(?:\.[a-zA-Z0-9_-]+)?$/),
     status: z.enum(['draft', 'preview', 'published']),
     logo: z.string().regex(new RegExp('^<svg.+/svg>$')).nullable(),
     hero: z
