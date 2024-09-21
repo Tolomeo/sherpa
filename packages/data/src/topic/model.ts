@@ -18,6 +18,15 @@ export const getParents = async () => {
   return paths
 }
 
+export const getAllByName = async (name: string) => {
+  const docs = await TopicsStore.getInstance().then((store) =>
+    store.findAll({ name: new RegExp(name, 'g') }),
+  )
+  const paths = docs.map((p) => new Topic(p))
+
+  return paths
+}
+
 export const getByName = async (name: string) => {
   const doc = await TopicsStore.getInstance().then((store) =>
     store.findOne({ name }),
