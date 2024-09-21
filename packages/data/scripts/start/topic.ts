@@ -1,21 +1,82 @@
+import os from 'node:os'
+import filesystem from 'node:fs/promises'
+import path from 'node:path'
 import { create, getAllByName } from '../../src/topic'
 import type Topic from '../../src/topic'
-import { log, command } from '../common'
+import { util, log, command } from '../common'
 
-const importResourcesBulk = async (topic: Topic) => {
-  console.log(topic.name)
+const getBulkUrls = async () => {
+  let urls: string[] | undefined
 
   await command.loop(async () => {
-    const file = await command.input('Enter file source path (.md)')
+    let file = await command.input('Enter file source path (.md)')
 
     if (file === null) {
       return command.loop.END
     }
 
-    console.log(file)
+    file = file.replace(/^~/, os.homedir())
+    file = path.resolve(file)
+
+    try {
+      const filecontent = await filesystem.readFile(file, {
+        encoding: 'utf8',
+      })
+
+      urls = filecontent.split('\n').reduce<string[]>((_urls, line) => {
+        const match = /\[[^\]]+\]\(([^\]]+)\)/.exec(line)
+
+        if (!match) return _urls
+
+        _urls.push(match[1])
+
+        return _urls
+      }, [])
+
+      log.success(`${urls.length} urls found in ${file}`)
+    } catch (err) {
+      log.error(err)
+      return command.loop.REPEAT
+    }
 
     return command.loop.END
   })
+
+  return urls
+}
+
+const importResource = async (url: string) => {
+  await command.loop(async () => {
+    log.lead(`Importing ${url}`)
+    const action = await command.choice('Choose action', ['open', 'skip'])
+
+    switch (action) {
+      case 'open':
+        await util.open(url)
+        return command.loop.REPEAT
+
+      case 'skip':
+        if (await command.confirm(`Discard this resource?`)) {
+          return command.loop.END
+        }
+        return command.loop.REPEAT
+
+      case null:
+        return command.loop.REPEAT
+    }
+  })
+}
+
+const importResources = async (topic: Topic) => {
+  log.lead(topic.name)
+
+  const urls = await getBulkUrls()
+
+  if (!urls) return
+
+  for (const url of urls) {
+    await importResource(url)
+  }
 }
 
 const searchTopic = async () => {
@@ -65,7 +126,7 @@ const manageTopic = async (topic: Topic) => {
 
     switch (action) {
       case 'import bulk resources':
-        await importResourcesBulk(topic)
+        await importResources(topic)
         return command.loop.REPEAT
       case null:
         return command.loop.END
