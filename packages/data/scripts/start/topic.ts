@@ -1,10 +1,12 @@
 import os from 'node:os'
 import filesystem from 'node:fs/promises'
 import path from 'node:path'
-import { create, getAllByName } from '../../src/topic'
+import { create as createTopic, getAllByName } from '../../src/topic'
 import type Topic from '../../src/topic'
+import { create as createResource } from '../../src/resource'
 import { util, log, command, format } from '../common'
-import { ResourceDataSchema, ResourceData, ResourceType } from '../../types'
+import type { ResourceData, ResourceType } from '../../types'
+import { ResourceDataSchema } from '../../types'
 
 const getBulkUrls = async () => {
   let urls: string[] | undefined
@@ -130,8 +132,6 @@ const importResourceData = async (url: string) => {
 }
 
 const importResources = async (topic: Topic) => {
-  log.lead(topic.name)
-
   const urls = await getBulkUrls()
 
   if (!urls) return
@@ -145,6 +145,7 @@ const importResources = async (topic: Topic) => {
           topic.name
         }" topic`,
       )
+
       const data = await importResourceData(url)
 
       if (!data) {
@@ -152,7 +153,21 @@ const importResources = async (topic: Topic) => {
         return skip ? command.loop.END : command.loop.REPEAT
       }
 
-      log.success(format.stringify(data))
+      try {
+        const resource = await createResource(data)
+        log.success(`Resource ${resource.id} successfully created`)
+        const topicResources = topic.data.resources ?? []
+        await topic.change({
+          resources: [...topicResources, resource.id],
+        })
+        log.success(
+          `Resource ${resource.id} successfully added to ${topic.name} resources`,
+        )
+      } catch (err) {
+        log.error(`Error importing ${url}`)
+        log.error(err as string)
+        return command.loop.REPEAT
+      }
 
       return command.loop.END
     })
@@ -228,7 +243,7 @@ const createTopic = async () => {
       return command.loop.REPEAT
     }
 
-    topic = await create({
+    topic = await createTopic({
       name,
       status: 'draft',
       logo: null,

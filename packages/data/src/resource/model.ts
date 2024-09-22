@@ -39,6 +39,14 @@ export const getById = async (id: string) => {
   return new Resource(doc)
 }
 
+export const create = async (resource: ResourceData) => {
+  const doc = await ResourcesStore.getInstance().then((store) =>
+    store.insertOne(resource),
+  )
+
+  return new Resource(doc)
+}
+
 class Resource {
   public document: ResourceDocument
 
