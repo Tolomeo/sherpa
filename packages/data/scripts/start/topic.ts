@@ -49,12 +49,14 @@ const getBulkUrls = async () => {
 const populateResourceData = async (
   data: Pick<ResourceData, 'url'> & Partial<Omit<ResourceData, 'url'>>,
 ) => {
+  const populatedData = { ...data }
+
   await command.loop(async () => {
-    log.lead(`Enter resources data for url ${data.url}`)
+    log.lead(`Enter resources data for url ${populatedData.url}`)
 
-    const title = await command.input(`Title`, { answer: data.title })
+    const title = await command.input(`Title`, { answer: populatedData.title })
 
-    if (title) data.title = title
+    if (title) populatedData.title = title
 
     const type = await command.choice('Type', [
       'basics',
@@ -66,14 +68,20 @@ const populateResourceData = async (
       'feed',
     ] as ResourceType[])
 
-    if (type) data.type = type
+    if (type) populatedData.type = type
 
-    const source = await command.input('Source', { answer: data.source })
+    const source = await command.input('Source', {
+      answer: populatedData.source,
+    })
 
-    if (source) data.source = source
-    else data.source = new URL(data.url).hostname.replace(/^www./, '')
+    if (source) populatedData.source = source
+    else
+      populatedData.source = new URL(populatedData.url).hostname.replace(
+        /^www./,
+        '',
+      )
 
-    const validation = ResourceDataSchema.safeParse(data)
+    const validation = ResourceDataSchema.safeParse(populatedData)
 
     if (!validation.success) {
       log.error('Invalid resource data entered')
@@ -81,9 +89,9 @@ const populateResourceData = async (
       return command.loop.REPEAT
     }
 
-    const confirm = await command.confirm(
-      `Confirm data for ${data.url}\n${format.stringify(data)}`,
-    )
+    log.text(format.diff(data, populatedData))
+
+    const confirm = await command.confirm(`Confirm data for ${data.url}`)
 
     if (confirm) {
       return command.loop.END
@@ -92,7 +100,7 @@ const populateResourceData = async (
     return command.loop.REPEAT
   })
 
-  return data as ResourceData
+  return populatedData as ResourceData
 }
 
 const importResourceData = async (url: string) => {
