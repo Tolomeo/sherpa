@@ -25,21 +25,31 @@ const loop = async (fn: () => LoopCommand | Promise<LoopCommand>) => {
 loop.REPEAT = LoopCommand.REPEAT
 loop.END = LoopCommand.END
 
-const input = (question: string): Promise<Nullable<string>> => {
+interface InputOptions {
+  answer?: string
+}
+
+const input = (question: string, options: InputOptions = {}) => {
   const describedQuestion = format.lead(`\n${question}\n[q] cancel\n> `)
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
   })
 
-  return new Promise((resolve) => {
+  const promise = new Promise<Nullable<string>>((resolve) => {
     rl.question(describedQuestion, (answer) => {
       rl.close()
 
       if (answer.trim() === 'q') resolve(null)
       else resolve(answer)
     })
+
+    if (options.answer) {
+      rl.write(options.answer)
+    }
   })
+
+  return promise
 }
 
 const choice = async <T extends string>(

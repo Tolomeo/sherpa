@@ -50,7 +50,9 @@ const populateResourceData = async (
   data: Pick<ResourceData, 'url'> & Partial<Omit<ResourceData, 'url'>>,
 ) => {
   await command.loop(async () => {
-    const title = await command.input(`Title`)
+    log.lead(`Enter resources data for url ${data.url}`)
+
+    const title = await command.input(`Title`, { answer: data.title })
 
     if (title) data.title = title
 
@@ -66,7 +68,7 @@ const populateResourceData = async (
 
     if (type) data.type = type
 
-    const source = await command.input('Source')
+    const source = await command.input('Source', { answer: data.source })
 
     if (source) data.source = source
     else data.source = new URL(data.url).hostname.replace(/^www./, '')
@@ -74,11 +76,20 @@ const populateResourceData = async (
     const validation = ResourceDataSchema.safeParse(data)
 
     if (!validation.success) {
-      log.warning(validation.error as unknown as string)
+      log.error('Invalid resource data entered')
+      log.error(format.stringify(validation.error))
       return command.loop.REPEAT
     }
 
-    return command.loop.END
+    const confirm = await command.confirm(
+      `Confirm data for ${data.url}\n${format.stringify(data)}`,
+    )
+
+    if (confirm) {
+      return command.loop.END
+    }
+
+    return command.loop.REPEAT
   })
 
   return data as ResourceData
@@ -88,6 +99,7 @@ const importResourceData = async (url: string) => {
   let data: ResourceData | undefined
 
   await command.loop(async () => {
+    log.lead(`Importing ${url} data`)
     const action = await command.choice('Choose action', ['open', 'populate'])
 
     switch (action) {
@@ -97,12 +109,7 @@ const importResourceData = async (url: string) => {
 
       case 'populate': {
         data = await populateResourceData({ url, ...data })
-
-        if (await command.confirm(format.stringify(data))) {
-          return command.loop.END
-        }
-
-        return command.loop.REPEAT
+        return command.loop.END
       }
 
       case null:
@@ -125,13 +132,16 @@ const importResources = async (topic: Topic) => {
     const url = urls[i]
 
     await command.loop(async () => {
-      log.lead(`[${i + 1}/${urls.length}] ${url}`)
+      log.lead(
+        `Importing resource ${i + 1} of ${urls.length} to "${
+          topic.name
+        }" topic`,
+      )
       const data = await importResourceData(url)
 
       if (!data) {
-        if (await command.confirm(`Skip ${url} import?`))
-          return command.loop.END
-        return command.loop.REPEAT
+        const skip = await command.confirm(`Skip importing ${url}?`)
+        return skip ? command.loop.END : command.loop.REPEAT
       }
 
       log.success(format.stringify(data))
