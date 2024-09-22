@@ -3,7 +3,8 @@ import filesystem from 'node:fs/promises'
 import path from 'node:path'
 import { create, getAllByName } from '../../src/topic'
 import type Topic from '../../src/topic'
-import { util, log, command } from '../common'
+import { util, log, command, format } from '../common'
+import { ResourceDataSchema, ResourceData, ResourceType } from '../../types'
 
 const getBulkUrls = async () => {
   let urls: string[] | undefined
@@ -35,7 +36,7 @@ const getBulkUrls = async () => {
 
       log.success(`${urls.length} urls found in ${file}`)
     } catch (err) {
-      log.error(err)
+      log.error(err as string)
       return command.loop.REPEAT
     }
 
@@ -45,26 +46,72 @@ const getBulkUrls = async () => {
   return urls
 }
 
-const importResource = async (url: string) => {
+const populateResourceData = async (url: string) => {
+  const populatedData: Partial<ResourceData> = { url }
+
   await command.loop(async () => {
-    log.lead(`Importing ${url}`)
-    const action = await command.choice('Choose action', ['open', 'skip'])
+    const title = await command.input(`Title`)
+
+    if (title) populatedData.title = title
+
+    const type = await command.choice('Type', [
+      'basics',
+      'advanced',
+      'how-to',
+      'curiosity',
+      'tool',
+      'reference',
+      'feed',
+    ] as ResourceType[])
+
+    if (type) populatedData.type = type
+
+    const source = await command.input('Source')
+
+    if (source) populatedData.source = source
+    else populatedData.source = new URL(url).hostname.replace(/^www./, '')
+
+    const validation = ResourceDataSchema.safeParse(populatedData)
+
+    if (!validation.success) {
+      log.warning(validation.error as unknown as string)
+      return command.loop.REPEAT
+    }
+
+    return command.loop.END
+  })
+
+  return populatedData as ResourceData
+}
+
+const importResourceData = async (url: string) => {
+  let data: ResourceData | undefined
+
+  await command.loop(async () => {
+    const action = await command.choice('Choose action', ['open', 'populate'])
 
     switch (action) {
       case 'open':
         await util.open(url)
         return command.loop.REPEAT
 
-      case 'skip':
-        if (await command.confirm(`Discard this resource?`)) {
+      case 'populate': {
+        data = await populateResourceData(url)
+
+        if (await command.confirm(format.stringify(data))) {
           return command.loop.END
         }
+
         return command.loop.REPEAT
+      }
 
       case null:
-        return command.loop.REPEAT
+        data = undefined
+        return command.loop.END
     }
   })
+
+  return data
 }
 
 const importResources = async (topic: Topic) => {
@@ -74,8 +121,23 @@ const importResources = async (topic: Topic) => {
 
   if (!urls) return
 
-  for (const url of urls) {
-    await importResource(url)
+  for (let i = 0; i < urls.length; i++) {
+    const url = urls[i]
+
+    await command.loop(async () => {
+      log.lead(`[${i + 1}/${urls.length}] ${url}`)
+      const data = await importResourceData(url)
+
+      if (!data) {
+        if (await command.confirm(`Skip ${url} import?`))
+          return command.loop.END
+        return command.loop.REPEAT
+      }
+
+      log.success(format.stringify(data))
+
+      return command.loop.END
+    })
   }
 }
 
