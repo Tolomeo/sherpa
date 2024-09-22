@@ -46,13 +46,13 @@ const getBulkUrls = async () => {
   return urls
 }
 
-const populateResourceData = async (url: string) => {
-  const populatedData: Partial<ResourceData> = { url }
-
+const populateResourceData = async (
+  data: Pick<ResourceData, 'url'> & Partial<Omit<ResourceData, 'url'>>,
+) => {
   await command.loop(async () => {
     const title = await command.input(`Title`)
 
-    if (title) populatedData.title = title
+    if (title) data.title = title
 
     const type = await command.choice('Type', [
       'basics',
@@ -64,14 +64,14 @@ const populateResourceData = async (url: string) => {
       'feed',
     ] as ResourceType[])
 
-    if (type) populatedData.type = type
+    if (type) data.type = type
 
     const source = await command.input('Source')
 
-    if (source) populatedData.source = source
-    else populatedData.source = new URL(url).hostname.replace(/^www./, '')
+    if (source) data.source = source
+    else data.source = new URL(data.url).hostname.replace(/^www./, '')
 
-    const validation = ResourceDataSchema.safeParse(populatedData)
+    const validation = ResourceDataSchema.safeParse(data)
 
     if (!validation.success) {
       log.warning(validation.error as unknown as string)
@@ -81,7 +81,7 @@ const populateResourceData = async (url: string) => {
     return command.loop.END
   })
 
-  return populatedData as ResourceData
+  return data as ResourceData
 }
 
 const importResourceData = async (url: string) => {
@@ -96,7 +96,7 @@ const importResourceData = async (url: string) => {
         return command.loop.REPEAT
 
       case 'populate': {
-        data = await populateResourceData(url)
+        data = await populateResourceData({ url, ...data })
 
         if (await command.confirm(format.stringify(data))) {
           return command.loop.END
