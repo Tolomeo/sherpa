@@ -172,6 +172,11 @@ class Topic {
     return resources
   }
 
+  public async hasResource(resourceId: string) {
+    const resources = await this.getResources()
+    return resources.includes(resourceId)
+  }
+
   public async change(update: Partial<TopicData>) {
     await this.update(update)
 

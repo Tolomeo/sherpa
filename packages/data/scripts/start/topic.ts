@@ -3,7 +3,10 @@ import filesystem from 'node:fs/promises'
 import path from 'node:path'
 import { create as createTopic, getAllByName } from '../../src/topic'
 import type Topic from '../../src/topic'
-import { create as createResource } from '../../src/resource'
+import {
+  create as createResource,
+  getByUrl as getResourceByUrl,
+} from '../../src/resource'
 import { util, log, command, format } from '../common'
 import type { ResourceData, ResourceType } from '../../types'
 import { ResourceDataSchema } from '../../types'
@@ -48,7 +51,7 @@ const getBulkUrls = async () => {
   return urls
 }
 
-const populateResourceData = async (
+const enterResourceData = async (
   data: Pick<ResourceData, 'url'> & Partial<Omit<ResourceData, 'url'>>,
 ) => {
   const populatedData = { ...data }
@@ -87,7 +90,7 @@ const populateResourceData = async (
 
     if (!validation.success) {
       log.error('Invalid resource data entered')
-      log.error(format.stringify(validation.error))
+      log.error(validation.error as unknown as string)
       return command.loop.REPEAT
     }
 
@@ -105,20 +108,27 @@ const populateResourceData = async (
   return populatedData as ResourceData
 }
 
-const importResourceData = async (url: string) => {
+const importResource = async (url: string) => {
+  const existingResource = await getResourceByUrl(url)
+
+  if (existingResource) {
+    log.warning(`${url} already found among resources`)
+    return existingResource
+  }
+
   let data: ResourceData | undefined
 
   await command.loop(async () => {
-    log.lead(`Importing ${url} data`)
-    const action = await command.choice('Choose action', ['open', 'populate'])
+    log.lead(`Importing ${url} resource`)
+    const action = await command.choice('Choose action', ['open', 'enter data'])
 
     switch (action) {
       case 'open':
         await util.open(url)
         return command.loop.REPEAT
 
-      case 'populate': {
-        data = await populateResourceData({ url, ...data })
+      case 'enter data': {
+        data = await enterResourceData({ url, ...data })
         return command.loop.END
       }
 
@@ -128,7 +138,16 @@ const importResourceData = async (url: string) => {
     }
   })
 
-  return data
+  if (!data) return
+
+  try {
+    const resource = await createResource(data)
+    log.success(`Resource ${resource.id} successfully created`)
+    return resource
+  } catch (err) {
+    log.error(`Error importing ${url}`)
+    log.error(err as string)
+  }
 }
 
 const importResources = async (topic: Topic) => {
@@ -146,16 +165,21 @@ const importResources = async (topic: Topic) => {
         }" topic`,
       )
 
-      const data = await importResourceData(url)
+      const resource = await importResource(url)
 
-      if (!data) {
+      if (!resource) {
         const skip = await command.confirm(`Skip importing ${url}?`)
         return skip ? command.loop.END : command.loop.REPEAT
       }
 
+      const exists = await topic.hasResource(resource.id)
+
+      if (exists) {
+        log.warning(`Topic ${topic.name} already lists ${url} resource`)
+        return command.loop.END
+      }
+
       try {
-        const resource = await createResource(data)
-        log.success(`Resource ${resource.id} successfully created`)
         const topicResources = topic.data.resources ?? []
         await topic.change({
           resources: [...topicResources, resource.id],
@@ -163,13 +187,12 @@ const importResources = async (topic: Topic) => {
         log.success(
           `Resource ${resource.id} successfully added to ${topic.name} resources`,
         )
+        return command.loop.END
       } catch (err) {
-        log.error(`Error importing ${url}`)
+        log.error(`Error updating ${topic.name}`)
         log.error(err as string)
         return command.loop.REPEAT
       }
-
-      return command.loop.END
     })
   }
 }
@@ -229,7 +252,7 @@ const manageTopic = async (topic: Topic) => {
   })
 }
 
-const createTopic = async () => {
+const newTopic = async () => {
   let topic: Topic | undefined
 
   await command.loop(async () => {
@@ -271,7 +294,7 @@ const manageTopics = async () => {
 
     switch (action) {
       case 'create a new topic': {
-        const topic = await createTopic()
+        const topic = await newTopic()
         if (!topic) return command.loop.REPEAT
         await manageTopic(topic)
         return command.loop.REPEAT
