@@ -7,9 +7,14 @@ import {
   create as createResource,
   getByUrl as getResourceByUrl,
 } from '../../src/resource'
+import Healthcheck from '../../src/healthcheck/runner'
 import { util, log, command, format } from '../common'
-import type { ResourceData, ResourceType } from '../../types'
-import { ResourceDataSchema } from '../../types'
+import { ResourceDataSchema, HealthCheckStrategies } from '../../types'
+import type {
+  ResourceData,
+  ResourceType,
+  HealthcheckStrategy,
+} from '../../types'
 
 const getBulkUrls = async () => {
   let urls: string[] | undefined
@@ -51,10 +56,63 @@ const getBulkUrls = async () => {
   return urls
 }
 
+const chooseHealthCheckStrategy = async () => {
+  const healthcheck = await command.choice(
+    `Choose a strategy`,
+    Object.keys(HealthCheckStrategies),
+  )
+
+  if (!healthcheck) return null
+
+  const strategy =
+    HealthCheckStrategies[healthcheck as HealthcheckStrategy['runner']]
+
+  return util.clone(strategy)
+}
+
+const scrapeTitle = async (url: ResourceData['url']) => {
+  const healthcheckRunner = new Healthcheck()
+  let title: string | undefined
+
+  await command.loop(async () => {
+    const strategy = await chooseHealthCheckStrategy()
+
+    if (!strategy) return command.loop.END
+
+    const healthCheckResult = await healthcheckRunner.run(url, strategy)
+
+    if (!healthCheckResult.success) {
+      log.error(`Health check failed`)
+      log.error(healthCheckResult.error.message)
+      const retry = await command.confirm(`Retry?`)
+
+      return retry ? command.loop.REPEAT : command.loop.END
+    }
+
+    title = healthCheckResult.data.title
+
+    return command.loop.END
+  })
+
+  await healthcheckRunner.teardown()
+
+  return title
+}
+
 const enterResourceData = async (
   data: Pick<ResourceData, 'url'> & Partial<Omit<ResourceData, 'url'>>,
 ) => {
   const populatedData = { ...data }
+
+  if (!populatedData.source) {
+    const { hostname, pathname } = new URL(populatedData.url)
+    const sourceHostname = hostname.replace(/^www./, '')
+
+    populatedData.source =
+      sourceHostname === 'github.com'
+        ? `${sourceHostname}/${pathname.split('/')[1]}`
+        : sourceHostname
+  }
 
   await command.loop(async () => {
     log.lead(`Enter resources data for url ${populatedData.url}`)
@@ -80,11 +138,6 @@ const enterResourceData = async (
     })
 
     if (source) populatedData.source = source
-    else
-      populatedData.source = new URL(populatedData.url).hostname.replace(
-        /^www./,
-        '',
-      )
 
     const validation = ResourceDataSchema.safeParse(populatedData)
 
@@ -120,7 +173,11 @@ const importResource = async (url: string) => {
 
   await command.loop(async () => {
     log.lead(`Importing ${url} resource`)
-    const action = await command.choice('Choose action', ['open', 'enter data'])
+    const action = await command.choice('Choose action', [
+      'open',
+      'enter data',
+      'scrape and enter data',
+    ])
 
     switch (action) {
       case 'open':
@@ -128,7 +185,17 @@ const importResource = async (url: string) => {
         return command.loop.REPEAT
 
       case 'enter data': {
-        data = await enterResourceData({ url, ...data })
+        data = await enterResourceData({ ...data, url })
+        return command.loop.END
+      }
+
+      case 'scrape and enter data': {
+        const title = await scrapeTitle(url)
+
+        data = title
+          ? await enterResourceData({ ...data, url, title })
+          : await enterResourceData({ ...data, url })
+
         return command.loop.END
       }
 
