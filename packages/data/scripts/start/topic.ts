@@ -1,18 +1,12 @@
 import os from 'node:os'
 import filesystem from 'node:fs/promises'
 import path from 'node:path'
-import { ResourceDataSchema } from '../../types'
-import type { ResourceData, ResourceType } from '../../types'
-import { create as createTopic, getAllByName } from '../../src/topic'
+import { create, getAllByName } from '../../src/topic'
 import type Topic from '../../src/topic'
-import {
-  create as createResource,
-  getByUrl as getResourceByUrl,
-} from '../../src/resource'
-import { util, log, command, format } from '../common'
-import { scrapeResourceTitle } from './healthcheck'
+import { log, command } from '../common'
+import { importResource } from './resource'
 
-const getBulkUrls = async () => {
+const readImportFile = async () => {
   let urls: string[] | undefined
 
   await command.loop(async () => {
@@ -52,126 +46,45 @@ const getBulkUrls = async () => {
   return urls
 }
 
-const enterResourceData = async (
-  data: Pick<ResourceData, 'url'> & Partial<Omit<ResourceData, 'url'>>,
-) => {
-  const populatedData = { ...data }
-
-  if (!populatedData.source) {
-    const { hostname, pathname } = new URL(populatedData.url)
-    const sourceHostname = hostname.replace(/^www./, '')
-
-    populatedData.source =
-      sourceHostname === 'github.com'
-        ? `${sourceHostname}/${pathname.split('/')[1]}`
-        : sourceHostname
-  }
+const findTopic = async () => {
+  let topic: Topic | undefined
 
   await command.loop(async () => {
-    log.lead(`Enter resources data for url ${populatedData.url}`)
+    const name = await command.input(
+      `Search topic - Enter topic name to look for`,
+    )
 
-    const title = await command.input(`Title`, { answer: populatedData.title })
+    if (!name) return command.loop.END
 
-    if (title) populatedData.title = title
+    const topics = await getAllByName(name)
 
-    const type = await command.choice('Type', [
-      'basics',
-      'advanced',
-      'how-to',
-      'curiosity',
-      'tool',
-      'reference',
-      'feed',
-    ] as ResourceType[])
-
-    if (type) populatedData.type = type
-
-    const source = await command.input('Source', {
-      answer: populatedData.source,
-    })
-
-    if (source) populatedData.source = source
-
-    const validation = ResourceDataSchema.safeParse(populatedData)
-
-    if (!validation.success) {
-      log.error('Invalid resource data entered')
-      log.error(validation.error as unknown as string)
+    if (!topics.length) {
+      log.warning(`No results found`)
       return command.loop.REPEAT
     }
 
-    log.text(format.diff(data, populatedData))
-
-    const confirm = await command.confirm(`Confirm data for ${data.url}`)
-
-    if (confirm) {
+    if (topics.length === 1) {
+      topic = topics[0]
       return command.loop.END
     }
 
-    return command.loop.REPEAT
+    const action = await command.choice(
+      `Select topic`,
+      topics.map((t) => t.name),
+    )
+
+    if (!action) command.loop.REPEAT
+
+    topic = topics.find((t) => t.name === action)
+
+    return command.loop.END
   })
 
-  return populatedData as ResourceData
+  return topic
 }
 
-const importResource = async (url: string) => {
-  const existingResource = await getResourceByUrl(url)
-
-  if (existingResource) {
-    log.warning(`${url} already found among resources`)
-    return existingResource
-  }
-
-  let data: ResourceData | undefined
-
-  await command.loop(async () => {
-    log.lead(`Importing ${url} resource`)
-    const action = await command.choice('Choose action', [
-      'open',
-      'enter data',
-      'scrape and enter data',
-    ])
-
-    switch (action) {
-      case 'open':
-        await util.open(url)
-        return command.loop.REPEAT
-
-      case 'enter data': {
-        data = await enterResourceData({ ...data, url })
-        return command.loop.END
-      }
-
-      case 'scrape and enter data': {
-        const title = await scrapeResourceTitle(url)
-
-        data = title
-          ? await enterResourceData({ ...data, url, title })
-          : await enterResourceData({ ...data, url })
-
-        return command.loop.END
-      }
-
-      case null:
-        data = undefined
-        return command.loop.END
-    }
-  })
-
-  if (!data) return
-
-  try {
-    const resource = await createResource(data)
-    log.success(`Resource ${resource.id} successfully created`)
-    return resource
-  } catch (err) {
-    log.error(`Error importing ${url}`)
-    log.error(err as string)
-  }
-}
-
-const importResources = async (topic: Topic) => {
-  const urls = await getBulkUrls()
+const importTopicResources = async (topic: Topic) => {
+  const urls = await readImportFile()
 
   if (!urls) return
 
@@ -217,43 +130,6 @@ const importResources = async (topic: Topic) => {
   }
 }
 
-const searchTopic = async () => {
-  let topic: Topic | undefined
-
-  await command.loop(async () => {
-    const name = await command.input(
-      `Search topic - Enter topic name to look for`,
-    )
-
-    if (!name) return command.loop.END
-
-    const topics = await getAllByName(name)
-
-    if (!topics.length) {
-      log.warning(`No results found`)
-      return command.loop.REPEAT
-    }
-
-    if (topics.length === 1) {
-      topic = topics[0]
-      return command.loop.END
-    }
-
-    const action = await command.choice(
-      `Select topic`,
-      topics.map((t) => t.name),
-    )
-
-    if (!action) command.loop.REPEAT
-
-    topic = topics.find((t) => t.name === action)
-
-    return command.loop.END
-  })
-
-  return topic
-}
-
 const manageTopic = async (topic: Topic) => {
   await command.loop(async () => {
     log.inspect(topic.data)
@@ -264,7 +140,7 @@ const manageTopic = async (topic: Topic) => {
 
     switch (action) {
       case 'import bulk resources':
-        await importResources(topic)
+        await importTopicResources(topic)
         return command.loop.REPEAT
       case null:
         return command.loop.END
@@ -286,7 +162,7 @@ const newTopic = async () => {
       return command.loop.REPEAT
     }
 
-    topic = await createTopic({
+    topic = await create({
       name,
       status: 'draft',
       logo: null,
@@ -321,7 +197,7 @@ const manageTopics = async () => {
       }
 
       case 'edit a topic': {
-        const topic = await searchTopic()
+        const topic = await findTopic()
         if (!topic) return command.loop.REPEAT
         await manageTopic(topic)
         return command.loop.REPEAT

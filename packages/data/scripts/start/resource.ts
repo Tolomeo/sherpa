@@ -1,11 +1,15 @@
 import { getAllByResourceId } from '../../src/topic'
 import type Resource from '../../src/resource'
-import { getAllByUrl } from '../../src/resource'
-import { type ResourceData } from '../../types'
+import { create, getAllByUrl, getByUrl } from '../../src/resource'
+import {
+  ResourceDataSchema,
+  type ResourceData,
+  type ResourceType,
+} from '../../types'
 import { util, format, log, command } from '../common'
 import { scrapeResourceTitle, chooseHealthCheckStrategy } from './healthcheck'
 
-const getResource = async () => {
+export const findResource = async () => {
   let resource: Resource | undefined
 
   await command.loop(async () => {
@@ -45,23 +49,132 @@ const getResource = async () => {
   return resource
 }
 
-type ResourceDataUpdate = Omit<ResourceData, 'healthcheck'>
+export const importResource = async (url: string) => {
+  const existingResource = await getByUrl(url)
 
-const getResourceDataUpdate = async (resourceData: ResourceDataUpdate) => {
-  const resourceUpdate = util.clone(resourceData)
-
-  for (const [key, value] of Object.entries(resourceData)) {
-    const valueUpdate = await command.input(
-      `${key} (${format.stringify(value)})`,
-    )
-
-    if (!valueUpdate) continue
-
-    // @ts-expect-error -- we will remove the enum this typecheck is complaining about
-    resourceUpdate[key] = valueUpdate
+  if (existingResource) {
+    log.warning(`${url} already found among resources`)
+    return existingResource
   }
 
-  return resourceUpdate
+  let data: ResourceData | undefined
+
+  await command.loop(async () => {
+    log.lead(`Importing ${url} resource`)
+    const action = await command.choice('Choose action', [
+      'open',
+      'enter data',
+      'scrape and enter data',
+    ])
+
+    switch (action) {
+      case 'open':
+        await util.open(url)
+        return command.loop.REPEAT
+
+      case 'enter data': {
+        const enteredData = await enterResourceData({ ...data, url })
+
+        log.text(format.diff({ url, ...data }, enteredData))
+
+        const confirm = await command.confirm(`Confirm data for ${url}`)
+
+        if (confirm) {
+          data = enteredData
+          return command.loop.END
+        }
+
+        return command.loop.REPEAT
+      }
+
+      case 'scrape and enter data': {
+        const title = await scrapeResourceTitle(url)
+        const enteredData = title
+          ? await enterResourceData({ ...data, url, title })
+          : await enterResourceData({ ...data, url })
+
+        log.text(format.diff({ url, ...data }, enteredData))
+
+        const confirm = await command.confirm(`Confirm data for ${url}`)
+
+        if (confirm) {
+          data = enteredData
+          return command.loop.END
+        }
+
+        return command.loop.REPEAT
+      }
+
+      case null:
+        data = undefined
+        return command.loop.END
+    }
+  })
+
+  if (!data) return
+
+  try {
+    const resource = await create(data)
+    log.success(`Resource ${resource.id} successfully created`)
+    return resource
+  } catch (err) {
+    log.error(`Error importing ${url}`)
+    log.error(err as string)
+  }
+}
+
+export const enterResourceData = async (
+  data: Pick<ResourceData, 'url'> & Partial<Omit<ResourceData, 'url'>>,
+) => {
+  const populatedData = { ...data }
+
+  if (!populatedData.source) {
+    const { hostname, pathname } = new URL(populatedData.url)
+    const sourceHostname = hostname.replace(/^www./, '')
+
+    populatedData.source =
+      sourceHostname === 'github.com'
+        ? `${sourceHostname}/${pathname.split('/')[1]}`
+        : sourceHostname
+  }
+
+  await command.loop(async () => {
+    log.lead(`Enter data for url ${populatedData.url}`)
+
+    const title = await command.input(`Title`, { answer: populatedData.title })
+
+    if (title) populatedData.title = title
+
+    const type = await command.choice('Type', [
+      'basics',
+      'advanced',
+      'how-to',
+      'curiosity',
+      'tool',
+      'reference',
+      'feed',
+    ] as ResourceType[])
+
+    if (type) populatedData.type = type
+
+    const source = await command.input('Source', {
+      answer: populatedData.source,
+    })
+
+    if (source) populatedData.source = source
+
+    const validation = ResourceDataSchema.safeParse(populatedData)
+
+    if (!validation.success) {
+      log.error('Invalid resource data entered')
+      log.error(validation.error as unknown as string)
+      return command.loop.REPEAT
+    }
+
+    return command.loop.END
+  })
+
+  return populatedData as ResourceData
 }
 
 const manageResourceData = async (resource: Resource) => {
@@ -81,7 +194,7 @@ const manageResourceData = async (resource: Resource) => {
 
     switch (action) {
       case 'update resource data':
-        resourceData = await getResourceDataUpdate(resourceData)
+        resourceData = await enterResourceData(resourceData)
         return command.loop.REPEAT
 
       case 'healthcheck resource data update': {
@@ -206,7 +319,7 @@ const compareResource = async (resource: Resource) => {
     log.inspect(resource.document)
 
     log.lead(`Choose a resource to compare with`)
-    const comparedResource = await getResource()
+    const comparedResource = await findResource()
 
     if (!comparedResource) return command.loop.END
 
@@ -328,7 +441,7 @@ const manageResource = async (resource: Resource) => {
 
 const manageResources = async () => {
   await command.loop(async () => {
-    const resource = await getResource()
+    const resource = await findResource()
 
     if (!resource) return command.loop.END
 
