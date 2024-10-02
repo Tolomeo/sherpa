@@ -1,20 +1,16 @@
 import os from 'node:os'
 import filesystem from 'node:fs/promises'
 import path from 'node:path'
+import { ResourceDataSchema } from '../../types'
+import type { ResourceData, ResourceType } from '../../types'
 import { create as createTopic, getAllByName } from '../../src/topic'
 import type Topic from '../../src/topic'
 import {
   create as createResource,
   getByUrl as getResourceByUrl,
 } from '../../src/resource'
-import Healthcheck from '../../src/healthcheck/runner'
 import { util, log, command, format } from '../common'
-import { ResourceDataSchema, HealthCheckStrategies } from '../../types'
-import type {
-  ResourceData,
-  ResourceType,
-  HealthcheckStrategy,
-} from '../../types'
+import { scrapeResourceTitle } from './healthcheck'
 
 const getBulkUrls = async () => {
   let urls: string[] | undefined
@@ -54,49 +50,6 @@ const getBulkUrls = async () => {
   })
 
   return urls
-}
-
-const chooseHealthCheckStrategy = async () => {
-  const healthcheck = await command.choice(
-    `Choose a strategy`,
-    Object.keys(HealthCheckStrategies),
-  )
-
-  if (!healthcheck) return null
-
-  const strategy =
-    HealthCheckStrategies[healthcheck as HealthcheckStrategy['runner']]
-
-  return util.clone(strategy)
-}
-
-const scrapeTitle = async (url: ResourceData['url']) => {
-  const healthcheckRunner = new Healthcheck()
-  let title: string | undefined
-
-  await command.loop(async () => {
-    const strategy = await chooseHealthCheckStrategy()
-
-    if (!strategy) return command.loop.END
-
-    const healthCheckResult = await healthcheckRunner.run(url, strategy)
-
-    if (!healthCheckResult.success) {
-      log.error(`Health check failed`)
-      log.error(healthCheckResult.error.message)
-      const retry = await command.confirm(`Retry?`)
-
-      return retry ? command.loop.REPEAT : command.loop.END
-    }
-
-    title = healthCheckResult.data.title
-
-    return command.loop.END
-  })
-
-  await healthcheckRunner.teardown()
-
-  return title
 }
 
 const enterResourceData = async (
@@ -190,7 +143,7 @@ const importResource = async (url: string) => {
       }
 
       case 'scrape and enter data': {
-        const title = await scrapeTitle(url)
+        const title = await scrapeResourceTitle(url)
 
         data = title
           ? await enterResourceData({ ...data, url, title })

@@ -1,13 +1,9 @@
 import { getAllByResourceId } from '../../src/topic'
 import type Resource from '../../src/resource'
 import { getAllByUrl } from '../../src/resource'
-import Healthcheck from '../../src/healthcheck/runner'
-import {
-  HealthCheckStrategies,
-  type ResourceData,
-  type HealthcheckStrategy,
-} from '../../types'
+import { type ResourceData } from '../../types'
 import { util, format, log, command } from '../common'
+import { scrapeResourceTitle, chooseHealthCheckStrategy } from './healthcheck'
 
 const getResource = async () => {
   let resource: Resource | undefined
@@ -49,36 +45,6 @@ const getResource = async () => {
   return resource
 }
 
-const runHealthcheck = async (
-  { url, title }: ResourceData,
-  strategy: HealthcheckStrategy,
-) => {
-  const healthcheckRunner = new Healthcheck()
-  const healthCheckResult = await healthcheckRunner.run(
-    url,
-    util.clone(strategy),
-  )
-
-  if (!healthCheckResult.success) {
-    log.error(`Health check failed`)
-    log.error(healthCheckResult.error.message)
-    return
-  }
-
-  log.success(`Health check succeeded`)
-  log.text(
-    format.diff(
-      { url, title },
-      {
-        url: healthCheckResult.url,
-        title: healthCheckResult.data.title,
-      },
-    ),
-  )
-
-  await healthcheckRunner.teardown()
-}
-
 type ResourceDataUpdate = Omit<ResourceData, 'healthcheck'>
 
 const getResourceDataUpdate = async (resourceData: ResourceDataUpdate) => {
@@ -118,9 +84,27 @@ const manageResourceData = async (resource: Resource) => {
         resourceData = await getResourceDataUpdate(resourceData)
         return command.loop.REPEAT
 
-      case 'healthcheck resource data update':
-        await runHealthcheck(resourceData, resource.healthcheck)
+      case 'healthcheck resource data update': {
+        const title = await scrapeResourceTitle(
+          resourceData.url,
+          resource.healthcheck,
+        )
+
+        if (!title) return command.loop.REPEAT
+
+        log.success(`Health check succeeded`)
+        log.text(
+          format.diff(
+            { url: resource.url, title: resource.data.title },
+            {
+              url: resource.url,
+              title,
+            },
+          ),
+        )
+
         return command.loop.REPEAT
+      }
 
       case 'persist resource data update':
         try {
@@ -248,20 +232,6 @@ const compareResource = async (resource: Resource) => {
   })
 }
 
-const getHealthcheckUpdate = async () => {
-  const healthcheck = await command.choice(
-    `Choose a strategy`,
-    Object.keys(HealthCheckStrategies),
-  )
-
-  if (!healthcheck) return
-
-  const strategy =
-    HealthCheckStrategies[healthcheck as HealthcheckStrategy['runner']]
-
-  return util.clone(strategy)
-}
-
 const manageResourceHealthcheck = async (resource: Resource) => {
   let healthcheck = util.clone(resource.healthcheck)
 
@@ -278,12 +248,27 @@ const manageResourceHealthcheck = async (resource: Resource) => {
     ])
 
     switch (action) {
-      case 'run healthcheck':
-        await runHealthcheck(resource.data, healthcheck)
+      case 'run healthcheck': {
+        const title = await scrapeResourceTitle(resource.url, healthcheck)
+
+        if (!title) return command.loop.REPEAT
+
+        log.success(`Health check succeeded`)
+        log.text(
+          format.diff(
+            { url: resource.url, title: resource.data.title },
+            {
+              url: resource.url,
+              title,
+            },
+          ),
+        )
+
         return command.loop.REPEAT
+      }
 
       case 'update healthcheck strategy': {
-        const healthcheckUpdate = await getHealthcheckUpdate()
+        const healthcheckUpdate = await chooseHealthCheckStrategy()
         if (!healthcheckUpdate) return command.loop.REPEAT
         healthcheck = healthcheckUpdate
         return command.loop.REPEAT
@@ -343,28 +328,13 @@ const manageResource = async (resource: Resource) => {
 
 const manageResources = async () => {
   await command.loop(async () => {
-    const action = await command.choice('Choose action', [
-      'manage existing resources',
-      'import resources',
-    ])
+    const resource = await getResource()
 
-    switch (action) {
-      case 'manage existing resources': {
-        const resource = await getResource()
+    if (!resource) return command.loop.END
 
-        if (!resource) return command.loop.END
+    await manageResource(resource)
 
-        await manageResource(resource)
-
-        return command.loop.REPEAT
-      }
-      case 'import resources': {
-        console.log('import')
-        return command.loop.REPEAT
-      }
-      case null:
-        return command.loop.END
-    }
+    return command.loop.REPEAT
   })
 }
 
