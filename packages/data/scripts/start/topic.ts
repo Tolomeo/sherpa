@@ -142,13 +142,14 @@ const manageTopic = async (topic: Topic) => {
       case 'import bulk resources':
         await importTopicResources(topic)
         return command.loop.REPEAT
+
       case null:
         return command.loop.END
     }
   })
 }
 
-const newTopic = async () => {
+const createNewTopic = async () => {
   let topic: Topic | undefined
 
   await command.loop(async () => {
@@ -190,16 +191,22 @@ const manageTopics = async () => {
 
     switch (action) {
       case 'create a new topic': {
-        const topic = await newTopic()
+        const topic = await createNewTopic()
+
         if (!topic) return command.loop.REPEAT
+
         await manageTopic(topic)
+
         return command.loop.REPEAT
       }
 
       case 'edit a topic': {
         const topic = await findTopic()
+
         if (!topic) return command.loop.REPEAT
+
         await manageTopic(topic)
+
         return command.loop.REPEAT
       }
 

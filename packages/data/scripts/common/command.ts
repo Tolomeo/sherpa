@@ -54,30 +54,35 @@ const input = (question: string, options: InputOptions = {}) => {
 
 const choice = async <T extends string>(
   question: string,
-  options: T[],
+  choices: T[],
+  options: { answer?: T } = {},
 ): Promise<Nullable<T>> => {
-  const describedQuestion = `${question}\n${options
+  const describedQuestion = `${question}\n${choices
     .map((option, idx) => `[${idx + 1}] ${option}`)
     .join('\n')}`
 
-  let optionAnswer: T | undefined
+  let choiceAnswer: T | undefined
 
-  while (!optionAnswer) {
-    const answer = await input(describedQuestion)
+  const defaultChoiceIndex = choices.indexOf(options.answer)
+  const defaultChoice =
+    defaultChoiceIndex > -1 ? `${defaultChoiceIndex + 1}` : undefined
+
+  while (!choiceAnswer) {
+    const answer = await input(describedQuestion, { answer: defaultChoice })
 
     if (answer === null) return null
 
     const answerIndex = parseInt(answer, 10)
 
-    if (isNaN(answerIndex) || !options[answerIndex - 1]) {
+    if (isNaN(answerIndex) || !choices[answerIndex - 1]) {
       log.error('\nInvalid choice')
       continue
     }
 
-    optionAnswer = options[answerIndex - 1]
+    choiceAnswer = choices[answerIndex - 1]
   }
 
-  return optionAnswer
+  return choiceAnswer
 }
 
 const confirm = async (question: string): Promise<Nullable<boolean>> => {

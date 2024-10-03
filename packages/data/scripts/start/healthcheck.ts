@@ -19,25 +19,13 @@ export const chooseHealthCheckStrategy = async () => {
 
 export const scrapeResourceTitle = async (
   url: ResourceData['url'],
-  strategy?: HealthcheckStrategy,
+  strategy: HealthcheckStrategy = util.clone(HealthCheckStrategies.Http),
 ) => {
   const healthcheckRunner = new Healthcheck()
   let title: string | undefined
 
   await command.loop(async () => {
-    const healthCheckStrategy = strategy
-      ? util.clone(strategy)
-      : await chooseHealthCheckStrategy()
-
-    if (!healthCheckStrategy) {
-      log.error(`Cannot run healthcheck without a defined healthcheck strategy`)
-      return command.loop.END
-    }
-
-    const healthCheckResult = await healthcheckRunner.run(
-      url,
-      healthCheckStrategy,
-    )
+    const healthCheckResult = await healthcheckRunner.run(url, strategy)
 
     if (!healthCheckResult.success) {
       log.error(`Health check failed`)

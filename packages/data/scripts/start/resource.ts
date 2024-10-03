@@ -61,6 +61,7 @@ export const importResource = async (url: string) => {
 
   await command.loop(async () => {
     log.lead(`Importing ${url} resource`)
+
     const action = await command.choice('Choose action', [
       'open',
       'enter data',
@@ -88,21 +89,33 @@ export const importResource = async (url: string) => {
       }
 
       case 'scrape and enter data': {
-        const title = await scrapeResourceTitle(url)
-        const enteredData = title
-          ? await enterResourceData({ ...data, url, title })
-          : await enterResourceData({ ...data, url })
+        const healthcheck = (await chooseHealthCheckStrategy()) ?? undefined
+        const title = await scrapeResourceTitle(url, healthcheck)
+
+        if (!title) {
+          log.warning(
+            `Scraping failed, try with a different strategy or enter data manually`,
+          )
+          return command.loop.REPEAT
+        }
+
+        const enteredData = await enterResourceData({
+          ...data,
+          url,
+          title,
+          healthcheck,
+        })
 
         log.text(format.diff({ url, ...data }, enteredData))
 
         const confirm = await command.confirm(`Confirm data for ${url}`)
 
-        if (confirm) {
-          data = enteredData
-          return command.loop.END
+        if (!confirm) {
+          return command.loop.REPEAT
         }
 
-        return command.loop.REPEAT
+        data = enteredData
+        return command.loop.END
       }
 
       case null:
@@ -145,15 +158,21 @@ export const enterResourceData = async (
 
     if (title) populatedData.title = title
 
-    const type = await command.choice('Type', [
-      'basics',
-      'advanced',
-      'how-to',
-      'curiosity',
-      'tool',
-      'reference',
-      'feed',
-    ] as ResourceType[])
+    const type = await command.choice(
+      'Type',
+      [
+        'basics',
+        'advanced',
+        'how-to',
+        'curiosity',
+        'tool',
+        'reference',
+        'feed',
+      ] as ResourceType[],
+      {
+        answer: populatedData.type,
+      },
+    )
 
     if (type) populatedData.type = type
 
