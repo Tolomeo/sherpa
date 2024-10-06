@@ -63,9 +63,12 @@ const choice = async <T extends string>(
 
   let choiceAnswer: T | undefined
 
-  const defaultChoiceIndex = choices.indexOf(options.answer)
-  const defaultChoice =
-    defaultChoiceIndex > -1 ? `${defaultChoiceIndex + 1}` : undefined
+  const defaultChoice = options.answer
+    ? (() => {
+        const defaultChoiceIndex = choices.indexOf(options.answer)
+        return defaultChoiceIndex > -1 ? `${defaultChoiceIndex + 1}` : undefined
+      })()
+    : undefined
 
   while (!choiceAnswer) {
     const answer = await input(describedQuestion, { answer: defaultChoice })

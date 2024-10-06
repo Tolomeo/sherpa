@@ -3,7 +3,7 @@ import filesystem from 'node:fs/promises'
 import path from 'node:path'
 import { create, getAllByName } from '../../src/topic'
 import type Topic from '../../src/topic'
-import { log, command } from '../common'
+import { log, command, util } from '../common'
 import { importResource } from './resource'
 
 const readImportFile = async () => {
@@ -88,6 +88,8 @@ const importTopicResources = async (topic: Topic) => {
 
   if (!urls) return
 
+  const browser = await util.openBrowser()
+
   for (let i = 0; i < urls.length; i++) {
     const url = urls[i]
 
@@ -97,6 +99,8 @@ const importTopicResources = async (topic: Topic) => {
           topic.name
         }" topic`,
       )
+
+      await browser.goTo(url)
 
       const resource = await importResource(url)
 
@@ -128,6 +132,8 @@ const importTopicResources = async (topic: Topic) => {
       }
     })
   }
+
+  await browser.close()
 }
 
 const manageTopic = async (topic: Topic) => {

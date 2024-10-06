@@ -1,4 +1,5 @@
 import open from 'open'
+import { chromium } from 'playwright'
 
 export type JSONSerializable =
   | string
@@ -8,10 +9,26 @@ export type JSONSerializable =
   | Array<JSONSerializable>
   | { [key: string]: JSONSerializable }
 
-const util = {
-  open,
-  clone: <T extends JSONSerializable>(value: T) =>
-    JSON.parse(JSON.stringify(value)) as T,
+export interface Browser {
+  goTo: (url: string) => Promise<unknown>
+  close: () => Promise<void>
 }
 
-export default util
+const clone = <T extends JSONSerializable>(value: T) =>
+  JSON.parse(JSON.stringify(value)) as T
+
+const openBrowser = async (): Promise<Browser> => {
+  const browser = await chromium.launch({ headless: false })
+  const page = await browser.newPage()
+
+  return {
+    goTo: (url: string) => page.goto(url),
+    close: () => browser.close(),
+  }
+}
+
+export default {
+  open,
+  openBrowser,
+  clone,
+}
