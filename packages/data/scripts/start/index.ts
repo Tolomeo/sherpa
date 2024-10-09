@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import { log, command } from '../common'
 import manageTopics from './topic'
 import manageResources from './resource'
