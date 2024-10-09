@@ -5,6 +5,7 @@ import {
   ResourceDataSchema,
   type ResourceData,
   type ResourceType,
+  type HealthcheckStrategy,
 } from '../../types'
 import { util, format, log, command } from '../common'
 import { scrapeResourceTitle, chooseHealthCheckStrategy } from './healthcheck'
@@ -58,68 +59,49 @@ export const importResource = async (url: string) => {
   }
 
   let data: ResourceData | undefined
+  let healthcheck: HealthcheckStrategy | undefined
 
   await command.loop(async () => {
     log.lead(`Importing ${url} resource`)
 
-    const action = await command.choice('Choose action', [
-      'open',
-      'enter data',
-      'scrape and enter data',
+    const title = await scrapeResourceTitle(url, healthcheck)
+
+    if (!title) {
+      log.warning(`Scraping failed with the default strategy`)
+
+      const changeHealthcheck = await command.confirm(
+        `Try with a different strategy?`,
+      )
+
+      if (changeHealthcheck) {
+        healthcheck = (await chooseHealthCheckStrategy()) ?? undefined
+        return command.loop.REPEAT
+      }
+    }
+
+    const enteredData = await enterResourceData({
+      ...data,
+      url,
+      title,
+      healthcheck,
+    })
+
+    log.text(format.diff({ url, ...data }, enteredData))
+
+    const action = await command.choice(`Data for ${url}`, [
+      'Confirm data',
+      'Change data',
     ])
 
     switch (action) {
-      case 'open':
-        await util.open(url)
-        return command.loop.REPEAT
-
-      case 'enter data': {
-        const enteredData = await enterResourceData({ ...data, url })
-
-        log.text(format.diff({ url, ...data }, enteredData))
-
-        const confirm = await command.confirm(`Confirm data for ${url}`)
-
-        if (confirm) {
-          data = enteredData
-          return command.loop.END
-        }
-
-        return command.loop.REPEAT
-      }
-
-      case 'scrape and enter data': {
-        const healthcheck = (await chooseHealthCheckStrategy()) ?? undefined
-        const title = await scrapeResourceTitle(url, healthcheck)
-
-        if (!title) {
-          log.warning(
-            `Scraping failed, try with a different strategy or enter data manually`,
-          )
-          return command.loop.REPEAT
-        }
-
-        const enteredData = await enterResourceData({
-          ...data,
-          url,
-          title,
-          healthcheck,
-        })
-
-        log.text(format.diff({ url, ...data }, enteredData))
-
-        const confirm = await command.confirm(`Confirm data for ${url}`)
-
-        if (!confirm) {
-          return command.loop.REPEAT
-        }
-
+      case 'Confirm data':
         data = enteredData
         return command.loop.END
-      }
-
+      case 'Change data':
+        data = enteredData
+        return command.loop.REPEAT
       case null:
-        data = undefined
+      default:
         return command.loop.END
     }
   })
@@ -153,6 +135,10 @@ export const enterResourceData = async (
 
   await command.loop(async () => {
     log.lead(`Enter data for url ${populatedData.url}`)
+
+    const url = await command.input(`Url`, { answer: populatedData.url })
+
+    if (url) populatedData.url = url
 
     const title = await command.input(`Title`, { answer: populatedData.title })
 
