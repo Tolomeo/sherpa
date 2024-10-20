@@ -1,6 +1,6 @@
 import { getAllByResourceId } from '../../src/topic'
 import type Resource from '../../src/resource'
-import { create, getAllByUrl, getByUrl } from '../../src/resource'
+import { create, getAllByUrl } from '../../src/resource'
 import {
   ResourceDataSchema,
   type ResourceData,
@@ -51,13 +51,6 @@ export const findResource = async () => {
 }
 
 export const importResource = async (url: string) => {
-  const existingResource = await getByUrl(url)
-
-  if (existingResource) {
-    log.warning(`${url} already found among resources`)
-    return existingResource
-  }
-
   let data: ResourceData | undefined
   let healthcheck: HealthcheckStrategy | undefined
 

@@ -3,6 +3,7 @@ import filesystem from 'node:fs/promises'
 import path from 'node:path'
 import { create, getAllByName } from '../../src/topic'
 import type Topic from '../../src/topic'
+import { getByUrl } from '../../src/resource'
 import { log, command, util } from '../common'
 import { importResource } from './resource'
 
@@ -100,20 +101,35 @@ const importTopicResources = async (topic: Topic) => {
         }" topic`,
       )
 
-      await browser.goTo(url)
+      const alreadyImportedResource = await getByUrl(url)
+      const alreadyImported =
+        alreadyImportedResource &&
+        (await topic.hasResource(alreadyImportedResource.id))
 
-      const resource = await importResource(url)
-
-      if (!resource) {
-        const skip = await command.confirm(`Skip importing ${url}?`)
-        return skip ? command.loop.END : command.loop.REPEAT
+      if (alreadyImportedResource) {
+        log.warning(`${url} already found among resources`)
       }
 
-      const exists = await topic.hasResource(resource.id)
-
-      if (exists) {
-        log.warning(`Topic ${topic.name} already lists ${url} resource`)
+      if (alreadyImported) {
+        log.warning(`Resource ${url} was already imported to ${topic.name}`)
         return command.loop.END
+      }
+
+      await browser.goTo(url)
+
+      const importUrl = await command.confirm(`Import ${url} resource?`)
+
+      if (!importUrl) {
+        log.warning(`Skipping ${url} import`)
+        return command.loop.END
+      }
+
+      const resource = alreadyImportedResource
+        ? alreadyImportedResource
+        : await importResource(url)
+
+      if (!resource) {
+        return command.loop.REPEAT
       }
 
       try {
