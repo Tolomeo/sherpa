@@ -1,11 +1,10 @@
 import { getAllByResourceId } from '../../src/topic'
 import type Resource from '../../src/resource'
-import { create, getAllByUrl } from '../../src/resource'
+import { getAllByUrl } from '../../src/resource'
 import {
   ResourceDataSchema,
   type ResourceData,
   type ResourceType,
-  type HealthcheckStrategy,
 } from '../../types'
 import { util, format, log, command } from '../common'
 import { scrapeResourceTitle, chooseHealthCheckStrategy } from './healthcheck'
@@ -48,67 +47,6 @@ export const findResource = async () => {
   })
 
   return resource
-}
-
-export const importResource = async (url: string) => {
-  let data: ResourceData | undefined
-  let healthcheck: HealthcheckStrategy | undefined
-
-  await command.loop(async () => {
-    log.lead(`Importing ${url} resource`)
-
-    const title = await scrapeResourceTitle(url, healthcheck)
-
-    if (!title) {
-      log.warning(`Scraping failed with the default strategy`)
-
-      const changeHealthcheck = await command.confirm(
-        `Try with a different strategy?`,
-      )
-
-      if (changeHealthcheck) {
-        healthcheck = (await chooseHealthCheckStrategy()) ?? undefined
-        return command.loop.REPEAT
-      }
-    }
-
-    const enteredData = await enterResourceData({
-      ...data,
-      url,
-      title,
-      healthcheck,
-    })
-
-    log.text(format.diff({ url, ...data }, enteredData))
-
-    const action = await command.choice(`Data for ${url}`, [
-      'Confirm data',
-      'Change data',
-    ])
-
-    switch (action) {
-      case 'Confirm data':
-        data = enteredData
-        return command.loop.END
-      case 'Change data':
-        data = enteredData
-        return command.loop.REPEAT
-      case null:
-      default:
-        return command.loop.END
-    }
-  })
-
-  if (!data) return
-
-  try {
-    const resource = await create(data)
-    log.success(`Resource ${resource.id} successfully created`)
-    return resource
-  } catch (err) {
-    log.error(`Error importing ${url}`)
-    log.error(err as string)
-  }
 }
 
 export const enterResourceData = async (
