@@ -12,6 +12,8 @@ import {
   CardMedia,
   SvgImage,
   Backdrop,
+  Chip,
+  Stack,
 } from '../theme'
 import config from '../config'
 import { usePathsContext } from './Provider'
@@ -35,10 +37,13 @@ const PathsListItem = ({ path }: PathsListItemProps) => (
           </CardMedia>
         )}
         <CardContent sx={{ display: 'flex', alignItems: 'center' }}>
-          <Typography variant="h6" component="span">
-            The <Underline>{config.paths.topicsTitles[path.name]}</Underline>{' '}
-            path
-          </Typography>
+          <Stack direction="row" spacing={1} alignItems="center">
+            <Typography variant="h6" component="span">
+              The <Underline>{config.paths.topicsTitles[path.name]}</Underline>{' '}
+              path
+            </Typography>
+            {path.status !== 'published' && <Chip label={path.status} />}
+          </Stack>
         </CardContent>
       </Card>
     </Link>
