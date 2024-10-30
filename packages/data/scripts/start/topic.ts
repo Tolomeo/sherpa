@@ -73,10 +73,61 @@ const createNewTopic = async () => {
 }
 
 const manageTopic = async (topic: Topic) => {
-  await command.loop(() => {
-    log.inspect(topic.data)
+  await command.loop(async () => {
+    const action = await command.choice('Choose action', [
+      'update brand logo',
+      'update brand colours',
+    ])
 
-    return command.loop.END
+    switch (action) {
+      case 'update brand logo': {
+        const logo = await command.input(`Enter logo svg`)
+
+        if (!logo) return command.loop.REPEAT
+
+        try {
+          await topic.change({ logo })
+          log.success(`Logo successfull updated`)
+        } catch (err) {
+          log.error(`Logo update failed`)
+          log.error(err as string)
+        }
+
+        return command.loop.REPEAT
+      }
+      case 'update brand colours': {
+        const foreground = await command.input(`Enter foreground colour`, {
+          answer: topic.data.hero?.foreground,
+        })
+
+        if (!foreground) return command.loop.REPEAT
+
+        const background = await command.input(
+          `Enter background colours (space separated)`,
+          { answer: topic.data.hero?.background.join(' ') },
+        )
+
+        if (!background) return command.loop.REPEAT
+
+        try {
+          await topic.change({
+            hero: {
+              ...topic.data.hero,
+              foreground,
+              background: background.split(/ +/),
+            },
+          })
+          log.success(`Brand background successfull updated`)
+        } catch (err) {
+          log.error(`Brand background update failed`)
+          log.error(err as string)
+        }
+
+        return command.loop.REPEAT
+      }
+      case null:
+        return command.loop.END
+    }
   })
 }
 
