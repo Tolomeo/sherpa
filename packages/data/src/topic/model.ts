@@ -1,5 +1,10 @@
 import { getById } from '../resource'
-import type { ResourceData, TopicData, PopulatedTopicData } from '../../types'
+import type {
+  ResourceData,
+  TopicData,
+  TopicMetadata,
+  PopulatedTopicData,
+} from '../../types'
 import TopicsStore, { type TopicDocument } from './store'
 
 export const getAll = async () => {
@@ -103,6 +108,24 @@ class Topic {
     const { _id, ...topicData } = this.document
 
     return topicData
+  }
+
+  public get metadata() {
+    const { name, status, logo, hero, notes, next, prev, children } =
+      this.document
+
+    const metadata: TopicMetadata = {
+      name,
+      status,
+      logo,
+      hero,
+      notes,
+      next,
+      prev,
+      children,
+    }
+
+    return metadata
   }
 
   public async populate() {
