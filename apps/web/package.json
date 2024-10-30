@@ -3,7 +3,10 @@
   "version": "0.4.0",
   "private": true,
   "scripts": {
+		"clean": "shx rm -rf \".next\"",
+    "predev": "npm run clean",
     "dev": "next dev",
+    "prebuild": "npm run clean",
     "build": "next build",
     "check:lint": "next lint",
     "check:types": "tsc --pretty --noEmit",
@@ -22,7 +25,8 @@
     "next": "^13.4.19",
     "querystring": "^0.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "shx": "^0.3.4"
   },
   "devDependencies": {
     "@sherpa/configs": "*",

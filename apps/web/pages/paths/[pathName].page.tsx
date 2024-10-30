@@ -5,7 +5,12 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { type TopicName, type PopulatedTopicData } from '@sherpa/data/topic'
+import {
+  type TopicName,
+  type PopulatedTopicData,
+  type TopicMetadata,
+} from '@sherpa/data/topic'
+import PathsProvider from '../../src/paths'
 import PathBody from '../../src/path'
 import config from '../../src/config'
 
@@ -14,6 +19,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 interface StaticProps {
+  paths: TopicMetadata[]
   path: PopulatedTopicData
 }
 
@@ -28,11 +34,21 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps<StaticProps, Params> = ({
   params,
 }) => {
+  const paths = config.paths.topics.map((topicName) => {
+    const topicMetadata = require(
+      `@sherpa/data/json/meta/${topicName}.json`,
+    ) as TopicMetadata
+
+    return topicMetadata
+  })
   const topic = params!.pathName as TopicName
-  const path = require(`@sherpa/data/json/${topic}.json`) as PopulatedTopicData
+  const path = require(
+    `@sherpa/data/json/topic/${topic}.json`,
+  ) as PopulatedTopicData
 
   return {
     props: {
+      paths,
       topic,
       path,
     },
@@ -41,9 +57,9 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = ({
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export default function PathPage({ path }: Props) {
+export default function PathPage({ paths, path }: Props) {
   return (
-    <>
+    <PathsProvider paths={paths}>
       <Head>
         <link
           rel="apple-touch-icon"
@@ -78,6 +94,6 @@ export default function PathPage({ path }: Props) {
       </Head>
 
       <PathBody path={path} />
-    </>
+    </PathsProvider>
   )
 }

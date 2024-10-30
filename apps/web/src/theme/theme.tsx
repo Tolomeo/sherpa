@@ -191,6 +191,15 @@ export const createTheme = (mode: ThemeMode) => {
           },
         },
       },
+      MuiCardContent: {
+        styleOverrides: {
+          root: {
+            '&:last-child': {
+              paddingBottom: themeTokens.spacing(2),
+            },
+          },
+        },
+      },
     },
   })
 }

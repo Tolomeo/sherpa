@@ -4,7 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import Head from 'next/head'
-import { type PopulatedTopicData } from '@sherpa/data/topic'
+import { type PopulatedTopicData, type TopicMetadata } from '@sherpa/data/topic'
 import {
   LayoutProvider,
   LayoutHeader,
@@ -15,21 +15,32 @@ import {
   Grid,
 } from '../src/theme'
 import { AlternateSourcesList } from '../src/resources'
-import { List as PathsList } from '../src/paths'
+import PathsProvider, { List as PathsList } from '../src/paths'
+import config from '../src/config'
 
 interface StaticProps {
   competitors: PopulatedTopicData
+  paths: TopicMetadata[]
 }
 
 export const getStaticProps: GetStaticProps<StaticProps> = (
   _: GetStaticPropsContext,
 ) => {
+  const paths = config.paths.topics.map((topicName) => {
+    const topicMetadata = require(
+      `@sherpa/data/json/meta/${topicName}.json`,
+    ) as TopicMetadata
+
+    return topicMetadata
+  })
   const competitors =
-    require('@sherpa/data/json/competitors.json') as PopulatedTopicData
+    require('@sherpa/data/json/topic/competitors.json') as PopulatedTopicData
+
 
   return {
     props: {
-      competitors: competitors,
+      paths,
+      competitors,
     },
   }
 }
@@ -64,9 +75,9 @@ const PageHead = () => (
   </Head>
 )
 
-export default function Home({ competitors }: Props) {
+export default function Home({ paths, competitors }: Props) {
   return (
-    <>
+    <PathsProvider paths={paths}>
       <PageHead />
       <LayoutProvider>
         <LayoutHeader />
@@ -137,6 +148,6 @@ export default function Home({ competitors }: Props) {
           </Box>
         </main>
       </LayoutProvider>
-    </>
+    </PathsProvider>
   )
 }
