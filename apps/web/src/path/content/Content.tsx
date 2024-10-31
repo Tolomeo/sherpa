@@ -10,6 +10,7 @@ import {
   Masonry,
   SvgImage,
   Underline,
+  Chip,
 } from '../../theme'
 import { List as PathsList } from '../../paths'
 import { groupResourcesByType } from '../utils'
@@ -42,6 +43,20 @@ const PathContent = () => {
             The <Underline>{title}</Underline> path
           </Typography>
         </LayoutHero>
+
+        {path.status !== 'published' && (
+          <LayoutContainer>
+            <aside aria-label="Status">
+              <Stack direction="row" alignItems="center" spacing={2}>
+                <Chip label={path.status} />
+                <Typography>
+                  This path is a work in progress. It is incomplete, and its
+                  contents may change.
+                </Typography>
+              </Stack>
+            </aside>
+          </LayoutContainer>
+        )}
 
         <Stack spacing={12}>
           {path.prev && (
