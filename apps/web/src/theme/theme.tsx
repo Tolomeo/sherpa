@@ -177,11 +177,8 @@ export const createTheme = (mode: ThemeMode) => {
             fontSize: themeTokens.typography.overline.fontSize,
             textTransform: 'uppercase',
           },
-          colorDefault: {
-            borderColor: 'transparent',
-          },
-          iconColorDefault: {
-            color: themeTokens.palette.grey[400],
+          colorWarning: {
+            color: themeTokens.palette.text.primary,
           },
         },
       },
