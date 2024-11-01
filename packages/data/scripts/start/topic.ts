@@ -1,6 +1,7 @@
 import { create, getAllByName } from '../../src/topic'
 import type Topic from '../../src/topic'
-import { log, command } from '../common'
+import type { TopicData } from '../../types'
+import { log, command, format } from '../common'
 
 export const findTopic = async () => {
   let topic: Topic | undefined
@@ -72,59 +73,67 @@ const createNewTopic = async () => {
   return topic
 }
 
+type TopicBranding = Pick<TopicData, 'logo' | 'hero'>
+
+const enterTopicBranding = async (branding: TopicBranding) => {
+  const enteredBranding = { ...branding }
+
+  const logo = await command.input(`Enter logo svg`, {
+    answer: enteredBranding.logo,
+  })
+
+  if (logo) enteredBranding.logo = logo
+  if (logo === '') enteredBranding.logo = null
+
+  const foreground = await command.input(`Enter foreground colour`, {
+    answer: enteredBranding.hero?.foreground,
+  })
+
+  const background = await command.input(
+    `Enter space separated background colours`,
+    { answer: enteredBranding.hero?.background.join(' ') },
+  )
+
+  if (foreground === '' && background === '') enteredBranding.hero = null
+  if (foreground) enteredBranding.hero = { ...enteredBranding.hero, foreground }
+  if (background)
+    enteredBranding.hero = {
+      ...enteredBranding.hero,
+      background: background.split(/ +/),
+    }
+
+  return enteredBranding
+}
+
 const manageTopic = async (topic: Topic) => {
   await command.loop(async () => {
-    const action = await command.choice('Choose action', [
-      'update brand logo',
-      'update brand colours',
-    ])
+    const action = await command.choice('Choose action', ['update branding'])
 
     switch (action) {
-      case 'update brand logo': {
-        const logo = await command.input(`Enter logo svg`)
+      case 'update branding': {
+        const branding = {
+          logo: topic.data.logo,
+          hero: topic.data.hero,
+        }
 
-        if (!logo) return command.loop.REPEAT
+        const brandingUpdate = await enterTopicBranding(branding)
+
+        log.text(format.diff(branding, brandingUpdate))
+        const confirm = await command.confirm(`Confirm`)
+
+        if (!confirm) return command.loop.REPEAT
 
         try {
-          await topic.change({ logo })
-          log.success(`Logo successfull updated`)
+          await topic.change(brandingUpdate)
+          log.success(`Branding successfull updated`)
         } catch (err) {
-          log.error(`Logo update failed`)
+          log.error(`Branding update failed`)
           log.error(err as string)
         }
 
         return command.loop.REPEAT
       }
-      case 'update brand colours': {
-        const foreground = await command.input(`Enter foreground colour`, {
-          answer: topic.data.hero?.foreground,
-        })
 
-        if (!foreground) return command.loop.REPEAT
-
-        const background = await command.input(
-          `Enter background colours (space separated)`,
-          { answer: topic.data.hero?.background.join(' ') },
-        )
-
-        if (!background) return command.loop.REPEAT
-
-        try {
-          await topic.change({
-            hero: {
-              ...topic.data.hero,
-              foreground,
-              background: background.split(/ +/),
-            },
-          })
-          log.success(`Brand background successfull updated`)
-        } catch (err) {
-          log.error(`Brand background update failed`)
-          log.error(err as string)
-        }
-
-        return command.loop.REPEAT
-      }
       case null:
         return command.loop.END
     }
