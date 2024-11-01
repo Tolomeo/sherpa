@@ -10,7 +10,8 @@ import {
   Masonry,
   SvgImage,
   Underline,
-  Chip,
+  Alert,
+  AlertTitle,
 } from '../../theme'
 import { List as PathsList } from '../../paths'
 import { groupResourcesByType } from '../utils'
@@ -47,13 +48,10 @@ const PathContent = () => {
         {path.status !== 'published' && (
           <LayoutContainer>
             <aside aria-label="Status">
-              <Stack direction="row" alignItems="center" spacing={2}>
-                <Chip label={path.status} />
-                <Typography>
-                  This path is a work in progress. It is incomplete, and its
-                  contents may change.
-                </Typography>
-              </Stack>
+              <Alert severity="warning" variant="outlined">
+                <AlertTitle>This path is in {path.status} state.</AlertTitle> It
+                is incomplete, and its contents may change.
+              </Alert>
             </aside>
           </LayoutContainer>
         )}

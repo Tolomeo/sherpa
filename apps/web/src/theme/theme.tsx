@@ -175,6 +175,7 @@ export const createTheme = (mode: ThemeMode) => {
         styleOverrides: {
           root: {
             fontSize: themeTokens.typography.overline.fontSize,
+            textTransform: 'uppercase',
           },
           colorDefault: {
             borderColor: 'transparent',
@@ -197,6 +198,13 @@ export const createTheme = (mode: ThemeMode) => {
             '&:last-child': {
               paddingBottom: themeTokens.spacing(2),
             },
+          },
+        },
+      },
+      MuiAlert: {
+        styleOverrides: {
+          root: {
+            padding: themeTokens.spacing(3),
           },
         },
       },

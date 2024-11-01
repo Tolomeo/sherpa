@@ -48,7 +48,9 @@ const PathsListItem = ({ path }: PathsListItemProps) => (
             The <Underline>{config.paths.topicsTitles[path.name]}</Underline>{' '}
             path
           </Typography>
-          {path.status !== 'published' && <Chip label={path.status} />}
+          {path.status !== 'published' && (
+            <Chip label={path.status} color="warning" variant="outlined" />
+          )}
         </CardContent>
       </Card>
     </Link>
