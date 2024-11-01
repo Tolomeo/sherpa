@@ -20,9 +20,16 @@ export const getAllByUrl = async (url: string) => {
 }
 
 export const getByUrl = async (url: string) => {
-  const doc = await ResourcesStore.getInstance().then((store) =>
+  let doc = await ResourcesStore.getInstance().then((store) =>
     store.findOne({ url }),
   )
+
+  if (!doc) {
+    const equivalentUrl = url.endsWith('/') ? url.slice(0, -1) : `${url}/`
+    doc = await ResourcesStore.getInstance().then((store) =>
+      store.findOne({ url: equivalentUrl }),
+    )
+  }
 
   if (!doc) return null
 
@@ -35,6 +42,14 @@ export const getById = async (id: string) => {
   )
 
   if (!doc) throw new Error(`Resource with id ${id} not found`)
+
+  return new Resource(doc)
+}
+
+export const create = async (resource: ResourceData) => {
+  const doc = await ResourcesStore.getInstance().then((store) =>
+    store.insertOne(resource),
+  )
 
   return new Resource(doc)
 }

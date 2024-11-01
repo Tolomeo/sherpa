@@ -21,6 +21,7 @@ export enum TopicName {
   docker = 'docker',
   'docker.withkubernetes' = 'docker.withkubernetes',
   git = 'git',
+  go = 'go',
   'htmlcss.bem' = 'htmlcss.bem',
   htmlcss = 'htmlcss',
   javascript = 'javascript',
@@ -67,9 +68,17 @@ export enum TopicName {
 
 const ResourceIdSchema = z.string().regex(/^[a-zA-Z0-9]{16}$/)
 
-export const TopicDataSchema = z
-  .object({
-    topic: z.nativeEnum(TopicName),
+const TopicNameSchema = z
+  .string()
+  .regex(/^[a-zA-Z0-9_-]+(?:\.[a-zA-Z0-9_-]+)?$/)
+
+const TopicBaseSchema = z.object({
+  name: TopicNameSchema,
+})
+
+export const TopicMetadataSchema = TopicBaseSchema.merge(
+  z.object({
+    status: z.enum(['draft', 'preview', 'published']),
     logo: z.string().regex(new RegExp('^<svg.+/svg>$')).nullable(),
     hero: z
       .object({
@@ -82,13 +91,23 @@ export const TopicDataSchema = z
       })
       .nullable(),
     notes: z.array(z.string()).nullable(),
-    main: z.array(ResourceIdSchema).nullable(),
-    resources: z.array(ResourceIdSchema).nullable(),
     next: z.array(z.string()).nullable(),
     prev: z.array(z.string()).nullable(),
     children: z.array(z.nativeEnum(TopicName)).nullable(),
-  })
-  .strict()
+  }),
+).strict()
+
+export type TopicMetadata = z.infer<typeof TopicMetadataSchema>
+
+const TopicResourcesSchema = TopicBaseSchema.merge(
+  z.object({
+    main: z.array(ResourceIdSchema).nullable(),
+    resources: z.array(ResourceIdSchema).nullable(),
+  }),
+).strict()
+
+export const TopicDataSchema =
+  TopicMetadataSchema.merge(TopicResourcesSchema).strict()
 
 export type TopicData = z.infer<typeof TopicDataSchema>
 

@@ -42,3 +42,9 @@ export {
   LayoutDrawerToggle,
   useLayoutContext,
 } from './layout'
+export { default as Card } from '@mui/material/Card'
+export { default as CardContent } from '@mui/material/CardContent'
+export { default as CardMedia } from '@mui/material/CardMedia'
+export { default as Alert } from '@mui/material/Alert'
+export { default as AlertTitle } from '@mui/material/AlertTitle'
+export { default as Backdrop } from './Backdrop'

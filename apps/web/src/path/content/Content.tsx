@@ -10,6 +10,8 @@ import {
   Masonry,
   SvgImage,
   Underline,
+  Alert,
+  AlertTitle,
 } from '../../theme'
 import { List as PathsList } from '../../paths'
 import { groupResourcesByType } from '../utils'
@@ -20,7 +22,7 @@ import UnorderedResources from './UnorderedResources'
 const PathContent = () => {
   const { path } = usePathContext()
 
-  const title = config.paths.topicsTitles[path.topic]
+  const title = config.paths.topicsTitles[path.name]
   const pathResourcesGroups = useMemo(() => {
     if (!path.resources) return null
 
@@ -42,6 +44,17 @@ const PathContent = () => {
             The <Underline>{title}</Underline> path
           </Typography>
         </LayoutHero>
+
+        {path.status !== 'published' && (
+          <LayoutContainer>
+            <aside aria-label="Status">
+              <Alert severity="warning" variant="outlined">
+                <AlertTitle>This path is in {path.status} state.</AlertTitle> It
+                is incomplete, and its contents may change.
+              </Alert>
+            </aside>
+          </LayoutContainer>
+        )}
 
         <Stack spacing={12}>
           {path.prev && (
@@ -108,7 +121,7 @@ const PathContent = () => {
                       {path.children.map((childPath, index) => (
                         <Stack spacing={2} key={index}>
                           <Typography variant="h5" component="h3">
-                            {config.paths.topicsTitles[childPath.topic]}
+                            {config.paths.topicsTitles[childPath.name]}
                           </Typography>
 
                           {childPath.main && (

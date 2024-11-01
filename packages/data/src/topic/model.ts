@@ -2,21 +2,30 @@ import { getById } from '../resource'
 import type {
   ResourceData,
   TopicData,
+  TopicMetadata,
   PopulatedTopicData,
-  TopicName,
 } from '../../types'
 import TopicsStore, { type TopicDocument } from './store'
 
 export const getAll = async () => {
   const docs = await TopicsStore.getInstance().then((store) => store.findAll())
+  const topics = docs.map((p) => new Topic(p))
+
+  return topics
+}
+
+export const getParents = async () => {
+  const docs = await TopicsStore.getInstance().then((store) =>
+    store.findAll({ name: /^[^.]+$/ }),
+  )
   const paths = docs.map((p) => new Topic(p))
 
   return paths
 }
 
-export const getParents = async () => {
+export const getAllByName = async (name: string) => {
   const docs = await TopicsStore.getInstance().then((store) =>
-    store.findAll({ topic: /^[^.]+$/ }),
+    store.findAll({ name: new RegExp(name, 'g') }),
   )
   const paths = docs.map((p) => new Topic(p))
 
@@ -24,9 +33,8 @@ export const getParents = async () => {
 }
 
 export const getByName = async (name: string) => {
-  const topic = name as TopicName
   const doc = await TopicsStore.getInstance().then((store) =>
-    store.findOne({ topic }),
+    store.findOne({ name }),
   )
 
   if (!doc) return null
@@ -45,6 +53,14 @@ export const getAllByResourceId = async (resourceId: string) => {
   )
 
   return docs.map((t) => new Topic(t))
+}
+
+export const create = async (topic: TopicData) => {
+  const doc = await TopicsStore.getInstance().then((store) =>
+    store.insertOne(topic),
+  )
+
+  return new Topic(doc)
 }
 
 export interface ResourceGroup {
@@ -84,14 +100,32 @@ class Topic {
     return this.document
   }
 
-  public get topic() {
-    return this.document.topic
+  public get name() {
+    return this.document.name
   }
 
   public get data() {
     const { _id, ...topicData } = this.document
 
     return topicData
+  }
+
+  public get metadata() {
+    const { name, status, logo, hero, notes, next, prev, children } =
+      this.document
+
+    const metadata: TopicMetadata = {
+      name,
+      status,
+      logo,
+      hero,
+      notes,
+      next,
+      prev,
+      children,
+    }
+
+    return metadata
   }
 
   public async populate() {
@@ -159,6 +193,11 @@ class Topic {
     }
 
     return resources
+  }
+
+  public async hasResource(resourceId: string) {
+    const resources = await this.getResources()
+    return resources.includes(resourceId)
   }
 
   public async change(update: Partial<TopicData>) {

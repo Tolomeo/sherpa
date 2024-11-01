@@ -85,7 +85,7 @@ export default class YoutubeDataApiV3HealthCheckRunner extends HealthCheckRunner
   }
 
   async requestHandler({ request, sendRequest }: BasicCrawlingContext) {
-    const { YOUTUBE_API_KEY: apiKey } = import.meta.env
+    const apiKey = process.env.YOUTUBE_API_KEY
 
     if (!apiKey) {
       this.failure(request, new Error(`Youtube data api key not found`))

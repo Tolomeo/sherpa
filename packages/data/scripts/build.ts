@@ -47,17 +47,32 @@ const buildTS = () => {
 }
 
 const buildJSON = async () => {
-  const jsonDist = path.join(outDir, 'json')
-
-  if (!fs.existsSync(jsonDist)) fs.mkdirSync(jsonDist)
-
   const topics = await getAll()
+
+  const metadataDist = path.join(outDir, 'json', 'meta')
+
+  if (!fs.existsSync(metadataDist))
+    fs.mkdirSync(metadataDist, { recursive: true })
+
+  for (const topic of topics) {
+    const metadata = topic.metadata
+
+    fs.writeFileSync(
+      path.join(metadataDist, `${topic.name}.json`),
+      JSON.stringify(metadata),
+      { encoding: 'utf8' },
+    )
+  }
+
+  const topicDist = path.join(outDir, 'json', 'topic')
+
+  if (!fs.existsSync(topicDist)) fs.mkdirSync(topicDist, { recursive: true })
 
   for (const topic of topics) {
     const pathData = await topic.populate()
 
     fs.writeFileSync(
-      path.join(jsonDist, `${pathData.topic}.json`),
+      path.join(topicDist, `${topic.name}.json`),
       JSON.stringify(pathData),
       { encoding: 'utf8' },
     )

@@ -175,12 +175,10 @@ export const createTheme = (mode: ThemeMode) => {
         styleOverrides: {
           root: {
             fontSize: themeTokens.typography.overline.fontSize,
+            textTransform: 'uppercase',
           },
-          colorDefault: {
-            borderColor: 'transparent',
-          },
-          iconColorDefault: {
-            color: themeTokens.palette.grey[400],
+          colorWarning: {
+            color: themeTokens.palette.text.primary,
           },
         },
       },
@@ -188,6 +186,22 @@ export const createTheme = (mode: ThemeMode) => {
         styleOverrides: {
           fontSizeSmall: {
             fontSize: '1rem',
+          },
+        },
+      },
+      MuiCardContent: {
+        styleOverrides: {
+          root: {
+            '&:last-child': {
+              paddingBottom: themeTokens.spacing(2),
+            },
+          },
+        },
+      },
+      MuiAlert: {
+        styleOverrides: {
+          root: {
+            padding: themeTokens.spacing(3),
           },
         },
       },

@@ -1,19 +1,21 @@
-import { getAllByResourceId } from '../src/topic'
-import type Resource from '../src/resource'
-import { getAllByUrl } from '../src/resource'
-import Healthcheck from '../src/healthcheck/runner'
+import { getAllByResourceId } from '../../src/topic'
+import type Resource from '../../src/resource'
+import { getAllByUrl } from '../../src/resource'
 import {
-  HealthCheckStrategies,
+  ResourceDataSchema,
   type ResourceData,
-  type HealthcheckStrategy,
-} from '../types'
-import { util, format, log, command } from './common'
+  type ResourceType,
+} from '../../types'
+import { util, format, log, command } from '../common'
+import { scrapeResourceTitle, chooseHealthCheckStrategy } from './healthcheck'
 
-const getResource = async () => {
+export const findResource = async () => {
   let resource: Resource | undefined
 
   await command.loop(async () => {
-    const url = await command.input(`Enter url fragment to search for`)
+    const url = await command.input(
+      `Search resource - Enter url fragment to look for`,
+    )
 
     if (!url) return command.loop.END
 
@@ -47,53 +49,68 @@ const getResource = async () => {
   return resource
 }
 
-const runHealthcheck = async (
-  { url, title }: ResourceData,
-  strategy: HealthcheckStrategy,
+export const enterResourceData = async (
+  data: Pick<ResourceData, 'url'> & Partial<Omit<ResourceData, 'url'>>,
 ) => {
-  const healthcheckRunner = new Healthcheck()
-  const healthCheckResult = await healthcheckRunner.run(
-    url,
-    util.clone(strategy),
-  )
+  const populatedData = { ...data }
 
-  if (!healthCheckResult.success) {
-    log.error(`Health check failed`)
-    log.error(healthCheckResult.error.message)
-    return
+  if (!populatedData.source) {
+    const { hostname, pathname } = new URL(populatedData.url)
+    const sourceHostname = hostname.replace(/^www./, '')
+
+    populatedData.source =
+      sourceHostname === 'github.com'
+        ? `${sourceHostname}/${pathname.split('/')[1]}`
+        : sourceHostname
   }
 
-  log.success(`Health check succeeded`)
-  log.text(
-    format.diff(
-      { url, title },
+  await command.loop(async () => {
+    log.lead(`Enter data for url ${populatedData.url}`)
+
+    const url = await command.input(`Url`, { answer: populatedData.url })
+
+    if (url) populatedData.url = url
+
+    const title = await command.input(`Title`, { answer: populatedData.title })
+
+    if (title) populatedData.title = title
+
+    const type = await command.choice(
+      'Type',
+      [
+        'basics',
+        'advanced',
+        'how-to',
+        'curiosity',
+        'tool',
+        'reference',
+        'feed',
+      ] as ResourceType[],
       {
-        url: healthCheckResult.url,
-        title: healthCheckResult.data.title,
+        answer: populatedData.type,
       },
-    ),
-  )
-
-  await healthcheckRunner.teardown()
-}
-
-type ResourceDataUpdate = Omit<ResourceData, 'healthcheck'>
-
-const getResourceDataUpdate = async (resourceData: ResourceDataUpdate) => {
-  const resourceUpdate = util.clone(resourceData)
-
-  for (const [key, value] of Object.entries(resourceData)) {
-    const valueUpdate = await command.input(
-      `${key} (${format.stringify(value)})`,
     )
 
-    if (!valueUpdate) continue
+    if (type) populatedData.type = type
 
-    // @ts-expect-error -- we will remove the enum this typecheck is complaining about
-    resourceUpdate[key] = valueUpdate
-  }
+    const source = await command.input('Source', {
+      answer: populatedData.source,
+    })
 
-  return resourceUpdate
+    if (source) populatedData.source = source
+
+    const validation = ResourceDataSchema.safeParse(populatedData)
+
+    if (!validation.success) {
+      log.error('Invalid resource data entered')
+      log.error(validation.error as unknown as string)
+      return command.loop.REPEAT
+    }
+
+    return command.loop.END
+  })
+
+  return populatedData as ResourceData
 }
 
 const manageResourceData = async (resource: Resource) => {
@@ -113,12 +130,30 @@ const manageResourceData = async (resource: Resource) => {
 
     switch (action) {
       case 'update resource data':
-        resourceData = await getResourceDataUpdate(resourceData)
+        resourceData = await enterResourceData(resourceData)
         return command.loop.REPEAT
 
-      case 'healthcheck resource data update':
-        await runHealthcheck(resourceData, resource.healthcheck)
+      case 'healthcheck resource data update': {
+        const title = await scrapeResourceTitle(
+          resourceData.url,
+          resource.healthcheck,
+        )
+
+        if (!title) return command.loop.REPEAT
+
+        log.success(`Health check succeeded`)
+        log.text(
+          format.diff(
+            { url: resource.url, title: resource.data.title },
+            {
+              url: resource.url,
+              title,
+            },
+          ),
+        )
+
         return command.loop.REPEAT
+      }
 
       case 'persist resource data update':
         try {
@@ -143,7 +178,7 @@ const deleteResource = async (resource: Resource) => {
     log.inspect(resource.document)
     log.warning(
       `The resource occurs in the following topics:\n${format.stringify(
-        topics.map((t) => t.topic),
+        topics.map((t) => t.name),
       )}`,
     )
 
@@ -155,10 +190,10 @@ const deleteResource = async (resource: Resource) => {
     switch (action) {
       case 'display occurrences':
         topics.forEach((t) => {
-          const { topic, main, resources } = t.data
+          const { name, main, resources } = t.data
           log.inspect(
             {
-              topic,
+              name,
               main,
               resources,
             },
@@ -220,7 +255,7 @@ const compareResource = async (resource: Resource) => {
     log.inspect(resource.document)
 
     log.lead(`Choose a resource to compare with`)
-    const comparedResource = await getResource()
+    const comparedResource = await findResource()
 
     if (!comparedResource) return command.loop.END
 
@@ -246,20 +281,6 @@ const compareResource = async (resource: Resource) => {
   })
 }
 
-const getHealthcheckUpdate = async () => {
-  const healthcheck = await command.choice(
-    `Choose a strategy`,
-    Object.keys(HealthCheckStrategies),
-  )
-
-  if (!healthcheck) return
-
-  const strategy =
-    HealthCheckStrategies[healthcheck as HealthcheckStrategy['runner']]
-
-  return util.clone(strategy)
-}
-
 const manageResourceHealthcheck = async (resource: Resource) => {
   let healthcheck = util.clone(resource.healthcheck)
 
@@ -276,12 +297,27 @@ const manageResourceHealthcheck = async (resource: Resource) => {
     ])
 
     switch (action) {
-      case 'run healthcheck':
-        await runHealthcheck(resource.data, healthcheck)
+      case 'run healthcheck': {
+        const title = await scrapeResourceTitle(resource.url, healthcheck)
+
+        if (!title) return command.loop.REPEAT
+
+        log.success(`Health check succeeded`)
+        log.text(
+          format.diff(
+            { url: resource.url, title: resource.data.title },
+            {
+              url: resource.url,
+              title,
+            },
+          ),
+        )
+
         return command.loop.REPEAT
+      }
 
       case 'update healthcheck strategy': {
-        const healthcheckUpdate = await getHealthcheckUpdate()
+        const healthcheckUpdate = await chooseHealthCheckStrategy()
         if (!healthcheckUpdate) return command.loop.REPEAT
         healthcheck = healthcheckUpdate
         return command.loop.REPEAT
@@ -339,10 +375,9 @@ const manageResource = async (resource: Resource) => {
   })
 }
 
-;(async function main() {
+const manageResources = async () => {
   await command.loop(async () => {
-    log.lead(`Search a resource by url`)
-    const resource = await getResource()
+    const resource = await findResource()
 
     if (!resource) return command.loop.END
 
@@ -350,7 +385,6 @@ const manageResource = async (resource: Resource) => {
 
     return command.loop.REPEAT
   })
-})().catch((err) => {
-  log.error(err as string)
-  process.exit(1)
-})
+}
+
+export default manageResources

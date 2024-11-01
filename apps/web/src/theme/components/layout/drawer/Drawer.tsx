@@ -23,7 +23,7 @@ const Drawer: React.FC<Props> = ({ children, ...props }) => {
       <Box
         sx={{
           width: {
-            xs: 300,
+            xs: 345,
             md: 450,
             lg: 600,
             xl: 750,

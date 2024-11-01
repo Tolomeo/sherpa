@@ -25,49 +25,67 @@ const loop = async (fn: () => LoopCommand | Promise<LoopCommand>) => {
 loop.REPEAT = LoopCommand.REPEAT
 loop.END = LoopCommand.END
 
-const input = (question: string): Promise<Nullable<string>> => {
+interface InputOptions {
+  answer?: string
+}
+
+const input = (question: string, options: InputOptions = {}) => {
   const describedQuestion = format.lead(`\n${question}\n[q] cancel\n> `)
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
   })
 
-  return new Promise((resolve) => {
+  const promise = new Promise<Nullable<string>>((resolve) => {
     rl.question(describedQuestion, (answer) => {
       rl.close()
 
       if (answer.trim() === 'q') resolve(null)
       else resolve(answer)
     })
+
+    if (options.answer) {
+      rl.write(options.answer)
+    }
   })
+
+  return promise
 }
 
 const choice = async <T extends string>(
   question: string,
-  options: T[],
+  choices: T[],
+  options: { answer?: T } = {},
 ): Promise<Nullable<T>> => {
-  const describedQuestion = `${question}\n${options
+  const describedQuestion = `${question}\n${choices
     .map((option, idx) => `[${idx + 1}] ${option}`)
     .join('\n')}`
 
-  let optionAnswer: T | undefined
+  let choiceAnswer: T | undefined
 
-  while (!optionAnswer) {
-    const answer = await input(describedQuestion)
+  const defaultChoice = options.answer
+    ? (() => {
+        const defaultChoiceIndex = choices.indexOf(options.answer)
+        return defaultChoiceIndex > -1 ? `${defaultChoiceIndex + 1}` : undefined
+      })()
+    : undefined
+
+  while (!choiceAnswer) {
+    const answer = await input(describedQuestion, { answer: defaultChoice })
 
     if (answer === null) return null
 
     const answerIndex = parseInt(answer, 10)
 
-    if (isNaN(answerIndex) || !options[answerIndex - 1]) {
+    if (isNaN(answerIndex) || !choices[answerIndex - 1]) {
       log.error('\nInvalid choice')
       continue
     }
 
-    optionAnswer = options[answerIndex - 1]
+    choiceAnswer = choices[answerIndex - 1]
   }
 
-  return optionAnswer
+  return choiceAnswer
 }
 
 const confirm = async (question: string): Promise<Nullable<boolean>> => {
