@@ -1,7 +1,6 @@
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 import * as childProcess from 'node:child_process'
-import type { TopicMetadata } from '../types/topic'
 import { getAll } from '../src/topic/model'
 
 // const srcDir = 'src'
