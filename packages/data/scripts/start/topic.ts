@@ -79,11 +79,11 @@ const enterTopicBranding = async (branding: TopicBranding) => {
   const enteredBranding = { ...branding }
 
   const logo = await command.input(`Enter logo svg`, {
-    answer: enteredBranding.logo,
+    answer: enteredBranding.logo ?? undefined,
   })
 
   if (logo) enteredBranding.logo = logo
-  if (logo === '') enteredBranding.logo = null
+  else if (logo === '') enteredBranding.logo = null
 
   const foreground = await command.input(`Enter foreground colour`, {
     answer: enteredBranding.hero?.foreground,
@@ -94,20 +94,22 @@ const enterTopicBranding = async (branding: TopicBranding) => {
     { answer: enteredBranding.hero?.background.join(' ') },
   )
 
-  if (foreground === '' && background === '') enteredBranding.hero = null
-  if (foreground) enteredBranding.hero = { ...enteredBranding.hero, foreground }
-  if (background)
+  if (foreground && background) {
     enteredBranding.hero = {
-      ...enteredBranding.hero,
+      foreground,
       background: background.split(/ +/),
     }
+  } else if (foreground === '' && background === '') enteredBranding.hero = null
 
   return enteredBranding
 }
 
 const manageTopic = async (topic: Topic) => {
   await command.loop(async () => {
-    const action = await command.choice('Choose action', ['update branding'])
+    const action = await command.choice('Choose action', [
+      'update branding',
+      'update notes',
+    ])
 
     switch (action) {
       case 'update branding': {
@@ -128,6 +130,32 @@ const manageTopic = async (topic: Topic) => {
           log.success(`Branding successfull updated`)
         } catch (err) {
           log.error(`Branding update failed`)
+          log.error(err as string)
+        }
+
+        return command.loop.REPEAT
+      }
+
+      case 'update notes': {
+        const noteUpdate = await command.input(`Enter notes`, {
+          answer: topic.data.notes?.[0],
+        })
+
+        if (noteUpdate === null) return command.loop.REPEAT
+
+        const notes: TopicData['notes'] =
+          noteUpdate === '' ? null : [noteUpdate]
+
+        log.text(format.diff(topic.data.notes, notes))
+        const confirm = await command.confirm(`Confirm`)
+
+        if (!confirm) return command.loop.REPEAT
+
+        try {
+          await topic.change({ notes })
+          log.success(`Notes successfull updated`)
+        } catch (err) {
+          log.error(`Notes update failed`)
           log.error(err as string)
         }
 
