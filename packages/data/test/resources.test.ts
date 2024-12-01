@@ -1,10 +1,10 @@
 import { describe, test, expect, beforeAll, afterAll } from 'vitest'
 import { getParents } from '../src/topic'
-import { getById } from '../src/resource'
+import { getAllById } from '../src/resource'
 import HealthCheck from '../src/healthcheck/runner'
 
 describe('Resources', async () => {
-  const [topics] = await getParents()
+  const topics = await getParents()
   let healthCheck: HealthCheck
 
   beforeAll(() => {
@@ -15,11 +15,9 @@ describe('Resources', async () => {
     await healthCheck.teardown()
   })
 
-  describe.each([topics])('$topic resources', async (topic) => {
-    const pathResourceUrls = await topic.getResources()
-    const pathResources = await Promise.all(
-      pathResourceUrls.map((url) => getById(url)),
-    )
+  describe.each(topics)('$name resources', async (topic) => {
+    const pathResourceIds = await topic.getResources()
+    const pathResources = await getAllById(...pathResourceIds)
 
     test.each(pathResources)(
       '$url',
