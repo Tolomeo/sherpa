@@ -44,7 +44,7 @@
     "playwright": "^1.41.1",
     "shx": "^0.3.4",
     "tsx": "^4.7.0",
-    "vitest": "^1.2.2"
+    "vitest": "^2.1.6"
   },
   "dependencies": {
     "zod": "^3.23.8"
