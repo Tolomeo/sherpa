@@ -36,6 +36,20 @@ export const getByUrl = async (url: string) => {
   return new Resource(doc)
 }
 
+export const getAllById = async (...ids: string[]) => {
+  const docs = await ResourcesStore.getInstance().then((store) =>
+    store.findAll({
+      _id: {
+        $in: ids,
+      },
+    }),
+  )
+
+  const resources = docs.map((d) => new Resource(d))
+
+  return resources
+}
+
 export const getById = async (id: string) => {
   const doc = await ResourcesStore.getInstance().then((store) =>
     store.findOne({ _id: id }),
