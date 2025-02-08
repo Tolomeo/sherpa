@@ -114,6 +114,7 @@
 {"title":"Python Practice Book","url":"https://anandology.com/python-practice-book/index.html","type":"basics","source":"anandology.com","_id":"4WsEXea49DmN2VY7"}
 {"title":"runpkg | the package explorer","url":"https://www.runpkg.com","type":"tool","source":"runpkg.com","_id":"4YixjjY7wmJTs8cZ"}
 {"title":"RegExr: Learn, Build, & Test RegEx","url":"https://regexr.com","type":"reference","source":"regexr.com","healthcheck":{"runner":"Http","config":{"titleSelector":"title:not(:empty)"}},"_id":"4df5bXRgr5fgPGQN"}
+{"title":"Pyrexp: Visualize & Test RegEx","url":"https://pythonium.net/regex","type":"tool","source":"pythonium.net","_id":"4Qb8mP2xRt9Vz7Jh"}
 {"title":"Pytest for Beginners","url":"https://testdriven.io/blog/pytest-for-beginners/","type":"basics","source":"testdriven.io","_id":"4k1fFCzMfsM5oSjn"}
 {"title":"33-js-concepts","url":"https://github.com/leonardomso/33-js-concepts","type":"basics","source":"github.com/leonardomso","_id":"4n2uYWuSkg2JLa62"}
 {"url":"https://github.com/evrone/go-clean-template","title":"go-clean-template","source":"github.com/evrone","type":"how-to","_id":"4ooFGlrl4eI7Sh7U"}
