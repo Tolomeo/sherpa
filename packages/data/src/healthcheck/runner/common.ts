@@ -8,9 +8,8 @@ import type {
 } from 'crawlee'
 import he from 'he'
 import formatHTML from 'html-format'
-import createMetascraper, { type MetascraperOptions } from 'metascraper'
-import createMetascraperTitleRules from 'metascraper-title'
 import { Deferred } from '../../common/defer'
+import scraper, { type ScrapeOptions } from '../scraper'
 
 export {
   RequestQueue,
@@ -49,7 +48,7 @@ export type HealthCheckResult =
       error: Error
     }
 
-const scrapeMetadata = createMetascraper([createMetascraperTitleRules()])
+const scrapeMetadata = scraper.scrape
 
 export abstract class HealthCheckRunner<
   C extends
@@ -92,7 +91,7 @@ export abstract class HealthCheckRunner<
     return decode(encode(text).replace(eEntities, (entity) => entities[entity]))
   }
 
-  protected getMetadata(options: MetascraperOptions) {
+  protected getMetadata(options: ScrapeOptions) {
     return scrapeMetadata(options)
   }
 
