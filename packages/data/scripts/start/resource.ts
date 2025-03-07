@@ -142,15 +142,7 @@ const manageResourceData = async (resource: Resource) => {
         if (!title) return command.loop.REPEAT
 
         log.success(`Health check succeeded`)
-        log.text(
-          format.diff(
-            { url: resource.url, title: resource.data.title },
-            {
-              url: resource.url,
-              title,
-            },
-          ),
-        )
+        resourceData.title = title
 
         return command.loop.REPEAT
       }
