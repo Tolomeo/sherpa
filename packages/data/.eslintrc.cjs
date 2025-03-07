@@ -11,4 +11,13 @@ module.exports = {
     'no-console': 'off',
     'no-await-in-loop': 'off',
   },
+	overrides: [
+    {
+      files: ["*.js"],
+      rules: {
+        "@typescript-eslint/prefer-reduce-type-parameter": "off",
+        "@typescript-eslint/no-unnecessary-condition": "off",
+      },
+    },
+	]
 }
