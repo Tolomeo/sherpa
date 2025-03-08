@@ -29,6 +29,7 @@ export default () => {
       toTitle(($) => $filter($, $('.entry-title'))),
       toTitle(($) => $filter($, $('h1[class*="title" i] a'))),
       toTitle(($) => $filter($, $('h1[class*="title" i]'))),
+      toTitle(($) => $filter($, $('h1'))),
     ],
   }
 
