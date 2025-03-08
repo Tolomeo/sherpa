@@ -29,14 +29,10 @@ describe('Resources', async () => {
           resourceData.url,
           healthcheckStrategy,
         )
-
-        expect(resourceHealthcheck).toMatchObject({
-          url: resourceData.url,
-          success: true,
-          data: {
-            title: expect.stringContaining(resourceData.title) as string,
-          },
-        })
+        expect(resourceHealthcheck.success).toBe(true)
+        expect(resourceHealthcheck.data!).toBeValidScrapeResultForTitle(
+          resourceData.title,
+        )
       },
       150_000,
     )

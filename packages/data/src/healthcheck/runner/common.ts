@@ -34,18 +34,25 @@ export { fileTypeFromBuffer } from 'file-type'
 
 const { decode, encode } = he
 
+export interface ScrapeResult {
+  title?: string
+  documentTitle?: string
+  metadataTitle?: string
+  displayTitle?: string
+}
+
 export type HealthCheckResult =
   | {
       url: string
       success: true
-      data: {
-        title: string
-      }
+      error: null
+      data: ScrapeResult
     }
   | {
       url: string
       success: false
       error: Error
+      data: null
     }
 
 const scrapeMetadata = scraper.scrape
@@ -62,10 +69,11 @@ export abstract class HealthCheckRunner<
   // @ts-expect-error -- TODO revisit the OO design
   protected crawler: C
 
-  protected success(request: Request<D>, data: { title: string }) {
+  protected success(request: Request<D>, data: ScrapeResult) {
     this.results.get(request.url)?.resolve({
       url: request.url,
       success: true,
+      error: null,
       data,
     })
   }
@@ -75,6 +83,7 @@ export abstract class HealthCheckRunner<
       url: request.url,
       success: false,
       error,
+      data: null,
     })
   }
 

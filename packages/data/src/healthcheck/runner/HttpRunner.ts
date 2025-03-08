@@ -25,15 +25,20 @@ export default class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCraw
 
     const metadata = await this.getMetadata({ url: request.url, htmlDom: $ })
 
-    const { title } = metadata
+    let { title, documentTitle, metadataTitle, displayTitle } = metadata
 
-    if (!title || title.trim() === '') {
+    if (!title && !documentTitle && !metadataTitle && !displayTitle) {
       this.failure(request, new Error(`Could not retrieve title text`))
 
       return
     }
 
-    this.success(request, { title: this.filterEntities(title) })
+    title = title && this.filterEntities(title)
+    documentTitle = documentTitle && this.filterEntities(documentTitle)
+    metadataTitle = metadataTitle && this.filterEntities(metadataTitle)
+    displayTitle = displayTitle && this.filterEntities(displayTitle)
+
+    this.success(request, { title, documentTitle, metadataTitle, displayTitle })
   }
 
   failedRequestHandler(
