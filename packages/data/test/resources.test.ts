@@ -2,7 +2,6 @@ import { describe, test, expect, beforeAll, afterAll } from 'vitest'
 import { getParents } from '../src/topic'
 import { getAllById } from '../src/resource'
 import HealthCheck from '../src/healthcheck/runner'
-import type { ScrapeResult } from '../src/healthcheck/runner/common'
 
 describe('Resources', async () => {
   const topics = await getParents()
@@ -30,18 +29,10 @@ describe('Resources', async () => {
           resourceData.url,
           healthcheckStrategy,
         )
-        const containsResourceTitle = ({
-          title,
-          documentTitle,
-          metadataTitle,
-          displayTitle,
-        }: ScrapeResult) =>
-          [title, documentTitle, metadataTitle, displayTitle].some((t) =>
-            t ? t.includes(resourceData.title) : false,
-          )
-
         expect(resourceHealthcheck.success).toBe(true)
-        expect(resourceHealthcheck.data!).toSatisfy(containsResourceTitle)
+        expect(resourceHealthcheck.data!).toBeValidScrapeResultForTitle(
+          resourceData.title,
+        )
       },
       150_000,
     )
