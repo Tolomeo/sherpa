@@ -73,6 +73,7 @@ export abstract class HealthCheckRunner<
     this.results.get(request.url)?.resolve({
       url: request.url,
       success: true,
+      error: null,
       data,
     })
   }
@@ -82,6 +83,7 @@ export abstract class HealthCheckRunner<
       url: request.url,
       success: false,
       error,
+      data: null,
     })
   }
 
