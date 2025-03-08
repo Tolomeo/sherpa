@@ -5,33 +5,29 @@ import { $jsonld, $filter, title, toRule } from '@metascraper/helpers'
 const toTitle = toRule(title)
 
 export default () => {
-  const rules = {
-    title: [
-      toTitle(($) => $filter($, $('title'))),
-      toTitle(($) => $('meta[property="og:title"]').attr('content')),
-      toTitle(($) => $('meta[name="twitter:title"]').attr('content')),
-      toTitle(($) => $('meta[property="twitter:title"]').attr('content')),
-      toTitle($jsonld('headline')),
-      toTitle(($) => $filter($, $('.post-title'))),
-      toTitle(($) => $filter($, $('.entry-title'))),
-      toTitle(($) => $filter($, $('h1[class*="title" i] a'))),
-      toTitle(($) => $filter($, $('h1[class*="title" i]'))),
-    ],
-    documentTitle: [toTitle(($) => $filter($, $('title')))],
-    metadataTitle: [
-      toTitle(($) => $('meta[property="og:title"]').attr('content')),
-      toTitle(($) => $('meta[name="twitter:title"]').attr('content')),
-      toTitle(($) => $('meta[property="twitter:title"]').attr('content')),
-      toTitle($jsonld('headline')),
-    ],
-    displayTitle: [
-      toTitle(($) => $filter($, $('.post-title'))),
-      toTitle(($) => $filter($, $('.entry-title'))),
-      toTitle(($) => $filter($, $('h1[class*="title" i] a'))),
-      toTitle(($) => $filter($, $('h1[class*="title" i]'))),
-      toTitle(($) => $filter($, $('h1'))),
-    ],
-  }
+  const documentTitle = [toTitle(($) => $filter($, $('title')))]
+  const metadataTitle = [
+    toTitle(($) => $('meta[property="og:title"]').attr('content')),
+    toTitle(($) => $('meta[name="twitter:title"]').attr('content')),
+    toTitle(($) => $('meta[property="twitter:title"]').attr('content')),
+    toTitle($jsonld('headline')),
+  ]
+  const displayTitle = [
+    toTitle(($) => $filter($, $('.post-title'))),
+    toTitle(($) => $filter($, $('.entry-title'))),
+    toTitle(($) => $filter($, $('h1[class*="title" i] a'))),
+    toTitle(($) => $filter($, $('h1[class*="title" i]'))),
+    toTitle(($) => $filter($, $('h1'))),
+  ]
+  const title = []
+    .concat(documentTitle)
+    .concat(metadataTitle)
+    .concat(displayTitle)
 
-  return rules
+  return {
+    title,
+    documentTitle,
+    metadataTitle,
+    displayTitle,
+  }
 }
