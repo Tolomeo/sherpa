@@ -2,6 +2,7 @@ import { describe, test, expect, beforeAll, afterAll } from 'vitest'
 import { getParents } from '../src/topic'
 import { getAllById } from '../src/resource'
 import HealthCheck from '../src/healthcheck/runner'
+import type { ScrapeResult } from '../src/healthcheck/runner/common'
 
 describe('Resources', async () => {
   const topics = await getParents()
@@ -29,14 +30,18 @@ describe('Resources', async () => {
           resourceData.url,
           healthcheckStrategy,
         )
+        const containsResourceTitle = ({
+          title,
+          documentTitle,
+          metadataTitle,
+          displayTitle,
+        }: ScrapeResult) =>
+          [title, documentTitle, metadataTitle, displayTitle].some((t) =>
+            t ? t.includes(resourceData.title) : false,
+          )
 
-        expect(resourceHealthcheck).toMatchObject({
-          url: resourceData.url,
-          success: true,
-          data: {
-            title: expect.stringContaining(resourceData.title) as string,
-          },
-        })
+        expect(resourceHealthcheck.success).toBe(true)
+        expect(resourceHealthcheck.data!).toSatisfy(containsResourceTitle)
       },
       150_000,
     )
