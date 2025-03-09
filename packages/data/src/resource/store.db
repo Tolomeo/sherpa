@@ -168,7 +168,6 @@
 {"title":"luarocks Wiki","url":"https://github.com/luarocks/luarocks/wiki/Documentation","type":"basics","source":"github.com/luarocks","_id":"6boG6XKE7akrOPe3"}
 {"title":"Fonts Knowledge","url":"https://fonts.google.com/knowledge","type":"reference","source":"fonts.google.com","_id":"6cKiiVUFaqjd9vCh"}
 {"title":"UI Goodies","url":"https://uigoodies.com/","type":"tool","source":"uigoodies.com","_id":"6e6UNHc7qWFjmCTe"}
-{"title":"How to build, test, and publish a TypeScript npm package in 2022","url":"https://www.strictmode.io/articles/build-test-and-publish-npm-package-2022","type":"how-to","source":"strictmode.io","_id":"6fHNu1w5pCFPkweB"}
 {"url":"https://eli.thegreenplace.net/2020/implementing-raft-part-0-introduction/","title":"Implementing Raft","source":"eli.thegreenplace.net","type":"advanced","_id":"6fo1Ep0N3rRxGONo"}
 {"title":"WAI-ARIA 1.2 Cheat Sheet","url":"https://www.digitala11y.com/wai-aria-1-1-cheat-sheet","type":"reference","source":"digitala11y.com","_id":"6mXqddLlyEVNHa3q"}
 {"title":"Scaling Python Applications","url":"https://betterstack.com/community/guides/scaling-python/","type":"advanced","source":"betterstack.com","_id":"6ruSnMtg32KM9cVy"}
@@ -490,7 +489,6 @@
 {"title":"Lee Robinson","url":"https://www.youtube.com/@leerob","source":"youtube.com/@leerob","type":"feed","healthcheck":{"runner":"YoutubeData"},"_id":"IIO4GwvMoVbViG7f"}
 {"title":"Setup nvim-lspconfig + nvim-cmp","url":"https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/","type":"how-to","source":"vonheikemen.github.io","_id":"IK9IqjAV4RauzuZh"}
 {"title":"Command Line Power User","url":"https://commandlinepoweruser.com/","type":"basics","source":"commandlinepoweruser.com","_id":"IKT1RIeCRse6rPYQ"}
-{"title":"Analysis Tools and Linters to Improve Code Quality and Avoid Bugs","url":"https://analysis-tools.dev/","type":"reference","source":"analysis-tools.dev","_id":"IKnfIPkOF69NjIIZ"}
 {"title":"Component-driven development in React","url":"https://egghead.io/courses/component-driven-development-in-react-e0bf","type":"advanced","source":"egghead.io","_id":"IL1Z9qzZcGxN6ByT"}
 {"title":"redis.pdf","url":"https://www.openmymind.net/redis.pdf","type":"curiosity","source":"openmymind.net","healthcheck":{"runner":"PdfFile"},"_id":"ITknwkKce5IXcB8n"}
 {"title":"The Realities And Myths Of Contrast And Color","url":"https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/","type":"advanced","source":"smashingmagazine.com","_id":"IVLEikpsG7I1aaOV"}
@@ -571,7 +569,7 @@
 {"title":"2ality","url":"https://2ality.com","type":"feed","source":"2ality.com","_id":"KtXszhLeFMN5cxCr"}
 {"title":"Free Icons, Clipart Illustrations, Photos, and Music","url":"https://icons8.com","type":"tool","source":"icons8.com","_id":"Ku7I8CikLXpSDDK2"}
 {"title":"Material Design","url":"https://m3.material.io","type":"reference","source":"m3.material.io","_id":"KwlEflZjxaWrNsDy"}
-{"title":"SurviveJS - Maintenance","url":"https://survivejs.com/books/maintenance","type":"basics","source":"survivejs.com","_id":"KyW1Nikzjn2puxew"}
+{"title":"SurviveJS – Maintenance","url":"https://survivejs.com/books/maintenance","type":"basics","source":"survivejs.com","_id":"KyW1Nikzjn2puxew"}
 {"title":"A list of new(ish) command line tools","url":"https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/","type":"reference","source":"jvns.ca","_id":"L4rW0lmz3wu2gcQz"}
 {"title":"Recreating Zelda","url":"https://www.youtube.com/playlist?list=PLqPLyUreLV8D3Ckd_9UFNvEpg4xCvbL1a","source":"youtube.com/c/Challacade","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"L51cFtSCtPAGJYp6"}
 {"title":"Access Guide","url":"https://www.accessguide.io","type":"basics","source":"accessguide.io","_id":"LDA7nttpqT84TMnl"}
@@ -691,7 +689,7 @@
 {"url":"https://www.youtube.com/watch?v=YzLrWHZa-Kc","title":"Golang Tutorial : Go Full Course","healthcheck":{"runner":"YoutubeData"},"source":"youtube.com/@derekbanas","type":"basics","_id":"PcXNQxTnWVejMAVW"}
 {"title":"Garry's Mod Lua","url":"https://www.youtube.com/playlist?list=PLyQg3m0a5UivaAXEfVDngKYp9jyNSTIo_","source":"youtube.com/c/CodeBlue","type":"curiosity","healthcheck":{"runner":"YoutubeData"},"_id":"PhYwFJvNbUpUSdGZ"}
 {"url":"https://github.com/loong/go-concurrency-exercises","title":"go-concurrency-exercises","source":"github.com/loong","type":"advanced","_id":"Pl4XcenGrWmgSQts"}
-{"title":"Npm: A Free Guide For Beginners","url":"https://css-tricks.com/a-complete-beginners-guide-to-npm","type":"basics","source":"css-tricks.com","_id":"PnSaSyOSMFL7BDFC"}
+{"title":"A Complete Beginner’s Guide to npm","url":"https://css-tricks.com/a-complete-beginners-guide-to-npm","type":"basics","source":"css-tricks.com","_id":"PnSaSyOSMFL7BDFC"}
 {"title":"A complete guide to iconography","url":"https://www.designsystems.com/iconography-guide/","type":"basics","source":"designsystems.com","_id":"Pnc3BzTGAQ13aUaY"}
 {"title":"Introducing Python","url":"https://www.youtube.com/watch?v=qPowhg9nnS0","source":"youtube.com/c/RichWareham","type":"curiosity","healthcheck":{"runner":"YoutubeData"},"_id":"PnzI0hJ7dI1wTrBR"}
 {"title":"The Modern JavaScript Tutorial","url":"https://javascript.info","type":"basics","source":"javascript.info","_id":"PpJ6jR2dN3ZTIgN2"}
@@ -945,7 +943,7 @@
 {"title":"Django-Styleguide","url":"https://github.com/HackSoftware/Django-Styleguide","type":"how-to","source":"github.com/HackSoftware","_id":"Zxd9QlwPi2RplBdQ"}
 {"title":"Introduction to Accessibility","url":"https://a11y-101.com/","type":"basics","source":"a11y-101.com","_id":"a87fPqLTiSPhOLtt"}
 {"title":"Collection of React Hooks","url":"https://nikgraf.github.io/react-hooks","type":"reference","source":"nikgraf.github.io","_id":"a9tHK6IKCNyVxsA4"}
-{"title":"Let's Dev: A Package Manager","url":"https://yarnpkg.com/blog/2017/07/11/lets-dev-a-package-manager","type":"advanced","source":"yarnpkg.com","_id":"aDAe7qMrTFERPwiE"}
+{"title":"Let’s Dev: A Package Manager","url":"https://yarnpkg.com/blog/2017/07/11/lets-dev-a-package-manager","type":"advanced","source":"yarnpkg.com","_id":"aDAe7qMrTFERPwiE"}
 {"title":"React by Example","url":"https://reactbyexample.github.io","type":"basics","source":"reactbyexample.github.io","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"aEqChfZ2AONtJzSg"}
 {"title":"UX Design Challenges","url":"https://uxtools.co/challenges","type":"basics","source":"uxtools.co","_id":"aF0UmC3DCwM18TCx"}
 {"title":"Curricula on Web Accessibility: A Framework to Build Your Own Courses","url":"https://www.w3.org/WAI/curricula/","type":"curiosity","source":"w3.org","_id":"aFI62vnbCSkrCRXV"}
@@ -1240,7 +1238,7 @@
 {"title":"labs","url":"https://github.com/docker/labs","type":"basics","source":"github.com/docker","_id":"ih3gDiwCmdCJ3JhF"}
 {"title":"Semantic Versioning 2.0.0","url":"https://semver.org","type":"reference","source":"semver.org","_id":"ilQI24tBhbZitHMl"}
 {"title":"My ideal accessible components resource is holistic, well tested and easy to use","url":"https://hidde.blog/ideal-a11y-guidance/","type":"curiosity","source":"hidde.blog","_id":"ipEcAXmH46Na6IWY"}
-{"title":"Best practices for creating a modern npm package","url":"https://snyk.io/blog/best-practices-create-modern-npm-package/","type":"how-to","source":"snyk.io","_id":"ipofmVFadJJImplr"}
+{"title":"Best Practices for Creating a Modern npm Package with Security in Mind","url":"https://snyk.io/blog/best-practices-create-modern-npm-package/","type":"how-to","source":"snyk.io","_id":"ipofmVFadJJImplr"}
 {"title":"colors","url":"https://github.com/termstandard/colors","type":"advanced","source":"github.com/termstandard","_id":"iqNtSh9Ywjh0k91E"}
 {"title":"How to Upload Your Consciousness to Physical Infrastructure Using Docker Compose","url":"https://www.digitalocean.com/community/tutorials/how-to-upload-your-consciousness-to-physical-infrastructure-using-docker-compose","source":"digitalocean.com/community","type":"curiosity","_id":"isQrDcCzXS9xyTDk"}
 {"url":"https://github.com/sagikazarmark/modern-go-application","title":"modern-go-application","source":"github.com/sagikazarmark","type":"how-to","_id":"itZOSULwv7RsUg4T"}
@@ -1369,7 +1367,7 @@
 {"title":"python_koans","url":"https://github.com/gregmalcolm/python_koans","type":"basics","source":"github.com/gregmalcolm","_id":"ntgYIq1LyHAcphOR"}
 {"title":"Node.js Book","url":"https://goalkicker.com/NodeJSBook","type":"basics","source":"goalkicker.com","_id":"ntmIOjuIIPK8AAN1"}
 {"title":"Why Do We Interface?","url":"https://whydoweinterface.com","type":"basics","source":"whydoweinterface.com","_id":"ntySEhlzPBmdxyYU"}
-{"title":"Why Npm Scripts","url":"https://css-tricks.com/why-npm-scripts","type":"advanced","source":"css-tricks.com","_id":"nvsjWVYM2a9QMTfK"}
+{"title":"Why npm Scripts?","url":"https://css-tricks.com/why-npm-scripts","type":"advanced","source":"css-tricks.com","_id":"nvsjWVYM2a9QMTfK"}
 {"title":"python-obj-system","url":"https://github.com/MoserMichael/python-obj-system","type":"advanced","source":"github.com/MoserMichael","_id":"o2xKFtkcnT2nmzC9"}
 {"title":"Containerization","url":"https://devopedia.org/containerization","type":"basics","source":"devopedia.org","_id":"o2zGSRKONImiCMfW"}
 {"title":"My most useful RegExp trick","url":"https://dassur.ma/things/regexp-quote","type":"how-to","source":"dassur.ma","_id":"o3pHK84szYme1ryC"}
