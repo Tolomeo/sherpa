@@ -562,7 +562,7 @@
 {"title":"Monorepo Explained","url":"https://monorepo.tools","type":"reference","source":"monorepo.tools","_id":"KdUEhwTfUasjsQfI"}
 {"title":"Building a Mini Next.js","url":"https://hire.jonasgalvez.com.br/2022/may/18/building-a-mini-next-js","type":"advanced","source":"hire.jonasgalvez.com.br","_id":"KgNDb9gY26iNwqTl"}
 {"title":"NPM for Beginners - Fast Track","url":"https://www.udemy.com/course/npm-for-beginners-fast-track","type":"basics","source":"udemy.com","healthcheck":{"runner":"UdemyAffiliate"},"_id":"KhMqoliGUqR4nGTo"}
-{"title":"Learn Lua in Y Minutes","url":"https://learnxinyminutes.com/docs/lua","type":"reference","source":"learnxinyminutes.com","_id":"KptCc3614Rzb7utT"}
+{"title":"Learn Lua in Y Minutes","url":"https://learnxinyminutes.com/lua/","type":"reference","source":"learnxinyminutes.com","_id":"KptCc3614Rzb7utT"}
 {"title":"A User’s Guide to the Z-Shell","url":"https://zsh.sourceforge.io/Guide/zshguide.html","type":"basics","source":"zsh.sourceforge.io","_id":"Kqyhw2GPmnaHES3H"}
 {"title":"Learn tmux","url":"https://www.youtube.com/playlist?list=PLT98CRl2KxKGiyV1u6wHDV8VwcQdzfuKe","source":"youtube.com/@LearnLinuxTV","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"KrnivSyPDs6uhocP"}
 {"title":"2ality","url":"https://2ality.com","type":"feed","source":"2ality.com","_id":"KtXszhLeFMN5cxCr"}
