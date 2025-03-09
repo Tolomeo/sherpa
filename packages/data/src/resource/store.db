@@ -1,7 +1,6 @@
 {"url":"https://github.com/bahlo/go-styleguide","title":"go-styleguide","source":"github.com/bahlo","type":"how-to","_id":"01cuY0xWeMedg81N"}
 {"title":"Humane by Design","url":"https://humanebydesign.com","type":"reference","source":"humanebydesign.com","_id":"02OuoXqJv8ihF86m"}
-{"title":"What Does Each Color Mean? And Why?","url":"https://www.nickkolenda.com/color-psychology","type":"basics","source":"nickkolenda.com","_id":"066GJMvJuLDN66GA"}
-{"title":"DesignLeadershipHandbook","url":"https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_DesignLeadershipHandbook.pdf","type":"advanced","source":"designbetter.co","healthcheck":{"runner":"PdfFile"},"_id":"06LYx8Puzh013ptE"}
+{"title":"Color Psychology in Branding","url":"https://www.nickkolenda.com/color-psychology","type":"basics","source":"nickkolenda.com","_id":"066GJMvJuLDN66GA"}
 {"title":"Neovim from Scratch","url":"https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ","source":"youtube.com/c/ChrisAtMachine","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"07Oi15qLmVTUapH6"}
 {"title":"WSL-Guide","url":"https://github.com/mikeroyal/WSL-Guide","type":"basics","source":"github.com/mikeroyal","_id":"07dimhyXmAGLVCCW"}
 {"title":"npm Docs","url":"https://docs.npmjs.com","type":"reference","source":"docs.npmjs.com","_id":"07kSBooZkjaTzRHP"}
@@ -194,7 +193,7 @@
 {"url":"https://go.dev/doc/","title":"Documentation","source":"go.dev","type":"reference","_id":"7fh3Fn41e6QtoQhP"}
 {"title":"CSS { In Real Life }","url":"https://css-irl.info","type":"feed","source":"css-irl.info","_id":"7ftvNGf7Qb6xVgRM"}
 {"title":"Tutorial","url":"https://fishshell.com/docs/current/tutorial.html","type":"basics","source":"fishshell.com","_id":"7gBNznDEctis9EXJ"}
-{"title":"What Does Each Font Mean? And Why?","url":"https://www.nickkolenda.com/font-psychology","type":"basics","source":"nickkolenda.com","_id":"7hZDqKZTSHV33uYD"}
+{"title":"Font Psychology in Branding","url":"https://www.nickkolenda.com/font-psychology","type":"basics","source":"nickkolenda.com","_id":"7hZDqKZTSHV33uYD"}
 {"url":"https://www.youtube.com/playlist?list=PLzUGFf4GhXBKKmN8vsbUmmbCKG-vJBloE","title":"Beginner's Guide to GO","healthcheck":{"runner":"YoutubeData"},"source":"youtube.com/@Tutorialedge","type":"basics","_id":"7hlsIysfyL20P48z"}
 {"title":"Open Container Initiative","url":"https://opencontainers.org","type":"reference","source":"opencontainers.org","_id":"7iPsiso0qrHnr9Zd"}
 {"title":"Python 3 Module of the Week","url":"https://pymotw.com/3","type":"reference","source":"pymotw.com","_id":"7jwxodSsgzLVKEbU"}
@@ -403,7 +402,6 @@
 {"title":"kickstart","url":"https://github.com/nvim-lua/kickstart.nvim","type":"reference","source":"github.com/nvim-lua","_id":"F351mBM2fnNBmrK9"}
 {"title":"Why the Hell Would I Use Node.js?","url":"https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js","source":"toptal.com","type":"curiosity","_id":"F7VwdVeZh0Hy0vEf"}
 {"title":"Learn Vimscript the Hard Way","url":"https://learnvimscriptthehardway.stevelosh.com","type":"advanced","source":"learnvimscriptthehardway.stevelosh.com","_id":"FBIyhkfnM6zoMz4x"}
-{"title":"A comprehensive guide to design systems","url":"https://www.invisionapp.com/inside-design/guide-to-design-systems","type":"basics","source":"invisionapp.com","_id":"FCFZoNvxSUpdocFn"}
 {"title":"Luakit Web Browser","url":"https://luakit.github.io/","type":"reference","source":"luakit.github.io","_id":"FCHeTDgqlPuukezD"}
 {"title":"Python Tutorial For Beginners","url":"https://www.youtube.com/watch?v=dBjapc3xfhQ","source":"youtube.com/@MyLesson007","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"FCleaALtPrrZiCaL"}
 {"title":"EightShapes Contrast Grid","url":"https://contrast-grid.eightshapes.com","type":"tool","source":"contrast-grid.eightshapes.com","_id":"FEYCa4hmgDYt1iZj"}
@@ -436,7 +434,6 @@
 {"title":"Learn JavaScript - Free Interactive JavaScript Tutorial","url":"https://www.learn-js.org","type":"basics","source":"learn-js.org","_id":"GCuMrcdskK4sikRm"}
 {"url":"https://prasanthmj.github.io/go/javascript-parser-in-go/","title":"How to support custom Javascript scripting in Go Applications","source":"prasanthmj.github.io","type":"how-to","_id":"GFdaAYFmBnkvL4Qr"}
 {"title":"The Complete Guide To Building A REST API With Node, Express, TypeScript & MongoDB + Authentication","url":"https://www.youtube.com/watch?v=b8ZUb_Okxro","source":"youtube.com/@codewithantonio","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"GINwzoebf3ju433u"}
-{"title":"PrinciplesOfProductDesign","url":"https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_PrinciplesOfProductDesign.pdf","type":"basics","source":"designbetter.co","healthcheck":{"runner":"PdfFile"},"_id":"GJGGFPRWMX2qxe23"}
 {"title":"Neovim - Tips, Distros, Configuration and Demo","url":"https://www.youtube.com/watch?v=8SVPOKZVaMU","source":"youtube.com/@adibhanna","type":"how-to","healthcheck":{"runner":"YoutubeData"},"_id":"GJTa02rDSCyzXDBq"}
 {"url":"https://github.com/betty200744/ultimate-go","title":"ultimate-go","source":"github.com/betty200744","type":"reference","_id":"GKmSb28RUroBG2xo"}
 {"title":"Design Threads","url":"https://designthreads.report/","type":"curiosity","source":"designthreads.report","_id":"GPHXnBc4uAdcxzUC"}
@@ -692,7 +689,6 @@
 {"title":"Remix vs Next.js","url":"https://bejamas.io/blog/remix-vs-nextjs/","type":"curiosity","source":"bejamas.io","_id":"PYoejh0WersJESUN"}
 {"title":"React I Love You, But You're Bringing Me Down","url":"https://marmelab.com/blog/2022/09/20/react-i-love-you.html","type":"curiosity","source":"marmelab.com","_id":"PZMpZYAuS55huchK"}
 {"url":"https://www.youtube.com/watch?v=YzLrWHZa-Kc","title":"Golang Tutorial : Go Full Course","healthcheck":{"runner":"YoutubeData"},"source":"youtube.com/@derekbanas","type":"basics","_id":"PcXNQxTnWVejMAVW"}
-{"title":"DesignEngineeringHandbook","url":"https://marketing.invisionapp-cdn.com/www-assets.invisionapp.com/epubs/InVision_DesignEngineeringHandbook.pdf","type":"advanced","source":"designbetter.co","healthcheck":{"runner":"PdfFile"},"_id":"Pf7Fo6nRX6L1KJFF"}
 {"title":"Garry's Mod Lua","url":"https://www.youtube.com/playlist?list=PLyQg3m0a5UivaAXEfVDngKYp9jyNSTIo_","source":"youtube.com/c/CodeBlue","type":"curiosity","healthcheck":{"runner":"YoutubeData"},"_id":"PhYwFJvNbUpUSdGZ"}
 {"url":"https://github.com/loong/go-concurrency-exercises","title":"go-concurrency-exercises","source":"github.com/loong","type":"advanced","_id":"Pl4XcenGrWmgSQts"}
 {"title":"Npm: A Free Guide For Beginners","url":"https://css-tricks.com/a-complete-beginners-guide-to-npm","type":"basics","source":"css-tricks.com","_id":"PnSaSyOSMFL7BDFC"}
@@ -761,7 +757,7 @@
 {"title":"A Guide To Keyboard Accessibility: HTML And CSS (Part 1)","url":"https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-html-css-part1/","type":"advanced","source":"smashingmagazine.com","_id":"ST8sZW75OURTyvqK"}
 {"title":"Setting up a screen reader testing environment on your computer","url":"https://www.sarasoueidan.com/blog/testing-environment-setup/","type":"basics","source":"sarasoueidan.com","_id":"SUdyfHupblSjdAz5"}
 {"title":"Josh W Comeau","url":"https://www.joshwcomeau.com","type":"feed","source":"joshwcomeau.com","_id":"SVVGXFSu8YE3Lzte"}
-{"title":"Page Flows ","url":"https://pageflows.com/","type":"how-to","source":"pageflows.com","_id":"SW1qvckOTBXi6cJT"}
+{"title":"Page Flows","url":"https://pageflows.com/","type":"how-to","source":"pageflows.com","_id":"SW1qvckOTBXi6cJT"}
 {"title":"Accessibility","url":"https://learn-the-web.algonquindesign.ca/topics/accessibility","type":"basics","source":"learn-the-web.algonquindesign.ca","_id":"SX6YOFvLkrd1Fp1g"}
 {"url":"https://www.youtube.com/playlist?list=PLoILbKo9rG3skRCj37Kn5Zj803hhiuRK6","title":"Go Class","healthcheck":{"runner":"YoutubeData"},"source":"youtube.com/@mattkdvb5154","type":"basics","_id":"SX793tGvI2vlhms2"}
 {"title":"Jest Crash Course - Learn How to Test your JavaScript Application","url":"https://www.youtube.com/watch?v=ajiAl5UNzBU","source":"youtube.com/@laithacademy","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"SXpCTFIjWTmESVzu"}
@@ -818,7 +814,6 @@
 {"url":"https://dave.cheney.net/","title":"Dave Cheney","source":"dave.cheney.net","type":"feed","_id":"UlV9t2toCv3M0imv"}
 {"title":"typescript-cheatsheet","url":"https://rmolinamir.github.io/typescript-cheatsheet","type":"reference","source":"rmolinamir.github.io","_id":"UmPgfiXqOIWcROKK"}
 {"title":"Extract parameter types from string literal types with TypeScript","url":"https://lihautan.com/extract-parameters-type-from-string-literal-types-with-typescript","type":"advanced","source":"lihautan.com","_id":"UnM6DnRcSI37DVqA"}
-{"title":"IconHunt","url":"https://www.iconhunt.site/","type":"tool","source":"iconhunt.site","_id":"Upr7zcXomKvIVDRp"}
 {"title":"Command Line Interface Guidelines","url":"https://clig.dev/","type":"advanced","source":"clig.dev","_id":"UshwEqn75YmhOaxa"}
 {"title":"learn-python","url":"https://github.com/animator/learn-python","type":"basics","source":"github.com/animator","_id":"Uy8sIcffAtISRv6z"}
 {"title":"awesome-resty","url":"https://github.com/bungle/awesome-resty","type":"reference","source":"github.com/bungle","_id":"UyM3GxTs0b8laBXj"}
@@ -1097,7 +1092,6 @@
 {"title":"Python Programming Fundamentals Towards Django Development","url":"https://www.youtube.com/playlist?list=PLOLrQ9Pn6cawb13MugxL-p1M4w7ZfT-qR","source":"youtube.com/@veryacademy","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"eUZpmxfEUKphdjEN"}
 {"title":"neovim-plugin-boilerplate","url":"https://github.com/shortcuts/neovim-plugin-boilerplate","type":"reference","source":"github.com/shortcuts","_id":"eV6ZunMrKzdlljvf"}
 {"title":"GitOps","url":"https://www.youtube.com/playlist?list=PLms-chRSi2s2RBSP1oZpBr_f6XA7iqIhm","source":"youtube.com/c/VSHNDevOps","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"eYVXH7dn6KVEVTOF"}
-{"title":"DesignOperationsHandbook","url":"https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_DesignOperationsHandbook.pdf","type":"advanced","source":"designbetter.co","healthcheck":{"runner":"PdfFile"},"_id":"eaOOetNNTGYaz4To"}
 {"title":"Interneting Is Hard","url":"https://internetingishard.netlify.app","type":"basics","source":"internetingishard.netlify.app","_id":"ebVfDJ2WYW1Nszj2"}
 {"title":"Gogh","url":"https://github.com/Gogh-Co/Gogh","type":"reference","source":"github.com/Gogh-Co","_id":"ecQP0Djcm1TzlEJn"}
 {"url":"https://dave.cheney.net/practical-go","title":"Practical Go","source":"dave.cheney.net","type":"advanced","_id":"edIcqWPoBkTcBUqB"}
@@ -1206,7 +1200,7 @@
 {"title":"javascript-testing-best-practices","url":"https://github.com/goldbergyoni/javascript-testing-best-practices","type":"how-to","source":"github.com/goldbergyoni","_id":"hWla1Ps4el31wJzW"}
 {"title":"The Docker Ecosystem","url":"https://www.digitalocean.com/community/tutorial_series/the-docker-ecosystem","source":"digitalocean.com/community","type":"advanced","_id":"hY7dAkCzC4ZpqnKW"}
 {"title":"A Guide To Redux Toolkit With TypeScript","url":"https://www.smashingmagazine.com/2023/05/guide-redux-toolkit-typescript/","type":"basics","source":"smashingmagazine.com","_id":"hYZKfaq6tOYul8Ez"}
-{"title":"Can't Unsee","url":"https://cantunsee.space","type":"curiosity","source":"cantunsee.space","_id":"hZhdokAYN9t38WlF"}
+{"title":"Can’t Unsee","url":"https://cantunsee.space","type":"curiosity","source":"cantunsee.space","_id":"hZhdokAYN9t38WlF"}
 {"title":"All commands","url":"https://www.commandlinefu.com/commands/browse","type":"reference","source":"commandlinefu.com","_id":"hekkcWadE5El0Wwh"}
 {"title":"awesome-love2d","url":"https://github.com/love2d-community/awesome-love2d","type":"reference","source":"github.com/love2d-community","_id":"hiKpbLgjoxUX7vnA"}
 {"title":"The Complete Guide to Using CSS Variables","url":"https://webdesign.tutsplus.com/courses/the-complete-guide-to-using-css-variables","type":"basics","source":"webdesign.tutsplus.com","_id":"hiZCQ4CEaMgEQ1Vm"}
@@ -1266,7 +1260,7 @@
 {"url":"https://freshman.tech/linting-golang/","title":"A Complete Guide to Linting Go Programs","source":"freshman.tech","type":"advanced","_id":"jLjLPOmY6N09a8on"}
 {"title":"General purpose command-line tools","url":"http://www.compciv.org/unix-tools/","type":"reference","source":"compciv.org","_id":"jPMY4fhRQks8YCap"}
 {"title":"Docker: From Development to Deployment with Django and Vue","url":"https://paltman.com/docker-django-dev-deploy","type":"how-to","source":"paltman.com","_id":"jQxRBSePM3quEUU3"}
-{"title":"Learn About Fonts","url":"https://www.youtube.com/playlist?list=PLgGbWId6zgaVDvP5IPMIIYeiqqHzj5quu","source":"youtube.com/@envatotuts","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"jTdrRryT18sNU5Mr"}
+{"title":"Learn Typography","url":"https://www.youtube.com/playlist?list=PLgGbWId6zgaVDvP5IPMIIYeiqqHzj5quu","source":"youtube.com/@envatotuts","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"jTdrRryT18sNU5Mr"}
 {"title":"CLI text processing with GNU grep and ripgrep","url":"https://learnbyexample.github.io/learn_gnugrep_ripgrep/","type":"advanced","source":"learnbyexample.github.io","_id":"jUVRAhazDZcfwFgg"}
 {"title":"BusinessThinkingforDesigners","url":"https://uploads-ssl.webflow.com/609ce44d3dfdab98b5019cf9/6143613a2ebbb44c1e9d1251_BusinessThinkingforDesigners.pdf","type":"advanced","source":"designbetter.co","healthcheck":{"runner":"PdfFile"},"_id":"jVbhe1VUeRvDqrFo"}
 {"title":"Learning GitHub","url":"https://www.youtube.com/playlist?list=PLyuRouwmQCjlxyO-45o53YCWjBCM-fA7L","source":"youtube.com/@SteveGriffith-Prof3ssorSt3v3","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"jZCPmPfshJkCwACw"}
@@ -1353,7 +1347,7 @@
 {"title":"learning-promises","url":"https://github.com/TimothyGu/learning-promises","type":"basics","source":"github.com/TimothyGu","_id":"mn3YxQTfnAt3YSer"}
 {"title":"Build a Color Scheme: The Fundamentals","url":"https://tympanus.net/codrops/2012/09/17/build-a-color-scheme-the-fundamentals","type":"basics","source":"tympanus.net","_id":"mnp5mT5mrwtmehfP"}
 {"title":"A Historical Reference of React Criticism","url":"https://www.zachleat.com/web/react-criticism/","type":"curiosity","source":"zachleat.com","_id":"mqOFd23KHBfOR6ba"}
-{"title":"The Art of Design Spec'ing","url":"https://mahdif.com/blog/the-art-of-design-specing","type":"advanced","source":"mahdif.com","_id":"msGvo5s5YvcGVcFM"}
+{"title":"The Art of Design Spec’ing","url":"https://mahdif.com/blog/the-art-of-design-specing","type":"advanced","source":"mahdif.com","_id":"msGvo5s5YvcGVcFM"}
 {"title":"awesome-a11y","url":"https://github.com/brunopulis/awesome-a11y","type":"reference","source":"github.com/brunopulis","_id":"mtB0MMG6vQDzw7S8"}
 {"title":"useHooks","url":"https://usehooks.com","type":"reference","source":"usehooks.com","_id":"mwKNchaIk3sXI4hF"}
 {"title":"Learn Django by Building an Online Marketplace","url":"https://www.youtube.com/watch?v=ZxMB6Njs3ck","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"n0nFltHmoN9nKoCI"}
@@ -1376,7 +1370,6 @@
 {"title":"Node.js Book","url":"https://goalkicker.com/NodeJSBook","type":"basics","source":"goalkicker.com","_id":"ntmIOjuIIPK8AAN1"}
 {"title":"Why Do We Interface?","url":"https://whydoweinterface.com","type":"basics","source":"whydoweinterface.com","_id":"ntySEhlzPBmdxyYU"}
 {"title":"Why Npm Scripts","url":"https://css-tricks.com/why-npm-scripts","type":"advanced","source":"css-tricks.com","_id":"nvsjWVYM2a9QMTfK"}
-{"title":"EnterpriseDesignSprints","url":"https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_EnterpriseDesignSprints.pdf","type":"advanced","source":"designbetter.co","healthcheck":{"runner":"PdfFile"},"_id":"nxI2eUE0lkucOjlw"}
 {"title":"python-obj-system","url":"https://github.com/MoserMichael/python-obj-system","type":"advanced","source":"github.com/MoserMichael","_id":"o2xKFtkcnT2nmzC9"}
 {"title":"Containerization","url":"https://devopedia.org/containerization","type":"basics","source":"devopedia.org","_id":"o2zGSRKONImiCMfW"}
 {"title":"My most useful RegExp trick","url":"https://dassur.ma/things/regexp-quote","type":"how-to","source":"dassur.ma","_id":"o3pHK84szYme1ryC"}
@@ -1467,7 +1460,7 @@
 {"title":"Execute npm Package Binaries with the npx Package Runner","url":"https://egghead.io/courses/execute-npm-package-binaries-with-the-npx-package-runner","type":"basics","source":"egghead.io","_id":"qy7SouzH0R1y1IMC"}
 {"title":"WSL 2","url":"https://www.youtube.com/playlist?list=PLhfrWIlLOoKNMHhB39bh3XBpoLxV3f0V9","source":"youtube.com/@davidbombal","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"qz2uSjY8Nt0yCBEf"}
 {"title":"dotfiles","url":"https://github.com/thoughtbot/dotfiles","type":"tool","source":"github.com/thoughtbot","_id":"r07k0S7nIszKCmw3"}
-{"title":"Built For Mars","url":"https://builtformars.com/","type":"feed","source":"builtformars.com","_id":"r4EIO1sQEFnk7Lme"}
+{"title":"Learn UX Design","url":"https://builtformars.com/","type":"feed","source":"builtformars.com","_id":"r4EIO1sQEFnk7Lme"}
 {"url":"https://appliedgo.net","title":"Applied Go","source":"appliedgo.net","type":"feed","_id":"rNFF7zv14hgNkqRm"}
 {"title":"How To Build a Links Landing Page in PHP with Laravel and Docker Compose","url":"https://www.digitalocean.com/community/tutorial_series/how-to-build-a-links-landing-page-in-php-with-laravel-and-docker-compose","source":"digitalocean.com/community","type":"how-to","_id":"rPWGDlyDyFSmIOst"}
 {"title":"Scientific Computing with Python","url":"https://www.freecodecamp.org/learn/scientific-computing-with-python/","type":"basics","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"rSTA6UcCCzKVvuTg"}
@@ -1582,7 +1575,6 @@
 {"title":"Search engine optimization","url":"https://learn-the-web.algonquindesign.ca/topics/search-engine-optimization","source":"learn-the-web.algonquindesign.ca","type":"basics","_id":"vmrxewWsEaBAxIHF"}
 {"title":"Building the most inaccessible site possible with a perfect Lighthouse score","url":"https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score","type":"curiosity","source":"matuzo.at","_id":"vnCAydtTV10iRR83"}
 {"title":"How to Do 90% of What Plugins Do (With Just Vim)","url":"https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs","source":"youtube.com/c/ThoughtbotVideo","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"vq0nI2AUuP1kNGWi"}
-{"title":"DesignSystemsHandbook","url":"https://s3.amazonaws.com/designco-web-assets/uploads/2019/05/InVision_DesignSystemsHandbook.pdf","type":"basics","source":"designbetter.co","healthcheck":{"runner":"PdfFile"},"_id":"vtUZlPbORNsRb2zP"}
 {"title":"Build a static site generator in 40 lines with Node.js","url":"https://www.webdevdrops.com/en/build-static-site-generator-nodejs-8969ebe34b22","type":"advanced","source":"webdevdrops.com","_id":"vwUJ1rKvoTWIqxBv"}
 {"title":"Next.js Tutorial for Beginners","url":"https://www.youtube.com/playlist?list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH","source":"youtube.com/c/Codevolution","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"w3ZjOnCUKUvTjuUR"}
 {"title":"Interview with a Senior Python Developer - Part2","url":"https://www.youtube.com/watch?v=xyrgkui0uCA","source":"youtube.com/@programmersarealsohuman5909","type":"curiosity","healthcheck":{"runner":"YoutubeData"},"_id":"w77D5QrQVLxupazs"}
