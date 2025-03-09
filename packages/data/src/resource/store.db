@@ -309,7 +309,7 @@
 {"title":"A Neovim Task Runner in 30 lines of Lua","url":"https://www.hillelwayne.com/post/task-runner-neovim/","type":"how-to","source":"hillelwayne.com","_id":"BxNcP2BCVVUAHq81"}
 {"title":"60 Days of Animation","url":"https://undead.institute/60-days-of-animation","type":"how-to","source":"undead.institute","_id":"BzjYFPGGAYyLhn9z"}
 {"title":"Building Docker Images The Proper Way","url":"https://martinheinz.dev/blog/42","type":"how-to","source":"martinheinz.dev","_id":"BztGnD1pTub90WrJ"}
-{"title":"Learn CSS Variables","url":"https://v2.scrimba.com/learn-css-variables-c026","source":"v2.scrimba.com","type":"basics","_id":"C4z2OpehGATGk482"}
+{"title":"CSS Variables Tutorial","url":"https://v2.scrimba.com/learn-css-variables-c026","source":"v2.scrimba.com","type":"basics","_id":"C4z2OpehGATGk482"}
 {"title":"A Typescript onramp","url":"https://blog.scottnonnenberg.com/a-typescript-onramp","type":"basics","source":"blog.scottnonnenberg.com","_id":"C6K63IeYxsy5YTCC"}
 {"title":"The Hitchhiker’s Guide to Python!","url":"https://docs.python-guide.org/","type":"reference","source":"docs.python-guide.org","_id":"CAVbP8xfmtrY8q4w"}
 {"url":"https://fast4ward.online/posts/a-guide-to-interfaces-in-go/","title":"A Guide to Interfaces in Go","source":"fast4ward.online","type":"advanced","_id":"CDI8lnOa7aGrXQVW"}
@@ -322,7 +322,6 @@
 {"url":"https://www.coursera.org/specializations/google-golang/","title":"Programming with Google Go","source":"coursera.org","type":"basics","_id":"CLyvbeik1RVVpj6I"}
 {"title":"React Testing Course for Beginners – Code and Test 3 Apps","url":"https://www.youtube.com/watch?v=8vfQ6SWBZ-U","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"CMMoRptJGDnOed3B"}
 {"title":"Next JS with React Hooks - Building SSR React Applications","url":"https://www.udemy.com/course/next-js-react-hooks","type":"basics","source":"udemy.com","healthcheck":{"runner":"UdemyAffiliate"},"_id":"CMvqxrTeofZ07rCf"}
-{"title":"CodePen","url":"https://codepen.io","type":"feed","source":"codepen.io","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"COmSJeGcqlJzvnEU"}
 {"title":"Patterns for Managing Source Code Branches","url":"https://martinfowler.com/articles/branching-patterns.html","type":"advanced","source":"martinfowler.com","_id":"CQmq9b8wNrPUV6xx"}
 {"title":"Fundamentals of Redux Course from Dan Abramov","url":"https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867","type":"basics","source":"egghead.io","_id":"CRZBab8XFh07Q6cJ"}
 {"title":"ShellCheck","url":"https://www.shellcheck.net/","type":"tool","source":"shellcheck.net","_id":"CSYFUpZwrwApf68t"}
@@ -371,7 +370,7 @@
 {"title":"The Definitive Guide to Jython","url":"https://jython.readthedocs.io/en/latest","type":"curiosity","source":"jython.readthedocs.io","_id":"Dp233Mz2wS0GHHSp"}
 {"title":"Learn CSS Grid","url":"https://learncssgrid.com","type":"basics","source":"learncssgrid.com","_id":"DsYH3HsU22Nk8UeL"}
 {"url":"https://github.com/ardanlabs/service","title":"service","source":"github.com/ardanlabs","type":"tool","_id":"Dsr3OaBkgh8MUvdc"}
-{"title":"Intro to HTML/CSS: Making webpages","url":"https://www.khanacademy.org/computing/computer-programming/html-css","type":"basics","source":"khanacademy.org","_id":"Dw9oCajxjzvXxpQ8"}
+{"title":"Intro to HTML/CSS: Making webpages","url":"https://www.khanacademy.org/computing/computer-programming/html-css","type":"basics","source":"khanacademy.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"load"}},"_id":"Dw9oCajxjzvXxpQ8"}
 {"title":"build-your-own-x","url":"https://github.com/codecrafters-io/build-your-own-x","type":"reference","source":"github.com/codecrafters-io","_id":"Dxc8c4FiLfsf84rf"}
 {"title":"Learn to Code HTML & CSS","url":"https://learn.shayhowe.com/html-css","type":"basics","source":"learn.shayhowe.com","_id":"E1FrutCNghzhiwHe"}
 {"title":"Demystifying Debugging With React Developer Tools","url":"https://www.toptal.com/react/debugging-react-developer-tools","type":"advanced","source":"toptal.com","_id":"E2IVWr4LPolA8ozj"}
@@ -711,7 +710,6 @@
 {"title":"Python Software Foundation News","url":"https://pyfound.blogspot.com/","type":"feed","source":"pyfound.blogspot.com","_id":"QW6gO8bDJ5cbc9H5"}
 {"title":"Custom Neovim Statusline","url":"https://nuxsh.is-a.dev/blog/custom-nvim-statusline.html","type":"advanced","source":"nuxsh.is-a.dev","_id":"QXP6qhMRR3dGJKB6"}
 {"title":"JavaScript Algorithms and Data Structures","url":"https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8","type":"basics","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"QbyJa3lVeBmrS5iT"}
-{"title":"HTML - Simplified code","url":"http://html.systems","type":"how-to","source":"html.systems","_id":"QjAf9D5fYd6cALtA"}
 {"title":"Google UX Design Professional Certificate Courses","url":"https://www.youtube.com/playlist?list=PLtS8Ubq2bIlUWixdH_1Q2yzZh8QJSBVmT","source":"youtube.com/@MyLesson007","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"Qlwkr4MThUpOY0iY"}
 {"title":"Neovim lua plugins","url":"https://nvimluau.dev/","type":"reference","source":"nvimluau.dev","_id":"Qo5tRnKj5JmYwX6w"}
 {"title":"React Libraries","url":"https://www.reactlibraries.com/","type":"reference","source":"reactlibraries.com","_id":"QrwTip95SmJezc7V"}
@@ -1114,7 +1112,7 @@
 {"title":"What's The Vim Runtime? A Guide With Examples","url":"https://thevaluable.dev/vim-runtime-guide-example","type":"advanced","source":"thevaluable.dev","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"fBOE7V35El9EYBli"}
 {"url":"https://github.com/go-training/training","title":"training","source":"github.com/go-training","type":"basics","_id":"fBhCeDBGxwYnwYoY"}
 {"title":"HTML & Coding Introduction","url":"https://www.youtube.com/watch?v=GDGejH3SDNQ","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"fD8LfBFdnMaAfkTr"}
-{"title":"A Complete Guide To CSS Cascade Layers","url":"https://css-tricks.com/css-cascade-layers","type":"advanced","source":"css-tricks.com","_id":"fF0niUO4otyRq3r4"}
+{"title":"Cascade Layers Guide","url":"https://css-tricks.com/css-cascade-layers","type":"advanced","source":"css-tricks.com","_id":"fF0niUO4otyRq3r4"}
 {"title":"TypeScript","url":"https://www.typescriptlang.org/","type":"reference","source":"typescriptlang.org","_id":"fHoxkag1ITifShqC"}
 {"title":"CSS Challenges","url":"https://css-challenges.com","type":"basics","source":"css-challenges.com","_id":"fNRQgJ2s4zuLE94i"}
 {"url":"https://programmingpercy.tech/blog/how-to-domain-driven-design-ddd-golang/","title":"How To Implement Domain-Driven Design (DDD) in Golang","source":"programmingpercy.tech","type":"advanced","_id":"fOIr74reaqsGFLdR"}
@@ -1170,7 +1168,7 @@
 {"title":"Invisible Forces in Design","url":"https://webdesign.tutsplus.com/series/invisible-forces-in-design--cms-1060","type":"basics","source":"webdesign.tutsplus.com","_id":"gzoa4gJhF7RNESrN"}
 {"title":"Learn tmux","url":"https://thoughtbot.com/upcase/tmux","type":"basics","source":"thoughtbot.com","_id":"h1METGldYXStNoax"}
 {"title":"awesome-cli-apps","url":"https://github.com/agarrharr/awesome-cli-apps","type":"reference","source":"github.com/agarrharr","_id":"h5qYA0fiZZUSKT49"}
-{"title":"CSS Blend Modes","url":"https://garden.bradwoods.io/notes/css/blend-modes","type":"advanced","source":"garden.bradwoods.io","_id":"h6SgutQFVfh3mIDT"}
+{"title":"CSS blend modes","url":"https://garden.bradwoods.io/notes/css/blend-modes","type":"advanced","source":"garden.bradwoods.io","_id":"h6SgutQFVfh3mIDT"}
 {"title":"practicalnode","url":"https://github.com/azat-co/practicalnode","type":"basics","source":"github.com/azat-co","_id":"h7MRU2vfVAshEbrG"}
 {"url":"https://github.com/TheAlgorithms/Go","title":"Go","source":"github.com/TheAlgorithms","type":"advanced","_id":"h8Ccz0hDzsx5A5GX"}
 {"title":"Node Target Mapping","url":"https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping","type":"reference","source":"github.com/microsoft","_id":"h8L2EEQ28aj3NU2K"}
@@ -1185,11 +1183,11 @@
 {"title":"Build your own web framework","url":"https://vercel.com/blog/build-your-own-web-framework","type":"advanced","source":"vercel.com","_id":"hKAPf6VHks15Kg9m"}
 {"title":"Docker Tutorials","url":"https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBkvpSIgwchk0glHLz7CQ-7","source":"youtube.com/@thenewboston","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"hLdiUV4eJ8qpTLwh"}
 {"title":"iconmonstr","url":"https://iconmonstr.com/","type":"tool","source":"iconmonstr.com","_id":"hLjIDypOqZLUf8L7"}
-{"title":"Structuring the web with HTML","url":"https://developer.mozilla.org/en-US/docs/Learn/HTML","type":"basics","source":"developer.mozilla.org","_id":"hM8x1EIwkorp7gat"}
+{"title":"Structuring content with HTML","url":"https://developer.mozilla.org/en-US/docs/Learn/HTML","type":"basics","source":"developer.mozilla.org","_id":"hM8x1EIwkorp7gat"}
 {"title":"Git Tutorial","url":"https://www.educba.com/software-development/software-development-tutorials/git-tutorial","type":"basics","source":"educba.com","_id":"hNYJhavmLBgVxzIF"}
 {"title":"JSDoc typings: all the benefits of TypeScript, with none of the drawbacks","url":"https://gils-blog.tayar.org/posts/jsdoc-typings-all-the-benefits-none-of-the-drawbacks","type":"advanced","source":"gils-blog.tayar.org","_id":"hQFtDh4W3xTUuUlS"}
 {"title":"accessibility-guide","url":"https://github.com/fejes713/accessibility-guide","type":"how-to","source":"github.com/fejes713","_id":"hSrGbC3Ssj4uBnoR"}
-{"title":"Explore 3000+ Free UI Elements: CSS & Tailwind","url":"https://uiverse.io/","type":"how-to","source":"uiverse.io","_id":"hUBaiYFQtSrP5ngQ"}
+{"title":"Uiverse","url":"https://uiverse.io/","type":"how-to","source":"uiverse.io","_id":"hUBaiYFQtSrP5ngQ"}
 {"title":"Learn Python","url":"https://www.learnpython.org/","type":"basics","source":"learnpython.org","_id":"hViVFTHdJz0kOF5e"}
 {"title":"Shell Scripting Crash Course","url":"https://www.youtube.com/watch?v=GtovwKDemnI","source":"youtube.com/@edurekaIN","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"hVjTljt4G7Fik4iF"}
 {"title":"Modern CSS Solutions","url":"https://moderncss.dev","source":"moderncss.dev","type":"advanced","_id":"hWBOPOkT95P6H0RT"}
@@ -1222,7 +1220,7 @@
 {"title":"User Interface (UI) Personalization","url":"https://www.edx.org/course/user-interface-ui-personalization","type":"basics","source":"edx.org","_id":"iBMPAg4gz4DMg2Vq"}
 {"url":"https://github.com/gin-gonic/examples","title":"examples","source":"github.com/gin-gonic","type":"how-to","_id":"iCr0aZBzvljW3Dan"}
 {"title":"React Express","url":"http://www.react.express","type":"basics","source":"react.express","_id":"iFZiUTm3zStA0sxs"}
-{"title":"How To Section Your HTML","url":"https://css-tricks.com/how-to-section-your-html","type":"basics","source":"css-tricks.com","_id":"iGkevTVRuR4387Jd"}
+{"title":"How to Section Your HTML","url":"https://css-tricks.com/how-to-section-your-html","type":"basics","source":"css-tricks.com","_id":"iGkevTVRuR4387Jd"}
 {"title":"Command Line Applications in Rust","url":"https://rust-cli.github.io/book/index.html","type":"advanced","source":"rust-cli.github.io","_id":"iHEcRNuFAGn8HwRX"}
 {"title":"VimGenius","url":"http://www.vimgenius.com/lessons","type":"basics","source":"vimgenius.com","_id":"iMveAk3FU00kbwHG"}
 {"title":"Top End Devs","url":"https://javascriptjabber.com","type":"feed","source":"javascriptjabber.com","_id":"iNZJ3r3mjBzzTLV2"}
@@ -1539,7 +1537,7 @@
 {"title":"Typewolf","url":"https://www.typewolf.com","type":"feed","source":"typewolf.com","_id":"uHgwQasZHu3pyj10"}
 {"title":"clean-code-typescript","url":"https://labs42io.github.io/clean-code-typescript","type":"how-to","source":"labs42io.github.io","_id":"uI0id5m6YPTZP8Jb"}
 {"url":"https://100go.co/","title":"Common Go Mistakes","source":"100go.co","type":"advanced","_id":"uK7gEY3e7t5sFpqo"}
-{"title":"Learn to style HTML using CSS","url":"https://developer.mozilla.org/en-US/docs/Learn/CSS","type":"basics","source":"developer.mozilla.org","_id":"uKzQG7jEFT3OQOyO"}
+{"title":"CSS styling basics","url":"https://developer.mozilla.org/en-US/docs/Learn/CSS","type":"basics","source":"developer.mozilla.org","_id":"uKzQG7jEFT3OQOyO"}
 {"url":"https://github.com/amit-davidson/awesome-golang-workshops","title":"awesome-golang-workshops","source":"github.com/amit-davidson","type":"reference","_id":"uLMvT4UKS7CQCzps"}
 {"title":"Exploring Advanced TypeScript Concepts","url":"https://www.youtube.com/watch?v=eJ6R1knfsoc","source":"youtube.com/c/Headwayio","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"uPA519LXIAX0Sktu"}
 {"title":"Socket.io Crash Course - Build a Real Time Chat Application","url":"https://www.youtube.com/watch?v=asVDzgdyYLk","source":"youtube.com/@laithacademy","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"uTx2eUty8boI5zxb"}
@@ -1633,7 +1631,7 @@
 {"title":"Python for Everybody","url":"https://www.coursera.org/specializations/python","type":"basics","source":"coursera.org","_id":"yEiHZdmsH6TqR0Bf"}
 {"title":"awesome-powershell","url":"https://github.com/janikvonrotz/awesome-powershell","type":"reference","source":"github.com/janikvonrotz","_id":"yGYH5nYv0bbNNZff"}
 {"title":"Publishing and consuming ECMAScript modules via packages","url":"https://2ality.com/2022/01/esm-specifiers.html","type":"basics","source":"2ality.com","_id":"yIWL9vXlnFNzEAtE"}
-{"title":"A Nerd's Guide To Color On The Web","url":"https://css-tricks.com/nerds-guide-color-web/","type":"advanced","source":"css-tricks.com","_id":"yJAkMMAlTZneyLeu"}
+{"title":"Working With Colors Guide","url":"https://css-tricks.com/nerds-guide-color-web/","type":"advanced","source":"css-tricks.com","_id":"yJAkMMAlTZneyLeu"}
 {"title":"RegexOne - Learn Regular Expressions","url":"https://regexone.com","type":"basics","source":"regexone.com","_id":"yMVZqoTeXPavdpty"}
 {"title":"Bash Scripting Tutorial","url":"https://ryanstutorials.net/bash-scripting-tutorial/","type":"basics","source":"ryanstutorials.net","_id":"yNmDUksf91Po2XY5"}
 {"title":"Create Your Own JavaScript Runtime with V8, Libuv & More","url":"https://www.youtube.com/watch?v=ynNDmp7hBdo","source":"youtube.com/@ErickWendelTraining","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"yOxurExJhILtRHx9"}
