@@ -85,7 +85,7 @@
 {"title":"Learn Shell","url":"https://www.learnshell.org/","type":"basics","source":"learnshell.org","_id":"3H7GzRJ1QDptaW7R"}
 {"title":"How to Handle Secrets on the Command Line","url":"https://smallstep.com/blog/command-line-secrets/","type":"how-to","source":"smallstep.com","_id":"3HtXGnDBnx8FGgbN"}
 {"title":"190 Python Projects with Source Code","url":"https://amankharwal.medium.com/130-python-projects-with-source-code-61f498591bb","type":"how-to","source":"amankharwal.medium.com","_id":"3JM4PKxLiXLyRPUp"}
-{"title":"Git - Book","url":"https://git-scm.com/book/en/v2","type":"reference","source":"git-scm.com","_id":"3O2TN7dll9BjrnM7"}
+{"title":"Git","url":"https://git-scm.com/book/en/v2","type":"reference","source":"git-scm.com","_id":"3O2TN7dll9BjrnM7"}
 {"title":"Basic Git Commands","url":"https://www.atlassian.com/git/glossary","type":"reference","source":"atlassian.com","_id":"3Y40SswkGq7GSSVr"}
 {"title":"How to learn Git slowly.","url":"https://dev.to/samuelfaure/how-to-learn-git-slowly-38fa","source":"dev.to/samuelfaure","type":"curiosity","_id":"3blxRkVDEYwmyviJ"}
 {"title":"A visual guide to React Mental models","url":"https://obedparla.com/code/a-visual-guide-to-react-mental-models","type":"advanced","source":"obedparla.com","_id":"3clR8sJryvITZFPE"}
@@ -200,7 +200,7 @@
 {"title":"Learn Anything","url":"https://learn-anything.xyz","type":"reference","source":"learn-anything.xyz","_id":"7lAoRPJDRAt23NOm"}
 {"title":"Simplified JavaScript Jargon","url":"http://jargon.js.org","type":"reference","source":"jargon.js.org","_id":"7o0chOiiMt3EganZ"}
 {"title":"Accessibility Myths","url":"https://a11ymyths.com","type":"curiosity","source":"a11ymyths.com","_id":"7qXD1IbyGGlyAczX"}
-{"title":"Learn X in Y Minutes","url":"https://learnxinyminutes.com/docs/git","type":"reference","source":"learnxinyminutes.com","_id":"7qjN3MNtXIQ3Mc46"}
+{"title":"Learn Git in Y Minutes","url":"https://learnxinyminutes.com/git/","type":"reference","source":"learnxinyminutes.com","_id":"7qjN3MNtXIQ3Mc46"}
 {"title":"The Hitchhiker’s Guide to Next.js","url":"https://medium.com/swlh/the-hitchhikers-guide-to-next-js-fd7aa14ae8d0","source":"medium.com/swlh","type":"curiosity","_id":"7ruHPJxP8YGUkmpw"}
 {"title":"Regex Tutorial","url":"https://v2.scrimba.com/learn-regular-expressions-c0d","type":"basics","source":"v2.scrimba.com","_id":"7wk5vjcVG1dwtxje"}
 {"title":"Drum Machine with Python and Pygame","url":"https://www.youtube.com/watch?v=F3J3PZj0zi0","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"7yrqDK81PX8KTxF2"}
@@ -420,7 +420,7 @@
 {"title":"PowerShell Succinctly","url":"https://www.syncfusion.com/succinctly-free-ebooks/powershell","type":"basics","source":"syncfusion.com","_id":"Fn6yxGFvMpuSFwXG"}
 {"url":"https://github.com/sollniss/repository-patterns","title":"repository-patterns","source":"github.com/sollniss","type":"how-to","_id":"FnqzV3TWIdaFMYZK"}
 {"title":"Next.js & Contentful Tutorial","url":"https://www.youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1","source":"youtube.com/c/TheNetNinja","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"Fp4PxhReO62bgqeT"}
-{"title":"Version Control with Git","url":"https://www.udacity.com/course/version-control-with-git--ud123","type":"basics","source":"udacity.com","_id":"FqN754NebdO9TSov"}
+{"title":"Version Control with Git","url":"https://www.udacity.com/course/version-control-with-git--ud123","type":"basics","source":"udacity.com","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"load"}},"_id":"FqN754NebdO9TSov"}
 {"title":"Examples of large production-grade, open-source React apps","url":"https://maxrozen.com/examples-of-large-production-grade-open-source-react-apps","type":"how-to","source":"maxrozen.com","_id":"Fw68wFBhxbxWcosh"}
 {"title":"100 Days of Code - Learn Python","url":"https://www.youtube.com/playlist?list=PLto9KpJAqHMQNY3XP0JqLs7NyeU_dnNj0","source":"youtube.com/@replit","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"FwlH25XwRRWnV3IJ"}
 {"title":"Building an effective Image Component","url":"https://web.dev/image-component","type":"curiosity","source":"web.dev","_id":"FxYaLGMQnTUGqcY9"}
@@ -545,7 +545,7 @@
 {"title":"CSS Grid","url":"https://cssgrid.io","source":"cssgrid.io","type":"basics","_id":"K7RS5fLtZnm3NKZM"}
 {"title":"Beyond the Basic Stuff with Python","url":"https://inventwithpython.com/beyond","type":"basics","source":"inventwithpython.com","_id":"K7XQWRZPAUJRY7yZ"}
 {"title":"How to Create a Hybrid NPM Module for ESM and CommonJS.","url":"https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html","type":"how-to","source":"sensedeep.com","_id":"K7ql4OUr3nQpQeFO"}
-{"title":"Git's database internals","url":"https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store","type":"advanced","source":"github.blog","_id":"K8Ycvafj3dqKyxoK"}
+{"title":"Git’s database internals","url":"https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store","type":"advanced","source":"github.blog","_id":"K8Ycvafj3dqKyxoK"}
 {"url":"https://www.youtube.com/watch?v=akosxcqJorU","title":"Go for Absolute Beginners","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"KAoWgykmIe6vb5ya"}
 {"title":"Moving to zsh","url":"https://scriptingosx.com/2019/06/moving-to-zsh/","type":"basics","source":"scriptingosx.com","_id":"KBdShPs7WX6eKjSV"}
 {"title":"chris@machine","url":"https://www.youtube.com/c/ChrisAtMachine","type":"feed","source":"youtube.com","healthcheck":{"runner":"YoutubeData"},"_id":"KBdgkvNHeclBc66n"}
