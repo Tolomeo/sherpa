@@ -257,7 +257,7 @@
 {"title":"Bret Fisher Cloud Native DevOps","url":"https://www.youtube.com/@BretFisher","source":"youtube.com/@BretFisher","type":"feed","healthcheck":{"runner":"YoutubeData"},"_id":"9nDTNiMkOqhecjb9"}
 {"title":"JavaScript Equality Table Game","url":"https://eqeq.js.org/","type":"basics","source":"eqeq.js.org","_id":"9nZSvuxD8M5Fkpkv"}
 {"title":"Comparing Manual and Free Automated WCAG Reviews","url":"https://adrianroselli.com/2023/01/comparing-manual-and-free-automated-wcag-reviews.html","type":"curiosity","source":"adrianroselli.com","_id":"9na8BhcfcSpifGC6"}
-{"title":"Erick Wendel","url":"https://www.youtube.com/@ErickWendelTraining","source":"youtube.com/@ErickWendelTraining","type":"feed","healthcheck":{"runner":"YoutubeData"},"_id":"9pZAjlaPcub0Kf0y"}
+{"title":"Erick Wendel","url":"https://www.youtube.com/@ErickWendelAcademy","source":"youtube.com/@ErickWendelAcademy","type":"feed","healthcheck":{"runner":"YoutubeData"},"_id":"9pZAjlaPcub0Kf0y"}
 {"title":"The Docker Crash Course","url":"https://www.youtube.com/watch?v=KfGr49Z7OaA","source":"youtube.com/@laithacademy","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"9si5IFsx5Ke9Do4r"}
 {"title":"An Introduction to the Command-Line","url":"https://www.oliverelliott.org/post/commandline/","type":"basics","source":"oliverelliott.org","_id":"9ue1FroODrgypB0C"}
 {"title":"Creating a Tetris Online Multiplayer in Javascript","url":"https://www.youtube.com/playlist?list=PLS8HfBXv9ZWW49tOAbvxmKy17gpsqWXaX","source":"youtube.com/c/MethMethMethod","type":"how-to","healthcheck":{"runner":"YoutubeData"},"_id":"9vEgnaYHuUqBI7H6"}
@@ -470,7 +470,7 @@
 {"title":"Lua-guide","url":"https://neovim.io/doc/user/lua-guide.html","type":"basics","source":"neovim.io","_id":"HaQIXnc3JM5c6bgO"}
 {"title":"Patterns","url":"https://maggieappleton.com/patterns","type":"advanced","source":"maggieappleton.com","_id":"HbELC6OnBP8z3k89"}
 {"url":"https://github.com/SimonWaldherr/rpi-examples","title":"rpi-examples","source":"github.com/SimonWaldherr","type":"how-to","_id":"HhHrfreb77HUqNrM"}
-{"title":"Let's code a web server from scratch with NodeJS Streams!","url":"https://www.codementor.io/@ziad-saab/let-s-code-a-web-server-from-scratch-with-nodejs-streams-h4uc9utji","type":"advanced","source":"codementor.io","healthcheck":{"runner":"Zenscrape","config":{"titleSelector":"title:not(:empty)","render":true,"premium":false}},"_id":"HhmOMLMHoGHhVBBm"}
+{"title":"Let's code a web server from scratch with NodeJS Streams!","url":"https://www.codementor.io/@ziad-saab/let-s-code-a-web-server-from-scratch-with-nodejs-streams-h4uc9utji","type":"advanced","source":"codementor.io","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"load"}},"_id":"HhmOMLMHoGHhVBBm"}
 {"url":"https://www.zarl.dev/articles/enums","title":"Go Enums Suck","source":"zarl.dev","type":"advanced","_id":"HjThXBqnBXFDJe6K"}
 {"title":"GitHowTo","url":"https://githowto.com","type":"basics","source":"githowto.com","_id":"HjfhA53l3o6GdkdJ"}
 {"title":"Real Python","url":"https://realpython.com","type":"feed","source":"realpython.com","_id":"Hlp8hGTqn45e1qDT"}
@@ -573,7 +573,7 @@
 {"title":"Access Guide","url":"https://www.accessguide.io","type":"basics","source":"accessguide.io","_id":"LDA7nttpqT84TMnl"}
 {"title":"JavaScript AntiDebugging Tricks","url":"https://x-c3ll.github.io/posts/2018/02/08/javascript-antidebugging.html","type":"curiosity","source":"x-c3ll.github.io","_id":"LGCWbiJZzYCqvQXJ"}
 {"title":"Building a Simple Virtual DOM from Scratch","url":"https://dev.to/ycmjason/building-a-simple-virtual-dom-from-scratch-3d05","type":"advanced","source":"dev.to","_id":"LGs6mvOdkahpRd8t"}
-{"title":"nodejs-integration-tests-best-practices","url":"https://github.com/testjavascript/nodejs-integration-tests-best-practices","type":"basics","source":"github.com/testjavascript","_id":"LIjLLaBk0Ccc4aye"}
+{"title":"nodejs-testing-best-practices","url":"https://github.com/testjavascript/nodejs-integration-tests-best-practices","type":"basics","source":"github.com/testjavascript","_id":"LIjLLaBk0Ccc4aye"}
 {"title":"Better Git configuration","url":"https://blog.scottnonnenberg.com/better-git-configuration","type":"how-to","source":"blog.scottnonnenberg.com","_id":"LInG7RWVLM0bZIcK"}
 {"title":"TypeScript Exercises","url":"https://typescript-exercises.github.io","type":"basics","source":"typescript-exercises.github.io","_id":"LIujWP9IzuisD9bC"}
 {"title":"cosmic_python","url":"https://www.cosmicpython.com","type":"how-to","source":"cosmicpython.com","_id":"LJsedl3wNK4HAx0g"}
@@ -678,7 +678,6 @@
 {"title":"reactjs-interview-questions","url":"https://github.com/sudheerj/reactjs-interview-questions","type":"curiosity","source":"github.com/sudheerj","_id":"PMCtZ7PdWT0uClTB"}
 {"title":"Vim Un-Alphabet","url":"https://www.youtube.com/playlist?list=PL46-cKSxMYYCMpzXo6p0Cof8hJInYgohU","source":"youtube.com/user/jbranchaud","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"PNxDRKkz23jM5eoQ"}
 {"title":"Building a JavaScript Testing Framework","url":"https://cpojer.net/posts/building-a-javascript-testing-framework","type":"advanced","source":"cpojer.net","_id":"PPpzgiKVNTf1AdC7"}
-{"title":"Clean Architecture in Node JS","url":"https://www.freecodecamp.org/news/video-clean-architecture-in-node-js","type":"how-to","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"PQUajfbqBBr4MS3T"}
 {"title":"Web Almanac","url":"https://almanac.httparchive.org","type":"curiosity","source":"almanac.httparchive.org","_id":"PRt7wyyo7c1ni8Gz"}
 {"title":"How To Scale Node.js Applications with Clustering","url":"https://www.digitalocean.com/community/tutorials/how-to-scale-node-js-applications-with-clustering","type":"how-to","source":"digitalocean.com","_id":"PWrKX2dz1zL3ntAI"}
 {"title":"Design System Checklist","url":"https://www.designsystemchecklist.com","type":"tool","source":"designsystemchecklist.com","_id":"PYkZbJKFJFQyMhS0"}
