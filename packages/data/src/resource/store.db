@@ -202,7 +202,7 @@
 {"title":"Accessibility Myths","url":"https://a11ymyths.com","type":"curiosity","source":"a11ymyths.com","_id":"7qXD1IbyGGlyAczX"}
 {"title":"Learn X in Y Minutes","url":"https://learnxinyminutes.com/docs/git","type":"reference","source":"learnxinyminutes.com","_id":"7qjN3MNtXIQ3Mc46"}
 {"title":"The Hitchhiker’s Guide to Next.js","url":"https://medium.com/swlh/the-hitchhikers-guide-to-next-js-fd7aa14ae8d0","source":"medium.com/swlh","type":"curiosity","_id":"7ruHPJxP8YGUkmpw"}
-{"title":"Learn Regular Expressions","url":"https://v2.scrimba.com/learn-regular-expressions-c0d","type":"basics","source":"v2.scrimba.com","_id":"7wk5vjcVG1dwtxje"}
+{"title":"Regex Tutorial","url":"https://v2.scrimba.com/learn-regular-expressions-c0d","type":"basics","source":"v2.scrimba.com","_id":"7wk5vjcVG1dwtxje"}
 {"title":"Drum Machine with Python and Pygame","url":"https://www.youtube.com/watch?v=F3J3PZj0zi0","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"7yrqDK81PX8KTxF2"}
 {"title":"Design Systems Repo","url":"https://designsystemsrepo.com","type":"how-to","source":"designsystemsrepo.com","_id":"81w9w35CzcHwkFID"}
 {"title":"Python Platformer Game Tutorial for Beginners","url":"https://www.youtube.com/watch?v=6gLeplbqtqg","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"84DKlzPpfL5mtxoW"}
