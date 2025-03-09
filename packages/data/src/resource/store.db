@@ -8,7 +8,7 @@
 {"title":"vim-cheatsheet","url":"https://github.com/ibhagwan/vim-cheatsheet","type":"reference","source":"github.com/ibhagwan","_id":"0ApswUpx99My19kl"}
 {"title":"Learn How to Develop and Publish an NPM Package","url":"https://auth0.com/blog/developing-npm-packages","type":"how-to","source":"auth0.com","_id":"0F8aKXdx6eXCwgja"}
 {"title":"CSSBattle","url":"https://cssbattle.dev","type":"curiosity","source":"cssbattle.dev","_id":"0Ga4y6KWlQGABKD9"}
-{"title":"Web Scraping with Python: A Complete Step-by-Step Guide 2023 + Code","url":"https://gologin.com/blog/web-scraping-with-python","type":"basics","source":"gologin.com","_id":"0KAZheE0DnNnmUuB"}
+{"title":"Web Scraping with Python","url":"https://gologin.com/blog/web-scraping-with-python","type":"basics","source":"gologin.com","_id":"0KAZheE0DnNnmUuB"}
 {"title":"The Python GTK+ 3 Tutorial","url":"https://python-gtk-3-tutorial.readthedocs.io/en/latest","type":"advanced","source":"python-gtk-3-tutorial.readthedocs.io","_id":"0KK5XXGGmkVptm1X"}
 {"title":"Ultimate Python Multithreading Guide","url":"https://programmingeeksclub.com/ultimate-python-multithreading-guide/","type":"advanced","source":"programmingeeksclub.com","_id":"0KSud0oduucltv5Z"}
 {"url":"https://www.youtube.com/watch?v=MpFog2kZsHk","title":"How To Structure Your Go App - Full Course [ Hex Arch + Tests ]","source":"youtube.com/@kantancoding","type":"advanced","_id":"0Kk90LDCGjzN9lun"}
@@ -38,7 +38,7 @@
 {"title":"React Context: The Detailed Guide","url":"https://deadsimplechat.com/blog/react-context-tutorial/","type":"basics","source":"deadsimplechat.com","_id":"1RF6r6Qt8u3Cd9yJ"}
 {"title":"Build your own Docker","url":"https://app.codecrafters.io/courses/docker/overview","type":"advanced","source":"app.codecrafters.io","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"1UL2oYusxXyfsONd"}
 {"title":"Why would anyone need JavaScript generator functions?","url":"https://jrsinclair.com/articles/2022/why-would-anyone-need-javascript-generator-functions/","type":"basics","source":"jrsinclair.com","_id":"1UldGsClYlzxGO0P"}
-{"title":"Alyssa Coghlan's Python Notes","url":"https://python-notes.curiousefficiency.org","type":"advanced","source":"python-notes.curiousefficiency.org","_id":"1VGM99qzghDpJUPy"}
+{"title":"Alyssa Coghlan’s Python Notes","url":"https://python-notes.curiousefficiency.org","type":"advanced","source":"python-notes.curiousefficiency.org","_id":"1VGM99qzghDpJUPy"}
 {"title":"Practical Git for Everyday Professional Use","url":"https://egghead.io/courses/practical-git-for-everyday-professional-use","type":"basics","source":"egghead.io","_id":"1VZiz5JVMl2xDIyw"}
 {"title":"learn-to-program: Educational resources to learn to program (Foundation in Web Development)","url":"https://github.com/karlhorky/learn-to-program","type":"reference","source":"github.com/karlhorky","_id":"1X0mdSwbcsibEI76"}
 {"title":"Vim Commands","url":"https://thevaluable.dev/vim-commands-beginner/","type":"basics","source":"thevaluable.dev","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"1aLjPTSczJH7ge6L"}
@@ -319,7 +319,7 @@
 {"title":"The Hitchhiker’s Guide to Python!","url":"https://docs.python-guide.org/","type":"reference","source":"docs.python-guide.org","_id":"CAVbP8xfmtrY8q4w"}
 {"url":"https://fast4ward.online/posts/a-guide-to-interfaces-in-go/","title":"A Guide to Interfaces in Go","source":"fast4ward.online","type":"advanced","_id":"CDI8lnOa7aGrXQVW"}
 {"url":"https://changelog.com/gotime","title":"The Go Time podcast","source":"changelog.com","type":"feed","_id":"CDZgpVYLMesqyRK8"}
-{"title":"Web Scraping With Python","url":"https://serpdog.io/blog/web-scraping-with-python/","type":"basics","source":"serpdog.io","_id":"CEkEOsUxQ0f6FBmv"}
+{"title":"Comprehensive Guide on Web Scraping with Python","url":"https://serpdog.io/blog/web-scraping-with-python/","type":"basics","source":"serpdog.io","_id":"CEkEOsUxQ0f6FBmv"}
 {"title":"Awwwards","url":"https://www.awwwards.com/","type":"how-to","source":"awwwards.com","_id":"CGAhWm4PQ64CDlEc"}
 {"title":"Arcade Academy - Learn Python","url":"https://learn.arcade.academy/en/latest/index.html","type":"basics","source":"learn.arcade.academy","_id":"CJMFFxBpvozw9Ptz"}
 {"title":"Type Design Resources","url":"https://typedesignresources.com/","type":"reference","source":"typedesignresources.com","_id":"CKdlOyyjm1Yd81Ho"}
@@ -667,7 +667,6 @@
 {"title":"101 Bash Commands and Tips for Beginners to Experts","url":"https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je","type":"basics","source":"dev.to","_id":"OQiHvRCeWWl1rGjA"}
 {"title":"The Interactive Guide to Rendering in React","url":"https://ui.dev/why-react-renders","type":"advanced","source":"ui.dev","healthcheck":{"runner":"Http","config":{"titleSelector":"title:not(:empty)"}},"_id":"ORhUNzhHaZIWUuGE"}
 {"title":"Interaction Design","url":"https://www.coursera.org/specializations/interaction-design","type":"basics","source":"coursera.org","_id":"OSFCiNbuIbyrGe7t"}
-{"title":"Dive Into Python 3","url":"https://diveintopython3.problemsolving.io","type":"curiosity","source":"diveintopython3.problemsolving.io","_id":"OTSG9dXuDkFVOQ4b"}
 {"title":"Learn Vite – Frontend Build Tool Course","url":"https://www.youtube.com/watch?v=VAeRhmpcWEQ","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"OVWVrEzo5NYJ4g8i"}
 {"title":"Using Web Components With Next (or Any SSR Framework)","url":"https://css-tricks.com/using-web-components-with-next-or-any-ssr-framework/","type":"how-to","source":"css-tricks.com","_id":"OVvKthEIYrP7dApJ"}
 {"title":"Learn HTML5 and CSS3 From Scratch","url":"https://www.youtube.com/watch?v=mU6anWqZJcc","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"OasXnbeZr9bk5NeD"}
@@ -1274,7 +1273,6 @@
 {"title":"Learn About Fonts","url":"https://www.youtube.com/playlist?list=PLgGbWId6zgaVDvP5IPMIIYeiqqHzj5quu","source":"youtube.com/@envatotuts","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"jTdrRryT18sNU5Mr"}
 {"title":"CLI text processing with GNU grep and ripgrep","url":"https://learnbyexample.github.io/learn_gnugrep_ripgrep/","type":"advanced","source":"learnbyexample.github.io","_id":"jUVRAhazDZcfwFgg"}
 {"title":"BusinessThinkingforDesigners","url":"https://uploads-ssl.webflow.com/609ce44d3dfdab98b5019cf9/6143613a2ebbb44c1e9d1251_BusinessThinkingforDesigners.pdf","type":"advanced","source":"designbetter.co","healthcheck":{"runner":"PdfFile"},"_id":"jVbhe1VUeRvDqrFo"}
-{"title":"Python Decorator: Enhance Your Code With Wrapping Wizardry","url":"https://hackthedeveloper.com/python-decorator/","type":"advanced","source":"hackthedeveloper.com","_id":"jZ5degsSNhbrc6V4"}
 {"title":"Learning GitHub","url":"https://www.youtube.com/playlist?list=PLyuRouwmQCjlxyO-45o53YCWjBCM-fA7L","source":"youtube.com/@SteveGriffith-Prof3ssorSt3v3","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"jZCPmPfshJkCwACw"}
 {"title":"Get started with Node.js","url":"https://developer.ibm.com/learningpaths/get-started-nodejs","type":"basics","source":"developer.ibm.com","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(empty)","waitForLoadState":"networkidle"}},"_id":"ja6ysfO8hDdzaHgY"}
 {"title":"Rails on Containers","url":"https://www.digitalocean.com/community/tutorial_series/rails-on-containers","source":"digitalocean.com/community","type":"how-to","_id":"ja7qvKG9U9C2yVwD"}
@@ -1507,7 +1505,7 @@
 {"url":"https://divan.dev/posts/go_concurrency_visualize/","title":"Visualizing Concurrency in Go","source":"divan.dev","type":"advanced","_id":"s9LJI1Q2rR8vD0qB"}
 {"title":"Accessible to all","url":"https://web.dev/accessible","type":"basics","source":"web.dev","_id":"sEOPJ0TJIN95lk64"}
 {"title":"Fundamental Cryptography in Theory and Python","url":"https://www.youtube.com/playlist?list=PLWjMI9CAmVU4--SmpzgswTvxLkZqC9QWn","source":"youtube.com/@cyrillgossi","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"sFbUWA6yImETS7ty"}
-{"title":"CS50's Web Programming with Python and JavaScript","url":"https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript","type":"advanced","source":"edx.org","_id":"sHuYURd89Msqro5a"}
+{"title":"HarvardX: CS50’s Web Programming with Python and JavaScript","url":"https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript","type":"advanced","source":"edx.org","_id":"sHuYURd89Msqro5a"}
 {"title":"Mithi's Epic React Exercises","url":"https://epic-react-exercises.vercel.app","type":"basics","source":"epic-react-exercises.vercel.app","_id":"sICy1uFf6e0or6Z6"}
 {"title":"Designing for Web Accessibility","url":"https://www.w3.org/WAI/tips/designing","type":"basics","source":"w3.org","_id":"sMlrWGvZyMzWqjKz"}
 {"title":"Adobe XD for Beginners","url":"https://www.youtube.com/watch?v=WEljsc2jorI&list=PLgGbWId6zgaXQi_U88w9ywdBTXCaJMvmB&index=7","source":"youtube.com/c/tutsplus","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"sPAseSbHsLQPemya"}
@@ -1638,7 +1636,7 @@
 {"url":"https://epicofcode.com/go-web","title":"Learn Web Development in Go","source":"epicofcode.com","type":"how-to","_id":"xhm11AMdmYHRczAM"}
 {"title":"awesome-react-components","url":"https://github.com/brillout/awesome-react-components","type":"reference","source":"github.com/brillout","_id":"xjo3H4J0sxsGLM81"}
 {"title":"Free SVG generators, color tools & web design tools","url":"https://fffuel.co","type":"reference","source":"fffuel.co","_id":"xl9Kdni1qRqYbt0e"}
-{"title":"The Algorithms","url":"https://the-algorithms.com/","type":"reference","source":"the-algorithms.com","_id":"xpsK1XgzpeKUsYG8"}
+{"title":"TheAlgorithms/Python","url":"https://thealgorithms.github.io/Python/","type":"reference","source":"thealgorithms.github.io","_id":"xpsK1XgzpeKUsYG8"}
 {"title":"DevOps with Docker","url":"https://devopswithdocker.com","type":"basics","source":"devopswithdocker.com","_id":"xwKF47gFenbAx9eQ"}
 {"title":"nodejs-basics","url":"https://github.com/learning-zone/nodejs-basics","type":"curiosity","source":"github.com/learning-zone","_id":"y58RxujCFB5VpFO2"}
 {"title":"How to JavaScript - Setup Tutorial","url":"https://www.robinwieruch.de/javascript-project-setup-tutorial/","type":"how-to","source":"robinwieruch.de","_id":"y5VCB6U6wRE0p87W"}
