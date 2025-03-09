@@ -275,7 +275,6 @@
 {"title":"JavaScript Tutorials","url":"https://www.youtube.com/playlist?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"AF0gykte6X7mk9m8"}
 {"title":"UnJS","url":"https://unjs.io/","type":"reference","source":"unjs.io","_id":"AFyIkYoh1AQuqoOK"}
 {"title":"Four Steps to Move from JavaScript to TypeScript","url":"https://www.javascripttutorials.net/four-steps-to-move-from-javascript-to-typescript/","type":"advanced","source":"javascripttutorials.net","_id":"AHeS2VzlDFvytyaI"}
-{"title":"Testing Web Accessibility","url":"https://www.adrianbolonio.com/en/testing-web-accessibility-part-1","type":"basics","source":"adrianbolonio.com","_id":"AKqKuqB0N15NaOv6"}
 {"title":"Modern Alternatives of Command-Line Tools","url":"https://zaiste.net/posts/shell-commands-rust/","type":"how-to","source":"zaiste.net","_id":"ALk1opKvArkN1G3J"}
 {"url":"https://davidwong.fr/goasm/","title":"Go Assembly by Example","source":"davidwong.fr","type":"advanced","_id":"AOpOK8cjiyXIpLVb"}
 {"title":"Writing Good Tests for NodeJS APIs","url":"https://lucasfcosta.com/2017/04/06/Testing-NodeJS-APIs.html","type":"basics","source":"lucasfcosta.com","_id":"AQ4mWwH0SWhyE0G6"}
@@ -654,7 +653,7 @@
 {"title":"JavaScript SEO","url":"https://www.youtube.com/playlist?list=PLKoqnv2vTMUPOalM1zuWDP9OQl851WMM9","source":"youtube.com/c/GoogleSearchCentral","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"NmfCRJS0JWsbs7OI"}
 {"title":"awesome-javascript-learning","url":"https://github.com/micromata/awesome-javascript-learning","type":"reference","source":"github.com/micromata","_id":"NmybE02sFdLBs3IG"}
 {"title":"Next.js Crash Course","url":"https://www.youtube.com/watch?v=uU80SSxn9_c","source":"youtube.com/@ansonthedev","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"NtakH3xRevVkYL4r"}
-{"title":"Game accessibility guidelines","url":"http://gameaccessibilityguidelines.com","type":"curiosity","source":"gameaccessibilityguidelines.com","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"NwW9E7uqY7gTM9rT"}
+{"title":"Game Accessibility Guidelines","url":"http://gameaccessibilityguidelines.com","type":"curiosity","source":"gameaccessibilityguidelines.com","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"NwW9E7uqY7gTM9rT"}
 {"title":"Django Project – Code a CRM App Tutorial","url":"https://www.youtube.com/watch?v=t10QcFx7d5k","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"NxlMZo8HPQzCtSSZ"}
 {"title":"The UI/UX Crash Course for 2023","url":"https://www.youtube.com/watch?v=QwSN4n2sjR8","source":"youtube.com/@DesignCourse","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"NxuN1z9mSEXPyjR1"}
 {"title":"Build Advanced Components with React Hooks","url":"https://egghead.io/courses/build-advanced-components-with-react-hooks-810906cc","type":"basics","source":"egghead.io","_id":"O05gvW78zjsDJ1Ys"}
@@ -754,7 +753,7 @@
 {"title":"PSKoans","url":"https://github.com/vexx32/PSKoans","type":"basics","source":"github.com/vexx32","_id":"Rn0KTITXE9WNONTG"}
 {"title":"Redux Toolkit Tutorial","url":"https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3","source":"youtube.com/@Codevolution","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"RoIrTamUWWV6cHGd"}
 {"title":"Psychology of Design","url":"https://growth.design/psychology","type":"basics","source":"growth.design","_id":"RqZgOHXO1hhZOQ3V"}
-{"title":"Making Calendars With Accessibility And Internationalization In Mind","url":"https://css-tricks.com/making-calendars-with-accessibility-and-internationalization-in-mind/","type":"how-to","source":"css-tricks.com","_id":"RsDnFHPfxKTr1J7J"}
+{"title":"Making Calendars With Accessibility and Internationalization in Mind","url":"https://css-tricks.com/making-calendars-with-accessibility-and-internationalization-in-mind/","type":"how-to","source":"css-tricks.com","_id":"RsDnFHPfxKTr1J7J"}
 {"url":"https://www.digitalocean.com/community/tutorial-series/how-to-code-in-go","title":"How To Code in Go","source":"digitalocean.com","type":"basics","_id":"Rtyouz6Q9HAY35jL"}
 {"title":"How to Install and Use Docker","url":"https://www.digitalocean.com/community/tutorial_collections/how-to-install-and-use-docker","source":"digitalocean.com/community","type":"how-to","_id":"Rvsja6h3X9cpsiWw"}
 {"url":"https://www.youtube.com/watch?v=8uiZC0l4Ajw","title":"Learn GO Fast","healthcheck":{"runner":"YoutubeData"},"source":"youtube.com/@mr_mux408","type":"basics","_id":"RyHJ83lNbvdxKqH8"}
@@ -979,7 +978,7 @@
 {"title":"Docker Succinctly","url":"https://www.syncfusion.com/succinctly-free-ebooks/docker-succinctly","type":"basics","source":"syncfusion.com","_id":"anykk4Bfn3HnG2XL"}
 {"title":"UX Fundamentals","url":"https://thegymnasium.com/courses/GYM/103/0/about","type":"basics","source":"thegymnasium.com","_id":"arDSZWDFy0rmqLoZ"}
 {"title":"Learn How To Use NeoVim As an IDE","url":"https://programmingpercy.tech/blog/learn-how-to-use-neovim-as-ide/","type":"basics","source":"programmingpercy.tech","healthcheck":{"runner":"Http","config":{"titleSelector":"h1"}},"_id":"atIFSVG704hWkHq3"}
-{"title":"A beginner's guide to manual accessibility testing","url":"https://blog.pope.tech/2023/03/01/a-beginners-guide-to-manual-accessibility-testing/","type":"basics","source":"blog.pope.tech","_id":"avyDDR3w3U9cid7Z"}
+{"title":"A beginner’s guide to manual accessibility testing","url":"https://blog.pope.tech/2023/03/01/a-beginners-guide-to-manual-accessibility-testing/","type":"basics","source":"blog.pope.tech","_id":"avyDDR3w3U9cid7Z"}
 {"title":"Data binding in React","url":"https://www.joshwcomeau.com/react/data-binding/","type":"basics","source":"joshwcomeau.com","_id":"awFqnyYVf0vpNHbl"}
 {"title":"Data Science at the Command Line","url":"https://jeroenjanssens.com/dsatcl/","type":"advanced","source":"jeroenjanssens.com","_id":"aySWLyhndb38aEnv"}
 {"title":"Regular Expression Library","url":"https://regexlib.com","type":"reference","source":"regexlib.com","_id":"ayYUeQbWKbTqy0Dy"}
@@ -1096,7 +1095,7 @@
 {"title":"A Deep Dive Into the Node js Event Loop","url":"https://www.youtube.com/watch?v=KKM_4-uQpow","source":"youtube.com/@UtahJS","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"eLBXQOaiYJqWm8Oz"}
 {"title":"Microservice Architecture and System Design with Python & Kubernetes","url":"https://www.youtube.com/watch?v=hmkF77F9TLw","source":"youtube.com/@freecodecamp","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"eObw5rLAAVP28V60"}
 {"title":"Learn React","url":"https://v2.scrimba.com/learn-react-c0e","type":"basics","source":"scrimba.com","_id":"eRcJgCuvnGLnEVpL"}
-{"title":"How To Conduct A Web Accessibility Audit?","url":"https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/","type":"basics","source":"digitala11y.com","_id":"eT9DxfxLA1r0yPk9"}
+{"title":"A Definitive Guide On How To Perform A Web Accessibility Audit","url":"https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/","type":"basics","source":"digitala11y.com","_id":"eT9DxfxLA1r0yPk9"}
 {"title":"HTML Standard","url":"https://html.spec.whatwg.org/multipage","type":"reference","source":"html.spec.whatwg.org","_id":"eTZEpxi9101QbEkM"}
 {"title":"Python Programming Fundamentals Towards Django Development","url":"https://www.youtube.com/playlist?list=PLOLrQ9Pn6cawb13MugxL-p1M4w7ZfT-qR","source":"youtube.com/@veryacademy","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"eUZpmxfEUKphdjEN"}
 {"title":"neovim-plugin-boilerplate","url":"https://github.com/shortcuts/neovim-plugin-boilerplate","type":"reference","source":"github.com/shortcuts","_id":"eV6ZunMrKzdlljvf"}
@@ -1503,7 +1502,7 @@
 {"title":"Embedding Lua in C++","url":"https://www.youtube.com/playlist?list=PLLwK93hM93Z3nhfJyRRWGRXHaXgNX0Itk","source":"youtube.com/c/DavePoo","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"s84D5hrWAzBqlnDv"}
 {"title":"Building a Design System from scratch","url":"https://blog.maximeheckel.com/posts/building-a-design-system-from-scratch/","type":"how-to","source":"blog.maximeheckel.com","_id":"s8gVmOtntm2KoFbD"}
 {"url":"https://divan.dev/posts/go_concurrency_visualize/","title":"Visualizing Concurrency in Go","source":"divan.dev","type":"advanced","_id":"s9LJI1Q2rR8vD0qB"}
-{"title":"Accessible to all","url":"https://web.dev/accessible","type":"basics","source":"web.dev","_id":"sEOPJ0TJIN95lk64"}
+{"title":"Accessibility","url":"https://web.dev/accessible","type":"basics","source":"web.dev","_id":"sEOPJ0TJIN95lk64"}
 {"title":"Fundamental Cryptography in Theory and Python","url":"https://www.youtube.com/playlist?list=PLWjMI9CAmVU4--SmpzgswTvxLkZqC9QWn","source":"youtube.com/@cyrillgossi","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"sFbUWA6yImETS7ty"}
 {"title":"HarvardX: CS50’s Web Programming with Python and JavaScript","url":"https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript","type":"advanced","source":"edx.org","_id":"sHuYURd89Msqro5a"}
 {"title":"Mithi's Epic React Exercises","url":"https://epic-react-exercises.vercel.app","type":"basics","source":"epic-react-exercises.vercel.app","_id":"sICy1uFf6e0or6Z6"}
