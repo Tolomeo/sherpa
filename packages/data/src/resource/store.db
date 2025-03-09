@@ -139,7 +139,6 @@
 {"title":"SS64 Command line reference","url":"https://ss64.com/","type":"reference","source":"ss64.com","_id":"5Wa7wyHOvzny8MkZ"}
 {"title":"Design Principles","url":"https://principles.design","type":"reference","source":"principles.design","_id":"5aCLNwiHj41uIzmN"}
 {"title":"Git strategies for Docker","url":"https://ryanfb.github.io/etc/2015/07/29/git_strategies_for_docker.html","type":"how-to","source":"ryanfb.github.io","_id":"5eMnlKT0wFIPJOu4"}
-{"title":"Next.js from the Ground Up","url":"https://explorers.netlify.com/learn/nextjs","type":"basics","source":"explorers.netlify.com","_id":"5eaRFBYXonBSAcw8"}
 {"title":"Learn Python the Right Way","url":"https://learnpythontherightway.com","type":"basics","source":"learnpythontherightway.com","_id":"5f8QTAGsb2lSxvFm"}
 {"title":"Ivan on Containers, Kubernetes, and Server-Side","url":"https://iximiuz.com/en/","type":"feed","source":"iximiuz.com","_id":"5fnUcfAlO5FTmwWO"}
 {"title":"Debugging in Neovim","url":"https://harrisoncramer.me/debugging-in-neovim/","type":"advanced","source":"harrisoncramer.me","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"5g4wsv7pl3lfduHX"}
@@ -332,7 +331,7 @@
 {"title":"ShellCheck","url":"https://www.shellcheck.net/","type":"tool","source":"shellcheck.net","_id":"CSYFUpZwrwApf68t"}
 {"title":"Small Elements, Big Impact: Types and Functions of UI Icons","url":"https://blog.tubikstudio.com/small-elements-big-impact-types-and-functions-of-ui-icons/","type":"basics","source":"blog.tubikstudio.com","_id":"CVIR7agTkNUbtUGY"}
 {"title":"Learn Docker in a Month of Lunches","url":"https://www.youtube.com/playlist?list=PLXl_isu8qxvmDOAnUkG5x16LzBzGzY_Ww","source":"youtube.com/c/EltonStoneman","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"CX01qbtGEIul4gyo"}
-{"title":"A Complete Guide to Nextjs Authentication","url":"https://buttercms.com/blog/nextjs-authentication-tutorial/","type":"advanced","source":"buttercms.com","_id":"CX1GC892ACZZkgNa"}
+{"title":"A Complete Guide to Next.js Authentication","url":"https://buttercms.com/blog/nextjs-authentication-tutorial/","type":"advanced","source":"buttercms.com","_id":"CX1GC892ACZZkgNa"}
 {"title":"Writing a Unix Shell","url":"https://indradhanush.github.io/blog/writing-a-unix-shell-part-1/","type":"advanced","source":"indradhanush.github.io","_id":"CZ1Zbm8nSfln15x0"}
 {"title":"Editor war","url":"https://en.wikipedia.org/wiki/Editor_war","type":"curiosity","source":"en.wikipedia.org","_id":"CchWmODbxrfndAAK"}
 {"title":"Hackr.io","url":"https://hackr.io","type":"reference","source":"hackr.io","_id":"CdWsdnRUYKniCuP3"}
@@ -546,7 +545,6 @@
 {"title":"PatternLanguage","url":"http://www.patternlanguage.com","type":"curiosity","source":"patternlanguage.com","_id":"JqtoKflVJye7q3Ot"}
 {"title":"Testing Playground","url":"https://testing-playground.com","type":"tool","source":"testing-playground.com","_id":"JsvbtAerMu9bTmCi"}
 {"url":"https://www.bytesizego.com/blog/one-billion-row-challenge-go","title":"One Billion Rows Challenge in Golang","source":"bytesizego.com","type":"how-to","_id":"JuQ2o4AvmYgViuwi"}
-{"title":"React 2025","url":"https://docs.react2025.com","type":"how-to","source":"docs.react2025.com","_id":"K1LSG5AeCjGz5hy9"}
 {"title":"Advanced Bash-Scripting Guide","url":"https://tldp.org/LDP/abs/html/","type":"advanced","source":"tldp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"K3qTQ4QAMWKv8aPu"}
 {"title":"Containers Patterns","url":"https://l0rd.github.io/containerspatterns","type":"how-to","source":"l0rd.github.io","_id":"K3t8iIC4mugapDVs"}
 {"title":"WebAIM: Articles","url":"https://webaim.org/articles","type":"basics","source":"webaim.org","_id":"K6C9elDf1meI1txN"}
@@ -1400,7 +1398,7 @@
 {"title":"JavaScript RegExp","url":"https://learnbyexample.github.io/learn_js_regexp","type":"basics","source":"learnbyexample.github.io","_id":"oeXPY3R4hvj8I3AR"}
 {"title":"Old CSS, new CSS","url":"https://eev.ee/blog/2020/02/01/old-css-new-css","type":"curiosity","source":"eev.ee","_id":"ofh3QEtTlHvtf6If"}
 {"title":"Interview with a Senior Python Developer - Part1","url":"https://www.youtube.com/watch?v=BgxklT94W0I","source":"youtube.com/@programmersarealsohuman5909","type":"curiosity","healthcheck":{"runner":"YoutubeData"},"_id":"og6gy03gAUfgYTbs"}
-{"title":"Create a Next.js App","url":"https://nextjs.org/learn/basics/create-nextjs-app","source":"nextjs.org","type":"basics","_id":"ogSikqfAMMAil6Po"}
+{"title":"Learn Next.js","url":"https://nextjs.org/learn","source":"nextjs.org","type":"basics","_id":"ogSikqfAMMAil6Po"}
 {"title":"bitloops/ddd-hexagonal-cqrs-es-eda","url":"https://github.com/bitloops/ddd-hexagonal-cqrs-es-eda","type":"how-to","source":"github.com/bitloops","_id":"ohyYaykAgakZofVW"}
 {"title":"Modernizing a Legacy Redux Application with React Hooks","url":"https://egghead.io/courses/modernizing-a-legacy-redux-application-with-react-hooks-c528","type":"advanced","source":"egghead.io","_id":"ol76xnNKP5nkvoec"}
 {"title":"GPT in 60 Lines of NumPy","url":"https://jaykmody.com/blog/gpt-from-scratch/","type":"advanced","source":"jaykmody.com","_id":"onpXf23VE1Kdfagi"}
@@ -1570,7 +1568,7 @@
 {"url":"https://roadmap.sh/golang","title":"Learn to become a Go developer","source":"roadmap.sh","type":"reference","_id":"vByRGqK3dRQeT5yQ"}
 {"url":"https://betterstack.com/community/guides/scaling-go/dockerize-golang/","title":"Dockerizing Go Applications","source":"betterstack.com","type":"advanced","_id":"vCneEB8d1Ciq04RU"}
 {"title":"Real-world-Design-Patterns-Node-JS","url":"https://github.com/nimit95/Real-world-Design-Patterns-Node-JS","type":"how-to","source":"github.com/nimit95","_id":"vCw8Zlet6V38YIDt"}
-{"title":"How to keep your Lighthouse score high in Next.js applications","url":"https://tsh.io/blog/how-to-keep-your-lighthouse-score-high-in-next-js-applications-a-checklist","type":"how-to","source":"tsh.io","healthcheck":{"runner":"Http","config":{"titleSelector":"h1"}},"_id":"vPmbMvGjT7w75Jej"}
+{"title":"Keep your Lighthouse score high for Next.js applications","url":"https://tsh.io/blog/how-to-keep-your-lighthouse-score-high-in-next-js-applications-a-checklist","type":"how-to","source":"tsh.io","healthcheck":{"runner":"Http","config":{"titleSelector":"h1"}},"_id":"vPmbMvGjT7w75Jej"}
 {"title":"UX Movement","url":"https://uxmovement.com","type":"feed","source":"uxmovement.com","_id":"vPtxCBopSwaL2ERe"}
 {"title":"How to implement a programming language","url":"https://lisperator.net/pltut/","type":"advanced","source":"lisperator.net","_id":"vQyvaXT21Nzx4M4X"}
 {"title":"Advanced Next.js Course","url":"https://www.youtube.com/watch?v=EJVGzyWSCBE","source":"youtube.com/c/codedamn","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"vSyAH7LG4wR1nGnm"}
