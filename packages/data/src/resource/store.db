@@ -297,7 +297,7 @@
 {"title":"workshop","url":"https://github.com/gravitational/workshop","type":"basics","source":"github.com/gravitational","_id":"BMLwe0jNCTLgh5bv"}
 {"title":"bash-guide","url":"https://github.com/Idnan/bash-guide","type":"basics","source":"github.com/Idnan","_id":"BMqhmRK2z41pbxFO"}
 {"title":"nvim-from-scratch","url":"https://github.com/ngscheurich/nvim-from-scratch","type":"reference","source":"github.com/ngscheurich","_id":"BWUr3PBG7gCZOS3W"}
-{"title":"The Beginner's Guide to React","url":"https://egghead.io/courses/the-beginner-s-guide-to-react","type":"basics","source":"egghead.io","_id":"BXhbSxe4V1Wt89o6"}
+{"title":"The Beginner’s Guide to React","url":"https://egghead.io/courses/the-beginner-s-guide-to-react","type":"basics","source":"egghead.io","_id":"BXhbSxe4V1Wt89o6"}
 {"title":"The Anatomy Of Themed Design System Components","url":"https://www.smashingmagazine.com/2022/12/anatomy-themed-design-system-components/","type":"advanced","source":"smashingmagazine.com","_id":"BY9M6RhKhQbmHFaY"}
 {"title":"awesome-nodejs-security","url":"https://github.com/lirantal/awesome-nodejs-security","type":"reference","source":"github.com/lirantal","_id":"BZvACUprWJrsXiIf"}
 {"title":"Web Axe","url":"https://www.webaxe.org/","type":"feed","source":"webaxe.org","_id":"BcIRJ9nEL8QFcyEC"}
@@ -683,7 +683,7 @@
 {"title":"How To Scale Node.js Applications with Clustering","url":"https://www.digitalocean.com/community/tutorials/how-to-scale-node-js-applications-with-clustering","type":"how-to","source":"digitalocean.com","_id":"PWrKX2dz1zL3ntAI"}
 {"title":"Design System Checklist","url":"https://www.designsystemchecklist.com","type":"tool","source":"designsystemchecklist.com","_id":"PYkZbJKFJFQyMhS0"}
 {"title":"Remix vs Next.js","url":"https://bejamas.io/blog/remix-vs-nextjs/","type":"curiosity","source":"bejamas.io","_id":"PYoejh0WersJESUN"}
-{"title":"React I Love You, But You're Bringing Me Down","url":"https://marmelab.com/blog/2022/09/20/react-i-love-you.html","type":"curiosity","source":"marmelab.com","_id":"PZMpZYAuS55huchK"}
+{"title":"React I Love You, But You’re Bringing Me Down","url":"https://marmelab.com/blog/2022/09/20/react-i-love-you.html","type":"curiosity","source":"marmelab.com","_id":"PZMpZYAuS55huchK"}
 {"url":"https://www.youtube.com/watch?v=YzLrWHZa-Kc","title":"Golang Tutorial : Go Full Course","healthcheck":{"runner":"YoutubeData"},"source":"youtube.com/@derekbanas","type":"basics","_id":"PcXNQxTnWVejMAVW"}
 {"title":"Garry's Mod Lua","url":"https://www.youtube.com/playlist?list=PLyQg3m0a5UivaAXEfVDngKYp9jyNSTIo_","source":"youtube.com/c/CodeBlue","type":"curiosity","healthcheck":{"runner":"YoutubeData"},"_id":"PhYwFJvNbUpUSdGZ"}
 {"url":"https://github.com/loong/go-concurrency-exercises","title":"go-concurrency-exercises","source":"github.com/loong","type":"advanced","_id":"Pl4XcenGrWmgSQts"}
@@ -944,7 +944,7 @@
 {"title":"UX Design Challenges","url":"https://uxtools.co/challenges","type":"basics","source":"uxtools.co","_id":"aF0UmC3DCwM18TCx"}
 {"title":"Curricula on Web Accessibility: A Framework to Build Your Own Courses","url":"https://www.w3.org/WAI/curricula/","type":"curiosity","source":"w3.org","_id":"aFI62vnbCSkrCRXV"}
 {"title":"js13kGames","url":"https://js13kgames.com","type":"curiosity","source":"js13kgames.com","_id":"aFJD2N6PqUeSNqrL"}
-{"title":"The Beginner's Guide to React Testing","url":"https://maxrozen.com/beginners-guide-to-react-testing","type":"basics","source":"maxrozen.com","_id":"aMJEnhOeumD9tG7T"}
+{"title":"The Beginner’s Guide to React Testing","url":"https://maxrozen.com/beginners-guide-to-react-testing","type":"basics","source":"maxrozen.com","_id":"aMJEnhOeumD9tG7T"}
 {"title":"Accessibility for designer: where do I start?","url":"https://stephaniewalter.design/blog/accessibility-resources-tools-articles-books-for-designer/","type":"reference","source":"stephaniewalter.design","_id":"aNHinPtTesGN156c"}
 {"title":"The CSS Handbook: A Handy Guide to CSS for Developers","url":"https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11","type":"basics","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"aOukIBk4XSLbEnGV"}
 {"title":"State of JavaScript","url":"https://stateofjs.com/en-US","type":"feed","source":"stateofjs.com","_id":"aPGCBbrZDlC4Y1f7"}
@@ -1080,7 +1080,7 @@
 {"title":"awesome-design","url":"https://github.com/gztchan/awesome-design","type":"reference","source":"github.com/gztchan","_id":"eJ44Emjp6Amu6QoN"}
 {"title":"A Deep Dive Into the Node js Event Loop","url":"https://www.youtube.com/watch?v=KKM_4-uQpow","source":"youtube.com/@UtahJS","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"eLBXQOaiYJqWm8Oz"}
 {"title":"Microservice Architecture and System Design with Python & Kubernetes","url":"https://www.youtube.com/watch?v=hmkF77F9TLw","source":"youtube.com/@freecodecamp","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"eObw5rLAAVP28V60"}
-{"title":"Learn React","url":"https://v2.scrimba.com/learn-react-c0e","type":"basics","source":"scrimba.com","_id":"eRcJgCuvnGLnEVpL"}
+{"title":"Learn modern React","url":"https://v2.scrimba.com/learn-react-c0e","type":"basics","source":"v2.scrimba.com","_id":"eRcJgCuvnGLnEVpL"}
 {"title":"A Definitive Guide On How To Perform A Web Accessibility Audit","url":"https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/","type":"basics","source":"digitala11y.com","_id":"eT9DxfxLA1r0yPk9"}
 {"title":"HTML Standard","url":"https://html.spec.whatwg.org/multipage","type":"reference","source":"html.spec.whatwg.org","_id":"eTZEpxi9101QbEkM"}
 {"title":"Python Programming Fundamentals Towards Django Development","url":"https://www.youtube.com/playlist?list=PLOLrQ9Pn6cawb13MugxL-p1M4w7ZfT-qR","source":"youtube.com/@veryacademy","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"eUZpmxfEUKphdjEN"}
@@ -1479,7 +1479,7 @@
 {"title":"Seven habits of effective text editing","url":"https://www.moolenaar.net/habits.html","type":"curiosity","source":"moolenaar.net","_id":"rvFCbBXHr4FHOuNY"}
 {"title":"Understand observables by building a toy library","url":"https://steveholgado.com/understanding-observables","type":"advanced","source":"steveholgado.com","_id":"rx06DwIsf64CQGOT"}
 {"title":"Color & Contrast","url":"https://colorandcontrast.com","type":"basics","source":"colorandcontrast.com","_id":"s4djFPkxKPP1tYMw"}
-{"title":"Say no to \"flickering\" UI: useLayoutEffect, painting and browsers story","url":"https://www.developerway.com/posts/no-more-flickering-ui","type":"advanced","source":"developerway.com","_id":"s4xoxs8pB60Xhk7f"}
+{"title":"Say no to “flickering” UI","url":"https://www.developerway.com/posts/no-more-flickering-ui","type":"advanced","source":"developerway.com","_id":"s4xoxs8pB60Xhk7f"}
 {"title":"50 Projects for React & the Static Web","url":"https://50reactprojects.com","type":"basics","source":"50reactprojects.com","_id":"s5FrvfwmHOPkQqdr"}
 {"title":"awesome-nodejs","url":"https://github.com/sindresorhus/awesome-nodejs","type":"reference","source":"github.com/sindresorhus","_id":"s5pyjGe8wVSRgV8w"}
 {"title":"Embedding Lua in C++","url":"https://www.youtube.com/playlist?list=PLLwK93hM93Z3nhfJyRRWGRXHaXgNX0Itk","source":"youtube.com/c/DavePoo","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"s84D5hrWAzBqlnDv"}
@@ -1488,7 +1488,7 @@
 {"title":"Accessibility","url":"https://web.dev/accessible","type":"basics","source":"web.dev","_id":"sEOPJ0TJIN95lk64"}
 {"title":"Fundamental Cryptography in Theory and Python","url":"https://www.youtube.com/playlist?list=PLWjMI9CAmVU4--SmpzgswTvxLkZqC9QWn","source":"youtube.com/@cyrillgossi","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"sFbUWA6yImETS7ty"}
 {"title":"HarvardX: CS50’s Web Programming with Python and JavaScript","url":"https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript","type":"advanced","source":"edx.org","_id":"sHuYURd89Msqro5a"}
-{"title":"Mithi's Epic React Exercises","url":"https://epic-react-exercises.vercel.app","type":"basics","source":"epic-react-exercises.vercel.app","_id":"sICy1uFf6e0or6Z6"}
+{"title":"Mithi’s Epic React Exercises","url":"https://epic-react-exercises.vercel.app","type":"basics","source":"epic-react-exercises.vercel.app","_id":"sICy1uFf6e0or6Z6"}
 {"title":"Designing for Web Accessibility","url":"https://www.w3.org/WAI/tips/designing","type":"basics","source":"w3.org","_id":"sMlrWGvZyMzWqjKz"}
 {"title":"Adobe XD for Beginners","url":"https://www.youtube.com/watch?v=WEljsc2jorI&list=PLgGbWId6zgaXQi_U88w9ywdBTXCaJMvmB&index=7","source":"youtube.com/c/tutsplus","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"sPAseSbHsLQPemya"}
 {"title":"learn-regex","url":"https://github.com/ziishaned/learn-regex","type":"basics","source":"github.com/ziishaned","_id":"sTQ5zMbKH3MVFEDa"}
