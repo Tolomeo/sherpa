@@ -35,7 +35,16 @@ export const scrapeResourceTitle = async (
       return retry ? command.loop.REPEAT : command.loop.END
     }
 
-    title = healthCheckResult.data.title
+    const scrapedTitle = await command.choice(
+      `Choose title`,
+      Object.values(healthCheckResult.data) as Array<string>,
+    )
+
+    if (!scrapedTitle) {
+      return command.loop.END
+    }
+
+    title = scrapedTitle
 
     return command.loop.END
   })
