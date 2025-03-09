@@ -54,7 +54,7 @@
 {"title":"awesome-neovim","url":"https://github.com/rockerBOO/awesome-neovim","type":"reference","source":"github.com/rockerBOO","_id":"1x71l0X1AKGLG1fB"}
 {"title":"advanced-js-objects","url":"https://github.com/carltheperson/advanced-js-objects","type":"advanced","source":"github.com/carltheperson","_id":"20QDRFYj9jPiMGje"}
 {"title":"Nodejs Security","url":"https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html","type":"reference","source":"cheatsheetseries.owasp.org","_id":"24kDQxGepJAnvog1"}
-{"title":"Advanced Vim topics, tips and tricks","url":"https://www.integralist.co.uk/posts/vim/","type":"advanced","source":"integralist.co.uk","_id":"2BRlmXwasCbbO6i4"}
+{"title":"Advanced Vim topics, tips and tricks","url":"https://www.integralist.co.uk/posts/vim-advanced/","type":"advanced","source":"integralist.co.uk","_id":"2BRlmXwasCbbO6i4"}
 {"title":"Creating a Stardew Valley inspired game in Python","url":"https://www.youtube.com/watch?v=T4IX36sP_0c","source":"youtube.com/@ClearCode","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"2IgtT99qlcaUUN6x"}
 {"title":"The Component Gallery","url":"https://component.gallery","type":"reference","source":"component.gallery","_id":"2Ks25qM19xlJD3Rx"}
 {"title":"TypeScript Cheatsheets","url":"https://github.com/typescript-cheatsheets","source":"github.com/typescript-cheatsheets","type":"reference","_id":"2Lm3znfpjgyzPl3v"}
@@ -768,7 +768,6 @@
 {"title":"Learn TypeScript from the ground up with James Henry","url":"https://typescriptcourses.com/typescript-fundamentals","type":"basics","source":"typescriptcourses.com","_id":"SnZZAaE3mUiJvvm8"}
 {"title":"Resources - Paul J. Adam","url":"https://www.pauljadam.com/resources.html","type":"tool","source":"pauljadam.com","_id":"SpLN3lacxlvnYNzc"}
 {"title":"Supercharged LaTeX using Vim/Neovim, VimTeX, and snippets","url":"https://www.ejmastnak.com/tutorials/vim-latex/intro/","type":"advanced","source":"ejmastnak.com","_id":"Sr7KnWcnVtOr2rkW"}
-{"title":"Filtering Neovim Diagnostics","url":"https://blob42.xyz/blog/neovim-diagnostic-filtering/","type":"how-to","source":"blob42.xyz","healthcheck":{"runner":"Http","config":{"titleSelector":"h3"}},"_id":"Sw1Jqb3SiMDtOGSk"}
 {"title":"A Comprehensive Checklist For Running Design Workshops","url":"https://www.smashingmagazine.com/2023/03/organizing-design-workshops-checklist/","type":"how-to","source":"smashingmagazine.com","_id":"Syd3ggkaIV1iUVeM"}
 {"title":"What The Flexbox?!","url":"https://flexbox.io","source":"flexbox.io","type":"basics","_id":"SzOW9XbltMVfk4zR"}
 {"title":"Figma Tutorials: The Ultimate Crash Course","url":"https://www.youtube.com/playlist?list=PLvnhVb8yYRQ3TDOsSgN0pf0XqG6E56IYM","source":"youtube.com/c/Mizko","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"T0gHOSoKP0UykgkS"}
@@ -1110,7 +1109,7 @@
 {"title":"Docker Security Essentials","url":"https://www.linode.com/content/hackersploit-docker-security-essentials-ebook","type":"advanced","source":"linode.com","_id":"f5OlKHGbcu2KW0QQ"}
 {"title":"CSS Diner","url":"https://flukeout.github.io","source":"flukeout.github.io","type":"basics","_id":"f73uKsmhNfQe6379"}
 {"title":"UX Strategy: Study Guide","url":"https://www.nngroup.com/articles/strategy-study-guide","type":"advanced","source":"nngroup.com","_id":"f7QnmwszvrcDt60P"}
-{"title":"Vim Statusline Generator","url":"https://www.tdaly.co.uk/projects/vim-statusline-generator","type":"tool","source":"tdaly.co.uk","_id":"f9GNUwTt79jK5rr5"}
+{"title":"Vim Statusline Generator","url":"https://statusline.tomdaly.dev","type":"tool","source":"statusline.tomdaly.dev","_id":"f9GNUwTt79jK5rr5"}
 {"url":"https://gopodcast.dev/","title":"go podcast()","source":"gopodcast.dev","type":"feed","_id":"f9uZg85GeMUgn2F4"}
 {"title":"What's The Vim Runtime? A Guide With Examples","url":"https://thevaluable.dev/vim-runtime-guide-example","type":"advanced","source":"thevaluable.dev","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"fBOE7V35El9EYBli"}
 {"url":"https://github.com/go-training/training","title":"training","source":"github.com/go-training","type":"basics","_id":"fBhCeDBGxwYnwYoY"}
