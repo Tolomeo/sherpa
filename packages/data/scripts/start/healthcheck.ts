@@ -2,7 +2,6 @@ import Healthcheck from '../../src/healthcheck/runner'
 import { log, command, util } from '../common'
 import type { ResourceData, HealthcheckStrategy } from '../../types'
 import { HealthCheckStrategies } from '../../types'
-import { ScrapeResult } from '../../src/healthcheck/runner/common'
 
 export const chooseHealthCheckStrategy = async () => {
   const healthcheck = await command.choice(
@@ -36,16 +35,16 @@ export const scrapeResourceTitle = async (
       return retry ? command.loop.REPEAT : command.loop.END
     }
 
-    const titleSource = await command.choice(
+    const scrapedTitle = await command.choice(
       `Choose title`,
-      Object.keys(healthCheckResult.data) as Array<keyof ScrapeResult>,
+      Object.values(healthCheckResult.data) as Array<string>,
     )
 
-    if (!titleSource) {
+    if (!scrapedTitle) {
       return command.loop.END
     }
 
-    title = healthCheckResult.data[titleSource]
+    title = scrapedTitle
 
     return command.loop.END
   })
