@@ -454,7 +454,7 @@
 {"title":"Beginners Track","url":"https://dockerlabs.collabnix.com/beginners/README.html","type":"basics","source":"dockerlabs.collabnix.com","_id":"H1qZtU9pxNK5IqCN"}
 {"title":"a11yphant","url":"https://a11yphant.com/","type":"basics","source":"a11yphant.com","_id":"H3DdewrEfqt7nHek"}
 {"title":"Best Practices Around Production Ready Web Apps with Docker Compose","url":"https://nickjanetakis.com/blog/best-practices-around-production-ready-web-apps-with-docker-compose","type":"how-to","source":"nickjanetakis.com","_id":"H3HBedFgOGGjeJ29"}
-{"title":"Extreme Explorations of TypeScript's Type System","url":"https://www.learningtypescript.com/articles/extreme-explorations-of-typescripts-type-system","type":"advanced","source":"learningtypescript.com","_id":"HDEHy2xdbrFIEdzW"}
+{"title":"Extreme Explorations of TypeScript’s Type System","url":"https://www.learningtypescript.com/articles/extreme-explorations-of-typescripts-type-system","type":"advanced","source":"learningtypescript.com","_id":"HDEHy2xdbrFIEdzW"}
 {"url":"https://goplay.tools/","title":"Better Go Playground","source":"goplay.tools","type":"tool","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"load"}},"_id":"HDTeS8DoL8qnKS34"}
 {"title":"Cracking Codes with Python","url":"https://inventwithpython.com/cracking","type":"basics","source":"inventwithpython.com","_id":"HE22yAqlBk3YV9bz"}
 {"title":"User Inyerface - A worst-practice UI experiment","url":"https://userinyerface.com","type":"curiosity","source":"userinyerface.com","_id":"HGbgGsH5dFPAoagO"}
@@ -1427,7 +1427,7 @@
 {"title":"BashPitfalls","url":"https://mywiki.wooledge.org/BashPitfalls","type":"how-to","source":"mywiki.wooledge.org","_id":"q19Me6IBnUMAYtUW"}
 {"title":"No BS TS","url":"https://www.youtube.com/playlist?list=PLNqp92_EXZBJYFrpEzdO2EapvU0GOJ09n","source":"youtube.com/c/JackHerrington","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"q2loExvKgjv6VnV6"}
 {"title":"public-apis","url":"https://github.com/public-apis/public-apis","type":"reference","source":"github.com/public-apis","_id":"q9cIM8aZScx1cq3D"}
-{"title":"Beginner's TypeScript Tutorial","url":"https://www.totaltypescript.com/tutorials/beginners-typescript","type":"basics","source":"totaltypescript.com","_id":"qEeFgUh4TipDV7A5"}
+{"title":"Beginner’s TypeScript Tutorial","url":"https://www.totaltypescript.com/tutorials/beginners-typescript","type":"basics","source":"totaltypescript.com","_id":"qEeFgUh4TipDV7A5"}
 {"title":"Think Like (a) Git","url":"http://think-like-a-git.net","type":"basics","source":"think-like-a-git.net","_id":"qIaBfTjAXOO73ud6"}
 {"title":"Next.js Crash Course","url":"https://www.youtube.com/watch?v=6HTs8HtZMt0","source":"youtube.com/@laithacademy","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"qJktO6WrIJEkulj4"}
 {"url":"https://www.alexedwards.net/blog/an-overview-of-go-tooling","title":"An Overview of Go’s Tooling","source":"alexedwards.net","type":"basics","_id":"qL7vIYYZYxRTSjaF"}
@@ -1472,7 +1472,7 @@
 {"title":"About PowerShell","url":"https://www.youtube.com/playlist?list=PL-esmhgrps8Zv9bAHesStPRQ1AiUL1wY3","source":"youtube.com/@kamilpro","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"rr3yiT5WJ84Dd2hx"}
 {"title":"How to build a modular arithmetic library in Python","url":"https://monadical.com/posts/modular-arithmetic.html","type":"how-to","source":"monadical.com","_id":"rserjRTfMa42Mx1N"}
 {"title":"Little Things I Like to Do with Git","url":"https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git","type":"how-to","source":"csswizardry.com","_id":"rsggPMsFvsXuIRP0"}
-{"title":"The Deno Handbook: a concise introduction to Deno","url":"https://flaviocopes.com/deno","type":"curiosity","source":"flaviocopes.com","_id":"rsoDni4nSD0m7TLV"}
+{"title":"Introduction to Deno","url":"https://flaviocopes.com/deno","type":"curiosity","source":"flaviocopes.com","_id":"rsoDni4nSD0m7TLV"}
 {"title":"The Surprising Truth About Pixels and Accessibility: should I use pixels or rems?","url":"https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility","type":"advanced","source":"joshwcomeau.com","_id":"rswWNIaALoZtmMNP"}
 {"title":"A Docker Tutorial for Beginners","url":"https://docker-curriculum.com","type":"basics","source":"docker-curriculum.com","_id":"rucwuwDg8dWfRcNs"}
 {"title":"Tiny Python Projects","url":"https://tinypythonprojects.com","type":"basics","source":"tinypythonprojects.com","_id":"ruwEXBDyvUUMKWiS"}
