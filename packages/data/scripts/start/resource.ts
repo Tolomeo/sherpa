@@ -5,6 +5,7 @@ import {
   ResourceDataSchema,
   type ResourceData,
   type ResourceType,
+  type HealthcheckStrategy,
 } from '../../types'
 import { util, format, log, command } from '../common'
 import { scrapeResourceTitle, chooseHealthCheckStrategy } from './healthcheck'
@@ -367,16 +368,114 @@ const manageResource = async (resource: Resource) => {
   })
 }
 
-const manageResources = async () => {
+const enterResource = async (url: string) => {
+  let data: ResourceData | undefined
+  let healthcheck: HealthcheckStrategy | undefined
+
   await command.loop(async () => {
-    const resource = await findResource()
+    log.lead(`Entering ${url} resource`)
 
-    if (!resource) return command.loop.END
+    const title = await scrapeResourceTitle(url, healthcheck)
 
-    await manageResource(resource)
+    if (!title) {
+      log.warning(`Scraping failed`)
 
-    return command.loop.REPEAT
+      const changeHealthcheck = await command.confirm(
+        `Try with a different strategy?`,
+      )
+
+      if (changeHealthcheck) {
+        const newHealthcheck = await chooseHealthCheckStrategy()
+        healthcheck = newHealthcheck ?? undefined
+        return command.loop.REPEAT
+      }
+    }
+
+    const enteredData = await enterResourceData({
+      ...data,
+      url,
+      title,
+      healthcheck,
+    })
+
+    log.text(format.diff({ url, ...data }, enteredData))
+
+    const action = await command.choice(`Data for ${url}`, [
+      'Confirm data',
+      'Change data',
+    ])
+
+    switch (action) {
+      case 'Confirm data':
+        data = enteredData
+        return command.loop.END
+      case 'Change data':
+        data = enteredData
+        return command.loop.REPEAT
+      case null:
+        return command.loop.END
+    }
+  })
+
+  if (!data) return
+
+  return data
+
+  /* try {
+    const resource = await createResource(data)
+    log.success(`Resource ${resource.id} successfully created`)
+    return resource
+  } catch (err) {
+    log.error(`Error importing ${url}`)
+    log.error(err as string)
+  } */
+}
+
+const addResource = async () => {
+  await command.loop(async () => {
+    const url = await command.input(`Enter resource url`)
+
+    if (!url) return command.loop.END
+
+    const data = await enterResource(url)
+
+    if (!data) {
+      return command.loop.REPEAT
+    }
+
+    console.log(data)
+
+    return command.loop.END
   })
 }
 
-export default manageResources
+const main = async () => {
+  await command.loop(async () => {
+    const action = await command.choice('Choose action', [
+      'update a resource',
+      'add a resource',
+    ])
+
+    switch (action) {
+      case 'update a resource': {
+        const resource = await findResource()
+
+        if (!resource) return command.loop.REPEAT
+
+        await manageResource(resource)
+
+        return command.loop.REPEAT
+      }
+      case 'add a resource': {
+        await addResource()
+
+        return command.loop.REPEAT
+      }
+      case null: {
+        return command.loop.END
+      }
+    }
+  })
+}
+
+export default main
