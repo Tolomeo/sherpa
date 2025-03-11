@@ -1,46 +1,10 @@
-import { create, getAllByName } from '../../src/topic'
-import type Topic from '../../src/topic'
-import type { TopicData } from '../../types'
-import { log, command, format } from '../common'
+import { create } from '../../../src/topic'
+import type Topic from '../../../src/topic'
+import type { TopicData } from '../../../types'
+import { log, command, format } from '../../common'
+import { findTopic } from './common'
 
-export const findTopic = async () => {
-  let topic: Topic | undefined
-
-  await command.loop(async () => {
-    const name = await command.input(
-      `Search topic - Enter topic name to look for`,
-    )
-
-    if (!name) return command.loop.END
-
-    const topics = await getAllByName(name)
-
-    if (!topics.length) {
-      log.warning(`No results found`)
-      return command.loop.REPEAT
-    }
-
-    if (topics.length === 1) {
-      topic = topics[0]
-      return command.loop.END
-    }
-
-    const action = await command.choice(
-      `Select topic`,
-      topics.map((t) => t.name),
-    )
-
-    if (!action) command.loop.REPEAT
-
-    topic = topics.find((t) => t.name === action)
-
-    return command.loop.END
-  })
-
-  return topic
-}
-
-const createNewTopic = async () => {
+const addTopic = async () => {
   let topic: Topic | undefined
 
   await command.loop(async () => {
@@ -104,7 +68,7 @@ const enterTopicBranding = async (branding: TopicBranding) => {
   return enteredBranding
 }
 
-const manageTopic = async (topic: Topic) => {
+const updateTopic = async (topic: Topic) => {
   await command.loop(async () => {
     const action = await command.choice('Choose action', [
       'update branding',
@@ -168,30 +132,30 @@ const manageTopic = async (topic: Topic) => {
   })
 }
 
-const manageTopics = async () => {
+const main = async () => {
   await command.loop(async () => {
     const action = await command.choice('Choose action', [
       'create a new topic',
-      'edit a topic',
+      'update a topic',
     ])
 
     switch (action) {
       case 'create a new topic': {
-        const topic = await createNewTopic()
+        const topic = await addTopic()
 
         if (!topic) return command.loop.REPEAT
 
-        await manageTopic(topic)
+        await updateTopic(topic)
 
         return command.loop.REPEAT
       }
 
-      case 'edit a topic': {
+      case 'update a topic': {
         const topic = await findTopic()
 
         if (!topic) return command.loop.REPEAT
 
-        await manageTopic(topic)
+        await updateTopic(topic)
 
         return command.loop.REPEAT
       }
@@ -202,4 +166,5 @@ const manageTopics = async () => {
   })
 }
 
-export default manageTopics
+export default main
+export * from './common'

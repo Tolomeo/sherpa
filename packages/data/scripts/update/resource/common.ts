@@ -1,4 +1,3 @@
-import { getAllByResourceId } from '../../../src/topic'
 import type Resource from '../../../src/resource'
 import { getAllByUrl } from '../../../src/resource'
 import {
@@ -7,7 +6,7 @@ import {
   type ResourceType,
   type HealthcheckStrategy,
 } from '../../../types'
-import { util, format, log, command } from '../../common'
+import { format, log, command } from '../../common'
 import { scrapeResourceTitle, chooseHealthCheckStrategy } from '../healthcheck'
 
 export const findResource = async () => {
