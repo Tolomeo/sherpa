@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import { log, command } from '../common'
-import manageTopics from './topic'
-import manageResources from './resource'
+import updateTopics from './topic'
+import updateResources from './resource'
 import bulkOperations from './bulk'
 
 const main = async () => {
@@ -14,10 +14,10 @@ const main = async () => {
 
     switch (action) {
       case 'manage topics':
-        await manageTopics()
+        await updateTopics()
         return command.loop.REPEAT
       case 'manage resources':
-        await manageResources()
+        await updateResources()
         return command.loop.REPEAT
       case 'bulk operations':
         await bulkOperations()
