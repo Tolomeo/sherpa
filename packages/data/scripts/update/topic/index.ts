@@ -2,6 +2,7 @@ import { create } from '../../../src/topic'
 import type Topic from '../../../src/topic'
 import type { TopicData } from '../../../types'
 import { log, command, format } from '../../common'
+import { findResource } from '../resource'
 import { findTopic } from './common'
 
 const addTopic = async () => {
@@ -68,14 +69,57 @@ const enterTopicBranding = async (branding: TopicBranding) => {
   return enteredBranding
 }
 
+const addResource = async (topic: Topic) => {
+  log.lead(`Adding a resource to topic "${topic.name}"`)
+
+  await command.loop(async () => {
+    const resource = await findResource()
+
+    if (!resource) return command.loop.END
+
+    const hasResource = await topic.hasResource(resource.id)
+
+    if (hasResource) {
+      log.error(
+        `Resource ${resource.id} is already found in topic "${topic.name}"`,
+      )
+      return command.loop.REPEAT
+    }
+
+    const resources = topic.data.resources
+      ? [...topic.data.resources, resource.id]
+      : [resource.id]
+
+    try {
+      await topic.change({
+        resources,
+      })
+      log.lead(
+        `Resource ${resource.id} successfully added to topic "${topic.name}"`,
+      )
+    } catch (err) {
+      log.lead(`Topic "${topic.name}" update error`)
+      log.error(err as string)
+    }
+
+    return command.loop.END
+  })
+}
+
 const updateTopic = async (topic: Topic) => {
   await command.loop(async () => {
     const action = await command.choice('Choose action', [
+      'add resource',
       'update branding',
       'update notes',
     ])
 
     switch (action) {
+      case 'add resource': {
+        await addResource(topic)
+        return command.loop.REPEAT
+      }
+
       case 'update branding': {
         const branding = {
           logo: topic.data.logo,
