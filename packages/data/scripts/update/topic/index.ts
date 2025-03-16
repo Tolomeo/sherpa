@@ -86,6 +86,15 @@ const addResource = async (topic: Topic) => {
       return command.loop.REPEAT
     }
 
+    const confirm = await command.confirm(
+      `Add resource ${resource.id} to topic "${topic.name}"?`,
+    )
+
+    if (!confirm) {
+      log.error(`Insertion of resource aborted`)
+      return command.loop.END
+    }
+
     const resources = topic.data.resources
       ? [...topic.data.resources, resource.id]
       : [resource.id]
