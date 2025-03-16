@@ -540,6 +540,7 @@
 {"url":"https://www.bytesizego.com/blog/one-billion-row-challenge-go","title":"One Billion Rows Challenge in Golang","source":"bytesizego.com","type":"how-to","_id":"JuQ2o4AvmYgViuwi"}
 {"title":"Advanced Bash-Scripting Guide","url":"https://tldp.org/LDP/abs/html/","type":"advanced","source":"tldp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"K3qTQ4QAMWKv8aPu"}
 {"title":"Containers Patterns","url":"https://l0rd.github.io/containerspatterns","type":"how-to","source":"l0rd.github.io","_id":"K3t8iIC4mugapDVs"}
+{"url":"https://pythonium.net/regex","title":"Python Regex Tester","source":"pythonium.net","type":"tool","_id":"K4MCgf0z1TUq3Ef9"}
 {"title":"WebAIM: Articles","url":"https://webaim.org/articles","type":"basics","source":"webaim.org","_id":"K6C9elDf1meI1txN"}
 {"title":"TypeScript Tutorial","url":"https://www.typescripttutorial.net","type":"basics","source":"typescripttutorial.net","_id":"K6cXMz7nacUg1b43"}
 {"title":"CSS Grid","url":"https://cssgrid.io","source":"cssgrid.io","type":"basics","_id":"K7RS5fLtZnm3NKZM"}
