@@ -15,7 +15,7 @@
     }
   },
   "scripts": {
-    "start": "tsx \"scripts/start\"",
+    "update": "tsx \"scripts/update\"",
     "prebuild": "shx rm -rf \"dist\"",
     "build": "tsx \"./scripts/build.ts\"",
     "check:lint": "eslint \"types\" \"src\" \"scripts\"",

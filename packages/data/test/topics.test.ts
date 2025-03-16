@@ -17,12 +17,14 @@ describe('Paths', async () => {
       }
     }
 
-    const allUniquePathResourceUrlsArray = [...allUniqueTopicsResourceIds].sort()
+    const allUniquePathResourceUrlsArray = [
+      ...allUniqueTopicsResourceIds,
+    ].sort()
     const allResourceUrlsArray = [...allResourcesIds].sort()
     expect(allUniquePathResourceUrlsArray).toEqual(allResourceUrlsArray)
   })
 
-  describe.each(parents)('$topic', (path) => {
+  describe.each(parents)('$name', (path) => {
     test('Lists unique resources', async () => {
       const pathResources = await path.getResources()
       const uniqueResources = [...new Set(pathResources)]
