@@ -1,4 +1,5 @@
 import { getAllByResourceId } from '../../../src/topic'
+import { create as createResource } from '../../../src/resource'
 import type Resource from '../../../src/resource'
 import { util, format, log, command } from '../../common'
 import { scrapeResourceTitle, chooseHealthCheckStrategy } from '../healthcheck'
@@ -270,7 +271,22 @@ const addResource = async () => {
       return command.loop.REPEAT
     }
 
-    console.log(data)
+    log.success(format.stringify(data))
+
+    const confirm = await command.confirm(`Persist resource?`)
+
+    if (!confirm) {
+      log.error(`Resource creation abourted`)
+      return command.loop.END
+    }
+
+    try {
+      const resource = await createResource(data)
+      log.success(`Resource ${resource.id} successfully created`)
+    } catch (err) {
+      log.error(`Error creating resource "${url}"`)
+      log.error(err as string)
+    }
 
     return command.loop.END
   })
