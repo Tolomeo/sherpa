@@ -23,6 +23,8 @@ jobs:
         run: npm run check:lint
       - name: Types check
         run: npm run check:types
+      - name: Topic data test
+        run: npm run test:topics --workspace=@sherpa/data
       - name: Deploy
         uses: amondnet/vercel-action@v25
         id: vercel-deployment
