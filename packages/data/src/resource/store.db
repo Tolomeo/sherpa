@@ -48,7 +48,6 @@
 {"title":"The Encyclopedia of Human-Computer Interaction","url":"https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed","type":"basics","source":"interaction-design.org","_id":"1oEg2PEy6jHU8g7d"}
 {"title":"Develop Accessible Web Apps with React","url":"https://egghead.io/courses/develop-accessible-web-apps-with-react","type":"advanced","source":"egghead.io","_id":"1qYK2RHWBQVtZcT0"}
 {"title":"TypeScript Generics for People Who Gave Up on Understanding Generics","url":"https://ts.chibicode.com/generics","type":"basics","source":"ts.chibicode.com","_id":"1qqa6CQyg56GGa5n"}
-{"title":"Free Icon Design Guide","url":"https://iconutopia.com/free-icon-design-guide","type":"basics","source":"iconutopia.com","_id":"1tSnZl8jCZrGhgFu"}
 {"title":"Linux Commands for Beginners","url":"https://www.youtube.com/playlist?list=PLT98CRl2KxKHaKA9-4_I38sLzK134p4GJ","source":"youtube.com/@LearnLinuxTV","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"1u1ITaWUgZtZlRha"}
 {"title":"lets-build-express","url":"https://github.com/antsmartian/lets-build-express","type":"advanced","source":"github.com/antsmartian","_id":"1vFvTxUJIu4NuwlD"}
 {"title":"awesome-neovim","url":"https://github.com/rockerBOO/awesome-neovim","type":"reference","source":"github.com/rockerBOO","_id":"1x71l0X1AKGLG1fB"}
@@ -116,7 +115,6 @@
 {"title":"Pytest for Beginners","url":"https://testdriven.io/blog/pytest-for-beginners/","type":"basics","source":"testdriven.io","_id":"4k1fFCzMfsM5oSjn"}
 {"title":"33-js-concepts","url":"https://github.com/leonardomso/33-js-concepts","type":"basics","source":"github.com/leonardomso","_id":"4n2uYWuSkg2JLa62"}
 {"url":"https://github.com/evrone/go-clean-template","title":"go-clean-template","source":"github.com/evrone","type":"how-to","_id":"4ooFGlrl4eI7Sh7U"}
-{"title":"Bento - Learn to code and be a self-taught expert developer","url":"https://bento.io","type":"reference","source":"bento.io","_id":"4pDx6WbwGX3wNHKm"}
 {"title":"VimGolf - real Vim ninjas count every keystroke!","url":"https://www.vimgolf.com","type":"reference","source":"vimgolf.com","_id":"4twgz8BUXgKmzbLy"}
 {"title":"Shift Left Accessibility in Design, Development and Testing","url":"https://www.digitala11y.com/connecting-dots-of-an-accessibility-audit/","type":"advanced","source":"digitala11y.com","_id":"4vwDMj5mUxYoFOVE"}
 {"title":"awesome-terminals","url":"https://github.com/cdleon/awesome-terminals","type":"reference","source":"github.com/cdleon","_id":"53elcd848dgyeRT7"}
@@ -223,7 +221,6 @@
 {"title":"Talk Python To Me","url":"https://talkpython.fm/","type":"feed","source":"talkpython.fm","_id":"8h9zAks06DQLZhxT"}
 {"title":"awesome-git","url":"https://github.com/dictcp/awesome-git","type":"reference","source":"github.com/dictcp","_id":"8j6DmBZEOn0GfZYo"}
 {"title":"TypeScript course for JavaScript developers","url":"https://learntypescript.dev","type":"basics","source":"learntypescript.dev","_id":"8jOQ7r6Qor4M8cLx"}
-{"title":"Master Shell Scripting","url":"https://www.codelivly.com/bash-scripting-tutorial/","type":"basics","source":"codelivly.com","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"8mntx5xroPt7BysO"}
 {"title":"Docker Cheat Sheet","url":"https://docker.jens-piegsa.com","type":"reference","source":"docker.jens-piegsa.com","_id":"8nosEN0Gpaa05qP9"}
 {"title":"Python Advanced Tutorials","url":"https://www.youtube.com/playlist?list=PL7yh-TELLS1FuqLSjl5bgiQIEH25VEmIc","source":"youtube.com/@NeuralNine","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"8qErDHvV23epAeq9"}
 {"title":"Design for Developers","url":"https://thoughtbot.com/upcase/design-for-developers","type":"basics","source":"thoughtbot.com","_id":"8qgsgeQjHwTpisDO"}
@@ -289,7 +286,6 @@
 {"title":"git-flight-rules","url":"https://github.com/k88hudson/git-flight-rules","type":"reference","source":"github.com/k88hudson","_id":"B1nK4uCuxyfbpEo4"}
 {"title":"Docker Compose: From Local to Amazon ECS","url":"https://www.docker.com/blog/docker-compose-from-local-to-amazon-ecs","type":"how-to","source":"docker.com","_id":"B2wkae36xypEWKBR"}
 {"title":"React.js cheatsheet","url":"https://devhints.io/react","type":"reference","source":"devhints.io","_id":"B37VPoGZuqGYpEgV"}
-{"title":"Learn TDD in React","url":"https://learntdd.in/react","type":"basics","source":"learntdd.in","_id":"B5yxLcUtFKmfFHEs"}
 {"title":"Responsive Image Breakpoints Generator","url":"https://responsivebreakpoints.com","type":"tool","source":"responsivebreakpoints.com","_id":"BDu4sYlekMxMJrFU"}
 {"title":"The React Handbook","url":"https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795","type":"basics","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"BJFHP14J222i2E2E"}
 {"title":"awesome-redux","url":"https://github.com/xgrommx/awesome-redux","type":"reference","source":"github.com/xgrommx","_id":"BLiWRJL8ATkqgNxc"}
@@ -386,7 +382,6 @@
 {"title":"Dotfile madness","url":"https://0x46.net/thoughts/2019/02/01/dotfile-madness/","type":"basics","source":"0x46.net","_id":"EXAwOTK2UlWpXF93"}
 {"title":"Good, Better, Best: Untangling The Complex World Of Accessible Patterns","url":"https://www.smashingmagazine.com/2021/03/good-better-best-untangling-complex-world-accessible-patterns","type":"advanced","source":"smashingmagazine.com","_id":"EZI9dCW4WItJOiz2"}
 {"title":"JavaScript Code Analysis","url":"https://www.javascripttutorials.net/javascript-code-analysis","type":"advanced","source":"javascripttutorials.net","_id":"Ea3Oh4DkK1bG89mn"}
-{"title":"Ultimate Flask Tutorial 2022","url":"https://www.docdroid.net/0GOZUFr/ultimate-flask-tutorial-2022-reddit-pdf","type":"basics","source":"docdroid.net","_id":"EbkP6aTOcZOvkQJf"}
 {"title":"Scrapy Course","url":"https://www.youtube.com/watch?v=mBoX_JCKZTE","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"EbmuXzDe6ijSvD2x"}
 {"title":"Dear Console","url":"https://codepo8.github.io/dearconsole/","type":"tool","source":"codepo8.github.io","_id":"EgnQ0VMyqi3ziyXS"}
 {"title":"Python Design Patterns","url":"https://python-patterns.guide/","type":"how-to","source":"python-patterns.guide","_id":"EgwBukzMdzvZLJ5X"}
@@ -913,7 +908,6 @@
 {"title":"Next.js & Netlify Identity (auth) Tutorial","url":"https://www.youtube.com/playlist?list=PL4cUxeGkcC9ig-veuRaLI4QB0Ws8xMzjv","source":"youtube.com/c/TheNetNinja","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"Z7dHO6EnK8HEW3K4"}
 {"title":"Python’s “Disappointing” Superpowers","url":"https://lukeplant.me.uk/blog/posts/pythons-disappointing-superpowers/","type":"curiosity","source":"lukeplant.me.uk","_id":"Z7w5FBQMyhbfPOVg"}
 {"title":"awesome-rest","url":"https://github.com/marmelab/awesome-rest","type":"reference","source":"github.com/marmelab","_id":"ZFmCbQXYoLLtOlHd"}
-{"title":"Hooks Cheatsheet","url":"https://react-hooks-cheatsheet.com","type":"reference","source":"react-hooks-cheatsheet.com","_id":"ZHjIgI3NuwBn5Gl4"}
 {"title":"A (Mostly) Complete Guide to React Rendering Behavior","url":"https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior","type":"advanced","source":"blog.isquaredsoftware.com","_id":"ZIP0AaLOE65x4qoF"}
 {"title":"The Complete Guide to JavaScript Classes","url":"https://dmitripavlutin.com/javascript-classes-complete-guide","type":"basics","source":"dmitripavlutin.com","_id":"ZL1DAA6uHTFwAqln"}
 {"title":"Deep JavaScript: Theory and techniques","url":"https://exploringjs.com/deep-js","type":"advanced","source":"exploringjs.com","_id":"ZNkTV3BOz6XOizIs"}
@@ -1002,7 +996,6 @@
 {"title":"Speeding up the JavaScript ecosystem","url":"https://marvinh.dev/blog/speeding-up-javascript-ecosystem/","type":"advanced","source":"marvinh.dev","_id":"c4L7o7Jciceo33DJ"}
 {"url":"https://leanpub.com/productiongo/read","title":"Production Go","source":"leanpub.com","type":"advanced","_id":"c6cFqKXKWxDi5ikX"}
 {"title":"Code Reviews 101","url":"https://www.semasoftware.com/blog/code-reviews-101-the-basics","type":"advanced","source":"semasoftware.com","_id":"c7toF3JcYQF2TqTe"}
-{"title":"Introduction to HTML","url":"https://www.cronj.com/frontend-development/html.html","type":"basics","source":"cronj.com","_id":"c8qtdHPComoiuBNr"}
 {"title":"The very basics of a terminal emulator","url":"https://www.uninformativ.de/blog/postings/2018-02-24/0/POSTING-en.html","type":"advanced","source":"uninformativ.de","_id":"cAwhG91tp127bZUj"}
 {"url":"https://martinheinz.dev/blog/65","title":"Building GitHub Apps with Golang","source":"martinheinz.dev","type":"how-to","_id":"cEBj7nsUpFaPcsTI"}
 {"title":"Invent with Python","url":"https://inventwithpython.com/invent4thed","type":"basics","source":"inventwithpython.com","_id":"cEt76F5bPFETf1Xz"}
@@ -1516,7 +1509,6 @@
 {"url":"https://github.com/google/exposure-notifications-server","title":"exposure-notifications-server","source":"github.com/google","type":"curiosity","_id":"tR8E9nLnB0J4NIiB"}
 {"title":"Typographic Hierarchies","url":"https://www.smashingmagazine.com/2022/10/typographic-hierarchies","type":"basics","source":"smashingmagazine.com","_id":"tRoPP6YIh3tuxQgb"}
 {"title":"Python FastAPI Playlist + testing + deployment + CI/CD","url":"https://www.youtube.com/playlist?list=PL8VzFQ8k4U1L5QpSapVEzoSfob-4CR8zM","source":"youtube.com/@SanjeevThiyagarajan","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"tUW2XC5AEMiKpz7M"}
-{"title":"[Array Builder]","url":"https://www.arraybuilder.com","type":"tool","source":"arraybuilder.com","_id":"tWVzhzqVMl4kmW3L"}
 {"title":"When CSS Isn’t Enough: JavaScript Requirements For Accessible Components","url":"https://www.smashingmagazine.com/2021/06/css-javascript-requirements-accessible-components","type":"advanced","source":"smashingmagazine.com","_id":"tY1s2grNwWFOpPC8"}
 {"url":"https://commandcenter.blogspot.com/2024/01/what-we-got-right-what-we-got-wrong.html?m=1","title":"What We Got Right, What We Got Wrong","source":"commandcenter.blogspot.com","type":"curiosity","_id":"tZATCkX0n3t0s1Oa"}
 {"title":"Pygame Tutorial From Scratch - 3.5 Hours of Building RPG Game","url":"https://www.youtube.com/watch?v=G_LXB5C-r20","source":"youtube.com/@Pythondude","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"thhq3t3cc9tWz0JG"}
@@ -1660,7 +1652,6 @@
 {"title":"How to write tests that need a lot of data?","url":"https://gogognome.nl/how-to-write-tests-that-need-a-lot-of-data.html","type":"how-to","source":"gogognome.nl","healthcheck":{"runner":"Http","config":{"titleSelector":"h1"}},"_id":"zI57QUhLH6xIZf9y"}
 {"title":"Git from the inside out","url":"https://maryrosecook.com/blog/post/git-from-the-inside-out","type":"advanced","source":"maryrosecook.com","_id":"zJrwIESEEFdKHgzc"}
 {"title":"Practical React Query","url":"https://tkdodo.eu/blog/practical-react-query","type":"advanced","source":"tkdodo.eu","_id":"zKj0kEqPZEidO0JS"}
-{"title":"Python adventures: Finding unused dependencies","url":"https://www.nathanfurnal.xyz/posts/py-find-unused-deps/","type":"how-to","source":"nathanfurnal.xyz","_id":"zL8Rh9gAhjPZx0Es"}
 {"title":"Shell scripting with Node.js","url":"https://exploringjs.com/nodejs-shell-scripting/","type":"advanced","source":"exploringjs.com","_id":"zLLFh7uCqGhl402O"}
 {"title":"Developer Roadmaps","url":"https://roadmap.sh","type":"reference","source":"roadmap.sh","_id":"zMotyKVnLfZAePgm"}
 {"title":"gitignore.io","url":"https://www.toptal.com/developers/gitignore/","type":"tool","source":"toptal.com","_id":"zNRvHFiWZb9ilKga"}
