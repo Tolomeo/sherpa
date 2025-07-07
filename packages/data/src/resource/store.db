@@ -1,6 +1,6 @@
 {"url":"https://github.com/bahlo/go-styleguide","title":"go-styleguide","source":"github.com/bahlo","type":"how-to","_id":"01cuY0xWeMedg81N"}
 {"title":"Humane by Design","url":"https://humanebydesign.com","type":"reference","source":"humanebydesign.com","_id":"02OuoXqJv8ihF86m"}
-{"title":"Color Psychology in Branding","url":"https://www.nickkolenda.com/color-psychology","type":"basics","source":"nickkolenda.com","_id":"066GJMvJuLDN66GA"}
+{"title":"Color: A Step-By-Step Guide","url":"https://www.nickkolenda.com/color-psychology","type":"basics","source":"nickkolenda.com","_id":"066GJMvJuLDN66GA"}
 {"title":"Neovim from Scratch","url":"https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ","source":"youtube.com/c/ChrisAtMachine","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"07Oi15qLmVTUapH6"}
 {"title":"WSL-Guide","url":"https://github.com/mikeroyal/WSL-Guide","type":"basics","source":"github.com/mikeroyal","_id":"07dimhyXmAGLVCCW"}
 {"title":"npm Docs","url":"https://docs.npmjs.com","type":"reference","source":"docs.npmjs.com","_id":"07kSBooZkjaTzRHP"}
@@ -190,7 +190,7 @@
 {"url":"https://go.dev/doc/","title":"Documentation","source":"go.dev","type":"reference","_id":"7fh3Fn41e6QtoQhP"}
 {"title":"CSS { In Real Life }","url":"https://css-irl.info","type":"feed","source":"css-irl.info","_id":"7ftvNGf7Qb6xVgRM"}
 {"title":"Tutorial","url":"https://fishshell.com/docs/current/tutorial.html","type":"basics","source":"fishshell.com","_id":"7gBNznDEctis9EXJ"}
-{"title":"Font Psychology in Branding","url":"https://www.nickkolenda.com/font-psychology","type":"basics","source":"nickkolenda.com","_id":"7hZDqKZTSHV33uYD"}
+{"title":"Fonts: A Step-By-Step Guide","url":"https://www.nickkolenda.com/font-psychology","type":"basics","source":"nickkolenda.com","_id":"7hZDqKZTSHV33uYD"}
 {"url":"https://www.youtube.com/playlist?list=PLzUGFf4GhXBKKmN8vsbUmmbCKG-vJBloE","title":"Beginner's Guide to GO","healthcheck":{"runner":"YoutubeData"},"source":"youtube.com/@Tutorialedge","type":"basics","_id":"7hlsIysfyL20P48z"}
 {"title":"Open Container Initiative","url":"https://opencontainers.org","type":"reference","source":"opencontainers.org","_id":"7iPsiso0qrHnr9Zd"}
 {"title":"Python 3 Module of the Week","url":"https://pymotw.com/3","type":"reference","source":"pymotw.com","_id":"7jwxodSsgzLVKEbU"}
@@ -226,11 +226,11 @@
 {"title":"Design for Developers","url":"https://thoughtbot.com/upcase/design-for-developers","type":"basics","source":"thoughtbot.com","_id":"8qgsgeQjHwTpisDO"}
 {"title":"NvChad","url":"https://github.com/NvChad/NvChad","type":"tool","source":"github.com/NvChad","_id":"8sU8rOc10lY5wySE"}
 {"url":"https://www.youtube.com/playlist?list=PL0xRBLFXXsP7-0IVCmoo2FEWBrQzfH2l8","title":"How To Golang","healthcheck":{"runner":"YoutubeData"},"source":"youtube.com/@anthonygg_","type":"advanced","_id":"8tYUXH1WHwE28KwC"}
-{"title":"Learn GitLab in 3 Hours | GitLab Complete Tutorial For Beginners","url":"https://www.youtube.com/watch?v=8aV5AxJrHDg&list=PLZMWkkQEwOPmGolqJPsAm_4fcBDDc2to_","source":"youtube.com/c/LambdaTest","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"8tz7ke0QkNcpTDZU"}
+{"title":"GitLab CI CD Tutorial: Crash Course to Learn GitLab","url":"https://www.youtube.com/watch?v=8aV5AxJrHDg&list=PLZMWkkQEwOPmGolqJPsAm_4fcBDDc2to_","source":"youtube.com/c/LambdaTest","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"8tz7ke0QkNcpTDZU"}
 {"url":"https://www.youtube.com/watch?v=zHcef4eHOc8","title":"Go and AWS - Code and Deploy a Serverless API","source":"youtube.com/@freecodecamp","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"8u8MSTsXel0VBE06"}
 {"url":"https://programmingpercy.tech/blog/we-measure-the-power-of-cars-computers-and-cellphones-but-what-about-code/","title":"We Measure the Power of Cars, Computers, and Cellphones. But What About Code?","source":"programmingpercy.tech","type":"advanced","_id":"8yWkYBljJxaZ7hRV"}
 {"title":"CS50's Introduction to Game Development","url":"https://www.youtube.com/playlist?list=PLWKjhJtqVAbluXJKKbCIb4xd7fcRkpzoz","source":"youtube.com/@freecodecamp","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"96PhjfcORr4QpLEG"}
-{"title":"Responsive Web Design Certification","url":"https://www.freecodecamp.org/learn/2022/responsive-web-design/","type":"basics","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"9EO04uEbnsB5StDQ"}
+{"title":"Responsive Web Design","url":"https://www.freecodecamp.org/learn/2022/responsive-web-design/","type":"basics","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"9EO04uEbnsB5StDQ"}
 {"title":"Vim: From hjkl to a platform for plugins","url":"https://www.youtube.com/watch?v=ES1L2SPgIDI","source":"youtube.com/c/Vim-jpOrg","type":"curiosity","healthcheck":{"runner":"YoutubeData"},"_id":"9FxesJnoE70fssU7"}
 {"title":"SmolCSS","url":"https://smolcss.dev","type":"how-to","source":"smolcss.dev","_id":"9GBP3621rS7udo9Y"}
 {"title":"API with NestJS","url":"https://wanago.io/courses/api-with-nestjs/","type":"advanced","source":"wanago.io","_id":"9GcCWBRmffViaCG3"}
@@ -310,7 +310,7 @@
 {"title":"The Hitchhiker’s Guide to Python!","url":"https://docs.python-guide.org/","type":"reference","source":"docs.python-guide.org","_id":"CAVbP8xfmtrY8q4w"}
 {"url":"https://fast4ward.online/posts/a-guide-to-interfaces-in-go/","title":"A Guide to Interfaces in Go","source":"fast4ward.online","type":"advanced","_id":"CDI8lnOa7aGrXQVW"}
 {"url":"https://changelog.com/gotime","title":"The Go Time podcast","source":"changelog.com","type":"feed","_id":"CDZgpVYLMesqyRK8"}
-{"title":"Comprehensive Guide on Web Scraping with Python","url":"https://serpdog.io/blog/web-scraping-with-python/","type":"basics","source":"serpdog.io","_id":"CEkEOsUxQ0f6FBmv"}
+{"title":"Python Web Scraping Guide","url":"https://serpdog.io/blog/web-scraping-with-python/","type":"basics","source":"serpdog.io","_id":"CEkEOsUxQ0f6FBmv"}
 {"title":"Awwwards","url":"https://www.awwwards.com/","type":"how-to","source":"awwwards.com","_id":"CGAhWm4PQ64CDlEc"}
 {"title":"Arcade Academy - Learn Python","url":"https://learn.arcade.academy/en/latest/index.html","type":"basics","source":"learn.arcade.academy","_id":"CJMFFxBpvozw9Ptz"}
 {"title":"Type Design Resources","url":"https://typedesignresources.com/","type":"reference","source":"typedesignresources.com","_id":"CKdlOyyjm1Yd81Ho"}
@@ -351,7 +351,7 @@
 {"title":"A List Apart","url":"https://alistapart.com","type":"feed","source":"alistapart.com","_id":"DMSOt1sp2m8JMEd8"}
 {"title":"Linux Command Library","url":"https://linuxcommandlibrary.com/","type":"reference","source":"linuxcommandlibrary.com","_id":"DMsQXZuPmQTOiXOm"}
 {"title":"A git Primer","url":"https://danielmiessler.com/study/git","type":"basics","source":"danielmiessler.com","_id":"DP7b2IjfmJRc04AQ"}
-{"title":"A List of UX Best Practices","url":"https://www.nickkolenda.com/user-experience","type":"basics","source":"nickkolenda.com","_id":"DRBVCtOAmfdMtLtJ"}
+{"title":"User Experience: A List of Tactics","url":"https://www.nickkolenda.com/user-experience","type":"basics","source":"nickkolenda.com","_id":"DRBVCtOAmfdMtLtJ"}
 {"url":"https://landontclipp.github.io/blog/2023/07/15/analyzing-go-heap-escapes/","title":"Analyzing Go Heap Escapes","source":"landontclipp.github.io","type":"advanced","_id":"DUQdXtyuJA2tRHcF"}
 {"title":"User Interface Design","url":"https://www.coursera.org/specializations/user-interface-design","type":"basics","source":"coursera.org","_id":"DVT08WGi15pZEO5I"}
 {"url":"https://github.com/golang-standards/project-layout","title":"project-layout","source":"github.com/golang-standards","type":"how-to","_id":"DXSPhKoUrp1Oui3h"}
@@ -497,13 +497,13 @@
 {"title":"Advanced React","url":"https://www.coursera.org/learn/advanced-react","type":"basics","source":"coursera.org","_id":"Ikx2xRjmpbf7QOYQ"}
 {"title":"Container Security","url":"https://devopedia.org/container-security","type":"advanced","source":"devopedia.org","_id":"Im5qHavS56ajAf3O"}
 {"url":"https://go.dev/tour/list","source":"go.dev","title":"A Tour of Go","type":"basics","_id":"InjDT83N8A8z3Mij"}
-{"title":"Machine Learning with Python Certification","url":"https://www.freecodecamp.org/learn/machine-learning-with-python","type":"advanced","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"Io63c3EL73U1P3m1"}
+{"title":"Machine Learning with Python","url":"https://www.freecodecamp.org/learn/machine-learning-with-python","type":"advanced","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"Io63c3EL73U1P3m1"}
 {"title":"How To Code in Node.js","url":"https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js","source":"digitalocean.com/community","type":"basics","_id":"Iow6bRHUp4Yc3vlF"}
 {"title":"Disability Statistics","url":"https://dequeuniversity.com/resources/disability-statistics","type":"reference","source":"dequeuniversity.com","_id":"IpCiud1mUxdZgPQi"}
 {"title":"Learn React 18 with Redux Toolkit – Full Tutorial for Beginners","url":"https://www.youtube.com/watch?v=2-crBg6wpp0","source":"youtube.com/@freecodecamp","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"Iq9SXamymvEW1fVO"}
 {"title":"The User Experience of Virtual Reality","url":"https://www.uxofvr.com","type":"advanced","source":"uxofvr.com","_id":"IrFdOyGHUk1YiLH4"}
 {"title":"awesome-icons","url":"https://github.com/notlmn/awesome-icons","type":"reference","source":"github.com/notlmn","_id":"It4ZXH1S2iKEvT9v"}
-{"title":"How to Use npm as a Build Tool","url":"https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool","type":"how-to","source":"keithcirkel.co.uk","_id":"IxRhJH5z7TQdhdE2"}
+{"title":"Use npm as a Build Tool","url":"https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool","type":"how-to","source":"keithcirkel.co.uk","_id":"IxRhJH5z7TQdhdE2"}
 {"title":"A simple visual cheatsheet for CSS Grid Layout","url":"https://grid.malven.co/","type":"reference","source":"grid.malven.co","_id":"J15zEV1UaODiIG1z"}
 {"title":"Embedded Interface Design","url":"https://www.coursera.org/specializations/embedded-interface-design","type":"advanced","source":"coursera.org","_id":"J1CYwXq8Mv0eeCTr"}
 {"title":"JavaScript Weekly","url":"https://javascriptweekly.com","type":"feed","source":"javascriptweekly.com","_id":"J3ghJHMrQfe5UbMd"}
@@ -735,7 +735,7 @@
 {"title":"Publishing Python Packages on PyPI: A Comprehensive Guide","url":"https://medium.com/@ewho.ruth2014/publishing-python-packages-on-pypi-a-comprehensive-guide-14f466aa84f0","type":"advanced","source":"medium.com","_id":"Rk24Yx0MSAEI736X"}
 {"title":"PSKoans","url":"https://github.com/vexx32/PSKoans","type":"basics","source":"github.com/vexx32","_id":"Rn0KTITXE9WNONTG"}
 {"title":"Redux Toolkit Tutorial","url":"https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3","source":"youtube.com/@Codevolution","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"RoIrTamUWWV6cHGd"}
-{"title":"Psychology of Design","url":"https://growth.design/psychology","type":"basics","source":"growth.design","_id":"RqZgOHXO1hhZOQ3V"}
+{"title":"106 Cognitive Biases & Principles That Affect Your UX","url":"https://growth.design/psychology","type":"basics","source":"growth.design","_id":"RqZgOHXO1hhZOQ3V"}
 {"title":"Making Calendars With Accessibility and Internationalization in Mind","url":"https://css-tricks.com/making-calendars-with-accessibility-and-internationalization-in-mind/","type":"how-to","source":"css-tricks.com","_id":"RsDnFHPfxKTr1J7J"}
 {"url":"https://www.digitalocean.com/community/tutorial-series/how-to-code-in-go","title":"How To Code in Go","source":"digitalocean.com","type":"basics","_id":"Rtyouz6Q9HAY35jL"}
 {"title":"How to Install and Use Docker","url":"https://www.digitalocean.com/community/tutorial_collections/how-to-install-and-use-docker","source":"digitalocean.com/community","type":"how-to","_id":"Rvsja6h3X9cpsiWw"}
@@ -935,7 +935,7 @@
 {"title":"Collection of React Hooks","url":"https://nikgraf.github.io/react-hooks","type":"reference","source":"nikgraf.github.io","_id":"a9tHK6IKCNyVxsA4"}
 {"title":"Let’s Dev: A Package Manager","url":"https://yarnpkg.com/blog/2017/07/11/lets-dev-a-package-manager","type":"advanced","source":"yarnpkg.com","_id":"aDAe7qMrTFERPwiE"}
 {"title":"React by Example","url":"https://reactbyexample.github.io","type":"basics","source":"reactbyexample.github.io","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"aEqChfZ2AONtJzSg"}
-{"title":"UX Design Challenges","url":"https://uxtools.co/challenges","type":"basics","source":"uxtools.co","_id":"aF0UmC3DCwM18TCx"}
+{"title":"UX Tools","url":"https://uxtools.co/challenges","type":"basics","source":"uxtools.co","_id":"aF0UmC3DCwM18TCx"}
 {"title":"Curricula on Web Accessibility: A Framework to Build Your Own Courses","url":"https://www.w3.org/WAI/curricula/","type":"curiosity","source":"w3.org","_id":"aFI62vnbCSkrCRXV"}
 {"title":"js13kGames","url":"https://js13kgames.com","type":"curiosity","source":"js13kgames.com","_id":"aFJD2N6PqUeSNqrL"}
 {"title":"The Beginner’s Guide to React Testing","url":"https://maxrozen.com/beginners-guide-to-react-testing","type":"basics","source":"maxrozen.com","_id":"aMJEnhOeumD9tG7T"}
@@ -1042,7 +1042,7 @@
 {"title":"git(1)","url":"https://gitirc.eu/git.html","type":"reference","source":"gitirc.eu","_id":"dRjviILXpTGyBwe3"}
 {"title":"Introduction to Web Accessibility","url":"https://www.edx.org/course/web-accessibility-introduction","source":"edx.org","type":"basics","_id":"dVHs31JtK1wtW86D"}
 {"title":"Typescript","url":"https://fjolt.com/category/typescript","type":"reference","source":"fjolt.com","_id":"dWM9xwuYFY0FeIIl"}
-{"title":"126 Websites to Show Off your Design","url":"https://lemon.io/127-design-websites","type":"reference","source":"lemon.io","_id":"dXFqO3aLmUAubcUd"}
+{"title":"126 websites to show off your design","url":"https://lemon.io/127-design-websites","type":"reference","source":"lemon.io","_id":"dXFqO3aLmUAubcUd"}
 {"title":"pure-bash-bible","url":"https://github.com/dylanaraps/pure-bash-bible","type":"how-to","source":"github.com/dylanaraps","_id":"dYfLjaaPrdR11Nn5"}
 {"title":"Building a RESTful API with Node.js","url":"https://www.youtube.com/playlist?list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q","source":"youtube.com/c/Academind","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"dZgha3GBuVNGlQcU"}
 {"title":"React with Redux, React-Router, Hooks and Auth0","url":"https://www.udemy.com/course/modern-react","type":"advanced","source":"udemy.com","healthcheck":{"runner":"UdemyAffiliate"},"_id":"dbvTiq5wEj6iuSPX"}
@@ -1165,7 +1165,7 @@
 {"title":"practicalnode","url":"https://github.com/azat-co/practicalnode","type":"basics","source":"github.com/azat-co","_id":"h7MRU2vfVAshEbrG"}
 {"url":"https://github.com/TheAlgorithms/Go","title":"Go","source":"github.com/TheAlgorithms","type":"advanced","_id":"h8Ccz0hDzsx5A5GX"}
 {"title":"Node Target Mapping","url":"https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping","type":"reference","source":"github.com/microsoft","_id":"h8L2EEQ28aj3NU2K"}
-{"title":"Tania Rascia","url":"https://www.taniarascia.com","type":"feed","source":"taniarascia.com","_id":"h8c2089IxTKnVnVr"}
+{"title":"Tania’s Website","url":"https://www.taniarascia.com","type":"feed","source":"taniarascia.com","_id":"h8c2089IxTKnVnVr"}
 {"title":"What happens when you press a key in your terminal?","url":"https://jvns.ca/blog/2022/07/20/pseudoterminals/","type":"advanced","source":"jvns.ca","_id":"hA8nXUcDd3kh4f2F"}
 {"title":"javascript-questions","url":"https://github.com/lydiahallie/javascript-questions","type":"basics","source":"github.com/lydiahallie","_id":"hABatkWTBD28Ei1y"}
 {"url":"https://chris124567.github.io/2021-06-21-go-performance/","title":"Reducing Memory Allocations in Golang","source":"chris124567.github.io","type":"how-to","_id":"hAvHc5yq2JR7kwrw"}
@@ -1382,7 +1382,7 @@
 {"title":"Modernizing a Legacy Redux Application with React Hooks","url":"https://egghead.io/courses/modernizing-a-legacy-redux-application-with-react-hooks-c528","type":"advanced","source":"egghead.io","_id":"ol76xnNKP5nkvoec"}
 {"title":"GPT in 60 Lines of NumPy","url":"https://jaykmody.com/blog/gpt-from-scratch/","type":"advanced","source":"jaykmody.com","_id":"onpXf23VE1Kdfagi"}
 {"title":"React Best Practices: How to Write Better React Apps","url":"https://www.rafaelquintanilha.com/react-best-practices-how-to-write-better-react-apps/","type":"how-to","source":"rafaelquintanilha.com","_id":"oq6TzUEWWnEeL3Ad"}
-{"url":"https://www.youtube.com/playlist?list=PL5dTjWUk_cPYztKD7WxVFluHvpBNM28N9","title":"56 KILLER GOLANG Projects in 55 Different Videos","source":"youtube.com/@AkhilSharmaTech","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"oq7Owq2iHP8PVH6K"}
+{"url":"https://www.youtube.com/playlist?list=PL5dTjWUk_cPYztKD7WxVFluHvpBNM28N9","title":"59 KILLER GOLANG Projects in 59 Different Videos","source":"youtube.com/@AkhilSharmaTech","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"oq7Owq2iHP8PVH6K"}
 {"title":"React for Vue developers","url":"https://sebastiandedeyne.com/react-for-vue-developers","type":"curiosity","source":"sebastiandedeyne.com","_id":"orR5oyLZpJSm2mSs"}
 {"title":"Semantics to Screen Readers","url":"https://alistapart.com/article/semantics-to-screen-readers","type":"advanced","source":"alistapart.com","_id":"otidGnFeGGiBgG6I"}
 {"title":"Clippy — CSS clip-path maker","url":"https://bennettfeely.com/clippy","type":"tool","source":"bennettfeely.com","_id":"owpPfJwm8SUcxAiR"}
@@ -1625,7 +1625,7 @@
 {"title":"Working With Colors Guide","url":"https://css-tricks.com/nerds-guide-color-web/","type":"advanced","source":"css-tricks.com","_id":"yJAkMMAlTZneyLeu"}
 {"title":"RegexOne - Learn Regular Expressions","url":"https://regexone.com","type":"basics","source":"regexone.com","_id":"yMVZqoTeXPavdpty"}
 {"title":"Bash Scripting Tutorial","url":"https://ryanstutorials.net/bash-scripting-tutorial/","type":"basics","source":"ryanstutorials.net","_id":"yNmDUksf91Po2XY5"}
-{"title":"Create Your Own JavaScript Runtime with V8, Libuv & More","url":"https://www.youtube.com/watch?v=ynNDmp7hBdo","source":"youtube.com/@ErickWendelTraining","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"yOxurExJhILtRHx9"}
+{"title":"Recreating Node.js from Scratch","url":"https://www.youtube.com/watch?v=ynNDmp7hBdo","source":"youtube.com/@ErickWendelTraining","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"yOxurExJhILtRHx9"}
 {"title":"Conventional Commits","url":"https://www.conventionalcommits.org/en/v1.0.0/","type":"advanced","source":"conventionalcommits.org","_id":"yUEkrxdSbm4M8CuY"}
 {"url":"https://www.sheshbabu.com/posts/react-like-composition-using-go-html-template/","title":"Implementing React-like Composition using Go’s html/template","source":"sheshbabu.com","type":"advanced","_id":"yVcXVQT3DHvMbmcm"}
 {"title":"How I’m still not using GUIs: A guide to the terminal","url":"https://lucasfcosta.com/2019/02/10/terminal-guide-2019.html","type":"how-to","source":"lucasfcosta.com","_id":"yZKlb1K5TKC511cH"}
@@ -1657,7 +1657,7 @@
 {"title":"gitignore.io","url":"https://www.toptal.com/developers/gitignore/","type":"tool","source":"toptal.com","_id":"zNRvHFiWZb9ilKga"}
 {"title":"How to create a real-world Node CLI app with Node","url":"https://www.freecodecamp.org/news/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3","type":"how-to","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"zRAwIQNMtTQ8J9q1"}
 {"title":"Git Notes","url":"https://ikiwiki.tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/","type":"advanced","source":"ikiwiki.tylercipriani.com","_id":"zU9EcLQWFKhENjbE"}
-{"title":"Data Analysis with Python Certification","url":"https://www.freecodecamp.org/learn/data-analysis-with-python","type":"advanced","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"zWSm2PhUKgQowguM"}
+{"title":"Data Analysis with Python","url":"https://www.freecodecamp.org/learn/data-analysis-with-python","type":"advanced","source":"freecodecamp.org","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"zWSm2PhUKgQowguM"}
 {"title":"JavaScript tutorial - a step by step, in-depth introduction to JavaScript programming","url":"https://launchschool.com/books/javascript","type":"basics","source":"launchschool.com","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}},"_id":"zXcmyK3v4IKX7C7w"}
 {"title":"JavaScript testing tutorial Archives","url":"https://wanago.io/courses/javascript-testing-tutorial","type":"basics","source":"wanago.io","_id":"zcu9MX9PfYjGklHc"}
 {"url":"https://github.com/darius-khll/golang-developer-roadmap","title":"golang-developer-roadmap","source":"github.com/darius-khll","type":"reference","_id":"zg9qzUWg4VWxI2eh"}
