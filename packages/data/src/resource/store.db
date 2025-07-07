@@ -1505,7 +1505,7 @@
 {"title":"Build your own WebAssembly Compiler","url":"https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html","type":"how-to","source":"blog.scottlogic.com","_id":"tBU36XwqH7LNjhX5"}
 {"title":"awesome-compose","url":"https://github.com/docker/awesome-compose","type":"how-to","source":"github.com/docker","_id":"tEjGFRs3TjhL8XZt"}
 {"title":"LinuxCommand","url":"https://linuxcommand.org/","type":"reference","source":"linuxcommand.org","_id":"tNMcfZpBfZVg3Wh6"}
-{"title":"Python packaging for developers in a hurry","url":"https://giovannipcarvalho.github.io/2023/01/08/python-packaging-in-a-hurry.html","type":"basics","source":"giovannipcarvalho.github.io","_id":"tQnnyxyThFwyrGom"}
+{"title":"Python packaging for developers in a hurry","url":"https://carvalho.sh/2023-01-08-python-packaging-in-a-hurry/","type":"basics","source":"carvalho.sh","_id":"tQnnyxyThFwyrGom"}
 {"url":"https://github.com/google/exposure-notifications-server","title":"exposure-notifications-server","source":"github.com/google","type":"curiosity","_id":"tR8E9nLnB0J4NIiB"}
 {"title":"Typographic Hierarchies","url":"https://www.smashingmagazine.com/2022/10/typographic-hierarchies","type":"basics","source":"smashingmagazine.com","_id":"tRoPP6YIh3tuxQgb"}
 {"title":"Python FastAPI Playlist + testing + deployment + CI/CD","url":"https://www.youtube.com/playlist?list=PL8VzFQ8k4U1L5QpSapVEzoSfob-4CR8zM","source":"youtube.com/@SanjeevThiyagarajan","type":"advanced","healthcheck":{"runner":"YoutubeData"},"_id":"tUW2XC5AEMiKpz7M"}
