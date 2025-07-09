@@ -326,7 +326,6 @@
 {"title":"A Complete Guide to Next.js Authentication","url":"https://buttercms.com/blog/nextjs-authentication-tutorial/","type":"advanced","source":"buttercms.com","_id":"CX1GC892ACZZkgNa"}
 {"title":"Writing a Unix Shell","url":"https://indradhanush.github.io/blog/writing-a-unix-shell-part-1/","type":"advanced","source":"indradhanush.github.io","_id":"CZ1Zbm8nSfln15x0"}
 {"title":"Editor war","url":"https://en.wikipedia.org/wiki/Editor_war","type":"curiosity","source":"en.wikipedia.org","_id":"CchWmODbxrfndAAK"}
-{"title":"Hackr.io","url":"https://hackr.io","type":"reference","source":"hackr.io","_id":"CdWsdnRUYKniCuP3"}
 {"url":"https://blog.init-io.net/post/2018/07-01-go-unix-shell/","title":"Writing a simple shell in Go","source":"blog.init-io.net","type":"advanced","_id":"CdlV13zFX6oPRlsg"}
 {"url":"https://goethereumbook.org/en/","title":"Ethereum Development with Go","source":"goethereumbook.org","type":"advanced","_id":"CeDDZEMc74DSb515"}
 {"title":"Using Python with Arduino","url":"https://toptechboy.com/using-python-with-arduino-lessons/","type":"advanced","source":"toptechboy.com","_id":"CfWox5yAJie6Md5y"}
@@ -466,7 +465,6 @@
 {"title":"Patterns","url":"https://maggieappleton.com/patterns","type":"advanced","source":"maggieappleton.com","_id":"HbELC6OnBP8z3k89"}
 {"url":"https://github.com/SimonWaldherr/rpi-examples","title":"rpi-examples","source":"github.com/SimonWaldherr","type":"how-to","_id":"HhHrfreb77HUqNrM"}
 {"title":"Let's code a web server from scratch with NodeJS Streams!","url":"https://www.codementor.io/@ziad-saab/let-s-code-a-web-server-from-scratch-with-nodejs-streams-h4uc9utji","type":"advanced","source":"codementor.io","healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"load"}},"_id":"HhmOMLMHoGHhVBBm"}
-{"url":"https://www.zarl.dev/articles/enums","title":"Go Enums Suck","source":"zarl.dev","type":"advanced","_id":"HjThXBqnBXFDJe6K"}
 {"title":"GitHowTo","url":"https://githowto.com","type":"basics","source":"githowto.com","_id":"HjfhA53l3o6GdkdJ"}
 {"title":"Real Python","url":"https://realpython.com","type":"feed","source":"realpython.com","_id":"Hlp8hGTqn45e1qDT"}
 {"title":"I wrote a GameBoy game in TypeScript","url":"https://www.youtube.com/watch?v=TIlx5nBnx-o","source":"youtube.com/@LowByteProductions","type":"curiosity","healthcheck":{"runner":"YoutubeData"},"_id":"HnQLO3JpjDpoPApj"}
@@ -1060,7 +1058,6 @@
 {"title":"Adobe XD 2022 Crash Course","url":"https://www.youtube.com/watch?v=oo5EoelQ_DQ","source":"youtube.com/@DesignCourse","type":"basics","healthcheck":{"runner":"YoutubeData"},"_id":"e1wGR8jkFrzcKMKb"}
 {"title":"the-art-of-command-line","url":"https://github.com/jlevy/the-art-of-command-line","type":"basics","source":"github.com/jlevy","_id":"e23rhOYViSzP2bh9"}
 {"url":"https://github.com/enocom/gopher-reading-list","title":"gopher-reading-list","source":"github.com/enocom","type":"reference","_id":"e3zUOgqdt0dym6Ay"}
-{"url":"https://bestofgo.dev/","title":"Best of Go","source":"bestofgo.dev","type":"tool","_id":"e53wKBFVUgQ0HwzC"}
 {"title":"Blue Green Deployment for Node.js Without Kubernetes","url":"https://semaphoreci.com/blog/blue-green-deployment-nodejs","type":"how-to","source":"semaphoreci.com","_id":"e7IlgNIY6LzsSbZL"}
 {"title":"CSS-Tricks","url":"https://css-tricks.com","type":"feed","source":"css-tricks.com","_id":"e8aYs2Q3Q72KMfUY"}
 {"title":"Learn HTML","url":"https://web.dev/learn/html/","type":"basics","source":"web.dev","_id":"eAr3YwzbCLp1guXr"}
@@ -1210,7 +1207,6 @@
 {"title":"Git Time","url":"https://git.bradwoods.io/","type":"basics","source":"git.bradwoods.io","_id":"i67GyZ8uMSt7gvLO"}
 {"title":"Accessibility for teams","url":"https://accessibility-for-teams.com","type":"advanced","source":"accessibility-for-teams.com","_id":"i6W1BorkYEj1PwXy"}
 {"title":"A Complete Guide to React Router: Everything You Need to Know","url":"https://ui.dev/react-router-tutorial","type":"advanced","source":"ui.dev","healthcheck":{"runner":"Http","config":{"titleSelector":"title:not(:empty)"}},"_id":"i7Peh5IcBBtHoiWt"}
-{"title":"User Interface (UI) Personalization","url":"https://www.edx.org/course/user-interface-ui-personalization","type":"basics","source":"edx.org","_id":"iBMPAg4gz4DMg2Vq"}
 {"url":"https://github.com/gin-gonic/examples","title":"examples","source":"github.com/gin-gonic","type":"how-to","_id":"iCr0aZBzvljW3Dan"}
 {"title":"React Express","url":"http://www.react.express","type":"basics","source":"react.express","_id":"iFZiUTm3zStA0sxs"}
 {"title":"How to Section Your HTML","url":"https://css-tricks.com/how-to-section-your-html","type":"basics","source":"css-tricks.com","_id":"iGkevTVRuR4387Jd"}
