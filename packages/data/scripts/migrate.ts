@@ -1,10 +1,6 @@
 import * as path from 'node:path'
 import * as url from 'node:url'
-import {
-  ResourceDataSchema2,
-  ResourceData2,
-  ResourceType,
-} from '../types/resource'
+import * as resource from '../types/resource'
 import Db, { migrate } from '../src/common/db'
 import From from '../src/resource/store'
 
@@ -19,7 +15,7 @@ const dbFile = path.resolve(
 )
 
 const migrateDb = async () => {
-  const to = await Db.build(ResourceDataSchema2, {
+  const to = await Db.build(resource.ResourceDataSchema2, {
     filename: dbFile,
     indexes: { unique: 'url' },
   })
@@ -35,35 +31,35 @@ const migrateDb = async () => {
         healthcheck,
       } = fromDoc
 
-      let type: ResourceData2['type']
+      let type: resource.ResourceData2['type']
 
       switch (fromType) {
-        case ResourceType.basics:
-        case ResourceType.advanced:
-        case ResourceType['how-to']:
+        case resource.ResourceType.basics:
+        case resource.ResourceType.advanced:
+        case resource.ResourceType['how-to']:
           type = {
             name: 'knowledge',
             variant: fromType as 'basics' | 'advanced' | 'how-to',
           }
           break
-        case ResourceType.reference:
+        case resource.ResourceType.reference:
           type = {
             name: 'reference',
             variant: 'index',
           }
           break
-        case ResourceType.feed:
+        case resource.ResourceType.feed:
           type = {
             name: 'reference',
             variant: 'feed',
           }
           break
-        case ResourceType.curiosity:
+        case resource.ResourceType.curiosity:
           type = {
             name: 'curiosity',
           }
           break
-        case ResourceType.tool:
+        case resource.ResourceType.tool:
           type = {
             name: 'tool',
           }
