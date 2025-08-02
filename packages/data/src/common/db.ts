@@ -188,8 +188,8 @@ export const migrate = async <
   from: From,
   to: To,
   transformer: (
-    fromDoc: Document<From['schema']['_output']>,
-  ) => Document<To['schema']['_output']>,
+    fromDoc: Document<From['config']['schema']['_output']>,
+  ) => Document<To['config']['schema']['_output']>,
 ) => {
   const fromDocuments = await from.findAll()
 
@@ -210,8 +210,9 @@ interface NEDBOptions {
 class Db<S extends DocumentSchema> {
   public static async build<S extends DocumentSchema>(
     schema: S,
-    { filename, indexes }: NEDBOptions,
+    options: NEDBOptions,
   ): Promise<Db<S>> {
+    const { filename, indexes } = options
     const db = new NEDB({ filename, autoload: true })
 
     await db.ensureIndexAsync({
@@ -221,15 +222,43 @@ class Db<S extends DocumentSchema> {
     })
     await db.compactDatafileAsync()
 
-    return new Db(schema, db)
+    return new Db(db, { schema, options })
   }
 
-  readonly schema: S
+  readonly config: {
+    schema: S
+    options: NEDBOptions
+  }
+
   private db: NEDB<S['_output']>
 
-  private constructor(schema: S, db: NEDB<S['_output']>) {
-    this.schema = schema
+  private constructor(
+    db: NEDB<S['_output']>,
+    config: { schema: S; options: NEDBOptions },
+  ) {
     this.db = db
+    this.config = config
+  }
+
+  async drop() {
+    await this.db.dropDatabaseAsync()
+  }
+
+  async migrate<To extends DocumentSchema>(
+    schema: To,
+    transformer: (doc: Document<S['_output']>) => Document<To>,
+  ) {
+    const documents = await this.findAll()
+
+    await this.drop()
+
+    const db = await Db.build(schema, this.config.options)
+
+    for (const document of documents) {
+      await db.insertOne(transformer(document))
+    }
+
+    return db
   }
 
   async findAll(filter: StrictFilter<S['_output']> = {}) {
@@ -249,7 +278,7 @@ class Db<S extends DocumentSchema> {
   }
 
   async insertOne(insert: S['_output']) {
-    const validation = this.schema.safeParse(insert)
+    const validation = this.config.schema.safeParse(insert)
 
     if (!validation.success) {
       throw validation.error
@@ -266,7 +295,7 @@ class Db<S extends DocumentSchema> {
     id: string,
     update: S['_output'],
   ): Promise<Document<S['_output']>> {
-    const validation = this.schema.safeParse(update)
+    const validation = this.config.schema.safeParse(update)
 
     if (!validation.success) {
       throw validation.error
