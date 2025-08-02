@@ -88,9 +88,8 @@ type WithId<TSchema> = Omit<TSchema, '_id'> & {
 
 type RegExpOrString<T> = T extends string ? RegExp | T : T
 
-type AlternativeType<T> = T extends ReadonlyArray<infer U>
-  ? T | RegExpOrString<U>
-  : RegExpOrString<T>
+type AlternativeType<T> =
+  T extends ReadonlyArray<infer U> ? T | RegExpOrString<U> : RegExpOrString<T>
 
 interface FilterOperators<TValue> {
   $eq?: TValue
@@ -182,17 +181,36 @@ type StrictFilter<TSchema> =
       >
     } & RootFilterOperators<WithId<TSchema>>)
 
-class Db<S extends ZodObject<any>> {
-  public static async build<S extends ZodObject<any>>(
+export const migrate = async <
+  From extends Db<DocumentSchema>,
+  To extends Db<DocumentSchema>,
+>(
+  from: From,
+  to: To,
+  transformer: (
+    fromDoc: Document<From['schema']['_output']>,
+  ) => Document<To['schema']['_output']>,
+) => {
+  const fromDocuments = await from.findAll()
+
+  for (const fromDocument of fromDocuments) {
+    const toDocument = transformer(fromDocument)
+    await to.insertOne(toDocument)
+  }
+}
+
+type DocumentSchema = ZodObject<any>
+
+interface NEDBOptions {
+  filename: string
+  // TODO: type unique as a valid keypath of S['_output']
+  indexes: { unique: string }
+}
+
+class Db<S extends DocumentSchema> {
+  public static async build<S extends DocumentSchema>(
     schema: S,
-    {
-      filename,
-      indexes,
-    }: {
-      filename: string
-      // TODO: type unique as a valid keypath of S['_output']
-      indexes: { unique: string }
-    },
+    { filename, indexes }: NEDBOptions,
   ): Promise<Db<S>> {
     const db = new NEDB({ filename, autoload: true })
 
@@ -206,7 +224,7 @@ class Db<S extends ZodObject<any>> {
     return new Db(schema, db)
   }
 
-  private schema: S
+  readonly schema: S
   private db: NEDB<S['_output']>
 
   private constructor(schema: S, db: NEDB<S['_output']>) {
