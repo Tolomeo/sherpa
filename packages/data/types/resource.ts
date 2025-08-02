@@ -37,6 +37,8 @@ export const ResourceDataSchema2 = z.object({
   healthcheck: HealthcheckStrategySchema.optional(),
 })
 
+export type ResourceData2 = z.infer<typeof ResourceDataSchema2>
+
 export const ResourceDataSchema = z
   .object({
     title: z.string().min(2),
