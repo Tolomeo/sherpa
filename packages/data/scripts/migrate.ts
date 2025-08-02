@@ -77,4 +77,7 @@ const migrateDb = async () => {
   )
 }
 
-console.log(dbFile)
+migrateDb().catch((err) => {
+  console.error(err)
+  process.exit()
+})
