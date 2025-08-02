@@ -47,9 +47,15 @@ const migrateDb = async () => {
           }
           break
         case ResourceType.reference:
+          type = {
+            name: 'reference',
+            variant: 'index',
+          }
+          break
         case ResourceType.feed:
           type = {
             name: 'reference',
+            variant: 'feed',
           }
           break
         case ResourceType.curiosity:

@@ -18,6 +18,7 @@ export const ResourceTypeSchema = z.discriminatedUnion('name', [
   }),
   z.object({
     name: z.literal('reference'),
+    variant: z.enum(['index', 'feed']),
   }),
   z.object({
     name: z.literal('tool'),
