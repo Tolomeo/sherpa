@@ -244,15 +244,17 @@ class Db<S extends DocumentSchema> {
     await this.db.dropDatabaseAsync()
   }
 
-  async migrate<To extends DocumentSchema>(
-    schema: To,
-    transformer: (doc: Document<S['_output']>) => Document<To>,
+  async migrate<NewSchema extends DocumentSchema>(
+    newSchema: NewSchema,
+    transformer: (
+      doc: Document<S['_output']>,
+    ) => Document<NewSchema['_output']>,
   ) {
     const documents = await this.findAll()
 
     await this.drop()
 
-    const db = await Db.build(schema, this.config.options)
+    const db = await Db.build(newSchema, this.config.options)
 
     for (const document of documents) {
       await db.insertOne(transformer(document))
