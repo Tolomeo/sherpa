@@ -181,24 +181,6 @@ type StrictFilter<TSchema> =
       >
     } & RootFilterOperators<WithId<TSchema>>)
 
-export const migrate = async <
-  From extends Db<DocumentSchema>,
-  To extends Db<DocumentSchema>,
->(
-  from: From,
-  to: To,
-  transformer: (
-    fromDoc: Document<From['config']['schema']['_output']>,
-  ) => Document<To['config']['schema']['_output']>,
-) => {
-  const fromDocuments = await from.findAll()
-
-  for (const fromDocument of fromDocuments) {
-    const toDocument = transformer(fromDocument)
-    await to.insertOne(toDocument)
-  }
-}
-
 type DocumentSchema = ZodObject<any>
 
 interface NEDBOptions {
