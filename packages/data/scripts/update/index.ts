@@ -4,6 +4,12 @@ import updateTopics from './topic'
 import updateResources from './resource'
 import bulkOperations from './bulk'
 
+// topic add
+// topic update
+// resource add
+// resource update
+// resource delete
+
 const main = async () => {
   await command.loop(async () => {
     const action = await command.choice('Choose action', [

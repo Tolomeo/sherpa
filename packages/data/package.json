@@ -15,6 +15,7 @@
     }
   },
   "scripts": {
+    "manage": "tsx \"scripts/manage\" --",
     "update": "tsx \"scripts/update\"",
     "prebuild": "shx rm -rf \"dist\"",
     "build": "tsx \"./scripts/build.ts\"",
@@ -31,6 +32,7 @@
     "@types/he": "^1.2.3",
     "chalk": "^5.3.0",
     "cheerio": "^1.0.0-rc.12",
+    "commander": "^14.0.0",
     "crawlee": "^3.11.1",
     "diff": "^5.2.0",
     "dotenv": "^16.4.1",

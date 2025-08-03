@@ -1,5 +1,5 @@
 import { TopicName } from '@sherpa/data/topic'
-import { ResourceData } from '@sherpa/data/resource'
+import type { ResourceData } from '@sherpa/data/resource'
 
 type WithResourceTypeVariant<T> = T extends { name: infer N; variant: infer V }
   ? `${Extract<N, string>}.${Extract<V, string>}`
