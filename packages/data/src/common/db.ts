@@ -254,13 +254,13 @@ class Db<S extends DocumentSchema> {
 
     await this.drop()
 
-    const db = await Db.build(newSchema, this.config.options)
+    const newDb = await Db.build(newSchema, this.config.options)
 
     for (const document of documents) {
-      await db.insertOne(transformer(document))
+      await newDb.insertOne(transformer(document))
     }
 
-    return db
+    return newDb
   }
 
   async findAll(filter: StrictFilter<S['_output']> = {}) {
