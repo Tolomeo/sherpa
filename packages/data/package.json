@@ -21,8 +21,7 @@
     "check:lint": "eslint \"types\" \"src\" \"scripts\"",
     "check:types": "tsc",
     "test:topics": "vitest topics",
-    "test:resources": "vitest resources",
-		"migrate": "tsx \"./scripts/migrate.ts\""
+    "test:resources": "vitest resources"
   },
   "devDependencies": {
     "@metascraper/helpers": "^5.46.5",
