@@ -29,7 +29,7 @@ const AlternateSourcesList = ({ resources }: Props) => {
                   display="block"
                   variant="h6"
                 >
-                  {resource.title}
+                  {resource.data.title}
                 </Typography>
               </Link>
             </Box>
