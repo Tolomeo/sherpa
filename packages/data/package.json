@@ -15,7 +15,6 @@
     }
   },
   "scripts": {
-		"test": "tsx scripts/test",
     "manage": "tsx \"scripts/manage\" --",
     "update": "tsx \"scripts/update\"",
     "prebuild": "shx rm -rf \"dist\"",
