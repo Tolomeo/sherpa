@@ -17,12 +17,12 @@ export const chooseHealthCheckStrategy = async () => {
   return util.clone(strategy)
 }
 
-export const scrapeResourceTitle = async (
+export const scrapeResourceData = async (
   url: ResourceData['url'],
   strategy: HealthcheckStrategy = util.clone(HealthCheckStrategies.Http),
 ) => {
   const healthcheckRunner = new Healthcheck()
-  let title: string | undefined
+  let data: { title: string } | undefined
 
   await command.loop(async () => {
     const healthCheckResult = await healthcheckRunner.run(url, strategy)
@@ -35,21 +35,21 @@ export const scrapeResourceTitle = async (
       return retry ? command.loop.REPEAT : command.loop.END
     }
 
-    const scrapedTitle = await command.choice(
+    const title = await command.choice(
       `Choose title`,
       Object.values(healthCheckResult.data) as Array<string>,
     )
 
-    if (!scrapedTitle) {
+    if (!title) {
       return command.loop.END
     }
 
-    title = scrapedTitle
+    data = { title }
 
     return command.loop.END
   })
 
   await healthcheckRunner.teardown()
 
-  return title
+  return data
 }

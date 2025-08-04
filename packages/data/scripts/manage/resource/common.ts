@@ -5,9 +5,9 @@ import {
   type ResourceData,
   type HealthcheckStrategy,
 } from '../../../types'
-import { format, log, command } from '../../common'
-import { loop } from '../../common/command'
-import { scrapeResourceTitle, chooseHealthCheckStrategy } from '../healthcheck'
+import { format, log } from '../../common'
+import { loop, input, choice, confirm } from '../../common/command'
+import { chooseHealthCheckStrategy, scrapeResourceData } from '../healthcheck'
 
 type WithResourceTypeVariant<T> = T extends { name: infer N; variant: infer V }
   ? `${Extract<N, string>}.${Extract<V, string>}`
@@ -79,9 +79,7 @@ export const findResource = async () => {
   let resource: Resource | undefined
 
   await loop(async () => {
-    const url = await command.input(
-      `Search resource - Enter url fragment to look for`,
-    )
+    const url = await input(`Search resource - Enter url fragment to look for`)
 
     if (!url) return loop.END
 
@@ -100,7 +98,7 @@ export const findResource = async () => {
 
     log.success(`${resources.length} results found`)
 
-    const action = await command.choice(
+    const action = await choice(
       `Select resource`,
       resources.map((r) => r.url),
     )
@@ -120,7 +118,7 @@ export const enterResourceType = async (type?: ResourceData['type']) => {
   let updatedType: ResourceData['type'] | undefined
 
   await loop(async () => {
-    const typeChoice = await command.choice(
+    const typeChoice = await choice(
       'Type',
       [
         'knowledge.basics',
@@ -165,11 +163,11 @@ export const enterResourceData = async (
   await loop(async () => {
     log.lead(`Enter data for resource ${url}`)
 
-    const title = await command.input(`Title`, { answer: populatedData.title })
+    const title = await input(`Title`, { answer: populatedData.title })
 
     if (title) populatedData.title = title
 
-    const source = await command.input('Source', {
+    const source = await input('Source', {
       answer: populatedData.source,
     })
 
@@ -198,14 +196,12 @@ export const enterResource = async (url: string) => {
   await loop(async () => {
     log.lead(`Entering ${url} resource`)
 
-    const title = await scrapeResourceTitle(url, healthcheck)
+    const data = await scrapeResourceData(url, healthcheck)
 
-    if (!title) {
+    if (!data) {
       log.warning(`Scraping failed`)
 
-      const changeHealthcheck = await command.confirm(
-        `Try with a different strategy?`,
-      )
+      const changeHealthcheck = await confirm(`Try with a different strategy?`)
 
       if (changeHealthcheck) {
         const newHealthcheck = await chooseHealthCheckStrategy()
@@ -216,7 +212,7 @@ export const enterResource = async (url: string) => {
       return loop.END
     }
 
-    const enteredData = await enterResourceData(url, { title })
+    const enteredData = await enterResourceData(url, data)
     const enteredType = await enterResourceType(resource?.type)
 
     log.text(
@@ -226,7 +222,7 @@ export const enterResource = async (url: string) => {
       ),
     )
 
-    const action = await command.choice(`Data for ${url}`, [
+    const action = await choice(`Data for ${url}`, [
       'Confirm data',
       'Change data',
     ])

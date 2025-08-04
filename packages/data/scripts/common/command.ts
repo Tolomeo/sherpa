@@ -1,8 +1,4 @@
-import * as readline from 'node:readline'
-import format from './format'
-import log from './log'
-
-type Nullable<T> = T | null
+import enquirer from 'enquirer'
 
 enum LoopCommand {
   REPEAT,
@@ -29,77 +25,49 @@ interface InputOptions {
   answer?: string
 }
 
-const input = (question: string, options: InputOptions = {}) => {
-  const describedQuestion = format.lead(`\n${question}\n[q] cancel\n> `)
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  })
-
-  const promise = new Promise<Nullable<string>>((resolve) => {
-    rl.question(describedQuestion, (answer) => {
-      rl.close()
-
-      if (answer.trim() === 'q') resolve(null)
-      else resolve(answer)
+export const input = async (message: string, options: InputOptions = {}) => {
+  const { answer } = await enquirer
+    .prompt<{ answer: string }>({
+      type: 'input',
+      name: 'answer',
+      message,
+      initial: options.answer,
     })
+    .catch(() => ({ answer: null }))
 
-    if (options.answer) {
-      rl.write(options.answer)
-    }
-  })
-
-  return promise
+  return answer
 }
 
-const choice = async <T extends string>(
-  question: string,
+export const choice = async <T extends string>(
+  message: string,
   choices: T[],
   options: { answer?: T } = {},
-): Promise<Nullable<T>> => {
-  const describedQuestion = `${question}\n${choices
-    .map((option, idx) => `[${idx + 1}] ${option}`)
-    .join('\n')}`
+) => {
+  const { answer } = await enquirer
+    .prompt<{ answer: T }>({
+      type: 'select',
+      name: 'answer',
+      message,
+      // @ts-expect-error -- choices is part of select prompt options, but somehow not recognised here
+      choices,
+      initial: options.answer,
+    })
+    .catch(() => ({ answer: null }))
 
-  let choiceAnswer: T | undefined
-
-  const defaultChoice = options.answer
-    ? (() => {
-        const defaultChoiceIndex = choices.indexOf(options.answer)
-        return defaultChoiceIndex > -1 ? `${defaultChoiceIndex + 1}` : undefined
-      })()
-    : undefined
-
-  while (!choiceAnswer) {
-    const answer = await input(describedQuestion, { answer: defaultChoice })
-
-    if (answer === null) return null
-
-    const answerIndex = parseInt(answer, 10)
-
-    if (isNaN(answerIndex) || !choices[answerIndex - 1]) {
-      log.error('\nInvalid choice')
-      continue
-    }
-
-    choiceAnswer = choices[answerIndex - 1]
-  }
-
-  return choiceAnswer
+  return answer
 }
 
-const confirm = async (question: string): Promise<Nullable<boolean>> => {
-  const confirmOptionsMap: Record<string, boolean> = {
-    yes: true,
-    no: false,
-  }
-  const confirmOptions = Object.keys(confirmOptionsMap)
+export const confirm = async (message: string, { initial = false } = {}) => {
+  const { answer } = await enquirer
+    .prompt<{ answer: boolean }>({
+      type: 'confirm',
+      name: 'answer',
+      message,
+      initial,
+    })
+    .catch(() => ({ answer: null }))
 
-  const optionAnswer = await choice(question, confirmOptions)
-
-  if (optionAnswer === null) return null
-
-  return confirmOptionsMap[optionAnswer]
+  return answer
 }
 
 export default {
