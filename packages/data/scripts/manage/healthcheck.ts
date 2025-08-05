@@ -22,7 +22,7 @@ export const scrapeResourceData = async (
   strategy: HealthcheckStrategy = util.clone(HealthCheckStrategies.Http),
 ) => {
   const healthcheckRunner = new Healthcheck()
-  let data: { title: string } | undefined
+  let data: { title: string; source: string } | undefined
 
   await command.loop(async () => {
     const healthCheckResult = await healthcheckRunner.run(url, strategy)
@@ -44,7 +44,14 @@ export const scrapeResourceData = async (
       return command.loop.END
     }
 
-    data = { title }
+    const { hostname, pathname } = new URL(url)
+    const sourceHostname = hostname.replace(/^www./, '')
+    const source =
+      sourceHostname === 'github.com'
+        ? `${sourceHostname}/${pathname.split('/')[1]}`
+        : sourceHostname
+
+    data = { title, source }
 
     return command.loop.END
   })

@@ -1,5 +1,6 @@
 import { Command } from 'commander'
 import add from './add'
+import update from './update'
 
 const command = new Command()
 
@@ -11,6 +12,7 @@ command.name('resource').description('Manage sherpa resource data')
 
 command.command('add').description('Add a resource').action(add)
 
-// command.command('update').description('Update a resource').action(update)
+command.command('update').description('Update a resource').action(update)
 
+export * from './common'
 export default command

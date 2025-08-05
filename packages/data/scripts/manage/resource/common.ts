@@ -146,19 +146,9 @@ export const enterResourceType = async (type?: ResourceData['type']) => {
 
 export const enterResourceData = async (
   url: string,
-  data: Partial<ResourceData['data']>,
+  data: Partial<ResourceData['data']> = {},
 ) => {
   const populatedData = { ...data }
-
-  if (!populatedData.source) {
-    const { hostname, pathname } = new URL(url)
-    const sourceHostname = hostname.replace(/^www./, '')
-
-    populatedData.source =
-      sourceHostname === 'github.com'
-        ? `${sourceHostname}/${pathname.split('/')[1]}`
-        : sourceHostname
-  }
 
   await loop(async () => {
     log.lead(`Enter data for resource ${url}`)
