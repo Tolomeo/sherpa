@@ -196,29 +196,28 @@ export const enterResource = async (url: string) => {
   await loop(async () => {
     log.lead(`Entering ${url} resource`)
 
-    const data = await scrapeResourceData(url, healthcheck)
+    const scrapedData = await scrapeResourceData(url, healthcheck)
 
-    if (!data) {
+    if (!scrapedData) {
       log.warning(`Scraping failed`)
 
-      const changeHealthcheck = await confirm(`Try with a different strategy?`)
-
-      if (changeHealthcheck) {
-        const newHealthcheck = await chooseHealthCheckStrategy()
-        healthcheck = newHealthcheck ?? undefined
+      if (await confirm(`Try with a different strategy?`)) {
+        healthcheck = await chooseHealthCheckStrategy().then(
+          (strategy) => strategy ?? undefined,
+        )
         return loop.REPEAT
       }
 
       return loop.END
     }
 
-    const enteredData = await enterResourceData(url, data)
+    const enteredData = await enterResourceData(url, scrapedData)
     const enteredType = await enterResourceType(resource?.type)
 
     log.text(
       format.diff(
         { url, ...resource },
-        { url, data: enteredData, type: enteredType },
+        { url, data: enteredData, type: enteredType, healthcheck },
       ),
     )
 
@@ -233,6 +232,7 @@ export const enterResource = async (url: string) => {
           url,
           data: enteredData,
           type: enteredType,
+          healthcheck,
         }
         return loop.END
       case 'Change data':
@@ -240,6 +240,7 @@ export const enterResource = async (url: string) => {
           url,
           data: enteredData,
           type: enteredType,
+          healthcheck,
         }
         return loop.REPEAT
       case null:

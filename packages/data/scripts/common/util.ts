@@ -6,6 +6,7 @@ export type JSONSerializable =
   | number
   | boolean
   | null
+  | undefined
   | Array<JSONSerializable>
   | { [key: string]: JSONSerializable }
 
