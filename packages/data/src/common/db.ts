@@ -268,7 +268,7 @@ class Db<S extends DocumentSchema> {
       throw validation.error
     }
 
-    const doc = this.db.insertAsync<S['_output']>(insert)
+    const doc = await this.db.insertAsync<S['_output']>(insert)
 
     await this.db.compactDatafileAsync()
 

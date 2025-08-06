@@ -25,12 +25,11 @@ const add = async () => {
         prev: null,
         children: null,
       })
+      log.success(`Topic ${topicName} created successfully`)
     } catch (err) {
       log.error(`Error creating "${topicName}" topic`)
       log.error(err as string)
     }
-
-    log.success(`Topic ${topicName} created successfully`)
 
     return loop.END
   })
