@@ -10,4 +10,5 @@ command.name('topic').description('Manage sherpa topic data')
 
 command.command('update').description('Update a topic').action(update)
 
+export * from './util'
 export default command
