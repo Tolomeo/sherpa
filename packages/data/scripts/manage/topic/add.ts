@@ -1,15 +1,14 @@
 import { create } from '../../../src/topic'
-import { log } from '../../common'
-import { loop, input } from '../../common/command'
+import { log, command } from '../../common'
 
 const add = async () => {
-  await loop(async () => {
-    const topicName = await input('Enter the new topic name identifier').then(
-      (enteredName) => (enteredName ? enteredName : null),
-    )
+  await command.loop(async (control) => {
+    const topicName = await command
+      .input('Enter the new topic name identifier')
+      .then((enteredName) => (enteredName ? enteredName : null))
 
     if (!topicName) {
-      return loop.END
+      return control.end
     }
 
     try {
@@ -31,7 +30,7 @@ const add = async () => {
       log.error(err as string)
     }
 
-    return loop.END
+    return control.end
   })
 }
 

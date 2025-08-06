@@ -1,28 +1,27 @@
 import { getAllByName } from '../../../src/topic'
 import type Topic from '../../../src/topic'
 import { log, command } from '../../common'
-import { loop } from '../../common/loop'
 
 export const findTopic = async () => {
   let topic: Topic | undefined
 
-  await loop(async () => {
+  await command.loop(async (control) => {
     const name = await command.input(
       `Search topic - Enter topic name to look for`,
     )
 
-    if (!name) return loop.END
+    if (!name) return control.end
 
     const topics = await getAllByName(name)
 
     if (!topics.length) {
       log.warning(`No results found`)
-      return loop.REPEAT
+      return control.repeat
     }
 
     if (topics.length === 1) {
       topic = topics[0]
-      return loop.END
+      return control.end
     }
 
     const action = await command.choice(
@@ -30,11 +29,11 @@ export const findTopic = async () => {
       topics.map((t) => t.name),
     )
 
-    if (!action) loop.REPEAT
+    if (!action) control.repeat
 
     topic = topics.find((t) => t.name === action)
 
-    return loop.END
+    return control.end
   })
 
   return topic

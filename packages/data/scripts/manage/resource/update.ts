@@ -1,20 +1,18 @@
 import type Resource from '../../../src/resource'
-import { format, log } from '../../common'
-import util from '../../common/util'
-import { loop, choice } from '../../common/command'
+import { format, log, command, util } from '../../common'
 import { chooseHealthCheckStrategy, scrapeResourceData } from '../healthcheck'
 import { findResource, enterResourceData } from './common'
 
 const updateResourceHealthcheck = async (resource: Resource) => {
   let healthcheck = util.clone(resource.healthcheck)
 
-  await loop(async () => {
+  await command.loop(async (control) => {
     log.lead(`Current healthcheck strategy`)
     log.inspect(resource.healthcheck)
     log.lead(`Healthcheck strategy update`)
     log.text(format.diff(resource.healthcheck, healthcheck))
 
-    const action = await choice(`Choose action`, [
+    const action = await command.choice(`Choose action`, [
       'run healthcheck',
       'update healthcheck strategy',
       'persist healthcheck strategy',
@@ -24,7 +22,7 @@ const updateResourceHealthcheck = async (resource: Resource) => {
       case 'run healthcheck': {
         const scrapedData = await scrapeResourceData(resource.url, healthcheck)
 
-        if (!scrapedData) return loop.REPEAT
+        if (!scrapedData) return control.repeat
 
         log.success(`Health check succeeded`)
         log.text(
@@ -37,14 +35,14 @@ const updateResourceHealthcheck = async (resource: Resource) => {
           ),
         )
 
-        return loop.REPEAT
+        return control.repeat
       }
 
       case 'update healthcheck strategy': {
         const healthcheckUpdate = await chooseHealthCheckStrategy()
-        if (!healthcheckUpdate) return loop.REPEAT
+        if (!healthcheckUpdate) return control.repeat
         healthcheck = healthcheckUpdate
-        return loop.REPEAT
+        return control.repeat
       }
 
       case 'persist healthcheck strategy':
@@ -55,10 +53,10 @@ const updateResourceHealthcheck = async (resource: Resource) => {
           log.error(`Resource update failed.`)
           log.error(err as string)
         }
-        return loop.END
+        return control.end
 
       case null:
-        return loop.END
+        return control.end
     }
   })
 }
@@ -66,13 +64,13 @@ const updateResourceHealthcheck = async (resource: Resource) => {
 const updateResourceData = async (resource: Resource) => {
   let resourceData = util.clone(resource.data.data)
 
-  await loop(async () => {
+  await command.loop(async (control) => {
     log.lead(`Update resource ${resource.url} data`)
     log.inspect(resource.data.data)
     log.lead(`Resource data update`)
     log.text(format.diff(resource.data.data, resourceData))
 
-    const action = await choice('Choose action', [
+    const action = await command.choice('Choose action', [
       'scrape resource data',
       'update resource data',
       'persist resource data update',
@@ -85,17 +83,17 @@ const updateResourceData = async (resource: Resource) => {
           resource.healthcheck,
         )
 
-        if (!scrapedData) return loop.REPEAT
+        if (!scrapedData) return control.repeat
 
         log.success(`Health check succeeded`)
         resourceData = await enterResourceData(resource.url, scrapedData)
 
-        return loop.REPEAT
+        return control.repeat
       }
 
       case 'update resource data':
         resourceData = await enterResourceData(resource.url, resourceData)
-        return loop.REPEAT
+        return control.repeat
 
       case 'persist resource data update':
         try {
@@ -105,10 +103,10 @@ const updateResourceData = async (resource: Resource) => {
           log.error(`Resource update failed.`)
           log.error(error as string)
         }
-        return loop.END
+        return control.end
 
       case null:
-        return loop.END
+        return control.end
     }
   })
 }
@@ -118,12 +116,12 @@ const update = async () => {
 
   if (!resource) return
 
-  await loop(async () => {
+  await command.loop(async (control) => {
     log.lead(`Resource ${resource.id}`)
     log.inspect(resource.data)
     log.inspect(resource.healthcheck)
 
-    const action = await choice('Choose action', [
+    const action = await command.choice('Choose action', [
       'open in browser',
       'update data',
       'update healthcheck',
@@ -132,15 +130,15 @@ const update = async () => {
     switch (action) {
       case 'open in browser':
         await util.open(resource.url)
-        return loop.REPEAT
+        return control.repeat
       case 'update data':
         await updateResourceData(resource)
-        return loop.REPEAT
+        return control.repeat
       case 'update healthcheck':
         await updateResourceHealthcheck(resource)
-        return loop.REPEAT
+        return control.repeat
       case null:
-        return loop.END
+        return control.end
     }
   })
 }

@@ -24,7 +24,7 @@ export const scrapeResourceData = async (
   const healthcheckRunner = new Healthcheck()
   let data: { title: string; source: string } | undefined
 
-  await command.loop(async () => {
+  await command.loop(async ({ repeat, end }) => {
     const healthCheckResult = await healthcheckRunner.run(url, strategy)
 
     if (!healthCheckResult.success) {
@@ -32,7 +32,7 @@ export const scrapeResourceData = async (
       log.error(healthCheckResult.error.message)
       const retry = await command.confirm(`Retry?`)
 
-      return retry ? command.loop.REPEAT : command.loop.END
+      return retry ? repeat : end
     }
 
     const title = await command.choice(
@@ -41,7 +41,7 @@ export const scrapeResourceData = async (
     )
 
     if (!title) {
-      return command.loop.END
+      return end
     }
 
     const { hostname, pathname } = new URL(url)
@@ -53,7 +53,7 @@ export const scrapeResourceData = async (
 
     data = { title, source }
 
-    return command.loop.END
+    return end
   })
 
   await healthcheckRunner.teardown()

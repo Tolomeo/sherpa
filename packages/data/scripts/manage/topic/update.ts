@@ -1,29 +1,31 @@
 import type Topic from '../../../src/topic'
 import type { TopicData } from '../../../types'
-import { log, format } from '../../common'
-import { loop, input, confirm, choice } from '../../common/command'
+import { log, format, command } from '../../common'
 import { findResource } from '../resource'
-import { findTopic } from './util'
+import { findTopic } from './common'
 
 type TopicBranding = Pick<TopicData, 'logo' | 'hero'>
 
 const enterTopicBranding = async (branding: TopicBranding) => {
   const enteredBranding = { ...branding }
 
-  const logo = await input(`Enter logo svg`, {
+  const logo = await command.input(`Enter logo svg`, {
     answer: enteredBranding.logo ?? undefined,
   })
 
   if (logo) enteredBranding.logo = logo
   else if (logo === '') enteredBranding.logo = null
 
-  const foreground = await input(`Enter foreground colour`, {
+  const foreground = await command.input(`Enter foreground colour`, {
     answer: enteredBranding.hero?.foreground,
   })
 
-  const background = await input(`Enter space separated background colours`, {
-    answer: enteredBranding.hero?.background.join(' '),
-  })
+  const background = await command.input(
+    `Enter space separated background colours`,
+    {
+      answer: enteredBranding.hero?.background.join(' '),
+    },
+  )
 
   if (foreground && background) {
     enteredBranding.hero = {
@@ -38,10 +40,10 @@ const enterTopicBranding = async (branding: TopicBranding) => {
 const addResource = async (topic: Topic) => {
   log.lead(`Adding a resource to topic "${topic.name}"`)
 
-  await loop(async () => {
+  await command.loop(async (control) => {
     const resource = await findResource()
 
-    if (!resource) return loop.END
+    if (!resource) return control.end
 
     const hasResource = await topic.hasResource(resource.id)
 
@@ -49,14 +51,16 @@ const addResource = async (topic: Topic) => {
       log.error(
         `Resource ${resource.id} is already found in topic "${topic.name}"`,
       )
-      return loop.REPEAT
+      return control.repeat
     }
 
     if (
-      !(await confirm(`Add resource ${resource.id} to topic "${topic.name}"?`))
+      !(await command.confirm(
+        `Add resource ${resource.id} to topic "${topic.name}"?`,
+      ))
     ) {
       log.error(`Insertion of resource aborted`)
-      return loop.END
+      return control.end
     }
 
     const resources = topic.data.resources
@@ -75,7 +79,7 @@ const addResource = async (topic: Topic) => {
       log.error(err as string)
     }
 
-    return loop.END
+    return control.end
   })
 }
 
@@ -84,8 +88,8 @@ const update = async () => {
 
   if (!topic) return
 
-  await loop(async () => {
-    const action = await choice('Choose action', [
+  await command.loop(async (control) => {
+    const action = await command.choice('Choose action', [
       'add resource',
       'update branding',
       'update notes',
@@ -94,7 +98,7 @@ const update = async () => {
     switch (action) {
       case 'add resource': {
         await addResource(topic)
-        return loop.REPEAT
+        return control.repeat
       }
 
       case 'update branding': {
@@ -107,7 +111,7 @@ const update = async () => {
 
         log.text(format.diff(branding, brandingUpdate))
 
-        if (!(await confirm(`Confirm`))) return loop.REPEAT
+        if (!(await command.confirm(`Confirm`))) return control.repeat
 
         try {
           await topic.change(brandingUpdate)
@@ -117,22 +121,22 @@ const update = async () => {
           log.error(err as string)
         }
 
-        return loop.REPEAT
+        return control.repeat
       }
 
       case 'update notes': {
-        const noteUpdate = await input(`Enter notes`, {
+        const noteUpdate = await command.input(`Enter notes`, {
           answer: topic.data.notes?.[0],
         })
 
-        if (noteUpdate === null) return loop.REPEAT
+        if (noteUpdate === null) return control.repeat
 
         const notes: TopicData['notes'] =
           noteUpdate === '' ? null : [noteUpdate]
 
         log.text(format.diff(topic.data.notes, notes))
 
-        if (!(await confirm(`Confirm`))) return loop.REPEAT
+        if (!(await command.confirm(`Confirm`))) return control.repeat
 
         try {
           await topic.change({ notes })
@@ -142,11 +146,11 @@ const update = async () => {
           log.error(err as string)
         }
 
-        return loop.REPEAT
+        return control.repeat
       }
 
       case null:
-        return loop.END
+        return control.end
     }
   })
 }

@@ -1,21 +1,18 @@
-// import { getAllByResourceId } from '../../../src/topic'
 import { create as createResource } from '../../../src/resource'
-// import type Resource from '../../../src/resource'
 import { format, log, command } from '../../common'
-// import { scrapeResourceTitle, chooseHealthCheckStrategy } from '../healthcheck'
 import { loop } from '../../common/command'
 import { enterResource } from './common'
 
 const add = async () => {
-  await loop(async () => {
+  await loop(async (control) => {
     const url = await command.input(`Enter resource url`)
 
-    if (!url) return loop.END
+    if (!url) return control.end
 
     const data = await enterResource(url)
 
     if (!data) {
-      return loop.REPEAT
+      return control.repeat
     }
 
     log.success(format.stringify(data))
@@ -24,7 +21,7 @@ const add = async () => {
 
     if (!confirm) {
       log.error(`Resource creation aborted`)
-      return loop.END
+      return control.end
     }
 
     try {
@@ -35,7 +32,7 @@ const add = async () => {
       log.error(err as string)
     }
 
-    return loop.END
+    return control.end
   })
 }
 

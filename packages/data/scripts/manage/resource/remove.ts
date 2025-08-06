@@ -1,6 +1,5 @@
 import { getAllByResourceId } from '../../../src/topic'
-import { format, log } from '../../common'
-import { loop, confirm, choice } from '../../common/command'
+import { format, log, command } from '../../common'
 import { findResource } from './common'
 
 const remove = async () => {
@@ -10,7 +9,7 @@ const remove = async () => {
 
   const topics = await getAllByResourceId(resource.id)
 
-  await loop(async () => {
+  await command.loop(async (control) => {
     log.inspect(resource.document)
     log.warning(
       `The resource occurs in the following topics:\n${format.stringify(
@@ -18,7 +17,7 @@ const remove = async () => {
       )}`,
     )
 
-    const action = await choice(`Choose action`, [
+    const action = await command.choice(`Choose action`, [
       'display occurrences',
       'delete resource and update topics',
     ])
@@ -38,14 +37,14 @@ const remove = async () => {
             },
           )
         })
-        return loop.REPEAT
+        return control.repeat
 
       case 'delete resource and update topics': {
-        const confirmed = await confirm(
+        const confirmed = await command.confirm(
           `Confirm resource ${resource.id} removal`,
         )
 
-        if (!confirmed) return loop.REPEAT
+        if (!confirmed) return control.repeat
 
         try {
           await Promise.all(
@@ -77,11 +76,11 @@ const remove = async () => {
           log.error(err as string)
         }
 
-        return loop.END
+        return control.end
       }
 
       case null:
-        return loop.END
+        return control.end
     }
   })
 }

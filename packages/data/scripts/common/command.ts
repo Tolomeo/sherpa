@@ -5,10 +5,19 @@ enum LoopCommand {
   END,
 }
 
-export const loop = async (fn: () => LoopCommand | Promise<LoopCommand>) => {
+const loopControl = {
+  repeat: LoopCommand.REPEAT,
+  end: LoopCommand.END,
+} as const
+
+type LoopControl = typeof loopControl
+
+export const loop = async (
+  fn: (control: LoopControl) => LoopCommand | Promise<LoopCommand>,
+) => {
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, no-constant-condition -- the end of the loop is determined by fn return value
   while (true) {
-    const loopAction = await fn()
+    const loopAction = await fn(loopControl)
 
     switch (loopAction) {
       case LoopCommand.REPEAT:
@@ -18,8 +27,6 @@ export const loop = async (fn: () => LoopCommand | Promise<LoopCommand>) => {
     }
   }
 }
-loop.REPEAT = LoopCommand.REPEAT
-loop.END = LoopCommand.END
 
 interface InputOptions {
   answer?: string
