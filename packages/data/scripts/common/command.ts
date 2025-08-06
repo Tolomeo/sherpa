@@ -1,28 +1,34 @@
 import enquirer from 'enquirer'
 
-enum LoopCommand {
+// TODO: action command
+// similar to choice, but accepts a record with value fn
+// choosing the option will execute the fn
+
+enum LoopControlCommand {
   REPEAT,
   END,
 }
 
 const loopControl = {
-  repeat: LoopCommand.REPEAT,
-  end: LoopCommand.END,
+  repeat: LoopControlCommand.REPEAT,
+  end: LoopControlCommand.END,
 } as const
 
 type LoopControl = typeof loopControl
 
 export const loop = async (
-  fn: (control: LoopControl) => LoopCommand | Promise<LoopCommand>,
+  fn: (
+    control: LoopControl,
+  ) => LoopControlCommand | Promise<LoopControlCommand>,
 ) => {
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, no-constant-condition -- the end of the loop is determined by fn return value
   while (true) {
     const loopAction = await fn(loopControl)
 
     switch (loopAction) {
-      case LoopCommand.REPEAT:
+      case LoopControlCommand.REPEAT:
         continue
-      case LoopCommand.END:
+      case LoopControlCommand.END:
         return
     }
   }
