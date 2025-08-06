@@ -1,3 +1,4 @@
+import { createCommand } from 'commander'
 import enquirer from 'enquirer'
 
 // TODO: action command
@@ -96,3 +97,5 @@ export const confirm = async (
 
   return answer
 }
+
+export const create = createCommand

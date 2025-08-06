@@ -1,15 +1,11 @@
-import { Command } from 'commander'
+import { command } from '../common'
 import topic from './topic'
 import resource from './resource'
 
-const program = new Command()
-
-program
+command
+  .create()
   .name('@sherpa/data/update')
   .description('Utility to update sherpa topic and resource data')
-
-program.addCommand(topic)
-
-program.addCommand(resource)
-
-program.parse()
+  .addCommand(topic)
+  .addCommand(resource)
+  .parse()
