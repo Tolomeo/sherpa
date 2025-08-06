@@ -10,20 +10,20 @@ const enterTopicBranding = async (branding: TopicBranding) => {
   const enteredBranding = { ...branding }
 
   const logo = await command.input(`Enter logo svg`, {
-    answer: enteredBranding.logo ?? undefined,
+    initial: enteredBranding.logo ?? undefined,
   })
 
   if (logo) enteredBranding.logo = logo
   else if (logo === '') enteredBranding.logo = null
 
   const foreground = await command.input(`Enter foreground colour`, {
-    answer: enteredBranding.hero?.foreground,
+    initial: enteredBranding.hero?.foreground,
   })
 
   const background = await command.input(
     `Enter space separated background colours`,
     {
-      answer: enteredBranding.hero?.background.join(' '),
+      initial: enteredBranding.hero?.background.join(' '),
     },
   )
 
@@ -126,7 +126,7 @@ const update = async () => {
 
       case 'update notes': {
         const noteUpdate = await command.input(`Enter notes`, {
-          answer: topic.data.notes?.[0],
+          initial: topic.data.notes?.[0],
         })
 
         if (noteUpdate === null) return control.repeat

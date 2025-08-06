@@ -29,26 +29,33 @@ export const loop = async (
 }
 
 interface InputOptions {
-  answer?: string
+  initial?: string
 }
 
-export const input = async (message: string, options: InputOptions = {}) => {
+export const input = async (
+  message: string,
+  { initial }: InputOptions = {},
+) => {
   const { answer } = await enquirer
     .prompt<{ answer: string }>({
       type: 'input',
       name: 'answer',
       message,
-      initial: options.answer,
+      initial,
     })
     .catch(() => ({ answer: null }))
 
   return answer
 }
 
+interface ChoiceOptions<T> {
+  initial?: T
+}
+
 export const choice = async <T extends string>(
   message: string,
   choices: T[],
-  options: { answer?: T } = {},
+  { initial }: ChoiceOptions<T> = {},
 ) => {
   const { answer } = await enquirer
     .prompt<{ answer: T }>({
@@ -57,14 +64,21 @@ export const choice = async <T extends string>(
       message,
       // @ts-expect-error -- choices is part of select prompt options, but somehow not recognised here
       choices,
-      initial: options.answer,
+      initial,
     })
     .catch(() => ({ answer: null }))
 
   return answer
 }
 
-export const confirm = async (message: string, { initial = false } = {}) => {
+interface ConfirmOptions {
+  initial?: boolean
+}
+
+export const confirm = async (
+  message: string,
+  { initial = false }: ConfirmOptions = {},
+) => {
   const { answer } = await enquirer
     .prompt<{ answer: boolean }>({
       type: 'confirm',
@@ -75,11 +89,4 @@ export const confirm = async (message: string, { initial = false } = {}) => {
     .catch(() => ({ answer: null }))
 
   return answer
-}
-
-export default {
-  loop,
-  input,
-  choice,
-  confirm,
 }
