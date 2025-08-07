@@ -88,9 +88,8 @@ type WithId<TSchema> = Omit<TSchema, '_id'> & {
 
 type RegExpOrString<T> = T extends string ? RegExp | T : T
 
-type AlternativeType<T> = T extends ReadonlyArray<infer U>
-  ? T | RegExpOrString<U>
-  : RegExpOrString<T>
+type AlternativeType<T> =
+  T extends ReadonlyArray<infer U> ? T | RegExpOrString<U> : RegExpOrString<T>
 
 interface FilterOperators<TValue> {
   $eq?: TValue
@@ -182,18 +181,20 @@ type StrictFilter<TSchema> =
       >
     } & RootFilterOperators<WithId<TSchema>>)
 
-class Db<S extends ZodObject<any>> {
-  public static async build<S extends ZodObject<any>>(
+type DocumentSchema = ZodObject<any>
+
+interface NEDBOptions {
+  filename: string
+  // TODO: type unique as a valid keypath of S['_output']
+  indexes: { unique: string }
+}
+
+class Db<S extends DocumentSchema> {
+  public static async build<S extends DocumentSchema>(
     schema: S,
-    {
-      filename,
-      indexes,
-    }: {
-      filename: string
-      // TODO: type unique as a valid keypath of S['_output']
-      indexes: { unique: string }
-    },
+    options: NEDBOptions,
   ): Promise<Db<S>> {
+    const { filename, indexes } = options
     const db = new NEDB({ filename, autoload: true })
 
     await db.ensureIndexAsync({
@@ -203,15 +204,45 @@ class Db<S extends ZodObject<any>> {
     })
     await db.compactDatafileAsync()
 
-    return new Db(schema, db)
+    return new Db(db, { schema, options })
   }
 
-  private schema: S
+  readonly config: {
+    schema: S
+    options: NEDBOptions
+  }
+
   private db: NEDB<S['_output']>
 
-  private constructor(schema: S, db: NEDB<S['_output']>) {
-    this.schema = schema
+  private constructor(
+    db: NEDB<S['_output']>,
+    config: { schema: S; options: NEDBOptions },
+  ) {
     this.db = db
+    this.config = config
+  }
+
+  async drop() {
+    await this.db.dropDatabaseAsync()
+  }
+
+  async migrate<NewSchema extends DocumentSchema>(
+    newSchema: NewSchema,
+    transformer: (
+      doc: Document<S['_output']>,
+    ) => Document<NewSchema['_output']>,
+  ) {
+    const documents = await this.findAll()
+
+    await this.drop()
+
+    const newDb = await Db.build(newSchema, this.config.options)
+
+    for (const document of documents) {
+      await newDb.insertOne(transformer(document))
+    }
+
+    return newDb
   }
 
   async findAll(filter: StrictFilter<S['_output']> = {}) {
@@ -231,13 +262,13 @@ class Db<S extends ZodObject<any>> {
   }
 
   async insertOne(insert: S['_output']) {
-    const validation = this.schema.safeParse(insert)
+    const validation = this.config.schema.safeParse(insert)
 
     if (!validation.success) {
       throw validation.error
     }
 
-    const doc = this.db.insertAsync<S['_output']>(insert)
+    const doc = await this.db.insertAsync<S['_output']>(insert)
 
     await this.db.compactDatafileAsync()
 
@@ -248,7 +279,7 @@ class Db<S extends ZodObject<any>> {
     id: string,
     update: S['_output'],
   ): Promise<Document<S['_output']>> {
-    const validation = this.schema.safeParse(update)
+    const validation = this.config.schema.safeParse(update)
 
     if (!validation.success) {
       throw validation.error

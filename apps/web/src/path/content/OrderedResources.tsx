@@ -32,7 +32,10 @@ const PathTimeline = ({ resources }: Props) => {
   return (
     <Timeline position="right">
       {Object.values(resources).map((resource, index) => {
-        const { url, source, title } = resource
+        const {
+          url,
+          data: { source, title },
+        } = resource
         const completed = isCompleted(url)
         const label = `Mark "${title}" as ${
           completed ? 'uncompleted' : 'completed'

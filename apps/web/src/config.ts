@@ -1,5 +1,20 @@
 import { TopicName } from '@sherpa/data/topic'
-import { ResourceType } from '@sherpa/data/resource'
+import type { ResourceData } from '@sherpa/data/resource'
+
+type WithResourceTypeVariant<T> = T extends { name: infer N; variant: infer V }
+  ? `${Extract<N, string>}.${Extract<V, string>}`
+  : never
+
+type WithoutResourceTypeVariant<T> = T extends {
+  name: infer N
+  variant?: never
+}
+  ? Extract<N, string>
+  : never
+
+export type ResourceTypeName =
+  | WithResourceTypeVariant<ResourceData['type']>
+  | WithoutResourceTypeVariant<ResourceData['type']>
 
 const topics: TopicName[] = [
   TopicName.uidesign,
@@ -84,24 +99,24 @@ const paths = {
   topicsTitles: topicsTitles as Record<string, string>,
 }
 
-const resourcesTypesOrder: NonNullable<ResourceType>[] = [
-  ResourceType.basics,
-  ResourceType.advanced,
-  ResourceType['how-to'],
-  ResourceType.curiosity,
-  ResourceType.tool,
-  ResourceType.reference,
-  ResourceType.feed,
+const resourcesTypesOrder: ResourceTypeName[] = [
+  'knowledge.basics',
+  'knowledge.advanced',
+  'knowledge.how-to',
+  'curiosity',
+  'tool',
+  'reference.index',
+  'reference.feed',
 ]
 
-const resourceTypesTitles: Record<NonNullable<ResourceType>, string> = {
-  basics: 'Fundamentals',
-  advanced: 'Beyond basics',
-  'how-to': 'How do they do it',
+const resourceTypesTitles: Record<ResourceTypeName, string> = {
+  'knowledge.basics': 'Fundamentals',
+  'knowledge.advanced': 'Beyond basics',
+  'knowledge.how-to': 'How do they do it',
   curiosity: 'Nice to know',
   tool: 'Work smarter, not harder',
-  reference: 'Great bookmarks',
-  feed: 'Stay in the loop',
+  'reference.index': 'Great bookmarks',
+  'reference.feed': 'Stay in the loop',
 }
 
 const resources = {

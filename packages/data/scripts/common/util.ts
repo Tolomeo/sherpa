@@ -6,8 +6,9 @@ export type JSONSerializable =
   | number
   | boolean
   | null
+  | undefined
   | Array<JSONSerializable>
-  | { [key: string]: JSONSerializable }
+  | { [key: string ]: JSONSerializable }
 
 export interface Browser {
   goTo: (url: string) => Promise<unknown>

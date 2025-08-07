@@ -17,14 +17,14 @@ export const chooseHealthCheckStrategy = async () => {
   return util.clone(strategy)
 }
 
-export const scrapeResourceTitle = async (
+export const scrapeResourceData = async (
   url: ResourceData['url'],
   strategy: HealthcheckStrategy = util.clone(HealthCheckStrategies.Http),
 ) => {
   const healthcheckRunner = new Healthcheck()
-  let title: string | undefined
+  let data: { title: string; source: string } | undefined
 
-  await command.loop(async () => {
+  await command.loop(async ({ repeat, end }) => {
     const healthCheckResult = await healthcheckRunner.run(url, strategy)
 
     if (!healthCheckResult.success) {
@@ -32,24 +32,31 @@ export const scrapeResourceTitle = async (
       log.error(healthCheckResult.error.message)
       const retry = await command.confirm(`Retry?`)
 
-      return retry ? command.loop.REPEAT : command.loop.END
+      return retry ? repeat : end
     }
 
-    const scrapedTitle = await command.choice(
+    const title = await command.choice(
       `Choose title`,
       Object.values(healthCheckResult.data) as Array<string>,
     )
 
-    if (!scrapedTitle) {
-      return command.loop.END
+    if (!title) {
+      return end
     }
 
-    title = scrapedTitle
+    const { hostname, pathname } = new URL(url)
+    const sourceHostname = hostname.replace(/^www./, '')
+    const source =
+      sourceHostname === 'github.com'
+        ? `${sourceHostname}/${pathname.split('/')[1]}`
+        : sourceHostname
 
-    return command.loop.END
+    data = { title, source }
+
+    return end
   })
 
   await healthcheckRunner.teardown()
 
-  return title
+  return data
 }

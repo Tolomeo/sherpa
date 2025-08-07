@@ -1,10 +1,12 @@
 import type { ResourceData } from '@sherpa/data/resource'
+import type { ResourceTypeName } from '../../config'
+import { getResourceTypeName } from '../../resources/utils'
 import config from '../../config'
 
 export type ResourcesTypeGroups = Record<
-  NonNullable<ResourceData['type']>,
+  ResourceTypeName,
   {
-    type: ResourceData['type']
+    type: ResourceTypeName
     resources: ResourceData[]
   }
 >
@@ -17,16 +19,16 @@ export const sortResourcesTypeGroups = (groups: ResourcesTypeGroups) =>
 export const groupResourcesByType = (resources: ResourceData[]) => {
   const groups = resources.reduce<ResourcesTypeGroups>(
     (groupedResources, resource) => {
-      const { type } = resource
+      const typeName = getResourceTypeName(resource)
 
-      if (!groupedResources[type]) {
-        groupedResources[type] = {
-          type,
+      if (!groupedResources[typeName]) {
+        groupedResources[typeName] = {
+          type: typeName,
           resources: [],
         }
       }
 
-      groupedResources[type].resources.push(resource)
+      groupedResources[typeName].resources.push(resource)
 
       return groupedResources
     },

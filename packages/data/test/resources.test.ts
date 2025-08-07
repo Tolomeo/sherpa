@@ -31,7 +31,7 @@ describe('Resources', async () => {
         )
         expect(resourceHealthcheck.success).toBe(true)
         expect(resourceHealthcheck.data!).toBeValidScrapeResultForTitle(
-          resourceData.title,
+          resourceData.data.title,
         )
       },
       150_000,

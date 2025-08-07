@@ -4,8 +4,8 @@ import { Link, Typography, Box, List, ListItem } from '../../theme'
 
 const sortResourcesAlphabetically = (resources: ResourceData[]) =>
   [...resources].sort((resourceA, resourceB) => {
-    const titleA = resourceA.title.toUpperCase()
-    const titleB = resourceB.title.toUpperCase()
+    const titleA = resourceA.data.title.toUpperCase()
+    const titleB = resourceB.data.title.toUpperCase()
 
     if (titleA > titleB) return 1
     else if (titleA < titleB) return -1
@@ -31,7 +31,7 @@ const UnorderedResources = ({ resources }: Props) => {
             <Box>
               <Link href={resource.url} target="_blank" rel="noreferrer">
                 <Typography variant="overline" color="text.secondary">
-                  {resource.source}
+                  {resource.data.source}
                 </Typography>
                 <Typography
                   component="span"
@@ -39,7 +39,7 @@ const UnorderedResources = ({ resources }: Props) => {
                   display="block"
                   gutterBottom
                 >
-                  {resource.title}
+                  {resource.data.title}
                 </Typography>
               </Link>
             </Box>

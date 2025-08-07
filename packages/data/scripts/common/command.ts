@@ -1,110 +1,101 @@
-import * as readline from 'node:readline'
-import format from './format'
-import log from './log'
+import { createCommand } from 'commander'
+import enquirer from 'enquirer'
 
-type Nullable<T> = T | null
+// TODO: action command
+// similar to choice, but accepts a record with value fn
+// choosing the option will execute the fn
 
-enum LoopCommand {
+enum LoopControlCommand {
   REPEAT,
   END,
 }
 
-const loop = async (fn: () => LoopCommand | Promise<LoopCommand>) => {
+const loopControl = {
+  repeat: LoopControlCommand.REPEAT,
+  end: LoopControlCommand.END,
+} as const
+
+type LoopControl = typeof loopControl
+
+export const loop = async (
+  fn: (
+    control: LoopControl,
+  ) => LoopControlCommand | Promise<LoopControlCommand>,
+) => {
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, no-constant-condition -- the end of the loop is determined by fn return value
   while (true) {
-    const loopAction = await fn()
+    const loopAction = await fn(loopControl)
 
     switch (loopAction) {
-      case LoopCommand.REPEAT:
+      case LoopControlCommand.REPEAT:
         continue
-      case LoopCommand.END:
+      case LoopControlCommand.END:
         return
     }
   }
 }
-loop.REPEAT = LoopCommand.REPEAT
-loop.END = LoopCommand.END
 
 interface InputOptions {
-  answer?: string
+  initial?: string
 }
 
-const input = (question: string, options: InputOptions = {}) => {
-  const describedQuestion = format.lead(`\n${question}\n[q] cancel\n> `)
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  })
-
-  const promise = new Promise<Nullable<string>>((resolve) => {
-    rl.question(describedQuestion, (answer) => {
-      rl.close()
-
-      if (answer.trim() === 'q') resolve(null)
-      else resolve(answer)
+export const input = async (
+  message: string,
+  { initial }: InputOptions = {},
+) => {
+  const { answer } = await enquirer
+    .prompt<{ answer: string }>({
+      type: 'input',
+      name: 'answer',
+      message,
+      initial,
     })
+    .catch(() => ({ answer: null }))
 
-    if (options.answer) {
-      rl.write(options.answer)
-    }
-  })
-
-  return promise
+  return answer
 }
 
-const choice = async <T extends string>(
-  question: string,
+interface ChoiceOptions<T> {
+  initial?: T
+}
+
+export const choice = async <T extends string>(
+  message: string,
   choices: T[],
-  options: { answer?: T } = {},
-): Promise<Nullable<T>> => {
-  const describedQuestion = `${question}\n${choices
-    .map((option, idx) => `[${idx + 1}] ${option}`)
-    .join('\n')}`
+  { initial }: ChoiceOptions<T> = {},
+) => {
+  const { answer } = await enquirer
+    .prompt<{ answer: T }>({
+      type: 'select',
+      name: 'answer',
+      message,
+      // @ts-expect-error -- choices is part of select prompt options, but somehow not recognised here
+      choices,
+      initial,
+    })
+    .catch(() => ({ answer: null }))
 
-  let choiceAnswer: T | undefined
-
-  const defaultChoice = options.answer
-    ? (() => {
-        const defaultChoiceIndex = choices.indexOf(options.answer)
-        return defaultChoiceIndex > -1 ? `${defaultChoiceIndex + 1}` : undefined
-      })()
-    : undefined
-
-  while (!choiceAnswer) {
-    const answer = await input(describedQuestion, { answer: defaultChoice })
-
-    if (answer === null) return null
-
-    const answerIndex = parseInt(answer, 10)
-
-    if (isNaN(answerIndex) || !choices[answerIndex - 1]) {
-      log.error('\nInvalid choice')
-      continue
-    }
-
-    choiceAnswer = choices[answerIndex - 1]
-  }
-
-  return choiceAnswer
+  return answer
 }
 
-const confirm = async (question: string): Promise<Nullable<boolean>> => {
-  const confirmOptionsMap: Record<string, boolean> = {
-    yes: true,
-    no: false,
-  }
-  const confirmOptions = Object.keys(confirmOptionsMap)
-
-  const optionAnswer = await choice(question, confirmOptions)
-
-  if (optionAnswer === null) return null
-
-  return confirmOptionsMap[optionAnswer]
+interface ConfirmOptions {
+  initial?: boolean
 }
 
-export default {
-  loop,
-  input,
-  choice,
-  confirm,
+export const confirm = async (
+  message: string,
+  { initial = false }: ConfirmOptions = {},
+) => {
+  const { answer } = await enquirer
+    .prompt<{ answer: boolean }>({
+      type: 'confirm',
+      name: 'answer',
+      message,
+      initial,
+    })
+    .catch(() => ({ answer: null }))
+
+  return answer
 }
+
+export const create = createCommand
