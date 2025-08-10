@@ -2,19 +2,49 @@
 import * as path from 'node:path'
 import * as url from 'node:url'
 import Db, { type Document } from '../common/db'
-import { FeatureExtractionDataSchema } from './schema'
-import type { FeatureExtractionData } from './schema'
+import type {
+  FeatureExtractionData,
+  FeatureExtractionResultData,
+} from './schema'
+import {
+  FeatureExtractionDataSchema,
+  FeatureExtractionResultDataSchema,
+} from './schema'
 
 const dbFile = path.join(
   path.dirname(url.fileURLToPath(import.meta.url)),
   'store.jsonl',
 )
 
+const resultsDbDir = path.join(
+  path.dirname(url.fileURLToPath(import.meta.url)),
+  'result',
+)
+
+export type FeatureExtractionResultDataDocument =
+  Document<FeatureExtractionResultData>
 export type FeatureExtractionDataDocument = Document<FeatureExtractionData>
 
 let FeatureExtractionDataStore: Db<typeof FeatureExtractionDataSchema>
 
-// const FeatureExtractStore: Map<string, typeof FeatureExtractSchema> = new Map()
+const FeatureExtractionResultDataStore = new Map<
+  string,
+  Db<typeof FeatureExtractionResultDataSchema>
+>()
+
+const getResultInstance = async (resultId: string) => {
+  const existingResultDataStore = FeatureExtractionResultDataStore.get(resultId)
+
+  if (existingResultDataStore) return existingResultDataStore
+
+  const resultDataStore = await Db.build(FeatureExtractionResultDataSchema, {
+    filename: path.join(resultsDbDir, `${resultId}.jsonl`),
+  })
+
+  FeatureExtractionResultDataStore.set(resultId, resultDataStore)
+
+  return resultDataStore
+}
 
 const getInstance = async () => {
   if (FeatureExtractionDataStore) return FeatureExtractionDataStore
@@ -29,4 +59,5 @@ const getInstance = async () => {
 
 export default {
   getInstance,
+  getResultInstance,
 }

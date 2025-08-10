@@ -186,7 +186,7 @@ type DocumentSchema = ZodObject<any>
 interface NEDBOptions {
   filename: string
   // TODO: type unique as a valid keypath of S['_output']
-  indexes: { unique: string }
+  indexes?: { unique: string }
 }
 
 class Db<S extends DocumentSchema> {
@@ -197,11 +197,15 @@ class Db<S extends DocumentSchema> {
     const { filename, indexes } = options
     const db = new NEDB({ filename, autoload: true })
 
-    await db.ensureIndexAsync({
-      fieldName: indexes.unique,
-      unique: true,
-      sparse: false,
-    })
+    // TODO: model indexes as an array of indexes definitions
+    if (indexes) {
+      await db.ensureIndexAsync({
+        fieldName: indexes.unique,
+        unique: true,
+        sparse: false,
+      })
+    }
+
     await db.compactDatafileAsync()
 
     return new Db(db, { schema, options })
