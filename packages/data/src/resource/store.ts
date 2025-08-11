@@ -19,7 +19,7 @@ const getInstance = async () => {
 
   ResourcesStore = await Db.build(ResourceDataSchema, {
     filename: dbFile,
-    indexes: { unique: 'url' },
+    indexes: [{ fieldName: 'url', unique: true }],
   })
 
   return ResourcesStore

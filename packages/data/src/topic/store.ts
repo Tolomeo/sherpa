@@ -18,7 +18,7 @@ const getInstance = async () => {
 
   TopicsStore = await Db.build(TopicDataSchema, {
     filename: dbFile,
-    indexes: { unique: 'name' },
+    indexes: [{ fieldName: 'name', unique: true }],
   })
 
   return TopicsStore

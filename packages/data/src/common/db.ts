@@ -183,28 +183,39 @@ type StrictFilter<TSchema> =
 
 type DocumentSchema = ZodObject<any>
 
-interface NEDBOptions {
+interface DBOptions<Schema extends DocumentSchema> {
   filename: string
-  // TODO: type unique as a valid keypath of S['_output']
-  indexes?: { unique: string }
+  indexes?: {
+    fieldName:
+      | Join<NestedPaths<Schema['_output'], []>, '.'>
+      | Join<NestedPaths<Schema['_output'], []>, '.'>[]
+    unique?: boolean
+    sparse?: boolean
+    expireAfterSeconds?: number
+  }[]
 }
 
-class Db<S extends DocumentSchema> {
+class Db<Schema extends DocumentSchema> {
   public static async build<S extends DocumentSchema>(
     schema: S,
-    options: NEDBOptions,
+    options: DBOptions<S>,
   ): Promise<Db<S>> {
-    const { filename, indexes } = options
+    const { filename, indexes = [] } = options
     const db = new NEDB({ filename, autoload: true })
 
-    // TODO: model indexes as an array of indexes definitions
-    if (indexes) {
-      await db.ensureIndexAsync({
-        fieldName: indexes.unique,
-        unique: true,
-        sparse: false,
-      })
-    }
+    await indexes.reduce<Promise<void>>(
+      (promiseChain, { fieldName, unique, sparse, expireAfterSeconds }) => {
+        return promiseChain.then(() =>
+          db.ensureIndexAsync({
+            fieldName,
+            unique,
+            sparse,
+            expireAfterSeconds,
+          }),
+        )
+      },
+      Promise.resolve(),
+    )
 
     await db.compactDatafileAsync()
 
@@ -212,15 +223,15 @@ class Db<S extends DocumentSchema> {
   }
 
   readonly config: {
-    schema: S
-    options: NEDBOptions
+    schema: Schema
+    options: DBOptions<Schema>
   }
 
-  private db: NEDB<S['_output']>
+  private db: NEDB<Schema['_output']>
 
   private constructor(
-    db: NEDB<S['_output']>,
-    config: { schema: S; options: NEDBOptions },
+    db: NEDB<Schema['_output']>,
+    config: { schema: Schema; options: DBOptions<Schema> },
   ) {
     this.db = db
     this.config = config
@@ -232,31 +243,37 @@ class Db<S extends DocumentSchema> {
 
   async migrate<NewSchema extends DocumentSchema>(
     newSchema: NewSchema,
-    transformer: (
-      doc: Document<S['_output']>,
-    ) => Document<NewSchema['_output']>,
+    transformer: {
+      options: (options: DBOptions<Schema>) => DBOptions<NewSchema>
+      document: (
+        doc: Document<Schema['_output']>,
+      ) => Document<NewSchema['_output']>
+    },
   ) {
     const documents = await this.findAll()
 
     await this.drop()
 
-    const newDb = await Db.build(newSchema, this.config.options)
+    const newDb = await Db.build(
+      newSchema,
+      transformer.options(this.config.options),
+    )
 
     for (const document of documents) {
-      await newDb.insertOne(transformer(document))
+      await newDb.insertOne(transformer.document(document))
     }
 
     return newDb
   }
 
-  async findAll(filter: StrictFilter<S['_output']> = {}) {
-    const docs: Document<S['_output']>[] = await this.db.findAsync(filter)
+  async findAll(filter: StrictFilter<Schema['_output']> = {}) {
+    const docs: Document<Schema['_output']>[] = await this.db.findAsync(filter)
 
     return docs
   }
 
-  async findOne(filter: StrictFilter<S['_output']>) {
-    const doc: Nullable<Document<S['_output']>> =
+  async findOne(filter: StrictFilter<Schema['_output']>) {
+    const doc: Nullable<Document<Schema['_output']>> =
       await this.db.findOneAsync(filter)
 
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- NEDB could return null when no doc is found
@@ -265,14 +282,14 @@ class Db<S extends DocumentSchema> {
     return doc
   }
 
-  async insertOne(insert: S['_output']) {
+  async insertOne(insert: Schema['_output']) {
     const validation = this.config.schema.safeParse(insert)
 
     if (!validation.success) {
       throw validation.error
     }
 
-    const doc = await this.db.insertAsync<S['_output']>(insert)
+    const doc = await this.db.insertAsync<Schema['_output']>(insert)
 
     await this.db.compactDatafileAsync()
 
@@ -281,8 +298,8 @@ class Db<S extends DocumentSchema> {
 
   async updateOne(
     id: string,
-    update: S['_output'],
-  ): Promise<Document<S['_output']>> {
+    update: Schema['_output'],
+  ): Promise<Document<Schema['_output']>> {
     const validation = this.config.schema.safeParse(update)
 
     if (!validation.success) {

@@ -51,7 +51,7 @@ const getInstance = async () => {
 
   FeatureExtractionDataStore = await Db.build(FeatureExtractionDataSchema, {
     filename: dbFile,
-    indexes: { unique: 'date' },
+    indexes: [{ fieldName: 'date', unique: true }],
   })
 
   return FeatureExtractionDataStore
