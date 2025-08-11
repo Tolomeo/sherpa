@@ -4,9 +4,11 @@ import type {
 } from './store'
 import Db from './store'
 
+const toDateOnly = (date: Date) =>
+  new Date(date.getFullYear(), date.getMonth(), date.getDate())
+
 export const create = async () => {
-  const now = new Date()
-  const date = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+  const date = toDateOnly(new Date())
 
   const existingDoc = await getByDate(date)
   if (existingDoc) {
@@ -19,11 +21,7 @@ export const create = async () => {
 }
 
 export const getByDate = async (findDate: Date) => {
-  const date = new Date(
-    findDate.getFullYear(),
-    findDate.getMonth(),
-    findDate.getDate(),
-  )
+  const date = toDateOnly(findDate)
 
   const doc = await Db.getInstance().then((db) => db.findOne({ date }))
 
@@ -46,10 +44,10 @@ class FeatureExtraction {
   async getResults() {
     const { _id: id } = this.document
 
-    return Db.getResultInstance(id).then((db) =>
-      db
-        .findAll()
-        .then((docs) => docs.map((doc) => new FeatureExtractionResult(doc))),
-    )
+    return Db.getResultInstance(id).then(async (resultsDb) => {
+      const resultDocs = await resultsDb.findAll()
+
+      return resultDocs.map((doc) => new FeatureExtractionResult(doc))
+    })
   }
 }
