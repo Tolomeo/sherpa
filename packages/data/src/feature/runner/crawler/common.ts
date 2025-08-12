@@ -14,8 +14,6 @@ import formatHTML from 'html-format'
 import { Deferred } from '../../../common/defer'
 import scraper, { type ScrapeOptions } from '../scraper'
 
-export {} from 'crawlee'
-
 export type {
   Constructor,
   BasicCrawlerOptions,
@@ -25,6 +23,8 @@ export type {
   PlaywrightCrawlerOptions,
   PlaywrightCrawlingContext,
 } from 'crawlee'
+
+export { CheerioCrawler } from 'crawlee'
 
 export * as cheerio from 'cheerio'
 
@@ -127,12 +127,13 @@ export abstract class FeatureCrawler<
 
     if (result) return result.promise
 
-    this.results.set(url, new Deferred())
+    const deferred = new Deferred<HealthCheckResult>()
+    this.results.set(url, deferred)
+
     const request = new Request<D>({ url, userData })
     await this.crawler.addRequests([request]).catch(console.error)
     !this.crawler.running && this.crawler.run().catch(console.error)
-    return this.results.get(url)!.promise
+
+    return deferred
   }
 }
-
-export { CheerioCrawler } from 'crawlee'
