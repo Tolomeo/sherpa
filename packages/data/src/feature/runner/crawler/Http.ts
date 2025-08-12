@@ -1,50 +1,43 @@
-import type { HttpHealthcheckRunConfig } from '../../../../types'
-import { HealthCheckRunner, CheerioCrawler } from './common'
-import type { CheerioCrawlerOptions, CheerioCrawlingContext } from './common'
+import { FeatureCrawler, CheerioCrawler } from './common'
+import type { CheerioCrawlerOptions } from './common'
 
-export default class HttpHealthCheckRunner extends HealthCheckRunner<CheerioCrawler> {
+export default class HttpFeatureCrawler extends FeatureCrawler<CheerioCrawler> {
   constructor(crawlerOptions: Partial<CheerioCrawlerOptions>) {
-    super()
+    super(
+      new CheerioCrawler({
+        ...crawlerOptions,
+        keepAlive: true,
+        retryOnBlocked: true,
+        requestHandler: async ({ request, $ }) => {
+          const metadata = await this.getMetadata({
+            url: request.url,
+            htmlDom: $,
+          })
 
-    this.crawler = new CheerioCrawler({
-      ...crawlerOptions,
-      keepAlive: true,
-      retryOnBlocked: true,
-      requestHandler: this.requestHandler.bind(this),
-      failedRequestHandler: this.failedRequestHandler.bind(this),
-    })
-  }
+          let { title, documentTitle, metadataTitle, displayTitle } = metadata
 
-  async requestHandler({
-    request,
-    $,
-  }: CheerioCrawlingContext<HttpHealthcheckRunConfig>) {
-    /* const {
-      userData: { titleSelector },
-    } = request */
+          if (!title && !documentTitle && !metadataTitle && !displayTitle) {
+            this.failure(request, new Error(`Could not retrieve title text`))
 
-    const metadata = await this.getMetadata({ url: request.url, htmlDom: $ })
+            return
+          }
 
-    let { title, documentTitle, metadataTitle, displayTitle } = metadata
+          title = title && this.filterEntities(title)
+          documentTitle = documentTitle && this.filterEntities(documentTitle)
+          metadataTitle = metadataTitle && this.filterEntities(metadataTitle)
+          displayTitle = displayTitle && this.filterEntities(displayTitle)
 
-    if (!title && !documentTitle && !metadataTitle && !displayTitle) {
-      this.failure(request, new Error(`Could not retrieve title text`))
-
-      return
-    }
-
-    title = title && this.filterEntities(title)
-    documentTitle = documentTitle && this.filterEntities(documentTitle)
-    metadataTitle = metadataTitle && this.filterEntities(metadataTitle)
-    displayTitle = displayTitle && this.filterEntities(displayTitle)
-
-    this.success(request, { title, documentTitle, metadataTitle, displayTitle })
-  }
-
-  failedRequestHandler(
-    { request }: CheerioCrawlingContext<HttpHealthcheckRunConfig>,
-    error: Error,
-  ) {
-    this.failure(request, error)
+          this.success(request, {
+            title,
+            documentTitle,
+            metadataTitle,
+            displayTitle,
+          })
+        },
+        failedRequestHandler: ({ request }, error) => {
+          this.failure(request, error)
+        },
+      }),
+    )
   }
 }

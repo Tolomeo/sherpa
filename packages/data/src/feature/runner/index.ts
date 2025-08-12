@@ -1,1 +1,1 @@
-export { default as FeatureExtractionRunner } from './Runner'
+export { default } from './Runner'

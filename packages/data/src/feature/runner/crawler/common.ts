@@ -1,22 +1,20 @@
 import { Request } from 'crawlee'
 import type {
-  BasicCrawler,
-  PlaywrightCrawler,
-  CheerioCrawler,
   Dictionary,
-  BasicCrawlingContext,
+  RequestOptions,
+  CrawlerRunOptions,
+  FinalStatistics,
+  Source,
+  CrawlerAddRequestsOptions,
+  CrawlerAddRequestsResult,
+  RequestProvider,
 } from 'crawlee'
 import he from 'he'
 import formatHTML from 'html-format'
 import { Deferred } from '../../../common/defer'
 import scraper, { type ScrapeOptions } from '../scraper'
 
-export {
-  RequestQueue,
-  BasicCrawler,
-  CheerioCrawler,
-  PlaywrightCrawler,
-} from 'crawlee'
+export {} from 'crawlee'
 
 export type {
   Constructor,
@@ -57,17 +55,31 @@ export type HealthCheckResult =
 
 const scrapeMetadata = scraper.scrape
 
-export abstract class HealthCheckRunner<
-  C extends
-    | BasicCrawler<BasicCrawlingContext<D>>
-    | PlaywrightCrawler
-    | CheerioCrawler,
+interface Crawler {
+  running: boolean
+  run: (
+    requests?: (string | Request | RequestOptions)[],
+    options?: CrawlerRunOptions,
+  ) => Promise<FinalStatistics>
+  requestQueue?: RequestProvider
+  addRequests: (
+    requests: (string | Source)[],
+    options?: CrawlerAddRequestsOptions,
+  ) => Promise<CrawlerAddRequestsResult>
+  teardown: () => Promise<void>
+}
+
+export abstract class FeatureCrawler<
+  C extends Crawler,
   D extends Dictionary = Dictionary,
 > {
   protected results = new Map<string, Deferred<HealthCheckResult>>()
 
-  // @ts-expect-error -- TODO revisit the OO design
   protected crawler: C
+
+  protected constructor(crawler: C) {
+    this.crawler = crawler
+  }
 
   protected success(request: Request<D>, data: ScrapeResult) {
     this.results.get(request.url)?.resolve({
@@ -122,3 +134,5 @@ export abstract class HealthCheckRunner<
     return this.results.get(url)!.promise
   }
 }
+
+export { CheerioCrawler } from 'crawlee'
