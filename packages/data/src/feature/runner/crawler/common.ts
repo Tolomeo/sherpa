@@ -1,15 +1,5 @@
 import { Request } from 'crawlee'
-import type {
-  Dictionary,
-  RequestOptions,
-  CrawlerRunOptions,
-  FinalStatistics,
-  Source,
-  CrawlerAddRequestsOptions,
-  CrawlerAddRequestsResult,
-  RequestProvider,
-  BasicCrawler,
-} from 'crawlee'
+import type { Dictionary, BasicCrawler } from 'crawlee'
 import he from 'he'
 import formatHTML from 'html-format'
 import { Deferred } from '../../../common/defer'
@@ -60,19 +50,6 @@ type Crawler = Pick<
   BasicCrawler,
   'running' | 'run' | 'requestQueue' | 'addRequests' | 'teardown'
 >
-/* interface Crawler {
-  running: boolean
-  run: (
-    requests?: (string | Request | RequestOptions)[],
-    options?: CrawlerRunOptions,
-  ) => Promise<FinalStatistics>
-  requestQueue?: RequestProvider
-  addRequests: (
-    requests: (string | Source)[],
-    options?: CrawlerAddRequestsOptions,
-  ) => Promise<CrawlerAddRequestsResult>
-  teardown: () => Promise<void>
-} */
 
 export abstract class FeatureCrawler<
   C extends Crawler,
