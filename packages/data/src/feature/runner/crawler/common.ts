@@ -8,6 +8,7 @@ import type {
   CrawlerAddRequestsOptions,
   CrawlerAddRequestsResult,
   RequestProvider,
+  BasicCrawler,
 } from 'crawlee'
 import he from 'he'
 import formatHTML from 'html-format'
@@ -24,7 +25,7 @@ export type {
   PlaywrightCrawlingContext,
 } from 'crawlee'
 
-export { CheerioCrawler } from 'crawlee'
+export { BasicCrawler, CheerioCrawler, PlaywrightCrawler } from 'crawlee'
 
 export * as cheerio from 'cheerio'
 
@@ -55,7 +56,11 @@ export type HealthCheckResult =
 
 const scrapeMetadata = scraper.scrape
 
-interface Crawler {
+type Crawler = Pick<
+  BasicCrawler,
+  'running' | 'run' | 'requestQueue' | 'addRequests' | 'teardown'
+>
+/* interface Crawler {
   running: boolean
   run: (
     requests?: (string | Request | RequestOptions)[],
@@ -67,7 +72,7 @@ interface Crawler {
     options?: CrawlerAddRequestsOptions,
   ) => Promise<CrawlerAddRequestsResult>
   teardown: () => Promise<void>
-}
+} */
 
 export abstract class FeatureCrawler<
   C extends Crawler,

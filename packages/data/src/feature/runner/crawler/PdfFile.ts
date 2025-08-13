@@ -1,17 +1,17 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion -- several indirect accesses force to null-assert */
-import { HealthCheckRunner, BasicCrawler, fileTypeFromBuffer } from './common'
 import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
+import { FeatureCrawler, BasicCrawler, fileTypeFromBuffer } from './common'
 
-export default class PdfFileHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
+export default class PdfFileCrawler extends FeatureCrawler<BasicCrawler> {
   constructor(crawlerOptions: Partial<BasicCrawlerOptions>) {
-    super()
-    this.crawler = new BasicCrawler({
-      ...crawlerOptions,
-      keepAlive: true,
-      retryOnBlocked: true,
-      requestHandler: this.requestHandler.bind(this),
-      failedRequestHandler: this.failedRequestHandler.bind(this),
-    })
+    super(
+      new BasicCrawler({
+        ...crawlerOptions,
+        keepAlive: true,
+        retryOnBlocked: true,
+        requestHandler: (...args) => this.requestHandler(...args),
+        failedRequestHandler: (...args) => this.failedRequestHandler(...args),
+      }),
+    )
   }
 
   async requestHandler({ request, sendRequest }: BasicCrawlingContext) {

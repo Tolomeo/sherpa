@@ -1,31 +1,31 @@
 import type { E2EHealthcheckRunConfig } from '../../../../types'
-import { HealthCheckRunner, PlaywrightCrawler } from './common'
 import type {
   PlaywrightCrawlerOptions,
   PlaywrightCrawlingContext,
 } from './common'
+import { FeatureCrawler, PlaywrightCrawler } from './common'
 
-export default class E2EHealthCheckRunner extends HealthCheckRunner<
+type E2ECrawlingContext = PlaywrightCrawlingContext<E2EHealthcheckRunConfig>
+
+export default class E2ECrawler extends FeatureCrawler<
   PlaywrightCrawler,
   E2EHealthcheckRunConfig
 > {
   constructor(crawlerOptions: Partial<PlaywrightCrawlerOptions>) {
-    super()
-    this.crawler = new PlaywrightCrawler({
-      ...crawlerOptions,
-      keepAlive: true,
-      retryOnBlocked: true,
-      // @ts-expect-error -- TODO revisit OO design
-      requestHandler: this.requestHandler.bind(this),
-      // @ts-expect-error -- TODO revisit OO design
-      failedRequestHandler: this.failedRequestHandler.bind(this),
-    })
+    super(
+      new PlaywrightCrawler({
+        ...crawlerOptions,
+        keepAlive: true,
+        retryOnBlocked: true,
+        requestHandler: (context, ...args) =>
+          this.requestHandler(context as E2ECrawlingContext, ...args),
+        failedRequestHandler: (context, ...args) =>
+          this.failedRequestHandler(context as E2ECrawlingContext, ...args),
+      }),
+    )
   }
 
-  async requestHandler({
-    page,
-    request,
-  }: PlaywrightCrawlingContext<E2EHealthcheckRunConfig>) {
+  async requestHandler({ page, request }: E2ECrawlingContext) {
     const {
       userData: { titleSelector, waitForLoadState },
     } = request
@@ -51,10 +51,7 @@ export default class E2EHealthCheckRunner extends HealthCheckRunner<
     this.success(request, { title: this.filterEntities(title) })
   }
 
-  failedRequestHandler(
-    { request }: PlaywrightCrawlingContext<E2EHealthcheckRunConfig>,
-    error: Error,
-  ) {
+  failedRequestHandler({ request }: E2ECrawlingContext, error: Error) {
     this.failure(request, error)
   }
 }

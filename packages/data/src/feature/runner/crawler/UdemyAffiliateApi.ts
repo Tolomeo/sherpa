@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion -- several indirect accesses force to null-assert */
-import { HealthCheckRunner, BasicCrawler } from './common'
 import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
+import { FeatureCrawler, BasicCrawler } from './common'
 
 // NB: this type contains only what we are checking for in the response
 // the actual response is richer, see https://www.udemy.com/developers/affiliate/models/course/
@@ -9,7 +9,7 @@ interface UdemyAffiliateApiResponse {
   title: string
 }
 
-export default class UdemyAffiliateApiHealthCheckRunner extends HealthCheckRunner<BasicCrawler> {
+export default class UdemyAffiliateApiCrawler extends FeatureCrawler<BasicCrawler> {
   static getCourseSlug = (url: string) => {
     const courseUrl = /^https?:\/\/www\.udemy\.com\/course\/(\S+)$/
 
@@ -22,19 +22,20 @@ export default class UdemyAffiliateApiHealthCheckRunner extends HealthCheckRunne
   }
 
   constructor(crawlerOptions: BasicCrawlerOptions) {
-    super()
-    this.crawler = new BasicCrawler({
-      ...crawlerOptions,
-      keepAlive: true,
-      retryOnBlocked: true,
-      requestHandler: this.requestHandler.bind(this),
-      failedRequestHandler: this.failedRequestHandler.bind(this),
-    })
+    super(
+      new BasicCrawler({
+        ...crawlerOptions,
+        keepAlive: true,
+        retryOnBlocked: true,
+        requestHandler: (...args) => this.requestHandler(...args),
+        failedRequestHandler: (...args) => this.failedRequestHandler(...args),
+      }),
+    )
   }
 
   getDataRequestUrl(url: string) {
     const apiBaseUrl = 'https://www.udemy.com/api-2.0/courses'
-    const { getCourseSlug } = UdemyAffiliateApiHealthCheckRunner
+    const { getCourseSlug } = UdemyAffiliateApiCrawler
 
     const courseSlug = getCourseSlug(url)
 
