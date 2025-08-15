@@ -1,3 +1,4 @@
+import type { CheerioAPI } from 'cheerio'
 import type { ZenscrapeHealthcheckRunConfig } from '../../../../types'
 import { wait } from '../../../common/defer'
 import { FeatureCrawler, BasicCrawler, cheerio } from './common'
@@ -6,8 +7,13 @@ import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
 type ZenscrapeCrawlingContext =
   BasicCrawlingContext<ZenscrapeHealthcheckRunConfig>
 
-export default class ZenscrapeHealthCheckRunner extends FeatureCrawler<
+export interface ZenscrapeCrawlerResult {
+  htmlDom: CheerioAPI
+}
+
+export default class ZenscrapeCrawler extends FeatureCrawler<
   BasicCrawler<ZenscrapeCrawlingContext>,
+  ZenscrapeCrawlerResult,
   ZenscrapeHealthcheckRunConfig
 > {
   constructor(crawlerOptions: BasicCrawlerOptions<ZenscrapeCrawlingContext>) {
@@ -52,7 +58,8 @@ export default class ZenscrapeHealthCheckRunner extends FeatureCrawler<
       return
     }
 
-    const { titleSelector, render, premium } = request.userData
+    // const { titleSelector, render, premium } = request.userData
+    const { render, premium } = request.userData
     const dataRequestUrl = this.getDataRequestUrl(request.url, render, premium)
     const { statusCode, body } = (await sendRequest({
       url: dataRequestUrl,
@@ -65,7 +72,7 @@ export default class ZenscrapeHealthCheckRunner extends FeatureCrawler<
     }
 
     const $ = cheerio.load(body)
-    const title = $(titleSelector).text().trim()
+    /* const title = $(titleSelector).text().trim()
 
     if (!title) {
       this.failure(
@@ -77,9 +84,9 @@ export default class ZenscrapeHealthCheckRunner extends FeatureCrawler<
         ),
       )
       return
-    }
+    } */
 
-    this.success(request, { title: this.filterEntities(title) })
+    this.success(request, { htmlDom: $ })
   }
 
   failedRequestHandler({ request }: ZenscrapeCrawlingContext, error: Error) {

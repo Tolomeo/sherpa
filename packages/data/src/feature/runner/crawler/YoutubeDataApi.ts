@@ -4,7 +4,7 @@ import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
 
 // NB: this type contains only what we are checking for in the response, when we pass 'snippet' as value for 'part' query parameter
 // the actual response is richer
-interface YoutubeDataApiResponse {
+interface YoutubeDataApiV3Response {
   items: {
     snippet: {
       title: string
@@ -15,7 +15,14 @@ interface YoutubeDataApiResponse {
   }
 }
 
-export default class YoutubeDataApiV3Crawler extends FeatureCrawler<BasicCrawler> {
+export interface YoutubeDataApiV3CrawlerResult {
+  response: YoutubeDataApiV3Response
+}
+
+export default class YoutubeDataApiV3Crawler extends FeatureCrawler<
+  BasicCrawler,
+  YoutubeDataApiV3CrawlerResult
+> {
   static getVideoId = (url: string) => {
     const videoUrl = /^https?:\/\/www\.youtube\.com\/watch\?v=(\S+)$/
 
@@ -64,8 +71,7 @@ export default class YoutubeDataApiV3Crawler extends FeatureCrawler<BasicCrawler
   getDataRequestUrl(url: string, apiKey: string) {
     const apiBaseUrl = 'https://youtube.googleapis.com/youtube/v3'
 
-    const { getVideoId, getPlaylistId, getChannelId } =
-      YoutubeDataApiV3Crawler
+    const { getVideoId, getPlaylistId, getChannelId } = YoutubeDataApiV3Crawler
 
     const videoId = getVideoId(url)
     if (videoId)
@@ -110,7 +116,7 @@ export default class YoutubeDataApiV3Crawler extends FeatureCrawler<BasicCrawler
     const { body } = (await sendRequest({
       url: dataRequestUrl,
       responseType: 'json',
-    })) as { body: YoutubeDataApiResponse }
+    })) as { body: YoutubeDataApiV3Response }
 
     if (body.pageInfo.totalResults < 1) {
       this.failure(
@@ -122,7 +128,7 @@ export default class YoutubeDataApiV3Crawler extends FeatureCrawler<BasicCrawler
     }
 
     this.success(request, {
-      title: body.items[0].snippet.title,
+      response: body,
     })
   }
 

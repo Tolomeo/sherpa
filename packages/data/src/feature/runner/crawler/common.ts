@@ -15,7 +15,12 @@ export type {
   PlaywrightCrawlingContext,
 } from 'crawlee'
 
-export { BasicCrawler, CheerioCrawler, PlaywrightCrawler } from 'crawlee'
+export {
+  BasicCrawler,
+  CheerioCrawler,
+  PlaywrightCrawler,
+  RequestQueue,
+} from 'crawlee'
 
 export * as cheerio from 'cheerio'
 
@@ -32,14 +37,14 @@ export interface ScrapeResult {
 
 export type HealthCheckResult =
   | {
-      url: string
       success: true
+      url: string
       error: null
       data: ScrapeResult
     }
   | {
-      url: string
       success: false
+      url: string
       error: Error
       data: null
     }
@@ -51,11 +56,24 @@ type Crawler = Pick<
   'running' | 'run' | 'requestQueue' | 'addRequests' | 'teardown'
 >
 
+type CrawlerResult<O> =
+  | {
+      success: true
+      url: string
+      data: O
+    }
+  | {
+      success: false
+      url: string
+      error: Error
+    }
+
 export abstract class FeatureCrawler<
   C extends Crawler,
-  D extends Dictionary = Dictionary,
+  O extends Dictionary,
+  I extends Dictionary = Dictionary,
 > {
-  protected results = new Map<string, Deferred<HealthCheckResult>>()
+  protected results = new Map<string, Deferred<CrawlerResult<O>>>()
 
   protected crawler: C
 
@@ -63,21 +81,19 @@ export abstract class FeatureCrawler<
     this.crawler = crawler
   }
 
-  protected success(request: Request<D>, data: ScrapeResult) {
+  protected success(request: Request<I>, data: O) {
     this.results.get(request.url)?.resolve({
       url: request.url,
       success: true,
-      error: null,
       data,
     })
   }
 
-  protected failure(request: Request<D>, error: Error) {
+  protected failure(request: Request<I>, error: Error) {
     this.results.get(request.url)?.resolve({
       url: request.url,
       success: false,
       error,
-      data: null,
     })
   }
 
@@ -104,15 +120,15 @@ export abstract class FeatureCrawler<
     this.results.clear()
   }
 
-  async run(url: string, userData: D) {
+  async run(url: string, userData: I) {
     const result = this.results.get(url)
 
     if (result) return result.promise
 
-    const deferred = new Deferred<HealthCheckResult>()
+    const deferred = new Deferred<CrawlerResult<O>>()
     this.results.set(url, deferred)
 
-    const request = new Request<D>({ url, userData })
+    const request = new Request<I>({ url, userData })
     await this.crawler.addRequests([request]).catch(console.error)
     !this.crawler.running && this.crawler.run().catch(console.error)
 

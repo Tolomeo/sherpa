@@ -9,7 +9,14 @@ interface UdemyAffiliateApiResponse {
   title: string
 }
 
-export default class UdemyAffiliateApiCrawler extends FeatureCrawler<BasicCrawler> {
+export interface UdemyAffiliateApiCrawlerResult {
+  response: UdemyAffiliateApiResponse
+}
+
+export default class UdemyAffiliateApiCrawler extends FeatureCrawler<
+  BasicCrawler,
+  UdemyAffiliateApiCrawlerResult
+> {
   static getCourseSlug = (url: string) => {
     const courseUrl = /^https?:\/\/www\.udemy\.com\/course\/(\S+)$/
 
@@ -80,6 +87,7 @@ export default class UdemyAffiliateApiCrawler extends FeatureCrawler<BasicCrawle
       request.noRetry = true
       return
     }
+
     const Authentication = `Basic ${Buffer.from(
       `${clientId}:${clientSecret}`,
     ).toString('base64')}`
@@ -93,7 +101,7 @@ export default class UdemyAffiliateApiCrawler extends FeatureCrawler<BasicCrawle
     })) as { body: UdemyAffiliateApiResponse }
 
     this.success(request, {
-      title: body.title,
+      response: body,
     })
   }
 

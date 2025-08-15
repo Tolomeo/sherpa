@@ -7,8 +7,13 @@ import { FeatureCrawler, PlaywrightCrawler } from './common'
 
 type E2ECrawlingContext = PlaywrightCrawlingContext<E2EHealthcheckRunConfig>
 
+export interface PlaywrightCrawlerResult {
+  html: string
+}
+
 export default class E2ECrawler extends FeatureCrawler<
   PlaywrightCrawler,
+  PlaywrightCrawlerResult,
   E2EHealthcheckRunConfig
 > {
   constructor(crawlerOptions: Partial<PlaywrightCrawlerOptions>) {
@@ -26,12 +31,20 @@ export default class E2ECrawler extends FeatureCrawler<
   }
 
   async requestHandler({ page, request }: E2ECrawlingContext) {
-    const {
+    /* const {
       userData: { titleSelector, waitForLoadState },
+    } = request */
+    const {
+      userData: { waitForLoadState },
     } = request
 
     await page.waitForLoadState(waitForLoadState)
-    const title = await page.locator(titleSelector).first().textContent()
+
+    const html = await page.content()
+
+    this.success(request, { html })
+
+    /* const title = await page.locator(titleSelector).first().textContent()
 
     if (!title) {
       const pageContent = await page.content()
@@ -48,7 +61,7 @@ export default class E2ECrawler extends FeatureCrawler<
       return
     }
 
-    this.success(request, { title: this.filterEntities(title) })
+    this.success(request, { title: this.filterEntities(title) }) */
   }
 
   failedRequestHandler({ request }: E2ECrawlingContext, error: Error) {
