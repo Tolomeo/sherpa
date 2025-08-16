@@ -20,7 +20,6 @@ export default class ZenscrapeCrawler extends FeatureCrawler<
     super(
       new BasicCrawler<ZenscrapeCrawlingContext>({
         ...crawlerOptions,
-        keepAlive: true,
         retryOnBlocked: true,
         maxConcurrency: 1,
         sameDomainDelaySecs: 5,

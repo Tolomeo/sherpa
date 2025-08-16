@@ -13,7 +13,6 @@ export default class PdfFileCrawler extends FeatureCrawler<
     super(
       new BasicCrawler({
         ...crawlerOptions,
-        keepAlive: true,
         retryOnBlocked: true,
         requestHandler: (...args) => this.requestHandler(...args),
         failedRequestHandler: (...args) => this.failedRequestHandler(...args),

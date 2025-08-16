@@ -4,7 +4,7 @@ import type { CheerioCrawlerOptions, CheerioCrawlingContext } from './common'
 import { FeatureCrawler, CheerioCrawler } from './common'
 
 export interface HttpCrawlerResult {
-  htmlDom: CheerioAPI
+  dom: CheerioAPI
 }
 
 export default class HttpCrawler extends FeatureCrawler<
@@ -15,7 +15,6 @@ export default class HttpCrawler extends FeatureCrawler<
     super(
       new CheerioCrawler({
         ...crawlerOptions,
-        keepAlive: true,
         retryOnBlocked: true,
         requestHandler: (...args) => this.requestHandler(...args),
         failedRequestHandler: (...args) => this.failedRequestHandler(...args),
@@ -27,7 +26,7 @@ export default class HttpCrawler extends FeatureCrawler<
     request,
     $,
   }: CheerioCrawlingContext<HttpHealthcheckRunConfig>) {
-    this.success(request, { htmlDom: $ })
+    this.success(request, { dom: $ })
     /* const metadata = await this.getMetadata({ url: request.url, htmlDom: $ })
 
     let { title, documentTitle, metadataTitle, displayTitle } = metadata

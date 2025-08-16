@@ -33,7 +33,7 @@ type FeatureExtractionResult =
     }
   | {
       success: true
-      data: {
+      result: {
         title?: string
         documentTitle?: string
         metadataTitle?: string
@@ -67,7 +67,7 @@ class FeatureExtractionRunner {
 
           return {
             success: true,
-            data: await fromPDFBuffer({ url, buffer: result.file }),
+            result: await fromPDFBuffer({ url, buffer: result.file }),
           }
         }
         case 'Http': {
@@ -76,7 +76,7 @@ class FeatureExtractionRunner {
 
           return {
             success: true,
-            data: await fromHtmlDom({ url, dom: result.htmlDom }),
+            result: await fromHtmlDom({ url, dom: result.dom }),
           }
         }
         case 'E2E': {
@@ -85,7 +85,7 @@ class FeatureExtractionRunner {
 
           return {
             success: true,
-            data: await fromHtmlString({ url, html: result.html }),
+            result: await fromHtmlString({ url, html: result.html }),
           }
         }
         case 'YoutubeData': {
@@ -94,7 +94,7 @@ class FeatureExtractionRunner {
 
           return {
             success: true,
-            data: fromYoutubeDataAPIV3Response({
+            result: fromYoutubeDataAPIV3Response({
               url,
               response: result.response,
             }),
@@ -106,7 +106,7 @@ class FeatureExtractionRunner {
 
           return {
             success: true,
-            data: await fromHtmlDom({ url, dom: result.htmlDom }),
+            result: await fromHtmlDom({ url, dom: result.htmlDom }),
           }
         }
         case 'UdemyAffiliate': {
@@ -115,7 +115,7 @@ class FeatureExtractionRunner {
 
           return {
             success: true,
-            data: fromUdemyaffiliateApiResponse({
+            result: fromUdemyaffiliateApiResponse({
               url,
               response: result.response,
             }),

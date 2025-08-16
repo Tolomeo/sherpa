@@ -16,6 +16,7 @@ export type {
 } from 'crawlee'
 
 export {
+  Configuration,
   BasicCrawler,
   CheerioCrawler,
   PlaywrightCrawler,

@@ -20,7 +20,6 @@ export default class E2ECrawler extends FeatureCrawler<
     super(
       new PlaywrightCrawler({
         ...crawlerOptions,
-        keepAlive: true,
         retryOnBlocked: true,
         requestHandler: (context, ...args) =>
           this.requestHandler(context as E2ECrawlingContext, ...args),
