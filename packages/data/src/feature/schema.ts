@@ -75,8 +75,8 @@ export type FeatureExtractionResult = z.infer<
   typeof FeatureExtractionResultSchema
 >
 
-export const FeatureExtractionDataSchema = z.object({
+export const FeatureExtractionSchema = z.object({
   date: z.date(),
 })
 
-export type FeatureExtractionData = z.infer<typeof FeatureExtractionDataSchema>
+export type FeatureExtraction = z.infer<typeof FeatureExtractionSchema>

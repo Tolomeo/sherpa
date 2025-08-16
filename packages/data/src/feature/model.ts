@@ -1,6 +1,6 @@
 import type {
-  FeatureExtractionDataDocument,
-  FeatureExtractionResultDataDocument,
+  FeatureExtractionDocument,
+  FeatureExtractionResultDocument,
 } from './store'
 import Db from './store'
 
@@ -31,13 +31,13 @@ export const getByDate = async (findDate: Date) => {
 }
 
 class FeatureExtractionResult {
-  constructor(private document: FeatureExtractionResultDataDocument) {}
+  constructor(private document: FeatureExtractionResultDocument) {}
 }
 
 class FeatureExtraction {
-  private document: FeatureExtractionDataDocument
+  private document: FeatureExtractionDocument
 
-  constructor(document: FeatureExtractionDataDocument) {
+  constructor(document: FeatureExtractionDocument) {
     this.document = document
   }
 
