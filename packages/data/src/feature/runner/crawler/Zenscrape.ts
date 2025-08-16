@@ -8,7 +8,7 @@ type ZenscrapeCrawlingContext =
   BasicCrawlingContext<ZenscrapeHealthcheckRunConfig>
 
 export interface ZenscrapeCrawlerResult {
-  htmlDom: CheerioAPI
+  html: string
 }
 
 export default class ZenscrapeCrawler extends FeatureCrawler<
@@ -70,7 +70,7 @@ export default class ZenscrapeCrawler extends FeatureCrawler<
       throw new Error(`Concurrent requests are not supported`)
     }
 
-    const $ = cheerio.load(body)
+    // const $ = cheerio.load(body)
     /* const title = $(titleSelector).text().trim()
 
     if (!title) {
@@ -85,7 +85,7 @@ export default class ZenscrapeCrawler extends FeatureCrawler<
       return
     } */
 
-    this.success(request, { htmlDom: $ })
+    this.success(request, { html: body })
   }
 
   failedRequestHandler({ request }: ZenscrapeCrawlingContext, error: Error) {

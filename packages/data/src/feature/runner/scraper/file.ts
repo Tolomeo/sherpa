@@ -6,14 +6,14 @@ export interface PDFMetadata {
 
 export interface FromPDFBufferOptions {
   url: string
-  buffer: Buffer
+  source: Buffer
 }
 
 export const getPDFMetdadata = async ({
   url,
-  buffer,
+  source,
 }: FromPDFBufferOptions): Promise<PDFMetadata> => {
-  const file = await fileTypeFromBuffer(buffer)
+  const file = await fileTypeFromBuffer(source)
 
   if (!file || file.ext !== 'pdf' || file.mime !== 'application/pdf') {
     throw new Error(

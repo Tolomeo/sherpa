@@ -33,11 +33,11 @@ type Crawler =
 
 type FeatureExtractionData =
   | {
-      source: 'PDFFile'
+      source: 'PdfFile'
       metadata: PDFMetadata
     }
   | {
-      source: 'HTML'
+      source: 'Html'
       metadata: HtmlMetadata
     }
   | { source: 'YoutubeDataAPIV3'; metadata: YoutubeAPIV3Metadata }
@@ -92,11 +92,11 @@ class FeatureExtractionRunner {
       switch (strategy.runner) {
         case 'PdfFile': {
           const crawler = await this.getCrawler(PdfFileCrawler)
-          const result = await crawler.run(url, {})
-          const metadata = await getPDFMetdadata({ url, buffer: result.file })
+          const { file } = await crawler.run(url, {})
+          const metadata = await getPDFMetdadata({ url, source: file })
 
           return this.success({
-            source: 'PDFFile',
+            source: 'PdfFile',
             metadata,
           })
         }
@@ -106,7 +106,7 @@ class FeatureExtractionRunner {
           const metadata = await getHtmlMetadata({ url, source: dom })
 
           return this.success({
-            source: 'HTML',
+            source: 'Html',
             metadata,
           })
         }
@@ -116,7 +116,7 @@ class FeatureExtractionRunner {
           const metadata = await getHtmlMetadata({ url, source: html })
 
           return this.success({
-            source: 'HTML',
+            source: 'Html',
             metadata,
           })
         }
@@ -125,7 +125,7 @@ class FeatureExtractionRunner {
           const result = await crawler.run(url, {})
           const metadata = getYoutubeDataAPIV3Metadata({
             url,
-            response: result.response,
+            source: result.response,
           })
 
           return this.success({
@@ -135,11 +135,11 @@ class FeatureExtractionRunner {
         }
         case 'Zenscrape': {
           const crawler = await this.getCrawler(ZenscrapeCrawler)
-          const { htmlDom } = await crawler.run(url, strategy.config)
-          const metadata = await getHtmlMetadata({ url, source: htmlDom })
+          const { html } = await crawler.run(url, strategy.config)
+          const metadata = await getHtmlMetadata({ url, source: html })
 
           return this.success({
-            source: 'HTML',
+            source: 'Html',
             metadata,
           })
         }
@@ -148,7 +148,7 @@ class FeatureExtractionRunner {
           const { response } = await crawler.run(url, {})
           const metadata = getUdemyMetadata({
             url,
-            response,
+            source: response,
           })
 
           return this.success({
