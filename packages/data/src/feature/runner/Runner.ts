@@ -18,7 +18,7 @@ import type {
 } from './scraper'
 import {
   getHtmlMetadata,
-  getPDFMetdadata,
+  getPdfMetadata,
   getYoutubeDataAPIV3Metadata,
   getUdemyMetadata,
 } from './scraper'
@@ -93,7 +93,7 @@ class FeatureExtractionRunner {
         case 'PdfFile': {
           const crawler = await this.getCrawler(PdfFileCrawler)
           const { file } = await crawler.run(url, {})
-          const metadata = await getPDFMetdadata({ url, source: file })
+          const metadata = await getPdfMetadata({ url, source: file })
 
           return this.success({
             source: 'PdfFile',

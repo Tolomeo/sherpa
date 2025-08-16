@@ -7,11 +7,11 @@ const metascraper = createMetascraper([createMetascraperTitleRules()])
 
 export interface HtmlMetadata {
   title: {
-    document?: string
-    display?: string
-    og?: string
-    twitter?: string
-    jsonld?: string
+    document: string | null
+    display: string | null
+    og: string | null
+    twitter: string | null
+    jsonld: string | null
   }
 }
 
@@ -25,10 +25,19 @@ export const getHtmlMetadata = async ({
   source,
 }: GetHtmlMetadataOptions) => {
   const htmlDom = typeof source === 'string' ? load(source) : source
-  const metadata = await metascraper({
+  const { document, display, og, twitter, jsonld } = await metascraper({
     url,
     htmlDom,
   })
 
-  return metadata as HtmlMetadata
+  // TODO: improve HtmlMetadata inferred
+  return {
+    title: {
+      document,
+      display,
+      og,
+      twitter,
+      jsonld,
+    },
+  } as HtmlMetadata
 }
