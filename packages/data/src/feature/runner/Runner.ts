@@ -26,7 +26,7 @@ type Crawler =
   | YoutubeDataApiCrawler
   | UdemyAffiliateApiCrawler
 
-/* type FeatureExtractionResult =
+type FeatureExtractionResult =
   | {
       success: false
       error: Error
@@ -39,7 +39,7 @@ type Crawler =
         metadataTitle?: string
         displayTitle?: string
       }
-    } */
+    }
 
 class FeatureExtractionRunner {
   private runners = new Map<Constructor<Crawler>, Crawler>()
@@ -55,91 +55,77 @@ class FeatureExtractionRunner {
     return runnerInstance
   }
 
-  async run(url: string, strategy: HealthcheckStrategy) {
-    switch (strategy.runner) {
-      case 'PdfFile': {
-        const runner = await this.getCrawler(PdfFileCrawler)
-        const result = await runner.run(url, {})
+  async run(
+    url: string,
+    strategy: HealthcheckStrategy,
+  ): Promise<FeatureExtractionResult> {
+    try {
+      switch (strategy.runner) {
+        case 'PdfFile': {
+          const crawler = await this.getCrawler(PdfFileCrawler)
+          const result = await crawler.run(url, {})
 
-        if (!result.success) {
-          return result
+          return {
+            success: true,
+            data: await fromPDFBuffer({ url, buffer: result.file }),
+          }
         }
+        case 'Http': {
+          const crawler = await this.getCrawler(HttpCrawler)
+          const result = await crawler.run(url, strategy.config)
 
-        return {
-          success: true,
-          data: await fromPDFBuffer({ url, buffer: result.data.file }),
+          return {
+            success: true,
+            data: await fromHtmlDom({ url, dom: result.htmlDom }),
+          }
         }
-      }
-      case 'Http': {
-        const runner = await this.getCrawler(HttpCrawler)
-        const result = await runner.run(url, strategy.config)
+        case 'E2E': {
+          const crawler = await this.getCrawler(E2ECrawler)
+          const result = await crawler.run(url, strategy.config)
 
-        if (!result.success) {
-          return result
+          return {
+            success: true,
+            data: await fromHtmlString({ url, html: result.html }),
+          }
         }
+        case 'YoutubeData': {
+          const crawler = await this.getCrawler(YoutubeDataApiCrawler)
+          const result = await crawler.run(url, {})
 
-        return {
-          success: true,
-          data: await fromHtmlDom({ url, dom: result.data.htmlDom }),
+          return {
+            success: true,
+            data: fromYoutubeDataAPIV3Response({
+              url,
+              response: result.response,
+            }),
+          }
         }
-      }
-      case 'E2E': {
-        const runner = await this.getCrawler(E2ECrawler)
-        const result = await runner.run(url, strategy.config)
+        case 'Zenscrape': {
+          const crawler = await this.getCrawler(ZenscrapeCrawler)
+          const result = await crawler.run(url, strategy.config)
 
-        if (!result.success) {
-          return result
+          return {
+            success: true,
+            data: await fromHtmlDom({ url, dom: result.htmlDom }),
+          }
         }
+        case 'UdemyAffiliate': {
+          const crawler = await this.getCrawler(UdemyAffiliateApiCrawler)
+          const result = await crawler.run(url, {})
 
-        return {
-          success: true,
-          data: fromHtmlString({ url, html: result.data.html }),
-        }
-      }
-      case 'YoutubeData': {
-        const runner = await this.getCrawler(YoutubeDataApiCrawler)
-        const result = await runner.run(url, {})
-
-        if (!result.success) {
-          return result
-        }
-
-        return {
-          success: true,
-          data: fromYoutubeDataAPIV3Response({
-            url,
-            response: result.data.response,
-          }),
-        }
-      }
-      case 'Zenscrape': {
-        const runner = await this.getCrawler(ZenscrapeCrawler)
-        const result = await runner.run(url, strategy.config)
-
-        if (!result.success) {
-          return result
-        }
-
-        return {
-          success: true,
-          data: await fromHtmlDom({ url, dom: result.data.htmlDom }),
+          return {
+            success: true,
+            data: fromUdemyaffiliateApiResponse({
+              url,
+              response: result.response,
+            }),
+          }
         }
       }
-      case 'UdemyAffiliate': {
-        const runner = await this.getCrawler(UdemyAffiliateApiCrawler)
-        const result = await runner.run(url, {})
-
-        if (!result.success) {
-          return result
-        }
-
-        return {
-          success: true,
-          data: fromUdemyaffiliateApiResponse({
-            url,
-            response: result.data.response,
-          }),
-        }
+    } catch (err) {
+      return {
+        success: false,
+        error: err as Error,
       }
     }
   }

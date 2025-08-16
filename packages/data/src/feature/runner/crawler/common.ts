@@ -1,9 +1,9 @@
 import { Request } from 'crawlee'
 import type { Dictionary, BasicCrawler } from 'crawlee'
-import he from 'he'
-import formatHTML from 'html-format'
+/* import he from 'he'
+import formatHTML from 'html-format' */
 import { Deferred } from '../../../common/defer'
-import scraper, { type ScrapeOptions } from '../scraper'
+// import scraper, { type ScrapeOptions } from '../scraper'
 
 export type {
   Constructor,
@@ -26,7 +26,7 @@ export * as cheerio from 'cheerio'
 
 export { fileTypeFromBuffer } from 'file-type'
 
-const { decode, encode } = he
+// const { decode, encode } = he
 
 export interface ScrapeResult {
   title?: string
@@ -35,7 +35,7 @@ export interface ScrapeResult {
   displayTitle?: string
 }
 
-export type HealthCheckResult =
+/* export type HealthCheckResult =
   | {
       success: true
       url: string
@@ -47,33 +47,21 @@ export type HealthCheckResult =
       url: string
       error: Error
       data: null
-    }
+    } */
 
-const scrapeMetadata = scraper.scrape
+// const scrapeMetadata = scraper.scrape
 
 type Crawler = Pick<
   BasicCrawler,
   'running' | 'run' | 'requestQueue' | 'addRequests' | 'teardown'
 >
 
-type CrawlerResult<O> =
-  | {
-      success: true
-      url: string
-      data: O
-    }
-  | {
-      success: false
-      url: string
-      error: Error
-    }
-
 export abstract class FeatureCrawler<
   C extends Crawler,
   O extends Dictionary,
   I extends Dictionary = Dictionary,
 > {
-  protected results = new Map<string, Deferred<CrawlerResult<O>>>()
+  protected results = new Map<string, Deferred<O>>()
 
   protected crawler: C
 
@@ -82,22 +70,14 @@ export abstract class FeatureCrawler<
   }
 
   protected success(request: Request<I>, data: O) {
-    this.results.get(request.url)?.resolve({
-      url: request.url,
-      success: true,
-      data,
-    })
+    this.results.get(request.url)?.resolve(data)
   }
 
   protected failure(request: Request<I>, error: Error) {
-    this.results.get(request.url)?.resolve({
-      url: request.url,
-      success: false,
-      error,
-    })
+    this.results.get(request.url)?.reject(error)
   }
 
-  protected formatHTML(htmlString: string) {
+  /* protected formatHTML(htmlString: string) {
     return formatHTML(htmlString)
   }
 
@@ -108,11 +88,7 @@ export abstract class FeatureCrawler<
     const eEntities = new RegExp(Object.keys(entities).join('|'), 'g')
 
     return decode(encode(text).replace(eEntities, (entity) => entities[entity]))
-  }
-
-  protected getMetadata(options: ScrapeOptions) {
-    return scrapeMetadata(options)
-  }
+  } */
 
   async teardown() {
     await this.crawler.requestQueue?.drop()
@@ -125,7 +101,7 @@ export abstract class FeatureCrawler<
 
     if (result) return result.promise
 
-    const deferred = new Deferred<CrawlerResult<O>>()
+    const deferred = new Deferred<O>()
     this.results.set(url, deferred)
 
     const request = new Request<I>({ url, userData })
