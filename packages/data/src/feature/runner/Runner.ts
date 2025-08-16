@@ -49,7 +49,7 @@ type FeatureExtractionData =
 type FeatureExtractionResult =
   | {
       success: false
-      error: Error
+      error: string
     }
   | {
       success: true
@@ -77,10 +77,10 @@ class FeatureExtractionRunner {
     }
   }
 
-  private error(err: Error) {
+  private error(error: Error) {
     return {
       success: false as const,
-      error: err,
+      error: error.toString(),
     }
   }
 
