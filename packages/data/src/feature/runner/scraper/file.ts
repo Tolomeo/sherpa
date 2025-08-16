@@ -1,11 +1,18 @@
 import { fileTypeFromBuffer } from 'file-type'
 
+export interface PDFMetadata {
+  title: string
+}
+
 export interface FromPDFBufferOptions {
   url: string
   buffer: Buffer
 }
 
-export const fromPDFBuffer = async ({ url, buffer }: FromPDFBufferOptions) => {
+export const getPDFMetdadata = async ({
+  url,
+  buffer,
+}: FromPDFBufferOptions): Promise<PDFMetadata> => {
   const file = await fileTypeFromBuffer(buffer)
 
   if (!file || file.ext !== 'pdf' || file.mime !== 'application/pdf') {

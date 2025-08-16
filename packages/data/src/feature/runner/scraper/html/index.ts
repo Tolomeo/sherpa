@@ -1,24 +1,34 @@
 import type { CheerioAPI } from 'cheerio'
 import { load } from 'cheerio'
-import createMetascraper, { type MetascraperOptions } from 'metascraper'
+import createMetascraper from 'metascraper'
 import createMetascraperTitleRules from './title'
 
-export type HtmlScraperOptions = MetascraperOptions
+const metascraper = createMetascraper([createMetascraperTitleRules()])
 
-const scraper = createMetascraper([createMetascraperTitleRules()])
-
-export interface FromHtmlStringOptions {
-  url: string
-  html: string
+export interface HtmlMetadata {
+  title: {
+    document?: string
+    display?: string
+    og?: string
+    twitter?: string
+    jsonld?: string
+  }
 }
 
-export const fromHtmlString = ({ url, html }: FromHtmlStringOptions) =>
-  scraper({ url, htmlDom: load(html) })
-
-export interface FromHtmlDomOptions {
+interface GetHtmlMetadataOptions {
   url: string
-  dom: CheerioAPI
+  source: CheerioAPI | string
 }
 
-export const fromHtmlDom = ({ url, dom }: FromHtmlDomOptions) =>
-  scraper({ url, htmlDom: dom })
+export const getHtmlMetadata = async ({
+  url,
+  source,
+}: GetHtmlMetadataOptions) => {
+  const htmlDom = typeof source === 'string' ? load(source) : source
+  const metadata = await metascraper({
+    url,
+    htmlDom,
+  })
+
+  return metadata as HtmlMetadata
+}

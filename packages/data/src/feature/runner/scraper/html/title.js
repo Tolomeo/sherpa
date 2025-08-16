@@ -6,12 +6,7 @@ const toTitle = toRule(title)
 
 export default () => {
   const documentTitle = [toTitle(($) => $filter($, $('title')))]
-  const metadataTitle = [
-    toTitle(($) => $('meta[property="og:title"]').attr('content')),
-    toTitle(($) => $('meta[name="twitter:title"]').attr('content')),
-    toTitle(($) => $('meta[property="twitter:title"]').attr('content')),
-    toTitle($jsonld('headline')),
-  ]
+
   const displayTitle = [
     toTitle(($) => $filter($, $('.post-title'))),
     toTitle(($) => $filter($, $('.entry-title'))),
@@ -19,15 +14,23 @@ export default () => {
     toTitle(($) => $filter($, $('h1[class*="title" i]'))),
     toTitle(($) => $filter($, $('h1'))),
   ]
-  const title = []
-    .concat(documentTitle)
-    .concat(metadataTitle)
-    .concat(displayTitle)
+
+  const ogTitle = [
+    toTitle(($) => $('meta[property="og:title"]').attr('content')),
+  ]
+
+  const twitterTitle = [
+    toTitle(($) => $('meta[name="twitter:title"]').attr('content')),
+    toTitle(($) => $('meta[property="twitter:title"]').attr('content')),
+  ]
+
+  const jsonldTitle = [toTitle($jsonld('headline'))]
 
   return {
-    title,
-    documentTitle,
-    metadataTitle,
-    displayTitle,
+    document: documentTitle,
+    display: displayTitle,
+    og: ogTitle,
+    twitter: twitterTitle,
+    jsonld: jsonldTitle,
   }
 }

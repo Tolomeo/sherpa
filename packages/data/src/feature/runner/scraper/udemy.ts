@@ -7,8 +7,12 @@ interface FromUdemyAffiliateApiResponseOptions {
   response: UdemyAffiliateApiResponse
 }
 
-export const fromUdemyaffiliateApiResponse = ({
+export interface UdemyMetadata {
+  title: string
+}
+
+export const getUdemyMetadata = ({
   response,
-}: FromUdemyAffiliateApiResponseOptions) => {
+}: FromUdemyAffiliateApiResponseOptions): UdemyMetadata => {
   return { title: response.title }
 }

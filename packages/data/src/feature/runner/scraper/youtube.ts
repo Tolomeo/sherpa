@@ -9,14 +9,18 @@ interface YoutubeDataApiV3Response {
   }
 }
 
+export interface YoutubeAPIV3Metadata {
+  title: string
+}
+
 interface FromYoutubeDataAPIV3ResponseOptions {
   url: string
   response: YoutubeDataApiV3Response
 }
 
-export const fromYoutubeDataAPIV3Response = ({
+export const getYoutubeDataAPIV3Metadata = ({
   response,
-}: FromYoutubeDataAPIV3ResponseOptions) => {
+}: FromYoutubeDataAPIV3ResponseOptions): YoutubeAPIV3Metadata => {
   return {
     title: response.items[0].snippet.title,
   }

@@ -10,12 +10,17 @@ import {
   UdemyAffiliateApiCrawler,
   RequestQueue,
 } from './crawler'
+import type {
+  HtmlMetadata,
+  PDFMetadata,
+  UdemyMetadata,
+  YoutubeAPIV3Metadata,
+} from './scraper'
 import {
-  fromHtmlDom,
-  fromHtmlString,
-  fromPDFBuffer,
-  fromYoutubeDataAPIV3Response,
-  fromUdemyaffiliateApiResponse,
+  getHtmlMetadata,
+  getPDFMetdadata,
+  getYoutubeDataAPIV3Metadata,
+  getUdemyMetadata,
 } from './scraper'
 
 type Crawler =
@@ -26,6 +31,21 @@ type Crawler =
   | YoutubeDataApiCrawler
   | UdemyAffiliateApiCrawler
 
+type FeatureExtractionData =
+  | {
+      source: 'PDFFile'
+      metadata: PDFMetadata
+    }
+  | {
+      source: 'HTML'
+      metadata: HtmlMetadata
+    }
+  | { source: 'YoutubeDataAPIV3'; metadata: YoutubeAPIV3Metadata }
+  | {
+      source: 'UdemyAffiliateAPI'
+      metadata: UdemyMetadata
+    }
+
 type FeatureExtractionResult =
   | {
       success: false
@@ -33,12 +53,7 @@ type FeatureExtractionResult =
     }
   | {
       success: true
-      result: {
-        title?: string
-        documentTitle?: string
-        metadataTitle?: string
-        displayTitle?: string
-      }
+      data: FeatureExtractionData
     }
 
 class FeatureExtractionRunner {
@@ -55,6 +70,20 @@ class FeatureExtractionRunner {
     return runnerInstance
   }
 
+  private success(data: FeatureExtractionData) {
+    return {
+      success: true as const,
+      data,
+    }
+  }
+
+  private error(err: Error) {
+    return {
+      success: false as const,
+      error: err,
+    }
+  }
+
   async run(
     url: string,
     strategy: HealthcheckStrategy,
@@ -64,69 +93,72 @@ class FeatureExtractionRunner {
         case 'PdfFile': {
           const crawler = await this.getCrawler(PdfFileCrawler)
           const result = await crawler.run(url, {})
+          const metadata = await getPDFMetdadata({ url, buffer: result.file })
 
-          return {
-            success: true,
-            result: await fromPDFBuffer({ url, buffer: result.file }),
-          }
+          return this.success({
+            source: 'PDFFile',
+            metadata,
+          })
         }
         case 'Http': {
           const crawler = await this.getCrawler(HttpCrawler)
-          const result = await crawler.run(url, strategy.config)
+          const { dom } = await crawler.run(url, strategy.config)
+          const metadata = await getHtmlMetadata({ url, source: dom })
 
-          return {
-            success: true,
-            result: await fromHtmlDom({ url, dom: result.dom }),
-          }
+          return this.success({
+            source: 'HTML',
+            metadata,
+          })
         }
         case 'E2E': {
           const crawler = await this.getCrawler(E2ECrawler)
-          const result = await crawler.run(url, strategy.config)
+          const { html } = await crawler.run(url, strategy.config)
+          const metadata = await getHtmlMetadata({ url, source: html })
 
-          return {
-            success: true,
-            result: await fromHtmlString({ url, html: result.html }),
-          }
+          return this.success({
+            source: 'HTML',
+            metadata,
+          })
         }
         case 'YoutubeData': {
           const crawler = await this.getCrawler(YoutubeDataApiCrawler)
           const result = await crawler.run(url, {})
+          const metadata = getYoutubeDataAPIV3Metadata({
+            url,
+            response: result.response,
+          })
 
-          return {
-            success: true,
-            result: fromYoutubeDataAPIV3Response({
-              url,
-              response: result.response,
-            }),
-          }
+          return this.success({
+            source: 'YoutubeDataAPIV3',
+            metadata,
+          })
         }
         case 'Zenscrape': {
           const crawler = await this.getCrawler(ZenscrapeCrawler)
-          const result = await crawler.run(url, strategy.config)
+          const { htmlDom } = await crawler.run(url, strategy.config)
+          const metadata = await getHtmlMetadata({ url, source: htmlDom })
 
-          return {
-            success: true,
-            result: await fromHtmlDom({ url, dom: result.htmlDom }),
-          }
+          return this.success({
+            source: 'HTML',
+            metadata,
+          })
         }
         case 'UdemyAffiliate': {
           const crawler = await this.getCrawler(UdemyAffiliateApiCrawler)
-          const result = await crawler.run(url, {})
+          const { response } = await crawler.run(url, {})
+          const metadata = getUdemyMetadata({
+            url,
+            response,
+          })
 
-          return {
-            success: true,
-            result: fromUdemyaffiliateApiResponse({
-              url,
-              response: result.response,
-            }),
-          }
+          return this.success({
+            source: 'UdemyAffiliateAPI',
+            metadata,
+          })
         }
       }
     } catch (err) {
-      return {
-        success: false,
-        error: err as Error,
-      }
+      return this.error(err as Error)
     }
   }
 
