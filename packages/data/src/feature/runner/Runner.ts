@@ -1,5 +1,9 @@
 import { randomUUID } from 'node:crypto'
 import type { HealthcheckStrategy } from '../../../types/healthcheck'
+import type {
+  FeatureExtractionResult,
+  FeatureExtractionResultData,
+} from '../schema'
 import type { Constructor } from './crawler'
 import {
   PdfFileCrawler,
@@ -10,12 +14,6 @@ import {
   UdemyAffiliateApiCrawler,
   RequestQueue,
 } from './crawler'
-import type {
-  HtmlMetadata,
-  PDFMetadata,
-  UdemyMetadata,
-  YoutubeAPIV3Metadata,
-} from './scraper'
 import {
   getHtmlMetadata,
   getPdfMetadata,
@@ -31,31 +29,6 @@ type Crawler =
   | YoutubeDataApiCrawler
   | UdemyAffiliateApiCrawler
 
-type FeatureExtractionData =
-  | {
-      source: 'PdfFile'
-      metadata: PDFMetadata
-    }
-  | {
-      source: 'Html'
-      metadata: HtmlMetadata
-    }
-  | { source: 'YoutubeDataAPIV3'; metadata: YoutubeAPIV3Metadata }
-  | {
-      source: 'UdemyAffiliateAPI'
-      metadata: UdemyMetadata
-    }
-
-type FeatureExtractionResult =
-  | {
-      success: false
-      error: string
-    }
-  | {
-      success: true
-      data: FeatureExtractionData
-    }
-
 class FeatureExtractionRunner {
   private runners = new Map<Constructor<Crawler>, Crawler>()
 
@@ -70,7 +43,7 @@ class FeatureExtractionRunner {
     return runnerInstance
   }
 
-  private success(data: FeatureExtractionData) {
+  private success(data: FeatureExtractionResultData) {
     return {
       success: true as const,
       data,

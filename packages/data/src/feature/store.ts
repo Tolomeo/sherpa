@@ -8,7 +8,7 @@ import type {
 } from './schema'
 import {
   FeatureExtractionDataSchema,
-  FeatureExtractionResultDataSchema,
+  FeatureExtractionResultSchema,
 } from './schema'
 
 const dbFile = path.join(
@@ -29,7 +29,7 @@ let FeatureExtractionDataStore: Db<typeof FeatureExtractionDataSchema>
 
 const FeatureExtractionResultDataStore = new Map<
   string,
-  Db<typeof FeatureExtractionResultDataSchema>
+  Db<typeof FeatureExtractionResultSchema>
 >()
 
 const getResultInstance = async (resultId: string) => {
@@ -37,7 +37,7 @@ const getResultInstance = async (resultId: string) => {
 
   if (existingResultDataStore) return existingResultDataStore
 
-  const resultDataStore = await Db.build(FeatureExtractionResultDataSchema, {
+  const resultDataStore = await Db.build(FeatureExtractionResultSchema, {
     filename: path.join(resultsDbDir, `${resultId}.jsonl`),
   })
 

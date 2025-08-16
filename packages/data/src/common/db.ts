@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- Most of the typing is copy-pasted from mongodb types */
 import NEDB, { type Document } from '@seald-io/nedb'
-import type { ZodObject } from 'zod'
+import { ZodDiscriminatedUnion, type ZodObject } from 'zod'
 
 type Nullable<T> = T | null
 
@@ -181,7 +181,7 @@ type StrictFilter<TSchema> =
       >
     } & RootFilterOperators<WithId<TSchema>>)
 
-type DocumentSchema = ZodObject<any>
+type DocumentSchema = ZodObject<any> | ZodDiscriminatedUnion<string, any[]>
 
 interface DBOptions<Schema extends DocumentSchema> {
   filename: string
