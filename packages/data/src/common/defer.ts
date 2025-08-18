@@ -1,16 +1,20 @@
-export class Deferred<T = unknown> {
+type OnFulfilled<T> = Parameters<Promise<T>['then']>
+
+type OnRejected<T> = Parameters<Promise<T>['catch']>
+
+type OnFinally<T> = Parameters<Promise<T>['finally']>
+
+export class Deferred<T> {
   private _promise: Promise<T>
   private _resolve!: (value: T | PromiseLike<T>) => void
   private _reject!: (reason?: unknown) => void
   public status: 'pending' | 'resolved' | 'rejected' = 'pending'
-  public promise: Promise<T>
 
   public constructor() {
     this._promise = new Promise<T>((resolve, reject) => {
       this._resolve = resolve
       this._reject = reject
     })
-    this.promise = this._promise
   }
 
   public reject(reason?: unknown): void {
@@ -23,19 +27,16 @@ export class Deferred<T = unknown> {
     this._resolve(value)
   }
 
-  public then(onfulfilled: (value: T) => T | PromiseLike<T>) {
-    this.promise = this.promise.then(onfulfilled)
-    return this
+  public then(...args: OnFulfilled<T>) {
+    return this._promise.then(...args)
   }
 
-  public catch(onrejected: (reason: unknown) => T | PromiseLike<T> | never) {
-    this.promise = this.promise.catch(onrejected)
-    return this
+  public catch(...args: OnRejected<T>) {
+    return this._promise.catch(...args)
   }
 
-  public finally(onfinally: (() => void) | undefined | null) {
-    this.promise = this.promise.finally(onfinally)
-    return this
+  public finally(...args: OnFinally<T>) {
+    return this._promise.finally(...args)
   }
 }
 
