@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import { command } from '../common'
 import feature from './feature'
 import topic from './topic'

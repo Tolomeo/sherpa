@@ -3,7 +3,6 @@ import type { Dictionary, BasicCrawler } from 'crawlee'
 /* import he from 'he'
 import formatHTML from 'html-format' */
 import { Deferred } from '../../../common/defer'
-// import scraper, { type ScrapeOptions } from '../scraper'
 
 export type {
   Constructor,
@@ -29,30 +28,12 @@ export * as cheerio from 'cheerio'
 
 export { fileTypeFromBuffer } from 'file-type'
 
-// const { decode, encode } = he
-
 export interface ScrapeResult {
   title?: string
   documentTitle?: string
   metadataTitle?: string
   displayTitle?: string
 }
-
-/* export type HealthCheckResult =
-  | {
-      success: true
-      url: string
-      error: null
-      data: ScrapeResult
-    }
-  | {
-      success: false
-      url: string
-      error: Error
-      data: null
-    } */
-
-// const scrapeMetadata = scraper.scrape
 
 type Crawler = Pick<
   BasicCrawler,
