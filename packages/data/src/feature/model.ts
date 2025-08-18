@@ -2,6 +2,7 @@ import type {
   FeatureExtractionDocument,
   FeatureExtractionResultDocument,
 } from './store'
+import type { FeatureExtractionResultData } from './schema'
 import Db from './store'
 
 const toDateOnly = (date: Date) =>
@@ -32,6 +33,10 @@ export const getByDate = async (findDate: Date) => {
 
 class FeatureExtractionResult {
   constructor(private document: FeatureExtractionResultDocument) {}
+
+  get url() {
+    return this.document.url
+  }
 }
 
 class FeatureExtraction {
@@ -39,6 +44,14 @@ class FeatureExtraction {
 
   constructor(document: FeatureExtractionDocument) {
     this.document = document
+  }
+
+  async setResult(data: FeatureExtractionResultData) {
+    const { _id: id } = this.document
+
+    return Db.getResultInstance(id).then(async (resultsDb) => {
+      await resultsDb.insertOne(data)
+    })
   }
 
   async getResults() {

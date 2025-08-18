@@ -1,8 +1,8 @@
 import { randomUUID } from 'node:crypto'
 import type { HealthcheckStrategy } from '../../../types/healthcheck'
 import type {
-  FeatureExtractionResult,
   FeatureExtractionResultData,
+  FeatureExtractionResultDetailData,
 } from '../schema'
 import type { Constructor } from './crawler'
 import {
@@ -43,15 +43,17 @@ class FeatureExtractionRunner {
     return runnerInstance
   }
 
-  private success(data: FeatureExtractionResultData) {
+  private success(url: string, detail: FeatureExtractionResultDetailData) {
     return {
+      url,
       success: true as const,
-      data,
+      detail,
     }
   }
 
-  private error(error: Error) {
+  private error(url: string, error: Error) {
     return {
+      url,
       success: false as const,
       error: error.toString(),
     }
@@ -60,7 +62,7 @@ class FeatureExtractionRunner {
   async run(
     url: string,
     strategy: HealthcheckStrategy,
-  ): Promise<FeatureExtractionResult> {
+  ): Promise<FeatureExtractionResultData> {
     try {
       switch (strategy.runner) {
         case 'PdfFile': {
@@ -68,7 +70,7 @@ class FeatureExtractionRunner {
           const { file } = await crawler.run(url, {})
           const metadata = await getPdfMetadata({ url, source: file })
 
-          return this.success({
+          return this.success(url, {
             source: 'PdfFile',
             metadata,
           })
@@ -78,7 +80,7 @@ class FeatureExtractionRunner {
           const { dom } = await crawler.run(url, strategy.config)
           const metadata = await getHtmlMetadata({ url, source: dom })
 
-          return this.success({
+          return this.success(url, {
             source: 'Html',
             metadata,
           })
@@ -88,7 +90,7 @@ class FeatureExtractionRunner {
           const { html } = await crawler.run(url, strategy.config)
           const metadata = await getHtmlMetadata({ url, source: html })
 
-          return this.success({
+          return this.success(url, {
             source: 'Html',
             metadata,
           })
@@ -101,7 +103,7 @@ class FeatureExtractionRunner {
             source: result.response,
           })
 
-          return this.success({
+          return this.success(url, {
             source: 'YoutubeDataAPIV3',
             metadata,
           })
@@ -111,7 +113,7 @@ class FeatureExtractionRunner {
           const { html } = await crawler.run(url, strategy.config)
           const metadata = await getHtmlMetadata({ url, source: html })
 
-          return this.success({
+          return this.success(url, {
             source: 'Html',
             metadata,
           })
@@ -124,14 +126,14 @@ class FeatureExtractionRunner {
             source: response,
           })
 
-          return this.success({
+          return this.success(url, {
             source: 'UdemyAffiliateAPI',
             metadata,
           })
         }
       }
     } catch (err) {
-      return this.error(err as Error)
+      return this.error(url, err as Error)
     }
   }
 

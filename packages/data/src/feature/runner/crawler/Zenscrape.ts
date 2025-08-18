@@ -1,7 +1,6 @@
-import type { CheerioAPI } from 'cheerio'
 import type { ZenscrapeHealthcheckRunConfig } from '../../../../types'
 import { wait } from '../../../common/defer'
-import { FeatureCrawler, BasicCrawler, cheerio } from './common'
+import { FeatureCrawler, BasicCrawler } from './common'
 import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
 
 type ZenscrapeCrawlingContext =
@@ -49,43 +48,36 @@ export default class ZenscrapeCrawler extends FeatureCrawler<
   }
 
   async requestHandler({ request, sendRequest }: ZenscrapeCrawlingContext) {
-    const { ZENSCRAPE_API_KEY: apiKey } = import.meta.env
+    try {
+      const { ZENSCRAPE_API_KEY: apiKey } = import.meta.env
 
-    if (!apiKey) {
-      this.failure(request, new Error(`Zenscrape api key not found`))
-      request.noRetry = true
-      return
-    }
+      if (!apiKey) {
+        request.noRetry = true
+        throw new Error(`Zenscrape api key not found`)
+      }
 
-    // const { titleSelector, render, premium } = request.userData
-    const { render, premium } = request.userData
-    const dataRequestUrl = this.getDataRequestUrl(request.url, render, premium)
-    const { statusCode, body } = (await sendRequest({
-      url: dataRequestUrl,
-      headers: { apiKey },
-    })) as { body: string; statusCode: number }
-
-    if (statusCode === 429) {
-      await wait(5000)
-      throw new Error(`Concurrent requests are not supported`)
-    }
-
-    // const $ = cheerio.load(body)
-    /* const title = $(titleSelector).text().trim()
-
-    if (!title) {
-      this.failure(
-        request,
-        new Error(
-          `Could not retrieve ${titleSelector} text from ${this.formatHTML(
-            body,
-          )}`,
-        ),
+      // TODO: remove titleSelector from resource db
+      // const { titleSelector, render, premium } = request.userData
+      const { render, premium } = request.userData
+      const dataRequestUrl = this.getDataRequestUrl(
+        request.url,
+        render,
+        premium,
       )
-      return
-    } */
+      const { statusCode, body } = (await sendRequest({
+        url: dataRequestUrl,
+        headers: { apiKey },
+      })) as { body: string; statusCode: number }
 
-    this.success(request, { html: body })
+      if (statusCode === 429) {
+        await wait(5000)
+        throw new Error(`Concurrent requests are not supported`)
+      }
+
+      this.success(request, { html: body })
+    } catch (error) {
+      this.failure(request, error as Error)
+    }
   }
 
   failedRequestHandler({ request }: ZenscrapeCrawlingContext, error: Error) {

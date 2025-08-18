@@ -15,6 +15,8 @@ export type {
   PlaywrightCrawlingContext,
 } from 'crawlee'
 
+export type { CheerioAPI } from 'cheerio'
+
 export {
   Configuration,
   BasicCrawler,
@@ -82,6 +84,7 @@ export abstract class FeatureCrawler<
     return formatHTML(htmlString)
   }
 
+	// TODO: move to scraper
   protected filterEntities(text: string) {
     const entities: Record<string, string> = {
       '&#xAD;': '',
@@ -100,7 +103,7 @@ export abstract class FeatureCrawler<
   async run(url: string, userData: I) {
     const result = this.results.get(url)
 
-    if (result) return result.promise
+    if (result) return result
 
     const deferred = new Deferred<O>()
     this.results.set(url, deferred)

@@ -51,57 +51,49 @@ export default class UdemyAffiliateApiCrawler extends FeatureCrawler<
   }
 
   async requestHandler({ request, sendRequest }: BasicCrawlingContext) {
-    const {
-      UDEMY_AFFILIATE_API_CLIENT_ID: clientId,
-      UDEMY_AFFILIATE_API_CLIENT_SECRET: clientSecret,
-    } = import.meta.env
+    try {
+      const {
+        UDEMY_AFFILIATE_API_CLIENT_ID: clientId,
+        UDEMY_AFFILIATE_API_CLIENT_SECRET: clientSecret,
+      } = import.meta.env
 
-    if (!clientId) {
-      this.failure(
-        request,
-        new Error(`Udemy affialiate api client id was not found`),
-      )
-      request.noRetry = true
-      return
-    }
+      if (!clientId) {
+        request.noRetry = true
+        throw new Error(`Udemy affialiate api client id was not found`)
+      }
 
-    if (!clientSecret) {
-      this.failure(
-        request,
-        new Error(`Udemy affiliate api client secret was not found`),
-      )
-      request.noRetry = true
-      return
-    }
+      if (!clientSecret) {
+        request.noRetry = true
+        throw new Error(`Udemy affiliate api client secret was not found`)
+      }
 
-    const dataRequestUrl = this.getDataRequestUrl(request.url)
+      const dataRequestUrl = this.getDataRequestUrl(request.url)
 
-    if (!dataRequestUrl) {
-      this.failure(
-        request,
-        new Error(
+      if (!dataRequestUrl) {
+        request.noRetry = true
+        throw new Error(
           `The resource url ${request.url} is not recognizable as a valid Udemy course url`,
-        ),
-      )
-      request.noRetry = true
-      return
+        )
+      }
+
+      const Authentication = `Basic ${Buffer.from(
+        `${clientId}:${clientSecret}`,
+      ).toString('base64')}`
+
+      const { body } = (await sendRequest({
+        url: dataRequestUrl,
+        responseType: 'json',
+        headers: {
+          Authentication,
+        },
+      })) as { body: UdemyAffiliateApiResponse }
+
+      this.success(request, {
+        response: body,
+      })
+    } catch (error) {
+      this.failure(request, error as Error)
     }
-
-    const Authentication = `Basic ${Buffer.from(
-      `${clientId}:${clientSecret}`,
-    ).toString('base64')}`
-
-    const { body } = (await sendRequest({
-      url: dataRequestUrl,
-      responseType: 'json',
-      headers: {
-        Authentication,
-      },
-    })) as { body: UdemyAffiliateApiResponse }
-
-    this.success(request, {
-      response: body,
-    })
   }
 
   failedRequestHandler({ request }: BasicCrawlingContext, error: Error) {

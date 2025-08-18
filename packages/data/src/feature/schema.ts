@@ -34,7 +34,7 @@ export type UdemyAffiliateAPIMetadata = z.infer<
   typeof UdemyAffiliateAPIMetadataSchema
 >
 
-export const FeatureExtractionResultDataSchema = z.discriminatedUnion(
+export const FeatureExtractionResultDetailDataSchema = z.discriminatedUnion(
   'source',
   [
     z.object({
@@ -56,27 +56,32 @@ export const FeatureExtractionResultDataSchema = z.discriminatedUnion(
   ],
 )
 
+export type FeatureExtractionResultDetailData = z.infer<
+  typeof FeatureExtractionResultDetailDataSchema
+>
+
+export const FeatureExtractionResultDataSchema = z.discriminatedUnion(
+  'success',
+  [
+    z.object({
+      url: z.string(),
+      success: z.literal(true),
+      detail: FeatureExtractionResultDetailDataSchema,
+    }),
+    z.object({
+      url: z.string(),
+      success: z.literal(false),
+      error: z.string(),
+    }),
+  ],
+)
+
 export type FeatureExtractionResultData = z.infer<
   typeof FeatureExtractionResultDataSchema
 >
 
-export const FeatureExtractionResultSchema = z.discriminatedUnion('success', [
-  z.object({
-    success: z.literal(true),
-    data: FeatureExtractionResultDataSchema,
-  }),
-  z.object({
-    success: z.literal(false),
-    error: z.string(),
-  }),
-])
-
-export type FeatureExtractionResult = z.infer<
-  typeof FeatureExtractionResultSchema
->
-
-export const FeatureExtractionSchema = z.object({
+export const FeatureExtractionDataSchema = z.object({
   date: z.date(),
 })
 
-export type FeatureExtraction = z.infer<typeof FeatureExtractionSchema>
+export type FeatureExtractionData = z.infer<typeof FeatureExtractionDataSchema>

@@ -30,6 +30,7 @@ export default class E2ECrawler extends FeatureCrawler<
   }
 
   async requestHandler({ page, request }: E2ECrawlingContext) {
+    // TODO: remove titleSelector from db data
     /* const {
       userData: { titleSelector, waitForLoadState },
     } = request */
@@ -42,25 +43,6 @@ export default class E2ECrawler extends FeatureCrawler<
     const html = await page.content()
 
     this.success(request, { html })
-
-    /* const title = await page.locator(titleSelector).first().textContent()
-
-    if (!title) {
-      const pageContent = await page.content()
-
-      this.failure(
-        request,
-        new Error(
-          `Could not retrieve ${titleSelector} text from ${this.formatHTML(
-            pageContent,
-          )}`,
-        ),
-      )
-
-      return
-    }
-
-    this.success(request, { title: this.filterEntities(title) }) */
   }
 
   failedRequestHandler({ request }: E2ECrawlingContext, error: Error) {
