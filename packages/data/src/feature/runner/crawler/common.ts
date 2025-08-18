@@ -1,7 +1,6 @@
 import { Request } from 'crawlee'
 import type { Dictionary, BasicCrawler } from 'crawlee'
-/* import he from 'he'
-import formatHTML from 'html-format' */
+// import formatHTML from 'html-format'
 import { Deferred } from '../../../common/defer'
 
 export type {
@@ -63,16 +62,6 @@ export abstract class FeatureCrawler<
 
   /* protected formatHTML(htmlString: string) {
     return formatHTML(htmlString)
-  }
-
-	// TODO: move to scraper
-  protected filterEntities(text: string) {
-    const entities: Record<string, string> = {
-      '&#xAD;': '',
-    }
-    const eEntities = new RegExp(Object.keys(entities).join('|'), 'g')
-
-    return decode(encode(text).replace(eEntities, (entity) => entities[entity]))
   } */
 
   async teardown() {
