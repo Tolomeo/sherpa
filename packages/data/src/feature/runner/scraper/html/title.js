@@ -3,12 +3,12 @@
 import {
   $jsonld,
   $filter,
-  title as formatTitle,
+  title,
   toRule as createRule,
 } from '@metascraper/helpers'
 import he from 'he'
 
-const removeEntities = (str) => {
+const filterEntities = (str) => {
   const entities = {
     '&#xAD;': '',
   }
@@ -19,38 +19,35 @@ const removeEntities = (str) => {
   )
 }
 
-const condenseWhitespace = (str) => str.trim().replace(/\s{2,}/gu, ' ')
+const mapTitle = createRule((value, ...args) => {
+  const titleText = title(value, ...args)
 
-const getTitleElementText = ($el) =>
-  removeEntities(condenseWhitespace($el.text()))
+  if (!titleText) return
 
-const createTitleRule = createRule(formatTitle)
+  return filterEntities(titleText)
+})
 
 export default () => {
-  const documentTitle = [createTitleRule(($) => $filter($, $('title')))]
+  const documentTitle = [mapTitle(($) => $filter($, $('title')))]
 
   const displayTitle = [
-    createTitleRule(($) => $filter($, $('.post-title'), getTitleElementText)),
-    createTitleRule(($) => $filter($, $('.entry-title'), getTitleElementText)),
-    createTitleRule(($) =>
-      $filter($, $('h1[class*="title" i] a'), getTitleElementText),
-    ),
-    createTitleRule(($) =>
-      $filter($, $('h1[class*="title" i]'), getTitleElementText),
-    ),
-    createTitleRule(($) => $filter($, $('h1'), getTitleElementText)),
+    mapTitle(($) => $filter($, $('.post-title'))),
+    mapTitle(($) => $filter($, $('.entry-title'))),
+    mapTitle(($) => $filter($, $('h1[class*="title" i] a'))),
+    mapTitle(($) => $filter($, $('h1[class*="title" i]'))),
+    mapTitle(($) => $filter($, $('h1'))),
   ]
 
   const ogTitle = [
-    createTitleRule(($) => $('meta[property="og:title"]').attr('content')),
+    mapTitle(($) => $('meta[property="og:title"]').attr('content')),
   ]
 
   const twitterTitle = [
-    createTitleRule(($) => $('meta[name="twitter:title"]').attr('content')),
-    createTitleRule(($) => $('meta[property="twitter:title"]').attr('content')),
+    mapTitle(($) => $('meta[name="twitter:title"]').attr('content')),
+    mapTitle(($) => $('meta[property="twitter:title"]').attr('content')),
   ]
 
-  const jsonldTitle = [createTitleRule($jsonld('headline'))]
+  const jsonldTitle = [mapTitle($jsonld('headline'))]
 
   return {
     document: documentTitle,

@@ -273,8 +273,7 @@ class Db<Schema extends DocumentSchema> {
   }
 
   async findOne(filter: StrictFilter<Schema['_output']>) {
-    const doc: Nullable<Document<Schema['_output']>> =
-      await this.db.findOneAsync(filter)
+    const doc = await this.db.findOneAsync(filter)
 
     if (!doc) return null
 
