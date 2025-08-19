@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- Most of the typing is copy-pasted from mongodb types */
 import NEDB, { type Document } from '@seald-io/nedb'
-import { ZodDiscriminatedUnion, type ZodObject } from 'zod'
+import type { ZodDiscriminatedUnion, ZodObject } from 'zod'
 
 type Nullable<T> = T | null
 
@@ -276,7 +276,6 @@ class Db<Schema extends DocumentSchema> {
     const doc: Nullable<Document<Schema['_output']>> =
       await this.db.findOneAsync(filter)
 
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- NEDB could return null when no doc is found
     if (!doc) return null
 
     return doc
@@ -294,6 +293,17 @@ class Db<Schema extends DocumentSchema> {
     await this.db.compactDatafileAsync()
 
     return doc
+  }
+
+  async insertAll(inserts: Schema['_output'][]) {
+    for (const insert of inserts) {
+      this.config.schema.parse(insert)
+    }
+
+    const docs = await this.db.insertAsync(inserts)
+    await this.db.compactDatafileAsync()
+
+    return docs
   }
 
   async updateOne(

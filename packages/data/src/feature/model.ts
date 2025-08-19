@@ -54,6 +54,14 @@ class FeatureExtraction {
     })
   }
 
+  async setResults(data: Array<FeatureExtractionResultData>) {
+    const { _id: id } = this.document
+
+    return Db.getResultInstance(id).then(async (resultsDb) => {
+      await resultsDb.insertAll(data)
+    })
+  }
+
   async getResults() {
     const { _id: id } = this.document
 

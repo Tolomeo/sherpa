@@ -70,18 +70,21 @@ export abstract class FeatureCrawler<
     this.results.clear()
   }
 
-  async run(url: string, userData: I) {
+  run(url: string, userData: I) {
     const result = this.results.get(url)
 
-    if (result) return result
+    if (result) return result.promise
 
     const deferred = new Deferred<O>()
-    this.results.set(url, deferred)
-
     const request = new Request<I>({ url, userData })
-    await this.crawler.addRequests([request]).catch(console.error)
-    !this.crawler.running && this.crawler.run().catch(console.error)
 
-    return deferred
+    if (this.crawler.running) {
+      this.crawler.addRequests([request]).catch((err) => deferred.reject(err))
+    } else {
+      this.crawler.run([request]).catch((err) => deferred.reject(err))
+    }
+
+    this.results.set(url, deferred)
+    return deferred.promise
   }
 }
