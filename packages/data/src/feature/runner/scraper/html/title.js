@@ -1,11 +1,6 @@
 // This file is js instead of ts because metascraper is not coded in TS, it just offers .d.ts definition files
 // This is a modified version of metascraper-title which prioritises <title/> over other rules
-import {
-  $jsonld,
-  $filter,
-  title,
-  toRule as createRule,
-} from '@metascraper/helpers'
+import helpers from '@metascraper/helpers'
 import he from 'he'
 
 const filterEntities = (str) => {
@@ -19,8 +14,8 @@ const filterEntities = (str) => {
   )
 }
 
-const mapTitle = createRule((value, ...args) => {
-  const titleText = title(value, ...args)
+const mapTitle = helpers.toRule((value, ...args) => {
+  const titleText = helpers.title(value, ...args)
 
   if (!titleText) return
 
@@ -28,14 +23,14 @@ const mapTitle = createRule((value, ...args) => {
 })
 
 export default () => {
-  const documentTitle = [mapTitle(($) => $filter($, $('title')))]
+  const documentTitle = [mapTitle(($) => helpers.$filter($, $('title')))]
 
   const displayTitle = [
-    mapTitle(($) => $filter($, $('.post-title'))),
-    mapTitle(($) => $filter($, $('.entry-title'))),
-    mapTitle(($) => $filter($, $('h1[class*="title" i] a'))),
-    mapTitle(($) => $filter($, $('h1[class*="title" i]'))),
-    mapTitle(($) => $filter($, $('h1'))),
+    mapTitle(($) => helpers.$filter($, $('.post-title'))),
+    mapTitle(($) => helpers.$filter($, $('.entry-title'))),
+    mapTitle(($) => helpers.$filter($, $('h1[class*="title" i] a'))),
+    mapTitle(($) => helpers.$filter($, $('h1[class*="title" i]'))),
+    mapTitle(($) => helpers.$filter($, $('h1'))),
   ]
 
   const ogTitle = [
@@ -47,7 +42,7 @@ export default () => {
     mapTitle(($) => $('meta[property="twitter:title"]').attr('content')),
   ]
 
-  const jsonldTitle = [mapTitle($jsonld('headline'))]
+  const jsonldTitle = [mapTitle(helpers.$jsonld('headline'))]
 
   return {
     documentTitle,
