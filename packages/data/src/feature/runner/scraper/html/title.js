@@ -50,10 +50,10 @@ export default () => {
   const jsonldTitle = [mapTitle($jsonld('headline'))]
 
   return {
-    document: documentTitle,
-    display: displayTitle,
-    og: ogTitle,
-    twitter: twitterTitle,
-    jsonld: jsonldTitle,
+    documentTitle,
+    displayTitle,
+    ogTitle,
+    twitterTitle,
+    jsonldTitle,
   }
 }

@@ -5,13 +5,17 @@ import createMetascraperTitleRules from './title'
 
 const metascraper = createMetascraper([createMetascraperTitleRules()])
 
+type Nullable<T> = T | null
+
+const nullable = <T>(value: T) => value || null
+
 export interface HtmlMetadata {
   title: {
-    document: string | null
-    display: string | null
-    og: string | null
-    twitter: string | null
-    jsonld: string | null
+    document: Nullable<string>
+    display: Nullable<string>
+    og: Nullable<string>
+    twitter: Nullable<string>
+    jsonld: Nullable<string>
   }
 }
 
@@ -25,19 +29,20 @@ export const getHtmlMetadata = async ({
   source,
 }: GetHtmlMetadataOptions) => {
   const htmlDom = typeof source === 'string' ? load(source) : source
-  const { document, display, og, twitter, jsonld } = await metascraper({
-    url,
-    htmlDom,
-  })
+  const { documentTitle, displayTitle, ogTitle, twitterTitle, jsonldTitle } =
+    await metascraper({
+      url,
+      htmlDom,
+    })
 
   // TODO: improve HtmlMetadata inferred
   return {
     title: {
-      document,
-      display,
-      og,
-      twitter,
-      jsonld,
+      document: nullable(documentTitle),
+      display: nullable(displayTitle),
+      og: nullable(ogTitle),
+      twitter: nullable(twitterTitle),
+      jsonld: nullable(jsonldTitle),
     },
   } as HtmlMetadata
 }
