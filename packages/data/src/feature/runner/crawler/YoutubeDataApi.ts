@@ -1,22 +1,10 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion -- several indirect accesses force to null-assert */
+import type { YoutubeResourceResponse } from '../common/youtubeApi'
 import { FeatureCrawler, BasicCrawler } from './common'
 import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
 
-// NB: this type contains only what we are checking for in the response, when we pass 'snippet' as value for 'part' query parameter
-// the actual response is richer
-interface YoutubeDataApiV3Response {
-  items: {
-    snippet: {
-      title: string
-    }
-  }[]
-  pageInfo: {
-    totalResults: number
-  }
-}
-
 export interface YoutubeDataApiV3CrawlerResult {
-  response: YoutubeDataApiV3Response
+  response: YoutubeResourceResponse
 }
 
 export default class YoutubeDataApiV3Crawler extends FeatureCrawler<
@@ -26,34 +14,34 @@ export default class YoutubeDataApiV3Crawler extends FeatureCrawler<
   static getVideoId = (url: string) => {
     const videoUrl = /^https?:\/\/www\.youtube\.com\/watch\?v=(\S+)$/
 
-    if (videoUrl.test(url)) {
-      const [, videoId] = url.match(videoUrl)!
-      return videoId
-    }
+    const match = videoUrl.exec(url)
 
-    return null
+    if (!match) return null
+
+    const [, videoId] = match
+    return videoId
   }
 
   static getPlaylistId = (url: string) => {
     const playlistUrl = /^https?:\/\/www\.youtube\.com\/playlist\?list=(\S+)$/
 
-    if (playlistUrl.test(url)) {
-      const [, playlistId] = url.match(playlistUrl)!
-      return playlistId
-    }
+    const match = playlistUrl.exec(url)
 
-    return null
+    if (!match) return null
+
+    const [, playlistId] = match
+    return playlistId
   }
 
   static getChannelId = (url: string) => {
     const channelUrl = /^https?:\/\/www.youtube.com\/(?:@|c\/){1}(\S+)$/
 
-    if (channelUrl.test(url)) {
-      const [, channelHandle] = url.match(channelUrl)!
-      return channelHandle
-    }
+    const match = channelUrl.exec(url)
 
-    return null
+    if (!match) return null
+
+    const [, channelHandle] = match
+    return channelHandle
   }
 
   constructor(crawlerOptions: BasicCrawlerOptions) {
@@ -111,7 +99,7 @@ export default class YoutubeDataApiV3Crawler extends FeatureCrawler<
       const { body } = (await sendRequest({
         url: dataRequestUrl,
         responseType: 'json',
-      })) as { body: YoutubeDataApiV3Response }
+      })) as { body: YoutubeResourceResponse }
 
       if (body.pageInfo.totalResults < 1) {
         request.noRetry = true
