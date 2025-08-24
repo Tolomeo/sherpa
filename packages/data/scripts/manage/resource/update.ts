@@ -61,6 +61,33 @@ const updateResourceHealthcheck = async (resource: Resource) => {
   })
 }
 
+const updateResourceUrl = async (resource: Resource) => {
+  await command.loop(async (control) => {
+    log.lead(`Update resource ${resource.url} url`)
+
+    const enteredUrl = await command.input(`Enter a new url for the resource`)
+
+    if (!enteredUrl) {
+      return control.end
+    }
+
+    log.text(format.diff(resource.url, enteredUrl))
+
+    if (!(await command.confirm(`Persist the new url?`))) {
+      return control.repeat
+    }
+
+    try {
+      await resource.change({ url: enteredUrl })
+      return control.end
+    } catch (error) {
+      log.error(error as string)
+    }
+
+    return control.repeat
+  })
+}
+
 const updateResourceData = async (resource: Resource) => {
   let resourceData = util.clone(resource.data.data)
 
@@ -123,6 +150,7 @@ const update = async () => {
 
     const action = await command.choice('Choose action', [
       'open in browser',
+      'update url',
       'update data',
       'update healthcheck',
     ])
@@ -130,6 +158,9 @@ const update = async () => {
     switch (action) {
       case 'open in browser':
         await util.open(resource.url)
+        return control.repeat
+      case 'update url':
+        await updateResourceUrl(resource)
         return control.repeat
       case 'update data':
         await updateResourceData(resource)
