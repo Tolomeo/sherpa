@@ -1,4 +1,5 @@
 import type { YoutubeResourceResponse } from '../common/youtubeApi'
+import { getChannelHandle } from '../common/youtubeApi'
 
 export interface YoutubeAPIV3Metadata {
   title: string
@@ -26,6 +27,11 @@ export const getYoutubeDataAPIV3Metadata = ({
       return {
         title: item.snippet.title,
         author: item.snippet.channelTitle,
+      }
+    case 'youtube#channel':
+      return {
+        title: item.snippet.title,
+        author: `youtube.com/${getChannelHandle(url)}`,
       }
     default:
       // @ts-expect-error -- this is to ensure we throw an error for any changes in the apis
