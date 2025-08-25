@@ -1,5 +1,5 @@
-import type { YoutubeResourceResponse } from '../common/youtubeApi'
-import { getChannelHandle } from '../common/youtubeApi'
+import type { YoutubeResourceResponse } from '../common/youtube'
+import { getChannelHandle } from '../common/youtube'
 
 export interface YoutubeAPIV3Metadata {
   title: string

@@ -1,9 +1,5 @@
-import type { YoutubeResourceResponse } from '../common/youtubeApi'
-import {
-  getVideoId,
-  getPlaylistId,
-  getChannelHandle,
-} from '../common/youtubeApi'
+import type { YoutubeResourceResponse } from '../common/youtube'
+import { getVideoId, getPlaylistId, getChannelHandle } from '../common/youtube'
 import { FeatureCrawler, BasicCrawler } from './common'
 import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
 
