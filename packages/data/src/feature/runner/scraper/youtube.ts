@@ -1,10 +1,6 @@
+import type { YoutubeDataAPIV3Metadata } from '../../schema'
 import type { YoutubeResourceResponse } from '../common/youtube'
 import { getChannelHandle } from '../common/youtube'
-
-export interface YoutubeAPIV3Metadata {
-  title: string
-  author: string
-}
 
 interface GetYoutubeDataAPIV3MetadataOptions {
   url: string
@@ -14,7 +10,7 @@ interface GetYoutubeDataAPIV3MetadataOptions {
 export const getYoutubeDataAPIV3Metadata = ({
   url,
   source,
-}: GetYoutubeDataAPIV3MetadataOptions): YoutubeAPIV3Metadata => {
+}: GetYoutubeDataAPIV3MetadataOptions): YoutubeDataAPIV3Metadata => {
   const [item] = source.items
 
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the returned items list could be empty

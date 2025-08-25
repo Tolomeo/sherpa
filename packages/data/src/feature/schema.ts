@@ -14,12 +14,20 @@ export const HtmlMetadataSchema = z.object({
     twitter: z.string().nullable(),
     jsonld: z.string().nullable(),
   }),
+  author: z.object({
+    document: z.string().nullable(),
+    openGraph: z.string().nullable(),
+    microdata: z.string().nullable(),
+    jsonld: z.string().nullable(),
+    display: z.string().nullable(),
+  }),
 })
 
 export type HtmlMetadata = z.infer<typeof HtmlMetadataSchema>
 
 export const YoutubeDataAPIV3MetadataSchema = z.object({
   title: z.string(),
+  author: z.string(),
 })
 
 export type YoutubeDataAPIV3Metadata = z.infer<
@@ -28,6 +36,7 @@ export type YoutubeDataAPIV3Metadata = z.infer<
 
 export const UdemyAffiliateAPIMetadataSchema = z.object({
   title: z.string(),
+  author: z.array(z.string()),
 })
 
 export type UdemyAffiliateAPIMetadata = z.infer<

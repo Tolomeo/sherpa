@@ -1,33 +1,16 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion -- several indirect accesses force to null-assert */
+import type { UdemyCourseResponse } from '../common/udemy'
+import { getCourseSlug } from '../common/udemy'
 import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
 import { FeatureCrawler, BasicCrawler } from './common'
 
-// NB: this type contains only what we are checking for in the response
-// the actual response is richer, see https://www.udemy.com/developers/affiliate/models/course/
-// the available fields are defined by the 'fields' query parameter of the api request url
-interface UdemyAffiliateApiResponse {
-  title: string
-}
-
 export interface UdemyAffiliateApiCrawlerResult {
-  response: UdemyAffiliateApiResponse
+  response: UdemyCourseResponse
 }
 
 export default class UdemyAffiliateApiCrawler extends FeatureCrawler<
   BasicCrawler,
   UdemyAffiliateApiCrawlerResult
 > {
-  static getCourseSlug = (url: string) => {
-    const courseUrl = /^https?:\/\/www\.udemy\.com\/course\/(\S+)$/
-
-    if (courseUrl.test(url)) {
-      const [, courseSlug] = url.match(courseUrl)!
-      return courseSlug
-    }
-
-    return null
-  }
-
   constructor(crawlerOptions: BasicCrawlerOptions) {
     super(
       new BasicCrawler({
@@ -41,21 +24,18 @@ export default class UdemyAffiliateApiCrawler extends FeatureCrawler<
 
   getDataRequestUrl(url: string) {
     const apiBaseUrl = 'https://www.udemy.com/api-2.0/courses'
-    const { getCourseSlug } = UdemyAffiliateApiCrawler
 
     const courseSlug = getCourseSlug(url)
 
-    if (courseSlug) return `${apiBaseUrl}/${courseSlug}?fields[course]=title`
+    if (!courseSlug) return null
 
-    return null
+    return `${apiBaseUrl}/${courseSlug}?fields[course]=title,visible_instructors,is_paid`
   }
 
   async requestHandler({ request, sendRequest }: BasicCrawlingContext) {
     try {
-      const {
-        UDEMY_AFFILIATE_API_CLIENT_ID: clientId,
-        UDEMY_AFFILIATE_API_CLIENT_SECRET: clientSecret,
-      } = import.meta.env
+      const clientId = process.env.UDEMY_AFFILIATE_API_CLIENT_ID
+      const clientSecret = process.env.UDEMY_AFFILIATE_API_CLIENT_SECRET
 
       if (!clientId) {
         request.noRetry = true
@@ -86,7 +66,9 @@ export default class UdemyAffiliateApiCrawler extends FeatureCrawler<
         headers: {
           Authentication,
         },
-      })) as { body: UdemyAffiliateApiResponse }
+      })) as { body: UdemyCourseResponse }
+
+      console.log(body)
 
       this.success(request, {
         response: body,
