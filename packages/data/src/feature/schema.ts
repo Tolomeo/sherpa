@@ -1,10 +1,11 @@
 import { z } from 'zod'
 
-export const PdfMetadataSchema = z.object({
+export const PDFMetadataSchema = z.object({
   title: z.string(),
+  author: z.string().nullable(),
 })
 
-export type PdfMetadata = z.infer<typeof PdfMetadataSchema>
+export type PDFMetadata = z.infer<typeof PDFMetadataSchema>
 
 export const HtmlMetadataSchema = z.object({
   title: z.object({
@@ -48,7 +49,7 @@ export const FeatureExtractionResultDetailDataSchema = z.discriminatedUnion(
   [
     z.object({
       source: z.literal('PdfFile'),
-      metadata: PdfMetadataSchema,
+      metadata: PDFMetadataSchema,
     }),
     z.object({
       source: z.literal('Html'),

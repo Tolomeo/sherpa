@@ -1,8 +1,5 @@
-import { fileTypeFromBuffer } from 'file-type'
-
-export interface PDFMetadata {
-  title: string
-}
+import { getPdfDocumentMetadata } from '../common/pdf'
+import type { PDFMetadata } from '../../schema'
 
 export interface GetPdfMetadataOptions {
   url: string
@@ -13,15 +10,11 @@ export const getPdfMetadata = async ({
   url,
   source,
 }: GetPdfMetadataOptions): Promise<PDFMetadata> => {
-  const file = await fileTypeFromBuffer(source)
+  const { info, metadata } = await getPdfDocumentMetadata(source)
 
-  if (!file || file.ext !== 'pdf' || file.mime !== 'application/pdf') {
-    throw new Error(
-      `The received buffer is not a pdf. The buffer is instead a ${JSON.stringify(
-        file,
-      )} filetype`,
-    )
-  }
+  const title = info.Title || metadata?.get('dc:title') || url.split('/').pop()!
+  const author = info.Author || metadata?.get('dc:creator') || null
+  // const date = info.CreationDate || metadata?.get('xmp:CreateDate') || null
 
-  return { title: url.split('/').pop()! }
+  return { title, author }
 }
