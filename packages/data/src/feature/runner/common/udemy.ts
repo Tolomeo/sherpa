@@ -9,6 +9,7 @@ export interface UdemyInstructor {
   initials: string
   url: string
 }
+
 export interface UdemyCourse {
   _class: 'course'
   id: number

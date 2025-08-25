@@ -68,8 +68,6 @@ export default class UdemyAffiliateApiCrawler extends FeatureCrawler<
         },
       })) as { body: UdemyCourseResponse }
 
-      console.log(body)
-
       this.success(request, {
         response: body,
       })
