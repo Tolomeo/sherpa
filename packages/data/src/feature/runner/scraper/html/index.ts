@@ -3,10 +3,12 @@ import { load } from 'cheerio'
 import createMetascraper from 'metascraper'
 import createMetascraperTitleRules from './title'
 import createMetascraperAuthorRules from './author'
+import createPublisherAuthorRules from './publisher'
 
 const metascraper = createMetascraper([
   createMetascraperTitleRules(),
   createMetascraperAuthorRules(),
+  createPublisherAuthorRules(),
 ])
 
 type Nullable<T> = T | null
@@ -17,7 +19,7 @@ export interface HtmlMetadata {
   title: {
     document: Nullable<string>
     display: Nullable<string>
-    og: Nullable<string>
+    openGraph: Nullable<string>
     twitter: Nullable<string>
     jsonld: Nullable<string>
   }
@@ -27,6 +29,14 @@ export interface HtmlMetadata {
     microdata: Nullable<string>
     jsonld: Nullable<string>
     display: Nullable<string>
+  }
+  publisher: {
+    document: Nullable<string>
+    jsonld: Nullable<string>
+    openGraph: Nullable<string>
+    twitter: Nullable<string>
+    display: Nullable<string>
+    domain: Nullable<string>
   }
 }
 
@@ -44,7 +54,7 @@ export const getHtmlMetadata = async ({
     // title
     documentTitle,
     displayTitle,
-    ogTitle,
+    openGraphTitle,
     twitterTitle,
     jsonldTitle,
     // author
@@ -53,17 +63,24 @@ export const getHtmlMetadata = async ({
     microdataAuthor,
     jsonldAuthor,
     displayAuthor,
+    // publisher
+    jsonldPublisher,
+    documentPublisher,
+    openGraphPublisher,
+    twitterPublisher,
+    displayPublisher,
+    domainPublisher,
   } = await metascraper({
     url,
     htmlDom,
   })
 
   // TODO: improve HtmlMetadata inferred
-  return {
+  const htmlMetadata: HtmlMetadata = {
     title: {
       document: nullable(documentTitle),
       display: nullable(displayTitle),
-      og: nullable(ogTitle),
+      openGraph: nullable(openGraphTitle),
       twitter: nullable(twitterTitle),
       jsonld: nullable(jsonldTitle),
     },
@@ -74,5 +91,15 @@ export const getHtmlMetadata = async ({
       microdata: nullable(microdataAuthor),
       jsonld: nullable(jsonldAuthor),
     },
-  } as HtmlMetadata
+    publisher: {
+      jsonld: nullable(jsonldPublisher),
+      document: nullable(documentPublisher),
+      openGraph: nullable(openGraphPublisher),
+      twitter: nullable(twitterPublisher),
+      display: nullable(displayPublisher),
+      domain: nullable(domainPublisher),
+    },
+  }
+
+  return htmlMetadata
 }

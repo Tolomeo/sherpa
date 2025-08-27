@@ -33,7 +33,7 @@ export default () => {
     mapTitle(($) => helpers.$filter($, $('h1'))),
   ]
 
-  const ogTitle = [
+  const openGraphTitle = [
     mapTitle(($) => $('meta[property="og:title"]').attr('content')),
   ]
 
@@ -47,7 +47,7 @@ export default () => {
   return {
     documentTitle,
     displayTitle,
-    ogTitle,
+    openGraphTitle,
     twitterTitle,
     jsonldTitle,
   }
