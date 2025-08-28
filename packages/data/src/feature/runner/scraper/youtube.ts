@@ -23,11 +23,13 @@ export const getYoutubeDataAPIV3Metadata = ({
       return {
         title: item.snippet.title,
         author: item.snippet.channelTitle,
+        publisher: 'youtube.com',
       }
     case 'youtube#channel':
       return {
         title: item.snippet.title,
-        author: `youtube.com/${getChannelHandle(url)}`,
+        author: getChannelHandle(url)!,
+        publisher: 'youtube.com',
       }
     default:
       // @ts-expect-error -- this is to ensure we throw an error for any changes in the apis

@@ -4,6 +4,7 @@ export const PDFMetadataSchema = z
   .object({
     title: z.string(),
     author: z.string().nullable(),
+    publisher: z.string().nullable(),
   })
   .strict()
 
@@ -48,6 +49,7 @@ export const YoutubeDataAPIV3MetadataSchema = z
   .object({
     title: z.string(),
     author: z.string(),
+    publisher: z.string(),
   })
   .strict()
 
@@ -59,6 +61,7 @@ export const UdemyAffiliateAPIMetadataSchema = z
   .object({
     title: z.string(),
     author: z.array(z.string()),
+    publisher: z.string(),
   })
   .strict()
 

@@ -12,5 +12,6 @@ export const getUdemyMetadata = ({
   return {
     title: source.title,
     author: source.visible_instructors.map((instructor) => instructor.title),
+    publisher: 'udemy.com',
   }
 }

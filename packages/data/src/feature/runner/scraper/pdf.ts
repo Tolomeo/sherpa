@@ -14,7 +14,13 @@ export const getPdfMetadata = async ({
 
   const title = info.Title || metadata?.get('dc:title') || url.split('/').pop()!
   const author = info.Author || metadata?.get('dc:creator') || null
+  const publisher =
+    metadata?.get('dc:publisher') ||
+    metadata?.get('prism:publisher') ||
+    metadata?.get('prism:publicationName') ||
+    metadata?.get('dc:contributor') ||
+    null
   // const date = info.CreationDate || metadata?.get('xmp:CreateDate') || null
 
-  return { title, author }
+  return { title, author, publisher }
 }
