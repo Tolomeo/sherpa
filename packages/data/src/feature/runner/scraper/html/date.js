@@ -2,7 +2,7 @@ import helpers from '@metascraper/helpers'
 
 const toDate = helpers.toRule(helpers.date)
 
-const dateRules = () => {
+export default () => {
   const documentDate = [toDate(($) => $('meta[name="date" i]').attr('content'))]
 
   const displayDate = [
@@ -13,13 +13,6 @@ const dateRules = () => {
     toDate(($) => helpers.$filter($, $('[class*="time" i]'))),
   ]
 
-  return {
-    documentDate,
-    displayDate,
-  }
-}
-
-const datePublishedRules = () => {
   const jsonldDatePublished = [
     toDate(helpers.$jsonld('datePublished')),
     toDate(helpers.$jsonld('dateCreated')),
@@ -40,15 +33,6 @@ const datePublishedRules = () => {
     toDate(($) => helpers.$filter($, $('[class*="publish" i]'))),
   ]
 
-  return {
-    jsonldDatePublished,
-    openGraphDatePublished,
-    microdataDatePublished,
-    displayDatePublished,
-  }
-}
-
-const dateModifiedRules = () => {
   const jsonldDateModified = [toDate(helpers.$jsonld('dateModified'))]
 
   const openGraphDateModified = [
@@ -59,18 +43,18 @@ const dateModifiedRules = () => {
     toDate(($) => $('[itemprop*="datemodified" i]').attr('content')),
   ]
 
-  return {
+  const rules = {
+    documentDate,
+    displayDate,
+
+    jsonldDatePublished,
+    openGraphDatePublished,
+    microdataDatePublished,
+    displayDatePublished,
+
     jsonldDateModified,
     openGraphDateModified,
     microdataDateModified,
-  }
-}
-
-module.exports = () => {
-  const rules = {
-    ...dateRules(),
-    ...datePublishedRules(),
-    ...dateModifiedRules(),
   }
 
   return rules

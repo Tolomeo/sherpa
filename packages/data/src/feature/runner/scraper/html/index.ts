@@ -5,11 +5,13 @@ import { getDom } from '../../common/html'
 import createMetascraperTitleRules from './title'
 import createMetascraperAuthorRules from './author'
 import createPublisherAuthorRules from './publisher'
+import createDateRules from './date'
 
 const metascraper = createMetascraper([
   createMetascraperTitleRules(),
   createMetascraperAuthorRules(),
   createPublisherAuthorRules(),
+  createDateRules(),
 ])
 
 const nullable = <T>(value: T) => value || null
