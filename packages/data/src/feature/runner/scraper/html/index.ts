@@ -1,6 +1,7 @@
-import type { CheerioAPI } from 'cheerio'
-import { load } from 'cheerio'
 import createMetascraper from 'metascraper'
+import type { HtmlMetadata } from '../../../schema'
+import type { DOM } from '../../common/html'
+import { getDom } from '../../common/html'
 import createMetascraperTitleRules from './title'
 import createMetascraperAuthorRules from './author'
 import createPublisherAuthorRules from './publisher'
@@ -11,45 +12,18 @@ const metascraper = createMetascraper([
   createPublisherAuthorRules(),
 ])
 
-type Nullable<T> = T | null
-
 const nullable = <T>(value: T) => value || null
-
-export interface HtmlMetadata {
-  title: {
-    document: Nullable<string>
-    display: Nullable<string>
-    openGraph: Nullable<string>
-    twitter: Nullable<string>
-    jsonld: Nullable<string>
-  }
-  author: {
-    document: Nullable<string>
-    openGraph: Nullable<string>
-    microdata: Nullable<string>
-    jsonld: Nullable<string>
-    display: Nullable<string>
-  }
-  publisher: {
-    document: Nullable<string>
-    jsonld: Nullable<string>
-    openGraph: Nullable<string>
-    twitter: Nullable<string>
-    display: Nullable<string>
-    domain: Nullable<string>
-  }
-}
 
 interface GetHtmlMetadataOptions {
   url: string
-  source: CheerioAPI | string
+  source: DOM | string
 }
 
 export const getHtmlMetadata = async ({
   url,
   source,
 }: GetHtmlMetadataOptions) => {
-  const htmlDom = typeof source === 'string' ? load(source) : source
+  const htmlDom = typeof source === 'string' ? getDom(source) : source
   const {
     // title
     documentTitle,
@@ -70,12 +44,24 @@ export const getHtmlMetadata = async ({
     twitterPublisher,
     displayPublisher,
     domainPublisher,
+    // date
+    documentDate,
+    displayDate,
+    // published date
+    jsonldDatePublished,
+    openGraphDatePublished,
+    microdataDatePublished,
+    displayDatePublished,
+    // modified date
+    jsonldDateModified,
+    openGraphDateModified,
+    microdataDateModified,
+    // TODO: infer returned keys from rules
   } = await metascraper({
     url,
     htmlDom,
   })
 
-  // TODO: improve HtmlMetadata inferred
   const htmlMetadata: HtmlMetadata = {
     title: {
       document: nullable(documentTitle),
@@ -98,6 +84,21 @@ export const getHtmlMetadata = async ({
       twitter: nullable(twitterPublisher),
       display: nullable(displayPublisher),
       domain: nullable(domainPublisher),
+    },
+    date: {
+      document: nullable(documentDate),
+      display: nullable(displayDate),
+    },
+    publishedDate: {
+      jsonld: nullable(jsonldDatePublished),
+      openGraph: nullable(openGraphDatePublished),
+      microdata: nullable(microdataDatePublished),
+      display: nullable(displayDatePublished),
+    },
+    modifiedDate: {
+      jsonld: nullable(jsonldDateModified),
+      openGraph: nullable(openGraphDateModified),
+      microdata: nullable(microdataDateModified),
     },
   }
 

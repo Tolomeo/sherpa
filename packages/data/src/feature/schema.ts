@@ -40,6 +40,27 @@ export const HtmlMetadataSchema = z
         domain: z.string().nullable(),
       })
       .strict(),
+    date: z
+      .object({
+        document: z.string().nullable(),
+        display: z.string().nullable(),
+      })
+      .strict(),
+    publishedDate: z
+      .object({
+        jsonld: z.string().nullable(),
+        openGraph: z.string().nullable(),
+        microdata: z.string().nullable(),
+        display: z.string().nullable(),
+      })
+      .strict(),
+    modifiedDate: z
+      .object({
+        jsonld: z.string().nullable(),
+        openGraph: z.string().nullable(),
+        microdata: z.string().nullable(),
+      })
+      .strict(),
   })
   .strict()
 

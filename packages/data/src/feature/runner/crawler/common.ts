@@ -13,8 +13,6 @@ export type {
   PlaywrightCrawlingContext,
 } from 'crawlee'
 
-export type { CheerioAPI } from 'cheerio'
-
 export {
   Configuration,
   BasicCrawler,
@@ -22,17 +20,6 @@ export {
   PlaywrightCrawler,
   RequestQueue,
 } from 'crawlee'
-
-export * as cheerio from 'cheerio'
-
-export { fileTypeFromBuffer } from 'file-type'
-
-export interface ScrapeResult {
-  title?: string
-  documentTitle?: string
-  metadataTitle?: string
-  displayTitle?: string
-}
 
 type Crawler = Pick<
   BasicCrawler,
