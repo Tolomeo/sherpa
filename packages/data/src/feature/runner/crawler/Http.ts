@@ -1,11 +1,11 @@
 // TODO: remove references to healthcheck types
 import type { HttpHealthcheckRunConfig } from '../../../../types'
-import type { DOM } from '../common/html'
+import type { HtmlDOM } from '../common/html'
 import type { CheerioCrawlerOptions, CheerioCrawlingContext } from './common'
 import { FeatureCrawler, CheerioCrawler } from './common'
 
 export interface HttpCrawlerResult {
-  dom: DOM
+  dom: HtmlDOM
 }
 
 export default class HttpCrawler extends FeatureCrawler<

@@ -1,7 +1,8 @@
 import createMetascraper from 'metascraper'
+import { nullableValues } from '../../../../common/nullable'
 import type { HtmlMetadata } from '../../../schema'
-import type { DOM } from '../../common/html'
-import { getDom } from '../../common/html'
+import type { HtmlDOM } from '../../common/html'
+import { getHtmlDom } from '../../common/html'
 import createMetascraperTitleRules from './title'
 import createMetascraperAuthorRules from './author'
 import createPublisherAuthorRules from './publisher'
@@ -14,18 +15,16 @@ const metascraper = createMetascraper([
   createDateRules(),
 ])
 
-const nullable = <T>(value: T) => value || null
-
 interface GetHtmlMetadataOptions {
   url: string
-  source: DOM | string
+  source: HtmlDOM | string
 }
 
 export const getHtmlMetadata = async ({
   url,
   source,
 }: GetHtmlMetadataOptions) => {
-  const htmlDom = typeof source === 'string' ? getDom(source) : source
+  const htmlDom = typeof source === 'string' ? getHtmlDom(source) : source
   const {
     // title
     documentTitle,
@@ -65,43 +64,43 @@ export const getHtmlMetadata = async ({
   })
 
   const htmlMetadata: HtmlMetadata = {
-    title: {
-      document: nullable(documentTitle),
-      display: nullable(displayTitle),
-      openGraph: nullable(openGraphTitle),
-      twitter: nullable(twitterTitle),
-      jsonld: nullable(jsonldTitle),
-    },
-    author: {
-      document: nullable(documentAuthor),
-      display: nullable(displayAuthor),
-      openGraph: nullable(openGraphAuthor),
-      microdata: nullable(microdataAuthor),
-      jsonld: nullable(jsonldAuthor),
-    },
-    publisher: {
-      jsonld: nullable(jsonldPublisher),
-      document: nullable(documentPublisher),
-      openGraph: nullable(openGraphPublisher),
-      twitter: nullable(twitterPublisher),
-      display: nullable(displayPublisher),
-      domain: nullable(domainPublisher),
-    },
-    date: {
-      document: nullable(documentDate),
-      display: nullable(displayDate),
-    },
-    publishedDate: {
-      jsonld: nullable(jsonldDatePublished),
-      openGraph: nullable(openGraphDatePublished),
-      microdata: nullable(microdataDatePublished),
-      display: nullable(displayDatePublished),
-    },
-    modifiedDate: {
-      jsonld: nullable(jsonldDateModified),
-      openGraph: nullable(openGraphDateModified),
-      microdata: nullable(microdataDateModified),
-    },
+    title: nullableValues({
+      document: documentTitle,
+      display: displayTitle,
+      openGraph: openGraphTitle,
+      twitter: twitterTitle,
+      jsonld: jsonldTitle,
+    }),
+    author: nullableValues({
+      document: documentAuthor,
+      display: displayAuthor,
+      openGraph: openGraphAuthor,
+      microdata: microdataAuthor,
+      jsonld: jsonldAuthor,
+    }),
+    publisher: nullableValues({
+      jsonld: jsonldPublisher,
+      document: documentPublisher,
+      openGraph: openGraphPublisher,
+      twitter: twitterPublisher,
+      display: displayPublisher,
+      domain: domainPublisher,
+    }),
+    date: nullableValues({
+      document: documentDate,
+      display: displayDate,
+    }),
+    publishedDate: nullableValues({
+      jsonld: jsonldDatePublished,
+      openGraph: openGraphDatePublished,
+      microdata: microdataDatePublished,
+      display: displayDatePublished,
+    }),
+    modifiedDate: nullableValues({
+      jsonld: jsonldDateModified,
+      openGraph: openGraphDateModified,
+      microdata: microdataDateModified,
+    }),
   }
 
   return htmlMetadata

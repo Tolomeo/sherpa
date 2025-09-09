@@ -1,6 +1,6 @@
 import type { CheerioAPI } from 'cheerio'
 import { load } from 'cheerio'
 
-export type DOM = CheerioAPI
+export type HtmlDOM = CheerioAPI
 
-export const getDom = (html: string) => load(html)
+export const getHtmlDom = (html: string) => load(html)
