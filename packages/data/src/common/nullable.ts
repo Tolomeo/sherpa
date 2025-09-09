@@ -1,13 +1,13 @@
 export type Nullable<T> = Exclude<T, undefined> | null
 
-export type NullableValues<T> = {
-  [K in keyof T]-?: Nullable<T[K]> | null
-}
-
 export const nullable = <T>(value: T): Nullable<T> => {
   if (!value) return null
 
   return value as Nullable<T>
+}
+
+export type NullableValues<T> = {
+  [K in keyof T]-?: Nullable<T[K]> | null
 }
 
 export const nullableValues = <T extends Record<string, unknown>>(

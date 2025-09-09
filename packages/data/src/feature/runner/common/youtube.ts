@@ -12,10 +12,38 @@ export interface YoutubeChannel extends GoogleApiYouTubeChannelResource {
   kind: 'youtube#channel'
 }
 
+export type YouTubeVideoResponse = GoogleApiYouTubePaginationInfo<YouTubeVideo>
+
+export type YouTubePlaylistResponse =
+  GoogleApiYouTubePaginationInfo<YouTubePlaylist>
+
+export type YouTubeChannelResponse =
+  GoogleApiYouTubePaginationInfo<YoutubeChannel>
+
 export type YouTubeResource = YouTubeVideo | YouTubePlaylist | YoutubeChannel
 
 export type YoutubeResourceResponse =
   GoogleApiYouTubePaginationInfo<YouTubeResource>
+
+/* type Opaque<T, K extends string> = string extends K
+  ? never
+  : T & { readonly __kind__: K }
+
+type YouTubeVideoUrl = Opaque<string, 'youtube#video'>
+
+type YouTubeChannelUrl = Opaque<string, 'youtube#channel'>
+
+type YouTubePlaylistUrl = Opaque<string, 'youtube#playlist'>
+
+const isYouTubeVideoUrl = (url: string): url is YouTubeVideoUrl => {
+  const videoUrl = /^https?:\/\/www\.youtube\.com\/watch\?v=(\S+)$/
+
+  const match = videoUrl.exec(url)
+
+  if (!match) return false
+
+  return true
+} */
 
 export const getVideoId = (url: string) => {
   const videoUrl = /^https?:\/\/www\.youtube\.com\/watch\?v=(\S+)$/

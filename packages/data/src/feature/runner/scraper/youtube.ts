@@ -1,38 +1,58 @@
 import type { YoutubeDataAPIV3Metadata } from '../../schema'
-import type { YoutubeResourceResponse } from '../common/youtube'
+import type { YouTubeDataApiV3CrawlerResponse } from '../crawler/YoutubeDataApi'
 import { getChannelHandle } from '../common/youtube'
 
 interface GetYoutubeDataAPIV3MetadataOptions {
   url: string
-  source: YoutubeResourceResponse
+  source: YouTubeDataApiV3CrawlerResponse
 }
 
 export const getYoutubeDataAPIV3Metadata = ({
   url,
   source,
 }: GetYoutubeDataAPIV3MetadataOptions): YoutubeDataAPIV3Metadata => {
-  const [item] = source.items
+  switch (source.kind) {
+    case 'video': {
+      const [item] = source.info.video.items
 
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the returned items list could be empty
-  if (!item)
-    throw new Error(`YouTube resource response for ${url} has no items`)
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the returned items list could be empty
+      if (!item)
+        throw new Error(`YouTube resource response for ${url} has no items`)
 
-  switch (item.kind) {
-    case 'youtube#video':
-    case 'youtube#playlist':
       return {
         title: item.snippet.title,
         author: item.snippet.channelTitle,
         publisher: 'youtube.com',
+        publishedDate: item.snippet.publishedAt,
       }
-    case 'youtube#channel':
+    }
+    case 'playlist': {
+      const [item] = source.info.playlist.items
+
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the returned items list could be empty
+      if (!item)
+        throw new Error(`YouTube resource response for ${url} has no items`)
+
       return {
         title: item.snippet.title,
-        author: getChannelHandle(url)!,
+        author: item.snippet.channelTitle,
         publisher: 'youtube.com',
+        publishedDate: item.snippet.publishedAt,
       }
-    default:
-      // @ts-expect-error -- this is to ensure we throw an error for any changes in the apis
-      throw new Error(`YouTube resource kind ${item.kind} not recognized`)
+    }
+    case 'channel': {
+      const [item] = source.info.channel.items
+
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the returned items list could be empty
+      if (!item)
+        throw new Error(`YouTube resource response for ${url} has no items`)
+
+      return {
+        title: item.snippet.title,
+        author: `${getChannelHandle(url)}`,
+        publisher: 'youtube.com',
+        publishedDate: item.snippet.publishedAt,
+      }
+    }
   }
 }
