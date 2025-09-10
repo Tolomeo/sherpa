@@ -13,34 +13,37 @@ export const getYoutubeDataAPIV3Metadata = ({
 }: GetYoutubeDataAPIV3MetadataOptions): YoutubeDataAPIV3Metadata => {
   switch (source.kind) {
     case 'video': {
-      const [item] = source.info.video.items
-
-      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the returned items list could be empty
-      if (!item)
-        throw new Error(`YouTube resource response for ${url} has no items`)
+      const video = source.info.video
+      const title = video.snippet.title
+      const author = video.snippet.channelTitle
+      const publisher = 'youtube.com'
+      const publishedDate = video.snippet.publishedAt
+      // TODO: modifiedDate from last comment on the video?
+      const modifiedDate = video.snippet.publishedAt
 
       return {
-        title: item.snippet.title,
-        author: item.snippet.channelTitle,
-        publisher: 'youtube.com',
-        publishedDate: item.snippet.publishedAt,
-        // TODO: modifiedDate from last comment on the video?
-        modifiedDate: item.snippet.publishedAt,
+        title,
+        author,
+        publisher,
+        publishedDate,
+        modifiedDate,
       }
     }
     case 'playlist': {
-      const [item] = source.info.playlist.items
-
-      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the returned items list could be empty
-      if (!item)
-        throw new Error(`YouTube resource response for ${url} has no items`)
+      const playlist = source.info.playlist
+      const title = playlist.snippet.title
+      const author = playlist.snippet.channelTitle
+      const publisher = 'youtube.com'
+      const publishedDate = playlist.snippet.publishedAt
+      const [lastItem] = source.info.playlistItems
+      const modifiedDate = lastItem.snippet.publishedAt
 
       return {
-        title: item.snippet.title,
-        author: item.snippet.channelTitle,
-        publisher: 'youtube.com',
-        publishedDate: item.snippet.publishedAt,
-        modifiedDate: item.snippet.publishedAt,
+        title,
+        author,
+        publisher,
+        publishedDate,
+        modifiedDate,
       }
     }
     case 'channel': {
@@ -50,15 +53,7 @@ export const getYoutubeDataAPIV3Metadata = ({
       const author = `${getChannelHandle(url)}`
       const publisher = 'youtube.com'
       const publishedDate = channel.snippet.publishedAt
-      const [lastActivity] = source.info.channelActivity
-
-      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the returned items list could be empty
-      if (!lastActivity) {
-        throw new Error(
-          `No channel activities found for YouTube channel ${url}`,
-        )
-      }
-
+      const [lastActivity] = source.info.channelActivities
       const modifiedDate = lastActivity.snippet.publishedAt
 
       return {

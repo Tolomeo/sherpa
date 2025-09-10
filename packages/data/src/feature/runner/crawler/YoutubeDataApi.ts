@@ -2,9 +2,13 @@ import type {
   YouTubeVideoResponse,
   YouTubePlaylistResponse,
   YouTubeChannelResponse,
-  YouTubeActivityResponse,
+  YouTubeActivitiesResponse,
   YouTubeActivity,
   YouTubeChannel,
+  YouTubeVideo,
+  YouTubePlaylist,
+  YouTubePlaylistItem,
+  YouTubePlaylistItemsResponse,
 } from '../common/youtube'
 import { getVideoId, getPlaylistId, getChannelHandle } from '../common/youtube'
 import { FeatureCrawler, BasicCrawler } from './common'
@@ -13,14 +17,15 @@ import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
 interface YoutubeDataApiV3CrawlerVideoResponse {
   kind: 'video'
   info: {
-    video: YouTubeVideoResponse
+    video: YouTubeVideo
   }
 }
 
 interface YoutubeDataApiV3CrawlerPlaylistResponse {
   kind: 'playlist'
   info: {
-    playlist: YouTubePlaylistResponse
+    playlist: YouTubePlaylist
+    playlistItems: YouTubePlaylistItem[]
   }
 }
 
@@ -28,7 +33,7 @@ interface YoutubeDataApiV3CrawlerChannelResponse {
   kind: 'channel'
   info: {
     channel: YouTubeChannel
-    channelActivity: YouTubeActivity[]
+    channelActivities: YouTubeActivity[]
   }
 }
 
@@ -64,10 +69,19 @@ export default class YoutubeDataApiV3Crawler extends FeatureCrawler<
   ) {
     const apiBaseUrl = YoutubeDataApiV3Crawler.apiBaseUrl
 
-    const { body: video } = (await sendRequest({
+    const { body: videoResponse } = (await sendRequest({
       url: `${apiBaseUrl}/videos?id=${videoId}&key=${apiKey}&part=snippet&maxResults=1`,
       responseType: 'json',
     })) as { body: YouTubeVideoResponse }
+
+    const [video] = videoResponse.items
+
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the returned items list could be empty
+    if (!video) {
+      throw new Error(
+        `YouTube video response for video id ${videoId} has no items`,
+      )
+    }
 
     return { video }
   }
@@ -78,12 +92,35 @@ export default class YoutubeDataApiV3Crawler extends FeatureCrawler<
   ) {
     const apiBaseUrl = YoutubeDataApiV3Crawler.apiBaseUrl
 
-    const { body: playlist } = (await sendRequest({
+    const { body: playlistResponse } = (await sendRequest({
       url: `${apiBaseUrl}/playlists?id=${playlistId}&key=${apiKey}&part=snippet&maxResults=1`,
       responseType: 'json',
     })) as { body: YouTubePlaylistResponse }
 
-    return { playlist }
+    const [playlist] = playlistResponse.items
+
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the returned items list could be empty
+    if (!playlist) {
+      throw new Error(
+        `YouTube playlist response for playlist id ${playlistId} has no items`,
+      )
+    }
+
+    const { body: playlistItemsResponse } = (await sendRequest({
+      // NB: maxResults is set to 1 because we care about the last item only for the modified date
+      url: `${apiBaseUrl}/playlistItems?playlistId=${playlistId}&key=${apiKey}&part=snippet&maxResults=1`,
+      responseType: 'json',
+    })) as { body: YouTubePlaylistItemsResponse }
+
+    const playlistItems = playlistItemsResponse.items
+
+    if (!playlistItems.length) {
+      throw new Error(
+        `YouTube playlist items response for playlist id ${playlistId} has no items`,
+      )
+    }
+
+    return { playlist, playlistItems }
   }
 
   async getChannelInfo(
@@ -109,11 +146,17 @@ export default class YoutubeDataApiV3Crawler extends FeatureCrawler<
     const { body: activityResponse } = (await sendRequest({
       url: `${apiBaseUrl}/activities?channelId=${channel.id}&key=${apiKey}&part=snippet&maxResults=1`,
       responseType: 'json',
-    })) as { body: YouTubeActivityResponse }
+    })) as { body: YouTubeActivitiesResponse }
 
-    const channelActivity = activityResponse.items
+    const channelActivities = activityResponse.items
 
-    return { channel, channelActivity }
+    if (!channelActivities.length) {
+      throw new Error(
+        `YouTube activities for channel handle ${channelHandle} returned no items`,
+      )
+    }
+
+    return { channel, channelActivities }
   }
 
   async requestHandler(context: BasicCrawlingContext) {
