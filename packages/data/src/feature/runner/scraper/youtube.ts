@@ -24,6 +24,8 @@ export const getYoutubeDataAPIV3Metadata = ({
         author: item.snippet.channelTitle,
         publisher: 'youtube.com',
         publishedDate: item.snippet.publishedAt,
+        // TODO: modifiedDate from last comment on the video?
+        modifiedDate: item.snippet.publishedAt,
       }
     }
     case 'playlist': {
@@ -38,20 +40,33 @@ export const getYoutubeDataAPIV3Metadata = ({
         author: item.snippet.channelTitle,
         publisher: 'youtube.com',
         publishedDate: item.snippet.publishedAt,
+        modifiedDate: item.snippet.publishedAt,
       }
     }
     case 'channel': {
-      const [item] = source.info.channel.items
+      const channel = source.info.channel
+      const title = channel.snippet.title
+      // TODO: author from channel.snipper.customUrl -- the property is not documented in types, so it should be checked whether it is stable
+      const author = `${getChannelHandle(url)}`
+      const publisher = 'youtube.com'
+      const publishedDate = channel.snippet.publishedAt
+      const [lastActivity] = source.info.channelActivity
 
       // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the returned items list could be empty
-      if (!item)
-        throw new Error(`YouTube resource response for ${url} has no items`)
+      if (!lastActivity) {
+        throw new Error(
+          `No channel activities found for YouTube channel ${url}`,
+        )
+      }
+
+      const modifiedDate = lastActivity.snippet.publishedAt
 
       return {
-        title: item.snippet.title,
-        author: `${getChannelHandle(url)}`,
-        publisher: 'youtube.com',
-        publishedDate: item.snippet.publishedAt,
+        title,
+        author,
+        publisher,
+        publishedDate,
+        modifiedDate,
       }
     }
   }

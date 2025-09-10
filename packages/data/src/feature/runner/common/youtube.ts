@@ -8,8 +8,12 @@ export interface YouTubePlaylist extends GoogleApiYouTubePlaylistResource {
   kind: 'youtube#playlist'
 }
 
-export interface YoutubeChannel extends GoogleApiYouTubeChannelResource {
+export interface YouTubeChannel extends GoogleApiYouTubeChannelResource {
   kind: 'youtube#channel'
+}
+
+export interface YouTubeActivity extends GoogleApiYouTubeActivityResource {
+  kind: 'youtube#activity'
 }
 
 export type YouTubeVideoResponse = GoogleApiYouTubePaginationInfo<YouTubeVideo>
@@ -18,12 +22,10 @@ export type YouTubePlaylistResponse =
   GoogleApiYouTubePaginationInfo<YouTubePlaylist>
 
 export type YouTubeChannelResponse =
-  GoogleApiYouTubePaginationInfo<YoutubeChannel>
+  GoogleApiYouTubePaginationInfo<YouTubeChannel>
 
-export type YouTubeResource = YouTubeVideo | YouTubePlaylist | YoutubeChannel
-
-export type YoutubeResourceResponse =
-  GoogleApiYouTubePaginationInfo<YouTubeResource>
+export type YouTubeActivityResponse =
+  GoogleApiYouTubePaginationInfo<YouTubeActivity>
 
 /* type Opaque<T, K extends string> = string extends K
   ? never

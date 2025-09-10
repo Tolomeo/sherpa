@@ -2,6 +2,9 @@ import type {
   YouTubeVideoResponse,
   YouTubePlaylistResponse,
   YouTubeChannelResponse,
+  YouTubeActivityResponse,
+  YouTubeActivity,
+  YouTubeChannel,
 } from '../common/youtube'
 import { getVideoId, getPlaylistId, getChannelHandle } from '../common/youtube'
 import { FeatureCrawler, BasicCrawler } from './common'
@@ -24,7 +27,8 @@ interface YoutubeDataApiV3CrawlerPlaylistResponse {
 interface YoutubeDataApiV3CrawlerChannelResponse {
   kind: 'channel'
   info: {
-    channel: YouTubeChannelResponse
+    channel: YouTubeChannel
+    channelActivity: YouTubeActivity[]
   }
 }
 
@@ -88,12 +92,28 @@ export default class YoutubeDataApiV3Crawler extends FeatureCrawler<
   ) {
     const apiBaseUrl = YoutubeDataApiV3Crawler.apiBaseUrl
 
-    const { body: channel } = (await sendRequest({
+    const { body: channelResponse } = (await sendRequest({
       url: `${apiBaseUrl}/channels?forHandle=${channelHandle}&key=${apiKey}&part=snippet&maxResults=1`,
       responseType: 'json',
     })) as { body: YouTubeChannelResponse }
 
-    return { channel }
+    const [channel] = channelResponse.items
+
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the returned items list could be empty
+    if (!channel) {
+      throw new Error(
+        `YouTube channel response for handle ${channelHandle} has no items`,
+      )
+    }
+
+    const { body: activityResponse } = (await sendRequest({
+      url: `${apiBaseUrl}/activities?channelId=${channel.id}&key=${apiKey}&part=snippet&maxResults=1`,
+      responseType: 'json',
+    })) as { body: YouTubeActivityResponse }
+
+    const channelActivity = activityResponse.items
+
+    return { channel, channelActivity }
   }
 
   async requestHandler(context: BasicCrawlingContext) {
@@ -107,10 +127,7 @@ export default class YoutubeDataApiV3Crawler extends FeatureCrawler<
 
       const videoId = getVideoId(context.request.url)
       if (videoId) {
-        const info = await this.getVideoInfo(
-          { videoId, apiKey },
-          context,
-        )
+        const info = await this.getVideoInfo({ videoId, apiKey }, context)
 
         return this.success(context.request, {
           response: {
@@ -122,10 +139,7 @@ export default class YoutubeDataApiV3Crawler extends FeatureCrawler<
 
       const playlistId = getPlaylistId(context.request.url)
       if (playlistId) {
-        const info = await this.getPlaylistInfo(
-          { playlistId, apiKey },
-          context,
-        )
+        const info = await this.getPlaylistInfo({ playlistId, apiKey }, context)
 
         return this.success(context.request, {
           response: {

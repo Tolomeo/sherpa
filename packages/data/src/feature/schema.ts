@@ -72,6 +72,7 @@ export const YoutubeDataAPIV3MetadataSchema = z
     author: z.string(),
     publisher: z.string(),
     publishedDate: z.string(),
+    modifiedDate: z.string(),
   })
   .strict()
 
