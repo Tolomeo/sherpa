@@ -18,9 +18,27 @@ export const getPdfMetadata = async ({
     metadata?.get('dc:publisher') ||
     metadata?.get('prism:publisher') ||
     metadata?.get('prism:publicationName') ||
-    metadata?.get('dc:contributor') ||
+    metadata?.get('xmpRights:Owner') ||
     null
-  // const date = info.CreationDate || metadata?.get('xmp:CreateDate') || null
+  const publishedDate =
+    metadata?.get('prism:publicationDate') ||
+    // TODO: this could be an array, take the first if so
+    metadata?.get('dc:date') ||
+    metadata?.get('prism:availableDate') ||
+    metadata?.get('prism:coverDate') ||
+    metadata?.get('xmp:CreateDate') ||
+    metadata?.get('pdf:CreationDate') ||
+    info.CreationDate ||
+    null
+  const modifiedDate =
+    metadata?.get('xmp:ModifyDate') ||
+    metadata?.get('xmp:MetadataDate') ||
+    metadata?.get('pdf:ModDate') ||
+    // TODO: this could be an array. If it is, take the last item
+    metadata?.get('dc:date') ||
+    metadata?.get('prism:modificationDate') ||
+    info.ModDate ||
+    null
 
-  return { title, author, publisher }
+  return { title, author, publisher, publishedDate, modifiedDate }
 }

@@ -2,10 +2,22 @@ import type { Metadata } from 'pdfjs-dist/types/src/display/metadata'
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs'
 import { fileTypeFromBuffer } from 'file-type'
 
+// standard internal date format used in PDF documents
+// format D:YYYYMMDDHHmmSSOHH'mm
+// see https://www.coherentpdf.com/cpdfmanual/cpdfmanualap1.html
+// TODO: create specific literal type?
+type PDFDate = string
+
 export interface PDFDocumentInfo {
   Title?: string
   Author?: string
-  CreationDate?: string
+  Subject?: string
+  Keywords?: string
+  Creator?: string
+  Producer?: string
+  CreationDate?: PDFDate
+  ModDate?: PDFDate
+  // Trapped
 }
 
 export interface PDFDocumentXMP extends Metadata {

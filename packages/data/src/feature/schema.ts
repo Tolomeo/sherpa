@@ -5,6 +5,8 @@ export const PDFMetadataSchema = z
     title: z.string(),
     author: z.string().nullable(),
     publisher: z.string().nullable(),
+    publishedDate: z.string().nullable(),
+    modifiedDate: z.string().nullable(),
   })
   .strict()
 
@@ -85,6 +87,8 @@ export const UdemyAffiliateAPIMetadataSchema = z
     title: z.string(),
     author: z.array(z.string()),
     publisher: z.string(),
+    publishedDate: z.string(),
+    modifiedDate: z.string(),
   })
   .strict()
 
