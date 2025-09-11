@@ -18,6 +18,7 @@ export const getYoutubeDataAPIV3Metadata = ({
       const author = video.snippet.channelTitle
       const publisher = 'youtube.com'
       const publishedDate = video.snippet.publishedAt
+      // NB: there seem to be no reliable way to get the time of last update of a video
       // TODO: modifiedDate from last comment on the video?
       const modifiedDate = video.snippet.publishedAt
 

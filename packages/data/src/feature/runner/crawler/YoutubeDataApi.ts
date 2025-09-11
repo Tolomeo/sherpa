@@ -107,7 +107,7 @@ export default class YoutubeDataApiV3Crawler extends FeatureCrawler<
     }
 
     const { body: playlistItemsResponse } = (await sendRequest({
-      // NB: maxResults is set to 1 because we care about the last item only for the modified date
+      // NB: maxResults is set to 1 because we care about the last item only to infer the modification date of the playlist
       url: `${apiBaseUrl}/playlistItems?playlistId=${playlistId}&key=${apiKey}&part=snippet&maxResults=1`,
       responseType: 'json',
     })) as { body: YouTubePlaylistItemsResponse }

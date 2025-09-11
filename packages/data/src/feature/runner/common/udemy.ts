@@ -16,6 +16,7 @@ export interface UdemyCourse {
   title: string
   visible_instructors: UdemyInstructor[]
   is_paid: boolean
+  created: string
 }
 
 export type UdemyCourseResponse = UdemyCourse
