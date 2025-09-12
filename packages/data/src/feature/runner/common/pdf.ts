@@ -21,7 +21,8 @@ export interface PDFDocumentInfo {
 }
 
 export interface PDFDocumentXMP extends Metadata {
-  get: (key: string) => string
+  get: <T>(key: string) => T | undefined
+  getRaw: () => string
 }
 
 export interface PDFDocumentMetadata {

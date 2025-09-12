@@ -4,7 +4,7 @@ export const PDFMetadataSchema = z
   .object({
     title: z.string(),
     author: z.string().nullable(),
-    publisher: z.string().nullable(),
+    publisher: z.array(z.string()).nullable(),
     publishedDate: z.string().nullable(),
     modifiedDate: z.string().nullable(),
   })

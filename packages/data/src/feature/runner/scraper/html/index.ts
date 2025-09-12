@@ -1,5 +1,5 @@
 import createMetascraper from 'metascraper'
-import { nullableValues } from '../../../../common/nullable'
+import { toNullableValues } from '../../../../common/nullable'
 import type { HtmlMetadata } from '../../../schema'
 import type { HtmlDOM } from '../../common/html'
 import { getHtmlDom } from '../../common/html'
@@ -64,21 +64,21 @@ export const getHtmlMetadata = async ({
   })
 
   const htmlMetadata: HtmlMetadata = {
-    title: nullableValues({
+    title: toNullableValues({
       document: documentTitle,
       display: displayTitle,
       openGraph: openGraphTitle,
       twitter: twitterTitle,
       jsonld: jsonldTitle,
     }),
-    author: nullableValues({
+    author: toNullableValues({
       document: documentAuthor,
       display: displayAuthor,
       openGraph: openGraphAuthor,
       microdata: microdataAuthor,
       jsonld: jsonldAuthor,
     }),
-    publisher: nullableValues({
+    publisher: toNullableValues({
       jsonld: jsonldPublisher,
       document: documentPublisher,
       openGraph: openGraphPublisher,
@@ -86,17 +86,17 @@ export const getHtmlMetadata = async ({
       display: displayPublisher,
       domain: domainPublisher,
     }),
-    date: nullableValues({
+    date: toNullableValues({
       document: documentDate,
       display: displayDate,
     }),
-    publishedDate: nullableValues({
+    publishedDate: toNullableValues({
       jsonld: jsonldDatePublished,
       openGraph: openGraphDatePublished,
       microdata: microdataDatePublished,
       display: displayDatePublished,
     }),
-    modifiedDate: nullableValues({
+    modifiedDate: toNullableValues({
       jsonld: jsonldDateModified,
       openGraph: openGraphDateModified,
       microdata: microdataDateModified,
