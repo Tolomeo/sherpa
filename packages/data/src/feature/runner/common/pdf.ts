@@ -21,8 +21,9 @@ export interface PDFDocumentInfo {
 }
 
 export interface PDFDocumentXMP extends Metadata {
-  get: <T extends string | string[] | Record<string, string>>(
-    key: string,
+  // pdfjs-dist normalises all metadata names to be lowercase
+  get: <K extends string, T extends string | string[] | Record<string, string>>(
+    key: Lowercase<K>,
   ) => T | null
   getRaw: () => string
 }
