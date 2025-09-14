@@ -60,33 +60,36 @@ export const getPdfMetadata = async ({
   const publisher = coalesce(
     toNullableArray(
       metadata?.get('dc:publisher'),
-      metadata?.get('prism2:issuingOrganization'),
+      metadata?.get('prism2:issuingorganization'),
       metadata?.get('prism:publisher'),
-      metadata?.get('prism:publicationName'),
-      metadata?.get('xmpRights:Owner'),
+      metadata?.get('prism:publicationname'),
+      metadata?.get('xmprights:owner'),
       metadata?.get('prism2:distributor'),
     ),
   )
 
   const publishedDate = coalesce(
     toNullableArray(
-      metadata?.get('prism:publicationDate'),
+      metadata?.get('prism:publicationdate'),
       metadata?.get('dc:date'),
-      metadata?.get('prism:availableDate'),
-      metadata?.get('prism:coverDate'),
-      metadata?.get('xmp:CreateDate'),
-      metadata?.get('pdf:CreationDate'),
+      metadata?.get('prism:availabledate'),
+      metadata?.get('prism:coverdate'),
+      metadata?.get('xmp:createdate'),
+      metadata?.get('xap:createdate'),
+      metadata?.get('pdf:creationdate'),
       info.CreationDate,
     ),
   )
 
   const modifiedDate = coalesce(
     toNullableArray(
-      metadata?.get('xmp:ModifyDate'),
-      metadata?.get('xmp:MetadataDate'),
-      metadata?.get('pdf:ModDate'),
+      metadata?.get('xmp:modifydate'),
+      metadata?.get('xap:modifydate'),
+      metadata?.get('xmp:metadatadate'),
+      metadata?.get('xap:metadatadate'),
+      metadata?.get('pdf:moddate'),
       metadata?.get('dc:date'),
-      metadata?.get('prism:modificationDate'),
+      metadata?.get('prism:modificationdate'),
       info.ModDate,
     ),
   )
