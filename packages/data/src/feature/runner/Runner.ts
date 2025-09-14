@@ -67,8 +67,8 @@ class FeatureExtractionRunner {
       switch (strategy.runner) {
         case 'PdfFile': {
           const crawler = await this.getCrawler(PdfFileCrawler)
-          const { file } = await crawler.run(url, {})
-          const metadata = await getPdfMetadata({ url, source: file })
+          const result = await crawler.run(url, {})
+          const metadata = await getPdfMetadata({ url, source: result })
 
           return this.success(url, {
             source: 'PdfFile',
