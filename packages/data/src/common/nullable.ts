@@ -12,7 +12,7 @@ export type NullableValues<T> = {
 
 export type NullableItems<T> = Nullable<T>[]
 
-export const toNullableValues = <T extends Record<string, unknown>>(
+export const toNullableObject = <T extends Record<string, unknown>>(
   obj: T,
 ): NullableValues<T> => {
   const withNullableValues: Partial<NullableValues<T>> = {}
@@ -26,7 +26,7 @@ export const toNullableValues = <T extends Record<string, unknown>>(
   return withNullableValues as NullableValues<T>
 }
 
-export const toNullableItems = <T>(arr: T[]) => {
+export const toNullableArray = <T>(...arr: T[]) => {
   const withNullableItems: NullableItems<T> = []
 
   arr.forEach((item) => {
