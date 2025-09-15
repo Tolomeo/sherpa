@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import description from './runner/scraper/html/description'
 
 export const PDFMetadataSchema = z
   .object({
@@ -61,6 +62,15 @@ export const HtmlMetadataSchema = z
         jsonld: z.string().nullable(),
         openGraph: z.string().nullable(),
         microdata: z.string().nullable(),
+      })
+      .strict(),
+    description: z
+      .object({
+        openGraph: z.string().nullable(),
+        twitter: z.string().nullable(),
+        document: z.string().nullable(),
+        microdata: z.string().nullable(),
+        jsonld: z.string().nullable(),
       })
       .strict(),
   })

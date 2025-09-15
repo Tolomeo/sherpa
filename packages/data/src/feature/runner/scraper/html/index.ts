@@ -7,12 +7,14 @@ import createMetascraperTitleRules from './title'
 import createMetascraperAuthorRules from './author'
 import createPublisherAuthorRules from './publisher'
 import createDateRules from './date'
+import createDescriptionRules from './description'
 
 const metascraper = createMetascraper([
   createMetascraperTitleRules(),
   createMetascraperAuthorRules(),
   createPublisherAuthorRules(),
   createDateRules(),
+  createDescriptionRules(),
 ])
 
 interface GetHtmlMetadataOptions {
@@ -57,6 +59,12 @@ export const getHtmlMetadata = async ({
     jsonldDateModified,
     openGraphDateModified,
     microdataDateModified,
+    // description
+    openGraphDescription,
+    twitterDescription,
+    documentDescription,
+    microdataDescription,
+    jsonldDescription,
     // TODO: infer returned keys from rules
   } = await metascraper({
     url,
@@ -100,6 +108,13 @@ export const getHtmlMetadata = async ({
       jsonld: jsonldDateModified,
       openGraph: openGraphDateModified,
       microdata: microdataDateModified,
+    }),
+    description: toNullableObject({
+      openGraph: openGraphDescription,
+      twitter: twitterDescription,
+      document: documentDescription,
+      microdata: microdataDescription,
+      jsonld: jsonldDescription,
     }),
   }
 
