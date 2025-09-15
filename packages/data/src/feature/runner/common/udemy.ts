@@ -1,3 +1,4 @@
+// https://web.archive.org/web/20240328063702/https://www.udemy.com/developers/affiliate/models/user/
 export interface UdemyInstructor {
   _class: 'user'
   title: string
@@ -10,6 +11,7 @@ export interface UdemyInstructor {
   url: string
 }
 
+// https://web.archive.org/web/20240328063420/https://www.udemy.com/developers/affiliate/models/course/
 export interface UdemyCourse {
   _class: 'course'
   id: number
@@ -17,6 +19,7 @@ export interface UdemyCourse {
   visible_instructors: UdemyInstructor[]
   is_paid: boolean
   created: string
+  description: string
 }
 
 export type UdemyCourseResponse = UdemyCourse

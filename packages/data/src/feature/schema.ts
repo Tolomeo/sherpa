@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import description from './runner/scraper/html/description'
 
 export const PDFMetadataSchema = z
   .object({
@@ -100,6 +99,7 @@ export const UdemyAffiliateAPIMetadataSchema = z
     publisher: z.string(),
     publishedDate: z.string(),
     modifiedDate: z.string(),
+    description: z.string(),
   })
   .strict()
 

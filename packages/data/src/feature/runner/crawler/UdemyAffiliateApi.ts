@@ -29,7 +29,7 @@ export default class UdemyAffiliateApiCrawler extends FeatureCrawler<
 
     if (!courseSlug) return null
 
-    return `${apiBaseUrl}/${courseSlug}?fields[course]=title,visible_instructors,is_paid,created`
+    return `${apiBaseUrl}/${courseSlug}?fields[course]=title,visible_instructors,is_paid,created,description`
   }
 
   async requestHandler({ request, sendRequest }: BasicCrawlingContext) {

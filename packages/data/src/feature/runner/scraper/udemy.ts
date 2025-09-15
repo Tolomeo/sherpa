@@ -17,5 +17,6 @@ export const getUdemyMetadata = ({
     // NB: there seem to be no update date available
     // TODO: infer from the last comment found?
     modifiedDate: source.created,
+    description: source.description,
   }
 }
