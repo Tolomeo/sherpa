@@ -21,6 +21,7 @@ export const getYoutubeDataAPIV3Metadata = ({
       // NB: there seem to be no reliable way to get the time of last update of a video
       // TODO: modifiedDate from last comment on the video?
       const modifiedDate = video.snippet.publishedAt
+      const description = video.snippet.description
 
       return {
         title,
@@ -28,6 +29,7 @@ export const getYoutubeDataAPIV3Metadata = ({
         publisher,
         publishedDate,
         modifiedDate,
+        description,
       }
     }
     case 'playlist': {
@@ -38,6 +40,7 @@ export const getYoutubeDataAPIV3Metadata = ({
       const publishedDate = playlist.snippet.publishedAt
       const [lastItem] = source.info.playlistItems
       const modifiedDate = lastItem.snippet.publishedAt
+      const description = source.info.playlist.snippet.description
 
       return {
         title,
@@ -45,6 +48,7 @@ export const getYoutubeDataAPIV3Metadata = ({
         publisher,
         publishedDate,
         modifiedDate,
+        description,
       }
     }
     case 'channel': {
@@ -56,6 +60,7 @@ export const getYoutubeDataAPIV3Metadata = ({
       const publishedDate = channel.snippet.publishedAt
       const [lastActivity] = source.info.channelActivities
       const modifiedDate = lastActivity.snippet.publishedAt
+      const description = source.info.channel.snippet.description
 
       return {
         title,
@@ -63,6 +68,7 @@ export const getYoutubeDataAPIV3Metadata = ({
         publisher,
         publishedDate,
         modifiedDate,
+        description,
       }
     }
   }
