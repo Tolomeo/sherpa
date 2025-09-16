@@ -47,10 +47,12 @@ export interface GetPdfMetadataOptions {
 }
 
 export const getPdfMetadata = async ({
-  url,
+  // url,
   source: { file, filename },
 }: GetPdfMetadataOptions): Promise<PDFMetadata> => {
   const { info, metadata } = await getPdfDocumentMetadata(file)
+
+  console.log({ info, metadata })
 
   const title = coalesce(toNullableArray(metadata?.get('dc:title'), info.Title))
 
@@ -88,10 +90,23 @@ export const getPdfMetadata = async ({
       metadata?.get('xap:modifydate'),
       metadata?.get('xmp:metadatadate'),
       metadata?.get('xap:metadatadate'),
-      metadata?.get('pdf:moddate'),
       metadata?.get('dc:date'),
       metadata?.get('prism:modificationdate'),
+      metadata?.get('pdf:moddate'),
       info.ModDate,
+    ),
+  )
+
+  const description = coalesce(
+    toNullableArray(
+      metadata?.get('prism:teaser'),
+      metadata?.get('prism:summary'),
+      metadata?.get('prism:abstract'),
+      metadata?.get('dc:description'),
+      metadata?.get('xmp:description'),
+      metadata?.get('xap:description'),
+      metadata?.get('pdf:subject'),
+      info.Subject,
     ),
   )
 
@@ -103,5 +118,6 @@ export const getPdfMetadata = async ({
     modifiedDate: mapNullable(modifiedDate, (m) =>
       metadataToString(m, { ifArray: (v) => v[v.length - 1] }),
     ),
+    description: mapNullable(description, metadataToString),
   }
 }
