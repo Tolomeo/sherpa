@@ -1,7 +1,10 @@
-import type { UdemyCourseResponse } from '../common/udemy'
-import { getCourseSlug } from '../common/udemy'
-import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
-import { FeatureCrawler, BasicCrawler } from './common'
+import type {
+  BasicCrawlerOptions,
+  BasicCrawlingContext,
+} from '../../../common/crawler'
+import { FeatureCrawler, BasicCrawler } from '../../../common/crawler'
+import type { UdemyCourseResponse } from './common'
+import { getCourseSlug } from './common'
 
 export interface UdemyAffiliateApiCrawlerResult {
   response: UdemyCourseResponse

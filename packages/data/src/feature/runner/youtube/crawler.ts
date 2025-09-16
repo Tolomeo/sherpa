@@ -1,4 +1,10 @@
 import type {
+  BasicCrawlerOptions,
+  BasicCrawlingContext,
+} from '../../../common/crawler'
+import { FeatureCrawler, BasicCrawler } from '../../../common/crawler'
+import { getVideoId, getPlaylistId, getChannelHandle } from './common'
+import type {
   YouTubeVideoResponse,
   YouTubePlaylistResponse,
   YouTubeChannelResponse,
@@ -9,10 +15,7 @@ import type {
   YouTubePlaylist,
   YouTubePlaylistItem,
   YouTubePlaylistItemsResponse,
-} from '../common/youtube'
-import { getVideoId, getPlaylistId, getChannelHandle } from '../common/youtube'
-import { FeatureCrawler, BasicCrawler } from './common'
-import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
+} from './common'
 
 interface YoutubeDataApiV3CrawlerVideoResponse {
   kind: 'video'

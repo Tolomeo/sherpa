@@ -1,6 +1,6 @@
 import type { YoutubeDataAPIV3Metadata } from '../../schema'
-import type { YouTubeDataApiV3CrawlerResponse } from '../crawler/YoutubeDataApi'
-import { getChannelHandle } from '../common/youtube'
+import type { YouTubeDataApiV3CrawlerResponse } from './crawler'
+import { getChannelHandle } from './common'
 
 interface GetYoutubeDataAPIV3MetadataOptions {
   url: string

@@ -2,8 +2,8 @@ import type { E2EHealthcheckRunConfig } from '../../../../types'
 import type {
   PlaywrightCrawlerOptions,
   PlaywrightCrawlingContext,
-} from './common'
-import { FeatureCrawler, PlaywrightCrawler } from './common'
+} from '../../../common/crawler'
+import { FeatureCrawler, PlaywrightCrawler } from '../../../common/crawler'
 
 type E2ECrawlingContext = PlaywrightCrawlingContext<E2EHealthcheckRunConfig>
 

@@ -1,5 +1,5 @@
 import type { UdemyAffiliateAPIMetadata } from '../../schema'
-import type { UdemyCourseResponse } from '../common/udemy'
+import type { UdemyCourseResponse } from './common'
 
 interface GetUdemyMetadataOptions {
   url: string

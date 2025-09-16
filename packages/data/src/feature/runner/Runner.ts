@@ -4,22 +4,17 @@ import type {
   FeatureExtractionResultData,
   FeatureExtractionResultDetailData,
 } from '../schema'
-import type { Constructor } from './crawler'
+import type { Constructor } from '../../common/crawler'
+import { RequestQueue } from '../../common/crawler'
 import {
-  PdfFileCrawler,
   HttpCrawler,
   E2ECrawler,
   ZenscrapeCrawler,
-  YoutubeDataApiCrawler,
-  UdemyAffiliateApiCrawler,
-  RequestQueue,
-} from './crawler'
-import {
   getHtmlMetadata,
-  getPdfMetadata,
-  getYoutubeDataAPIV3Metadata,
-  getUdemyMetadata,
-} from './scraper'
+} from './html'
+import { UdemyAffiliateApiCrawler, getUdemyMetadata } from './udemy'
+import { PdfFileCrawler, getPdfMetadata } from './pdf'
+import { YoutubeDataApiCrawler, getYoutubeDataAPIV3Metadata } from './youtube'
 
 type Crawler =
   | PdfFileCrawler

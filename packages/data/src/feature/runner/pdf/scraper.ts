@@ -1,11 +1,11 @@
+import type { PDFMetadata } from '../../schema'
 import {
   mapNullable,
   coalesce,
   toNullableArray,
 } from '../../../common/nullable'
-import { getPdfDocumentMetadata } from '../common/pdf'
-import type { PdfFileCrawlerResult } from '../crawler/PdfFile'
-import type { PDFMetadata } from '../../schema'
+import { getPdfDocumentMetadata } from './common'
+import type { PdfFileCrawlerResult } from './crawler'
 
 const metadataToString = (
   value: string | string[] | Record<string, string>,
@@ -51,8 +51,6 @@ export const getPdfMetadata = async ({
   source: { file, filename },
 }: GetPdfMetadataOptions): Promise<PDFMetadata> => {
   const { info, metadata } = await getPdfDocumentMetadata(file)
-
-  console.log({ info, metadata })
 
   const title = coalesce(toNullableArray(metadata?.get('dc:title'), info.Title))
 

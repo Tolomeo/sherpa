@@ -1,7 +1,7 @@
 import { Request } from 'crawlee'
 import type { Dictionary, BasicCrawler } from 'crawlee'
 // import formatHTML from 'html-format'
-import { Deferred } from '../../../common/defer'
+import { Deferred } from './defer'
 
 export type {
   Constructor,

@@ -1,7 +1,10 @@
 import type { ZenscrapeHealthcheckRunConfig } from '../../../../types'
 import { wait } from '../../../common/defer'
-import { FeatureCrawler, BasicCrawler } from './common'
-import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
+import { FeatureCrawler, BasicCrawler } from '../../../common/crawler'
+import type {
+  BasicCrawlerOptions,
+  BasicCrawlingContext,
+} from '../../../common/crawler'
 
 type ZenscrapeCrawlingContext =
   BasicCrawlingContext<ZenscrapeHealthcheckRunConfig>

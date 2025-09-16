@@ -1,5 +1,8 @@
-import type { BasicCrawlerOptions, BasicCrawlingContext } from './common'
-import { FeatureCrawler, BasicCrawler } from './common'
+import type {
+  BasicCrawlerOptions,
+  BasicCrawlingContext,
+} from '../../../common/crawler'
+import { FeatureCrawler, BasicCrawler } from '../../../common/crawler'
 
 export interface PdfFileCrawlerResult {
   file: Buffer
@@ -22,7 +25,7 @@ export default class PdfFileCrawler extends FeatureCrawler<
   }
 
   async requestHandler({ request, sendRequest }: BasicCrawlingContext) {
-		const filename = request.url.split('/').pop()!
+    const filename = request.url.split('/').pop()!
 
     try {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- adapted from the official docs https://crawlee.dev/docs/guides/got-scraping#sendrequest-api
