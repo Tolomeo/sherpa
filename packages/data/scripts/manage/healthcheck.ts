@@ -35,42 +35,62 @@ export const scrapeResourceData = async (
       return retry ? repeat : end
     }
 
-    let title
+    let title: string | null = null
+    let source: string | null = null
 
     switch (result.detail.source) {
-      case 'PdfFile':
+      case 'PdfFile': {
         title = result.detail.metadata.title
+
+        if (result.detail.metadata.publisher) {
+          source = await command.choice(
+            `Choose source`,
+            result.detail.metadata.publisher,
+          )
+        }
+
         break
+      }
       case 'Html': {
         const titles = Object.values(result.detail.metadata.title).filter(
           (t) => t !== null,
         )
 
-        if (!titles.length) {
-          log.error(`No available titles found`)
-          break
+        if (titles.length) {
+          title = await command.choice(`Choose title`, titles)
         }
 
-        title = await command.choice(`Choose title`, titles)
+        const publishers = Object.values(
+          result.detail.metadata.publisher,
+        ).filter((p) => p !== null)
+
+        if (publishers.length) {
+          source = await command.choice(`Choose source`, publishers)
+        }
+
         break
       }
       case 'YoutubeDataAPIV3':
         title = result.detail.metadata.title
+        source = result.detail.metadata.publisher
         break
       case 'UdemyAffiliateAPI':
         title = result.detail.metadata.title
+        source = result.detail.metadata.publisher
     }
 
     if (!title) {
       return end
     }
 
-    const { hostname, pathname } = new URL(url)
-    const sourceHostname = hostname.replace(/^www./, '')
-    const source =
-      sourceHostname === 'github.com'
-        ? `${sourceHostname}/${pathname.split('/')[1]}`
-        : sourceHostname
+    if (!source) {
+      const { hostname, pathname } = new URL(url)
+      const sourceHostname = hostname.replace(/^www./, '')
+      source =
+        sourceHostname === 'github.com'
+          ? `${sourceHostname}/${pathname.split('/')[1]}`
+          : sourceHostname
+    }
 
     data = { title, source }
 
