@@ -2,7 +2,7 @@
 import NEDB, { type Document } from '@seald-io/nedb'
 import type { ZodDiscriminatedUnion, ZodObject } from 'zod'
 
-type Nullable<T> = T | null
+// type Nullable<T> = T | null
 
 /* type IsAny<Type, ResultIfAny, ResultIfNotAny> = true extends false & Type
   ? ResultIfAny
