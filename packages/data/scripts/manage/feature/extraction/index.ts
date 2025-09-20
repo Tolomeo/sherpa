@@ -1,5 +1,6 @@
 import { command } from '../../../common'
-import run, { cliOption } from './run'
+import { InvalidOptionError } from '../../../common/command'
+import run, { args } from './run'
 
 const cmd = command
   .create()
@@ -13,8 +14,9 @@ cmd
     '-t, --trigger <trigger>',
     'Feature extraction trigger origin',
   )
-  .action((options: { trigger: string }) =>
-    run(cliOption.trigger(options.trigger)),
-  )
+  .action((options: { trigger: string }) => {
+    const trigger = args.trigger(options.trigger, InvalidOptionError)
+    return run(trigger)
+  })
 
 export default cmd
