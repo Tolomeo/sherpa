@@ -15,7 +15,7 @@
     "check:types": "turbo run check:types",
     "test": "turbo run test",
     "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
-    "data:manage": "npm run manage --workspace=@sherpa/data --"
+    "data:manage": "npm run manage --workspace=@sherpa/data -- ${npm_config_argv}"
   },
   "devDependencies": {
     "@sherpa/configs": "^0.0.0",

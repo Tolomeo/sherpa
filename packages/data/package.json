@@ -15,7 +15,7 @@
     }
   },
   "scripts": {
-    "manage": "tsx \"scripts/manage\" --",
+    "manage": "tsx \"scripts/manage\"",
     "prebuild": "shx rm -rf \"dist\"",
     "build": "tsx \"./scripts/build.ts\"",
     "check:lint": "eslint \"types\" \"src\" \"scripts\"",
