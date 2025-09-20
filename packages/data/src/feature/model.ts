@@ -2,21 +2,26 @@ import type {
   FeatureExtractionDocument,
   FeatureExtractionResultDocument,
 } from './store'
-import type { FeatureExtractionResultData } from './schema'
+import type {
+  FeatureExtractionData,
+  FeatureExtractionResultData,
+} from './schema'
 import Db from './store'
 
 const toDateOnly = (date: Date) =>
   new Date(date.getFullYear(), date.getMonth(), date.getDate())
 
-export const create = async () => {
-  const date = toDateOnly(new Date())
+export const create = async (data: FeatureExtractionData) => {
+  data.date = toDateOnly(data.date)
 
-  const existingDoc = await getByDate(date)
+  const existingDoc = await getByDate(data.date)
   if (existingDoc) {
-    throw new Error(`Feature DB already exists for date ${date.toISOString()}`)
+    throw new Error(
+      `Feature DB already exists for date ${data.date.toISOString()}`,
+    )
   }
 
-  const doc = await Db.getInstance().then((db) => db.insertOne({ date }))
+  const doc = await Db.getInstance().then((db) => db.insertOne(data))
 
   return new FeatureExtraction(doc)
 }
@@ -49,7 +54,7 @@ class FeatureExtraction {
   async setResult(data: FeatureExtractionResultData) {
     const { _id: id } = this.document
 
-    return Db.getResultInstance(id).then(async (resultsDb) => {
+    return Db.getExtractionInstance(id).then(async (resultsDb) => {
       await resultsDb.insertOne(data)
     })
   }
@@ -57,7 +62,7 @@ class FeatureExtraction {
   async setResults(data: Array<FeatureExtractionResultData>) {
     const { _id: id } = this.document
 
-    return Db.getResultInstance(id).then(async (resultsDb) => {
+    return Db.getExtractionInstance(id).then(async (resultsDb) => {
       await resultsDb.insertAll(data)
     })
   }
@@ -65,7 +70,7 @@ class FeatureExtraction {
   async getResults() {
     const { _id: id } = this.document
 
-    return Db.getResultInstance(id).then(async (resultsDb) => {
+    return Db.getExtractionInstance(id).then(async (resultsDb) => {
       const resultDocs = await resultsDb.findAll()
 
       return resultDocs.map((doc) => new FeatureExtractionResult(doc))

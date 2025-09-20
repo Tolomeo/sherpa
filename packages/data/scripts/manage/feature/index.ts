@@ -1,5 +1,5 @@
 import { command } from '../../common'
-import extract from './extract'
+import extraction from './extraction'
 
 const cmd = command
   .create()
@@ -7,8 +7,8 @@ const cmd = command
   .description('Manage sherpa feature data')
 
 cmd
-  .command('extract')
+  .command('extraction')
   .description('Extract sherpa feature data')
-  .action(extract)
+  .action(extraction)
 
 export default cmd

@@ -2,7 +2,10 @@
 import * as path from 'node:path'
 import * as url from 'node:url'
 import Db, { type Document } from '../common/db'
-import type { FeatureExtractionData, FeatureExtractionResultData } from './schema'
+import type {
+  FeatureExtractionData,
+  FeatureExtractionResultData,
+} from './schema'
 import {
   FeatureExtractionDataSchema,
   FeatureExtractionResultDataSchema,
@@ -15,10 +18,11 @@ const dbFile = path.join(
 
 const resultsDbDir = path.join(
   path.dirname(url.fileURLToPath(import.meta.url)),
-  'result',
+  'extraction',
 )
 
-export type FeatureExtractionResultDocument = Document<FeatureExtractionResultData>
+export type FeatureExtractionResultDocument =
+  Document<FeatureExtractionResultData>
 
 export type FeatureExtractionDocument = Document<FeatureExtractionData>
 
@@ -29,7 +33,7 @@ const FeatureExtractionResultDataStore = new Map<
   Db<typeof FeatureExtractionResultDataSchema>
 >()
 
-const getResultInstance = async (resultId: string) => {
+const getExtractionInstance = async (resultId: string) => {
   const existingResultDataStore = FeatureExtractionResultDataStore.get(resultId)
 
   if (existingResultDataStore) return existingResultDataStore
@@ -56,5 +60,5 @@ const getInstance = async () => {
 
 export default {
   getInstance,
-  getResultInstance,
+  getExtractionInstance,
 }

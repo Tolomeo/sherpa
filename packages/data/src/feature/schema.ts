@@ -160,6 +160,7 @@ export type FeatureExtractionResultData = z.infer<
 
 export const FeatureExtractionDataSchema = z
   .object({
+    trigger: z.enum(['manual', 'scheduled']),
     date: z.date(),
   })
   .strict()
