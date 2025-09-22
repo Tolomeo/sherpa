@@ -18,18 +18,18 @@ export const getParents = async () => {
   const docs = await TopicsStore.getInstance().then((store) =>
     store.findAll({ name: /^[^.]+$/ }),
   )
-  const paths = docs.map((p) => new Topic(p))
+  const topics = docs.map((p) => new Topic(p))
 
-  return paths
+  return topics
 }
 
 export const getAllByName = async (name: string) => {
   const docs = await TopicsStore.getInstance().then((store) =>
     store.findAll({ name: new RegExp(name, 'i') }),
   )
-  const paths = docs.map((p) => new Topic(p))
+  const topics = docs.map((p) => new Topic(p))
 
-  return paths
+  return topics
 }
 
 export const getByName = async (name: string) => {
@@ -40,6 +40,19 @@ export const getByName = async (name: string) => {
   if (!doc) return null
 
   return new Topic(doc)
+}
+
+export const getByNames = async (names: string[]) => {
+  const docs = await TopicsStore.getInstance().then((store) =>
+    store.findAll({
+      name: {
+        $in: names,
+      },
+    }),
+  )
+  const topics = docs.map((d) => new Topic(d))
+
+  return topics
 }
 
 export const getAllByResourceId = async (resourceId: string) => {

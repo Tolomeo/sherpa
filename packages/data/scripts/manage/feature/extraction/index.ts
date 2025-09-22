@@ -1,6 +1,6 @@
 import { command } from '../../../common'
 import { InvalidOptionError } from '../../../common/command'
-import run, { args as runArgs } from './run'
+import run from './run'
 
 const cmd = command
   .create()
@@ -15,10 +15,10 @@ cmd
     'Feature extraction trigger origin',
   )
   .action((args: string[], options: { trigger: string }) => {
-    const trigger = runArgs.trigger(options.trigger, {
+    const trigger = run.args.trigger(options.trigger, {
       validationError: InvalidOptionError,
     })
-    const topics = runArgs.topics(args, {
+    const topics = run.args.topics(args, {
       validationError: InvalidOptionError,
     })
     return run(trigger, topics)
