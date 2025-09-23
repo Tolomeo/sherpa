@@ -26,17 +26,21 @@ const run = async (
   })
   const featureExtractionRunner = new FeatureExtractionRunner()
 
+  const extractedResources = new Set<string>()
+
+  // NB: nested loops
   for (const topic of topics) {
-    const resourceIds = await topic.getResources()
+    const topicResourceIds = await topic.getResources()
+    const resourceIds = topicResourceIds.filter(
+      (r) => !extractedResources.has(r),
+    )
     const resources = await getResourcesById(...resourceIds)
 
-    const results = await Promise.all(
-      resources.map((resource) => {
-        return featureExtractionRunner.run(resource.url, resource.healthcheck)
-      }),
-    )
+    const results = await featureExtractionRunner.runAll(resources)
 
     await featureExtractionRun.setResults(results)
+
+    resourceIds.forEach((r) => extractedResources.add(r))
   }
 
   await featureExtractionRunner.teardown()

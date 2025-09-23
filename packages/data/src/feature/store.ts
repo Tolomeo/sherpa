@@ -40,6 +40,7 @@ const getExtractionInstance = async (resultId: string) => {
 
   const resultDataStore = await Db.build(FeatureExtractionResultDataSchema, {
     filename: path.join(resultsDbDir, `${resultId}.jsonl`),
+    indexes: [{ fieldName: 'url', unique: true }],
   })
 
   FeatureExtractionResultDataStore.set(resultId, resultDataStore)

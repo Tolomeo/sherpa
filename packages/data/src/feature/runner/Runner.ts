@@ -132,6 +132,18 @@ class FeatureExtractionRunner {
     }
   }
 
+  async runAll(
+    requests: { url: string; healthcheck: HealthcheckStrategy }[],
+  ): Promise<FeatureExtractionResultData[]> {
+    const results = await Promise.all(
+      requests.map(({ url, healthcheck }) => {
+        return this.run(url, healthcheck)
+      }),
+    )
+
+    return results
+  }
+
   async teardown() {
     const runnersTeardown = Object.values(this.runners).map((runner: Crawler) =>
       runner.teardown(),
