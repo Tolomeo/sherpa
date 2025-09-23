@@ -9,6 +9,7 @@ import {
 } from '../../../../src/topic/model'
 import { getAllById as getResourcesById } from '../../../../src/resource/model'
 import { create as createFeatureExtraction } from '../../../../src/feature/model'
+import { log } from '../../../common'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- TODO create a global type utility
 type Constructor<T> = new (...args: any[]) => T
@@ -26,10 +27,18 @@ const run = async (
   })
   const featureExtractionRunner = new FeatureExtractionRunner()
 
+  log.lead(
+    `Extracting features for ${
+      topicNames ? topicNames.join(',') : 'all'
+    } topics`,
+  )
+
   const extractedResources = new Set<string>()
 
-  // NB: nested loops
+  // NB: beware of nested loops
   for (const topic of topics) {
+    log.lead(`Extracting features for "${topic.name}" resources`)
+
     const topicResourceIds = await topic.getResources()
     const resourceIds = topicResourceIds.filter(
       (r) => !extractedResources.has(r),
@@ -67,7 +76,7 @@ run.args = {
 
             return issue.message
           })
-          .join(',')
+          .join(', ')
 
         throw new ValidationError(`Topics value is invalid. ${errors}`)
       }
@@ -92,7 +101,7 @@ run.args = {
 
           return issue.message
         })
-        .join(',')
+        .join(', ')
 
       throw new ValidationError(`Trigger value is invalid. ${errors}`)
     }
