@@ -69,7 +69,7 @@ run.args = {
           })
           .join(',')
 
-        throw new ValidationError(`Trigger option invalid ${errors}`)
+        throw new ValidationError(`Topics value is invalid. ${errors}`)
       }
     }
 
@@ -94,7 +94,7 @@ run.args = {
         })
         .join(',')
 
-      throw new ValidationError(`Trigger option invalid ${errors}`)
+      throw new ValidationError(`Trigger value is invalid. ${errors}`)
     }
 
     return value as FeatureExtractionData['trigger']
