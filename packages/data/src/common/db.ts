@@ -173,6 +173,14 @@ interface RootFilterOperators<TSchema> {
   $comment?: string | Document */
 }
 
+interface CursorQuery<TSchema> {
+  sort?: {
+    [Property in Join<NestedPaths<WithId<TSchema>, []>, '.'>]?: 1 | -1
+  }
+  limit?: number
+  skip?: number
+}
+
 type StrictFilter<TSchema> =
   | Partial<TSchema>
   | ({
@@ -278,6 +286,29 @@ class Db<Schema extends DocumentSchema> {
     if (!doc) return null
 
     return doc
+  }
+
+  async query(
+    filter: StrictFilter<Schema['_output']>,
+    cursorQuery: CursorQuery<Schema['_output']>,
+  ) {
+    let cursor = this.db.findAsync(filter)
+
+    if (cursorQuery.sort) {
+      cursor = cursor.sort(cursorQuery.sort)
+    }
+
+    if (cursorQuery.skip) {
+      cursor = cursor.skip(cursorQuery.skip)
+    }
+
+    if (cursorQuery.limit) {
+      cursor = cursor.limit(cursorQuery.limit)
+    }
+
+    const docs: Document<Schema['_output']>[] = await cursor.execAsync()
+
+    return docs
   }
 
   async insertOne(insert: Schema['_output']) {

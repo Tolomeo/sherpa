@@ -1,3 +1,4 @@
+import { toDateOnly } from '../common/date'
 import type {
   FeatureExtractionDocument,
   FeatureExtractionResultDocument,
@@ -8,13 +9,10 @@ import type {
 } from './schema'
 import Db from './store'
 
-const toDateOnly = (date: Date) =>
-  new Date(date.getFullYear(), date.getMonth(), date.getDate())
-
-export const create = async (data: FeatureExtractionData) => {
+export const createExtraction = async (data: FeatureExtractionData) => {
   data.date = toDateOnly(data.date)
 
-  const existingDoc = await getByDate(data.date)
+  const existingDoc = await getExtractionByDate(data.date)
   if (existingDoc) {
     throw new Error(
       `Feature DB already exists for date ${data.date.toISOString()}`,
@@ -26,10 +24,28 @@ export const create = async (data: FeatureExtractionData) => {
   return new FeatureExtraction(doc)
 }
 
-export const getByDate = async (findDate: Date) => {
+export const getExtractionByDate = async (findDate: Date) => {
   const date = toDateOnly(findDate)
 
   const doc = await Db.getInstance().then((db) => db.findOne({ date }))
+
+  if (!doc) return null
+
+  return new FeatureExtraction(doc)
+}
+
+export const getLastExtraction = async () => {
+  const [doc] = await Db.getInstance().then((db) =>
+    db.query(
+      {},
+      {
+        sort: {
+          date: 1,
+        },
+        limit: 1,
+      },
+    ),
+  )
 
   if (!doc) return null
 
@@ -49,6 +65,10 @@ class FeatureExtraction {
 
   constructor(document: FeatureExtractionDocument) {
     this.document = document
+  }
+
+  get date() {
+    return this.document.date
   }
 
   async setResult(data: FeatureExtractionResultData) {

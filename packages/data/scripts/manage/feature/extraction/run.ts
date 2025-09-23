@@ -8,11 +8,11 @@ import {
   getParents as getAllParentTopics,
 } from '../../../../src/topic/model'
 import { getAllById as getResourcesById } from '../../../../src/resource/model'
-import { create as createFeatureExtraction } from '../../../../src/feature/model'
+import { createExtraction as createFeatureExtraction } from '../../../../src/feature/model'
 import { log } from '../../../common'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- TODO create a global type utility
-type Constructor<T> = new (...args: any[]) => T
+type Constructor<T, A extends any[] = any[]> = new (...args: A) => T
 
 const run = async (
   trigger: FeatureExtractionData['trigger'],
@@ -58,7 +58,9 @@ const run = async (
 run.args = {
   topics: (
     values: string[] | undefined,
-    options: { validationError?: Constructor<Error> } = {},
+    options: {
+      validationError?: Constructor<Error, [string, ...unknown[]]>
+    } = {},
   ) => {
     if (!values) return undefined
 
@@ -87,7 +89,9 @@ run.args = {
   },
   trigger: (
     value: string,
-    options: { validationError?: Constructor<Error> } = {},
+    options: {
+      validationError?: Constructor<Error, [string, ...unknown[]]>
+    } = {},
   ) => {
     const validation =
       FeatureExtractionDataSchema.shape.trigger.safeParse(value)
