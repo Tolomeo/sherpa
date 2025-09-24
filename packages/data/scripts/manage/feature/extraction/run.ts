@@ -37,7 +37,7 @@ const run = async (
 
   // NB: beware of nested loops
   for (const topic of topics) {
-    log.lead(`Extracting features for "${topic.name}" resources`)
+    log.lead(`Extracting features for "${topic.name}" topic`)
 
     const topicResourceIds = await topic.getResources()
     const resourceIds = topicResourceIds.filter(
@@ -46,6 +46,8 @@ const run = async (
     const resources = await getResourcesById(...resourceIds)
 
     const results = await featureExtractionRunner.runAll(resources)
+
+    log.lead(`Saving features for "${topic.name}" topic`)
 
     await featureExtractionRun.setResults(results)
 

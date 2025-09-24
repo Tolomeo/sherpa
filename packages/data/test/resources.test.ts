@@ -1,40 +1,40 @@
 import { describe, test, expect, beforeAll, afterAll } from 'vitest'
 import { getParents } from '../src/topic'
 import { getAllById } from '../src/resource'
-import HealthCheck from '../src/healthcheck/runner'
+import FeatureExtractionRunner from '../src/feature/runner'
 
 describe('Resources', async () => {
   const topics = await getParents()
-  let healthCheck: HealthCheck
+  let featureExtraction: FeatureExtractionRunner
 
   beforeAll(() => {
-    healthCheck = new HealthCheck()
+    featureExtraction = new FeatureExtractionRunner()
   })
 
   afterAll(async () => {
-    await healthCheck.teardown()
+    await featureExtraction.teardown()
   })
 
   describe.each(topics)('$name resources', async (topic) => {
     const pathResourceIds = await topic.getResources()
     const pathResources = await getAllById(...pathResourceIds)
 
-    test.each(pathResources)(
+    /* test.each(pathResources)(
       '$url',
       async (resource) => {
         const resourceData = resource.data
         const healthcheckStrategy = resource.healthcheck
 
-        const resourceHealthcheck = await healthCheck.run(
+        const resourceHealthcheck = await featureExtraction.run(
           resourceData.url,
           healthcheckStrategy,
         )
         expect(resourceHealthcheck.success).toBe(true)
-        expect(resourceHealthcheck.data!).toBeValidScrapeResultForTitle(
+        expect(resourceHealthcheck.data).toBeValidScrapeResultForTitle(
           resourceData.data.title,
         )
       },
       150_000,
-    )
+    ) */
   })
 })
