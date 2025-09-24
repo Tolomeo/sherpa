@@ -23,7 +23,7 @@ export {
 
 type Crawler = Pick<
   BasicCrawler,
-  'running' | 'run' | 'requestQueue' | 'addRequests' | 'teardown'
+  'running' | 'run' | 'requestQueue' | 'addRequests' | 'teardown' | 'stop'
 >
 
 export abstract class FeatureCrawler<
@@ -52,6 +52,7 @@ export abstract class FeatureCrawler<
   } */
 
   async teardown() {
+    this.crawler.stop()
     await this.crawler.requestQueue?.drop()
     await this.crawler.teardown()
     this.results.clear()
@@ -65,11 +66,7 @@ export abstract class FeatureCrawler<
     const deferred = new Deferred<O>()
     const request = new Request<I>({ url, userData })
 
-    if (this.crawler.running) {
-      this.crawler.addRequests([request]).catch((err) => deferred.reject(err))
-    } else {
-      this.crawler.run([request]).catch((err) => deferred.reject(err))
-    }
+    this.crawler.run([request]).catch((err) => deferred.reject(err))
 
     this.results.set(url, deferred)
     return deferred.promise
