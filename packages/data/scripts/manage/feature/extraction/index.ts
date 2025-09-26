@@ -8,20 +8,18 @@ const cmd = command
   .description('Extract sherpa feature data')
 
 cmd
-  .command('run [topic...]')
+  .command('run')
   .description('Extract sherpa feature data')
   .requiredOption(
     '-t, --trigger <trigger>',
     'Feature extraction trigger origin',
   )
-  .action((args: string[], options: { trigger: string }) => {
+  .action((options: { trigger: string }) => {
     const trigger = run.args.trigger(options.trigger, {
       validationError: InvalidOptionError,
     })
-    const topics = run.args.topics(args, {
-      validationError: InvalidOptionError,
-    })
-    return run(trigger, topics)
+
+    return run(trigger)
   })
 
 export default cmd

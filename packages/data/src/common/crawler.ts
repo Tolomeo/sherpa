@@ -66,7 +66,11 @@ export abstract class FeatureCrawler<
     const deferred = new Deferred<O>()
     const request = new Request<I>({ url, userData })
 
-    this.crawler.run([request]).catch((err) => deferred.reject(err))
+    this.crawler.addRequests([request]).catch((err) => deferred.reject(err))
+
+    if (!this.crawler.running) {
+      this.crawler.run().catch((err) => deferred.reject(err))
+    }
 
     this.results.set(url, deferred)
     return deferred.promise

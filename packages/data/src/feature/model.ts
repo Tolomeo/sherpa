@@ -82,9 +82,9 @@ class FeatureExtraction {
   async setResults(data: Array<FeatureExtractionResultData>) {
     const { _id: id } = this.document
 
-    return Db.getExtractionInstance(id).then(async (resultsDb) => {
-      await resultsDb.insertAll(data)
-    })
+    return Db.getExtractionInstance(id).then((resultsDb) =>
+      resultsDb.insertAll(data),
+    )
   }
 
   async getResults() {

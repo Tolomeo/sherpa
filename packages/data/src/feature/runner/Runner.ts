@@ -129,6 +129,8 @@ class FeatureExtractionRunner {
       }
     } catch (err) {
       return this.error(url, err as Error)
+    } finally {
+      console.log(url)
     }
   }
 
@@ -145,10 +147,9 @@ class FeatureExtractionRunner {
   }
 
   async teardown() {
-    const runnersTeardown = Object.values(this.runners).map((runner: Crawler) =>
-      runner.teardown(),
-    )
-    await Promise.all(runnersTeardown)
+    for (const runner of this.runners.values()) {
+      await runner.teardown()
+    }
 
     this.runners.clear()
   }
