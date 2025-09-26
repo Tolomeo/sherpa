@@ -52,7 +52,7 @@ export default class ZenscrapeCrawler extends FeatureCrawler<
 
   async requestHandler({ request, sendRequest }: ZenscrapeCrawlingContext) {
     try {
-      const { ZENSCRAPE_API_KEY: apiKey } = import.meta.env
+      const apiKey = process.env.ZENSCRAPE_API_KEY
 
       if (!apiKey) {
         request.noRetry = true
