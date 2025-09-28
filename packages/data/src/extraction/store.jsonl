@@ -1,2 +1,3 @@
+{"trigger":"manual","date":{"$$date":1759014000000},"_id":"4ChBR8mzZL7QFcsc"}
 {"trigger":"manual","date":{"$$date":1758841200000},"_id":"B40qYojrYRTqYj3r"}
 {"$$indexCreated":{"fieldName":"date","unique":true,"sparse":false}}

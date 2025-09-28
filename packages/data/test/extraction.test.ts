@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { getLastExtraction } from '../src/feature/model'
+import { getLastExtraction } from '../src/extraction/model'
 import { getAll as getAllResources } from '../src/resource/model'
 
 describe('Data extraction', async () => {

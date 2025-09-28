@@ -1,14 +1,14 @@
 import { describe, test, expect, beforeAll, afterAll } from 'vitest'
 import { getParents } from '../src/topic'
 import { getAllById } from '../src/resource'
-import FeatureExtractionRunner from '../src/feature/runner'
+import ExtractionRunner from '../src/extraction/runner'
 
 describe('Resources', async () => {
   const topics = await getParents()
-  let featureExtraction: FeatureExtractionRunner
+  let featureExtraction: ExtractionRunner
 
   beforeAll(() => {
-    featureExtraction = new FeatureExtractionRunner()
+    featureExtraction = new ExtractionRunner()
   })
 
   afterAll(async () => {

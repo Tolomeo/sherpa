@@ -1,4 +1,4 @@
-import FeatureExtraction from '../../src/feature/runner'
+import ExtractionRunner from '../../src/extraction/runner'
 import { log, command, util } from '../common'
 import type { ResourceData, HealthcheckStrategy } from '../../types'
 import { HealthCheckStrategies } from '../../types'
@@ -21,7 +21,7 @@ export const scrapeResourceData = async (
   url: ResourceData['url'],
   strategy: HealthcheckStrategy = util.clone(HealthCheckStrategies.Http),
 ) => {
-  const featureExtraction = new FeatureExtraction()
+  const featureExtraction = new ExtractionRunner()
   let data: { title: string; source: string } | undefined
 
   await command.loop(async ({ repeat, end }) => {

@@ -108,61 +108,53 @@ export type UdemyAffiliateAPIMetadata = z.infer<
   typeof UdemyAffiliateAPIMetadataSchema
 >
 
-export const FeatureExtractionResultDetailDataSchema = z.discriminatedUnion(
-  'source',
-  [
-    z.object({
-      source: z.literal('PdfFile'),
-      metadata: PDFMetadataSchema,
-    }),
-    z.object({
-      source: z.literal('Html'),
-      metadata: HtmlMetadataSchema,
-    }),
-    z.object({
-      source: z.literal('YoutubeDataAPIV3'),
-      metadata: YoutubeDataAPIV3MetadataSchema,
-    }),
-    z.object({
-      source: z.literal('UdemyAffiliateAPI'),
-      metadata: UdemyAffiliateAPIMetadataSchema,
-    }),
-  ],
-)
+export const ExtractionResultDetailDataSchema = z.discriminatedUnion('source', [
+  z.object({
+    source: z.literal('PdfFile'),
+    metadata: PDFMetadataSchema,
+  }),
+  z.object({
+    source: z.literal('Html'),
+    metadata: HtmlMetadataSchema,
+  }),
+  z.object({
+    source: z.literal('YoutubeDataAPIV3'),
+    metadata: YoutubeDataAPIV3MetadataSchema,
+  }),
+  z.object({
+    source: z.literal('UdemyAffiliateAPI'),
+    metadata: UdemyAffiliateAPIMetadataSchema,
+  }),
+])
 
-export type FeatureExtractionResultDetailData = z.infer<
-  typeof FeatureExtractionResultDetailDataSchema
+export type ExtractionResultDetailData = z.infer<
+  typeof ExtractionResultDetailDataSchema
 >
 
-export const FeatureExtractionResultDataSchema = z.discriminatedUnion(
-  'success',
-  [
-    z
-      .object({
-        url: z.string(),
-        success: z.literal(true),
-        detail: FeatureExtractionResultDetailDataSchema,
-      })
-      .strict(),
-    z
-      .object({
-        url: z.string(),
-        success: z.literal(false),
-        error: z.string(),
-      })
-      .strict(),
-  ],
-)
+export const ExtractionResultDataSchema = z.discriminatedUnion('success', [
+  z
+    .object({
+      url: z.string(),
+      success: z.literal(true),
+      detail: ExtractionResultDetailDataSchema,
+    })
+    .strict(),
+  z
+    .object({
+      url: z.string(),
+      success: z.literal(false),
+      error: z.string(),
+    })
+    .strict(),
+])
 
-export type FeatureExtractionResultData = z.infer<
-  typeof FeatureExtractionResultDataSchema
->
+export type ExtractionResultData = z.infer<typeof ExtractionResultDataSchema>
 
-export const FeatureExtractionDataSchema = z
+export const ExtractionDataSchema = z
   .object({
     trigger: z.enum(['manual', 'scheduled']),
     date: z.date(),
   })
   .strict()
 
-export type FeatureExtractionData = z.infer<typeof FeatureExtractionDataSchema>
+export type ExtractionData = z.infer<typeof ExtractionDataSchema>

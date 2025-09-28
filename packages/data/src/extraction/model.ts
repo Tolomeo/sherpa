@@ -1,15 +1,12 @@
 import { toDateOnly } from '../common/date'
 import type {
-  FeatureExtractionDocument,
-  FeatureExtractionResultDocument,
+  ExtractionDocument,
+  ExtractionResultDocument,
 } from './store'
-import type {
-  FeatureExtractionData,
-  FeatureExtractionResultData,
-} from './schema'
+import type { ExtractionData, ExtractionResultData } from './schema'
 import Db from './store'
 
-export const createExtraction = async (data: FeatureExtractionData) => {
+export const createExtraction = async (data: ExtractionData) => {
   data.date = toDateOnly(data.date)
 
   const existingDoc = await getExtractionByDate(data.date)
@@ -53,7 +50,7 @@ export const getLastExtraction = async () => {
 }
 
 class FeatureExtractionResult {
-  constructor(private document: FeatureExtractionResultDocument) {}
+  constructor(private document: ExtractionResultDocument) {}
 
   get url() {
     return this.document.url
@@ -61,9 +58,9 @@ class FeatureExtractionResult {
 }
 
 class FeatureExtraction {
-  private document: FeatureExtractionDocument
+  private document: ExtractionDocument
 
-  constructor(document: FeatureExtractionDocument) {
+  constructor(document: ExtractionDocument) {
     this.document = document
   }
 
@@ -71,7 +68,7 @@ class FeatureExtraction {
     return this.document.date
   }
 
-  async setResult(data: FeatureExtractionResultData) {
+  async setResult(data: ExtractionResultData) {
     const { _id: id } = this.document
 
     return Db.getExtractionInstance(id).then(async (resultsDb) => {
@@ -79,7 +76,7 @@ class FeatureExtraction {
     })
   }
 
-  async setResults(data: Array<FeatureExtractionResultData>) {
+  async setResults(data: Array<ExtractionResultData>) {
     const { _id: id } = this.document
 
     return Db.getExtractionInstance(id).then((resultsDb) =>

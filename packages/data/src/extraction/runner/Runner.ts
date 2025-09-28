@@ -1,8 +1,8 @@
 import { randomUUID } from 'node:crypto'
 import type { HealthcheckStrategy } from '../../../types/healthcheck'
 import type {
-  FeatureExtractionResultData,
-  FeatureExtractionResultDetailData,
+  ExtractionResultData,
+  ExtractionResultDetailData,
 } from '../schema'
 import type { Constructor } from '../../common/crawler'
 import { RequestQueue } from '../../common/crawler'
@@ -24,7 +24,7 @@ type Crawler =
   | YoutubeDataApiCrawler
   | UdemyAffiliateApiCrawler
 
-class FeatureExtractionRunner {
+class ExtractionRunner {
   private runners = new Map<Constructor<Crawler>, Crawler>()
 
   async getCrawler<R extends Crawler>(Runner: Constructor<R>): Promise<R> {
@@ -38,7 +38,7 @@ class FeatureExtractionRunner {
     return runnerInstance
   }
 
-  private success(url: string, detail: FeatureExtractionResultDetailData) {
+  private success(url: string, detail: ExtractionResultDetailData) {
     return {
       url,
       success: true as const,
@@ -57,7 +57,7 @@ class FeatureExtractionRunner {
   async run(
     url: string,
     strategy: HealthcheckStrategy,
-  ): Promise<FeatureExtractionResultData> {
+  ): Promise<ExtractionResultData> {
     try {
       switch (strategy.runner) {
         case 'PdfFile': {
@@ -129,14 +129,12 @@ class FeatureExtractionRunner {
       }
     } catch (err) {
       return this.error(url, err as Error)
-    } finally {
-      console.log(url)
     }
   }
 
   async runAll(
     requests: { url: string; healthcheck: HealthcheckStrategy }[],
-  ): Promise<FeatureExtractionResultData[]> {
+  ): Promise<ExtractionResultData[]> {
     const results = await Promise.all(
       requests.map(({ url, healthcheck }) => {
         return this.run(url, healthcheck)
@@ -155,4 +153,4 @@ class FeatureExtractionRunner {
   }
 }
 
-export default FeatureExtractionRunner
+export default ExtractionRunner
