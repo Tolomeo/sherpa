@@ -1,8 +1,5 @@
 import { toDateOnly } from '../common/date'
-import type {
-  ExtractionDocument,
-  ExtractionResultDocument,
-} from './store'
+import type { ExtractionDocument, ExtractionResultDocument } from './store'
 import type { ExtractionData, ExtractionResultData } from './schema'
 import Db from './store'
 
@@ -18,7 +15,7 @@ export const createExtraction = async (data: ExtractionData) => {
 
   const doc = await Db.getInstance().then((db) => db.insertOne(data))
 
-  return new FeatureExtraction(doc)
+  return new Extraction(doc)
 }
 
 export const getExtractionByDate = async (findDate: Date) => {
@@ -28,7 +25,7 @@ export const getExtractionByDate = async (findDate: Date) => {
 
   if (!doc) return null
 
-  return new FeatureExtraction(doc)
+  return new Extraction(doc)
 }
 
 export const getLastExtraction = async () => {
@@ -46,18 +43,24 @@ export const getLastExtraction = async () => {
 
   if (!doc) return null
 
-  return new FeatureExtraction(doc)
+  return new Extraction(doc)
 }
 
-class FeatureExtractionResult {
+class ExtractionResult {
   constructor(private document: ExtractionResultDocument) {}
 
+  get data() {
+    const { _id, ...data } = this.document
+
+    return data
+  }
+
   get url() {
-    return this.document.url
+    return this.data.url
   }
 }
 
-class FeatureExtraction {
+class Extraction {
   private document: ExtractionDocument
 
   constructor(document: ExtractionDocument) {
@@ -84,13 +87,25 @@ class FeatureExtraction {
     )
   }
 
+  async getResult(url: ExtractionResultData['url']) {
+    const { _id: id } = this.document
+
+    return Db.getExtractionInstance(id).then(async (resultsDb) => {
+      const resultDoc = await resultsDb.findOne({ url })
+
+      if (!resultDoc) throw new Error(`No extraction results for url "${url}"`)
+
+      return new ExtractionResult(resultDoc)
+    })
+  }
+
   async getResults() {
     const { _id: id } = this.document
 
     return Db.getExtractionInstance(id).then(async (resultsDb) => {
       const resultDocs = await resultsDb.findAll()
 
-      return resultDocs.map((doc) => new FeatureExtractionResult(doc))
+      return resultDocs.map((doc) => new ExtractionResult(doc))
     })
   }
 }
