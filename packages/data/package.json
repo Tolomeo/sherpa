@@ -22,7 +22,7 @@
     "check:types": "tsc",
     "test:topics": "vitest topics",
     "test:resources": "vitest resources",
-    "test:features": "vitest features"
+    "test:extraction": "vitest extraction"
   },
   "devDependencies": {
     "@metascraper/helpers": "^5.46.5",
