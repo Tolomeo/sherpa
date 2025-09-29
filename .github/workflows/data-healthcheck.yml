@@ -10,11 +10,17 @@ on:
 
 jobs:
   Resources-Healthcheck:
-    # Runs only if the PR is labeled with 'data:healthcheck'
-    if: contains(github.event.pull_request.labels.*.name, 'data:healthcheck')
+    # Run only if the workflow was manually triggered
+    # Or if a PR was labeled with 'data:healthcheck'
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      contains(github.event.pull_request.labels.*.name, 'data:healthcheck')
+
     # Prevents hanging processes from using all CI minutes
     timeout-minutes: 10
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Setup Node
         uses: actions/setup-node@v5
