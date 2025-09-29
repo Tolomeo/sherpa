@@ -211,6 +211,7 @@ class Db<Schema extends DocumentSchema> {
     const { filename, indexes = [] } = options
     const db = new NEDB({ filename, autoload: true })
 
+		// TODO: create async 'chain' utility
     await indexes.reduce<Promise<void>>(
       (promiseChain, { fieldName, unique, sparse, expireAfterSeconds }) => {
         return promiseChain.then(() =>
@@ -281,10 +282,11 @@ class Db<Schema extends DocumentSchema> {
   }
 
   async findOne(filter: StrictFilter<Schema['_output']>) {
-    const doc = await this.db.findOneAsync(filter)
+    const doc: Document<Schema['_output']> = await this.db.findOneAsync(filter)
 
     if (!doc) return null
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return -- Not sure why ts thinks this is 'any'
     return doc
   }
 
@@ -311,17 +313,20 @@ class Db<Schema extends DocumentSchema> {
     return docs
   }
 
-  async insertOne(insert: Schema['_output']) {
+  async insertOne(
+    insert: Schema['_output'],
+  ): Promise<Document<Schema['_output']>> {
     const validation = this.config.schema.safeParse(insert)
 
     if (!validation.success) {
       throw validation.error
     }
 
-    const doc = await this.db.insertAsync<Schema['_output']>(insert)
+    const doc = await this.db.insertAsync(insert)
 
     await this.db.compactDatafileAsync()
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return -- Not sure why ts thinks this is 'any'
     return doc
   }
 
@@ -349,6 +354,7 @@ class Db<Schema extends DocumentSchema> {
     await this.db.updateAsync({ _id: id }, update)
     await this.db.compactDatafileAsync()
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return -- Not sure why ts thinks this is 'any'
     return {
       ...update,
       _id: id,
