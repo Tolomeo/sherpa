@@ -1,8 +1,8 @@
-import ExtractionRunner from '../../../../src/extraction/runner'
-import type { ExtractionData } from '../../../../src/extraction/schema'
-import { ExtractionDataSchema } from '../../../../src/extraction/schema'
-import { createExtraction as createFeatureExtraction } from '../../../../src/extraction/model'
-import { getAll as getAllResources } from '../../../../src/resource/model'
+import ExtractionRunner from '../../../src/extraction/runner'
+import type { ExtractionData } from '../../../src/extraction/schema'
+import { ExtractionDataSchema } from '../../../src/extraction/schema'
+import { createExtraction as createFeatureExtraction } from '../../../src/extraction/model'
+import { getAll as getAllResources } from '../../../src/resource/model'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- TODO create a global type utility
 type Constructor<T, A extends any[] = any[]> = new (...args: A) => T

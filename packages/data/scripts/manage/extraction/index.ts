@@ -1,5 +1,5 @@
-import { command } from '../../../common'
-import { InvalidOptionError } from '../../../common/command'
+import { command } from '../../common'
+import { InvalidOptionError } from '../../common/command'
 import run from './run'
 
 const cmd = command

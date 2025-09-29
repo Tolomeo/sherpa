@@ -23,7 +23,7 @@ jobs:
 
       # - name: Playwright
       #   run: npx playwright install
-      - name: Workflow trigger detection
+      - name: Extraction trigger detection
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "EXTRACTION_TRIGGER=manual" >> $GITHUB_ENV
@@ -32,7 +32,7 @@ jobs:
           fi
 
       - name: Data extraction
-        run: npm run data:manage -- feature extraction run --trigger "$EXTRACTION_TRIGGER"
+        run: npm run data:manage -- extraction run --trigger "$EXTRACTION_TRIGGER"
         env:
           CRAWLEE_LOG_LEVEL: WARNING
           ZENSCRAPE_API_KEY: ${{ secrets.ZENSCRAPE_API_KEY }}
