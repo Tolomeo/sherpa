@@ -1,0 +1,41 @@
+name: Data extraction
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 15 * *' # At 12:00 AM, on day 15 of the month
+
+jobs:
+  Health-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 18
+
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: NPM Install
+        run: npm install
+
+      # - name: Playwright
+      #   run: npx playwright install
+      - name: Workflow trigger detection
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "EXTRACTION_TRIGGER=manual" >> $GITHUB_ENV
+          else
+            echo "EXTRACTION_TRIGGER=scheduled" >> $GITHUB_ENV
+          fi
+
+      - name: Data extraction
+        run: npm run data:manage -- feature extraction run --trigger "$EXTRACTION_TRIGGER"
+        env:
+          CRAWLEE_LOG_LEVEL: WARNING
+          ZENSCRAPE_API_KEY: ${{ secrets.ZENSCRAPE_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          UDEMY_AFFILIATE_API_CLIENT_ID: ${{ secrets.UDEMY_AFFILIATE_API_CLIENT_ID }}
+          UDEMY_AFFILIATE_API_CLIENT_SECRET: ${{ secrets.UDEMY_AFFILIATE_API_CLIENT_SECRET }}
