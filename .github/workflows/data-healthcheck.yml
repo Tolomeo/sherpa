@@ -1,0 +1,31 @@
+name: Resources healthcheck
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - labeled
+
+jobs:
+  Resources-Healthcheck:
+    # Runs only if the PR is labeled with 'data:healthcheck'
+    if: contains(github.event.pull_request.labels.*.name, 'data:healthcheck')
+    # Prevents hanging processes from using all CI minutes
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 18
+
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: NPM Install
+        run: npm install
+
+      - name: Resources healthcheck
+        run: npm run test:resources --workspace=@sherpa/data
