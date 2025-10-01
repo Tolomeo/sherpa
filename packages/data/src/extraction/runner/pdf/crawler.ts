@@ -1,0 +1,44 @@
+import type {
+  BasicCrawlerOptions,
+  BasicCrawlingContext,
+} from '../../../common/crawler'
+import { FeatureCrawler, BasicCrawler } from '../../../common/crawler'
+
+export interface PdfFileCrawlerResult {
+  file: Buffer
+  filename: string
+}
+
+export default class PdfFileCrawler extends FeatureCrawler<
+  BasicCrawler,
+  PdfFileCrawlerResult
+> {
+  constructor(crawlerOptions: Partial<BasicCrawlerOptions>) {
+    super(
+      new BasicCrawler({
+        ...crawlerOptions,
+        retryOnBlocked: true,
+        requestHandler: (...args) => this.requestHandler(...args),
+        failedRequestHandler: (...args) => this.failedRequestHandler(...args),
+      }),
+    )
+  }
+
+  async requestHandler({ request, sendRequest }: BasicCrawlingContext) {
+    const filename = request.url.split('/').pop()!
+
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- adapted from the official docs https://crawlee.dev/docs/guides/got-scraping#sendrequest-api
+      const { body: file }: { body: Buffer } = await sendRequest({
+        responseType: 'buffer',
+      })
+      this.success(request, { filename, file })
+    } catch (error) {
+      this.failure(request, error as Error)
+    }
+  }
+
+  failedRequestHandler({ request }: BasicCrawlingContext, error: Error) {
+    this.failure(request, error)
+  }
+}

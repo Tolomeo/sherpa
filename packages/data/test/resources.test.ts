@@ -1,40 +1,131 @@
-import { describe, test, expect, beforeAll, afterAll } from 'vitest'
-import { getParents } from '../src/topic'
-import { getAllById } from '../src/resource'
-import HealthCheck from '../src/healthcheck/runner'
+import { describe, test, expect } from 'vitest'
+import { getLastExtraction } from '../src/extraction/model'
+import type { ExtractionResultData } from '../src/extraction/schema'
+import { ExtractionResultDataSchema } from '../src/extraction/schema'
+import { getAll as getAllResources } from '../src/resource/model'
+import type { ResourceData } from '../types/resource'
+import { ResourceDataSchema } from '../types/resource'
 
 describe('Resources', async () => {
-  const topics = await getParents()
-  let healthCheck: HealthCheck
+  const lastExtraction = await getLastExtraction()
+  const resources = await getAllResources()
 
-  beforeAll(() => {
-    healthCheck = new HealthCheck()
+  test.each(resources)('$url', async (resource) => {
+    const extractionResult = await lastExtraction?.getResult(resource.url)
+
+    expect(extractionResult).not.toBeUndefined()
+    expect(resource.data).toMatchExtractedData(extractionResult!.data)
   })
+})
 
-  afterAll(async () => {
-    await healthCheck.teardown()
-  })
+expect.extend({
+  toMatchExtractedData(
+    resourceData: ResourceData,
+    extractionResultData: ExtractionResultData,
+  ) {
+    const resourceDataValidation = ResourceDataSchema.safeParse(resourceData)
 
-  describe.each(topics)('$name resources', async (topic) => {
-    const pathResourceIds = await topic.getResources()
-    const pathResources = await getAllById(...pathResourceIds)
+    if (resourceDataValidation.error) {
+      throw new Error(`Invalid resource data received`)
+    }
 
-    test.each(pathResources)(
-      '$url',
-      async (resource) => {
-        const resourceData = resource.data
-        const healthcheckStrategy = resource.healthcheck
+    const extractionResultDataValidation =
+      ExtractionResultDataSchema.safeParse(extractionResultData)
 
-        const resourceHealthcheck = await healthCheck.run(
-          resourceData.url,
-          healthcheckStrategy,
+    if (extractionResultDataValidation.error) {
+      throw new Error(`Invalid extraction result data received`)
+    }
+
+    if (!extractionResultData.success) {
+      return {
+        pass: false,
+        message: () =>
+          [
+            `Data extraction failed with the error`,
+            extractionResultData.error,
+          ].join('\n'),
+      }
+    }
+
+    const resourceTitle = resourceData.data.title
+    const dataExtractionDetail = extractionResultData.detail
+
+    switch (dataExtractionDetail.source) {
+      case 'PdfFile': {
+        const match =
+          dataExtractionDetail.metadata.title.includes(resourceTitle)
+
+        return {
+          pass: match,
+          message: () =>
+            match
+              ? `Resource title "${resourceTitle}" successfully found in pdf data extraction metadata`
+              : [
+                  `Resource title "${resourceTitle}" was not found in pdf data extraction metadata`,
+                  this.utils.printDiffOrStringify(
+                    dataExtractionDetail.metadata.title,
+                    resourceTitle,
+                  ),
+                ].join('\n'),
+        }
+      }
+      case 'Html': {
+        const match = Boolean(
+          Object.values(dataExtractionDetail.metadata.title).find((title) =>
+            title ? title.includes(resourceTitle) : false,
+          ),
         )
-        expect(resourceHealthcheck.success).toBe(true)
-        expect(resourceHealthcheck.data!).toBeValidScrapeResultForTitle(
-          resourceData.data.title,
-        )
-      },
-      150_000,
-    )
-  })
+
+        return {
+          pass: match,
+          message: () =>
+            match
+              ? `Resource title "${resourceTitle}" successfully found in Html data extraction metadata`
+              : [
+                  `Resource title "${resourceTitle}" was not found in Html data extraction metadata`,
+                  this.utils.printDiffOrStringify(
+                    dataExtractionDetail.metadata.title,
+                    resourceTitle,
+                  ),
+                ].join('\n'),
+        }
+      }
+      case 'YoutubeDataAPIV3': {
+        const match =
+          dataExtractionDetail.metadata.title.includes(resourceTitle)
+
+        return {
+          pass: match,
+          message: () =>
+            match
+              ? `Resource title "${resourceTitle}" successfully found in YoutubeDataAPIV3 data extraction metadata`
+              : [
+                  `Resource title "${resourceTitle}" was not found in YoutubeDataAPIV3 data extraction metadata`,
+                  this.utils.printDiffOrStringify(
+                    dataExtractionDetail.metadata.title,
+                    resourceTitle,
+                  ),
+                ].join('\n'),
+        }
+      }
+      case 'UdemyAffiliateAPI': {
+        const match =
+          dataExtractionDetail.metadata.title.includes(resourceTitle)
+
+        return {
+          pass: match,
+          message: () =>
+            match
+              ? `Resource title "${resourceTitle}" successfully found in UdemyAffiliateAPI data extraction metadata`
+              : [
+                  `Resource title "${resourceTitle}" was not found in UdemyAffiliateAPI data extraction metadata`,
+                  this.utils.printDiffOrStringify(
+                    dataExtractionDetail.metadata.title,
+                    resourceTitle,
+                  ),
+                ].join('\n'),
+        }
+      }
+    }
+  },
 })

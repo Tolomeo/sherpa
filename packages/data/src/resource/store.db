@@ -542,7 +542,7 @@
 {"_id":"K8Ycvafj3dqKyxoK","url":"https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store","data":{"title":"Git’s database internals","source":"github.blog"},"type":{"name":"knowledge","variant":"advanced"}}
 {"_id":"KAoWgykmIe6vb5ya","url":"https://www.youtube.com/watch?v=akosxcqJorU","data":{"title":"Go for Absolute Beginners","source":"youtube.com/@freecodecamp"},"type":{"name":"knowledge","variant":"basics"},"healthcheck":{"runner":"YoutubeData"}}
 {"_id":"KBdShPs7WX6eKjSV","url":"https://scriptingosx.com/2019/06/moving-to-zsh/","data":{"title":"Moving to zsh","source":"scriptingosx.com"},"type":{"name":"knowledge","variant":"basics"}}
-{"_id":"KBdgkvNHeclBc66n","url":"https://www.youtube.com/c/ChrisAtMachine","data":{"title":"chris@machine","source":"youtube.com"},"type":{"name":"reference","variant":"feed"},"healthcheck":{"runner":"YoutubeData"}}
+{"url":"https://www.youtube.com/@chrisatmachine","data":{"title":"chris@machine","source":"youtube.com"},"type":{"name":"reference","variant":"feed"},"healthcheck":{"runner":"YoutubeData"},"_id":"KBdgkvNHeclBc66n"}
 {"_id":"KElUDv9hzjG8ehe2","url":"https://vimtricks.com","data":{"title":"Vim Newsletter","source":"vimtricks.com"},"type":{"name":"reference","variant":"feed"}}
 {"_id":"KND2VFurdCxs68tX","url":"https://jonyablonski.com/articles/2021/cognitive-bias-and-the-design-process-part-1","data":{"title":"Cognitive Bias and the Design Process, Part 1","source":"jonyablonski.com"},"type":{"name":"knowledge","variant":"advanced"}}
 {"_id":"KNdGlFFbEQlfsgKC","url":"https://www.ardanlabs.com/blog/","data":{"title":"Go (Golang) Programming Blog","source":"ardanlabs.com"},"type":{"name":"reference","variant":"feed"}}
@@ -1140,7 +1140,7 @@
 {"_id":"gSVSjrRXH9Z0FsQw","url":"https://earthly.dev/blog/dos-gaming-in-docker","data":{"title":"DOS Gaming In Docker","source":"earthly.dev"},"type":{"name":"knowledge","variant":"how-to"}}
 {"_id":"gavqLCARZjnFj6kA","url":"https://www.telerik.com/blogs/web-accessibility-guidebook-for-developers","data":{"title":"Web Accessibility Guidebook for Developers","source":"telerik.com"},"type":{"name":"knowledge","variant":"basics"}}
 {"_id":"gdD40MVfsGrrPOYF","url":"https://www.w3.org/WAI","data":{"title":"Web Accessibility Initiative (WAI)","source":"w3.org"},"type":{"name":"reference","variant":"feed"}}
-{"_id":"gh6xNqSCFNghs7Y5","url":"https://www.youtube.com/c/TJDeVries","data":{"title":"TJ DeVries","source":"youtube.com"},"type":{"name":"reference","variant":"feed"},"healthcheck":{"runner":"YoutubeData"}}
+{"url":"https://www.youtube.com/@teej_dv","data":{"title":"TJ DeVries","source":"youtube.com"},"type":{"name":"reference","variant":"feed"},"healthcheck":{"runner":"YoutubeData"},"_id":"gh6xNqSCFNghs7Y5"}
 {"_id":"giT59FQQxEmrzwKv","url":"https://www.smashingmagazine.com","data":{"title":"Smashing Magazine","source":"smashingmagazine.com"},"type":{"name":"reference","variant":"feed"}}
 {"_id":"gisoVNYFRoyGIWAy","url":"https://www.webdesignmuseum.org","data":{"title":"Web Design Museum","source":"webdesignmuseum.org"},"type":{"name":"curiosity"},"healthcheck":{"runner":"E2E","config":{"titleSelector":"title:not(:empty)","waitForLoadState":"domcontentloaded"}}}
 {"_id":"gn32aAR6xeMaYK2Q","url":"https://github.com/bradtraversy/vanillawebprojects","data":{"title":"vanillawebprojects","source":"github.com/bradtraversy"},"type":{"name":"knowledge","variant":"how-to"}}

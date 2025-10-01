@@ -1,0 +1,89 @@
+import type { ZenscrapeHealthcheckRunConfig } from '../../../../../types'
+import { wait } from '../../../../common/defer'
+import { FeatureCrawler, BasicCrawler } from '../../../../common/crawler'
+import type {
+  BasicCrawlerOptions,
+  BasicCrawlingContext,
+} from '../../../../common/crawler'
+
+type ZenscrapeCrawlingContext =
+  BasicCrawlingContext<ZenscrapeHealthcheckRunConfig>
+
+export interface ZenscrapeCrawlerResult {
+  html: string
+}
+
+export default class ZenscrapeCrawler extends FeatureCrawler<
+  BasicCrawler<ZenscrapeCrawlingContext>,
+  ZenscrapeCrawlerResult,
+  ZenscrapeHealthcheckRunConfig
+> {
+  constructor(crawlerOptions: BasicCrawlerOptions<ZenscrapeCrawlingContext>) {
+    super(
+      new BasicCrawler<ZenscrapeCrawlingContext>({
+        ...crawlerOptions,
+        retryOnBlocked: true,
+        maxConcurrency: 1,
+        sameDomainDelaySecs: 5,
+        maxRequestRetries: 6,
+        requestHandler: (...args) => this.requestHandler(...args),
+        failedRequestHandler: (...args) => this.failedRequestHandler(...args),
+      }),
+    )
+  }
+
+  getDataRequestUrl(url: string, render: boolean, premium: boolean) {
+    let dataRequestUrl = `https://app.zenscrape.com/api/v1/get?url=${encodeURIComponent(
+      url,
+    )}`
+
+    // apparently the scraper api doesn't accept 'false' as valid qs parameter
+    // so we can only pass 'true' or omit the url parameter entirely
+    if (render) {
+      dataRequestUrl = `${dataRequestUrl}&render=true`
+    }
+
+    if (premium) {
+      dataRequestUrl = `${dataRequestUrl}&premium=true`
+    }
+
+    return dataRequestUrl
+  }
+
+  async requestHandler({ request, sendRequest }: ZenscrapeCrawlingContext) {
+    try {
+      const apiKey = process.env.ZENSCRAPE_API_KEY
+
+      if (!apiKey) {
+        request.noRetry = true
+        throw new Error(`Zenscrape api key not found`)
+      }
+
+      // TODO: remove titleSelector from resource db
+      // const { titleSelector, render, premium } = request.userData
+      const { render, premium } = request.userData
+      const dataRequestUrl = this.getDataRequestUrl(
+        request.url,
+        render,
+        premium,
+      )
+      const { statusCode, body } = (await sendRequest({
+        url: dataRequestUrl,
+        headers: { apiKey },
+      })) as { body: string; statusCode: number }
+
+      if (statusCode === 429) {
+        await wait(5000)
+        throw new Error(`Concurrent requests are not supported`)
+      }
+
+      this.success(request, { html: body })
+    } catch (error) {
+      this.failure(request, error as Error)
+    }
+  }
+
+  failedRequestHandler({ request }: ZenscrapeCrawlingContext, error: Error) {
+    this.failure(request, error)
+  }
+}

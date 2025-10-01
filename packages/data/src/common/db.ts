@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- Most of the typing is copy-pasted from mongodb types */
 import NEDB, { type Document } from '@seald-io/nedb'
-import type { ZodObject } from 'zod'
+import type { ZodDiscriminatedUnion, ZodObject } from 'zod'
 
-type Nullable<T> = T | null
+// type Nullable<T> = T | null
 
 /* type IsAny<Type, ResultIfAny, ResultIfNotAny> = true extends false & Type
   ? ResultIfAny
@@ -173,6 +173,14 @@ interface RootFilterOperators<TSchema> {
   $comment?: string | Document */
 }
 
+interface CursorQuery<TSchema> {
+  sort?: {
+    [Property in Join<NestedPaths<WithId<TSchema>, []>, '.'>]?: 1 | -1
+  }
+  limit?: number
+  skip?: number
+}
+
 type StrictFilter<TSchema> =
   | Partial<TSchema>
   | ({
@@ -181,42 +189,58 @@ type StrictFilter<TSchema> =
       >
     } & RootFilterOperators<WithId<TSchema>>)
 
-type DocumentSchema = ZodObject<any>
+type DocumentSchema = ZodObject<any> | ZodDiscriminatedUnion<string, any[]>
 
-interface NEDBOptions {
+interface DBOptions<Schema extends DocumentSchema> {
   filename: string
-  // TODO: type unique as a valid keypath of S['_output']
-  indexes: { unique: string }
+  indexes?: {
+    fieldName:
+      | Join<NestedPaths<Schema['_output'], []>, '.'>
+      | Join<NestedPaths<Schema['_output'], []>, '.'>[]
+    unique?: boolean
+    sparse?: boolean
+    expireAfterSeconds?: number
+  }[]
 }
 
-class Db<S extends DocumentSchema> {
+class Db<Schema extends DocumentSchema> {
   public static async build<S extends DocumentSchema>(
     schema: S,
-    options: NEDBOptions,
+    options: DBOptions<S>,
   ): Promise<Db<S>> {
-    const { filename, indexes } = options
+    const { filename, indexes = [] } = options
     const db = new NEDB({ filename, autoload: true })
 
-    await db.ensureIndexAsync({
-      fieldName: indexes.unique,
-      unique: true,
-      sparse: false,
-    })
+		// TODO: create async 'chain' utility
+    await indexes.reduce<Promise<void>>(
+      (promiseChain, { fieldName, unique, sparse, expireAfterSeconds }) => {
+        return promiseChain.then(() =>
+          db.ensureIndexAsync({
+            fieldName,
+            unique,
+            sparse,
+            expireAfterSeconds,
+          }),
+        )
+      },
+      Promise.resolve(),
+    )
+
     await db.compactDatafileAsync()
 
     return new Db(db, { schema, options })
   }
 
   readonly config: {
-    schema: S
-    options: NEDBOptions
+    schema: Schema
+    options: DBOptions<Schema>
   }
 
-  private db: NEDB<S['_output']>
+  private db: NEDB<Schema['_output']>
 
   private constructor(
-    db: NEDB<S['_output']>,
-    config: { schema: S; options: NEDBOptions },
+    db: NEDB<Schema['_output']>,
+    config: { schema: Schema; options: DBOptions<Schema> },
   ) {
     this.db = db
     this.config = config
@@ -228,57 +252,99 @@ class Db<S extends DocumentSchema> {
 
   async migrate<NewSchema extends DocumentSchema>(
     newSchema: NewSchema,
-    transformer: (
-      doc: Document<S['_output']>,
-    ) => Document<NewSchema['_output']>,
+    transformer: {
+      options: (options: DBOptions<Schema>) => DBOptions<NewSchema>
+      document: (
+        doc: Document<Schema['_output']>,
+      ) => Document<NewSchema['_output']>
+    },
   ) {
     const documents = await this.findAll()
 
     await this.drop()
 
-    const newDb = await Db.build(newSchema, this.config.options)
+    const newDb = await Db.build(
+      newSchema,
+      transformer.options(this.config.options),
+    )
 
     for (const document of documents) {
-      await newDb.insertOne(transformer(document))
+      await newDb.insertOne(transformer.document(document))
     }
 
     return newDb
   }
 
-  async findAll(filter: StrictFilter<S['_output']> = {}) {
-    const docs: Document<S['_output']>[] = await this.db.findAsync(filter)
+  async findAll(filter: StrictFilter<Schema['_output']> = {}) {
+    const docs: Document<Schema['_output']>[] = await this.db.findAsync(filter)
 
     return docs
   }
 
-  async findOne(filter: StrictFilter<S['_output']>) {
-    const doc: Nullable<Document<S['_output']>> =
-      await this.db.findOneAsync(filter)
+  async findOne(filter: StrictFilter<Schema['_output']>) {
+    const doc: Document<Schema['_output']> = await this.db.findOneAsync(filter)
 
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- NEDB could return null when no doc is found
     if (!doc) return null
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return -- Not sure why ts thinks this is 'any'
     return doc
   }
 
-  async insertOne(insert: S['_output']) {
+  async query(
+    filter: StrictFilter<Schema['_output']>,
+    cursorQuery: CursorQuery<Schema['_output']>,
+  ) {
+    let cursor = this.db.findAsync(filter)
+
+    if (cursorQuery.sort) {
+      cursor = cursor.sort(cursorQuery.sort)
+    }
+
+    if (cursorQuery.skip) {
+      cursor = cursor.skip(cursorQuery.skip)
+    }
+
+    if (cursorQuery.limit) {
+      cursor = cursor.limit(cursorQuery.limit)
+    }
+
+    const docs: Document<Schema['_output']>[] = await cursor.execAsync()
+
+    return docs
+  }
+
+  async insertOne(
+    insert: Schema['_output'],
+  ): Promise<Document<Schema['_output']>> {
     const validation = this.config.schema.safeParse(insert)
 
     if (!validation.success) {
       throw validation.error
     }
 
-    const doc = await this.db.insertAsync<S['_output']>(insert)
+    const doc = await this.db.insertAsync(insert)
 
     await this.db.compactDatafileAsync()
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return -- Not sure why ts thinks this is 'any'
     return doc
+  }
+
+  async insertAll(inserts: Schema['_output'][]) {
+    for (const insert of inserts) {
+      this.config.schema.parse(insert)
+    }
+
+    const docs = await this.db.insertAsync(inserts)
+    await this.db.compactDatafileAsync()
+
+    return docs
   }
 
   async updateOne(
     id: string,
-    update: S['_output'],
-  ): Promise<Document<S['_output']>> {
+    update: Schema['_output'],
+  ): Promise<Document<Schema['_output']>> {
     const validation = this.config.schema.safeParse(update)
 
     if (!validation.success) {
@@ -288,6 +354,7 @@ class Db<S extends DocumentSchema> {
     await this.db.updateAsync({ _id: id }, update)
     await this.db.compactDatafileAsync()
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return -- Not sure why ts thinks this is 'any'
     return {
       ...update,
       _id: id,

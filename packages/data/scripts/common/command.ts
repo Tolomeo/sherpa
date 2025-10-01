@@ -1,9 +1,11 @@
-import { createCommand } from 'commander'
+import { createCommand, InvalidOptionArgumentError } from 'commander'
 import enquirer from 'enquirer'
 
 // TODO: action command
 // similar to choice, but accepts a record with value fn
 // choosing the option will execute the fn
+
+export const InvalidOptionError = InvalidOptionArgumentError
 
 enum LoopControlCommand {
   REPEAT,
