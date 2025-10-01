@@ -8,20 +8,20 @@ import { getAll as getAllResources } from '../../../src/resource/model'
 type Constructor<T, A extends any[] = any[]> = new (...args: A) => T
 
 const run = async (trigger: ExtractionData['trigger']) => {
-  const featureExtractionRun = await createFeatureExtraction({
+  const extractionRun = await createFeatureExtraction({
     trigger,
     date: new Date(),
   })
 
-  const featureExtractionRunner = new ExtractionRunner()
+  const extractionRunner = new ExtractionRunner()
 
   const resources = await getAllResources()
 
-  const results = await featureExtractionRunner.runAll(resources)
+  const results = await extractionRunner.runAll(resources)
 
-  await featureExtractionRun.setResults(results)
+  await extractionRun.setResults(results)
 
-  await featureExtractionRunner.teardown()
+  await extractionRunner.teardown()
 }
 
 run.args = {
