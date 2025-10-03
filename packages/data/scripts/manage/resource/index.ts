@@ -11,7 +11,10 @@ const cmd = command
 
 cmd.command('add').description('Add a resource').action(add)
 
-cmd.command('update').description('Update a resource').action(update)
+cmd
+  .command('update [resourceUrl]')
+  .description('Update a resource')
+  .action((resourceUrl?: string) => update(resourceUrl))
 
 cmd.command('remove').description('Remove a resource').action(remove)
 
