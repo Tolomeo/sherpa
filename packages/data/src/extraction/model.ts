@@ -52,7 +52,7 @@ export const getAll = async () => {
   return docs.map((d) => new Extraction(d))
 }
 
-class ExtractionResult {
+export class ExtractionResult {
   constructor(private document: ExtractionResultDocument) {}
 
   get data() {

@@ -2,6 +2,7 @@ import { command } from '../../common'
 import add from './add'
 import update from './update'
 import remove from './remove'
+import healthcheck from './healthcheck'
 
 const cmd = command
   .create()
@@ -13,6 +14,11 @@ cmd.command('add').description('Add a resource').action(add)
 cmd.command('update').description('Update a resource').action(update)
 
 cmd.command('remove').description('Remove a resource').action(remove)
+
+cmd
+  .command('healthcheck')
+  .description('Check on the health of resources')
+  .action(healthcheck)
 
 export * from './common'
 export default cmd

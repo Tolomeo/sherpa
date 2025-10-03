@@ -21,7 +21,7 @@
     "check:lint": "eslint \"types\" \"src\" \"scripts\"",
     "check:types": "tsc",
     "test:topics": "vitest topics",
-    "test:resources": "vitest resources",
+    "test:health": "vitest health",
     "test:extraction": "vitest extraction"
   },
   "devDependencies": {

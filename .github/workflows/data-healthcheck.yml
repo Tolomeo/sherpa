@@ -34,4 +34,4 @@ jobs:
         run: npm install
 
       - name: Resources healthcheck
-        run: npm run test:resources --workspace=@sherpa/data
+        run: npm run test:health --workspace=@sherpa/data

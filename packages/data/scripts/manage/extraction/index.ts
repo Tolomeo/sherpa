@@ -5,11 +5,11 @@ import run from './run'
 const cmd = command
   .create()
   .name('extraction')
-  .description('Extract sherpa feature data')
+  .description('Manage extraction data')
 
 cmd
   .command('run')
-  .description('Extract sherpa feature data')
+  .description('Run a new data extraction')
   .requiredOption(
     '-t, --trigger <trigger>',
     'Feature extraction trigger origin',
