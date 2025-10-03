@@ -34,7 +34,7 @@ export const getLastExtraction = async () => {
       {},
       {
         sort: {
-          date: 1,
+          date: -1,
         },
         limit: 1,
       },
@@ -44,6 +44,12 @@ export const getLastExtraction = async () => {
   if (!doc) return null
 
   return new Extraction(doc)
+}
+
+export const getAll = async () => {
+  const docs = await Db.getInstance().then((db) => db.findAll())
+
+  return docs.map((d) => new Extraction(d))
 }
 
 class ExtractionResult {
@@ -57,6 +63,10 @@ class ExtractionResult {
 
   get url() {
     return this.data.url
+  }
+
+  get success() {
+    return this.data.success
   }
 }
 

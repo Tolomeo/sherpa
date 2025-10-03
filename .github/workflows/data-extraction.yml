@@ -21,8 +21,8 @@ jobs:
       - name: NPM Install
         run: npm install
 
-      # - name: Playwright
-      #   run: npx playwright install
+      - name: Playwright Install
+        run: npx playwright install --with-deps
 
       - name: Extraction trigger detection
         run: |
