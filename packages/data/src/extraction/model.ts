@@ -103,7 +103,7 @@ class Extraction {
     return Db.getExtractionInstance(id).then(async (resultsDb) => {
       const resultDoc = await resultsDb.findOne({ url })
 
-      if (!resultDoc) throw new Error(`No extraction results for url "${url}"`)
+      if (!resultDoc) return null
 
       return new ExtractionResult(resultDoc)
     })

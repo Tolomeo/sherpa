@@ -10,25 +10,33 @@ const healthcheck = async () => {
 
   const resources = await getAllResources()
 
-  const failures = []
+  const failedHealthChecks = []
 
   for (const resource of resources) {
     const resourceDataExtraction = await extraction.getResult(resource.url)
+
+    if (!resourceDataExtraction) {
+      log.warning(`No extraction data found for url ${resource.url}`)
+      continue
+    }
+
     const isResourceHealthy = resource.isHealthy(resourceDataExtraction)
 
     if (isResourceHealthy) continue
 
-    failures.push(resourceDataExtraction)
+    failedHealthChecks.push(resourceDataExtraction)
   }
 
-  log.warning(`${failures.length} unsuccessful health-checks`)
+  log.warning(`${failedHealthChecks.length} unsuccessful health-checks`)
 
   let counter = 1
 
-  for (const failure of failures) {
-    log.warning(`${counter}/${failures.length} unsuccessful health check`)
+  for (const failedHealthCheck of failedHealthChecks) {
+    log.warning(
+      `${counter}/${failedHealthChecks.length} unsuccessful health check`,
+    )
 
-    const extractionData = failure.data
+    const extractionData = failedHealthCheck.data
 
     if (!extractionData.success) {
       log.warning(`Resource data extraction was unsuccessful`)
@@ -38,7 +46,7 @@ const healthcheck = async () => {
       log.warning(format.stringify(extractionData))
     }
 
-    await updateResource(failure.url)
+    await updateResource(failedHealthCheck.url)
     counter++
   }
 }

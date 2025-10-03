@@ -11,7 +11,7 @@ describe('Resources', async () => {
   test.each(resources)('$url', async (resource) => {
     const extractionResult = await lastExtraction?.getResult(resource.url)
 
-    expect(extractionResult).not.toBeUndefined()
+    expect(extractionResult).not.toBeFalsy()
     expect(resource).toBeHealthy(extractionResult!)
   })
 })
