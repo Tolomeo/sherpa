@@ -1,9 +1,10 @@
+import { getByUrl as getResourceByUrl } from '../../../src/resource'
 import { getAllByResourceId } from '../../../src/topic'
 import { format, log, command } from '../../common'
 import { findResource } from './common'
 
-const remove = async () => {
-  const resource = await findResource()
+const remove = async (url?: string) => {
+  const resource = url ? await getResourceByUrl(url) : await findResource()
 
   if (!resource) return
 
