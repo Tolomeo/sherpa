@@ -1,4 +1,5 @@
 import type Resource from '../../../src/resource'
+import { getByUrl as getResourceByUrl } from '../../../src/resource'
 import { format, log, command, util } from '../../common'
 import { chooseHealthCheckStrategy, scrapeResourceData } from '../healthcheck'
 import { findResource, enterResourceData } from './common'
@@ -138,8 +139,8 @@ const updateResourceData = async (resource: Resource) => {
   })
 }
 
-const update = async () => {
-  const resource = await findResource()
+const update = async (url?: string) => {
+  const resource = url ? await getResourceByUrl(url) : await findResource()
 
   if (!resource) return
 

@@ -1,4 +1,5 @@
 import { type ResourceData, HealthCheckStrategies } from '../../types'
+import type { ExtractionResult } from '../extraction/model'
 import ResourcesStore, { type ResourceDocument } from './store'
 
 export const getAll = async () => {
@@ -133,6 +134,39 @@ class Resource {
   public async delete() {
     await this.remove()
     this.document._id = ''
+  }
+
+  public isHealthy(extractionResult: ExtractionResult) {
+    if (this.url !== extractionResult.url)
+      throw new Error(
+        `Resource url "${this.url}" and extractionResult url "${extractionResult.url}" don't match`,
+      )
+
+    const extractionResultData = extractionResult.data
+
+    if (!extractionResultData.success) return false
+
+    const title = this.document.data.title
+    const extractionDetail = extractionResultData.detail
+
+    switch (extractionDetail.source) {
+      case 'PdfFile': {
+        return extractionDetail.metadata.title.includes(title)
+      }
+      case 'Html': {
+        return Boolean(
+          Object.values(extractionDetail.metadata.title).find((t) =>
+            t ? t.includes(title) : false,
+          ),
+        )
+      }
+      case 'YoutubeDataAPIV3': {
+        return extractionDetail.metadata.title.includes(title)
+      }
+      case 'UdemyAffiliateAPI': {
+        return extractionDetail.metadata.title.includes(title)
+      }
+    }
   }
 }
 

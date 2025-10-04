@@ -34,7 +34,7 @@ export const getLastExtraction = async () => {
       {},
       {
         sort: {
-          date: 1,
+          date: -1,
         },
         limit: 1,
       },
@@ -46,7 +46,13 @@ export const getLastExtraction = async () => {
   return new Extraction(doc)
 }
 
-class ExtractionResult {
+export const getAll = async () => {
+  const docs = await Db.getInstance().then((db) => db.findAll())
+
+  return docs.map((d) => new Extraction(d))
+}
+
+export class ExtractionResult {
   constructor(private document: ExtractionResultDocument) {}
 
   get data() {
@@ -57,6 +63,10 @@ class ExtractionResult {
 
   get url() {
     return this.data.url
+  }
+
+  get success() {
+    return this.data.success
   }
 }
 
@@ -93,7 +103,7 @@ class Extraction {
     return Db.getExtractionInstance(id).then(async (resultsDb) => {
       const resultDoc = await resultsDb.findOne({ url })
 
-      if (!resultDoc) throw new Error(`No extraction results for url "${url}"`)
+      if (!resultDoc) return null
 
       return new ExtractionResult(resultDoc)
     })

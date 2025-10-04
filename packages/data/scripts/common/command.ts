@@ -5,6 +5,8 @@ import enquirer from 'enquirer'
 // similar to choice, but accepts a record with value fn
 // choosing the option will execute the fn
 
+export { Command } from 'commander'
+
 export const InvalidOptionError = InvalidOptionArgumentError
 
 enum LoopControlCommand {
