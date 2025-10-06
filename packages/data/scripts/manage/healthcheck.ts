@@ -13,8 +13,26 @@ export const chooseHealthCheckStrategy = async () => {
 
   const strategy =
     HealthCheckStrategies[healthcheck as HealthcheckStrategy['runner']]
+  const chosenStrategy = util.clone(strategy)
 
-  return util.clone(strategy)
+  switch (chosenStrategy.runner) {
+    case 'E2E': {
+      const waitForLoadState = await command.choice(
+        `Choose waitForLoadState`,
+        ['load', 'domcontentloaded', 'networkidle'],
+        {
+          initial: 'load',
+        },
+      )
+      if (waitForLoadState)
+        chosenStrategy.config.waitForLoadState = waitForLoadState
+
+      return chosenStrategy
+    }
+
+    default:
+      return chosenStrategy
+  }
 }
 
 export const scrapeResourceData = async (
