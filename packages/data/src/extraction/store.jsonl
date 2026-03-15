@@ -1,3 +1,4 @@
 {"trigger":"manual","date":{"$$date":1758841200000},"_id":"B40qYojrYRTqYj3r"}
+{"trigger":"scheduled","date":{"$$date":1773532800000},"_id":"bJ3i5uSX4LP8qTiL"}
 {"trigger":"manual","date":{"$$date":1759622400000},"_id":"hlRPiEjMi8ELYQIU"}
 {"$$indexCreated":{"fieldName":"date","unique":true,"sparse":false}}
